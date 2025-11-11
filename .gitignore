@@ -1,0 +1,20 @@
+# Ignore Python virtual environment
+.venv/
+venv/
+env/
+
+# Ignore local data/cache
+data/
+__pycache__/
+*.pyc
+
+# Ignore config secrets
+config/.env
+config/.env.*
+
+# Ignore OS junk
+.DS_Store
+Thumbs.db
+
+# Ignore Streamlit/FAISS temp files
+.streamlit/
