@@ -22,8 +22,8 @@ from config.settings import (
     INDEX_PREFIX,
     LOCAL_INDEX_DIR,
 )
-from chunk import split_into_chunks
-from embed import batch_embed
+from ingest.chunk import split_into_chunks
+from ingest.embed import batch_embed
 
 
 def list_raw_text_blobs():

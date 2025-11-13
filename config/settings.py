@@ -2,13 +2,21 @@ import os
 from dotenv import load_dotenv
 
 # Load .env from same folder
-load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
+load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env"))
 
-# openAI
-AZURE_OPENAI_ENDPOINT = os.getenv("OPEN_AI_ENDPOINT")
-AZURE_OPENAI_API_KEY = os.getenv("OPEN_AI_KEY")
-AZURE_OPENAI_API_VERSION = os.getenv("OPEN_AI_DEPLOYMENT_VERSION")
-AZURE_OPENAI_EMBED_MODEL = os.getenv("OPEN_AI_DEPLOYMENT_NAME_GPT4O")
+
+# openAI rag model
+AZURE_OPENAI_CHAT_ENDPOINT = os.getenv("OPEN_AI_ENDPOINT")
+AZURE_OPENAI_CHAT_API_KEY = os.getenv("OPEN_AI_KEY")
+AZURE_OPENAI_API_CHAT_VERSION = os.getenv("OPEN_AI_DEPLOYMENT_VERSION")
+AZURE_OPENAI_CHAT_MODEL = os.getenv("OPEN_AI_DEPLOYMENT_NAME")
+
+
+# openAI embedding model
+AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
+AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
+AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION")
+AZURE_OPENAI_EMBED_MODEL = os.getenv("AZURE_OPENAI_EMBED_MODEL")
 
 
 # Local folder to cache FAISS index and metadata before upload
