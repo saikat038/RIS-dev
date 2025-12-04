@@ -67,18 +67,33 @@ for msg in st.session_state.messages:
 # CHAT INPUT (BOTTOM, CHATGPT-LIKE)
 # ========================
 
+# prompt = st.chat_input("Ask anything about regulations, guidance, policies, IND, etc...")
+
+# if prompt:
+#     # User message
+#     st.session_state.messages.append({"role": "user", "content": prompt})
+#     with st.chat_message("user"):
+#         st.markdown(prompt)
+
+#     # Assistant response
+#     with st.chat_message("assistant"):
+#         with st.spinner("Thinking..."):
+#             result = answer(prompt)
+#             st.markdown(result)
+
+#     st.session_state.messages.append({"role": "assistant", "content": result})
+
 prompt = st.chat_input("Ask anything about regulations, guidance, policies, IND, etc...")
 
 if prompt:
-    # User message
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    # Assistant response
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
-            result = answer(prompt)
+            result = answer(prompt, st.session_state.messages)  # 👈 pass history here
             st.markdown(result)
 
     st.session_state.messages.append({"role": "assistant", "content": result})
+

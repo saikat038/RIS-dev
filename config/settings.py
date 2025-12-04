@@ -25,3 +25,9 @@ AZURE_BLOB_CONN_STRING = os.getenv("AZURE_BLOB_CONN_STRING")
 BLOB_CONTAINER = os.getenv("BLOB_CONTAINER", "clinicalbase")
 RAW_PREFIX = os.getenv("RAW_PREFIX", "raw/")
 INDEX_PREFIX = os.getenv("INDEX_PREFIX", "index/")
+
+
+# Docint
+AZURE_DOCINT_ENDPOINT = "https://docint-ris.cognitiveservices.azure.com/"
+AZURE_DOCINT_KEY = "BPUWJhUrdXYFuGr54ddok7I95BS0INvRz8jmYch0duYYZDgJe3flJQQJ99BKACYeBjFXJ3w3AAALACOGaBcx"
+AZURE_DOCINT_MODEL_ID = "prebuilt-layout"
