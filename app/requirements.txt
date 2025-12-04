@@ -1,7 +1,7 @@
-streamlit==1.39.0
-faiss-cpu==1.11.0.post1
-pandas==2.2.2
-python-dotenv==1.0.1
-azure-storage-blob==12.20.0
-openai==1.51.2
-tiktoken==0.7.0
+streamlit==1.52.0
+faiss-cpu==1.13.0
+pandas==2.3.3
+python-dotenv==1.2.1
+azure-storage-blob==12.26.0
+openai==2.8.1
+tiktoken==0.12.0
