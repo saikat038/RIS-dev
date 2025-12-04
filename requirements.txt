@@ -1,5 +1,5 @@
 streamlit==1.39.0
-faiss-cpu==1.13.0
+faiss-cpu==1.11.0.post1
 pandas==2.2.2
 python-dotenv==1.0.1
 azure-storage-blob==12.20.0
