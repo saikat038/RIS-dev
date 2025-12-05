@@ -54,6 +54,7 @@ st.write("")  # small spacing
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
+    
 
 # ========================
 # DISPLAY CHAT HISTORY (TOP → DOWN)
@@ -66,7 +67,7 @@ for msg in st.session_state.messages:
 # ========================
 # CHAT INPUT (BOTTOM, CHATGPT-LIKE)
 # ========================
-
+history = st.session_state.messages
 prompt = st.chat_input("Ask anything about regulations, guidance, policies, IND, etc...")
 
 if prompt:
@@ -78,7 +79,7 @@ if prompt:
     # Assistant response
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
-            result = answer(prompt)
+            result = answer(prompt, history)
             st.markdown(result)
 
     st.session_state.messages.append({"role": "assistant", "content": result})
