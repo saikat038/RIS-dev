@@ -19,7 +19,11 @@ st.set_page_config(
 # LOGO_PATH = "C:/Users/SaikatSome/OneDrive - Ocugen OpCo Inc/Desktop/RIS-dev/assets/ocugen.png"
 
 # Path relative to this file
-LOGO_PATH = os.path.join(os.path.dirname(__file__), "assets", "ocugen.png")
+LOGO_PATH = os.path.join(
+    os.path.dirname(os.path.dirname(__file__)), 
+    "assets", 
+    "ocugen.png"
+)
 
 
 
