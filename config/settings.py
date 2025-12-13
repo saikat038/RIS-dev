@@ -58,7 +58,7 @@ AZURE_OPENAI_EMBED_MODEL = st.secrets["AZURE_OPENAI_EMBED_MODEL"]
 # Local folder to cache FAISS index and metadata before upload
 LOCAL_INDEX_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "index")
 AZURE_BLOB_CONN_STRING = st.secrets["AZURE_BLOB_CONN_STRING"]
-BLOB_CONTAINER = st.secrets["BLOB_CONTAINER", "clinicalbase"]
+BLOB_CONTAINER = st.secrets["BLOB_CONTAINER"]
 RAW_PREFIX = st.secrets["RAW_PREFIX", "raw/"]
 INDEX_PREFIX = st.secrets["INDEX_PREFIX", "index/"]
 
