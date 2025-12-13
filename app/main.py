@@ -15,8 +15,12 @@ st.set_page_config(
     layout="wide"
 )
 
-# Path to your logo
-LOGO_PATH = "C:/Users/SaikatSome/OneDrive - Ocugen OpCo Inc/Desktop/RIS-dev/assets/ocugen.png"
+# # Path to your logo
+# LOGO_PATH = "C:/Users/SaikatSome/OneDrive - Ocugen OpCo Inc/Desktop/RIS-dev/assets/ocugen.png"
+
+# Path relative to this file
+LOGO_PATH = os.path.join(os.path.dirname(__file__), "assets", "ocugen.png")
+
 
 
 def get_base64_image(path: str) -> str:
