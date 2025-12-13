@@ -386,6 +386,8 @@ from typing import List, Dict, TypedDict
 
 from openai import AzureOpenAI
 from langgraph.graph import StateGraph, END
+from azure.search.documents.models import VectorizedQuery
+from ingest.embed import batch_embed
 
 from app.vectorstore import load_vectorstore
 from config.settings import (
@@ -420,21 +422,6 @@ client1 = AzureOpenAI(
 
 
 # ============================
-# VECTORSTORE ACCESS
-# ============================
-
-def get_index_and_chunks():
-    """
-    Always load the latest FAISS index + metadata.
-
-    This ensures that any newly created index (from new uploads)
-    is picked up automatically when answering queries.
-    """
-    index, vectors, chunks = load_vectorstore()
-    return index, chunks
-
-
-# ============================
 # EMBEDDING FUNCTION
 # ============================
 
@@ -442,42 +429,43 @@ def embed_query(text: str) -> np.ndarray:
     """
     Create an embedding for the query text using Azure OpenAI.
     """
-    resp = client1.embeddings.create(
-        model=AZURE_OPENAI_EMBED_MODEL,  # embedding deployment name in Azure
-        input=text,
-    )
+    resp = client1.embeddings.create(model=AZURE_OPENAI_EMBED_MODEL, input=text)
+
+    embedding = resp.data[0].embedding
 
     # Convert to numpy array of floats
-    return np.array(resp.data[0].embedding, dtype=np.float32)
+    return list(embedding)
+
 
 
 # ============================
-# VECTOR SEARCH (FAISS)
+# VECTOR SEARCH (Azure AI Search)
 # ============================
 
 def search(query: str, k: int = 3):
-    """
-    Perform a FAISS similarity search on the vector index.
+    q_vec = batch_embed([query])[0]  # embedding
 
-    Returns:
-        List of (chunk_obj, score) pairs.
-    """
-    index, chunks = get_index_and_chunks()
+    search_client = load_vectorstore()
 
-    # Embed the query
-    q_vec = embed_query(query).reshape(1, -1)
+    # NEW CORRECT VECTOR QUERY for 11.7.0b2
+    vector_query = VectorizedQuery(
+        vector=q_vec,
+        k=k,
+        fields="vector"
+    )
 
-    # Perform search
-    scores, indices = index.search(q_vec, k)
+    # MUST WRAP IN LIST: vector_queries=[...]
+    results = search_client.search(
+        search_text="",      # required
+        vector_queries=[vector_query],
+        select=["text", "doc_id", "page"]
+    )
 
-    # Build result list: (chunk, score)
-    matches = []
-    for j, i in enumerate(indices[0]):
-        chunk_obj = chunks[i]
-        score = float(scores[0][j])
-        matches.append((chunk_obj, score))
+    output = []
+    for r in results:
+        output.append((r["text"], r["@search.score"]))
 
-    return matches
+    return output
 
 
 # ============================
