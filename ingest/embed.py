@@ -1,7 +1,8 @@
 """
-Embedding utilities using Azure OpenAI via the OpenAI Python SDK.
+Embedding utilities using Azure OpenAI via the AzureOpenAI SDK.
 Reads credentials and deployment names from config.settings.
 """
+
 from __future__ import annotations
 import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -9,31 +10,47 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from typing import List
 import time
 
-from openai import OpenAI
+from openai import AzureOpenAI  # ✅ CORRECT CLIENT FOR AZURE
+
 from config.settings import (
     AZURE_OPENAI_ENDPOINT,
     AZURE_OPENAI_API_KEY,
     AZURE_OPENAI_API_VERSION,
-    AZURE_OPENAI_EMBED_MODEL,
+    AZURE_OPENAI_EMBED_MODEL,   # e.g., "text-embedding-3-small"
 )
 
-# Azure OpenAI client configuration
-client = OpenAI(
+# -----------------------------------------------------------
+# ✅ Correct Azure OpenAI client
+# -----------------------------------------------------------
+client = AzureOpenAI(
     api_key=AZURE_OPENAI_API_KEY,
-    base_url=f"{AZURE_OPENAI_ENDPOINT}openai/deployments/",
-    default_query={"api-version": AZURE_OPENAI_API_VERSION},
+    azure_endpoint=AZURE_OPENAI_ENDPOINT,     # MUST end with /cognitiveservices.azure.com/
+    api_version=AZURE_OPENAI_API_VERSION,     # "2024-02-15-preview"
 )
+
+# Deployment name (NOT model name)
 EMBED_MODEL = AZURE_OPENAI_EMBED_MODEL
 
 
-
+# -----------------------------------------------------------
+# INTERNAL: Call Azure embeddings for a batch
+# -----------------------------------------------------------
 def _embed_batch(texts: List[str]) -> List[List[float]]:
-    """Call the embeddings endpoint once for a batch."""
-    resp = client.embeddings.create(model=EMBED_MODEL, input=texts)
-    # Returned in same order
-    return [d.embedding for d in resp.data]
+    """
+    Sends one embedding request for a batch of texts.
+    """
+    response = client.embeddings.create(
+        model=EMBED_MODEL,    # MUST MATCH DEPLOYMENT NAME
+        input=texts,
+    )
+
+    # Returned in same order as input
+    return [item.embedding for item in response.data]
 
 
+# -----------------------------------------------------------
+# PUBLIC: Batch embedding with retries
+# -----------------------------------------------------------
 def batch_embed(
     texts: List[str],
     batch_size: int = 64,
@@ -41,33 +58,33 @@ def batch_embed(
     backoff_sec: float = 2.0,
 ) -> List[List[float]]:
     """
-    Embed many texts with simple batching + retry.
-    Args:
-        texts: strings to embed
-        batch_size: number of inputs per API call
-        max_retries: times to retry a failing batch
-        backoff_sec: initial backoff between retries
-    Returns:
-        List of embeddings (one per input), in order.
+    Embed many texts with batching + retries.
     """
+
     if not texts:
         return []
 
-    out: List[List[float]] = []
+    results: List[List[float]] = []
+
     for i in range(0, len(texts), batch_size):
         batch = texts[i : i + batch_size]
+        attempt = 0
+        delay = backoff_sec
 
-        # Retry loop per batch
-        attempt, delay = 0, backoff_sec
         while True:
             try:
-                out.extend(_embed_batch(batch))
-                break
+                embeddings = _embed_batch(batch)
+                results.extend(embeddings)
+                break  # success — exit retry loop
+
             except Exception as e:
                 attempt += 1
                 if attempt > max_retries:
-                    raise RuntimeError(f"Embedding failed after {max_retries} retries: {e}") from e
+                    raise RuntimeError(
+                        f"Embedding failed after {max_retries} retries: {e}"
+                    ) from e
+
                 time.sleep(delay)
                 delay *= 2  # exponential backoff
 
-    return out
+    return results
