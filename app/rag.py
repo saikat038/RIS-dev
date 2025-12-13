@@ -566,7 +566,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     query = state.get("query", "")
 
     # Search top-k documents for this query
-    docs = search(query, k=7)
+    docs = search(query, k=5)
 
     # Extract text from each chunk
     context_pieces = []
