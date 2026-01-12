@@ -666,6 +666,13 @@ Tables:
   "No matching records found based on your filters."
 - Return the result as a proper markdown table.
 
+Critical instruction:
+- The "Guideline" describes HOW to answer, not WHAT the answer is.
+- The guideline must NOT be treated as factual content.
+- You must derive the answer ONLY from the provided knowledge base context.
+- If the knowledge base does not support the answer, reply exactly:
+  Not in knowledge base.
+
 Important:
 - **Do not invent data** that is not supported by or logically derivable from the context.
 """.strip()
