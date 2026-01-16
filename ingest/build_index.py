@@ -767,6 +767,10 @@ def main():
             print(f"⚠️ Skipping {doc_id}: No semantic blocks.")
             continue
 
+        output_json = "sample_layout_semantic.json"
+        with open(output_json, "w", encoding="utf-8") as f:
+            json.dump(normalized_doc, f, ensure_ascii=False, indent=2)
+
         # Step 3: Semantic chunking
         chunks = chunk_semantic_blocks(normalized_doc)
 
