@@ -9197,7 +9197,7 @@
           "bbox": [
             0.9901,
             7.339,
-            1.2414,
+            1.2415,
             7.501
           ],
           "confidence": null
@@ -9375,7 +9375,7 @@
           "block_type": "paragraph",
           "text": "9.2.",
           "bbox": [
-            0.9873,
+            0.9874,
             8.7186,
             1.2424,
             8.8836
@@ -55949,7 +55949,7 @@
           "block_type": "paragraph",
           "text": "· Signed ICFs for all subjects",
           "bbox": [
-            1.5014,
+            1.5013,
             4.3548,
             3.6068,
             4.5412
