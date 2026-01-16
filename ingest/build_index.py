@@ -642,6 +642,8 @@ from azure.core.credentials import AzureKeyCredential
 from azure.storage.blob import ContainerClient, BlobClient
 from PyPDF2 import PdfReader
 from docx import Document
+from docint_layout import *
+from semantic_chunk import *
 
 from config.settings import (
     AZURE_BLOB_CONN_STRING,
@@ -651,7 +653,6 @@ from config.settings import (
     AZURE_SEARCH_API_KEY,
     AZURE_SEARCH_INDEX_NAME,
 )
-from ingest.chunk import split_into_chunks
 from ingest.embed import batch_embed
 
 
@@ -684,38 +685,60 @@ def _download_blob_bytes(blob_name: str) -> bytes:
 # ----------------------------
 # MAIN TEXT EXTRACTION LOGIC
 # ----------------------------
-def download_and_extract_text(blob_name: str) -> str:
+def download_and_extract_document(blob_name: str) -> dict:
     ext = os.path.splitext(blob_name)[1].lower()
+    source_name = os.path.basename(blob_name)
 
-    # TXT
+    # -------- TXT (wrap as structured doc) --------
     if ext == ".txt":
         bc = BlobClient.from_connection_string(
             AZURE_BLOB_CONN_STRING, BLOB_CONTAINER, blob_name
         )
-        return bc.download_blob().content_as_text(encoding="utf-8")
+        text = bc.download_blob().content_as_text(encoding="utf-8")
 
-    # PDF
-    if ext == ".pdf":
+        return {
+            "document_name": source_name,
+            "model": "plain-text",
+            "pages": [
+                {
+                    "page_number": 1,
+                    "width": None,
+                    "height": None,
+                    "unit": None,
+                    "blocks": [
+                        {
+                            "block_id": "p1_line_0",
+                            "block_type": "paragraph",
+                            "text": text,
+                            "bbox": None,
+                            "confidence": None
+                        }
+                    ]
+                }
+            ]
+        }
+
+    # -------- PDF / DOCX (Doc Intelligence) --------
+    if ext in [".pdf", ".docx"]:
         raw_bytes = _download_blob_bytes(blob_name)
-        reader = PdfReader(BytesIO(raw_bytes))
-        pages_text = [(page.extract_text() or "") for page in reader.pages]
-        return "\n\n".join(pages_text).strip()
 
-    # DOCX
-    if ext == ".docx":
-        raw_bytes = _download_blob_bytes(blob_name)
-        doc = Document(BytesIO(raw_bytes))
-        paras = [p.text for p in doc.paragraphs if p.text.strip()]
-        return "\n".join(paras).strip()
+        structured_doc = extract_layout_to_structured_json(raw_bytes, source_name)
 
-    return ""
+        return structured_doc
+
+    # -------- Unsupported --------
+    raise ValueError(f"Unsupported file type: {ext}")
+
+
+
+
 
 
 # ----------------------------
 # MAIN INGESTION SCRIPT
 # ----------------------------
 def main():
-    print("🔍 Building Azure AI Search Vector Index from raw documents...")
+    print("🔍 Building Azure AI Search Vector Index from documents...")
 
     search_client = SearchClient(
         endpoint=AZURE_SEARCH_SERVICE_ENDPOINT,
@@ -723,45 +746,65 @@ def main():
         credential=AzureKeyCredential(AZURE_SEARCH_API_KEY)
     )
 
+
     documents_to_upload = []
 
     for blob_name in list_raw_text_blobs():
         doc_id = os.path.basename(blob_name)
         print(f"📄 Processing: {doc_id}")
 
-        # Step 1: Extract text
-        text = download_and_extract_text(blob_name)
-        if not text.strip():
-            print(f"⚠️ Skipping {doc_id}: No text found.")
+        # Step 1: Download + OCR (STRUCTURED)
+        structured_doc = download_and_extract_document(blob_name)
+
+        if not structured_doc or not structured_doc.get("pages"):
+            print(f"⚠️ Skipping {doc_id}: No content found.")
             continue
 
-        # Step 2: Chunk text
-        chunks = split_into_chunks(text)
+        # Step 2: Semantic normalization
+        normalized_doc = normalize_layout_json(structured_doc)
 
-        # Step 3: Embed chunks
+        if not normalized_doc.get("blocks"):
+            print(f"⚠️ Skipping {doc_id}: No semantic blocks.")
+            continue
+
+        # Step 3: Semantic chunking
+        chunks = chunk_semantic_blocks(normalized_doc)
+
+        if not chunks:
+            print(f"⚠️ Skipping {doc_id}: No chunks produced.")
+            continue
+
         print(f"🧠 Embedding {len(chunks)} chunks for {doc_id}...")
-        embeddings = batch_embed(chunks)  # returns list[list[float]]
 
-        # Step 4: Build documents for Azure Search
-        for i, chunk_text in enumerate(chunks):
-            vector = embeddings[i]
+        # Step 4: Embed chunk texts
+        texts_to_embed = [c["text"] for c in chunks]
+        embeddings = batch_embed(texts_to_embed)
 
+        # Step 5: Build Azure Search documents
+        for chunk, vector in zip(chunks, embeddings):
             doc = {
-                "id": str(uuid.uuid4()),   # unique id
-                "text": chunk_text,
-                "doc_id": str(doc_id),
-                "page": str(i + 1),
-                "vector": vector,          # embedding list
+                "id": str(uuid.uuid4()),
+                "doc_id": doc_id,
+                "text": chunk["text"],
+                "chunk_type": chunk["chunk_type"],
+                "heading_path": " > ".join(chunk["metadata"].get("heading_path", []))
+                                if chunk["metadata"].get("heading_path")
+                                else None,
+                "page_numbers": chunk["metadata"].get("page_numbers"),
+                "source_block_ids": chunk["metadata"].get("source_block_ids"),
+                "vector": vector,
             }
 
             documents_to_upload.append(doc)
 
     # Final upload
-    print(f"🚀 Uploading {len(documents_to_upload)} chunks to Azure AI Search...")
-    result = search_client.upload_documents(documents_to_upload)
-
-    print("🎯 Ingestion completed!")
-    print(result)
+    if documents_to_upload:
+        print(f"🚀 Uploading {len(documents_to_upload)} chunks to Azure AI Search...")
+        result = search_client.upload_documents(documents_to_upload)
+        print("🎯 Ingestion completed!")
+        print(result)
+    else:
+        print("⚠️ No documents to upload.")
 
 
 # ----------------------------
