@@ -7,7 +7,7 @@ load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env"))
 
 
 
-# # openAI rag model
+# openAI rag model
 # AZURE_OPENAI_CHAT_ENDPOINT = os.getenv("OPEN_AI_ENDPOINT")
 # AZURE_OPENAI_CHAT_API_KEY = os.getenv("OPEN_AI_KEY")
 # AZURE_OPENAI_API_CHAT_VERSION = os.getenv("OPEN_AI_DEPLOYMENT_VERSION")

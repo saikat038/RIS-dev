@@ -644,6 +644,7 @@ from PyPDF2 import PdfReader
 from docx import Document
 from docint_layout import *
 from semantic_chunk import *
+from Semantic_Normalization import *
 
 from config.settings import (
     AZURE_BLOB_CONN_STRING,
