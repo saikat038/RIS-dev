@@ -443,27 +443,22 @@ def embed_query(text: str) -> np.ndarray:
 # ============================
 
 def search(query: str, k: int = 3):
-    q_vec = batch_embed([query])[0]
+    q_vec = batch_embed([query])[0]  # embedding
 
     search_client = load_vectorstore()
 
+    # NEW CORRECT VECTOR QUERY for 11.7.0b2
     vector_query = VectorizedQuery(
         vector=q_vec,
         k=k,
         fields="vector"
     )
 
+    # MUST WRAP IN LIST: vector_queries=[...]
     results = search_client.search(
-        search_text=query,
+        search_text="",      # required
         vector_queries=[vector_query],
-        select=[
-            "text",
-            "doc_id",
-            "page_numbers",
-            "chunk_type",
-            "heading_path"
-        ],
-        top=k
+        select=["text", "doc_id", "page_numbers"]
     )
 
     output = []
@@ -571,7 +566,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     query = state.get("query", "")
 
     # Search top-k documents for this query
-    docs = search(query, k=12)
+    docs = search(query, k=5)
 
     # Extract text from each chunk
     context_pieces = []
