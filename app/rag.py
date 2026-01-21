@@ -442,17 +442,22 @@ def embed_query(text: str) -> np.ndarray:
 # VECTOR SEARCH (Azure AI Search)
 # ============================
 
-def search(query: str, k: int = 16):
-    q_vec = embed_query(query)
+def search(query: str, k: int = 3):
+    q_vec = batch_embed([query])  # embedding
+
     search_client = load_vectorstore()
 
+    # NEW CORRECT VECTOR QUERY for 11.7.0b2
+    vector_query = VectorizedQuery(
+        vector=q_vec,
+        k=k,
+        fields="vector"
+    )
+
+    # MUST WRAP IN LIST: vector_queries=[...]
     results = search_client.search(
-        search_text=query,   # hybrid search
-        vector={
-            "value": q_vec,
-            "fields": "vector",
-            "k": k,
-        },
+        search_text=query,              
+        vector_queries=[vector_query],
         select=[
             "text",
             "doc_id",
@@ -466,13 +471,14 @@ def search(query: str, k: int = 16):
     output = []
     for r in results:
         output.append({
-            "text": r.get("text", ""),
-            "doc_id": r.get("doc_id"),
-            "page_numbers": r.get("page_numbers", []),
-            "chunk_type": r.get("chunk_type"),
-            "heading_path": r.get("heading_path"),
-            "score": r.get("@search.score"),
-        })
+        "text": r.get("text", ""),
+        "doc_id": r.get("doc_id"),
+        "page_numbers": r.get("page_numbers", []),
+        "chunk_type": r.get("chunk_type"),
+        "heading_path": r.get("heading_path"),
+        "score": r.get("@search.score"),
+    })
+
 
     return output
 
