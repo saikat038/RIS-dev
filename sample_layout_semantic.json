@@ -10,7 +10,7 @@
       ],
       "rows": [],
       "page_number": 1,
-      "container_id": "a6cd6c17-4cfe-4072-b3ed-d9bcedfed563",
+      "container_id": "16ba3a90-5e0e-4a13-989d-bb9f5d04f5cd",
       "container_type": "table_group",
       "container_path": [],
       "source_block_ids": [
@@ -24,7 +24,7 @@
       "level": 1,
       "text": "APPENDIX 1. PROTOCOL AMENDMENT HISTORY",
       "page_number": 1,
-      "container_id": "ef9bac62-bd41-4e07-8fdc-1d2940a19a88",
+      "container_id": "da85a796-e64a-4498-8396-c724bcd241d1",
       "container_type": "appendix",
       "container_path": [
         "APPENDIX 1. PROTOCOL AMENDMENT HISTORY"
@@ -34,7 +34,7 @@
       "block_type": "paragraph",
       "text": "AMENDMENT 9, 02 DECEMBER 2025 Main Rationale for Amendment 9: The main purpose of this amendment is to remove the word Lucentis from all applicable sections of the protocol. AMENDMENT 8, 06 NOVEMBER 2025 Main Rationale for Amendment 8: The main purpose of this amendment is to update revised Inclusion Exclusion Criteria and Update the study design. Comparison Table of Changes from Protocol Amendment 7 to Amendment 8",
       "page_number": 1,
-      "container_id": "ef9bac62-bd41-4e07-8fdc-1d2940a19a88",
+      "container_id": "da85a796-e64a-4498-8396-c724bcd241d1",
       "container_type": "appendix",
       "container_path": [
         "APPENDIX 1. PROTOCOL AMENDMENT HISTORY"
@@ -63,7 +63,7 @@
       ],
       "rows": [],
       "page_number": 1,
-      "container_id": "d2469dbe-af37-4d04-a1a2-3b96629cdc5a",
+      "container_id": "5e1716ee-80ca-4f90-88d4-564812c055d7",
       "container_type": "table_group",
       "container_path": [
         "APPENDIX 1. PROTOCOL AMENDMENT HISTORY"
@@ -81,7 +81,7 @@
       "block_type": "paragraph",
       "text": "Track Protocol Section 1. Synopsis Section 6.1: Overall Study Design",
       "page_number": 1,
-      "container_id": "ef9bac62-bd41-4e07-8fdc-1d2940a19a88",
+      "container_id": "da85a796-e64a-4498-8396-c724bcd241d1",
       "container_type": "appendix",
       "container_path": [
         "APPENDIX 1. PROTOCOL AMENDMENT HISTORY"
@@ -104,7 +104,7 @@
       ],
       "rows": [],
       "page_number": 1,
-      "container_id": "7535a1db-1e41-4ab4-89f2-4faa5abe0f14",
+      "container_id": "6ae5f2b8-a99e-4ff3-b297-fb68dec02f62",
       "container_type": "table_group",
       "container_path": [
         "APPENDIX 1. PROTOCOL AMENDMENT HISTORY"
@@ -120,7 +120,7 @@
       "block_type": "paragraph",
       "text": "the updated protocol amendment 8 inclusion and exclusion criteria, three additional subjects will be enrolled and dosed in cohort 3. The sentinel subject in cohort 4 will be dosed first, after which dosing of the cohort 3 subjects will proceed simultaneously with the remainder of Cohort 4 dosing. The DSMB will review the safety data of the sentinel subject in cohort 4 as per the charter prior to proceeding with further cohort 4 dosing. Added to Cohort 4: Note: If no doselimiting toxicity (DLT) or safety concerns are observed for the planned dose of 0.25 mg/eye (5 mg/mL) in Cohort 4, 5 mg/mL will be confirmed as the Maximum Tolerated Dose (MTD) based on DSMB review of the cohort 4 sentinel subject data. 7-8 36 8-9 37 Section 6.1: Overall",
       "page_number": 1,
-      "container_id": "ef9bac62-bd41-4e07-8fdc-1d2940a19a88",
+      "container_id": "da85a796-e64a-4498-8396-c724bcd241d1",
       "container_type": "appendix",
       "container_path": [
         "APPENDIX 1. PROTOCOL AMENDMENT HISTORY"
@@ -167,7 +167,7 @@
         ]
       ],
       "page_number": 1,
-      "container_id": "63799451-28ec-486a-bde8-d466a0675aaf",
+      "container_id": "61d2088e-302f-480c-bf5e-1032c6d072f6",
       "container_type": "table_group",
       "container_path": [
         "APPENDIX 1. PROTOCOL AMENDMENT HISTORY"
@@ -185,7 +185,7 @@
       "level": 1,
       "text": "8 inclusion and exclusion criteria,",
       "page_number": 1,
-      "container_id": "4db5ad7b-40ff-4a4f-8a13-03d021297237",
+      "container_id": "6833dc44-aab7-40aa-aac8-12fd5531ad2e",
       "container_type": "section",
       "container_path": [
         "8 inclusion and exclusion criteria,"
@@ -195,7 +195,7 @@
       "block_type": "paragraph",
       "text": "three additional subjects will be enrolled and dosed in cohort 3. The sentinel subject in cohort 4 will be dosed first, after which dosing of the cohort 3 subjects will proceed simultaneously with the remainder of Cohort 4 dosing. (DSMB Recommendation Approval Form: Refer Appendix Updated figure 6 to present simultaneous dosing Added footnotes 40-41 OCUGEN Inc. - CONFIDENTIAL Page 1 of 81",
       "page_number": 1,
-      "container_id": "4db5ad7b-40ff-4a4f-8a13-03d021297237",
+      "container_id": "6833dc44-aab7-40aa-aac8-12fd5531ad2e",
       "container_type": "section",
       "container_path": [
         "8 inclusion and exclusion criteria,"
@@ -220,15 +220,7 @@
     },
     {
       "block_type": "table",
-      "caption": {
-        "text": "Comparison Table of Changes from Protocol Amendment 7 to Amendment 8",
-        "bbox": [
-          0.9833,
-          3.8451,
-          5.9773,
-          4.0311
-        ]
-      },
+      "caption": null,
       "headers": [
         "Applicable section",
         "Actual",
@@ -237,13 +229,6 @@
         "Applicable pages in Track Protocol"
       ],
       "rows": [
-        [
-          "Applicable section",
-          "Actual",
-          "New (proposed)",
-          "Summary of changes",
-          "Applicable pages in Track Protocol"
-        ],
         [
           "Section 1. Synopsis Section 6.1: Overall Study Design",
           "n/a",
@@ -260,7 +245,7 @@
         ]
       ],
       "page_number": 1,
-      "container_id": "a5cd689a-59ec-458a-be43-7cf1fb18487c",
+      "container_id": "8a73077f-cf9a-4fa8-bb66-9f09c1cf25ad",
       "container_type": "table_group",
       "container_path": [
         "8 inclusion and exclusion criteria,"
@@ -276,7 +261,7 @@
       ],
       "rows": [],
       "page_number": 2,
-      "container_id": "c1b0803f-5a80-4bc4-8d5f-b11549f32dde",
+      "container_id": "29f0af62-e36f-4c7a-b21e-7354a0d97577",
       "container_type": "table_group",
       "container_path": [
         "8 inclusion and exclusion criteria,"
@@ -299,7 +284,7 @@
       ],
       "rows": [],
       "page_number": 2,
-      "container_id": "de27b8a4-1f66-451f-be69-50de22233ae3",
+      "container_id": "803814f4-2ea6-41c9-bb1f-15fe3a8638ef",
       "container_type": "table_group",
       "container_path": [
         "8 inclusion and exclusion criteria,"
@@ -317,7 +302,7 @@
       "block_type": "paragraph",
       "text": "Track Protocol I). The DSMB will review the safety data of the sentinel subject in cohort 4 as per the charter prior to proceeding with further cohort",
       "page_number": 2,
-      "container_id": "4db5ad7b-40ff-4a4f-8a13-03d021297237",
+      "container_id": "6833dc44-aab7-40aa-aac8-12fd5531ad2e",
       "container_type": "section",
       "container_path": [
         "8 inclusion and exclusion criteria,"
@@ -336,7 +321,7 @@
       "level": 1,
       "text": "4 dosing.",
       "page_number": 2,
-      "container_id": "ef58dd35-799c-463e-9e40-72bc78e8d16b",
+      "container_id": "fade9d3e-41e8-4722-b071-5e1ecefc6c61",
       "container_type": "section",
       "container_path": [
         "4 dosing."
@@ -346,7 +331,7 @@
       "block_type": "paragraph",
       "text": "Note: If no dose-limiting toxicity (DLT) or safety concerns are observed for the planned dose of",
       "page_number": 2,
-      "container_id": "ef58dd35-799c-463e-9e40-72bc78e8d16b",
+      "container_id": "fade9d3e-41e8-4722-b071-5e1ecefc6c61",
       "container_type": "section",
       "container_path": [
         "4 dosing."
@@ -362,7 +347,7 @@
       "level": 1,
       "text": "0.25 mg/eye (5 mg/mL) in Cohort",
       "page_number": 2,
-      "container_id": "4aa0f3cd-a5b2-4677-9b60-7f3d3c8b805a",
+      "container_id": "5cee7a1f-c7a2-42c2-b576-fb7b50969faf",
       "container_type": "section",
       "container_path": [
         "0.25 mg/eye (5 mg/mL) in Cohort"
@@ -372,7 +357,7 @@
       "block_type": "paragraph",
       "text": "4, 5 mg/mL will be confirmed as the Maximum Tolerated Dose (MTD) based on DSMB review of the cohort 4 sentinel subject data Note: Following completion of dosing for the additional subjects in Cohort 3, DSMB will review safety data through the 1-week post-dose follow-up period",
       "page_number": 2,
-      "container_id": "4aa0f3cd-a5b2-4677-9b60-7f3d3c8b805a",
+      "container_id": "5cee7a1f-c7a2-42c2-b576-fb7b50969faf",
       "container_type": "section",
       "container_path": [
         "0.25 mg/eye (5 mg/mL) in Cohort"
@@ -399,7 +384,7 @@
       ],
       "rows": [],
       "page_number": 2,
-      "container_id": "4d0901b8-04df-4bf1-b2f2-c68423a04c51",
+      "container_id": "a75a14e2-da32-4c00-a872-462f7f3fb3ca",
       "container_type": "table_group",
       "container_path": [
         "0.25 mg/eye (5 mg/mL) in Cohort"
@@ -414,7 +399,7 @@
       "block_type": "paragraph",
       "text": "thickness (CST) values, as assessed with spectral-domain optical coherence tomography (SD-OCT) of: Updated Inclusion # 7 Updated Exclusion # 2, # 17, # 22, #13 10 12-13 Section 7.1 Subject Inclusion Criteria",
       "page_number": 2,
-      "container_id": "4aa0f3cd-a5b2-4677-9b60-7f3d3c8b805a",
+      "container_id": "5cee7a1f-c7a2-42c2-b576-fb7b50969faf",
       "container_type": "section",
       "container_path": [
         "0.25 mg/eye (5 mg/mL) in Cohort"
@@ -446,7 +431,7 @@
         ]
       ],
       "page_number": 2,
-      "container_id": "cf38912c-01a2-4ad1-965b-97fd49d92c5e",
+      "container_id": "3b87d2ce-1206-42d9-9a70-97727df593e1",
       "container_type": "table_group",
       "container_path": [
         "0.25 mg/eye (5 mg/mL) in Cohort"
@@ -463,7 +448,7 @@
       "block_type": "paragraph",
       "text": "b) ≥ 305 but ≤ 435um if male or≥",
       "page_number": 2,
-      "container_id": "4aa0f3cd-a5b2-4677-9b60-7f3d3c8b805a",
+      "container_id": "5cee7a1f-c7a2-42c2-b576-fb7b50969faf",
       "container_type": "section",
       "container_path": [
         "0.25 mg/eye (5 mg/mL) in Cohort"
@@ -477,7 +462,7 @@
       "level": 1,
       "text": "290 but ≤ 420um if female on",
       "page_number": 2,
-      "container_id": "86e3c0ab-b3a6-451f-8f5f-c9b72c1de992",
+      "container_id": "90073b6a-e575-40c6-abb6-57aaeed8fb4e",
       "container_type": "section",
       "container_path": [
         "290 but ≤ 420um if female on"
@@ -487,7 +472,7 @@
       "block_type": "paragraph",
       "text": "Zeiss Cirrus Exclusion # 2: Uncontrolled hypertension (systolic pressure above 160 mmHg or diastolic pressure above 100 mmHg) Exclusion # 13: Uncontrolled/poorly controlled diabetes, as defined by Glycated hemoglobin (HbA1c) ≥ 10% Exclusion # 17: Renal disease including stage 3b or worse (i.e. eGFR ≤ 44), clinically significant proteinuria and albuminemia, being on dialysis or status post kidney transplant Exclusion # 22: Any proliferative diabetic retinopathy, history of (including ) regressed disease after anti-VEGF and/or panretinal photocoagulation.",
       "page_number": 2,
-      "container_id": "86e3c0ab-b3a6-451f-8f5f-c9b72c1de992",
+      "container_id": "90073b6a-e575-40c6-abb6-57aaeed8fb4e",
       "container_type": "section",
       "container_path": [
         "290 but ≤ 420um if female on"
@@ -527,7 +512,7 @@
       ],
       "rows": [],
       "page_number": 2,
-      "container_id": "038e6560-615f-4ce0-9c5a-c589af4c00e9",
+      "container_id": "00a94795-2a3d-4a60-98fd-eae804f0f0da",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on"
@@ -545,7 +530,7 @@
       "block_type": "paragraph",
       "text": "Track Protocol OCUGEN Inc. - CONFIDENTIAL Page 2 of 81",
       "page_number": 2,
-      "container_id": "86e3c0ab-b3a6-451f-8f5f-c9b72c1de992",
+      "container_id": "90073b6a-e575-40c6-abb6-57aaeed8fb4e",
       "container_type": "section",
       "container_path": [
         "290 but ≤ 420um if female on"
@@ -568,13 +553,6 @@
         "Applicable pages in Track Protocol"
       ],
       "rows": [
-        [
-          "Applicable section",
-          "Actual",
-          "New (proposed)",
-          "Summary of changes",
-          "Applicable pages in Track Protocol"
-        ],
         [
           "",
           "",
@@ -602,17 +580,10 @@
           "a) ≥ 320 but ≤ 450um if male or≥ 305 but ≤ 435um if female on Heidelberg Spectralis b) ≥ 305 but ≤ 435um if male or≥ 290 but ≤ 420um if female on Zeiss Cirrus Exclusion # 2: Uncontrolled hypertension (systolic pressure above 160 mmHg or diastolic pressure above 100 mmHg) Exclusion # 13: Uncontrolled/poorly controlled diabetes, as defined by Glycated hemoglobin (HbA1c) ≥ 10% Exclusion # 17: Renal disease including stage 3b or worse (i.e. eGFR ≤ 44), clinically significant proteinuria and albuminemia, being on dialysis or status post kidney transplant Exclusion # 22: Any proliferative diabetic retinopathy, history of (including ) regressed disease after anti-VEGF and/or panretinal photocoagulation.",
           "",
           ""
-        ],
-        [
-          "Applicable section",
-          "Actual",
-          "New (proposed)",
-          "Summary of changes",
-          "Applicable pages in Track Protocol"
         ]
       ],
       "page_number": 2,
-      "container_id": "9067d6cc-5eb1-442d-8509-d58765d70f5b",
+      "container_id": "8064a942-c617-4846-b04a-b9589ea5dfb3",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on"
@@ -628,7 +599,7 @@
       ],
       "rows": [],
       "page_number": 3,
-      "container_id": "8fe4a7e6-e31d-498f-93bd-b140d5144afd",
+      "container_id": "9a24dff3-4f62-462a-88db-058656a252aa",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on"
@@ -650,7 +621,7 @@
       ],
       "rows": [],
       "page_number": 3,
-      "container_id": "0e32c28e-68b1-46ee-90f7-9650e5c3f8b5",
+      "container_id": "18935a73-1f49-46b2-9f88-f380f79addce",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on"
@@ -667,7 +638,7 @@
       "block_type": "paragraph",
       "text": "Section 6.1: Overall Study Design Total study subjects are updated from 30 to 24. Removed cohort 5 dosing algorithm Updated Cohort administration flow figure to remove cohort 5",
       "page_number": 3,
-      "container_id": "86e3c0ab-b3a6-451f-8f5f-c9b72c1de992",
+      "container_id": "90073b6a-e575-40c6-abb6-57aaeed8fb4e",
       "container_type": "section",
       "container_path": [
         "290 but ≤ 420um if female on"
@@ -687,7 +658,7 @@
       "level": 2,
       "text": "Figure 6",
       "page_number": 3,
-      "container_id": "513b5e2c-314d-4436-ae7b-4447b1d6fba4",
+      "container_id": "4d8d0564-97e9-4331-a31a-0af9ab1dfafb",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -698,7 +669,7 @@
       "block_type": "paragraph",
       "text": "9,42 Removed foot note regarding cohort 5 46",
       "page_number": 3,
-      "container_id": "513b5e2c-314d-4436-ae7b-4447b1d6fba4",
+      "container_id": "4d8d0564-97e9-4331-a31a-0af9ab1dfafb",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -719,7 +690,7 @@
       ],
       "rows": [],
       "page_number": 3,
-      "container_id": "289447f1-2a80-4489-9922-b0facabcc850",
+      "container_id": "e9f19cf6-64c1-40f7-baa9-18c6bdccc97f",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -735,7 +706,7 @@
       "block_type": "paragraph",
       "text": "AMENDMENT 7, 08 AUGUST 2025 Main Rationale for Amendment 7: The main purpose of this amendment is to correct the discrepancy in the study design figure to align with protocol Comparison Table of Changes from Protocol Amendment 6 to Amendment 7",
       "page_number": 3,
-      "container_id": "513b5e2c-314d-4436-ae7b-4447b1d6fba4",
+      "container_id": "4d8d0564-97e9-4331-a31a-0af9ab1dfafb",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -761,7 +732,7 @@
       ],
       "rows": [],
       "page_number": 3,
-      "container_id": "bd92b35f-d2aa-4c65-b8e3-996eab9bc88d",
+      "container_id": "de7be3cb-2e91-4ad3-ab50-3c3a09595581",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -780,7 +751,7 @@
       "block_type": "paragraph",
       "text": "Track Protocol",
       "page_number": 3,
-      "container_id": "513b5e2c-314d-4436-ae7b-4447b1d6fba4",
+      "container_id": "4d8d0564-97e9-4331-a31a-0af9ab1dfafb",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -803,7 +774,7 @@
       ],
       "rows": [],
       "page_number": 3,
-      "container_id": "725ffb46-45e9-4828-af04-a1edf506186f",
+      "container_id": "6e51a3f0-7734-4da6-8e9e-ac299ea659ef",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -822,7 +793,7 @@
       "block_type": "paragraph",
       "text": "Updated Figure 6: Corrected Cohort Administration flow timeline to align with protocol DSMB review timepoints 33 37 AMENDMENT 6, 25 JUNE 2025 Main Rationale for Amendment 6: The main purpose of this amendment is to add one more cohort to the study design and add protocol memo language Comparison Table of Changes from Protocol Amendment 5 to Amendment 6",
       "page_number": 3,
-      "container_id": "513b5e2c-314d-4436-ae7b-4447b1d6fba4",
+      "container_id": "4d8d0564-97e9-4331-a31a-0af9ab1dfafb",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -853,7 +824,7 @@
       ],
       "rows": [],
       "page_number": 3,
-      "container_id": "32201942-fb53-42d7-927a-5f26610d0b1d",
+      "container_id": "599c4fa4-ad67-40de-b554-f110ead914b9",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -872,7 +843,7 @@
       "block_type": "paragraph",
       "text": "Track Protocol OCUGEN Inc. - CONFIDENTIAL Page 3 of 81",
       "page_number": 3,
-      "container_id": "513b5e2c-314d-4436-ae7b-4447b1d6fba4",
+      "container_id": "4d8d0564-97e9-4331-a31a-0af9ab1dfafb",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -889,13 +860,20 @@
       "block_type": "table",
       "caption": null,
       "headers": [
-        "Section 1. Synopsis",
-        "",
-        "A total of up to 24 subjects will be included in this study.",
-        "Removed Cohort 5 from the study design.",
-        "5, 13,38"
+        "Applicable section",
+        "Actual",
+        "New (proposed)",
+        "Summary of changes",
+        "Applicable pages in Track Protocol"
       ],
       "rows": [
+        [
+          "Section 1. Synopsis",
+          "",
+          "A total of up to 24 subjects will be included in this study.",
+          "Removed Cohort 5 from the study design.",
+          "5, 13,38"
+        ],
         [
           "Section 6.1: Overall Study Design",
           "",
@@ -947,7 +925,7 @@
         ]
       ],
       "page_number": 3,
-      "container_id": "c09123f6-b421-48db-ba33-261b5c17fa79",
+      "container_id": "59cf6a2c-ee8a-4363-a6d5-f3485fe8edf9",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -957,15 +935,7 @@
     },
     {
       "block_type": "table",
-      "caption": {
-        "text": "Comparison Table of Changes from Protocol Amendment 6 to Amendment 7",
-        "bbox": [
-          0.9827,
-          5.1614,
-          5.9769,
-          5.3515
-        ]
-      },
+      "caption": null,
       "headers": [
         "Applicable section",
         "Actual",
@@ -975,13 +945,6 @@
       ],
       "rows": [
         [
-          "Applicable section",
-          "Actual",
-          "New (proposed)",
-          "Summary of changes",
-          "Applicable pages in Track Protocol"
-        ],
-        [
           "Section 6.1: Overall Study Design",
           "n/a",
           "n/a",
@@ -990,7 +953,7 @@
         ]
       ],
       "page_number": 3,
-      "container_id": "9be2a98e-3a4c-494a-94af-d2c1c14e29e6",
+      "container_id": "bde993f0-2350-4fa1-b2bd-7874cac45cc4",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1007,7 +970,7 @@
       ],
       "rows": [],
       "page_number": 4,
-      "container_id": "f5ff4516-731e-42e8-8c3b-ad9eee5826da",
+      "container_id": "c4ff97f6-d936-46dd-a854-b3702a11e509",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1032,7 +995,7 @@
       ],
       "rows": [],
       "page_number": 4,
-      "container_id": "a65723d4-91ae-4fe1-a50e-49bbc55c3bbf",
+      "container_id": "f258e391-98d4-4872-b740-b6c2f11c3231",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1052,7 +1015,7 @@
       "block_type": "paragraph",
       "text": "Methodology Section",
       "page_number": 4,
-      "container_id": "513b5e2c-314d-4436-ae7b-4447b1d6fba4",
+      "container_id": "4d8d0564-97e9-4331-a31a-0af9ab1dfafb",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1075,7 +1038,7 @@
         ]
       ],
       "page_number": 4,
-      "container_id": "96df9386-1023-49bc-b00e-ce24a911a107",
+      "container_id": "cdcb69f1-e62b-4c1a-9188-2138383d1aaa",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1092,7 +1055,7 @@
       "block_type": "paragraph",
       "text": "must be administered up to 1 hour prior to the administration of MTD · Under this design, there will be 12 subjects enrolled if there are no DLTs and up to 24 subjects under the condition that exactly 1 of the 3 subjects of every cohort is determined to have a DLT. For the combination therapy cohort, a total of 3 to 6 subjects will be enrolled to receive OCU200 (MTD) + Lucentis. A total of up to 30 subjects will be included in this study. · Added rationale for adding OCU200 Cohort 4: To further refine the therapeutic window and explore potential improvements in efficacy while preserving an acceptable safety profile, a new intermediate dose level of 0.25 mg/eye (5 mg/mL) is proposed for evaluation as Cohort 4. This dose level is informed by nonclinical toxicology data from non-human primate (NHP) studies, in which the highest tested and well-tolerated dose was 0.5 mg/eye. This is half of the maximum tolerable dose tested in NHP. No ocular toxicity was observed at 0.5 mg/eye (10 mg/mL) except for minimal microscopic observations in NHP study and therefore 0.5 mg/eye (10mg/mL) is considered no observed adverse event level (NOAEL) for ocular tissues. The proposed dose (0.25 mg/eye) in cohort 4 will have 2X safety margin based on NOAEL. Inclusion of the 0.25 mg/eye dose in the clinical trial design will enable a more detailed characterization of the dose-response relationship, supporting identification of an optimal dose that balances safety with therapeutic effect before proceeding to the maximum tolerated dose. 32-39 Section 1. Diagnosis and main criteria for inclusion Section 7. Selection and withdrawal of Subject",
       "page_number": 4,
-      "container_id": "513b5e2c-314d-4436-ae7b-4447b1d6fba4",
+      "container_id": "4d8d0564-97e9-4331-a31a-0af9ab1dfafb",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1152,7 +1115,7 @@
       ],
       "rows": [],
       "page_number": 4,
-      "container_id": "5c2f8819-bdf1-4334-8dd3-5d1ecf63d68c",
+      "container_id": "5379439d-7e22-4513-97d8-c7733e55bc47",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1168,7 +1131,7 @@
       "block_type": "paragraph",
       "text": "· Eligibility for subjects will be determined by the sponsor on a case-by-case basis. . Subject inclusion will be determined by Sponsor upon reviewing subjects screening packet, PI recommendations and in consultation with scientific advisory board (SAB).",
       "page_number": 4,
-      "container_id": "513b5e2c-314d-4436-ae7b-4447b1d6fba4",
+      "container_id": "4d8d0564-97e9-4331-a31a-0af9ab1dfafb",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1192,7 +1155,7 @@
       ],
       "rows": [],
       "page_number": 4,
-      "container_id": "3ba52982-b35a-4478-abae-69dda0e5e2da",
+      "container_id": "30e6cb5d-ed2c-4de7-9b42-86246df6e953",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1208,7 +1171,7 @@
       "block_type": "paragraph",
       "text": "the study treatment (Day 1) in the study eye.",
       "page_number": 4,
-      "container_id": "513b5e2c-314d-4436-ae7b-4447b1d6fba4",
+      "container_id": "4d8d0564-97e9-4331-a31a-0af9ab1dfafb",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1227,7 +1190,7 @@
       ],
       "rows": [],
       "page_number": 4,
-      "container_id": "9ee1a463-2aac-4ca7-8ace-ab08608d4223",
+      "container_id": "f7197730-3533-42dd-a84f-3153eb813c25",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1243,7 +1206,7 @@
       "block_type": "paragraph",
       "text": "administered at least two weeks prior to Day 1(Treatment) and the treatment can be resumed, per PI if clinically deemed necessary post two weeks from the day of OCU200 injection.",
       "page_number": 4,
-      "container_id": "513b5e2c-314d-4436-ae7b-4447b1d6fba4",
+      "container_id": "4d8d0564-97e9-4331-a31a-0af9ab1dfafb",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1265,7 +1228,7 @@
       ],
       "rows": [],
       "page_number": 4,
-      "container_id": "06026592-dd6c-4272-936e-1ae91bdbd821",
+      "container_id": "89a9a6e0-096a-4852-894f-cf61fba6bb74",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1281,7 +1244,7 @@
       "block_type": "paragraph",
       "text": "diagnosed reasons: Treatment may be permitted upon receiving prior approval from the Sponsor. 8-9 48-49 OCUGEN Inc. - CONFIDENTIAL Page 4 of 81",
       "page_number": 4,
-      "container_id": "513b5e2c-314d-4436-ae7b-4447b1d6fba4",
+      "container_id": "4d8d0564-97e9-4331-a31a-0af9ab1dfafb",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1300,13 +1263,20 @@
       "block_type": "table",
       "caption": null,
       "headers": [
-        "Section 1. Synopsis, Study Design and",
-        "n/a",
-        "n/a",
-        "· Updated the study design to add additional cohort.",
-        "4-8"
+        "Applicable section",
+        "Actual",
+        "New (proposed)",
+        "Summary of changes",
+        "Applicable pages in Track Protocol"
       ],
       "rows": [
+        [
+          "Section 1. Synopsis, Study Design and",
+          "n/a",
+          "n/a",
+          "· Updated the study design to add additional cohort.",
+          "4-8"
+        ],
         [
           "Methodology Section 6.1: Overall Study Design",
           "",
@@ -1337,7 +1307,7 @@
         ]
       ],
       "page_number": 4,
-      "container_id": "dfa091c0-7d91-47dc-a900-fc2b0d952e64",
+      "container_id": "372b7a8e-155c-4664-8374-eceb16a57696",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1354,7 +1324,7 @@
       ],
       "rows": [],
       "page_number": 5,
-      "container_id": "81ece364-fa0f-4623-a781-083782e2088a",
+      "container_id": "76cea2e2-b1d8-451b-867b-c10ba95a0afc",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1378,7 +1348,7 @@
       ],
       "rows": [],
       "page_number": 5,
-      "container_id": "d82f766f-7b2c-49d9-9919-ef28a8f602e7",
+      "container_id": "8634f40c-2575-4b0c-84b0-e802ae07e22c",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1397,7 +1367,7 @@
       "block_type": "paragraph",
       "text": "Track Protocol Section 1. Investigational product, dosage, and mode of administration:",
       "page_number": 5,
-      "container_id": "513b5e2c-314d-4436-ae7b-4447b1d6fba4",
+      "container_id": "4d8d0564-97e9-4331-a31a-0af9ab1dfafb",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1422,7 +1392,7 @@
       ],
       "rows": [],
       "page_number": 5,
-      "container_id": "9663600d-2b44-4c0a-9652-693064befccf",
+      "container_id": "602dc3dc-c0f9-4c60-8791-316bbeb2c116",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1439,7 +1409,7 @@
       "block_type": "paragraph",
       "text": "Cohort 5 (OCU200 MTD+ Lucentis): Lucentis must be administered up to 1 hour prior to the administration of MTD 11",
       "page_number": 5,
-      "container_id": "513b5e2c-314d-4436-ae7b-4447b1d6fba4",
+      "container_id": "4d8d0564-97e9-4331-a31a-0af9ab1dfafb",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1457,7 +1427,7 @@
       "level": 2,
       "text": "Figure 5 Basic Study",
       "page_number": 5,
-      "container_id": "8b08fd23-7321-4ec7-b111-f11b9f391b07",
+      "container_id": "628e87c8-ff19-4c73-b034-608db043da45",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1469,7 +1439,7 @@
       "block_type": "paragraph",
       "text": "Design",
       "page_number": 5,
-      "container_id": "8b08fd23-7321-4ec7-b111-f11b9f391b07",
+      "container_id": "628e87c8-ff19-4c73-b034-608db043da45",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1491,7 +1461,7 @@
       ],
       "rows": [],
       "page_number": 5,
-      "container_id": "300d9f2f-9095-44d1-8c4b-c61ced9876b4",
+      "container_id": "7536ef48-d374-442e-b256-8af9df786d7a",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1511,7 +1481,7 @@
       "level": 2,
       "text": "Figure 6 Cohort",
       "page_number": 5,
-      "container_id": "fe8292f8-a488-441d-bb28-870795a6078f",
+      "container_id": "4cd95ce9-ee87-404e-aa08-d189c409114d",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1524,7 +1494,7 @@
       "block_type": "paragraph",
       "text": "Administration Flow Timeline",
       "page_number": 5,
-      "container_id": "fe8292f8-a488-441d-bb28-870795a6078f",
+      "container_id": "4cd95ce9-ee87-404e-aa08-d189c409114d",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1548,7 +1518,7 @@
       ],
       "rows": [],
       "page_number": 5,
-      "container_id": "cc4f4a20-7b80-4ba8-aea3-4636c0b3be48",
+      "container_id": "cece1aa0-9ac3-422d-81d5-85124ab61afb",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1568,7 +1538,7 @@
       "block_type": "paragraph",
       "text": "Table 3. Schedule of Assessments",
       "page_number": 5,
-      "container_id": "fe8292f8-a488-441d-bb28-870795a6078f",
+      "container_id": "4cd95ce9-ee87-404e-aa08-d189c409114d",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1591,7 +1561,7 @@
       ],
       "rows": [],
       "page_number": 5,
-      "container_id": "dda5f6f8-91fb-40d4-be25-a726a5d0099a",
+      "container_id": "6bed16f6-d49a-4cbe-8be0-af4abaf430d9",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1610,7 +1580,7 @@
       "block_type": "paragraph",
       "text": "Section 8.1.1. Investigational Product Table 4",
       "page_number": 5,
-      "container_id": "fe8292f8-a488-441d-bb28-870795a6078f",
+      "container_id": "4cd95ce9-ee87-404e-aa08-d189c409114d",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1633,7 +1603,7 @@
       ],
       "rows": [],
       "page_number": 5,
-      "container_id": "89def3e0-a92f-4ef5-8fc2-04b6f4daf403",
+      "container_id": "75e7d40f-57f4-4c82-958e-76048c842c0a",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1651,7 +1621,7 @@
       "block_type": "paragraph",
       "text": "Replaced terminology ' low , med, high dose' with cohort, cohort 2, cohort 3 and cohort 4. Cohort 5 will be MTD+Lucentis 53 AMENDMENT 5, 14 MARCH 2025 Main Rationale for Amendment 5: The main purpose of this amendment is to update the Schedule of Assessment Table and assessments Comparison Table of Changes from Protocol Amendment 4 to Amendment 5",
       "page_number": 5,
-      "container_id": "fe8292f8-a488-441d-bb28-870795a6078f",
+      "container_id": "4cd95ce9-ee87-404e-aa08-d189c409114d",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1683,7 +1653,7 @@
       ],
       "rows": [],
       "page_number": 5,
-      "container_id": "5d3db842-0590-44d4-ac73-9bb508c8e33e",
+      "container_id": "a7019aec-14ed-4b15-af48-16da4014493b",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1704,7 +1674,7 @@
       "block_type": "paragraph",
       "text": "Protocol Section 1. Synopsis, Study Design",
       "page_number": 5,
-      "container_id": "fe8292f8-a488-441d-bb28-870795a6078f",
+      "container_id": "4cd95ce9-ee87-404e-aa08-d189c409114d",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1734,7 +1704,7 @@
         ]
       ],
       "page_number": 5,
-      "container_id": "dad6f27d-f482-4fe2-8555-3d03c3afa5de",
+      "container_id": "59005983-0158-404f-ac4e-9a24c06fc2d0",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1763,7 +1733,7 @@
       ],
       "rows": [],
       "page_number": 5,
-      "container_id": "92df82c1-8e0c-454f-8bd0-22e641ea0624",
+      "container_id": "08de83f6-e25a-4de7-a29b-d96879bf51ea",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1782,7 +1752,7 @@
       "block_type": "paragraph",
       "text": "12, Week 16 and Week 24 The proportion of subjects having a mean increase of ≥ 5 BCVA letters at Week 12, Week 16 and Week 24 Updated the timepoints",
       "page_number": 5,
-      "container_id": "fe8292f8-a488-441d-bb28-870795a6078f",
+      "container_id": "4cd95ce9-ee87-404e-aa08-d189c409114d",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1810,7 +1780,7 @@
         ]
       ],
       "page_number": 5,
-      "container_id": "0aa823e1-56ea-4351-8962-e88234438ff4",
+      "container_id": "d2f88874-0c06-4f9b-9d23-73cef876893c",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1829,7 +1799,7 @@
       "level": 2,
       "text": "Figure 5: Basic Study Design",
       "page_number": 5,
-      "container_id": "9089ae7d-2f05-4b73-98ae-ee2de8a5957d",
+      "container_id": "c5695512-dd16-4893-94ff-d7ebb1b566ce",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1848,7 +1818,7 @@
       ],
       "rows": [],
       "page_number": 5,
-      "container_id": "5300a6b2-fbe7-4cb7-b589-ae5fde54fa3c",
+      "container_id": "718289d5-12cc-4d3e-8d4d-0c3167eff1c8",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1872,7 +1842,7 @@
       ],
       "rows": [],
       "page_number": 5,
-      "container_id": "1fac214d-e8cf-42fc-8b4b-fe88c25563cd",
+      "container_id": "3465873a-d3f4-48aa-ab7c-debd92876df1",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1891,7 +1861,7 @@
       "block_type": "paragraph",
       "text": "4M and 6M 42-44 AMENDMENT 4, 11 FEBRUARY 2025 OCUGEN Inc. - CONFIDENTIAL Page 5 of 81",
       "page_number": 5,
-      "container_id": "9089ae7d-2f05-4b73-98ae-ee2de8a5957d",
+      "container_id": "c5695512-dd16-4893-94ff-d7ebb1b566ce",
       "container_type": "figure_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1919,13 +1889,6 @@
         "Applicable pages in Track Protocol"
       ],
       "rows": [
-        [
-          "Applicable section",
-          "Actual",
-          "New (proposed)",
-          "Summary of changes",
-          "Applicable pages in Track Protocol"
-        ],
         [
           "Section 1. Investigational product, dosage, and mode of administration:",
           "n/a",
@@ -1963,7 +1926,7 @@
         ]
       ],
       "page_number": 5,
-      "container_id": "63356d16-bc20-4ceb-9c38-99961ab6bbc8",
+      "container_id": "28ec971f-2132-4a77-8dd3-2c51cfa094c9",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -1976,15 +1939,7 @@
     },
     {
       "block_type": "table",
-      "caption": {
-        "text": "Comparison Table of Changes from Protocol Amendment 4 to Amendment 5",
-        "bbox": [
-          0.9834,
-          6.1193,
-          5.977,
-          6.3081
-        ]
-      },
+      "caption": null,
       "headers": [
         "Applicable section",
         "Actual",
@@ -1993,13 +1948,6 @@
         "Applicable pages in Track Protocol"
       ],
       "rows": [
-        [
-          "Applicable section",
-          "Actual",
-          "New (proposed)",
-          "Summary of changes",
-          "Applicable pages in Track Protocol"
-        ],
         [
           "Section 1. Synopsis, Study Design and Methodology Section 6.1: Overall Study Design",
           "n/a",
@@ -2030,7 +1978,7 @@
         ]
       ],
       "page_number": 5,
-      "container_id": "3bd8ccb0-d96d-4511-9882-dec8d1030aa0",
+      "container_id": "c3aa5ee5-db1a-4b27-8b0a-d25261dfda26",
       "container_type": "table_group",
       "container_path": [
         "290 but ≤ 420um if female on",
@@ -2046,7 +1994,7 @@
       "level": 1,
       "text": "02 Dec 2025",
       "page_number": 6,
-      "container_id": "15696553-b791-4c85-91d3-515762bbd546",
+      "container_id": "dea15989-70a4-475a-a0d7-e6a78af68057",
       "container_type": "section",
       "container_path": [
         "02 Dec 2025"
@@ -2056,7 +2004,7 @@
       "block_type": "paragraph",
       "text": "Protocol OCU200-101 OCU200 Main Rationale for Amendment 4: The main purpose of this amendment is to clarify DSMB meeting timelines and update the study design. Comparison Table of Changes from Protocol Amendment 3 to Amendment 4",
       "page_number": 6,
-      "container_id": "15696553-b791-4c85-91d3-515762bbd546",
+      "container_id": "dea15989-70a4-475a-a0d7-e6a78af68057",
       "container_type": "section",
       "container_path": [
         "02 Dec 2025"
@@ -2082,7 +2030,7 @@
       ],
       "rows": [],
       "page_number": 6,
-      "container_id": "b4de5062-1447-43ec-af40-a8052adf910b",
+      "container_id": "4853ebc6-5869-4480-9018-a75779afdebf",
       "container_type": "table_group",
       "container_path": [
         "02 Dec 2025"
@@ -2100,7 +2048,7 @@
       "block_type": "paragraph",
       "text": "Section 1. Synopsis, Study Design and Methodology Section 6.1: Overall Study Design",
       "page_number": 6,
-      "container_id": "15696553-b791-4c85-91d3-515762bbd546",
+      "container_id": "dea15989-70a4-475a-a0d7-e6a78af68057",
       "container_type": "section",
       "container_path": [
         "02 Dec 2025"
@@ -2122,7 +2070,7 @@
       ],
       "rows": [],
       "page_number": 6,
-      "container_id": "1e3d7baa-f157-4934-b571-1e4375097cec",
+      "container_id": "e4235584-94ac-4f6a-81c7-51d6f7af323c",
       "container_type": "table_group",
       "container_path": [
         "02 Dec 2025"
@@ -2138,7 +2086,7 @@
       "block_type": "paragraph",
       "text": "data in all sentinel subject each cohort. Clarified the language that DSMB will review 1 week of safety data post dosing (subject 1 will receive second dose, subject 2 and subject 3 will receive 1st dose) of all 3 subjects in all cohorts (1, 2, 3 and 4) 5-8 34- Investigational product,",
       "page_number": 6,
-      "container_id": "15696553-b791-4c85-91d3-515762bbd546",
+      "container_id": "dea15989-70a4-475a-a0d7-e6a78af68057",
       "container_type": "section",
       "container_path": [
         "02 Dec 2025"
@@ -2170,7 +2118,7 @@
         ]
       ],
       "page_number": 6,
-      "container_id": "b6065c1a-8e87-494f-9f8a-b2d185b928c5",
+      "container_id": "3b7167bf-53e6-4bc1-aa36-def102514908",
       "container_type": "table_group",
       "container_path": [
         "02 Dec 2025"
@@ -2188,7 +2136,7 @@
       "block_type": "paragraph",
       "text": "administration of High Dose or MTD",
       "page_number": 6,
-      "container_id": "15696553-b791-4c85-91d3-515762bbd546",
+      "container_id": "dea15989-70a4-475a-a0d7-e6a78af68057",
       "container_type": "section",
       "container_path": [
         "02 Dec 2025"
@@ -2207,7 +2155,7 @@
       ],
       "rows": [],
       "page_number": 6,
-      "container_id": "bccf0c34-1e1d-432f-a83f-a57e82487921",
+      "container_id": "e9898b0e-6fa9-4caf-889d-296e9a7c74da",
       "container_type": "table_group",
       "container_path": [
         "02 Dec 2025"
@@ -2230,7 +2178,7 @@
       ],
       "rows": [],
       "page_number": 6,
-      "container_id": "a10793cb-0946-4ce5-90a7-9a348130bb4a",
+      "container_id": "59f3b1a4-052d-4103-9c8b-ebf683ef9d83",
       "container_type": "table_group",
       "container_path": [
         "02 Dec 2025"
@@ -2248,7 +2196,7 @@
       "block_type": "paragraph",
       "text": "days post -injection assessment 33-36",
       "page_number": 6,
-      "container_id": "15696553-b791-4c85-91d3-515762bbd546",
+      "container_id": "dea15989-70a4-475a-a0d7-e6a78af68057",
       "container_type": "section",
       "container_path": [
         "02 Dec 2025"
@@ -2263,7 +2211,7 @@
       "level": 2,
       "text": "Figure 6: Cohort",
       "page_number": 6,
-      "container_id": "407b4837-0e4a-44bc-a14f-c5a890967d22",
+      "container_id": "bcf1dad2-7c37-4495-9f1a-6ede19917c8c",
       "container_type": "figure_group",
       "container_path": [
         "02 Dec 2025",
@@ -2285,7 +2233,7 @@
         ]
       ],
       "page_number": 6,
-      "container_id": "1374233d-5cf5-4e8c-a57d-df46e5149861",
+      "container_id": "f3a6157e-c737-46e7-beac-25d9f74ef17d",
       "container_type": "table_group",
       "container_path": [
         "02 Dec 2025",
@@ -2312,7 +2260,7 @@
       ],
       "rows": [],
       "page_number": 6,
-      "container_id": "b4e88dc7-598e-447b-a382-74ecf020c1f2",
+      "container_id": "b95ead93-5a71-4372-b295-6e11b45510e4",
       "container_type": "table_group",
       "container_path": [
         "02 Dec 2025",
@@ -2331,7 +2279,7 @@
       "block_type": "paragraph",
       "text": "assessments. 43-44 AMENDMENT 3, 25 OCTOBER 2024 Main Rationale for Amendment 3: The main purpose of this amendment is to clarify DSMB meeting timelines and update the study design. Comparison Table of Changes from Protocol Amendment 2 to Amendment 3",
       "page_number": 6,
-      "container_id": "407b4837-0e4a-44bc-a14f-c5a890967d22",
+      "container_id": "bcf1dad2-7c37-4495-9f1a-6ede19917c8c",
       "container_type": "figure_group",
       "container_path": [
         "02 Dec 2025",
@@ -2359,7 +2307,7 @@
       ],
       "rows": [],
       "page_number": 6,
-      "container_id": "56380e70-0e30-4f4f-86bb-1e9cd14c1ba1",
+      "container_id": "0a5f1f08-fed6-4c53-abe7-ad4813eee256",
       "container_type": "table_group",
       "container_path": [
         "02 Dec 2025",
@@ -2378,7 +2326,7 @@
       "block_type": "paragraph",
       "text": "Protocol",
       "page_number": 6,
-      "container_id": "407b4837-0e4a-44bc-a14f-c5a890967d22",
+      "container_id": "bcf1dad2-7c37-4495-9f1a-6ede19917c8c",
       "container_type": "figure_group",
       "container_path": [
         "02 Dec 2025",
@@ -2397,7 +2345,7 @@
       ],
       "rows": [],
       "page_number": 6,
-      "container_id": "68bf6406-5122-4a09-b340-96bd0ae78139",
+      "container_id": "c5169324-e082-4fe3-b029-abe91cb4bf2e",
       "container_type": "table_group",
       "container_path": [
         "02 Dec 2025",
@@ -2413,7 +2361,7 @@
       "block_type": "paragraph",
       "text": "Section1. Synopsis, Study Design and Methodology Section 6.1: Overall Study Design Updated the study design and clarified the DSMB meeting timelines. Updated the sample size 6-11 40-46",
       "page_number": 6,
-      "container_id": "407b4837-0e4a-44bc-a14f-c5a890967d22",
+      "container_id": "bcf1dad2-7c37-4495-9f1a-6ede19917c8c",
       "container_type": "figure_group",
       "container_path": [
         "02 Dec 2025",
@@ -2444,7 +2392,7 @@
       ],
       "rows": [],
       "page_number": 6,
-      "container_id": "640d6295-0766-43a1-85ba-287437d08fcf",
+      "container_id": "d74ebc63-72b4-492d-a2dd-d034d5955256",
       "container_type": "table_group",
       "container_path": [
         "02 Dec 2025",
@@ -2463,7 +2411,7 @@
       "block_type": "paragraph",
       "text": "Protocol OCUGEN Inc. - CONFIDENTIAL Page 6 of 81",
       "page_number": 6,
-      "container_id": "407b4837-0e4a-44bc-a14f-c5a890967d22",
+      "container_id": "bcf1dad2-7c37-4495-9f1a-6ede19917c8c",
       "container_type": "figure_group",
       "container_path": [
         "02 Dec 2025",
@@ -2477,15 +2425,7 @@
     },
     {
       "block_type": "table",
-      "caption": {
-        "text": "Comparison Table of Changes from Protocol Amendment 3 to Amendment 4",
-        "bbox": [
-          0.984,
-          1.8878,
-          5.9744,
-          2.071
-        ]
-      },
+      "caption": null,
       "headers": [
         "Applicable section",
         "Actual",
@@ -2494,13 +2434,6 @@
         "Applicable pages in Track Protocol"
       ],
       "rows": [
-        [
-          "Applicable section",
-          "Actual",
-          "New (proposed)",
-          "Summary of changes",
-          "Applicable pages in Track Protocol"
-        ],
         [
           "Section 1. Synopsis, Study Design and Methodology Section 6.1: Overall Study Design",
           "n/a",
@@ -2538,7 +2471,7 @@
         ]
       ],
       "page_number": 6,
-      "container_id": "56e6795d-cbac-48cb-a1be-5c830426dcdc",
+      "container_id": "b645691e-f806-463c-ae48-921bbf6e4433",
       "container_type": "table_group",
       "container_path": [
         "02 Dec 2025",
@@ -2558,13 +2491,6 @@
       ],
       "rows": [
         [
-          "Applicable section",
-          "Actual",
-          "New (proposed)",
-          "Summary of changes",
-          "Applicable pages in Track Protocol"
-        ],
-        [
           "Signature Page",
           "",
           "Removed signature page",
@@ -2577,17 +2503,10 @@
           "",
           "Updated the study design and clarified the DSMB meeting timelines. Updated the sample size",
           "6-11 40-46"
-        ],
-        [
-          "Applicable section",
-          "Actual",
-          "New (proposed)",
-          "Summary of changes",
-          "Applicable pages in Track Protocol"
         ]
       ],
       "page_number": 6,
-      "container_id": "34e4ae1c-8b4c-4d8c-bd09-2272f2463c7a",
+      "container_id": "2b7bdbd7-5d38-469a-925c-23ba81359fa4",
       "container_type": "table_group",
       "container_path": [
         "02 Dec 2025",
@@ -2604,7 +2523,7 @@
       ],
       "rows": [],
       "page_number": 7,
-      "container_id": "0646f634-a4ff-4a22-8963-3eb0bbbc69ec",
+      "container_id": "6bb5febf-48f9-4979-b718-c2aa33003519",
       "container_type": "table_group",
       "container_path": [
         "02 Dec 2025",
@@ -2621,7 +2540,7 @@
       "level": 2,
       "text": "Figure 6: Cohort",
       "page_number": 7,
-      "container_id": "899d3345-ef4e-4ae9-af97-5fa98cec4f8b",
+      "container_id": "420518c0-0b03-417c-af23-d00efc77470f",
       "container_type": "figure_group",
       "container_path": [
         "02 Dec 2025",
@@ -2642,7 +2561,7 @@
         ]
       ],
       "page_number": 7,
-      "container_id": "bd4f7d74-10b2-4273-807b-960aa9c41143",
+      "container_id": "5313a8b9-93da-45a7-a59a-8b3e1ba25ecc",
       "container_type": "table_group",
       "container_path": [
         "02 Dec 2025",
@@ -2666,7 +2585,7 @@
       ],
       "rows": [],
       "page_number": 7,
-      "container_id": "8f68ef12-c632-4279-85ee-e2772df957d9",
+      "container_id": "f4b43c79-52e8-4889-abf3-8ade638d4bab",
       "container_type": "table_group",
       "container_path": [
         "02 Dec 2025",
@@ -2685,7 +2604,7 @@
       "level": 1,
       "text": "14 days (despite active treatment or",
       "page_number": 7,
-      "container_id": "83a89803-a75e-4fc8-995a-3f1e2e88e031",
+      "container_id": "07b6252b-77b8-4ca4-b9b9-ec190fe46a51",
       "container_type": "section",
       "container_path": [
         "14 days (despite active treatment or"
@@ -2695,7 +2614,7 @@
       "block_type": "paragraph",
       "text": "management of the clinical condition). It is the responsibility of the investigator to assess the causality. Updated definition of DLT 42 AMENDMENT 2, 21 MARCH 2023 Main Rationale for Amendment 2: The main purpose of this amendment is to add a summary of changes table to Appendix 1. Comparison Table of Changes from Protocol Amendment 1 to Protocol Amendment 2",
       "page_number": 7,
-      "container_id": "83a89803-a75e-4fc8-995a-3f1e2e88e031",
+      "container_id": "07b6252b-77b8-4ca4-b9b9-ec190fe46a51",
       "container_type": "section",
       "container_path": [
         "14 days (despite active treatment or"
@@ -2726,7 +2645,7 @@
       ],
       "rows": [],
       "page_number": 7,
-      "container_id": "6b7af1a6-9ed1-4553-b34d-79743331297e",
+      "container_id": "2058e76c-b1a5-4182-9e70-db0362cbfc9b",
       "container_type": "table_group",
       "container_path": [
         "14 days (despite active treatment or"
@@ -2746,7 +2665,7 @@
       "block_type": "paragraph",
       "text": "Changed Protocol",
       "page_number": 7,
-      "container_id": "83a89803-a75e-4fc8-995a-3f1e2e88e031",
+      "container_id": "07b6252b-77b8-4ca4-b9b9-ec190fe46a51",
       "container_type": "section",
       "container_path": [
         "14 days (despite active treatment or"
@@ -2761,7 +2680,7 @@
       "level": 1,
       "text": "Appendix 1. Protocol",
       "page_number": 7,
-      "container_id": "a3e37403-2993-457a-a60e-24296acb9d4d",
+      "container_id": "d510c43c-f923-481d-b433-c6d62e045910",
       "container_type": "appendix",
       "container_path": [
         "Appendix 1. Protocol"
@@ -2779,7 +2698,7 @@
       ],
       "rows": [],
       "page_number": 7,
-      "container_id": "1f99a438-0298-4666-9e45-e456b788c5fb",
+      "container_id": "21e9239d-1951-4bba-880c-fffbd74c3aec",
       "container_type": "table_group",
       "container_path": [
         "Appendix 1. Protocol"
@@ -2797,7 +2716,7 @@
       "block_type": "paragraph",
       "text": "Comparison Table of Changes from Original Protocol to Protocol Amendment 1",
       "page_number": 7,
-      "container_id": "a3e37403-2993-457a-a60e-24296acb9d4d",
+      "container_id": "d510c43c-f923-481d-b433-c6d62e045910",
       "container_type": "appendix",
       "container_path": [
         "Appendix 1. Protocol"
@@ -2820,7 +2739,7 @@
       ],
       "rows": [],
       "page_number": 7,
-      "container_id": "128183b6-6164-44a2-a389-ce3835556c47",
+      "container_id": "ee8d7d81-4104-4433-b9f0-28be371ba3b3",
       "container_type": "table_group",
       "container_path": [
         "Appendix 1. Protocol"
@@ -2840,7 +2759,7 @@
       "block_type": "paragraph",
       "text": "Changed Protocol",
       "page_number": 7,
-      "container_id": "a3e37403-2993-457a-a60e-24296acb9d4d",
+      "container_id": "d510c43c-f923-481d-b433-c6d62e045910",
       "container_type": "appendix",
       "container_path": [
         "Appendix 1. Protocol"
@@ -2859,7 +2778,7 @@
       ],
       "rows": [],
       "page_number": 7,
-      "container_id": "74f8a8f2-09fe-4887-814e-87ec75037ad8",
+      "container_id": "263413e6-39c9-494e-bfec-d1eedce89add",
       "container_type": "table_group",
       "container_path": [
         "Appendix 1. Protocol"
@@ -2874,7 +2793,7 @@
       "block_type": "paragraph",
       "text": "administration to subjects in the low dose and medium dose cohorts. OCU200 must be properly diluted before administration to subjects in the low dose and medium dose cohorts. OCU200 must be administered to subjects within 2 hours of dilution. Added relevant",
       "page_number": 7,
-      "container_id": "a3e37403-2993-457a-a60e-24296acb9d4d",
+      "container_id": "d510c43c-f923-481d-b433-c6d62e045910",
       "container_type": "appendix",
       "container_path": [
         "Appendix 1. Protocol"
@@ -2907,7 +2826,7 @@
         ]
       ],
       "page_number": 7,
-      "container_id": "0abe1c89-bf9b-496f-8bbc-98da6bf7c5b1",
+      "container_id": "d7074a58-e84c-4938-9118-c8aaf0481076",
       "container_type": "table_group",
       "container_path": [
         "Appendix 1. Protocol"
@@ -2927,7 +2846,7 @@
       ],
       "rows": [],
       "page_number": 7,
-      "container_id": "60ffda7d-45d6-47d2-bedc-deee26291428",
+      "container_id": "e36b407b-6b46-439e-bee2-7347fdc90208",
       "container_type": "table_group",
       "container_path": [
         "Appendix 1. Protocol"
@@ -2942,7 +2861,7 @@
       "block_type": "paragraph",
       "text": "intravitreal injection. Procedures for administration are provided in the Dosing Manual and must be followed explicitly. OCU200 is administered by intravitreal injection. After preparation of low and medium doses at the clinical site, OCU200 must be administered to the subject within 2 hours. Procedures for administration are provided in the Dosing Manual and must be followed explicitly. Added relevant",
       "page_number": 7,
-      "container_id": "a3e37403-2993-457a-a60e-24296acb9d4d",
+      "container_id": "d510c43c-f923-481d-b433-c6d62e045910",
       "container_type": "appendix",
       "container_path": [
         "Appendix 1. Protocol"
@@ -2981,7 +2900,7 @@
         ]
       ],
       "page_number": 7,
-      "container_id": "31ac7db4-cb39-4279-b687-225d84647a1e",
+      "container_id": "d14603cc-4d78-4b7f-bd64-4e785a42ee99",
       "container_type": "table_group",
       "container_path": [
         "Appendix 1. Protocol"
@@ -2996,7 +2915,7 @@
       "block_type": "paragraph",
       "text": "OCUGEN Inc. - CONFIDENTIAL Page 7 of 81",
       "page_number": 7,
-      "container_id": "a3e37403-2993-457a-a60e-24296acb9d4d",
+      "container_id": "d510c43c-f923-481d-b433-c6d62e045910",
       "container_type": "appendix",
       "container_path": [
         "Appendix 1. Protocol"
@@ -3010,11 +2929,11 @@
       "block_type": "table",
       "caption": null,
       "headers": [
-        "Figure 6: Cohort Administration Flow Timeline",
-        "",
-        "",
-        "Figure updated",
-        "47"
+        "Applicable section",
+        "Actual",
+        "New (proposed)",
+        "Summary of changes",
+        "Applicable pages in Track Protocol"
       ],
       "rows": [
         [
@@ -3033,7 +2952,7 @@
         ]
       ],
       "page_number": 7,
-      "container_id": "7d22a759-4593-4b5b-b1e8-556879792678",
+      "container_id": "91e64c0e-78a0-4443-b3d0-524cc3c5fc03",
       "container_type": "table_group",
       "container_path": [
         "Appendix 1. Protocol"
@@ -3051,13 +2970,6 @@
         "Applicable Pages in Track Changed Protocol"
       ],
       "rows": [
-        [
-          "Applicable section",
-          "Actual",
-          "New Proposal",
-          "Summary of Changes",
-          "Applicable Pages in Track Changed Protocol"
-        ],
         [
           "Appendix 1. Protocol Amendment History",
           "",
@@ -3067,7 +2979,7 @@
         ]
       ],
       "page_number": 7,
-      "container_id": "5ff762db-d98e-4a7e-b792-3135ee2aa0af",
+      "container_id": "f7f04a06-0d2d-4469-a9ac-639d1321f557",
       "container_type": "table_group",
       "container_path": [
         "Appendix 1. Protocol"
@@ -3085,13 +2997,6 @@
         "Applicable Pages in Track Changed Protocol"
       ],
       "rows": [
-        [
-          "Applicable section",
-          "Actual",
-          "New Proposal",
-          "Summary of Changes",
-          "Applicable Pages in Track Changed Protocol"
-        ],
         [
           "9.4. Study Drug Storage",
           "OCU200 must be properly diluted before administration to subjects in the low dose and medium dose cohorts.",
@@ -3108,7 +3013,7 @@
         ]
       ],
       "page_number": 7,
-      "container_id": "5668a0b1-4d92-4178-a3a6-c98e1b1ab63b",
+      "container_id": "1c700a68-6d6c-4732-98ac-12754d998f9e",
       "container_type": "table_group",
       "container_path": [
         "Appendix 1. Protocol"

@@ -14,6 +14,7 @@ def get_polygon_bbox(polygon):
     return [min(xs), min(ys), max(xs), max(ys)]
 
 
+
 def extract_layout_to_structured_json(
     file_bytes: bytes,
     source_name: str
@@ -66,94 +67,79 @@ def extract_layout_to_structured_json(
         structured_doc["pages"].append(page_data)
 
     # -------------------------------------------------
-    # Tables (MINIMAL FIX APPLIED)
+    # Tables (NO INFERENCE – PURE AZURE OUTPUT)
     # -------------------------------------------------
+    previous_table_page = None
+    previous_headers = None
+
     for t_idx, table in enumerate(result.tables or []):
 
-        table_page = (
-            table.bounding_regions[0].page_number
-            if table.bounding_regions else None
+        table_page = table.bounding_regions[0].page_number
+        table_bbox = get_polygon_bbox(table.bounding_regions[0].polygon)
+
+        is_continuation = (
+            previous_table_page is not None
+            and table_page == previous_table_page + 1
         )
 
-        table_bbox = (
-            get_polygon_bbox(table.bounding_regions[0].polygon)
-            if table.bounding_regions else None
-        )
-
-        headers: Dict[int, Dict[str, Any]] = {}
-        rows: Dict[int, Dict[int, Dict[str, Any]]] = {}
-        max_col_index = -1
+        # Build grid
+        grid = [[""] * table.column_count for _ in range(table.row_count)]
 
         for cell in table.cells:
             r = cell.row_index
             c = cell.column_index
-            max_col_index = max(max_col_index, c)
+            if grid[r][c] == "":
+                grid[r][c] = cell.content or ""
 
-            cell_obj = {
-                "text": cell.content,
-                "row_index": r,
-                "column_index": c,
-                "kind": cell.kind,
-                "bbox": (
-                    get_polygon_bbox(cell.bounding_regions[0].polygon)
-                    if cell.bounding_regions else None
-                )
-            }
+        headers = []
+        rows = []
 
-            rows.setdefault(r, {})[c] = cell_obj
+        # ---------------- HEADER DETECTION ----------------
+        header_row_indices = {
+            cell.row_index
+            for cell in table.cells
+            if cell.kind == "columnHeader"
+        }
 
-            # Keep Azure-detected headers IF they exist
-            if cell.kind == "columnHeader":
-                headers[c] = cell_obj
+        if header_row_indices and not is_continuation:
+            header_row = min(header_row_indices)
+            headers = grid[header_row]
+            rows = [row for i, row in enumerate(grid) if i != header_row]
+            previous_headers = headers
 
-        # ---- Build rectangular rows safely ----
-        ordered_rows = [
-            [
-                rows[r].get(c, {}).get("text", "")
-                for c in range(max_col_index + 1)
+        elif is_continuation and previous_headers:
+            headers = previous_headers
+            rows = grid
+
+        else:
+            headers = []
+            rows = grid
+
+        # ---------------- REMOVE DUPLICATE HEADER ROW ----------------
+        if headers:
+            rows = [
+                row for row in rows
+                if any(cell.strip() != hdr.strip()
+                    for cell, hdr in zip(row, headers))
             ]
-            for r in sorted(rows)
-        ]
-
-        # ---- Header fallback (ONLY if Azure headers missing) ----
-        ordered_headers = (
-            [headers[c]["text"] for c in sorted(headers)]
-            if headers
-            else (ordered_rows[0] if ordered_rows else [])
-        )
-
-        # If headers were inferred from first row, drop it from body
-        if not headers and ordered_rows:
-            ordered_rows = ordered_rows[1:]
 
         table_block = {
             "block_id": f"table_{t_idx}",
             "block_type": "table",
             "page_number": table_page,
             "bbox": table_bbox,
-            "caption": (
-                {
-                    "text": table.caption.content,
-                    "bbox": (
-                        get_polygon_bbox(table.caption.bounding_regions[0].polygon)
-                        if table.caption.bounding_regions else None
-                    )
-                }
-                if table.caption else None
-            ),
-            "headers": ordered_headers,
-            "rows": ordered_rows,
-            "cells": {
-                "headers": headers,
-                "body": rows
-            }
+            "headers": headers,
+            "rows": rows
         }
 
-        # Attach table to its page
         for page in structured_doc["pages"]:
             if page["page_number"] == table_page:
                 page["blocks"].append(table_block)
                 break
+
+        previous_table_page = table_page
+
+
 
     # -------------------------------------------------
     # Save raw structured layout
