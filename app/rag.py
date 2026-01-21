@@ -564,36 +564,34 @@ class RAGState(TypedDict, total=False):
 # ============================
 
 def retrieve_context_node(state: RAGState) -> RAGState:
+    """
+    Node 1: Retrieve relevant context from the KB using FAISS.
+
+    - Uses the current query from state["query"]
+    - Calls `search(...)`
+    - Combines the top chunks into a single context string
+    - Stores it in state["context"]
+    """
     query = state.get("query", "")
-    docs = search(query, k=16)
 
-    # Sort by page order
-    docs_sorted = sorted(
-        docs,
-        key=lambda d: min(d["page_numbers"]) if d["page_numbers"] else 9999
-    )
+    # Search top-k documents for this query
+    docs = search(query, k=5)
 
+    # Extract text from each chunk
     context_pieces = []
+    for chunk_obj, score in docs:
+        text = _extract_text_from_chunk(chunk_obj)
+        if text:
+            context_pieces.append(text)
 
-    for d in docs_sorted:
-        text = d["text"]
-        if not text.strip():
-            continue
-
-        pages = ", ".join(map(str, d["page_numbers"])) if d["page_numbers"] else "N/A"
-        heading = d.get("heading_path") or "Unknown section"
-        doc_id = d.get("doc_id") or "Unknown document"
-
-        context_pieces.append(
-            f"[Document: {doc_id} | Pages: {pages} | Section: {heading}]\n{text}"
-        )
-
+    # Merge all context into one string
     context = (
         "\n\n".join(context_pieces)
         if context_pieces
         else "No relevant context found."
     )
 
+    # Return updated state
     new_state = dict(state)
     new_state["context"] = context
     return new_state
