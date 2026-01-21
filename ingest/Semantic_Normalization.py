@@ -11,21 +11,18 @@ APPENDIX_REGEX = re.compile(r"^APPENDIX\s+[A-Z0-9]+", re.IGNORECASE)
 FIGURE_REGEX = re.compile(r"^FIGURE\s+\d+", re.IGNORECASE)
 TABLE_TITLE_REGEX = re.compile(r"^(table|figure)\s+\d+", re.IGNORECASE)
 
-
 # ----------------------------
 # GEOMETRY HELPERS
 # ----------------------------
 
 def get_bbox(block: Dict[str, Any]) -> Tuple[float, float, float, float]:
-    # Your blocks store bbox as [x1,y1,x2,y2]
     bbox = block.get("bbox")
     if not bbox or len(bbox) != 4:
         return (0.0, 0.0, 0.0, 0.0)
     return (bbox[0], bbox[1], bbox[2], bbox[3])
 
 
-def bbox_intersection_area(a: Tuple[float, float, float, float],
-                           b: Tuple[float, float, float, float]) -> float:
+def bbox_intersection_area(a, b) -> float:
     ax1, ay1, ax2, ay2 = a
     bx1, by1, bx2, by2 = b
     ix1 = max(ax1, bx1)
@@ -37,25 +34,49 @@ def bbox_intersection_area(a: Tuple[float, float, float, float],
     return (ix2 - ix1) * (iy2 - iy1)
 
 
-def bbox_area(a: Tuple[float, float, float, float]) -> float:
+def bbox_area(a) -> float:
     x1, y1, x2, y2 = a
     if x2 <= x1 or y2 <= y1:
         return 0.0
     return (x2 - x1) * (y2 - y1)
 
 
-def is_duplicate_table_line(line_bbox: Tuple[float, float, float, float],
-                            table_bbox: Tuple[float, float, float, float],
-                            ratio_threshold: float = 0.60) -> bool:
-    """
-    Returns True if the paragraph line bbox is mostly inside a table bbox.
-    This detects DocInt's duplicated table text present in page.lines.
-    """
+def is_duplicate_table_line(line_bbox, table_bbox, ratio_threshold=0.60) -> bool:
     la = bbox_area(line_bbox)
     if la == 0:
         return False
     inter = bbox_intersection_area(line_bbox, table_bbox)
     return (inter / la) >= ratio_threshold
+
+
+# ----------------------------
+# 🔑 NEW: PAGE HEADER / FOOTER GUARD
+# ----------------------------
+
+def is_page_header_footer(text: str) -> bool:
+    t = text.strip()
+
+    # Dates like "02 Dec 2025"
+    if re.fullmatch(r"\d{1,2}\s+[A-Za-z]{3}\s+\d{4}", t):
+        return True
+
+    # Protocol identifiers
+    if re.search(r"\bprotocol\b", t, re.IGNORECASE):
+        return True
+
+    # Short document codes like OCU200
+    if re.fullmatch(r"[A-Z]{2,10}\d{0,4}", t):
+        return True
+
+    # Page footer
+    if re.search(r"page\s+\d+", t, re.IGNORECASE):
+        return True
+
+    # Confidential footer
+    if re.search(r"confidential", t, re.IGNORECASE):
+        return True
+
+    return False
 
 
 # ----------------------------
@@ -68,7 +89,6 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
         "blocks": []
     }
 
-    # Active semantic container
     current_container = {
         "container_id": None,
         "container_type": None,
@@ -79,14 +99,21 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
     buffer_ids: List[str] = []
     buffer_page = None
 
+    # 🔑 Semantic memory
+    last_heading_text = None
+    last_heading_path = []
+    last_paragraph_text = None
+
     def flush_paragraph():
-        nonlocal paragraph_buffer, buffer_ids, buffer_page
+        nonlocal paragraph_buffer, buffer_ids, buffer_page, last_paragraph_text
         if not paragraph_buffer:
             return
 
+        text = " ".join(paragraph_buffer)
+
         normalized["blocks"].append({
             "block_type": "paragraph",
-            "text": " ".join(paragraph_buffer),
+            "text": text,
             "page_number": buffer_page,
             "container_id": current_container["container_id"],
             "container_type": current_container["container_type"],
@@ -94,6 +121,7 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
             "source_block_ids": buffer_ids.copy()
         })
 
+        last_paragraph_text = text
         paragraph_buffer.clear()
         buffer_ids.clear()
         buffer_page = None
@@ -106,14 +134,11 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
         page_number = page.get("page_number")
         blocks = page.get("blocks", [])
 
-        # ---- 1) Collect table bboxes (for duplicate suppression) ----
-        table_bboxes: List[Tuple[float, float, float, float]] = []
-        for b in blocks:
-            if b.get("block_type") == "table" and b.get("bbox"):
-                table_bboxes.append(get_bbox(b))
+        table_bboxes = [
+            get_bbox(b) for b in blocks
+            if b.get("block_type") == "table" and b.get("bbox")
+        ]
 
-        # ---- 2) Sort ALL blocks by reading order (y1 then x1) ----
-        # This fixes "table comes at end" problem.
         blocks_sorted = sorted(
             blocks,
             key=lambda b: (get_bbox(b)[1], get_bbox(b)[0])
@@ -122,16 +147,26 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
         for block in blocks_sorted:
             btype = block.get("block_type")
 
-            # Hard boundary: anything non-paragraph breaks paragraph buffering
             if btype != "paragraph":
                 flush_paragraph()
 
             # ============================
-            # TABLE (AUTHORITATIVE)
+            # TABLE
             # ============================
             if btype == "table":
                 normalized["blocks"].append({
                     "block_type": "table",
+
+                    "table_context_heading": last_heading_text,
+                    "table_context_path": last_heading_path,
+                    "table_context_text": last_paragraph_text,
+                    "table_semantic_hint": (
+                        f"This table contains structured data related to '{last_heading_text}'. "
+                        f"Interpret the rows using the column headers."
+                        if last_heading_text
+                        else "This table contains structured data. Interpret the rows using the column headers."
+                    ),
+
                     "caption": block.get("caption"),
                     "headers": block.get("headers", []),
                     "rows": block.get("rows", []),
@@ -151,18 +186,13 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
                 if not text:
                     continue
 
-                # ✅ Drop DocInt duplicated table text (line-level text inside table bbox)
                 line_bbox = get_bbox(block)
                 if line_bbox != (0.0, 0.0, 0.0, 0.0):
-                    inside_any_table = any(
-                        is_duplicate_table_line(line_bbox, tb, ratio_threshold=0.60)
-                        for tb in table_bboxes
-                    )
-                    if inside_any_table:
+                    if any(is_duplicate_table_line(line_bbox, tb) for tb in table_bboxes):
                         continue
 
                 # -------- SECTION --------
-                if SECTION_REGEX.match(text):
+                if SECTION_REGEX.match(text) and not is_page_header_footer(text):
                     flush_paragraph()
                     cid = str(uuid.uuid4())
                     current_container = {
@@ -170,6 +200,9 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
                         "container_type": "section",
                         "path": [text]
                     }
+                    last_heading_text = text
+                    last_heading_path = current_container["path"].copy()
+
                     normalized["blocks"].append({
                         "block_type": "heading",
                         "level": 1,
@@ -182,7 +215,7 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
                     continue
 
                 # -------- APPENDIX --------
-                if APPENDIX_REGEX.match(text):
+                if APPENDIX_REGEX.match(text) and not is_page_header_footer(text):
                     flush_paragraph()
                     cid = str(uuid.uuid4())
                     current_container = {
@@ -190,6 +223,9 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
                         "container_type": "appendix",
                         "path": [text]
                     }
+                    last_heading_text = text
+                    last_heading_path = current_container["path"].copy()
+
                     normalized["blocks"].append({
                         "block_type": "heading",
                         "level": 1,
@@ -202,7 +238,7 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
                     continue
 
                 # -------- FIGURE --------
-                if FIGURE_REGEX.match(text):
+                if FIGURE_REGEX.match(text) and not is_page_header_footer(text):
                     flush_paragraph()
                     cid = str(uuid.uuid4())
                     current_container = {
@@ -210,6 +246,9 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
                         "container_type": "figure_group",
                         "path": current_container["path"] + [text]
                     }
+                    last_heading_text = text
+                    last_heading_path = current_container["path"].copy()
+
                     normalized["blocks"].append({
                         "block_type": "heading",
                         "level": 2,
@@ -221,9 +260,12 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
                     })
                     continue
 
-                # -------- Table/Figure titles (keep as heading, do NOT merge into paragraph) --------
-                if TABLE_TITLE_REGEX.match(text):
+                # -------- TABLE TITLES --------
+                if TABLE_TITLE_REGEX.match(text) and not is_page_header_footer(text):
                     flush_paragraph()
+                    last_heading_text = text
+                    last_heading_path = current_container["path"].copy()
+
                     normalized["blocks"].append({
                         "block_type": "heading",
                         "level": 2,
@@ -235,8 +277,8 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
                     })
                     continue
 
-                # -------- Colon headings like "Main Rationale for Amendment 7:" --------
-                if text.endswith(":") and len(text.split()) <= 10:
+                # -------- COLON HEADINGS --------
+                if text.endswith(":") and len(text.split()) <= 10 and not is_page_header_footer(text):
                     flush_paragraph()
                     cid = str(uuid.uuid4())
                     current_container = {
@@ -244,6 +286,9 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
                         "container_type": "section",
                         "path": [text]
                     }
+                    last_heading_text = text
+                    last_heading_path = current_container["path"].copy()
+
                     normalized["blocks"].append({
                         "block_type": "heading",
                         "level": 2,
@@ -255,7 +300,7 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
                     })
                     continue
 
-                # -------- NORMAL PARAGRAPH BUFFER --------
+                # -------- NORMAL PARAGRAPH --------
                 if not paragraph_buffer:
                     buffer_page = page_number
 

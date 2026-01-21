@@ -3,60 +3,16 @@
   "blocks": [
     {
       "block_type": "paragraph",
-      "text": "Protocol OCU200-101",
+      "text": "Protocol OCU200-101 02 Dec 2025 OCU200 APPENDIX 1. PROTOCOL AMENDMENT HISTORY AMENDMENT 9, 02 DECEMBER 2025",
       "page_number": 1,
       "container_id": null,
       "container_type": null,
       "container_path": [],
       "source_block_ids": [
-        "p1_line_1"
-      ]
-    },
-    {
-      "block_type": "heading",
-      "level": 1,
-      "text": "02 Dec 2025",
-      "page_number": 1,
-      "container_id": "856cc210-27b1-4814-aa79-20644142f972",
-      "container_type": "section",
-      "container_path": [
-        "02 Dec 2025"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "OCU200",
-      "page_number": 1,
-      "container_id": "856cc210-27b1-4814-aa79-20644142f972",
-      "container_type": "section",
-      "container_path": [
-        "02 Dec 2025"
-      ],
-      "source_block_ids": [
-        "p1_line_0"
-      ]
-    },
-    {
-      "block_type": "heading",
-      "level": 1,
-      "text": "APPENDIX 1. PROTOCOL AMENDMENT HISTORY",
-      "page_number": 1,
-      "container_id": "deacdab1-4011-43c1-a95b-b3e1ded10298",
-      "container_type": "appendix",
-      "container_path": [
-        "APPENDIX 1. PROTOCOL AMENDMENT HISTORY"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "AMENDMENT 9, 02 DECEMBER 2025",
-      "page_number": 1,
-      "container_id": "deacdab1-4011-43c1-a95b-b3e1ded10298",
-      "container_type": "appendix",
-      "container_path": [
-        "APPENDIX 1. PROTOCOL AMENDMENT HISTORY"
-      ],
-      "source_block_ids": [
+        "p1_line_1",
+        "p1_line_2",
+        "p1_line_0",
+        "p1_line_3",
         "p1_line_4"
       ]
     },
@@ -65,7 +21,7 @@
       "level": 2,
       "text": "Main Rationale for Amendment 9:",
       "page_number": 1,
-      "container_id": "e4086359-bbfc-40d9-ac53-b1e0c09d4d2e",
+      "container_id": "16198962-7f82-440b-9a89-692f2cef9a03",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 9:"
@@ -75,7 +31,7 @@
       "block_type": "paragraph",
       "text": "The main purpose of this amendment is to remove the word Lucentis from all applicable sections of the protocol. AMENDMENT 8, 06 NOVEMBER 2025",
       "page_number": 1,
-      "container_id": "e4086359-bbfc-40d9-ac53-b1e0c09d4d2e",
+      "container_id": "16198962-7f82-440b-9a89-692f2cef9a03",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 9:"
@@ -91,7 +47,7 @@
       "level": 2,
       "text": "Main Rationale for Amendment 8:",
       "page_number": 1,
-      "container_id": "f954326f-2f78-4ef1-b7dc-6d9df2e4d58f",
+      "container_id": "ab1c8d56-d4e7-4a89-8243-83c4ef446064",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 8:"
@@ -101,7 +57,7 @@
       "block_type": "paragraph",
       "text": "The main purpose of this amendment is to update revised Inclusion Exclusion Criteria and Update the study design. Comparison Table of Changes from Protocol Amendment 7 to Amendment 8",
       "page_number": 1,
-      "container_id": "f954326f-2f78-4ef1-b7dc-6d9df2e4d58f",
+      "container_id": "ab1c8d56-d4e7-4a89-8243-83c4ef446064",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 8:"
@@ -114,6 +70,12 @@
     },
     {
       "block_type": "table",
+      "table_context_heading": "Main Rationale for Amendment 8:",
+      "table_context_path": [
+        "Main Rationale for Amendment 8:"
+      ],
+      "table_context_text": "The main purpose of this amendment is to update revised Inclusion Exclusion Criteria and Update the study design. Comparison Table of Changes from Protocol Amendment 7 to Amendment 8",
+      "table_semantic_hint": "This table contains structured data related to 'Main Rationale for Amendment 8:'. Interpret the rows using the column headers.",
       "caption": null,
       "headers": [
         "Applicable section",
@@ -139,7 +101,7 @@
         ]
       ],
       "page_number": 1,
-      "container_id": "9c01919e-7788-44f5-a283-f17c337e66de",
+      "container_id": "353d8841-6d38-4984-b1a5-63d173162fdc",
       "container_type": "table_group",
       "container_path": [
         "Main Rationale for Amendment 8:"
@@ -150,7 +112,7 @@
       "block_type": "paragraph",
       "text": "OCUGEN Inc. - CONFIDENTIAL Page 1 of 81",
       "page_number": 1,
-      "container_id": "f954326f-2f78-4ef1-b7dc-6d9df2e4d58f",
+      "container_id": "ab1c8d56-d4e7-4a89-8243-83c4ef446064",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 8:"
@@ -162,43 +124,27 @@
     },
     {
       "block_type": "paragraph",
-      "text": "Protocol OCU200-101",
+      "text": "Protocol OCU200-101 02 Dec 2025 OCU200",
       "page_number": 2,
-      "container_id": "f954326f-2f78-4ef1-b7dc-6d9df2e4d58f",
+      "container_id": "ab1c8d56-d4e7-4a89-8243-83c4ef446064",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 8:"
       ],
       "source_block_ids": [
-        "p2_line_1"
-      ]
-    },
-    {
-      "block_type": "heading",
-      "level": 1,
-      "text": "02 Dec 2025",
-      "page_number": 2,
-      "container_id": "fd079461-5191-425c-894b-7e4f5903dc1a",
-      "container_type": "section",
-      "container_path": [
-        "02 Dec 2025"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "OCU200",
-      "page_number": 2,
-      "container_id": "fd079461-5191-425c-894b-7e4f5903dc1a",
-      "container_type": "section",
-      "container_path": [
-        "02 Dec 2025"
-      ],
-      "source_block_ids": [
+        "p2_line_1",
+        "p2_line_2",
         "p2_line_0"
       ]
     },
     {
       "block_type": "table",
+      "table_context_heading": "Main Rationale for Amendment 8:",
+      "table_context_path": [
+        "Main Rationale for Amendment 8:"
+      ],
+      "table_context_text": "Protocol OCU200-101 02 Dec 2025 OCU200",
+      "table_semantic_hint": "This table contains structured data related to 'Main Rationale for Amendment 8:'. Interpret the rows using the column headers.",
       "caption": null,
       "headers": [
         "Applicable section",
@@ -238,10 +184,10 @@
         ]
       ],
       "page_number": 2,
-      "container_id": "01487d2f-9873-4f7d-8241-a873d45d4b48",
+      "container_id": "0ca612a7-d6da-46e1-91ed-5529465b2721",
       "container_type": "table_group",
       "container_path": [
-        "02 Dec 2025"
+        "Main Rationale for Amendment 8:"
       ],
       "source_block_ids": []
     },
@@ -249,10 +195,10 @@
       "block_type": "paragraph",
       "text": "OCUGEN Inc. - CONFIDENTIAL Page 2 of 81",
       "page_number": 2,
-      "container_id": "fd079461-5191-425c-894b-7e4f5903dc1a",
+      "container_id": "ab1c8d56-d4e7-4a89-8243-83c4ef446064",
       "container_type": "section",
       "container_path": [
-        "02 Dec 2025"
+        "Main Rationale for Amendment 8:"
       ],
       "source_block_ids": [
         "p2_line_78",
@@ -260,32 +206,28 @@
       ]
     },
     {
-      "block_type": "heading",
-      "level": 1,
-      "text": "02 Dec 2025",
-      "page_number": 3,
-      "container_id": "59079047-cfa2-476d-832d-c554482d5d82",
-      "container_type": "section",
-      "container_path": [
-        "02 Dec 2025"
-      ]
-    },
-    {
       "block_type": "paragraph",
-      "text": "Protocol OCU200-101 OCU200",
+      "text": "02 Dec 2025 Protocol OCU200-101 OCU200",
       "page_number": 3,
-      "container_id": "59079047-cfa2-476d-832d-c554482d5d82",
+      "container_id": "ab1c8d56-d4e7-4a89-8243-83c4ef446064",
       "container_type": "section",
       "container_path": [
-        "02 Dec 2025"
+        "Main Rationale for Amendment 8:"
       ],
       "source_block_ids": [
+        "p3_line_2",
         "p3_line_1",
         "p3_line_0"
       ]
     },
     {
       "block_type": "table",
+      "table_context_heading": "Main Rationale for Amendment 8:",
+      "table_context_path": [
+        "Main Rationale for Amendment 8:"
+      ],
+      "table_context_text": "02 Dec 2025 Protocol OCU200-101 OCU200",
+      "table_semantic_hint": "This table contains structured data related to 'Main Rationale for Amendment 8:'. Interpret the rows using the column headers.",
       "caption": null,
       "headers": [
         "Applicable section",
@@ -353,10 +295,10 @@
         ]
       ],
       "page_number": 3,
-      "container_id": "bd3b4b60-5534-437e-a0ae-07fcef90494a",
+      "container_id": "8d31b7ed-8575-453b-88d2-a18b3d3771d5",
       "container_type": "table_group",
       "container_path": [
-        "02 Dec 2025"
+        "Main Rationale for Amendment 8:"
       ],
       "source_block_ids": []
     },
@@ -364,10 +306,10 @@
       "block_type": "paragraph",
       "text": "AMENDMENT 7, 08 AUGUST 2025",
       "page_number": 3,
-      "container_id": "59079047-cfa2-476d-832d-c554482d5d82",
+      "container_id": "ab1c8d56-d4e7-4a89-8243-83c4ef446064",
       "container_type": "section",
       "container_path": [
-        "02 Dec 2025"
+        "Main Rationale for Amendment 8:"
       ],
       "source_block_ids": [
         "p3_line_22"
@@ -378,7 +320,7 @@
       "level": 2,
       "text": "Main Rationale for Amendment 7:",
       "page_number": 3,
-      "container_id": "41cc28b4-8995-4255-aa88-ea7b00fdf2e5",
+      "container_id": "5f0cd48e-fb10-42d1-9f51-6d1b4d6bed81",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 7:"
@@ -388,7 +330,7 @@
       "block_type": "paragraph",
       "text": "The main purpose of this amendment is to correct the discrepancy in the study design figure to align with protocol Comparison Table of Changes from Protocol Amendment 6 to Amendment 7",
       "page_number": 3,
-      "container_id": "41cc28b4-8995-4255-aa88-ea7b00fdf2e5",
+      "container_id": "5f0cd48e-fb10-42d1-9f51-6d1b4d6bed81",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 7:"
@@ -401,6 +343,12 @@
     },
     {
       "block_type": "table",
+      "table_context_heading": "Main Rationale for Amendment 7:",
+      "table_context_path": [
+        "Main Rationale for Amendment 7:"
+      ],
+      "table_context_text": "The main purpose of this amendment is to correct the discrepancy in the study design figure to align with protocol Comparison Table of Changes from Protocol Amendment 6 to Amendment 7",
+      "table_semantic_hint": "This table contains structured data related to 'Main Rationale for Amendment 7:'. Interpret the rows using the column headers.",
       "caption": null,
       "headers": [
         "Applicable section",
@@ -419,7 +367,7 @@
         ]
       ],
       "page_number": 3,
-      "container_id": "9e16914b-207e-4129-b430-901b36148307",
+      "container_id": "fc93f258-b848-4eba-8e30-dd0842aa96e0",
       "container_type": "table_group",
       "container_path": [
         "Main Rationale for Amendment 7:"
@@ -430,7 +378,7 @@
       "block_type": "paragraph",
       "text": "AMENDMENT 6, 25 JUNE 2025",
       "page_number": 3,
-      "container_id": "41cc28b4-8995-4255-aa88-ea7b00fdf2e5",
+      "container_id": "5f0cd48e-fb10-42d1-9f51-6d1b4d6bed81",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 7:"
@@ -444,7 +392,7 @@
       "level": 2,
       "text": "Main Rationale for Amendment 6:",
       "page_number": 3,
-      "container_id": "9090b916-e86e-4616-a38a-bd3ded9bc50e",
+      "container_id": "4d171b87-1bd5-4151-a739-0a894b803a91",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 6:"
@@ -454,7 +402,7 @@
       "block_type": "paragraph",
       "text": "The main purpose of this amendment is to add one more cohort to the study design and add protocol memo language Comparison Table of Changes from Protocol Amendment 5 to Amendment 6 New (proposed) Applicable section Summary of changes Applicable Actual pages in Track Protocol OCUGEN Inc. - CONFIDENTIAL Page 3 of 81",
       "page_number": 3,
-      "container_id": "9090b916-e86e-4616-a38a-bd3ded9bc50e",
+      "container_id": "4d171b87-1bd5-4151-a739-0a894b803a91",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 6:"
@@ -477,43 +425,27 @@
     },
     {
       "block_type": "paragraph",
-      "text": "Protocol OCU200-101",
+      "text": "Protocol OCU200-101 02 Dec 2025 OCU200",
       "page_number": 4,
-      "container_id": "9090b916-e86e-4616-a38a-bd3ded9bc50e",
+      "container_id": "4d171b87-1bd5-4151-a739-0a894b803a91",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 6:"
       ],
       "source_block_ids": [
-        "p4_line_1"
-      ]
-    },
-    {
-      "block_type": "heading",
-      "level": 1,
-      "text": "02 Dec 2025",
-      "page_number": 4,
-      "container_id": "d9d2d4e5-7bde-4086-a5bc-cbcee10f7892",
-      "container_type": "section",
-      "container_path": [
-        "02 Dec 2025"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "OCU200",
-      "page_number": 4,
-      "container_id": "d9d2d4e5-7bde-4086-a5bc-cbcee10f7892",
-      "container_type": "section",
-      "container_path": [
-        "02 Dec 2025"
-      ],
-      "source_block_ids": [
+        "p4_line_1",
+        "p4_line_2",
         "p4_line_0"
       ]
     },
     {
       "block_type": "table",
+      "table_context_heading": "Main Rationale for Amendment 6:",
+      "table_context_path": [
+        "Main Rationale for Amendment 6:"
+      ],
+      "table_context_text": "Protocol OCU200-101 02 Dec 2025 OCU200",
+      "table_semantic_hint": "This table contains structured data related to 'Main Rationale for Amendment 6:'. Interpret the rows using the column headers.",
       "caption": null,
       "headers": [
         "Applicable section",
@@ -560,10 +492,10 @@
         ]
       ],
       "page_number": 4,
-      "container_id": "69e110db-b2fb-4d9d-a512-bad57d244881",
+      "container_id": "9ac6ae5b-9136-48c4-99fd-ba50a59d8786",
       "container_type": "table_group",
       "container_path": [
-        "02 Dec 2025"
+        "Main Rationale for Amendment 6:"
       ],
       "source_block_ids": []
     },
@@ -571,10 +503,10 @@
       "block_type": "paragraph",
       "text": "OCUGEN Inc. - CONFIDENTIAL Page 4 of 81",
       "page_number": 4,
-      "container_id": "d9d2d4e5-7bde-4086-a5bc-cbcee10f7892",
+      "container_id": "4d171b87-1bd5-4151-a739-0a894b803a91",
       "container_type": "section",
       "container_path": [
-        "02 Dec 2025"
+        "Main Rationale for Amendment 6:"
       ],
       "source_block_ids": [
         "p4_line_84",
@@ -583,43 +515,27 @@
     },
     {
       "block_type": "paragraph",
-      "text": "Protocol OCU200-101",
+      "text": "Protocol OCU200-101 02 Dec 2025 OCU200",
       "page_number": 5,
-      "container_id": "d9d2d4e5-7bde-4086-a5bc-cbcee10f7892",
+      "container_id": "4d171b87-1bd5-4151-a739-0a894b803a91",
       "container_type": "section",
       "container_path": [
-        "02 Dec 2025"
+        "Main Rationale for Amendment 6:"
       ],
       "source_block_ids": [
-        "p5_line_1"
-      ]
-    },
-    {
-      "block_type": "heading",
-      "level": 1,
-      "text": "02 Dec 2025",
-      "page_number": 5,
-      "container_id": "4da2188a-f5cd-4536-9730-ea71a1bac7f4",
-      "container_type": "section",
-      "container_path": [
-        "02 Dec 2025"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "OCU200",
-      "page_number": 5,
-      "container_id": "4da2188a-f5cd-4536-9730-ea71a1bac7f4",
-      "container_type": "section",
-      "container_path": [
-        "02 Dec 2025"
-      ],
-      "source_block_ids": [
+        "p5_line_1",
+        "p5_line_2",
         "p5_line_0"
       ]
     },
     {
       "block_type": "table",
+      "table_context_heading": "Main Rationale for Amendment 6:",
+      "table_context_path": [
+        "Main Rationale for Amendment 6:"
+      ],
+      "table_context_text": "Protocol OCU200-101 02 Dec 2025 OCU200",
+      "table_semantic_hint": "This table contains structured data related to 'Main Rationale for Amendment 6:'. Interpret the rows using the column headers.",
       "caption": null,
       "headers": [
         "Applicable section",
@@ -666,10 +582,10 @@
         ]
       ],
       "page_number": 5,
-      "container_id": "e41b3048-1fab-4efd-8d92-fff641c073b8",
+      "container_id": "f3c33a0b-537b-41e1-8a8e-73c64d8988f1",
       "container_type": "table_group",
       "container_path": [
-        "02 Dec 2025"
+        "Main Rationale for Amendment 6:"
       ],
       "source_block_ids": []
     },
@@ -677,10 +593,10 @@
       "block_type": "paragraph",
       "text": "AMENDMENT 5, 14 MARCH 2025",
       "page_number": 5,
-      "container_id": "4da2188a-f5cd-4536-9730-ea71a1bac7f4",
+      "container_id": "4d171b87-1bd5-4151-a739-0a894b803a91",
       "container_type": "section",
       "container_path": [
-        "02 Dec 2025"
+        "Main Rationale for Amendment 6:"
       ],
       "source_block_ids": [
         "p5_line_54"
@@ -691,7 +607,7 @@
       "level": 2,
       "text": "Main Rationale for Amendment 5:",
       "page_number": 5,
-      "container_id": "4b31d3bb-fde6-4559-bd56-1184ba9bc988",
+      "container_id": "26ff03c3-2f7b-49f9-94fa-8a11acea73a0",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 5:"
@@ -701,7 +617,7 @@
       "block_type": "paragraph",
       "text": "The main purpose of this amendment is to update the Schedule of Assessment Table and assessments Comparison Table of Changes from Protocol Amendment 4 to Amendment 5",
       "page_number": 5,
-      "container_id": "4b31d3bb-fde6-4559-bd56-1184ba9bc988",
+      "container_id": "26ff03c3-2f7b-49f9-94fa-8a11acea73a0",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 5:"
@@ -714,6 +630,12 @@
     },
     {
       "block_type": "table",
+      "table_context_heading": "Main Rationale for Amendment 5:",
+      "table_context_path": [
+        "Main Rationale for Amendment 5:"
+      ],
+      "table_context_text": "The main purpose of this amendment is to update the Schedule of Assessment Table and assessments Comparison Table of Changes from Protocol Amendment 4 to Amendment 5",
+      "table_semantic_hint": "This table contains structured data related to 'Main Rationale for Amendment 5:'. Interpret the rows using the column headers.",
       "caption": null,
       "headers": [
         "Applicable section",
@@ -753,7 +675,7 @@
         ]
       ],
       "page_number": 5,
-      "container_id": "aac8ff0c-4129-4714-bf23-5ca72cfc765b",
+      "container_id": "2dcab858-672a-4c44-8ffd-5b294f6ff4e9",
       "container_type": "table_group",
       "container_path": [
         "Main Rationale for Amendment 5:"
@@ -764,7 +686,7 @@
       "block_type": "paragraph",
       "text": "AMENDMENT 4, 11 FEBRUARY 2025 OCUGEN Inc. - CONFIDENTIAL Page 5 of 81",
       "page_number": 5,
-      "container_id": "4b31d3bb-fde6-4559-bd56-1184ba9bc988",
+      "container_id": "26ff03c3-2f7b-49f9-94fa-8a11acea73a0",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 5:"
@@ -777,38 +699,16 @@
     },
     {
       "block_type": "paragraph",
-      "text": "Protocol OCU200-101",
+      "text": "Protocol OCU200-101 02 Dec 2025 OCU200",
       "page_number": 6,
-      "container_id": "4b31d3bb-fde6-4559-bd56-1184ba9bc988",
+      "container_id": "26ff03c3-2f7b-49f9-94fa-8a11acea73a0",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 5:"
       ],
       "source_block_ids": [
-        "p6_line_1"
-      ]
-    },
-    {
-      "block_type": "heading",
-      "level": 1,
-      "text": "02 Dec 2025",
-      "page_number": 6,
-      "container_id": "35429f61-d756-4605-9872-d19ba81f8c63",
-      "container_type": "section",
-      "container_path": [
-        "02 Dec 2025"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "OCU200",
-      "page_number": 6,
-      "container_id": "35429f61-d756-4605-9872-d19ba81f8c63",
-      "container_type": "section",
-      "container_path": [
-        "02 Dec 2025"
-      ],
-      "source_block_ids": [
+        "p6_line_1",
+        "p6_line_0",
         "p6_line_2"
       ]
     },
@@ -817,7 +717,7 @@
       "level": 2,
       "text": "Main Rationale for Amendment 4:",
       "page_number": 6,
-      "container_id": "05e025a1-d82e-4a1c-bcd3-ef4088a87f6b",
+      "container_id": "e03d8d45-bc2b-4870-bf8b-130232f0c554",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 4:"
@@ -827,7 +727,7 @@
       "block_type": "paragraph",
       "text": "The main purpose of this amendment is to clarify DSMB meeting timelines and update the study design. Comparison Table of Changes from Protocol Amendment 3 to Amendment 4",
       "page_number": 6,
-      "container_id": "05e025a1-d82e-4a1c-bcd3-ef4088a87f6b",
+      "container_id": "e03d8d45-bc2b-4870-bf8b-130232f0c554",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 4:"
@@ -840,6 +740,12 @@
     },
     {
       "block_type": "table",
+      "table_context_heading": "Main Rationale for Amendment 4:",
+      "table_context_path": [
+        "Main Rationale for Amendment 4:"
+      ],
+      "table_context_text": "The main purpose of this amendment is to clarify DSMB meeting timelines and update the study design. Comparison Table of Changes from Protocol Amendment 3 to Amendment 4",
+      "table_semantic_hint": "This table contains structured data related to 'Main Rationale for Amendment 4:'. Interpret the rows using the column headers.",
       "caption": null,
       "headers": [
         "Applicable section",
@@ -886,7 +792,7 @@
         ]
       ],
       "page_number": 6,
-      "container_id": "1a0b4a45-34c8-46d0-be75-09ab2cedaf04",
+      "container_id": "9ce5b55a-b77b-4165-9e7f-95b0128722a6",
       "container_type": "table_group",
       "container_path": [
         "Main Rationale for Amendment 4:"
@@ -897,7 +803,7 @@
       "block_type": "paragraph",
       "text": "AMENDMENT 3, 25 OCTOBER 2024",
       "page_number": 6,
-      "container_id": "05e025a1-d82e-4a1c-bcd3-ef4088a87f6b",
+      "container_id": "e03d8d45-bc2b-4870-bf8b-130232f0c554",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 4:"
@@ -911,7 +817,7 @@
       "level": 2,
       "text": "Main Rationale for Amendment 3:",
       "page_number": 6,
-      "container_id": "187e7dbf-1c0c-4cab-9271-ee426d9fc66c",
+      "container_id": "6db655a0-d190-4344-98c6-e4c1763feb38",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 3:"
@@ -921,7 +827,7 @@
       "block_type": "paragraph",
       "text": "The main purpose of this amendment is to clarify DSMB meeting timelines and update the study design. Comparison Table of Changes from Protocol Amendment 2 to Amendment 3",
       "page_number": 6,
-      "container_id": "187e7dbf-1c0c-4cab-9271-ee426d9fc66c",
+      "container_id": "6db655a0-d190-4344-98c6-e4c1763feb38",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 3:"
@@ -934,6 +840,12 @@
     },
     {
       "block_type": "table",
+      "table_context_heading": "Main Rationale for Amendment 3:",
+      "table_context_path": [
+        "Main Rationale for Amendment 3:"
+      ],
+      "table_context_text": "The main purpose of this amendment is to clarify DSMB meeting timelines and update the study design. Comparison Table of Changes from Protocol Amendment 2 to Amendment 3",
+      "table_semantic_hint": "This table contains structured data related to 'Main Rationale for Amendment 3:'. Interpret the rows using the column headers.",
       "caption": null,
       "headers": [
         "Applicable section",
@@ -959,7 +871,7 @@
         ]
       ],
       "page_number": 6,
-      "container_id": "50c6c3cf-609b-4776-b2ee-ab0def1c7517",
+      "container_id": "96baade8-9218-4073-8dd3-772224dec7d6",
       "container_type": "table_group",
       "container_path": [
         "Main Rationale for Amendment 3:"
@@ -970,7 +882,7 @@
       "block_type": "paragraph",
       "text": "OCUGEN Inc. - CONFIDENTIAL Page 6 of 81",
       "page_number": 6,
-      "container_id": "187e7dbf-1c0c-4cab-9271-ee426d9fc66c",
+      "container_id": "6db655a0-d190-4344-98c6-e4c1763feb38",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 3:"
@@ -982,43 +894,27 @@
     },
     {
       "block_type": "paragraph",
-      "text": "Protocol OCU200-101",
+      "text": "Protocol OCU200-101 02 Dec 2025 OCU200",
       "page_number": 7,
-      "container_id": "187e7dbf-1c0c-4cab-9271-ee426d9fc66c",
+      "container_id": "6db655a0-d190-4344-98c6-e4c1763feb38",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 3:"
       ],
       "source_block_ids": [
-        "p7_line_1"
-      ]
-    },
-    {
-      "block_type": "heading",
-      "level": 1,
-      "text": "02 Dec 2025",
-      "page_number": 7,
-      "container_id": "3952c615-beb5-4a60-855d-5a094560d7e1",
-      "container_type": "section",
-      "container_path": [
-        "02 Dec 2025"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "OCU200",
-      "page_number": 7,
-      "container_id": "3952c615-beb5-4a60-855d-5a094560d7e1",
-      "container_type": "section",
-      "container_path": [
-        "02 Dec 2025"
-      ],
-      "source_block_ids": [
+        "p7_line_1",
+        "p7_line_2",
         "p7_line_0"
       ]
     },
     {
       "block_type": "table",
+      "table_context_heading": "Main Rationale for Amendment 3:",
+      "table_context_path": [
+        "Main Rationale for Amendment 3:"
+      ],
+      "table_context_text": "Protocol OCU200-101 02 Dec 2025 OCU200",
+      "table_semantic_hint": "This table contains structured data related to 'Main Rationale for Amendment 3:'. Interpret the rows using the column headers.",
       "caption": null,
       "headers": [
         "Applicable section",
@@ -1044,10 +940,10 @@
         ]
       ],
       "page_number": 7,
-      "container_id": "74f6e83a-ab0b-4bac-9042-ba1f1b1ad657",
+      "container_id": "9b0ccbaf-2ab9-48aa-8893-cfb492a451d8",
       "container_type": "table_group",
       "container_path": [
-        "02 Dec 2025"
+        "Main Rationale for Amendment 3:"
       ],
       "source_block_ids": []
     },
@@ -1055,10 +951,10 @@
       "block_type": "paragraph",
       "text": "AMENDMENT 2, 21 MARCH 2023",
       "page_number": 7,
-      "container_id": "3952c615-beb5-4a60-855d-5a094560d7e1",
+      "container_id": "6db655a0-d190-4344-98c6-e4c1763feb38",
       "container_type": "section",
       "container_path": [
-        "02 Dec 2025"
+        "Main Rationale for Amendment 3:"
       ],
       "source_block_ids": [
         "p7_line_18"
@@ -1069,7 +965,7 @@
       "level": 2,
       "text": "Main Rationale for Amendment 2:",
       "page_number": 7,
-      "container_id": "fd9085e7-322c-4e64-8907-e96607289a42",
+      "container_id": "e6d8fc89-e884-41b9-8b75-9068db003a7e",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 2:"
@@ -1079,7 +975,7 @@
       "block_type": "paragraph",
       "text": "The main purpose of this amendment is to add a summary of changes table to Appendix 1. Comparison Table of Changes from Protocol Amendment 1 to Protocol Amendment 2",
       "page_number": 7,
-      "container_id": "fd9085e7-322c-4e64-8907-e96607289a42",
+      "container_id": "e6d8fc89-e884-41b9-8b75-9068db003a7e",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 2:"
@@ -1091,6 +987,12 @@
     },
     {
       "block_type": "table",
+      "table_context_heading": "Main Rationale for Amendment 2:",
+      "table_context_path": [
+        "Main Rationale for Amendment 2:"
+      ],
+      "table_context_text": "The main purpose of this amendment is to add a summary of changes table to Appendix 1. Comparison Table of Changes from Protocol Amendment 1 to Protocol Amendment 2",
+      "table_semantic_hint": "This table contains structured data related to 'Main Rationale for Amendment 2:'. Interpret the rows using the column headers.",
       "caption": null,
       "headers": [
         "Applicable section",
@@ -1109,7 +1011,7 @@
         ]
       ],
       "page_number": 7,
-      "container_id": "f859ae12-27e2-4d7c-a3f5-542261c7c8ce",
+      "container_id": "4028ae08-5db4-43df-8e86-bc72bce54731",
       "container_type": "table_group",
       "container_path": [
         "Main Rationale for Amendment 2:"
@@ -1120,7 +1022,7 @@
       "block_type": "paragraph",
       "text": "Comparison Table of Changes from Original Protocol to Protocol Amendment 1",
       "page_number": 7,
-      "container_id": "fd9085e7-322c-4e64-8907-e96607289a42",
+      "container_id": "e6d8fc89-e884-41b9-8b75-9068db003a7e",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 2:"
@@ -1131,6 +1033,12 @@
     },
     {
       "block_type": "table",
+      "table_context_heading": "Main Rationale for Amendment 2:",
+      "table_context_path": [
+        "Main Rationale for Amendment 2:"
+      ],
+      "table_context_text": "Comparison Table of Changes from Original Protocol to Protocol Amendment 1",
+      "table_semantic_hint": "This table contains structured data related to 'Main Rationale for Amendment 2:'. Interpret the rows using the column headers.",
       "caption": null,
       "headers": [
         "Applicable section",
@@ -1156,7 +1064,7 @@
         ]
       ],
       "page_number": 7,
-      "container_id": "b89720da-9262-44d8-91d5-a2bc121c7ed0",
+      "container_id": "7cf4be3a-ddb6-4169-85a1-f5fb3e79112e",
       "container_type": "table_group",
       "container_path": [
         "Main Rationale for Amendment 2:"
@@ -1167,7 +1075,7 @@
       "block_type": "paragraph",
       "text": "OCUGEN Inc. - CONFIDENTIAL Page 7 of 81",
       "page_number": 7,
-      "container_id": "fd9085e7-322c-4e64-8907-e96607289a42",
+      "container_id": "e6d8fc89-e884-41b9-8b75-9068db003a7e",
       "container_type": "section",
       "container_path": [
         "Main Rationale for Amendment 2:"
