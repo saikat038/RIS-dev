@@ -443,20 +443,18 @@ def embed_query(text: str) -> np.ndarray:
 # ============================
 
 def search(query: str, k: int = 3):
-    q_vec = batch_embed([query])[0]  # embedding
+    q_vec = batch_embed([query])
 
     search_client = load_vectorstore()
 
-    # NEW CORRECT VECTOR QUERY for 11.7.0b2
     vector_query = VectorizedQuery(
         vector=q_vec,
         k=k,
         fields="vector"
     )
 
-    # MUST WRAP IN LIST: vector_queries=[...]
     results = search_client.search(
-        search_text=query,              
+        search_text=query,
         vector_queries=[vector_query],
         select=[
             "text",
