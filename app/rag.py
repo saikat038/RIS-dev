@@ -458,7 +458,7 @@ def search(query: str, k: int = 3):
     results = search_client.search(
         search_text="",      # required
         vector_queries=[vector_query],
-        select=["text", "doc_id", "page_numbers"]
+        select=["text", "doc_id", "page"]
     )
 
     output = []

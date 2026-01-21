@@ -66,7 +66,7 @@ def extract_layout_to_structured_json(
         structured_doc["pages"].append(page_data)
 
     # -------------------------------------------------
-    # Tables (NO INFERENCE – PURE AZURE OUTPUT)
+    # Tables (MINIMAL FIX APPLIED)
     # -------------------------------------------------
     for t_idx, table in enumerate(result.tables or []):
 
@@ -82,10 +82,12 @@ def extract_layout_to_structured_json(
 
         headers: Dict[int, Dict[str, Any]] = {}
         rows: Dict[int, Dict[int, Dict[str, Any]]] = {}
+        max_col_index = -1
 
         for cell in table.cells:
             r = cell.row_index
             c = cell.column_index
+            max_col_index = max(max_col_index, c)
 
             cell_obj = {
                 "text": cell.content,
@@ -98,22 +100,31 @@ def extract_layout_to_structured_json(
                 )
             }
 
+            rows.setdefault(r, {})[c] = cell_obj
+
+            # Keep Azure-detected headers IF they exist
             if cell.kind == "columnHeader":
                 headers[c] = cell_obj
-            else:
-                rows.setdefault(r, {})[c] = cell_obj
 
-        ordered_headers = [
-            headers[c]["text"] for c in sorted(headers)
-        ]
-
+        # ---- Build rectangular rows safely ----
         ordered_rows = [
             [
-                row.get(c, {}).get("text", "")
-                for c in sorted(headers)
+                rows[r].get(c, {}).get("text", "")
+                for c in range(max_col_index + 1)
             ]
-            for r, row in sorted(rows.items())
+            for r in sorted(rows)
         ]
+
+        # ---- Header fallback (ONLY if Azure headers missing) ----
+        ordered_headers = (
+            [headers[c]["text"] for c in sorted(headers)]
+            if headers
+            else (ordered_rows[0] if ordered_rows else [])
+        )
+
+        # If headers were inferred from first row, drop it from body
+        if not headers and ordered_rows:
+            ordered_rows = ordered_rows[1:]
 
         table_block = {
             "block_id": f"table_{t_idx}",
