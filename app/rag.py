@@ -382,6 +382,7 @@
 # Langgraph
 
 import numpy as np
+import json
 from typing import List, Dict, TypedDict
 
 from openai import AzureOpenAI
@@ -563,6 +564,16 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     - Combines the top chunks into a single context string
     - Stores it in state["context"]
     """
+
+    query = state.get("query", "").lower()
+
+    TABLE_QUERY_HINTS = [
+        "table", "comparison", "changes", "row", "column", "section",
+        "applicable section", "actual", "new (proposed)", "summary of changes"
+    ]
+
+    is_table_query = any(hint in query for hint in TABLE_QUERY_HINTS)
+
     query = state.get("query", "")
 
     # Search top-k documents for this query
@@ -571,9 +582,33 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     # Extract text from each chunk
     context_pieces = []
     for chunk_obj, score in docs:
-        text = _extract_text_from_chunk(chunk_obj)
-        if text:
-            context_pieces.append(text)
+        # 🚨 Skip non-table chunks if this is a table query
+        if is_table_query and isinstance(chunk_obj, dict):
+            if chunk_obj.get("block_type") != "table":
+                continue
+
+        # chunk_obj may be text or dict
+        if isinstance(chunk_obj, dict):
+            # 🚨 TABLE PRESERVATION
+            if chunk_obj.get("block_type") == "table":
+                context_pieces.append(
+                    json.dumps(
+                        {
+                            "type": "table",
+                            "headers": chunk_obj.get("headers", []),
+                            "rows": chunk_obj.get("rows", [])
+                        },
+                        indent=2
+                    )
+                )
+            else:
+                text = _extract_text_from_chunk(chunk_obj)
+                if text:
+                    context_pieces.append(text)
+        else:
+            text = _extract_text_from_chunk(chunk_obj)
+            if text:
+                context_pieces.append(text)
 
     # Merge all context into one string
     context = (
@@ -672,6 +707,15 @@ Critical instruction:
 - You must derive the answer ONLY from the provided knowledge base context.
 - If the knowledge base does not support the answer, reply exactly:
   Not in knowledge base.
+
+STRICT TABLE RULE (MANDATORY):
+- When answering from a table, you MUST:
+  1. Identify the exact row(s) used
+  2. Ensure ALL relevant columns for that row are present
+- If ANY required column or cell is missing, reply exactly:
+  Not in knowledge base.
+- NEVER infer, assume, merge, or reconstruct missing table cells.
+
 
 Important:
 - **Do not invent data** that is not supported by or logically derivable from the context.
