@@ -443,7 +443,7 @@ def embed_query(text: str) -> np.ndarray:
 # ============================
 
 def search(query: str, k: int = 3):
-    q_vec = batch_embed([query])
+    q_vec = batch_embed([query])[0]
 
     search_client = load_vectorstore()
 
