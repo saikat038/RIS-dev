@@ -442,21 +442,18 @@ def embed_query(text: str) -> np.ndarray:
 # VECTOR SEARCH (Azure AI Search)
 # ============================
 
-def search(query: str, k: int = 3):
-    q_vec = batch_embed([query])[0]  # embedding
-
+def search(query: str, k: int = 16):
+    q_vec = embed_query(query)
     search_client = load_vectorstore()
 
-    # NEW CORRECT VECTOR QUERY for 11.7.0b2
     vector_query = VectorizedQuery(
         vector=q_vec,
+        fields="vector",
         k=k,
-        fields="vector"
     )
 
-    # MUST WRAP IN LIST: vector_queries=[...]
     results = search_client.search(
-        search_text=query,              
+        search_text=query,                 # hybrid search
         vector_queries=[vector_query],
         select=[
             "text",
@@ -465,15 +462,17 @@ def search(query: str, k: int = 3):
             "chunk_type",
             "heading_path"
         ],
-        top=k
+        top=k,
     )
 
-    output = []
-    for r in results:
-        output.append((r["text"], r["@search.score"]))
-
-    return output
-
+    return [{
+        "text": r["text"],
+        "doc_id": r.get("doc_id"),
+        "page_numbers": r.get("page_numbers", []),
+        "chunk_type": r.get("chunk_type"),
+        "heading_path": r.get("heading_path"),
+        "score": r["@search.score"],
+    } for r in results]
 
 # ============================
 # CHUNK TEXT EXTRACTION
