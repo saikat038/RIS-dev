@@ -470,15 +470,7 @@ def search(query: str, k: int = 3):
 
     output = []
     for r in results:
-        output.append({
-        "text": r.get("text", ""),
-        "doc_id": r.get("doc_id"),
-        "page_numbers": r.get("page_numbers", []),
-        "chunk_type": r.get("chunk_type"),
-        "heading_path": r.get("heading_path"),
-        "score": r.get("@search.score"),
-    })
-
+        output.append((r["text"], r["@search.score"]))
 
     return output
 
@@ -581,7 +573,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     query = state.get("query", "")
 
     # Search top-k documents for this query
-    docs = search(query, k=5)
+    docs = search(query, k=12)
 
     # Extract text from each chunk
     context_pieces = []
