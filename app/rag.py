@@ -443,7 +443,7 @@ def embed_query(text: str) -> np.ndarray:
 # ============================
 
 def search(query: str, k: int = 3):
-    q_vec = batch_embed([query])[0]  # embedding
+    q_vec = batch_embed([query])  # embedding
 
     search_client = load_vectorstore()
 
@@ -456,7 +456,7 @@ def search(query: str, k: int = 3):
 
     # MUST WRAP IN LIST: vector_queries=[...]
     results = search_client.search(
-        search_text=query,              # ✅ ADD THIS
+        search_text=query,              
         vector_queries=[vector_query],
         select=[
             "text",
@@ -470,7 +470,15 @@ def search(query: str, k: int = 3):
 
     output = []
     for r in results:
-        output.append((r["text"], r["@search.score"]))
+        output.append({
+        "text": r.get("text", ""),
+        "doc_id": r.get("doc_id"),
+        "page_numbers": r.get("page_numbers", []),
+        "chunk_type": r.get("chunk_type"),
+        "heading_path": r.get("heading_path"),
+        "score": r.get("@search.score"),
+    })
+
 
     return output
 
@@ -562,34 +570,36 @@ class RAGState(TypedDict, total=False):
 # ============================
 
 def retrieve_context_node(state: RAGState) -> RAGState:
-    """
-    Node 1: Retrieve relevant context from the KB using FAISS.
-
-    - Uses the current query from state["query"]
-    - Calls `search(...)`
-    - Combines the top chunks into a single context string
-    - Stores it in state["context"]
-    """
     query = state.get("query", "")
+    docs = search(query, k=16)
 
-    # Search top-k documents for this query
-    docs = search(query, k=5)
+    # Sort by page order
+    docs_sorted = sorted(
+        docs,
+        key=lambda d: min(d["page_numbers"]) if d["page_numbers"] else 9999
+    )
 
-    # Extract text from each chunk
     context_pieces = []
-    for chunk_obj, score in docs:
-        text = _extract_text_from_chunk(chunk_obj)
-        if text:
-            context_pieces.append(text)
 
-    # Merge all context into one string
+    for d in docs_sorted:
+        text = d["text"]
+        if not text.strip():
+            continue
+
+        pages = ", ".join(map(str, d["page_numbers"])) if d["page_numbers"] else "N/A"
+        heading = d.get("heading_path") or "Unknown section"
+        doc_id = d.get("doc_id") or "Unknown document"
+
+        context_pieces.append(
+            f"[Document: {doc_id} | Pages: {pages} | Section: {heading}]\n{text}"
+        )
+
     context = (
         "\n\n".join(context_pieces)
         if context_pieces
         else "No relevant context found."
     )
 
-    # Return updated state
     new_state = dict(state)
     new_state["context"] = context
     return new_state
