@@ -468,17 +468,11 @@ def search(query: str, k: int = 3):
         top=k
     )
 
-    # output = []
-    return [{
-        "text": r["text"],
-        "doc_id": r.get("doc_id"),
-        "page_numbers": r.get("page_numbers", []),
-        "chunk_type": r.get("chunk_type"),
-        "heading_path": r.get("heading_path"),
-        "score": r["@search.score"],
-    } for r in results]
+    output = []
+    for r in results:
+        output.append((r["text"], r["@search.score"]))
 
-    # return output
+    return output
 
 
 # ============================
