@@ -1,6 +1,7 @@
 import streamlit as st
 import os, sys
 import base64
+from Protocoldigitization import *
 
 # So we can import from app/
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -71,6 +72,7 @@ if "messages" not in st.session_state:
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
+        render_docx(msg["content"])
 
 # ========================
 # CHAT INPUT (BOTTOM, CHATGPT-LIKE)
