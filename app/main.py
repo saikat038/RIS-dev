@@ -72,7 +72,6 @@ if "messages" not in st.session_state:
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
-        render_docx(msg["content"])
 
 # ========================
 # CHAT INPUT (BOTTOM, CHATGPT-LIKE)
@@ -91,5 +90,6 @@ if prompt:
         with st.spinner("Thinking..."):
             result = answer(prompt, history)
             st.markdown(result)
+            render_docx(result)
 
     st.session_state.messages.append({"role": "assistant", "content": result})
