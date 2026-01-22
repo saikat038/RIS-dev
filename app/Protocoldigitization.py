@@ -12,7 +12,7 @@ TEMPLATE_NAME = "CRS.docx"
 OUTPUT_NAME = "CRS_filled.docx"
 
 
-def render_crs_docx_in_memory(llm_text: str):
+def render_docx(llm_text: str):
     # 1️⃣ Connect to Blob Storage using connection string
     blob_service = BlobServiceClient.from_connection_string(
         AZURE_BLOB_CONN_STRING
