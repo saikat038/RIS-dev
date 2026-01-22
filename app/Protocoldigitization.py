@@ -49,8 +49,11 @@ def render_docx(llm_text: str):
     # 3️⃣ Render DOCX in memory
     doc = DocxTemplate(template_stream)
 
+    def to_rich_text(text: str) -> RichText:
+        return RichText(text)
+
     context = {
-        "inclusion_criterion": RichText(llm_text)
+        "inclusion_criterion": to_rich_text(llm_text)
     }
 
     doc.render(context)
