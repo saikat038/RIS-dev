@@ -53,7 +53,7 @@ def render_docx(llm_text: str):
         return RichText(text)
 
     context = {
-        "inclusion_criterion": to_rich_text(llm_text)
+        "inclusion_criteria": to_rich_text(llm_text)
     }
 
     doc.render(context)
