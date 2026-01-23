@@ -16,6 +16,37 @@ TEMPLATE_NAME = "CSR.docx"
 OUTPUT_NAME = "CSR_filled.docx"
 
 
+
+import re
+from docxtpl import RichText
+
+def markdown_to_richtext(text: str) -> RichText:
+    """
+    Converts **bold** markdown to DOCX bold runs.
+    """
+    rt = RichText()
+    pattern = re.compile(r"\*\*(.*?)\*\*")
+
+    last_idx = 0
+    for match in pattern.finditer(text):
+        start, end = match.span()
+
+        # Normal text before bold
+        if start > last_idx:
+            rt.add(text[last_idx:start])
+
+        # Bold text
+        rt.add(match.group(1), bold=True)
+
+        last_idx = end
+
+    # Remaining text
+    if last_idx < len(text):
+        rt.add(text[last_idx:])
+
+    return rt
+
+
 def normalize_prefix(prefix: str) -> str:
     """
     Ensures no trailing slash
@@ -53,7 +84,7 @@ def render_docx(llm_text: str):
         return RichText(text)
 
     context = {
-        "inclusion_criteria": to_rich_text(llm_text)
+        "inclusion_criteria": markdown_to_richtext(to_rich_text(llm_text))
     }
 
     doc.render(context)
