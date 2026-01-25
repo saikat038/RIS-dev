@@ -1,0 +1,3218 @@
+{
+  "doc_id": "E3_Guideline.pdf",
+  "blocks": [
+    {
+      "block_type": "ich_rule",
+      "content": "report of a study should not be derived by simply joining a separate clinical and",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 9,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "complete, free from ambiguity, well organised and easy to review. The report should",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 9,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "appendices should also provide enough individual patient data, including the",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 9,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "summarised data or with some sections deleted, may be acceptable for uncontrolled",
+      "rule_type": "optional",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 9,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "study should be reported in full), for seriously flawed or aborted studies, or for",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 9,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "is made. However, a full description of safety aspects should be included in these",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 9,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "cases. If an abbreviated report is submitted, there should be enough detail of design",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 9,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "needed. If there is any question regarding whether the reports are needed, it may be",
+      "rule_type": "optional",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 9,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "In presenting the detailed description of how the study was carried out, it may be",
+      "rule_type": "optional",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 9,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The full integrated report of the individual study should include the most detailed",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "discussion of individual adverse events or laboratory abnormalities, but these should",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The report should describe demographic and other potentially predictive",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "identified. Usually, however, subgroup responses should be examined in the larger",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "needed to support critical analyses. Data listings that are part of the report should be",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "readily usable by the reviewer. Thus, although it may be desirable to include many",
+      "rule_type": "optional",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "variables in a single listing to limit size, this should not be at the expense of clarity.",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "An excess of data should not be allowed to lead to overuse of symbols instead of words",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Data should be presented in the report at different levels of detail: overall summary",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "figures and tables for important demographic, efficacy and safety variables may be",
+      "rule_type": "optional",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "listings for demographic, efficacy and safety variables should be provided in section",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "14; individual patient data for specified groups of patients should be provided as",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "only in the US) should be provided in Appendix 16.4.",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "In any table, figure or data listing, estimated or derived values, if used, should be",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "identified in a conspicuous fashion. Detailed explanations should be provided as to",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "virtually all of the information that should routinely be provided so that post-",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "analysis may depend on specific situations, may evolve over time, may vary from drug",
+      "rule_type": "optional",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "class to drug class, may differ among regions and cannot be described in general",
+      "rule_type": "optional",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Each report should consider all of the topics described (unless clearly not relevant)",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "although the specific sequence and grouping of topics may be changed if alternatives",
+      "rule_type": "optional",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "requirements of individual regulatory authorities and should be submitted as",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "appropriate. The numbering should then be adapted accordingly.",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 10,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "In the case of very large trials, some of the provisions of this guideline may be",
+      "rule_type": "optional",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 11,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The provisions of this guideline should be used in conjunction with other ICH",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 11,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The title page should contain the following information:",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 11,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "study report should be indicated on this page or in the letter of application.)",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 11,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "A brief synopsis (usually limited to 3 pages) that summarises the study should be",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 11,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Europe). The synopsis should include numerical data to illustrate results, not just",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 11,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The table of contents should include:",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 12,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "measurements units used in the report should be provided. Abbreviated terms should",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 12,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "It should be confirmed that the study and any amendments were reviewed by an",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 12,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "IRBs consulted should be given in appendix 16.1.3 and, if required by the regulatory",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 12,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "authority, the name of the committee Chair should be provided.",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 12,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "It should be confirmed that the study was conducted in accordance with the ethical",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 12,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "at allocation, pre-screening) should be described.",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 12,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "consent form should be provided in appendix 16.1.3.",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 12,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "organisation (C.R.O.), clinical trial supply management) should be described briefly in",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 12,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "There should be provided in appendix 16.1.4 a list of the investigators with their",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 12,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "the conduct of the study should also be provided in appendix 16.1.4. In the case of",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 12,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "large trials with many investigators the above requirements may be abbreviated to",
+      "rule_type": "optional",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 12,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The listing should include:",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 12,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "regulatory authorities, these should be included in appendix 16.1.5 (see Annex II for a",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 13,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "responsible medical officer should be provided in appendix 16.1.5.",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 13,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The introduction should contain a brief statement (maximum: 1 page) placing the",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 13,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "particular study, should be identified or described.",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 13,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "A statement describing the overall purpose(s) of the study should be provided.",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 13,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "over) should be described briefly but clearly, using charts and diagrams as needed. If",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 13,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The information provided should include:",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 13,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "blind treatment periods. When patients are randomised should be specified.",
+      "rule_type": "recommended",
+      "section_path": "16.3",
+      "section_title": "CASE REPORT FORMS",
+      "page_number": 13,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The specific control chosen and the study design used should be discussed, as",
+      "rule_type": "recommended",
+      "section_path": "9.2",
+      "section_title": "DISCUSSION OF STUDY DESIGN, INCLUDING THE CHOICE OF",
+      "page_number": 14,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "control, other critical design features that may need discussion are use of a cross-over",
+      "rule_type": "optional",
+      "section_path": "9.2",
+      "section_title": "DISCUSSION OF STUDY DESIGN, INCLUDING THE CHOICE OF",
+      "page_number": 14,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "chosen, should be discussed in light of the specific disease and therapies being",
+      "rule_type": "recommended",
+      "section_path": "9.2",
+      "section_title": "DISCUSSION OF STUDY DESIGN, INCLUDING THE CHOICE OF",
+      "page_number": 14,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "studied. For a crossover design, for example, there should be consideration, among",
+      "rule_type": "recommended",
+      "section_path": "9.2",
+      "section_title": "DISCUSSION OF STUDY DESIGN, INCLUDING THE CHOICE OF",
+      "page_number": 14,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "treatment, problems associated with such study designs should be addressed.",
+      "rule_type": "recommended",
+      "section_path": "9.2",
+      "section_title": "DISCUSSION OF STUDY DESIGN, INCLUDING THE CHOICE OF",
+      "page_number": 14,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Specifically there should be provided a basis for considering the study capable of",
+      "rule_type": "recommended",
+      "section_path": "9.2",
+      "section_title": "DISCUSSION OF STUDY DESIGN, INCLUDING THE CHOICE OF",
+      "page_number": 14,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "distinguishing active from inactive therapy. Support may be provided by an analysis",
+      "rule_type": "optional",
+      "section_path": "9.2",
+      "section_title": "DISCUSSION OF STUDY DESIGN, INCLUDING THE CHOICE OF",
+      "page_number": 14,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "distinguish effective from ineffective therapy should also be discussed. For example,",
+      "rule_type": "recommended",
+      "section_path": "9.2",
+      "section_title": "DISCUSSION OF STUDY DESIGN, INCLUDING THE CHOICE OF",
+      "page_number": 14,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "it may be possible to identify a treatment response (based on past studies) that would",
+      "rule_type": "optional",
+      "section_path": "9.2",
+      "section_title": "DISCUSSION OF STUDY DESIGN, INCLUDING THE CHOICE OF",
+      "page_number": 14,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "an inactive drug. There should also be a discussion of the degree of inferiority of the",
+      "rule_type": "recommended",
+      "section_path": "9.2",
+      "section_title": "DISCUSSION OF STUDY DESIGN, INCLUDING THE CHOICE OF",
+      "page_number": 14,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Other specific features of the design may also deserve discussion, including presence",
+      "rule_type": "optional",
+      "section_path": "9.2",
+      "section_title": "DISCUSSION OF STUDY DESIGN, INCLUDING THE CHOICE OF",
+      "page_number": 14,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "a chronic illness. The rationale for dose and dose-interval selection should be",
+      "rule_type": "recommended",
+      "section_path": "9.2",
+      "section_title": "DISCUSSION OF STUDY DESIGN, INCLUDING THE CHOICE OF",
+      "page_number": 14,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "study design uses such dosing, this should be explained, e.g., by pointing to",
+      "rule_type": "recommended",
+      "section_path": "9.2",
+      "section_title": "DISCUSSION OF STUDY DESIGN, INCLUDING THE CHOICE OF",
+      "page_number": 15,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "interval, such as measurements of effect just prior to dosing, should be described.",
+      "rule_type": "recommended",
+      "section_path": "9.2",
+      "section_title": "DISCUSSION OF STUDY DESIGN, INCLUDING THE CHOICE OF",
+      "page_number": 15,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Similarly, in a parallel design dose-response study, the choice of doses should be",
+      "rule_type": "recommended",
+      "section_path": "9.2",
+      "section_title": "DISCUSSION OF STUDY DESIGN, INCLUDING THE CHOICE OF",
+      "page_number": 15,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "study should be described, and the suitability of the population for the purposes of the",
+      "rule_type": "recommended",
+      "section_path": "9.3.1",
+      "section_title": "Inclusion Criteria",
+      "page_number": 15,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "any age, sex or ethnic factors) should be presented.",
+      "rule_type": "recommended",
+      "section_path": "9.3.1",
+      "section_title": "Inclusion Criteria",
+      "page_number": 15,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "drug/investigational product treatment part of the trial should be described. If there",
+      "rule_type": "recommended",
+      "section_path": "9.3.1",
+      "section_title": "Inclusion Criteria",
+      "page_number": 15,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "investigators may have excluded, or entered into other studies, patients who were",
+      "rule_type": "optional",
+      "section_path": "9.3.1",
+      "section_title": "Inclusion Criteria",
+      "page_number": 15,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The criteria for exclusion at entry into the study should be specified and the rationale",
+      "rule_type": "recommended",
+      "section_path": "9.3.2",
+      "section_title": "Exclusion Criteria",
+      "page_number": 15,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "provided. The impact of exclusions on the generalisability of the study should be",
+      "rule_type": "recommended",
+      "section_path": "9.3.2",
+      "section_title": "Exclusion Criteria",
+      "page_number": 15,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "observation, if any, should be described, as should the nature and duration of",
+      "rule_type": "recommended",
+      "section_path": "9.3.3",
+      "section_title": "Removal of Patients from Therapy or Assessment",
+      "page_number": 15,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "study, and for each period of the study, should be described including route and mode",
+      "rule_type": "recommended",
+      "section_path": "9.4.1",
+      "section_title": "Treatments Administered",
+      "page_number": 15,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "product(s) (formulation, strength, batch number(s)) should be given. If more than one",
+      "rule_type": "recommended",
+      "section_path": "9.4.2",
+      "section_title": "Identity of Investigational Product(s)",
+      "page_number": 15,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be identified in appendix 16.1.6.",
+      "rule_type": "recommended",
+      "section_path": "9.4.2",
+      "section_title": "Identity of Investigational Product(s)",
+      "page_number": 15,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The source of placebos and active control/comparator product(s) should be provided.",
+      "rule_type": "recommended",
+      "section_path": "9.4.2",
+      "section_title": "Identity of Investigational Product(s)",
+      "page_number": 15,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Any modification of comparator product(s) from their usual commercial state should",
+      "rule_type": "recommended",
+      "section_path": "9.4.2",
+      "section_title": "Identity of Investigational Product(s)",
+      "page_number": 15,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "be noted, and the steps taken to assure that their bioavailability was unaltered should",
+      "rule_type": "recommended",
+      "section_path": "9.4.2",
+      "section_title": "Identity of Investigational Product(s)",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "incomplete stability data, the logistics of resupply of the materials should be",
+      "rule_type": "recommended",
+      "section_path": "9.4.2",
+      "section_title": "Identity of Investigational Product(s)",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "described. Any use of test materials past their expiry date should be noted, and",
+      "rule_type": "recommended",
+      "section_path": "9.4.2",
+      "section_title": "Identity of Investigational Product(s)",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should also be described.",
+      "rule_type": "recommended",
+      "section_path": "9.4.2",
+      "section_title": "Identity of Investigational Product(s)",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "of earlier assignment or outcome) should be described in the text of the report,",
+      "rule_type": "recommended",
+      "section_path": "9.4.3",
+      "section_title": "Method of Assigning Patients to Treatment Groups",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "including any stratification or blocking procedures. Any unusual features should be",
+      "rule_type": "recommended",
+      "section_path": "9.4.3",
+      "section_title": "Method of Assigning Patients to Treatment Groups",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be given in appendix 16.1.7 with references cited if necessary. A table",
+      "rule_type": "recommended",
+      "section_path": "9.4.3",
+      "section_title": "Method of Assigning Patients to Treatment Groups",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "exhibiting the randomisation codes, patient identifier, and treatment assigned should",
+      "rule_type": "recommended",
+      "section_path": "9.4.3",
+      "section_title": "Method of Assigning Patients to Treatment Groups",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "also be presented in the appendix. For a multicentre study, the information should be",
+      "rule_type": "recommended",
+      "section_path": "9.4.3",
+      "section_title": "Method of Assigning Patients to Treatment Groups",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "given by centre. The method of generating random numbers should be explained.",
+      "rule_type": "recommended",
+      "section_path": "9.4.3",
+      "section_title": "Method of Assigning Patients to Treatment Groups",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The doses or dose ranges used in the study should be given for all treatments and the",
+      "rule_type": "recommended",
+      "section_path": "9.4.4",
+      "section_title": "Selection of Doses in the Study",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "active control/comparator should be described. These procedures can vary from",
+      "rule_type": "recommended",
+      "section_path": "9.4.5",
+      "section_title": "Selection and Timing of Dose for each Patient",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "endpoint is achieved. Procedures for back-titration, if any, should also be described.",
+      "rule_type": "recommended",
+      "section_path": "9.4.5",
+      "section_title": "Selection and Timing of Dose for each Patient",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The timing (time of day, interval) of dosing and the relation of dosing to meals should",
+      "rule_type": "recommended",
+      "section_path": "9.4.5",
+      "section_title": "Selection and Timing of Dose for each Patient",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "be described, and if it was not specified, this should be noted.",
+      "rule_type": "recommended",
+      "section_path": "9.4.5",
+      "section_title": "Selection and Timing of Dose for each Patient",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Any specific instructions to patients about when or how to take the dose(s) should be",
+      "rule_type": "recommended",
+      "section_path": "9.4.5",
+      "section_title": "Selection and Timing of Dose for each Patient",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "A description of the specific procedures used to carry out blinding should be provided",
+      "rule_type": "recommended",
+      "section_path": "9.4.6",
+      "section_title": "Blinding",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "the means of shielding other investigators should be explained. Measures taken to",
+      "rule_type": "recommended",
+      "section_path": "9.4.6",
+      "section_title": "Blinding",
+      "page_number": 16,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "evidence that they were indistinguishable, should be described, as should the",
+      "rule_type": "recommended",
+      "section_path": "9.4.6",
+      "section_title": "Blinding",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "unblinding by laboratory measurements, if used, should be described. If there was a",
+      "rule_type": "recommended",
+      "section_path": "9.4.6",
+      "section_title": "Blinding",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "maintenance of overall study blinding should be described. The procedure to",
+      "rule_type": "recommended",
+      "section_path": "9.4.6",
+      "section_title": "Blinding",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "maintain the blinding when interim analyses are performed should also be explained.",
+      "rule_type": "recommended",
+      "section_path": "9.4.6",
+      "section_title": "Blinding",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "observations, this should be explained; e.g., use of a random-zero sphygmomanometer",
+      "rule_type": "recommended",
+      "section_path": "9.4.6",
+      "section_title": "Blinding",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "was considered desirable but not feasible, the reasons and implications should be",
+      "rule_type": "recommended",
+      "section_path": "9.4.6",
+      "section_title": "Blinding",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be identified and if there were any attempts to assess the magnitude of the",
+      "rule_type": "recommended",
+      "section_path": "9.4.6",
+      "section_title": "Blinding",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be described.",
+      "rule_type": "recommended",
+      "section_path": "9.4.6",
+      "section_title": "Blinding",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "permitted or forbidden concomitant therapy should be described. How allowed",
+      "rule_type": "recommended",
+      "section_path": "9.4.7",
+      "section_title": "Prior and Concomitant Therapy",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "to direct effects on the study endpoints should be discussed, and how the independent",
+      "rule_type": "recommended",
+      "section_path": "9.4.7",
+      "section_title": "Prior and Concomitant Therapy",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "effects of concomitant and study therapies could be ascertained should be explained.",
+      "rule_type": "recommended",
+      "section_path": "9.4.7",
+      "section_title": "Prior and Concomitant Therapy",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The measures taken to ensure and document treatment compliance should be",
+      "rule_type": "recommended",
+      "section_path": "9.4.8",
+      "section_title": "Treatment Compliance",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "responsible for the measurements should be described. If there were changes in",
+      "rule_type": "recommended",
+      "section_path": "9.5.1",
+      "section_title": "Efficacy and Safety Measurements Assessed and Flow Chart",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "personnel carrying out critical measurements, these should be reported.",
+      "rule_type": "recommended",
+      "section_path": "9.5.1",
+      "section_title": "Efficacy and Safety Measurements Assessed and Flow Chart",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "numbers and times should be shown, or, alternatively, times alone can be used (visit",
+      "rule_type": "recommended",
+      "section_path": "9.5.1",
+      "section_title": "Efficacy and Safety Measurements Assessed and Flow Chart",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "guidance or use of a diary) to the patients should also be noted.",
+      "rule_type": "recommended",
+      "section_path": "9.5.1",
+      "section_title": "Efficacy and Safety Measurements Assessed and Flow Chart",
+      "page_number": 17,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "and stroke, assignment of cause of death) should be explained in full. Any techniques",
+      "rule_type": "recommended",
+      "section_path": "9.5.1",
+      "section_title": "Efficacy and Safety Measurements Assessed and Flow Chart",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "measurements (e.g., ECG, chest X-ray) should also be described. This is particularly",
+      "rule_type": "recommended",
+      "section_path": "9.5.1",
+      "section_title": "Efficacy and Safety Measurements Assessed and Flow Chart",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "person or group should be identified. The procedures, including means of maintaining",
+      "rule_type": "recommended",
+      "section_path": "9.5.1",
+      "section_title": "Efficacy and Safety Measurements Assessed and Flow Chart",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "blindness, and centralising readings and measurements, should be described fully.",
+      "rule_type": "recommended",
+      "section_path": "9.5.1",
+      "section_title": "Efficacy and Safety Measurements Assessed and Flow Chart",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The means of obtaining adverse event data should be described (volunteered,",
+      "rule_type": "recommended",
+      "section_path": "9.5.1",
+      "section_title": "Efficacy and Safety Measurements Assessed and Flow Chart",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "checklist, or, questioning), as should any specific rating scale(s) used and any",
+      "rule_type": "recommended",
+      "section_path": "9.5.1",
+      "section_title": "Efficacy and Safety Measurements Assessed and Flow Chart",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "rating by severity or, likelihood of drug causation) should be described. The criteria",
+      "rule_type": "recommended",
+      "section_path": "9.5.1",
+      "section_title": "Efficacy and Safety Measurements Assessed and Flow Chart",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "for such ratings, if any, should be given and the parties responsible for the ratings",
+      "rule_type": "recommended",
+      "section_path": "9.5.1",
+      "section_title": "Efficacy and Safety Measurements Assessed and Flow Chart",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be clearly identified. If efficacy or safety was to be assessed in terms of",
+      "rule_type": "recommended",
+      "section_path": "9.5.1",
+      "section_title": "Efficacy and Safety Measurements Assessed and Flow Chart",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "definitions of point scores) should be provided. For multicentre studies, indicate how",
+      "rule_type": "recommended",
+      "section_path": "9.5.1",
+      "section_title": "Efficacy and Safety Measurements Assessed and Flow Chart",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "effective and ineffective agents), its reliability, accuracy and relevance should be",
+      "rule_type": "recommended",
+      "section_path": "9.5.2",
+      "section_title": "Appropriateness of Measurements",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "documented. It may be helpful to describe alternatives considered but rejected.",
+      "rule_type": "optional",
+      "section_path": "9.5.2",
+      "section_title": "Appropriateness of Measurements",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be justified e.g., by reference to clinical data, publications, guidelines or",
+      "rule_type": "recommended",
+      "section_path": "9.5.2",
+      "section_title": "Appropriateness of Measurements",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The primary measurements and endpoints used to determine efficacy should be",
+      "rule_type": "recommended",
+      "section_path": "9.5.3",
+      "section_title": "Primary Efficacy Variable(s)",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "clearly specified. Although the critical efficacy measurements may seem obvious,",
+      "rule_type": "optional",
+      "section_path": "9.5.3",
+      "section_title": "Primary Efficacy Variable(s)",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "identify the primary variables, the study report should explain how these critical",
+      "rule_type": "recommended",
+      "section_path": "9.5.3",
+      "section_title": "Primary Efficacy Variable(s)",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "in relation to the timing of drug administration, should be described. Any relation of",
+      "rule_type": "recommended",
+      "section_path": "9.5.4",
+      "section_title": "Drug Concentration Measurements",
+      "page_number": 18,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "effects of concomitant medication/alcohol/caffeine/nicotine should also be addressed.",
+      "rule_type": "recommended",
+      "section_path": "9.5.4",
+      "section_title": "Drug Concentration Measurements",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "measurement used should be described, referring to published and/or internal assay",
+      "rule_type": "recommended",
+      "section_path": "9.5.4",
+      "section_title": "Drug Concentration Measurements",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "hepatic function), the timing and plans to measure these factors should also be",
+      "rule_type": "recommended",
+      "section_path": "9.5.4",
+      "section_title": "Drug Concentration Measurements",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "of the data should be described in brief. If none were used, this should be stated.",
+      "rule_type": "recommended",
+      "section_path": "9.6",
+      "section_title": "DATA QUALITY ASSURANCE",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "procedures, if used, should be provided under appendix 16.1.10.",
+      "rule_type": "recommended",
+      "section_path": "9.6",
+      "section_title": "DATA QUALITY ASSURANCE",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "certain tests, centralised ECG reading, or data audits, should be described. It should",
+      "rule_type": "recommended",
+      "section_path": "9.6",
+      "section_title": "DATA QUALITY ASSURANCE",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "If the sponsor used an independent internal or external auditing procedure, it should",
+      "rule_type": "recommended",
+      "section_path": "9.6",
+      "section_title": "DATA QUALITY ASSURANCE",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "available, should be provided in the same appendix.",
+      "rule_type": "recommended",
+      "section_path": "9.6",
+      "section_title": "DATA QUALITY ASSURANCE",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "results were available should be described. In this section emphasis should be on",
+      "rule_type": "recommended",
+      "section_path": "9.7.1",
+      "section_title": "Statistical and Analytical Plans",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "product and control should be specified. Similarly, if more than one analytical",
+      "rule_type": "recommended",
+      "section_path": "9.7.1",
+      "section_title": "Statistical and Analytical Plans",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "analysis, the planned approach should be identified. Also, whether the primary",
+      "rule_type": "recommended",
+      "section_path": "9.7.1",
+      "section_title": "Statistical and Analytical Plans",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "analysis is to include adjustment for covariates should be specified.",
+      "rule_type": "recommended",
+      "section_path": "9.7.1",
+      "section_title": "Statistical and Analytical Plans",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "are available, these should be described. If there were any subgroups whose results",
+      "rule_type": "recommended",
+      "section_path": "9.7.1",
+      "section_title": "Statistical and Analytical Plans",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "were to be examined separately, these should be identified. If categorical responses",
+      "rule_type": "recommended",
+      "section_path": "9.7.1",
+      "section_title": "Statistical and Analytical Plans",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "responses, they should be clearly defined.",
+      "rule_type": "recommended",
+      "section_path": "9.7.1",
+      "section_title": "Statistical and Analytical Plans",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Planned monitoring of the results of the study should be described. If there was a",
+      "rule_type": "recommended",
+      "section_path": "9.7.1",
+      "section_title": "Statistical and Analytical Plans",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "composition and operating procedures should be described and procedures to maintain",
+      "rule_type": "recommended",
+      "section_path": "9.7.1",
+      "section_title": "Statistical and Analytical Plans",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "study blinding should be given. The frequency and nature of any planned interim",
+      "rule_type": "recommended",
+      "section_path": "9.7.1",
+      "section_title": "Statistical and Analytical Plans",
+      "page_number": 19,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "statistical adjustments to be employed because of interim analyses should be",
+      "rule_type": "recommended",
+      "section_path": "9.7.1",
+      "section_title": "Statistical and Analytical Plans",
+      "page_number": 20,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "practical limitations, should be provided. Methods for sample size calculation should",
+      "rule_type": "recommended",
+      "section_path": "9.7.2",
+      "section_title": "Determination of Sample Size",
+      "page_number": 20,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "calculations should be given and explanations provided as to how they were obtained.",
+      "rule_type": "recommended",
+      "section_path": "9.7.2",
+      "section_title": "Determination of Sample Size",
+      "page_number": 20,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "study is designed to detect should be specified. For a positive control study intended",
+      "rule_type": "recommended",
+      "section_path": "9.7.2",
+      "section_title": "Determination of Sample Size",
+      "page_number": 20,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "size determination should specify the difference between treatments that would be",
+      "rule_type": "recommended",
+      "section_path": "9.7.2",
+      "section_title": "Determination of Sample Size",
+      "page_number": 20,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "size etc.) instituted after the start of the study should be described. The time(s) and",
+      "rule_type": "recommended",
+      "section_path": "9.7.2",
+      "section_title": "Determination of Sample Size",
+      "page_number": 20,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "data available (and to whom they were available) when the change was made should",
+      "rule_type": "recommended",
+      "section_path": "9.7.2",
+      "section_title": "Determination of Sample Size",
+      "page_number": 20,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "implications of the change(s) for the interpretation of the study should be discussed",
+      "rule_type": "recommended",
+      "section_path": "9.7.2",
+      "section_title": "Determination of Sample Size",
+      "page_number": 20,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "There should be a clear accounting of all patients who entered the study, using figures",
+      "rule_type": "recommended",
+      "section_path": "10.1",
+      "section_title": "DISPOSITION OF PATIENTS",
+      "page_number": 20,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "study) should be provided, as well as the reasons for all post-randomisation",
+      "rule_type": "recommended",
+      "section_path": "10.1",
+      "section_title": "DISPOSITION OF PATIENTS",
+      "page_number": 20,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "adverse event, poor compliance etc.). It may also be relevant to provide the number of",
+      "rule_type": "optional",
+      "section_path": "10.1",
+      "section_title": "DISPOSITION OF PATIENTS",
+      "page_number": 20,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "even if drug is discontinued, should be made clear.",
+      "rule_type": "recommended",
+      "section_path": "10.1",
+      "section_title": "DISPOSITION OF PATIENTS",
+      "page_number": 20,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "In appendix 16.2.1, there should also be a listing of all patients discontinued from the",
+      "rule_type": "recommended",
+      "section_path": "10.1",
+      "section_title": "DISPOSITION OF PATIENTS",
+      "page_number": 20,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "discontinuation should be noted. It may also be useful to include other information,",
+      "rule_type": "recommended",
+      "section_path": "10.1",
+      "section_title": "DISPOSITION OF PATIENTS",
+      "page_number": 21,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "trial, patient management or patient assessment should be described.",
+      "rule_type": "recommended",
+      "section_path": "10.1",
+      "section_title": "DISPOSITION OF PATIENTS",
+      "page_number": 21,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Exactly which patients were included in each efficacy analysis should be precisely",
+      "rule_type": "recommended",
+      "section_path": "11.1",
+      "section_title": "DATA SETS ANALYSED",
+      "page_number": 21,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "reduced subset of the patients with data, there should also be for any trial intended to",
+      "rule_type": "recommended",
+      "section_path": "11.1",
+      "section_title": "DATA SETS ANALYSED",
+      "page_number": 21,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "There should be a tabular listing of all patients, visits and observations excluded from",
+      "rule_type": "recommended",
+      "section_path": "11.1",
+      "section_title": "DATA SETS ANALYSED",
+      "page_number": 21,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "example). The reasons for exclusions should also be analysed for the whole treatment",
+      "rule_type": "recommended",
+      "section_path": "11.1",
+      "section_title": "DATA SETS ANALYSED",
+      "page_number": 21,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "as well as other factors arising during the study that could affect response, should be",
+      "rule_type": "recommended",
+      "section_path": "11.2",
+      "section_title": "DEMOGRAPHIC AND OTHER BASELINE CHARACTERISTICS",
+      "page_number": 21,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "characteristics should be displayed by use of tables or graphs in section 14.1. The",
+      "rule_type": "recommended",
+      "section_path": "11.2",
+      "section_title": "DEMOGRAPHIC AND OTHER BASELINE CHARACTERISTICS",
+      "page_number": 21,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "data for the patient sample included in the \"all patients with data\" analysis should be",
+      "rule_type": "recommended",
+      "section_path": "11.2",
+      "section_title": "DEMOGRAPHIC AND OTHER BASELINE CHARACTERISTICS",
+      "page_number": 21,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "When such groups are used, data for the complementary excluded group should also",
+      "rule_type": "recommended",
+      "section_path": "11.2",
+      "section_title": "DEMOGRAPHIC AND OTHER BASELINE CHARACTERISTICS",
+      "page_number": 22,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "be shown. In a multicentre study where appropriate, comparability should be",
+      "rule_type": "recommended",
+      "section_path": "11.2",
+      "section_title": "DEMOGRAPHIC AND OTHER BASELINE CHARACTERISTICS",
+      "page_number": 22,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "assessed by centre, and centres should be compared.",
+      "rule_type": "recommended",
+      "section_path": "11.2",
+      "section_title": "DEMOGRAPHIC AND OTHER BASELINE CHARACTERISTICS",
+      "page_number": 22,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "groups should be provided.",
+      "rule_type": "recommended",
+      "section_path": "11.2",
+      "section_title": "DEMOGRAPHIC AND OTHER BASELINE CHARACTERISTICS",
+      "page_number": 22,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "down by treatment and by centre for multicentre studies) should be presented in by-",
+      "rule_type": "recommended",
+      "section_path": "11.2",
+      "section_title": "DEMOGRAPHIC AND OTHER BASELINE CHARACTERISTICS",
+      "page_number": 22,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "the study report should be limited to only the most relevant data, generally the",
+      "rule_type": "recommended",
+      "section_path": "11.2",
+      "section_title": "DEMOGRAPHIC AND OTHER BASELINE CHARACTERISTICS",
+      "page_number": 22,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "under study and drug concentrations in body fluids should be summarised, analysed",
+      "rule_type": "recommended",
+      "section_path": "11.3",
+      "section_title": "MEASUREMENTS OF TREATMENT COMPLIANCE",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Treatment groups should be compared for all critical measures of efficacy (primary",
+      "rule_type": "recommended",
+      "section_path": "11.4.1",
+      "section_title": "Analysis of Efficacy",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "patients with on-study data should be performed in studies intended to establish",
+      "rule_type": "recommended",
+      "section_path": "11.4.1",
+      "section_title": "Analysis of Efficacy",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "efficacy. The analysis should show the size (point estimate) of the difference between",
+      "rule_type": "recommended",
+      "section_path": "11.4.1",
+      "section_title": "Analysis of Efficacy",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "ordinarily both should be presented if both were planned and are available. If",
+      "rule_type": "recommended",
+      "section_path": "11.4.1",
+      "section_title": "Analysis of Efficacy",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be explained. Even if one variable receives primary attention (e.g., in a blood",
+      "rule_type": "recommended",
+      "section_path": "11.4.1",
+      "section_title": "Analysis of Efficacy",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "standing blood pressure and blood pressures at other particular times) should be",
+      "rule_type": "recommended",
+      "section_path": "11.4.1",
+      "section_title": "Analysis of Efficacy",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "assessed, at least briefly. In addition, the time course of response should be",
+      "rule_type": "recommended",
+      "section_path": "11.4.1",
+      "section_title": "Analysis of Efficacy",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "analysis of individual centres should be included for critical variables to give a clear",
+      "rule_type": "recommended",
+      "section_path": "11.4.1",
+      "section_title": "Analysis of Efficacy",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "by more than one party (e.g., both the investigator and an expert committee may offer",
+      "rule_type": "optional",
+      "section_path": "11.4.1",
+      "section_title": "Analysis of Efficacy",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "the ratings should be shown, and each patient having disparate assessments should",
+      "rule_type": "recommended",
+      "section_path": "11.4.1",
+      "section_title": "Analysis of Efficacy",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "be identified. The assessments used should be clear in all analyses.",
+      "rule_type": "recommended",
+      "section_path": "11.4.1",
+      "section_title": "Analysis of Efficacy",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "in a fatal disease study). Many of the principles addressed below should be adopted",
+      "rule_type": "recommended",
+      "section_path": "11.4.1",
+      "section_title": "Analysis of Efficacy",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The statistical analysis used should be described for clinical and statistical reviewers",
+      "rule_type": "recommended",
+      "section_path": "11.4.2",
+      "section_title": "Statistical/Analytical Issues",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "adjustments for interim analyses, should be discussed. Any changes in the analysis",
+      "rule_type": "recommended",
+      "section_path": "11.4.2",
+      "section_title": "Statistical/Analytical Issues",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "made after blind-breaking should be identified.",
+      "rule_type": "recommended",
+      "section_path": "11.4.2",
+      "section_title": "Statistical/Analytical Issues",
+      "page_number": 23,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "In addition to the general discussion the following specific issues should be addressed",
+      "rule_type": "recommended",
+      "section_path": "11.4.2",
+      "section_title": "Statistical/Analytical Issues",
+      "page_number": 24,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "concomitant therapy, or any other covariate or prognostic factor should be explained",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.1",
+      "section_title": "Adjustments for Covariates",
+      "page_number": 24,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "information (e.g., ANCOVA or Cox regression output) should be included in the",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.1",
+      "section_title": "Adjustments for Covariates",
+      "page_number": 24,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "explained and where possible and relevant, the results of planned analyses should",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.1",
+      "section_title": "Adjustments for Covariates",
+      "page_number": 24,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "covariate adjustments and prognostic factors across individual studies may be an",
+      "rule_type": "optional",
+      "section_path": "11.4.2.1",
+      "section_title": "Adjustments for Covariates",
+      "page_number": 24,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "There are several factors that may affect dropout rates. These include the duration of",
+      "rule_type": "optional",
+      "section_path": "11.4.2.2",
+      "section_title": "Handling of Dropouts or Missing Data",
+      "page_number": 24,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "analysis, may introduce bias, particularly if there are more early dropouts in one",
+      "rule_type": "optional",
+      "section_path": "11.4.2.2",
+      "section_title": "Handling of Dropouts or Missing Data",
+      "page_number": 24,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "be difficult to determine, possible effects should be explored as fully as possible. It",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.2",
+      "section_title": "Handling of Dropouts or Missing Data",
+      "page_number": 24,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "may be helpful to examine the observed cases at various time points or, if dropouts",
+      "rule_type": "optional",
+      "section_path": "11.4.2.2",
+      "section_title": "Handling of Dropouts or Missing Data",
+      "page_number": 24,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "It may also be helpful to examine modelling approaches to the evaluation of such",
+      "rule_type": "optional",
+      "section_path": "11.4.2.2",
+      "section_title": "Handling of Dropouts or Missing Data",
+      "page_number": 24,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The results of a clinical trial should be assessed not only for the subset of patients",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.2",
+      "section_title": "Handling of Dropouts or Missing Data",
+      "page_number": 24,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be described. Detailed explanation should be provided as to how such",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.2",
+      "section_title": "Handling of Dropouts or Missing Data",
+      "page_number": 24,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "sponsor staff member, or data monitoring group should be described in full, even if",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.3",
+      "section_title": "Interim Analyses and Data Monitoring",
+      "page_number": 24,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "of such analyses should be addressed. Any operating instructions or procedures used",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.3",
+      "section_title": "Interim Analyses and Data Monitoring",
+      "page_number": 24,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "for such analyses should be described. The minutes of meetings of any data",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.3",
+      "section_title": "Interim Analyses and Data Monitoring",
+      "page_number": 24,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "helpful and should be provided in appendix 16.1.9. Data monitoring without code-",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.3",
+      "section_title": "Interim Analyses and Data Monitoring",
+      "page_number": 25,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "breaking should also be described, even if this kind of monitoring is considered to",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.3",
+      "section_title": "Interim Analyses and Data Monitoring",
+      "page_number": 25,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "separate studies). Individual centre results should be presented, however, where",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.4",
+      "section_title": "Multicentre Studies",
+      "page_number": 25,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "by-centre interaction should be explored. Any extreme or opposite results among",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.4",
+      "section_title": "Multicentre Studies",
+      "page_number": 25,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "centres should be noted and discussed, considering such possibilities as differences in",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.4",
+      "section_title": "Multicentre Studies",
+      "page_number": 25,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should include analyses that allow for centre differences with respect to response. If",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.4",
+      "section_title": "Multicentre Studies",
+      "page_number": 25,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be presented by centre, even though the combined analysis is the primary one.",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.4",
+      "section_title": "Multicentre Studies",
+      "page_number": 25,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "the statistical analysis should reflect awareness of this and either explain the",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.5",
+      "section_title": "Multiple Comparison/Multiplicity",
+      "page_number": 25,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Particular attention should be devoted to the effects of dropping patients with",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.6",
+      "section_title": "Use of an \"Efficacy Subset\" of Patients",
+      "page_number": 25,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "or any other reason. As noted above, an analysis using all available data should be",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.6",
+      "section_title": "Use of an \"Efficacy Subset\" of Patients",
+      "page_number": 25,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "the choice of patient population for analysis should be the subject of explicit",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.6",
+      "section_title": "Use of an \"Efficacy Subset\" of Patients",
+      "page_number": 25,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "active control/comparator, the analysis should show the confidence interval for the",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.7",
+      "section_title": "Active-Control Studies Intended to Show Equivalence",
+      "page_number": 25,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "subgroups should be examined for unusually large or small responses and the results",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.8",
+      "section_title": "Examination of Subgroups",
+      "page_number": 26,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "analyses were not carried out because the study was too small it should be noted.",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.8",
+      "section_title": "Examination of Subgroups",
+      "page_number": 26,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "may suggest hypotheses worth examining in other studies or be helpful in refining",
+      "rule_type": "optional",
+      "section_path": "11.4.2.8",
+      "section_title": "Examination of Subgroups",
+      "page_number": 26,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "assessment should be part of the planned statistical analysis.",
+      "rule_type": "recommended",
+      "section_path": "11.4.2.8",
+      "section_title": "Examination of Subgroups",
+      "page_number": 26,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "and other relevant study information should be presented in tables. Some regulatory",
+      "rule_type": "recommended",
+      "section_path": "11.4.3",
+      "section_title": "Tabulation of Individual Response Data",
+      "page_number": 26,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "authorities may require all individual data in archival case report tabulations. What",
+      "rule_type": "optional",
+      "section_path": "11.4.3",
+      "section_title": "Tabulation of Individual Response Data",
+      "page_number": 26,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "class to another and the applicant must decide, if possible after consultation with the",
+      "rule_type": "mandatory",
+      "section_path": "11.4.3",
+      "section_title": "Tabulation of Individual Response Data",
+      "page_number": 26,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "report should indicate what material is included as an appendix, what is in the more",
+      "rule_type": "recommended",
+      "section_path": "11.4.3",
+      "section_title": "Tabulation of Individual Response Data",
+      "page_number": 26,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should include, for each patient, a patient identifier, all measured or observed values",
+      "rule_type": "recommended",
+      "section_path": "11.4.3",
+      "section_title": "Tabulation of Individual Response Data",
+      "page_number": 26,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "cure or failure), it should also be included. In addition to critical measurements, the",
+      "rule_type": "recommended",
+      "section_path": "11.4.3",
+      "section_title": "Tabulation of Individual Response Data",
+      "page_number": 26,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "tabulation should note whether the patient was included in the efficacy evaluation",
+      "rule_type": "recommended",
+      "section_path": "11.4.3",
+      "section_title": "Tabulation of Individual Response Data",
+      "page_number": 26,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The tabulation described should usually be included in appendix 16.2.6 of the study",
+      "rule_type": "recommended",
+      "section_path": "11.4.3",
+      "section_title": "Tabulation of Individual Response Data",
+      "page_number": 26,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "When the dose in each patient can vary, the actual doses received by patients should",
+      "rule_type": "recommended",
+      "section_path": "11.4.4",
+      "section_title": "Drug Dose, Drug Concentration, and Relationships to Response",
+      "page_number": 27,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "be shown and individual patient's doses should be tabulated. Although studies not",
+      "rule_type": "recommended",
+      "section_path": "11.4.4",
+      "section_title": "Drug Dose, Drug Concentration, and Relationships to Response",
+      "page_number": 27,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "designed as dose-response studies may have limited ability to contribute dose-",
+      "rule_type": "optional",
+      "section_path": "11.4.4",
+      "section_title": "Drug Dose, Drug Concentration, and Relationships to Response",
+      "page_number": 27,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "response information, the available data should be examined for whatever",
+      "rule_type": "recommended",
+      "section_path": "11.4.4",
+      "section_title": "Drug Dose, Drug Concentration, and Relationships to Response",
+      "page_number": 27,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "information they can yield. In examining the dose response, it may be helpful to",
+      "rule_type": "optional",
+      "section_path": "11.4.4",
+      "section_title": "Drug Dose, Drug Concentration, and Relationships to Response",
+      "page_number": 27,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Drug concentration information, if available, should also be tabulated (Appendix",
+      "rule_type": "recommended",
+      "section_path": "11.4.4",
+      "section_title": "Drug Dose, Drug Concentration, and Relationships to Response",
+      "page_number": 27,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "response and past and/or concurrent illness should be described.",
+      "rule_type": "recommended",
+      "section_path": "11.4.5",
+      "section_title": "Drug-Drug and Drug-Disease Interactions",
+      "page_number": 27,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "may offer little advantage; it may be helpful, however, if overall evaluation of",
+      "rule_type": "optional",
+      "section_path": "11.4.6",
+      "section_title": "By-Patient Displays",
+      "page_number": 27,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The important conclusions concerning efficacy should be concisely described,",
+      "rule_type": "recommended",
+      "section_path": "11.4.7",
+      "section_title": "Efficacy Conclusions",
+      "page_number": 27,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "exposure (dose, duration, number of patients) should be examined to determine the",
+      "rule_type": "recommended",
+      "section_path": "11.4.7",
+      "section_title": "Efficacy Conclusions",
+      "page_number": 27,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "adverse events, laboratory test changes etc. should be identified, classified in some",
+      "rule_type": "recommended",
+      "section_path": "11.4.7",
+      "section_title": "Efficacy Conclusions",
+      "page_number": 27,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "factors that may affect the frequency of adverse reactions/events, such as time",
+      "rule_type": "optional",
+      "section_path": "11.4.7",
+      "section_title": "Efficacy Conclusions",
+      "page_number": 27,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "events should be identified, usually by close examination of patients who left the",
+      "rule_type": "recommended",
+      "section_path": "11.4.7",
+      "section_title": "Efficacy Conclusions",
+      "page_number": 27,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "treatment should be displayed.",
+      "rule_type": "recommended",
+      "section_path": "11.4.7",
+      "section_title": "Efficacy Conclusions",
+      "page_number": 28,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "and placebo) should be characterised according to the number of patients exposed, the",
+      "rule_type": "recommended",
+      "section_path": "12.1",
+      "section_title": "EXTENT OF EXPOSURE",
+      "page_number": 28,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "various durations should also be broken down into age, sex, and racial",
+      "rule_type": "recommended",
+      "section_path": "12.1",
+      "section_title": "EXTENT OF EXPOSURE",
+      "page_number": 28,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "specified daily dose levels should be given; the daily dose levels used could be",
+      "rule_type": "recommended",
+      "section_path": "12.1",
+      "section_title": "EXTENT OF EXPOSURE",
+      "page_number": 28,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "pertinent. Dosage may be given as the actual daily dose or on a mg/kg or",
+      "rule_type": "optional",
+      "section_path": "12.1",
+      "section_title": "EXTENT OF EXPOSURE",
+      "page_number": 28,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "doses should be broken down into age, sex, and racial subgroups, and any",
+      "rule_type": "recommended",
+      "section_path": "12.1",
+      "section_title": "EXTENT OF EXPOSURE",
+      "page_number": 28,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "may be helpful in individual patients for correlation with adverse events or",
+      "rule_type": "optional",
+      "section_path": "12.1",
+      "section_title": "EXTENT OF EXPOSURE",
+      "page_number": 28,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "so, an explanation should be provided.",
+      "rule_type": "recommended",
+      "section_path": "12.1",
+      "section_title": "EXTENT OF EXPOSURE",
+      "page_number": 28,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The overall adverse event experience in the study should be described in a brief",
+      "rule_type": "recommended",
+      "section_path": "12.2.1",
+      "section_title": "Brief Summary of Adverse Events",
+      "page_number": 29,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "treatment should be displayed.",
+      "rule_type": "recommended",
+      "section_path": "12.2.1",
+      "section_title": "Brief Summary of Adverse Events",
+      "page_number": 29,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "specified events as disease related) should be displayed in summary tables (section",
+      "rule_type": "recommended",
+      "section_path": "12.2.2",
+      "section_title": "Display of Adverse Events",
+      "page_number": 29,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "14.3.1). The tables should include changes in vital signs and any laboratory changes",
+      "rule_type": "recommended",
+      "section_path": "12.2.2",
+      "section_title": "Display of Adverse Events",
+      "page_number": 29,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The tables should list each adverse event, the number of patients in each treatment",
+      "rule_type": "recommended",
+      "section_path": "12.2.2",
+      "section_title": "Display of Adverse Events",
+      "page_number": 29,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "cyclical, e.g., cancer chemotherapy, it may also be helpful to list results separately for",
+      "rule_type": "optional",
+      "section_path": "12.2.2",
+      "section_title": "Display of Adverse Events",
+      "page_number": 29,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "each cycle. Adverse events should be grouped by body system. Each event may then",
+      "rule_type": "recommended",
+      "section_path": "12.2.2",
+      "section_title": "Display of Adverse Events",
+      "page_number": 29,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "used. The tables may also divide the adverse events into those considered at least",
+      "rule_type": "optional",
+      "section_path": "12.2.2",
+      "section_title": "Display of Adverse Events",
+      "page_number": 29,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "when such a causality assessment is used, the tables should include all adverse",
+      "rule_type": "recommended",
+      "section_path": "12.2.2",
+      "section_title": "Display of Adverse Events",
+      "page_number": 29,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "base may help to distinguish between adverse events that are, or are not, considered",
+      "rule_type": "optional",
+      "section_path": "12.2.2",
+      "section_title": "Display of Adverse Events",
+      "page_number": 29,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "group), should be provided in the body of the report.",
+      "rule_type": "recommended",
+      "section_path": "3",
+      "section_title": "(6%)",
+      "page_number": 30,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "section 14.3.1) of the report, should be used to compare rates in treatment and control",
+      "rule_type": "recommended",
+      "section_path": "12.2.3",
+      "section_title": "Analysis of Adverse Events",
+      "page_number": 30,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "groups. For this analysis it may be helpful to combine the event severity categories",
+      "rule_type": "optional",
+      "section_path": "12.2.3",
+      "section_title": "Analysis of Adverse Events",
+      "page_number": 30,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "analysis of safety, if study size and design permit, it may be useful to examine the",
+      "rule_type": "optional",
+      "section_path": "12.2.3",
+      "section_title": "Analysis of Adverse Events",
+      "page_number": 30,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "as renal status, to efficacy outcomes, and to drug concentration. It may also be useful",
+      "rule_type": "optional",
+      "section_path": "12.2.3",
+      "section_title": "Analysis of Adverse Events",
+      "page_number": 30,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "analyses may be suggested by the study results or by the pharmacology of the test",
+      "rule_type": "optional",
+      "section_path": "12.2.3",
+      "section_title": "Analysis of Adverse Events",
+      "page_number": 30,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "evaluation. It may be apparent from initial display and inspection of the data that a",
+      "rule_type": "optional",
+      "section_path": "12.2.3",
+      "section_title": "Analysis of Adverse Events",
+      "page_number": 30,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "studies are small and if the number of events is relatively small, it may be sufficient",
+      "rule_type": "optional",
+      "section_path": "12.2.3",
+      "section_title": "Analysis of Adverse Events",
+      "page_number": 30,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Under certain circumstances, life table or similar analyses may be more informative",
+      "rule_type": "optional",
+      "section_path": "12.2.3",
+      "section_title": "Analysis of Adverse Events",
+      "page_number": 31,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "cancer chemotherapy, it may also be helpful to analyse results separately for each",
+      "rule_type": "optional",
+      "section_path": "12.2.3",
+      "section_title": "Analysis of Adverse Events",
+      "page_number": 31,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be listed in appendix 16.2.7, giving both preferred term and the original term",
+      "rule_type": "recommended",
+      "section_path": "12.2.4",
+      "section_title": "Listing of Adverse Events by Patient",
+      "page_number": 31,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "used by the investigator. The listing should be by investigator and by treatment",
+      "rule_type": "recommended",
+      "section_path": "12.2.4",
+      "section_title": "Listing of Adverse Events by Patient",
+      "page_number": 31,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "group and should include:",
+      "rule_type": "recommended",
+      "section_path": "12.2.4",
+      "section_title": "Listing of Adverse Events by Patient",
+      "page_number": 31,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be described in the table or elsewhere",
+      "rule_type": "recommended",
+      "section_path": "12.2.4",
+      "section_title": "Listing of Adverse Events by Patient",
+      "page_number": 31,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Any abbreviations and codes should be clearly explained at the beginning of the",
+      "rule_type": "recommended",
+      "section_path": "12.2.4",
+      "section_title": "Listing of Adverse Events by Patient",
+      "page_number": 31,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Listings, containing the same information as called for in section 12.2.4 above, should",
+      "rule_type": "recommended",
+      "section_path": "12.3.1",
+      "section_title": "Listing of Deaths, other Serious Adverse Events and Other Significant",
+      "page_number": 31,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "that resulted from a process that began during the study, should be listed by patient",
+      "rule_type": "recommended",
+      "section_path": "12.3.1",
+      "section_title": "Listing of Deaths, other Serious Adverse Events and Other Significant",
+      "page_number": 32,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "temporally associated with or preceding the deaths) should be listed in section 14.3.2.",
+      "rule_type": "recommended",
+      "section_path": "12.3.1.2",
+      "section_title": "Other Serious Adverse Events",
+      "page_number": 32,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The listing should include laboratory abnormalities, abnormal vital signs and",
+      "rule_type": "recommended",
+      "section_path": "12.3.1.2",
+      "section_title": "Other Serious Adverse Events",
+      "page_number": 32,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "adverse events, should be listed in section 14.3.2.",
+      "rule_type": "recommended",
+      "section_path": "12.3.1.3",
+      "section_title": "Other Significant Adverse Events",
+      "page_number": 32,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "There should be brief narratives describing each death, each other serious adverse",
+      "rule_type": "recommended",
+      "section_path": "12.3.2",
+      "section_title": "Narratives of Deaths, Other Serious Adverse Events and Certain",
+      "page_number": 32,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "clearly unrelated to the test drug/investigational product may be omitted or described",
+      "rule_type": "optional",
+      "section_path": "12.3.2",
+      "section_title": "Narratives of Deaths, Other Serious Adverse Events and Certain",
+      "page_number": 32,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "very briefly. In general, the narrative should describe the following:",
+      "rule_type": "recommended",
+      "section_path": "12.3.2",
+      "section_title": "Narratives of Deaths, Other Serious Adverse Events and Certain",
+      "page_number": 32,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "In addition, the following information should be included:",
+      "rule_type": "recommended",
+      "section_path": "12.3.2",
+      "section_title": "Narratives of Deaths, Other Serious Adverse Events and Certain",
+      "page_number": 32,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "therapy should be assessed with respect to the safety of the test drug/investigational",
+      "rule_type": "recommended",
+      "section_path": "12.3.3",
+      "section_title": "Analysis and Discussion of Deaths, Other Serious Adverse Events and",
+      "page_number": 32,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "product. Particular attention should be paid to whether any of these events may",
+      "rule_type": "recommended",
+      "section_path": "12.3.3",
+      "section_title": "Analysis and Discussion of Deaths, Other Serious Adverse Events and",
+      "page_number": 32,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "importance, it may be useful to use life table or similar analyses to show their relation",
+      "rule_type": "optional",
+      "section_path": "12.3.3",
+      "section_title": "Analysis and Discussion of Deaths, Other Serious Adverse Events and",
+      "page_number": 33,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "tests should be available in tabular listings, using a display similar to the following,",
+      "rule_type": "recommended",
+      "section_path": "12.4.1",
+      "section_title": "Listing of Individual Laboratory Measurements by Patient (16.2.8) and",
+      "page_number": 33,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "tests. As not all tests can be displayed in a single table, they should be grouped",
+      "rule_type": "recommended",
+      "section_path": "12.4.1",
+      "section_title": "Listing of Individual Laboratory Measurements by Patient (16.2.8) and",
+      "page_number": 33,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Abnormal values should be identified, e.g., by underlining, bracketing etc. These",
+      "rule_type": "recommended",
+      "section_path": "12.4.1",
+      "section_title": "Listing of Individual Laboratory Measurements by Patient (16.2.8) and",
+      "page_number": 33,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "listings should be submitted as part of the registration/marketing application, when",
+      "rule_type": "recommended",
+      "section_path": "12.4.1",
+      "section_title": "Listing of Individual Laboratory Measurements by Patient (16.2.8) and",
+      "page_number": 33,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "this is required, or may be available on request.",
+      "rule_type": "optional",
+      "section_path": "12.4.1",
+      "section_title": "Listing of Individual Laboratory Measurements by Patient (16.2.8) and",
+      "page_number": 33,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "For all regulatory authorities, there should be a by-patient listing of all abnormal",
+      "rule_type": "recommended",
+      "section_path": "50",
+      "section_title": "kg",
+      "page_number": 33,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "importance), it may also be useful to provide additional data, such as normal values",
+      "rule_type": "optional",
+      "section_path": "50",
+      "section_title": "kg",
+      "page_number": 33,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "cases, it may be desirable to exclude certain abnormal values from further analysis.",
+      "rule_type": "optional",
+      "section_path": "50",
+      "section_title": "kg",
+      "page_number": 33,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "excluded. Any such decisions should be clearly explained, however, and the complete",
+      "rule_type": "recommended",
+      "section_path": "50",
+      "section_title": "kg",
+      "page_number": 33,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "list of values provided (or available to authorities on request) should identify every",
+      "rule_type": "recommended",
+      "section_path": "50",
+      "section_title": "kg",
+      "page_number": 33,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The necessary evaluation of laboratory values must in part be determined by the",
+      "rule_type": "mandatory",
+      "section_path": "12.4.2",
+      "section_title": "Evaluation of Each Laboratory Parameter",
+      "page_number": 33,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "results seen, but, in general, the following analyses should be provided. For each",
+      "rule_type": "recommended",
+      "section_path": "12.4.2",
+      "section_title": "Evaluation of Each Laboratory Parameter",
+      "page_number": 33,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "analysis, comparison of the treatment and control groups should be carried out, as",
+      "rule_type": "recommended",
+      "section_path": "12.4.2",
+      "section_title": "Evaluation of Each Laboratory Parameter",
+      "page_number": 33,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be given for each analysis.",
+      "rule_type": "recommended",
+      "section_path": "12.4.2",
+      "section_title": "Evaluation of Each Laboratory Parameter",
+      "page_number": 33,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "following should be described: the group mean or median values, the range of values,",
+      "rule_type": "recommended",
+      "section_path": "12.4.2.1",
+      "section_title": "Laboratory Values Over Time",
+      "page_number": 34,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be explained). Graphs may be used.",
+      "rule_type": "recommended",
+      "section_path": "12.4.2.1",
+      "section_title": "Laboratory Values Over Time",
+      "page_number": 34,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "An analysis of individual patient changes by treatment group should be given. A",
+      "rule_type": "recommended",
+      "section_path": "12.4.2.2",
+      "section_title": "Individual Patient Changes",
+      "page_number": 34,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "variety of approaches may be used, including:",
+      "rule_type": "optional",
+      "section_path": "12.4.2.2",
+      "section_title": "Individual Patient Changes",
+      "page_number": 34,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "be decided that a change of more than 10 mg/dL BUN should be noted. For this",
+      "rule_type": "recommended",
+      "section_path": "12.4.2.2",
+      "section_title": "Individual Patient Changes",
+      "page_number": 34,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Clinically significant changes (defined by the applicant) should be discussed. A",
+      "rule_type": "recommended",
+      "section_path": "12.4.2.3",
+      "section_title": "Individual Clinically Significant Abnormalities",
+      "page_number": 34,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be provided under sections 12.3.2 or 14.3.3. When toxicity grading scales are",
+      "rule_type": "recommended",
+      "section_path": "12.4.2.3",
+      "section_title": "Individual Clinically Significant Abnormalities",
+      "page_number": 34,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "used (e.g., WHO, NCI), changes graded as severe should be discussed regardless of",
+      "rule_type": "recommended",
+      "section_path": "12.4.2.3",
+      "section_title": "Individual Clinically Significant Abnormalities",
+      "page_number": 34,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "recapitulation of discontinuations due to laboratory measurements, should be",
+      "rule_type": "recommended",
+      "section_path": "12.4.2.3",
+      "section_title": "Individual Clinically Significant Abnormalities",
+      "page_number": 34,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "the treatment should be assessed, e.g., by analysis of such features as relationship to",
+      "rule_type": "recommended",
+      "section_path": "12.4.2.3",
+      "section_title": "Individual Clinically Significant Abnormalities",
+      "page_number": 34,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Vital signs, other physical findings, and other observations related to safety should be",
+      "rule_type": "recommended",
+      "section_path": "12.5",
+      "section_title": "VITAL SIGNS, PHYSICAL FINDINGS AND OTHER OBSERVATIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be identified and the clinical relevance of the observation described.",
+      "rule_type": "recommended",
+      "section_path": "12.5",
+      "section_title": "VITAL SIGNS, PHYSICAL FINDINGS AND OTHER OBSERVATIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Particular attention should be given to changes not evaluated as efficacy variables",
+      "rule_type": "recommended",
+      "section_path": "12.5",
+      "section_title": "VITAL SIGNS, PHYSICAL FINDINGS AND OTHER OBSERVATIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The overall safety evaluation of the test drug(s)/investigational product(s) should be",
+      "rule_type": "recommended",
+      "section_path": "12.6",
+      "section_title": "SAFETY CONCLUSIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "deaths. Any patients or patient groups at increased risk should be identified and",
+      "rule_type": "recommended",
+      "section_path": "12.6",
+      "section_title": "SAFETY CONCLUSIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "particular attention paid to potentially vulnerable patients who may be present in",
+      "rule_type": "optional",
+      "section_path": "12.6",
+      "section_title": "SAFETY CONCLUSIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "evaluation for the possible uses of the drug should be described.",
+      "rule_type": "recommended",
+      "section_path": "12.6",
+      "section_title": "SAFETY CONCLUSIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be briefly summarised and discussed, referring to the tables, figures, and",
+      "rule_type": "recommended",
+      "section_path": "12.6",
+      "section_title": "SAFETY CONCLUSIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "sections above as needed. The presentation should not simply repeat the description",
+      "rule_type": "recommended",
+      "section_path": "12.6",
+      "section_title": "SAFETY CONCLUSIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The discussion and conclusions should clearly identify any new or unexpected",
+      "rule_type": "recommended",
+      "section_path": "12.6",
+      "section_title": "SAFETY CONCLUSIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "the results should also be discussed in the light of other existing data. Any specific",
+      "rule_type": "recommended",
+      "section_path": "12.6",
+      "section_title": "SAFETY CONCLUSIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "any implications for the conduct of future studies should be identified. Alternatively,",
+      "rule_type": "recommended",
+      "section_path": "12.6",
+      "section_title": "SAFETY CONCLUSIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "such discussions may be reserved for summaries of safety and efficacy referring to the",
+      "rule_type": "optional",
+      "section_path": "12.6",
+      "section_title": "SAFETY CONCLUSIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Figures should be used to visually summarise the important results, or to clarify",
+      "rule_type": "recommended",
+      "section_path": "12.6",
+      "section_title": "SAFETY CONCLUSIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Important demographic, efficacy and safety data should be presented in summary",
+      "rule_type": "recommended",
+      "section_path": "12.6",
+      "section_title": "SAFETY CONCLUSIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "of size or number they should be presented here, cross-referenced to the text, along",
+      "rule_type": "recommended",
+      "section_path": "12.6",
+      "section_title": "SAFETY CONCLUSIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The following information may be presented in this section of the core clinical study",
+      "rule_type": "optional",
+      "section_path": "12.6",
+      "section_title": "SAFETY CONCLUSIONS",
+      "page_number": 35,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "A list of articles from the literature pertinent to the evaluation of the study should be",
+      "rule_type": "recommended",
+      "section_path": "14.3.4",
+      "section_title": "Abnormal Laboratory Value Listing (Each Patient)",
+      "page_number": 36,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "provided. Copies of important publications should be attached in an appendix",
+      "rule_type": "recommended",
+      "section_path": "14.3.4",
+      "section_title": "Abnormal Laboratory Value Listing (Each Patient)",
+      "page_number": 36,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "(16.1.11 and 16.1.12). References should be given in accordance with the",
+      "rule_type": "recommended",
+      "section_path": "14.3.4",
+      "section_title": "Abnormal Laboratory Value Listing (Each Patient)",
+      "page_number": 36,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "This section should be prefaced by a full list of all appendices available for the study",
+      "rule_type": "recommended",
+      "section_path": "14.3.4",
+      "section_title": "Abnormal Laboratory Value Listing (Each Patient)",
+      "page_number": 36,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The applicant should therefore clearly indicate those appendices that are submitted",
+      "rule_type": "recommended",
+      "section_path": "14.3.4",
+      "section_title": "Abnormal Laboratory Value Listing (Each Patient)",
+      "page_number": 36,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "N.B. In order to have appendices available on request, they should be finalised by the",
+      "rule_type": "recommended",
+      "section_path": "14.3.4",
+      "section_title": "Abnormal Laboratory Value Listing (Each Patient)",
+      "page_number": 36,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Similar tables should be prepared for the other treatment groups.",
+      "rule_type": "recommended",
+      "section_path": "2",
+      "section_title": "= 1-7 days after the first exercise test",
+      "page_number": 47,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "should be presented in an appendix. Details reported should include at least the",
+      "rule_type": "recommended",
+      "section_path": "2",
+      "section_title": "= 1-7 days after the first exercise test",
+      "page_number": 48,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "a) The statistical model underlying the analysis. This should be presented",
+      "rule_type": "recommended",
+      "section_path": "2",
+      "section_title": "= 1-7 days after the first exercise test",
+      "page_number": 48,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "intervals etc. Literature references should be included where appropriate.",
+      "rule_type": "recommended",
+      "section_path": "2",
+      "section_title": "= 1-7 days after the first exercise test",
+      "page_number": 48,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "d) The assumptions underlying the statistical methods. It should be shown,",
+      "rule_type": "recommended",
+      "section_path": "2",
+      "section_title": "= 1-7 days after the first exercise test",
+      "page_number": 48,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "treatment effects based on transformed data should be provided.",
+      "rule_type": "recommended",
+      "section_path": "2",
+      "section_title": "= 1-7 days after the first exercise test",
+      "page_number": 48,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "quickly and easily. The p-values should be designated as one- or two-tailed.",
+      "rule_type": "recommended",
+      "section_path": "2",
+      "section_title": "= 1-7 days after the first exercise test",
+      "page_number": 48,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "The rationale for using a one-tailed test should be provided.",
+      "rule_type": "recommended",
+      "section_path": "2",
+      "section_title": "= 1-7 days after the first exercise test",
+      "page_number": 48,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "For example, the documentation of a two-sample t-test should consist of the",
+      "rule_type": "recommended",
+      "section_path": "2",
+      "section_title": "= 1-7 days after the first exercise test",
+      "page_number": 48,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "analysis of variance techniques should include, at a minimum, an analysis of",
+      "rule_type": "recommended",
+      "section_path": "2",
+      "section_title": "= 1-7 days after the first exercise test",
+      "page_number": 48,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "and total. For crossover designs, the documentation should include",
+      "rule_type": "recommended",
+      "section_path": "2",
+      "section_title": "= 1-7 days after the first exercise test",
+      "page_number": 48,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "For each source of variation, aside from the total, the table should contain",
+      "rule_type": "recommended",
+      "section_path": "2",
+      "section_title": "= 1-7 days after the first exercise test",
+      "page_number": 49,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "Intermediate summary data should display the demographic data and",
+      "rule_type": "recommended",
+      "section_path": "2",
+      "section_title": "= 1-7 days after the first exercise test",
+      "page_number": 49,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "In the report of each controlled clinical study, there should be data listings",
+      "rule_type": "recommended",
+      "section_path": "2",
+      "section_title": "= 1-7 days after the first exercise test",
+      "page_number": 49,
+      "guideline": "E3_Guideline.pdf"
+    },
+    {
+      "block_type": "ich_rule",
+      "content": "necessary for the regulatory authority's statistical review, and the sponsor may",
+      "rule_type": "optional",
+      "section_path": "2",
+      "section_title": "= 1-7 days after the first exercise test",
+      "page_number": 49,
+      "guideline": "E3_Guideline.pdf"
+    }
+  ]
+}

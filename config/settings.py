@@ -26,6 +26,7 @@ LOCAL_INDEX_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "index")
 AZURE_BLOB_CONN_STRING = os.getenv("AZURE_BLOB_CONN_STRING")
 BLOB_CONTAINER = os.getenv("BLOB_CONTAINER", "clinicalbase")
 RAW_PREFIX = os.getenv("RAW_PREFIX", "raw/")
+ICH_RAW_PREFIX = os.getenv("ICH_RAW_PREFIX", "ICH_raw/")
 INDEX_PREFIX = os.getenv("INDEX_PREFIX", "index/")
 
 
@@ -38,6 +39,7 @@ AZURE_DOCINT_MODEL_ID = "prebuilt-layout"
 # azure AI search
 AZURE_SEARCH_SERVICE_ENDPOINT = os.getenv("AZURE_SEARCH_SERVICE_ENDPOINT")
 AZURE_SEARCH_INDEX_NAME = os.getenv("AZURE_SEARCH_INDEX_NAME")
+AZURE_ICH_SEARCH_INDEX_NAME = os.getenv("AZURE_ICH_SEARCH_INDEX_NAME")
 AZURE_SEARCH_API_KEY = os.getenv("AZURE_SEARCH_API_KEY")
 
 
