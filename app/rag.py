@@ -1314,54 +1314,46 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     """
 
     query = state.get("query", "")
-    new_state = dict(state)
 
     # -------------------------------------------------
     # PICK ACTIVE AUTHORING CONTROL
     # -------------------------------------------------
     active_control = pick_active_control(AUTHORING_CONTROL, query)
 
+    new_state = dict(state)
+
     if active_control:
-        # ✅ New section explicitly mentioned
+        # NEW section explicitly mentioned
         section_name = active_control["section"]
         new_state["section_name"] = section_name
     else:
-        # ✅ Follow-up request → reuse previous section
+        # FOLLOW-UP request → reuse previous section
         section_name = state.get("section_name")
 
         if not section_name:
-            # ❌ No section at all → graceful message
             new_state["answer"] = (
-                "I cannot author or format content because no section is currently active. "
+                "I cannot format the content because no section is currently active. "
                 "Please specify a section first (e.g., Inclusion Criteria)."
             )
             return new_state
 
-        # IMPORTANT:
-        # We DO NOT return here.
-        # We continue using the existing section_name.
-        active_control = next(
-            (
-                sec for sec in AUTHORING_CONTROL["sections"]
-                if sec.get("section") == section_name
-            ),
-            None
-        )
+        new_state["answer"] = build_missing_section_message(AUTHORING_CONTROL)
+        new_state["context"] = ""
+        new_state["section_name"] = None
+        return new_state
 
-        if not active_control:
-            new_state["answer"] = (
-                f"The section '{section_name}' is not configured in the authoring control schema."
-            )
-            return new_state
 
     # -------------------------------------------------
     # ICH RETRIEVAL (MANDATORY)
     # -------------------------------------------------
     ich_client = load_ich_search_client()
 
+    section_name = active_control.get("section", "")
     ich_refs = active_control.get("ich_refs", [])
+
     ich_query_parts = [section_name] + ich_refs
 
+    # optional boost terms if your schema has them
     if active_control.get("output_style"):
         ich_query_parts.append(active_control["output_style"])
     if active_control.get("detail_level"):
@@ -1369,35 +1361,57 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
     ich_query = " ".join([p for p in ich_query_parts if p])
 
+
     ich_chunks = vector_search_ich(ich_client, ich_query, k=5)
 
-    ich_context = "\n\n".join(
-        chunk.get("text", "").strip()
+    ich_context_pieces = [
+        (chunk.get("text") or "").strip()
         for chunk in ich_chunks
         if isinstance(chunk, dict) and chunk.get("text")
-    ) or "No ICH guidance found."
+    ]
+
+
+    ich_context = (
+        "\n\n".join(ich_context_pieces)
+        if ich_context_pieces
+        else "No ICH guidance found."
+    )
+
 
     # -------------------------------------------------
-    # SOURCE RETRIEVAL
+    # SOURCE RETRIEVAL (EVIDENCE + TABLES)
     # -------------------------------------------------
     source_client = load_source_search_client()
 
+    filter_expr = None  # source index does not support doc_type filtering
+
+
+    # If filter is not supported in your index, just call without filter
     source_chunks = vector_search_source(
         source_client,
         query,
         k=5
     )
 
-    source_context = "\n\n".join(
-        format_chunk_for_context(chunk)
-        for chunk in source_chunks
-        if format_chunk_for_context(chunk)
-    ) or "No source evidence found."
+
+
+    source_context_pieces = []
+    for chunk in source_chunks:
+        formatted = format_chunk_for_context(chunk)
+        if formatted:
+            source_context_pieces.append(formatted)
+
+    source_context = (
+        "\n\n".join(source_context_pieces)
+        if source_context_pieces
+        else "No source evidence found."
+    )
+
 
     # -------------------------------------------------
-    # FINAL CONTEXT
+    # FINAL MERGED CONTEXT
     # -------------------------------------------------
-    new_state["context"] = f"""
+    final_context = f"""
 [AUTHORING CONTROL]
 {json.dumps(active_control, indent=2)}
 
@@ -1408,6 +1422,9 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 {source_context}
 """.strip()
 
+    new_state = dict(state)
+    new_state["context"] = final_context
+    new_state["section_name"] = section_name
     return new_state
 
 
