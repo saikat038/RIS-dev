@@ -1061,6 +1061,24 @@ def validate_authoring_control_schema(schema: dict) -> None:
 
 
 # ============================================================
+# IF SECTION IS MISSING IN AUTHORING CONTROL SCHEMA
+# ============================================================
+
+def build_missing_section_message(authoring_control: dict) -> str:
+    sections = authoring_control.get("sections", [])
+    section_names = [s.get("section") for s in sections if s.get("section")]
+
+    formatted = "\n".join([f"- {name}" for name in section_names])
+
+    return f"""I cannot author this section yet.
+
+Available sections are:
+{formatted}
+
+Please add this section to the authoring control schema."""
+
+
+# ============================================================
 # RELEVANT SECTION MATCHING
 # ============================================================
 
@@ -1305,7 +1323,11 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     active_control = pick_active_control(AUTHORING_CONTROL, query)
 
     if not active_control:
-        raise ValueError("No matching authoring control section found for query.")
+        new_state = dict(state)
+        new_state["answer"] = build_missing_section_message(AUTHORING_CONTROL)
+        new_state["context"] = ""
+        return new_state
+
 
     # -------------------------------------------------
     # ICH RETRIEVAL (MANDATORY)
@@ -1399,6 +1421,9 @@ def build_prompt_node(state: RAGState) -> RAGState:
     """
     Builds the final user message passed to the LLM.
     """
+    if state.get("answer"):
+        return state
+
     context = state.get("context", "")
     history = state.get("history", [])
     query = state.get("query", "")
@@ -1430,6 +1455,10 @@ def generate_answer_node(state: RAGState) -> RAGState:
     Calls Azure OpenAI Chat Completion to generate AUTHORING output.
     AUTHORING PROMPT IS KEPT EXACTLY AS-IS.
     """
+    # If answer already exists, skip GPT call
+    if state.get("answer"):
+        return state
+
     llm_input = state.get("llm_input", "")
 
     # 🚨 AUTHORING PROMPT — UNCHANGED
