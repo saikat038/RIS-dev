@@ -90,6 +90,5 @@ if prompt:
         with st.spinner("Thinking..."):
             result = answer(prompt, history)
             st.markdown(result)
-            render_docx(result)
 
     st.session_state.messages.append({"role": "assistant", "content": result})
