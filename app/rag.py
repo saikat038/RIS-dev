@@ -1413,6 +1413,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
     new_state = dict(state)
     new_state["context"] = final_context
+    new_state["section_name"] = section_name
     return new_state
 
 
@@ -1718,9 +1719,10 @@ def answer(query: str, history: List[Dict]) -> str:
 
     final_state = rag_graph.invoke(initial_state)
 
+    section_name = final_state.get("section_name")
     render_docx(
         llm_text=final_state["answer"],
-        section_name=final_state.get("section_name")
+        section_name=section_name
     )
     print(section_name=final_state.get("section_name"))
 
