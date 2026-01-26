@@ -1327,7 +1327,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         new_state = dict(state)
         new_state["answer"] = build_missing_section_message(AUTHORING_CONTROL)
         new_state["context"] = ""
-        new_state["section_name"] = section_name
+        new_state["section_name"] = None
         return new_state
 
 
