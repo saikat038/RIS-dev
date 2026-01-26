@@ -1427,6 +1427,9 @@ def build_prompt_node(state: RAGState) -> RAGState:
     """
     if state.get("answer"):
         return state
+    
+    if state.get("section_name") is None:
+        return state
 
     context = state.get("context", "")
     history = state.get("history", [])
@@ -1461,6 +1464,9 @@ def generate_answer_node(state: RAGState) -> RAGState:
     """
     # If answer already exists, skip GPT call
     if state.get("answer"):
+        return state
+    
+    if state.get("section_name") is None:
         return state
 
     llm_input = state.get("llm_input", "")
@@ -1727,3 +1733,5 @@ def answer(query: str, history: List[Dict]) -> str:
     # )
 
     return final_state.get("answer", "")
+
+answer("populate synonpsys", [])
