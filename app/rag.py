@@ -1320,23 +1320,8 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     # -------------------------------------------------
     active_control = pick_active_control(AUTHORING_CONTROL, query)
 
-    new_state = dict(state)
-
-    if active_control:
-        # NEW section explicitly mentioned
-        section_name = active_control["section"]
-        new_state["section_name"] = section_name
-    else:
-        # FOLLOW-UP request → reuse previous section
-        section_name = state.get("section_name")
-
-        if not section_name:
-            new_state["answer"] = (
-                "I cannot format the content because no section is currently active. "
-                "Please specify a section first (e.g., Inclusion Criteria)."
-            )
-            return new_state
-
+    if not active_control:
+        new_state = dict(state)
         new_state["answer"] = build_missing_section_message(AUTHORING_CONTROL)
         new_state["context"] = ""
         new_state["section_name"] = None
