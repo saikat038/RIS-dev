@@ -26,6 +26,7 @@ LOCAL_INDEX_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "index")
 AZURE_BLOB_CONN_STRING = os.getenv("AZURE_BLOB_CONN_STRING")
 BLOB_CONTAINER = os.getenv("BLOB_CONTAINER", "clinicalbase")
 RAW_PREFIX = os.getenv("RAW_PREFIX", "raw/")
+AUTHOR_SCHEMA_PREFIX = os.getenv("AUTHOR_SCHEMA_PREFIX", "authoring_control_json_schema/")
 ICH_RAW_PREFIX = os.getenv("ICH_RAW_PREFIX", "ICH_raw/")
 INDEX_PREFIX = os.getenv("INDEX_PREFIX", "index/")
 
