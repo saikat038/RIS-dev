@@ -1733,5 +1733,3 @@ def answer(query: str, history: List[Dict]) -> str:
     )
 
     return final_state.get("answer", "")
-
-answer("populate synopsis", [])
