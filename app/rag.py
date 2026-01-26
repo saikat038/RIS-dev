@@ -1018,7 +1018,7 @@ from config.settings import (
     BLOB_CONTAINER,
 )
 
-
+print(AZURE_ICH_SEARCH_INDEX_NAME)
 # ============================================================
 # LOAD AUTHORING SCHEMA FROM BLOB STORAGE
 # ============================================================
@@ -1089,7 +1089,7 @@ def pick_active_control(authoring_control: dict, user_query: str) -> dict:
 
     # 3) fallback (you can make this stricter)
     # If you prefer strict behavior, raise error instead.
-    return {}
+    return sections[0] if sections else {}
 
 
     
@@ -1211,24 +1211,20 @@ def format_chunk_for_context(chunk: Dict) -> str:
 # VECTOR SEARCH (GENERIC, REUSED)
 # ============================================================
 
-def vector_search(
-    search_client: SearchClient,
-    query: str,
-    k: int = 5,
-    filter_expr: str | None = None,
-) -> List[Dict]:
-    """
-    Performs vector search and returns full chunk objects
-    (text + metadata such as block_type, headers, rows).
-    """
+def vector_search_ich(search_client, query, k=5):
     q_vec = batch_embed([query])[0]
-
-    vector_query = VectorizedQuery(
-        vector=q_vec,
-        k=k,
-        fields="vector"
+    vector_query = VectorizedQuery(vector=q_vec, k=k, fields="vector")
+    results = search_client.search(
+        search_text="",
+        vector_queries=[vector_query],
+        select=["text", "section_path", "rule_type"]
     )
+    return [dict(r) for r in results]
 
+
+def vector_search_source(search_client, query, k=5, filter_expr=None):
+    q_vec = batch_embed([query])[0]
+    vector_query = VectorizedQuery(vector=q_vec, k=k, fields="vector")
     results = search_client.search(
         search_text="",
         vector_queries=[vector_query],
@@ -1241,14 +1237,9 @@ def vector_search(
             "page_numbers",
             "doc_id",
             "doc_type",
-        ],
+        ]
     )
-
-    output = []
-    for r in results:
-        output.append(dict(r))
-
-    return output
+    return [dict(r) for r in results]
 
 
 # ============================================================
@@ -1332,13 +1323,14 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     ich_query = " ".join([p for p in ich_query_parts if p])
 
 
-    ich_chunks = vector_search(ich_client, ich_query, k=5)
+    ich_chunks = vector_search_ich(ich_client, ich_query, k=5)
 
-    ich_context_pieces = []
-    for chunk in ich_chunks:
-        formatted = format_chunk_for_context(chunk)
-        if formatted:
-            ich_context_pieces.append(formatted)
+    ich_context_pieces = [
+        (chunk.get("text") or "").strip()
+        for chunk in ich_chunks
+        if isinstance(chunk, dict) and chunk.get("text")
+    ]
+
 
     ich_context = (
         "\n\n".join(ich_context_pieces)
@@ -1359,7 +1351,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         filter_expr = f"doc_type in ({quoted})"
 
     # If filter is not supported in your index, just call without filter
-    source_chunks = vector_search(
+    source_chunks = vector_search_source(
         source_client,
         query,
         k=5,
