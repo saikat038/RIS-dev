@@ -1183,28 +1183,31 @@ def load_ich_search_client() -> SearchClient:
 # ============================================================
 def format_chunk_for_context(chunk: Dict) -> str:
     """
-    Convert one retrieved Azure Search doc into clean context text.
-    - Tables are preserved as structured JSON.
-    - Non-tables return ONLY the 'text' field (not the dict string).
+    Format SOURCE chunks.
+    Table chunks are preserved semantically (not structurally).
     """
     if not isinstance(chunk, dict):
         return str(chunk)
 
-    if chunk.get("block_type") == "table":
-        return json.dumps(
-            {
-                "type": "table",
-                "doc_id": chunk.get("doc_id"),
-                "doc_type": chunk.get("doc_type"),
-                "page_numbers": chunk.get("page_numbers"),
-                "headers": chunk.get("headers", []),
-                "rows": chunk.get("rows", []),
-            },
-            indent=2
-        )
+    text = (chunk.get("text") or "").strip()
+    if not text:
+        return ""
 
-    # Non-table: only return the actual text
-    return (chunk.get("text") or "").strip()
+    chunk_type = chunk.get("chunk_type")
+    heading = chunk.get("heading_path")
+    pages = chunk.get("page_numbers")
+
+    meta = []
+    if chunk_type:
+        meta.append(f"type={chunk_type}")
+    if heading:
+        meta.append(f"section={heading}")
+    if pages:
+        meta.append(f"pages={pages}")
+
+    meta_line = f"[{', '.join(meta)}]" if meta else ""
+
+    return f"{meta_line}\n{text}".strip()
 
 
 # ============================================================
@@ -1343,19 +1346,16 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     # -------------------------------------------------
     source_client = load_source_search_client()
 
-    allowed = active_control.get("allowed_sources", [])
-    filter_expr = None
-    if allowed:
-        quoted = ",".join([f"'{x}'" for x in allowed])
-        filter_expr = f"doc_type in ({quoted})"
+    filter_expr = None  # source index does not support doc_type filtering
+
 
     # If filter is not supported in your index, just call without filter
     source_chunks = vector_search_source(
         source_client,
         query,
-        k=5,
-        filter_expr=filter_expr if filter_expr else None
+        k=5
     )
+
 
 
     source_context_pieces = []
