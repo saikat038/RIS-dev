@@ -1292,12 +1292,16 @@ def format_history(history: List[Dict], max_turns: int = 5) -> str:
 # ============================================================
 
 class RAGState(TypedDict, total=False):
+    """
+    Shared state across LangGraph nodes.
+    """
     query: str
     history: List[Dict]
     context: str
+    conv_history: str
+    llm_input: str
     answer: str
     section_name: str
-
 
 # ============================================================
 # NODE 1 — RETRIEVE CONTEXT (ICH FIRST, SOURCE SECOND)
