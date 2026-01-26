@@ -1720,9 +1720,10 @@ def answer(query: str, history: List[Dict]) -> str:
     final_state = rag_graph.invoke(initial_state)
 
     section_name = final_state.get("section_name")
-    render_docx(
-        llm_text=final_state["answer"],
-        section_name=section_name
-    )
+    print(section_name)
+    # render_docx(
+    #     llm_text=final_state["answer"],
+    #     section_name=section_name
+    # )
 
     return final_state.get("answer", "")
