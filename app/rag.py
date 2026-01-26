@@ -1301,6 +1301,7 @@ class RAGState(TypedDict, total=False):
     conv_history: str
     llm_input: str
     answer: str
+    section_name: str
 
 # ============================================================
 # NODE 1 — RETRIEVE CONTEXT (ICH FIRST, SOURCE SECOND)
@@ -1719,7 +1720,7 @@ def answer(query: str, history: List[Dict]) -> str:
 
     render_docx(
         llm_text=final_state["answer"],
-        section_name=final_state["section_name"]
-)
+        section_name=final_state.get("section_name")
+    )
 
     return final_state.get("answer", "")
