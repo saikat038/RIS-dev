@@ -1722,5 +1722,6 @@ def answer(query: str, history: List[Dict]) -> str:
         llm_text=final_state["answer"],
         section_name=final_state.get("section_name")
     )
+    print(section_name=final_state.get("section_name"))
 
     return final_state.get("answer", "")
