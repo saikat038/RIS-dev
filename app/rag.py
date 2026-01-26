@@ -992,6 +992,7 @@ from azure.core.credentials import AzureKeyCredential
 
 from ingest.embed import batch_embed
 from azure.storage.blob import BlobClient
+from Protocoldigitization import *
 
 from config.settings import (
     # Chat model (authoring)
@@ -1714,4 +1715,10 @@ def answer(query: str, history: List[Dict]) -> str:
     }
 
     final_state = rag_graph.invoke(initial_state)
+
+    render_docx(
+        llm_text=final_state["answer"],
+        section_name=final_state["section_name"]
+)
+
     return final_state.get("answer", "")

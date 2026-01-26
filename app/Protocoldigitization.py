@@ -1,6 +1,8 @@
 import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+import re
+from docxtpl import RichText
 
 from io import BytesIO
 from docxtpl import DocxTemplate, RichText
@@ -17,33 +19,15 @@ OUTPUT_NAME = "CSR_filled.docx"
 
 
 
-import re
-from docxtpl import RichText
 
-BOLD_PATTERN = re.compile(r"\*\*\s*(.*?)\s*\*\*")
-
-def markdown_to_richtext(text: str) -> RichText:
-    rt = RichText()
-    pos = 0
-
-    for match in BOLD_PATTERN.finditer(text):
-        start, end = match.span()
-
-        # Add normal text before bold
-        if start > pos:
-            rt.add(text[pos:start])
-
-        # Add bold text
-        bold_text = match.group(1)
-        rt.add(bold_text, bold=True)
-
-        pos = end
-
-    # Add remaining text
-    if pos < len(text):
-        rt.add(text[pos:])
-
-    return rt
+# --------------------------------------------------
+# SECTION → TEMPLATE VARIABLE MAPPING
+# --------------------------------------------------
+SECTION_TO_TEMPLATE_VAR = {
+    "Inclusion Criteria": "inclusion_criteria",
+    "Clinical Trial Synopsis": "exclusion_criteria ",
+    # add more sections here as you scale
+}
 
 
 def normalize_prefix(prefix: str) -> str:
@@ -53,16 +37,41 @@ def normalize_prefix(prefix: str) -> str:
     return prefix.rstrip("/")
 
 
-def render_docx(llm_text: str):
+def build_context_from_section(
+    llm_text: str | RichText,
+    section_name: str
+) -> dict:
+    """
+    Converts an LLM answer + section name into a docxtpl context dict.
+    """
+
+    if section_name not in SECTION_TO_TEMPLATE_VAR:
+        raise ValueError(
+            f"No template mapping found for section: {section_name}"
+        )
+
+    template_key = SECTION_TO_TEMPLATE_VAR[section_name]
+
+    # Ensure RichText
+    if isinstance(llm_text, RichText):
+        rich_text = llm_text
+    else:
+        rich_text = RichText(llm_text)
+
+    return {
+        template_key: rich_text
+    }
+
+
+
+def render_docx(llm_text: str | RichText, section_name: str):
     prefix = normalize_prefix(INDEX_PREFIX)
 
-    # 1️⃣ Connect to Blob Storage
     blob_service = BlobServiceClient.from_connection_string(
         AZURE_BLOB_CONN_STRING
     )
     container = blob_service.get_container_client(BLOB_CONTAINER)
 
-    # 2️⃣ Download template into RAM
     template_blob_path = f"{prefix}/{TEMPLATE_NAME}"
     print("Downloading template:", template_blob_path)
 
@@ -76,32 +85,27 @@ def render_docx(llm_text: str):
     template_bytes = template_blob.download_blob().readall()
     template_stream = BytesIO(template_bytes)
 
-    # 3️⃣ Render DOCX in memory
     doc = DocxTemplate(template_stream)
 
-    def to_rich_text(text: str) -> RichText:
-        return RichText(text)
-
-    context = {
-        "inclusion_criteria": to_rich_text(llm_text)
-    }
+    # 🔑 Dynamic context
+    context = build_context_from_section(
+        llm_text=llm_text,
+        section_name=section_name
+    )
 
     doc.render(context)
 
-    # 4️⃣ Save rendered DOCX to RAM
     output_stream = BytesIO()
     doc.save(output_stream)
     output_stream.seek(0)
 
-    # 5️⃣ Upload rendered DOCX back to Blob
     output_blob_path = f"{prefix}/{OUTPUT_NAME}"
     print("Uploading rendered file:", output_blob_path)
 
     output_blob = container.get_blob_client(output_blob_path)
     output_blob.upload_blob(output_stream, overwrite=True)
 
-    print(f"☁️ CRS rendered & uploaded → {output_blob_path}")
-
+    print(f"☁️ CSR rendered & uploaded → {output_blob_path}")
 
 # -------------------------
 # ENTRY
