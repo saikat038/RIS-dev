@@ -1225,18 +1225,17 @@ def vector_search_ich(search_client, query, k=5):
 def vector_search_source(search_client, query, k=5, filter_expr=None):
     q_vec = batch_embed([query])[0]
     vector_query = VectorizedQuery(vector=q_vec, k=k, fields="vector")
+
     results = search_client.search(
         search_text="",
         vector_queries=[vector_query],
         filter=filter_expr,
         select=[
             "text",
-            "block_type",
-            "headers",
-            "rows",
+            "chunk_type",
+            "heading_path",
             "page_numbers",
             "doc_id",
-            "doc_type",
         ]
     )
     return [dict(r) for r in results]
