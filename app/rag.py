@@ -976,6 +976,10 @@ Merge context
 Your EXISTING authoring prompt
 '''
 
+import os, sys, uuid
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
 
 import json
 from typing import List, Dict, TypedDict
@@ -1015,7 +1019,6 @@ from config.settings import (
 )
 
 
-
 # ============================================================
 # LOAD AUTHORING SCHEMA FROM BLOB STORAGE
 # ============================================================
@@ -1024,7 +1027,8 @@ def load_authoring_schema_from_blob(schema_name: str) -> dict:
     Load authoring control schema JSON directly from Azure Blob Storage
     into memory (RAM) without downloading to disk.
     """
-    blob_path = f"{AUTHOR_SCHEMA_PREFIX}/{schema_name}"
+    print(schema_name)
+    blob_path = f"{AUTHOR_SCHEMA_PREFIX}{schema_name}"
 
     blob_client = BlobClient.from_connection_string(
         AZURE_BLOB_CONN_STRING,
