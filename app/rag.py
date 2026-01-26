@@ -1089,7 +1089,8 @@ def pick_active_control(authoring_control: dict, user_query: str) -> dict:
 
     # 3) fallback (you can make this stricter)
     # If you prefer strict behavior, raise error instead.
-    return sections[0] if sections else {}
+    # return sections[0] if sections else {}
+    return {}
 
 
     
