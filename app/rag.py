@@ -1558,6 +1558,7 @@ ANSWERING STYLE
 - Use bullet points or tables ONLY when they improve clarity.
 - Do NOT describe internal chain-of-thought.
 - Only give direct answers.
+- Sub-section headings are mandatory content units and must NEVER be omitted, even if numbering is removed.
 - Do NOT add introductory or framing statements (e.g., references to context, guidelines, or compliance).
 - Output must be the section content itself, not a description or explanation of the section.
 - Do NOT use declarative lead-in phrases such as "The inclusion criteria are", "This section describes", or similar.
