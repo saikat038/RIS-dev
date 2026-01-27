@@ -1560,6 +1560,9 @@ ANSWERING STYLE
 - Only give direct answers.
 - Do NOT add introductory or framing statements (e.g., references to context, guidelines, or compliance).
 - Preserve original numbering and ordering when present.
+- Output must be the section content itself, not a description or explanation of the section.
+- Do NOT use declarative lead-in phrases such as "The inclusion criteria are", "This section describes", or similar.
+
 
 ────────────────────────
 TABLE INTERPRETATION RULES
@@ -1601,6 +1604,9 @@ CRITICAL INSTRUCTION
 - If a section heading is present or implied, reproduce the full heading verbatim, including numbering and capitalization.
 - If the knowledge base does not support the answer, reply exactly:
   Not in knowledge base.
+- Section headings are immutable document labels.
+- When a heading is present in the context or authoring control, reproduce it exactly as-is, character-for-character, including numbering, punctuation, and capitalization.
+
 
 ────────────────────────
 IMPORTANT
