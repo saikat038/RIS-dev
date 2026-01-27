@@ -1595,6 +1595,19 @@ You will be provided with SECTION_METADATA containing:
 You MUST obey all SECTION_METADATA constraints.
 
 ────────────────────────
+STRUCTURAL EXTRACTION STEP (MANDATORY)
+────────────────────────
+Before writing any output:
+- Scan SOURCE_CONTEXT line-by-line.
+- Identify and extract ALL structural elements in order:
+  • Headings
+  • Sub-headings
+  • Group labels
+- Treat these as immutable tokens.
+- These tokens MUST be rendered in the output before any content is written.
+
+
+────────────────────────
 OUTPUT STYLE RULES
 ────────────────────────
 
@@ -1640,8 +1653,6 @@ HALLUCINATION PREVENTION (NON-NEGOTIABLE)
 - If a sentence cannot be traced, it MUST be omitted.
 - Do NOT generalize beyond explicit statements.
 - Do NOT add rationale, examples, or clarifications unless explicitly present.
-- Extract and render ALL headings and sub-headings from SOURCE_CONTEXT before writing content.
-If any are omitted, the output is INVALID.
 
 
 ────────────────────────
