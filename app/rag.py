@@ -1614,6 +1614,13 @@ CRITICAL INSTRUCTION
 - Section headings are immutable document labels.
 - If your response starts with a sentence instead of content, regenerate internally and output only the content.
 
+HEADING IMMUTABILITY RULE (MANDATORY):
+- Section and sub-section headings are NOT to be generated, inferred, summarized, or paraphrased.
+- Headings must be copied verbatim from the provided context text only.
+- If a heading does not appear exactly in the context, do NOT create or modify one.
+- Never shorten, normalize, or semantically reinterpret a heading.
+- When in doubt, copy the heading text exactly as it appears, character-for-character.
+
 ────────────────────────
 IMPORTANT
 ────────────────────────
