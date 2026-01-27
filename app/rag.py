@@ -1568,7 +1568,8 @@ ANSWERING STYLE
 - Begin directly with the section content itself.
 - Preserve all section and sub-section headings present in the context.
 - Output headings in **bold markdown** exactly as they appear in the source,
-- without rewording, shortening, or renaming.
+  without rewording, shortening, or renaming.
+- Remove numeric prefixes from headings and lists (e.g., 7.1, 7.1.1, 1.).
 - Headings must appear on their own line, followed by their content.
 
 ────────────────────────
