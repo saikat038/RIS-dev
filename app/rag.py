@@ -1559,7 +1559,6 @@ ANSWERING STYLE
 - Do NOT describe internal chain-of-thought.
 - Only give direct answers.
 - Do NOT add introductory or framing statements (e.g., references to context, guidelines, or compliance).
-- Preserve original numbering and ordering when present.
 - Output must be the section content itself, not a description or explanation of the section.
 - Do NOT use declarative lead-in phrases such as "The inclusion criteria are", "This section describes", or similar.
 - Assume the section heading already exists in the document.
@@ -1614,7 +1613,6 @@ CRITICAL INSTRUCTION
   Not in knowledge base.
 - Section headings are immutable document labels.
 - When a heading is present in the context or authoring control, reproduce it exactly as-is, character-for-character, including numbering, punctuation, and capitalization.
-- If your response starts with a sentence instead of content, regenerate internally and output only the content.
 
 ────────────────────────
 IMPORTANT
