@@ -1613,6 +1613,8 @@ CRITICAL INSTRUCTION
   Not in knowledge base.
 - Section headings are immutable document labels.
 - If your response starts with a sentence instead of content, regenerate internally and output only the content.
+- Headings and sub-section headings are ATOMIC UNITS.
+- You MUST NOT split, merge, infer, or decompose a heading into multiple headings or fragments.
 
 ────────────────────────
 IMPORTANT
