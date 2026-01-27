@@ -1613,6 +1613,11 @@ CRITICAL INSTRUCTION
   Not in knowledge base.
 - Section headings are immutable document labels.
 - If your response starts with a sentence instead of content, regenerate internally and output only the content.
+- You MUST NOT introduce, rename, normalize, standardize, or replace section headings,
+  even if a more common regulatory heading exists.
+- You MUST NOT add boilerplate, eligibility language, or standard regulatory phrasing
+  unless the exact wording appears verbatim in the provided context.
+- If a heading or sentence does not appear explicitly in the context, it MUST NOT appear in the output.
 
 ────────────────────────
 IMPORTANT
