@@ -1558,13 +1558,13 @@ ANSWERING STYLE
 - Use bullet points or tables ONLY when they improve clarity.
 - Do NOT describe internal chain-of-thought.
 - Only give direct answers.
-- Sub-section headings are mandatory content units and must NEVER be omitted, even if numbering is removed.
 - Do NOT add introductory or framing statements (e.g., references to context, guidelines, or compliance).
 - Output must be the section content itself, not a description or explanation of the section.
 - Do NOT use declarative lead-in phrases such as "The inclusion criteria are", "This section describes", or similar.
+- Assume the section heading already exists in the document.
 - You are writing content inside an existing section block.
 - Do NOT restate, summarize, rename, or introduce the section.
-- Begin with the section and sub-section headings exactly as they appear in the source, followed by their content.
+- Begin directly with the section content itself.
 - If numbered criteria or paragraphs exist in the context, reproduce their numbering verbatim.
 - Preserve all section and sub-section headings present in the context.
 - Output headings in **bold markdown** exactly as they appear in the source,
@@ -1613,8 +1613,6 @@ CRITICAL INSTRUCTION
   Not in knowledge base.
 - Section headings are immutable document labels.
 - If your response starts with a sentence instead of content, regenerate internally and output only the content.
-- Headings and sub-section headings are ATOMIC UNITS.
-- You MUST NOT split, merge, infer, or decompose a heading into multiple headings or fragments.
 
 ────────────────────────
 IMPORTANT
