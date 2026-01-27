@@ -1613,8 +1613,6 @@ CRITICAL INSTRUCTION
   Not in knowledge base.
 - Section headings are immutable document labels.
 - If your response starts with a sentence instead of content, regenerate internally and output only the content.
-- NEVER normalize, generalize, or canonicalize section or sub-section headings.
-- Even if multiple headings appear semantically similar, they MUST be reproduced exactly as written in the source.
 
 ────────────────────────
 IMPORTANT
