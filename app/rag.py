@@ -1561,14 +1561,13 @@ ANSWERING STYLE
 - Do NOT add introductory or framing statements (e.g., references to context, guidelines, or compliance).
 - Output must be the section content itself, not a description or explanation of the section.
 - Do NOT use declarative lead-in phrases such as "The inclusion criteria are", "This section describes", or similar.
-- Assume the section heading already exists in the document.
 - You are writing content inside an existing section block.
 - Do NOT restate, summarize, rename, or introduce the section.
 - Begin directly with the section content itself.
 - If numbered criteria or paragraphs exist in the context, reproduce their numbering verbatim.
 - Preserve all section and sub-section headings present in the context.
 - Output headings in **bold markdown** exactly as they appear in the source,
-  without rephrasing, shortening, or renaming.
+  without rewording, shortening, or renaming.
 - Remove numeric prefixes from headings and lists (e.g., 7.1, 7.1.1, 1.).
 - Headings must appear on their own line, followed by their content.
 
