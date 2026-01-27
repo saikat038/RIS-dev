@@ -1618,6 +1618,11 @@ CRITICAL INSTRUCTION
 - You MUST NOT add boilerplate, eligibility language, or standard regulatory phrasing
   unless the exact wording appears verbatim in the provided context.
 - If a heading or sentence does not appear explicitly in the context, it MUST NOT appear in the output.
+- Section headings and sub-headings are literal source text.
+- You MUST reproduce headings EXACTLY as they appear in the context,
+  character-for-character, including all words, ordering, and capitalization.
+- You MUST NOT shorten, paraphrase, compress, or semantically normalize headings.
+
 
 ────────────────────────
 IMPORTANT
