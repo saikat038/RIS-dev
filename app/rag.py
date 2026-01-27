@@ -1566,12 +1566,6 @@ ANSWERING STYLE
 - You are writing content inside an existing section block.
 - Do NOT restate, summarize, rename, or introduce the section.
 - Begin directly with the section content itself.
-- If numbered criteria or paragraphs exist in the context, reproduce their numbering verbatim.
-- Preserve all section and sub-section headings present in the context.
-- Output headings in **bold markdown** exactly as they appear in the source,
-  without rewording, shortening, or renaming.
-- Remove numeric prefixes from headings and lists (e.g., 7.1, 7.1.1, 1.).
-- Headings must appear on their own line, followed by their content.
 
 ────────────────────────
 TABLE INTERPRETATION RULES
@@ -1613,6 +1607,7 @@ CRITICAL INSTRUCTION
 - If the knowledge base does not support the answer, reply exactly:
   Not in knowledge base.
 - Section headings are immutable document labels.
+- When a heading is present in the context or authoring control, reproduce it exactly as-is, character-for-character, including numbering, punctuation, and capitalization.
 - If your response starts with a sentence instead of content, regenerate internally and output only the content.
 
 ────────────────────────
