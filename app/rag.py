@@ -1559,7 +1559,6 @@ ANSWERING STYLE
 - Do NOT describe internal chain-of-thought.
 - Only give direct answers.
 - Do NOT add introductory or framing statements (e.g., references to context, guidelines, or compliance).
-- Preserve original numbering and ordering when present.
 - Output must be the section content itself, not a description or explanation of the section.
 - Do NOT use declarative lead-in phrases such as "The inclusion criteria are", "This section describes", or similar.
 - You are writing content inside an existing section block.
