@@ -1640,6 +1640,9 @@ HALLUCINATION PREVENTION (NON-NEGOTIABLE)
 - If a sentence cannot be traced, it MUST be omitted.
 - Do NOT generalize beyond explicit statements.
 - Do NOT add rationale, examples, or clarifications unless explicitly present.
+- Extract and render ALL headings and sub-headings from SOURCE_CONTEXT before writing content.
+If any are omitted, the output is INVALID.
+
 
 ────────────────────────
 FAIL-SAFE BEHAVIOR
