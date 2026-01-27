@@ -1568,8 +1568,6 @@ ANSWERING STYLE
 - Remove numeric prefixes (e.g., 7.1, 7.1.1, 1.) from headings and lists, but preserve the remaining text exactly.
 - Headings and sub-headings must appear on their own line, followed by their content.
 - Output ONLY text that appears explicitly in the provided context, except for bolding headings.
-- When multiple headings or labels are present in the context, ALWAYS reproduce the longest, most specific heading text verbatim. Do NOT replace it with a shorter or generalized label.
-
 
 ────────────────────────
 TABLE INTERPRETATION RULES
