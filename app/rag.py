@@ -1561,7 +1561,6 @@ ANSWERING STYLE
 - Do NOT add introductory or framing statements (e.g., references to context, guidelines, or compliance).
 - Output must be the section content itself, not a description or explanation of the section.
 - Do NOT use declarative lead-in phrases such as "The inclusion criteria are", "This section describes", or similar.
-- Assume the section heading already exists in the document.
 - You are writing content inside an existing section block.
 - Do NOT restate, summarize, rename, or introduce the section.
 - Begin directly with the section content itself.
