@@ -1567,9 +1567,9 @@ ANSWERING STYLE
 - Do NOT restate, summarize, rename, or introduce the section.
 - Begin directly with the section content itself.
 - Preserve all section and sub-section headings present in the context.
-- Do NOT rewrite heading words. Only strip leading numeric labels if present (e.g., “7.1.”, “7.1.1.”). After stripping the numeric label, the remaining heading text must be copied character-for-character from the context.
+- Output headings in **bold markdown** exactly as they appear in the source,
+- without rewording, shortening, or renaming.
 - Headings must appear on their own line, followed by their content.
-- If a sub-heading is not explicitly present in the provided context text, do NOT create, infer, shorten, or rename one. Continue with content without adding a heading.
 
 ────────────────────────
 TABLE INTERPRETATION RULES
@@ -1612,7 +1612,6 @@ CRITICAL INSTRUCTION
   Not in knowledge base.
 - Section headings are immutable document labels.
 - If your response starts with a sentence instead of content, regenerate internally and output only the content.
-- Headings/sub-headings must be extracted from the context verbatim; semantic paraphrases are forbidden even if they seem equivalent.
 
 ────────────────────────
 IMPORTANT
