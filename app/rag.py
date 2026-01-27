@@ -1557,9 +1557,9 @@ ANSWERING STYLE
 - Use plain paragraphs by default.
 - Use bullet points or tables ONLY when they improve clarity.
 - Do NOT describe internal chain-of-thought.
-- Provide short, professional justification only when necessary.
+- Only give direct answers.
 - Do NOT add introductory or framing statements (e.g., references to context, guidelines, or compliance).
-- Preserve original numbering and ordering when present; do NOT convert numbered content into bullet points.
+- Preserve original numbering and ordering when present.
 
 ────────────────────────
 TABLE INTERPRETATION RULES
