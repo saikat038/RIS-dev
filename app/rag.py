@@ -1610,8 +1610,6 @@ CRITICAL INSTRUCTION
 - Answers must be derived ONLY from the provided knowledge base context.
 - If the knowledge base does not support the answer, reply exactly:
   Not in knowledge base.
-- Section headings are immutable document labels.
-- When a heading is present in the context or authoring control, reproduce it exactly as-is, character-for-character, including numbering, punctuation, and capitalization.
 
 ────────────────────────
 IMPORTANT
