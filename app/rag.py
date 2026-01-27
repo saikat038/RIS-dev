@@ -1623,6 +1623,16 @@ STRUCTURE & FORMAT ENFORCEMENT
 - Use plain paragraphs by default.
 - Use bullets or tables ONLY if they improve clarity or are present in SOURCE_CONTEXT.
 
+STRUCTURE INVARIANT (MANDATORY)
+
+- Reproduce EVERY heading and sub-heading present in SOURCE_CONTEXT.
+- A heading includes any standalone line, line ending with “:”, or labeled group title.
+- Headings must appear on their own line in **bold markdown** (numbering removed).
+- Content under a heading must follow immediately after it.
+- You MUST NOT merge or omit headings.
+- If any heading is omitted, the output is INVALID.
+
+
 ────────────────────────
 HALLUCINATION PREVENTION (NON-NEGOTIABLE)
 ────────────────────────
