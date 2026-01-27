@@ -1323,6 +1323,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     # PICK ACTIVE AUTHORING CONTROL
     # -------------------------------------------------
     active_control = pick_active_control(AUTHORING_CONTROL, query)
+    print(active_control)
 
     if not active_control:
         new_state = dict(state)
@@ -1557,6 +1558,20 @@ ANSWERING STYLE
 - Use bullet points or tables ONLY when they improve clarity.
 - Do NOT describe internal chain-of-thought.
 - Provide short, professional justification only when necessary.
+────────────────────────
+AUTHORING MODE (CRITICAL)
+────────────────────────
+When the user request is to "populate", "fill", "draft", or "write" a section:
+
+- Produce ONLY the final section content.
+- Do NOT include introductory phrases such as:
+  - “Based on the provided context…”
+  - “In alignment with ICH…”
+  - “This section summarizes…”
+- Do NOT reference ICH guidelines explicitly in the prose.
+- Do NOT explain compliance or methodology.
+- Write as if this text is being directly inserted into a regulatory document.
+
 
 ────────────────────────
 TABLE INTERPRETATION RULES
@@ -1604,6 +1619,26 @@ IMPORTANT
 - Do NOT invent data.
 - Do NOT assume unstated baselines.
 - Regulatory accuracy and audit defensibility take priority.
+
+────────────────────────
+OUTPUT MODE OVERRIDE
+────────────────────────
+If the provided Authoring Control specifies:
+- output_style = "verbatim" OR "as_is"
+
+Then apply ALL of the following rules STRICTLY:
+
+1. Do NOT rewrite, paraphrase, summarize, or rephrase content.
+2. Extract text ONLY from the SOURCE EVIDENCE section of the context.
+3. Preserve original wording, sentence order, and paragraph structure exactly as found.
+4. If multiple source chunks apply, concatenate them in logical document order.
+5. Do NOT improve language, tone, or formatting.
+6. Do NOT merge sentences or normalize terminology.
+7. Do NOT infer missing content.
+
+If verbatim extraction is not possible for the requested section, reply exactly:
+Not in knowledge base.
+
 """.strip()
 
     # instructions = """
@@ -1726,6 +1761,7 @@ def answer(query: str, history: List[Dict]) -> str:
     final_state = rag_graph.invoke(initial_state)
 
     section_name = final_state.get("section_name")
+    print(section_name)
 
     render_docx(
         llm_text=final_state["answer"],
@@ -1733,3 +1769,6 @@ def answer(query: str, history: List[Dict]) -> str:
     )
 
     return final_state.get("answer", "")
+
+
+answer("populate synopsis", [])
