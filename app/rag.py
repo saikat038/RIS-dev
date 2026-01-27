@@ -1605,21 +1605,6 @@ IMPORTANT
 - Do NOT invent data.
 - Do NOT assume unstated baselines.
 - Regulatory accuracy and audit defensibility take priority.
-────────────────────────
-OUTPUT MODE OVERRIDE
-────────────────────────
-If the provided Authoring Control specifies:
-- output_style = "verbatim" OR "as_is"
-
-Then apply ALL of the following rules STRICTLY:
-
-1. Do NOT rewrite, paraphrase, summarize, or rephrase content.
-2. Extract text ONLY from the SOURCE EVIDENCE section of the context.
-3. Preserve original wording, sentence order, and paragraph structure exactly as found.
-4. If multiple source chunks apply, concatenate them in logical document order.
-5. Do NOT improve language, tone, or formatting.
-6. Do NOT merge sentences or normalize terminology.
-7. Do NOT infer missing content.
 """.strip()
 
     # instructions = """
