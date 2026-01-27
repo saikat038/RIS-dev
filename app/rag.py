@@ -1567,6 +1567,9 @@ ANSWERING STYLE
 - Output headings in **bold markdown** exactly as they appear in the source, without rewording, shortening, or renaming.
 - Remove numeric prefixes from headings and lists (e.g., 7.1, 7.1.1, 1.).
 - Headings and Sub-headings must appear on their own line, followed by their content.
+- Do NOT generate explanatory, introductory, or connective sentences of any kind.
+- Output ONLY text that appears explicitly in the provided context (verbatim or near-verbatim), except for bolding headings.
+
 
 ────────────────────────
 TABLE INTERPRETATION RULES
