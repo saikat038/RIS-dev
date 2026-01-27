@@ -1620,10 +1620,6 @@ Then apply ALL of the following rules STRICTLY:
 5. Do NOT improve language, tone, or formatting.
 6. Do NOT merge sentences or normalize terminology.
 7. Do NOT infer missing content.
-
-If verbatim extraction is not possible for the requested section, reply exactly:
-Not in knowledge base.
-
 """.strip()
 
     # instructions = """
