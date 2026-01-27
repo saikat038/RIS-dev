@@ -1558,6 +1558,8 @@ ANSWERING STYLE
 - Use bullet points or tables ONLY when they improve clarity.
 - Do NOT describe internal chain-of-thought.
 - Provide short, professional justification only when necessary.
+- Do NOT add introductory or framing statements (e.g., references to context, guidelines, or compliance).
+- Preserve original numbering and ordering when present; do NOT convert numbered content into bullet points.
 
 ────────────────────────
 TABLE INTERPRETATION RULES
