@@ -1596,6 +1596,7 @@ CRITICAL INSTRUCTION
 - The "Guideline" describes HOW to answer, not WHAT the answer is.
 - Guidelines must NEVER be treated as factual content.
 - Answers must be derived ONLY from the provided knowledge base context.
+- If a section heading is present or implied, reproduce the full heading verbatim, including numbering and capitalization.
 - If the knowledge base does not support the answer, reply exactly:
   Not in knowledge base.
 
