@@ -113,4 +113,4 @@ if prompt:
                 result = answer(prompt, history)
                 st.markdown(result)
 
-    st.session_state.messages.append({"role": "assistant", "content": result})
+        st.session_state.messages.append({"role": "assistant", "content": result})
