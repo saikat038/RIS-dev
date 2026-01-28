@@ -80,18 +80,22 @@ history = st.session_state.messages
 prompt = st.chat_input("Ask anything about regulations, guidance, policies, IND, etc...")
 
 
-# 🔴 HARD STOP — prevents automatic execution on rerun
+
 if prompt is None:
     st.stop()
 
 prompt_clean = prompt.strip().lower()
 
 # ========================
-# COMMAND HANDLING
+# COMMANDS
 # ========================
 
 if prompt_clean == "add":
     add_last_section_to_final()
+
+    # Render immediately
+    with st.chat_message("assistant"):
+        st.markdown("✅ Section added to final CSR buffer.")
 
     st.session_state.messages.append({
         "role": "assistant",
@@ -101,40 +105,22 @@ if prompt_clean == "add":
 elif prompt_clean == "remove":
     remove_last_added_section()
 
+    with st.chat_message("assistant"):
+        st.markdown("🗑️ Section removed from final CSR buffer.")
+
     st.session_state.messages.append({
         "role": "assistant",
-        "content": "🗑️ Section removed from the final CSR buffer."
+        "content": "🗑️ Section removed from final CSR buffer."
     })
 
 elif prompt_clean == "populate":
     render_all_sections()
 
+    with st.chat_message("assistant"):
+        st.markdown("📄 Population completed successfully!")
+
     st.session_state.messages.append({
         "role": "assistant",
         "content": "📄 Population completed successfully!"
-    })
-
-# ========================
-# NORMAL QUERY → LLM
-# ========================
-else:
-    # User message
-    st.session_state.messages.append({
-        "role": "user",
-        "content": prompt
-    })
-
-    with st.chat_message("user"):
-        st.markdown(prompt)
-
-    # Assistant response
-    with st.chat_message("assistant"):
-        with st.spinner("Thinking..."):
-            result = answer(prompt, st.session_state.messages)
-            st.markdown(result)
-
-    st.session_state.messages.append({
-        "role": "assistant",
-        "content": result
     })
 
