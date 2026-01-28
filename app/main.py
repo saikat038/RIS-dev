@@ -103,7 +103,7 @@ elif prompt == "populate":
 
 
 
-elif prompt != "add" and prompt != "remove" and prompt != "populate":
+if prompt != "add" and prompt != "remove" and prompt != "populate":
     # User message
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
