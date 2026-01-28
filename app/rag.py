@@ -1236,7 +1236,7 @@ def format_chunk_for_context(chunk: Dict) -> str:
 
 def vector_search_ich(search_client, query, top_k=5):
     q_vec = batch_embed([query])[0]
-    vector_query = VectorizedQuery(vector=q_vec, top_k=k, fields="vector")
+    vector_query = VectorizedQuery(vector=q_vec, top_k=top_k, fields="vector")
     results = search_client.search(
         search_text="",
         vector_queries=[vector_query],
