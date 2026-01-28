@@ -81,6 +81,8 @@ prompt = st.chat_input("Ask anything about regulations, guidance, policies, IND,
 
 
 
+
+# ⛔ Stop execution if no new input was submitted
 if prompt is None:
     st.stop()
 
@@ -93,7 +95,6 @@ prompt_clean = prompt.strip().lower()
 if prompt_clean == "add":
     add_last_section_to_final()
 
-    # Render immediately
     with st.chat_message("assistant"):
         st.markdown("✅ Section added to final CSR buffer.")
 
@@ -122,5 +123,27 @@ elif prompt_clean == "populate":
     st.session_state.messages.append({
         "role": "assistant",
         "content": "📄 Population completed successfully!"
+    })
+
+# ========================
+# NORMAL QUERY → LLM
+# ========================
+else:
+    with st.chat_message("user"):
+        st.markdown(prompt)
+
+    st.session_state.messages.append({
+        "role": "user",
+        "content": prompt
+    })
+
+    with st.chat_message("assistant"):
+        with st.spinner("Thinking..."):
+            result = answer(prompt, st.session_state.messages)
+            st.markdown(result)
+
+    st.session_state.messages.append({
+        "role": "assistant",
+        "content": result
     })
 
