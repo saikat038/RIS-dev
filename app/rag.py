@@ -1234,7 +1234,7 @@ def format_chunk_for_context(chunk: Dict) -> str:
 # VECTOR SEARCH (GENERIC, REUSED)
 # ============================================================
 
-def vector_search_ich(search_client, query, k_nearest_neighbors=20):
+def vector_search_ich(search_client, query, k_nearest_neighbors=40):
     q_vec = batch_embed([query])[0]
     vector_query = VectorizedQuery(vector=q_vec, k_nearest_neighbors = k_nearest_neighbors, fields="vector")
     results = search_client.search(
@@ -1245,7 +1245,7 @@ def vector_search_ich(search_client, query, k_nearest_neighbors=20):
     return [dict(r) for r in results]
 
 
-def vector_search_source(search_client, query, k_nearest_neighbors=20, filter_expr=None):
+def vector_search_source(search_client, query, k_nearest_neighbors=40, filter_expr=None):
     q_vec = batch_embed([query])[0]
     vector_query = VectorizedQuery(vector=q_vec, k_nearest_neighbors=k_nearest_neighbors, fields="vector")
 
@@ -1352,7 +1352,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     ich_query = " ".join([p for p in ich_query_parts if p])
 
 
-    ich_chunks = vector_search_ich(ich_client, ich_query, k_nearest_neighbors=20)
+    ich_chunks = vector_search_ich(ich_client, ich_query, k_nearest_neighbors=40)
 
     ich_context_pieces = [
         (chunk.get("text") or "").strip()
@@ -1380,7 +1380,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     source_chunks = vector_search_source(
         source_client,
         query,
-        k_nearest_neighbors=20
+        k_nearest_neighbors=40
     )
 
 
