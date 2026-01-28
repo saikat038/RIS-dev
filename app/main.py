@@ -2,6 +2,7 @@ import streamlit as st
 import os, sys
 import base64
 from Protocoldigitization import *
+from rag import final_state
 
 # So we can import from app/
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -79,7 +80,31 @@ for msg in st.session_state.messages:
 history = st.session_state.messages
 prompt = st.chat_input("Ask anything about regulations, guidance, policies, IND, etc...")
 
-if prompt:
+if prompt == "add":
+    add_last_section_to_final()
+    st.session_state.messages.append({"role": "user", "content": "Section added to final CSR buffer."})
+    with st.chat_message("user"):
+        st.markdown(prompt)
+
+
+elif prompt == "remove":
+    remove_last_added_section()
+    st.session_state.messages.append({"role": "user", "content": "Section removed from the final CSR buffer."})
+    with st.chat_message("user"):
+        st.markdown(prompt)
+
+elif prompt == "populate":
+    render_all_sections()
+    
+    st.session_state.messages.append({"role": "user", "content": "Population Completed Successfully!."})
+    with st.chat_message("user"):
+        st.markdown(prompt)
+
+
+
+
+
+elif prompt != "add" and prompt != "remove" and prompt != "populate":
     # User message
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):

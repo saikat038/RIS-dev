@@ -1,3 +1,171 @@
+# import os, sys
+# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+# import re
+# from io import BytesIO
+# from typing import Dict
+
+# from docxtpl import DocxTemplate, RichText
+# from azure.storage.blob import BlobServiceClient
+
+# from config.settings import (
+#     AZURE_BLOB_CONN_STRING,
+#     BLOB_CONTAINER,
+#     INDEX_PREFIX,
+# )
+
+# TEMPLATE_NAME = "CSR.docx"
+# OUTPUT_NAME = "CSR_filled.docx"
+
+# # ============================================================
+# # SECTION → TEMPLATE VARIABLE MAPPING
+# # ============================================================
+
+# SECTION_TO_TEMPLATE_VAR = {
+#     "Clinical Trial Synopsis": "clinical_trial_synopsis",
+#     "Inclusion Criteria" : "inclusion_criteria",
+#     "Exclusion Criteria" : "exclusion_criteria",
+#     "Subject Withdrawal Criteria" : "subject_withdrawal_criteria",
+#     "Study Objectives" : "study_objectives",
+#     "Overall Study Design And plan: Description" : "O_study_design",
+#     "Discussion of Study Design, Including the Choice of Control Groups" : "D_study_design",
+#     # add more sections as needed
+# }
+
+# # ============================================================
+# # MARKDOWN → RichText (bold support)
+# # ============================================================
+
+# BOLD_PATTERN = re.compile(r"\*\*(.*?)\*\*")
+
+# def markdown_to_richtext(text: str) -> RichText:
+#     """
+#     Converts markdown-style **bold** text into docxtpl RichText.
+#     Preserves symbols like <, > exactly as-is.
+#     """
+#     rt = RichText()
+#     pos = 0
+
+#     for match in BOLD_PATTERN.finditer(text):
+#         start, end = match.span()
+
+#         if start > pos:
+#             rt.add(text[pos:start])
+
+#         rt.add(match.group(1), bold=True)
+#         pos = end
+
+#     if pos < len(text):
+#         rt.add(text[pos:])
+
+#     return rt
+
+
+# # ============================================================
+# # HELPERS
+# # ============================================================
+
+# def normalize_prefix(prefix: str) -> str:
+#     return prefix.rstrip("/")
+
+
+# def build_context_from_section(
+#     llm_text: str,
+#     section_name: str
+# ) -> Dict[str, RichText]:
+#     """
+#     Builds docxtpl context dynamically based on section name.
+#     """
+
+#     if not section_name:
+#         raise ValueError("section_name is None. Cannot render template.")
+
+#     if section_name not in SECTION_TO_TEMPLATE_VAR:
+#         raise ValueError(
+#             f"No template mapping found for section: {section_name}"
+#         )
+
+#     template_var = SECTION_TO_TEMPLATE_VAR[section_name]
+
+#     return {
+#         template_var: markdown_to_richtext(llm_text)
+#     }
+
+
+# # ============================================================
+# # DOCX RENDERING
+# # ============================================================
+
+# def render_docx(
+#     llm_text: str,
+#     section_name: str
+# ):
+#     """
+#     Populates exactly ONE section in the CSR template.
+#     """
+#     prefix = normalize_prefix(INDEX_PREFIX)
+
+#     blob_service = BlobServiceClient.from_connection_string(
+#         AZURE_BLOB_CONN_STRING
+#     )
+#     container = blob_service.get_container_client(BLOB_CONTAINER)
+
+#     # --------------------------------------------------------
+#     # Download template into RAM
+#     # --------------------------------------------------------
+#     template_blob_path = f"{prefix}/{TEMPLATE_NAME}"
+#     print("📄 Downloading template:", template_blob_path)
+
+#     template_blob = container.get_blob_client(template_blob_path)
+#     if not template_blob.exists():
+#         raise FileNotFoundError(
+#             f"Template not found in blob storage: {template_blob_path}"
+#         )
+
+#     template_bytes = template_blob.download_blob().readall()
+#     template_stream = BytesIO(template_bytes)
+
+#     doc = DocxTemplate(template_stream)
+
+#     # --------------------------------------------------------
+#     # Build dynamic context
+#     # --------------------------------------------------------
+#     context = build_context_from_section(
+#         llm_text=llm_text,
+#         section_name=section_name
+#     )
+
+#     # --------------------------------------------------------
+#     # Render + upload
+#     # --------------------------------------------------------
+#     doc.render(context)
+
+#     output_stream = BytesIO()
+#     doc.save(output_stream)
+#     output_stream.seek(0)
+
+#     output_blob_path = f"{prefix}/{OUTPUT_NAME}"
+#     print("☁️ Uploading rendered file:", output_blob_path)
+
+#     output_blob = container.get_blob_client(output_blob_path)
+#     output_blob.upload_blob(output_stream, overwrite=True)
+
+#     print(f"✅ CSR rendered successfully → {output_blob_path}")
+
+
+# # ============================================================
+# # MANUAL TEST
+# # ============================================================
+
+# if __name__ == "__main__":
+#     render_docx(
+#         llm_text="This **Clinical Trial Synopsis** was generated by the LLM and injected into CRS<10.",
+#         section_name="Clinical Trial Synopsis"
+#     )
+
+
+
+
 import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
@@ -7,30 +175,40 @@ from typing import Dict
 
 from docxtpl import DocxTemplate, RichText
 from azure.storage.blob import BlobServiceClient
-
 from config.settings import (
     AZURE_BLOB_CONN_STRING,
     BLOB_CONTAINER,
     INDEX_PREFIX,
 )
-
 TEMPLATE_NAME = "CSR.docx"
 OUTPUT_NAME = "CSR_filled.docx"
 
 # ============================================================
-# SECTION → TEMPLATE VARIABLE MAPPING
+# CONFIG
 # ============================================================
 
 SECTION_TO_TEMPLATE_VAR = {
     "Clinical Trial Synopsis": "clinical_trial_synopsis",
-    "Inclusion Criteria" : "inclusion_criteria",
-    "Exclusion Criteria" : "exclusion_criteria",
-    "Subject Withdrawal Criteria" : "subject_withdrawal_criteria",
-    "Study Objectives" : "study_objectives",
-    "Overall Study Design And plan: Description" : "O_study_design",
-    "Discussion of Study Design, Including the Choice of Control Groups" : "D_study_design",
-    # add more sections as needed
+    "Inclusion Criteria": "inclusion_criteria",
+    "Exclusion Criteria": "exclusion_criteria",
+    "Subject Withdrawal Criteria": "subject_withdrawal_criteria",
+    "Study Objectives": "study_objectives",
+    "Overall Study Design And plan: Description": "O_study_design",
+    "Discussion of Study Design, Including the Choice of Control Groups": "D_study_design",
 }
+
+# ============================================================
+# IN-MEMORY STATE (SESSION SCOPED)
+# ============================================================
+
+# Holds only the LAST LLM response
+TEMP_LLM_BUFFER = {
+    "section": None,
+    "text": None
+}
+
+# Holds ONLY approved sections
+FINAL_SECTION_BUFFER: Dict[str, str] = {}
 
 # ============================================================
 # MARKDOWN → RichText (bold support)
@@ -40,8 +218,8 @@ BOLD_PATTERN = re.compile(r"\*\*(.*?)\*\*")
 
 def markdown_to_richtext(text: str) -> RichText:
     """
-    Converts markdown-style **bold** text into docxtpl RichText.
-    Preserves symbols like <, > exactly as-is.
+    Converts markdown-style **bold** into docxtpl RichText.
+    Preserves all characters (<, >, etc).
     """
     rt = RichText()
     pos = 0
@@ -60,49 +238,79 @@ def markdown_to_richtext(text: str) -> RichText:
 
     return rt
 
+# ============================================================
+# STATE MANAGEMENT HELPERS
+# ============================================================
+
+def store_temp_llm_output(section_name: str, llm_text: str):
+    """
+    Store last LLM output temporarily (overwrites previous).
+    """
+    TEMP_LLM_BUFFER["section"] = section_name
+    TEMP_LLM_BUFFER["text"] = llm_text
+
+
+def add_last_section_to_final():
+    """
+    Moves TEMP buffer → FINAL buffer.
+    """
+    section = TEMP_LLM_BUFFER.get("section")
+    text = TEMP_LLM_BUFFER.get("text")
+
+    if not section or not text:
+        raise ValueError("No LLM output available to add.")
+
+    if section not in SECTION_TO_TEMPLATE_VAR:
+        raise ValueError(f"No template mapping for section: {section}")
+
+    FINAL_SECTION_BUFFER[section] = text
+
+
+def remove_last_added_section():
+    """
+    Removes most recently added section from FINAL buffer.
+    """
+    if not FINAL_SECTION_BUFFER:
+        raise ValueError("FINAL buffer is empty.")
+
+    last_key = list(FINAL_SECTION_BUFFER.keys())[-1]
+    del FINAL_SECTION_BUFFER[last_key]
+
 
 # ============================================================
-# HELPERS
+# DOCX CONTEXT BUILDING
+# ============================================================
+
+def build_context_from_final_buffer() -> Dict[str, RichText]:
+    """
+    Builds full docxtpl context from FINAL_SECTION_BUFFER.
+    """
+    context = {}
+
+    for section_name, llm_text in FINAL_SECTION_BUFFER.items():
+        template_var = SECTION_TO_TEMPLATE_VAR.get(section_name)
+        if not template_var:
+            continue
+
+        context[template_var] = markdown_to_richtext(llm_text)
+
+    return context
+
+# ============================================================
+# DOCX RENDERING (FINAL POPULATE)
 # ============================================================
 
 def normalize_prefix(prefix: str) -> str:
     return prefix.rstrip("/")
 
 
-def build_context_from_section(
-    llm_text: str,
-    section_name: str
-) -> Dict[str, RichText]:
+def render_all_sections():
     """
-    Builds docxtpl context dynamically based on section name.
+    Renders ALL approved sections into CSR template at once.
     """
+    if not FINAL_SECTION_BUFFER:
+        raise ValueError("No sections added. Nothing to populate.")
 
-    if not section_name:
-        raise ValueError("section_name is None. Cannot render template.")
-
-    if section_name not in SECTION_TO_TEMPLATE_VAR:
-        raise ValueError(
-            f"No template mapping found for section: {section_name}"
-        )
-
-    template_var = SECTION_TO_TEMPLATE_VAR[section_name]
-
-    return {
-        template_var: markdown_to_richtext(llm_text)
-    }
-
-
-# ============================================================
-# DOCX RENDERING
-# ============================================================
-
-def render_docx(
-    llm_text: str,
-    section_name: str
-):
-    """
-    Populates exactly ONE section in the CSR template.
-    """
     prefix = normalize_prefix(INDEX_PREFIX)
 
     blob_service = BlobServiceClient.from_connection_string(
@@ -110,34 +318,28 @@ def render_docx(
     )
     container = blob_service.get_container_client(BLOB_CONTAINER)
 
-    # --------------------------------------------------------
-    # Download template into RAM
-    # --------------------------------------------------------
+    # -------------------------------
+    # Download template
+    # -------------------------------
     template_blob_path = f"{prefix}/{TEMPLATE_NAME}"
-    print("📄 Downloading template:", template_blob_path)
-
     template_blob = container.get_blob_client(template_blob_path)
+
     if not template_blob.exists():
         raise FileNotFoundError(
-            f"Template not found in blob storage: {template_blob_path}"
+            f"Template not found: {template_blob_path}"
         )
 
     template_bytes = template_blob.download_blob().readall()
-    template_stream = BytesIO(template_bytes)
+    doc = DocxTemplate(BytesIO(template_bytes))
 
-    doc = DocxTemplate(template_stream)
+    # -------------------------------
+    # Build full context
+    # -------------------------------
+    context = build_context_from_final_buffer()
 
-    # --------------------------------------------------------
-    # Build dynamic context
-    # --------------------------------------------------------
-    context = build_context_from_section(
-        llm_text=llm_text,
-        section_name=section_name
-    )
-
-    # --------------------------------------------------------
-    # Render + upload
-    # --------------------------------------------------------
+    # -------------------------------
+    # Render once
+    # -------------------------------
     doc.render(context)
 
     output_stream = BytesIO()
@@ -145,20 +347,31 @@ def render_docx(
     output_stream.seek(0)
 
     output_blob_path = f"{prefix}/{OUTPUT_NAME}"
-    print("☁️ Uploading rendered file:", output_blob_path)
-
     output_blob = container.get_blob_client(output_blob_path)
     output_blob.upload_blob(output_stream, overwrite=True)
 
-    print(f"✅ CSR rendered successfully → {output_blob_path}")
-
+    print("✅ CSR populated successfully with all approved sections")
 
 # ============================================================
-# MANUAL TEST
+# OPTIONAL: COMMAND DISPATCHER (CHAT CONTROL)
 # ============================================================
 
-if __name__ == "__main__":
-    render_docx(
-        llm_text="This **Clinical Trial Synopsis** was generated by the LLM and injected into CRS<10.",
-        section_name="Clinical Trial Synopsis"
-    )
+# def handle_user_command(command: str, **render_kwargs):
+#     """
+#     Handles chat commands: add | remove | populate
+#     """
+#     command = command.lower().strip()
+
+#     if command == "add":
+#         add_last_section_to_final()
+#         return "Section added."
+
+#     if command == "remove":
+#         remove_last_added_section()
+#         return "Last section removed."
+
+#     if command == "populate":
+#         render_all_sections(**render_kwargs)
+#         return "CSR populated."
+
+#     return "Unknown command."

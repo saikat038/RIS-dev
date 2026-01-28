@@ -1795,9 +1795,9 @@ def answer(query: str, history: List[Dict]) -> str:
     section_name = final_state.get("section_name")
     print(section_name)
 
-    render_docx(
-        llm_text=final_state["answer"],
-        section_name=section_name
+    store_temp_llm_output(
+        section_name=section_name,
+        llm_text=final_state["answer"]
     )
 
     return final_state.get("answer", "")
