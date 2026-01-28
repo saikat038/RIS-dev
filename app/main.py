@@ -2,7 +2,6 @@ import streamlit as st
 import os, sys
 import base64
 from Protocoldigitization import *
-from rag import final_state
 
 # So we can import from app/
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
