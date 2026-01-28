@@ -23,8 +23,12 @@ OUTPUT_NAME = "CSR_filled.docx"
 
 SECTION_TO_TEMPLATE_VAR = {
     "Clinical Trial Synopsis": "clinical_trial_synopsis",
-    "Inclusion Criteria": "inclusion_criteria",
-    "Exclusion Criteria": "exclusion_criteria",
+    "Inclusion Criteria" : "inclusion_criteria",
+    "Exclusion Criteria" : "exclusion_criteria",
+    "Subject Withdrawal Criteria" : "subject_withdrawal_criteria",
+    "Study Objectives" : "study_objectives",
+    "Overall Study Design And plan: Description" : "O_study_design",
+    "Discussion of Study Design, Including the Choice of Control Groups" : "D_study_design",
     # add more sections as needed
 }
 
