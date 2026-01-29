@@ -1478,7 +1478,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
     query = build_generic_query({k: active_control[k] for k in ("section", "synonyms")})
     print("matched shema: ", active_control)
-    print("This is the final source query:",query)
+    print("This is the final query:",type(query))
 
     ich_chunks = vector_search_ich(ich_client, ich_query, k_nearest_neighbors=100, filter_expr=filter_expr)
 
@@ -1931,4 +1931,4 @@ def answer(query: str, history: List[Dict]) -> str:
     return final_state.get("answer", "")
 
 
-# answer("Visit Adherence Safety Population - RP Patients in tabuler", [])
+# answer("Subject Disposition Screening Population - RP Patients", [])
