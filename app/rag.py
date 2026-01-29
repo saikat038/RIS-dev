@@ -1252,13 +1252,12 @@ def build_generic_query(payload: dict) -> str:
 import re
 
 def split_section(text: str):
-    if text:
-        match = re.match(r"^\s*([\d\.]+)\s+(.*)$", text)
-        if not match:
-            return None, text.strip()
+    match = re.match(r"^\s*([\d\.]+)\s+(.*)$", text)
+    if not match:
+        return None, text.strip()
 
-        section_number = match.group(1)
-        section_text = match.group(2)
+    section_number = match.group(1)
+    section_text = match.group(2)
 
     return section_number, section_text
 
@@ -1424,21 +1423,14 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     section_name = active_control.get("section", "")
     ich_refs = active_control.get("ich_refs", [])
 
-    if len(ich_refs)>0:
-        section_number,section_text  =split_section(ich_refs[0])
+    section_number,section_text  =split_section(ich_refs[0])
     
-        filter_expr = (
-            f"section_path eq '{section_number}' "
-            f"and section_title eq '{section_text}'"
-        )
-    else:
-        filter_expr = None
-
+    filter_expr = (
+        f"section_path eq '{section_number}' "
+        f"and section_title eq '{section_text}'"
+        
+    )
     ich_query_parts = build_generic_query({k: active_control[k] for k in ('section', 'synonyms')})
-    
-    if len(ich_query_parts) == 0:
-        ich_query_parts = query
-
     print("part ich query:", ich_query_parts)
 
     # optional boost terms if your schema has them
@@ -1452,14 +1444,9 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
     print("Final ich query:", ich_query)
 
-    sourch_query = build_generic_query({k: active_control[k] for k in ("section", "synonyms")})
+    query = build_generic_query({k: active_control[k] for k in ("section", "synonyms")})
     print("matched shema: ", active_control)
     print("This is the final query:",type(query))
-
-
-    if len(sourch_query) == 0:
-        print("inside>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-        sourch_query = query
 
     ich_chunks = vector_search_ich(ich_client, ich_query, k_nearest_neighbors=100, filter_expr=filter_expr)
 
@@ -1488,7 +1475,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     # If filter is not supported in your index, just call without filter
     source_chunks = vector_search_source(
         source_client,
-        sourch_query,
+        query,
         k_nearest_neighbors=100
     )
 
@@ -1912,4 +1899,4 @@ def answer(query: str, history: List[Dict]) -> str:
     return final_state.get("answer", "")
 
 
-answer("Subject Disposition Screening Population - RP Patients", [])
+answer("Summary of Subject Demographics Safety Population - RP Patient", [])
