@@ -1423,7 +1423,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     section_name = active_control.get("section", "")
     ich_refs = active_control.get("ich_refs", [])
 
-    section_number,section_text  =split_section(ich_refs[0])
+    section_number,section_text  = split_section(ich_refs[0])
     
     filter_expr = (
         f"section_path eq '{section_number}' "
