@@ -12,7 +12,7 @@ from app.rag import answer
 # ========================
 
 st.set_page_config(
-    page_title="Regulatory Intelligence System",
+    page_title="Regulatory Authoring Intelligence System",
     layout="wide"
 )
 
