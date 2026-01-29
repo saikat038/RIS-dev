@@ -1406,6 +1406,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     # PICK ACTIVE AUTHORING CONTROL
     # -------------------------------------------------
     active_control = pick_active_control(AUTHORING_CONTROL, query)
+    print(active_control.get("section", ""))
 
     if len(active_control.get("section", "")) == 0:
         active_control = {
@@ -1913,4 +1914,4 @@ def answer(query: str, history: List[Dict]) -> str:
     return final_state.get("answer", "")
 
 
-answer("Subject Disposition Screening Population - RP Patients in tabuler", [])
+answer("Summary of Subject Demographics Safety Population - RP Patients in tabuler", [])
