@@ -1252,12 +1252,13 @@ def build_generic_query(payload: dict) -> str:
 import re
 
 def split_section(text: str):
-    match = re.match(r"^\s*([\d\.]+)\s+(.*)$", text)
-    if not match:
-        return None, text.strip()
+    if text:
+        match = re.match(r"^\s*([\d\.]+)\s+(.*)$", text)
+        if not match:
+            return None, text.strip()
 
-    section_number = match.group(1)
-    section_text = match.group(2)
+        section_number = match.group(1)
+        section_text = match.group(2)
 
     return section_number, section_text
 
@@ -1400,12 +1401,20 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     3. Source Evidence (facts, INCLUDING TABLES)
     """
 
-    query = query = state.get("query", "")
+    # -------------------------------------------------
+    # SAFE QUERY EXTRACTION
+    # -------------------------------------------------
+    query = state.get("query") or ""
+    if not isinstance(query, str):
+        query = ""
 
     # -------------------------------------------------
     # PICK ACTIVE AUTHORING CONTROL
     # -------------------------------------------------
-    active_control = pick_active_control(AUTHORING_CONTROL, query)
+    try:
+        active_control = pick_active_control(AUTHORING_CONTROL, query)
+    except Exception:
+        active_control = None
 
     if not active_control:
         new_state = dict(state)
@@ -1414,48 +1423,61 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         new_state["section_name"] = None
         return new_state
 
+    section_name = active_control.get("section")
 
     # -------------------------------------------------
-    # ICH RETRIEVAL (MANDATORY)
+    # ICH RETRIEVAL (MANDATORY, BUT SAFE)
     # -------------------------------------------------
-    ich_client = load_ich_search_client()
+    try:
+        ich_client = load_ich_search_client()
+    except Exception:
+        ich_client = None
 
-    section_name = active_control.get("section", "")
-    ich_refs = active_control.get("ich_refs", [])
+    ich_refs = active_control.get("ich_refs") or []
 
-    section_number,section_text  =split_section(ich_refs[0])
-    
-    filter_expr = (
-        f"section_path eq '{section_number}' "
-        f"and section_title eq '{section_text}'"
-        
-    )
-    ich_query_parts = build_generic_query({k: active_control[k] for k in ('section', 'synonyms')})
-    print("part ich query:", ich_query_parts)
+    # ---- build filter safely ----
+    filter_expr = None
+    if ich_refs:
+        try:
+            section_number, section_text = split_section(ich_refs[0])
+            if section_number and section_text:
+                filter_expr = (
+                    f"section_path eq '{section_number}' "
+                    f"and section_title eq '{section_text}'"
+                )
+        except Exception:
+            filter_expr = None
 
-    # optional boost terms if your schema has them
-    # if active_control.get("output_style"):
-    #     ich_query_parts.append(active_control["output_style"])
-    # if active_control.get("detail_level"):
-    #     ich_query_parts.append(active_control["detail_level"])
+    # ---- build ICH query safely ----
+    try:
+        ich_query_parts = build_generic_query(
+            {k: active_control[k] for k in ("section", "synonyms") if k in active_control}
+        )
+    except Exception:
+        ich_query_parts = ""
 
-    # ich_query = " ".join([p for p in ich_query_parts if p])
-    ich_query = ich_query_parts
+    if not ich_query_parts:
+        ich_query_parts = query
 
-    print("Final ich query:", ich_query)
+    ich_query = ich_query_parts if isinstance(ich_query_parts, str) else query
 
-    query = build_generic_query({k: active_control[k] for k in ("section", "synonyms")})
-    print("matched shema: ", active_control)
-    print("This is the final query:",type(query))
+    # ---- vector search with internal fallback ----
+    try:
+        ich_chunks = vector_search_ich(
+            ich_client,
+            ich_query,
+            k_nearest_neighbors=100,
+            filter_expr=filter_expr
+        )
+    except Exception:
+        ich_chunks = []
 
-    ich_chunks = vector_search_ich(ich_client, ich_query, k_nearest_neighbors=100, filter_expr=filter_expr)
-
+    # ---- assemble ICH context ----
     ich_context_pieces = [
         (chunk.get("text") or "").strip()
         for chunk in ich_chunks
         if isinstance(chunk, dict) and chunk.get("text")
     ]
-
 
     ich_context = (
         "\n\n".join(ich_context_pieces)
@@ -1463,36 +1485,50 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         else "No ICH guidance found."
     )
 
-
     # -------------------------------------------------
     # SOURCE RETRIEVAL (EVIDENCE + TABLES)
     # -------------------------------------------------
-    source_client = load_source_search_client()
+    try:
+        source_client = load_source_search_client()
+    except Exception:
+        source_client = None
 
-    filter_expr = None  # source index does not support doc_type filtering
+    # ---- build source query ----
+    try:
+        source_query = build_generic_query(
+            {k: active_control[k] for k in ("section", "synonyms") if k in active_control}
+        )
+    except Exception:
+        source_query = ""
 
+    if not source_query:
+        source_query = query
 
-    # If filter is not supported in your index, just call without filter
-    source_chunks = vector_search_source(
-        source_client,
-        query,
-        k_nearest_neighbors=100
-    )
+    # ---- vector search source safely ----
+    try:
+        source_chunks = vector_search_source(
+            source_client,
+            source_query,
+            k_nearest_neighbors=100
+        )
+    except Exception:
+        source_chunks = []
 
-
-
+    # ---- assemble source context ----
     source_context_pieces = []
     for chunk in source_chunks:
-        formatted = format_chunk_for_context(chunk)
-        if formatted:
-            source_context_pieces.append(formatted)
+        try:
+            formatted = format_chunk_for_context(chunk)
+            if formatted:
+                source_context_pieces.append(formatted)
+        except Exception:
+            continue
 
     source_context = (
         "\n\n".join(source_context_pieces)
         if source_context_pieces
         else "No source evidence found."
     )
-
 
     # -------------------------------------------------
     # FINAL MERGED CONTEXT
@@ -1899,4 +1935,4 @@ def answer(query: str, history: List[Dict]) -> str:
     return final_state.get("answer", "")
 
 
-answer("Summary of Subject Demographics Safety Population - RP Patients", [])
+answer("Subject Disposition Screening Population - RP Patients", [])
