@@ -195,6 +195,7 @@ SECTION_TO_TEMPLATE_VAR = {
     "Study Objectives": "study_objectives",
     "Overall Study Design And plan: Description": "O_study_design",
     "Discussion of Study Design, Including the Choice of Control Groups": "D_study_design",
+    "Summary of Subject Demographics Safety Population - RP Patients": "safety_p_rp_p"
 }
 
 # ============================================================
