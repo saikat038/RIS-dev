@@ -43,7 +43,7 @@ if os.path.exists(LOGO_PATH):
         f"""
         <div style="text-align:center; margin-bottom: 1rem;">
             <img src="data:image/png;base64,{logo_b64}" style="width:120px;" />
-            <h1 style="margin-top:0.5rem;">Regulatory Intelligence System</h1>
+            <h1 style="margin-top:0.5rem;">Regulatory Authoring Intelligence System</h1>
         </div>
         """,
         unsafe_allow_html=True,
@@ -51,7 +51,7 @@ if os.path.exists(LOGO_PATH):
 else:
     # Fallback if logo path is wrong
     st.markdown(
-        "<h1 style='text-align:center; margin-top: 0.5rem;'>Regulatory Intelligence System</h1>",
+        "<h1 style='text-align:center; margin-top: 0.5rem;'>Regulatory Authoring Intelligence System</h1>",
         unsafe_allow_html=True,
     )
 
