@@ -1400,12 +1400,25 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     3. Source Evidence (facts, INCLUDING TABLES)
     """
 
-    query = state.get("query", "")
+    query = query = state.get("query", "")
 
     # -------------------------------------------------
     # PICK ACTIVE AUTHORING CONTROL
     # -------------------------------------------------
     active_control = pick_active_control(AUTHORING_CONTROL, query)
+
+    if len(active_control.get("section", "")) == 0:
+        active_control = {
+      "section": query,
+      "synonyms": [query],
+      "ich_refs": [""],
+      "allowed_sources": ["ocu400-101-protocol"],
+      "detail_level": "high",
+      "output_style": "verbatim",
+      "forbidden_content": ["operational procedures"]
+    }
+
+    print("active control",active_control)
 
     if not active_control:
         new_state = dict(state)
@@ -1413,6 +1426,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         new_state["context"] = ""
         new_state["section_name"] = None
         return new_state
+
 
     # -------------------------------------------------
     # ICH RETRIEVAL (MANDATORY)
@@ -1422,22 +1436,15 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     section_name = active_control.get("section", "")
     ich_refs = active_control.get("ich_refs", [])
 
-    if len(ich_refs) > 0:
-        section_number, section_text = split_section(ich_refs[0])
-        filter_expr = (
-            f"section_path eq '{section_number}' "
-            f"and section_title eq '{section_text}'"
-        )
-    else:
-        filter_expr = None
-
-    ich_query_parts = build_generic_query(
-        {k: active_control[k] for k in ("section", "synonyms")}
+    print(ich_refs)
+    section_number,section_text  = split_section(ich_refs[0])
+    
+    filter_expr = (
+        f"section_path eq '{section_number}' "
+        f"and section_title eq '{section_text}'"
+        
     )
-
-    if len(ich_query_parts) == 0:
-        ich_query_parts = query
-
+    ich_query_parts = build_generic_query({k: active_control[k] for k in ('section', 'synonyms')})
     print("part ich query:", ich_query_parts)
 
     # optional boost terms if your schema has them
@@ -1451,23 +1458,11 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
     print("Final ich query:", ich_query)
 
-    sourch_query = build_generic_query(
-        {k: active_control[k] for k in ("section", "synonyms")}
-    )
+    query = build_generic_query({k: active_control[k] for k in ("section", "synonyms")})
+    print("matched shema: ", active_control)
+    print("This is the final query:",type(query))
 
-    print("matched shema:", active_control)
-    print("This is the final query:", type(query))
-
-    if len(sourch_query) == 0:
-        print("inside>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-        sourch_query = query
-
-    ich_chunks = vector_search_ich(
-        ich_client,
-        ich_query,
-        k_nearest_neighbors=100,
-        filter_expr=filter_expr,
-    )
+    ich_chunks = vector_search_ich(ich_client, ich_query, k_nearest_neighbors=100, filter_expr=filter_expr)
 
     ich_context_pieces = [
         (chunk.get("text") or "").strip()
@@ -1475,11 +1470,13 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         if isinstance(chunk, dict) and chunk.get("text")
     ]
 
+
     ich_context = (
         "\n\n".join(ich_context_pieces)
         if ich_context_pieces
         else "No ICH guidance found."
     )
+
 
     # -------------------------------------------------
     # SOURCE RETRIEVAL (EVIDENCE + TABLES)
@@ -1488,14 +1485,17 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
     filter_expr = None  # source index does not support doc_type filtering
 
+
+    # If filter is not supported in your index, just call without filter
     source_chunks = vector_search_source(
         source_client,
-        sourch_query,
-        k_nearest_neighbors=100,
+        query,
+        k_nearest_neighbors=100
     )
 
-    source_context_pieces = []
 
+
+    source_context_pieces = []
     for chunk in source_chunks:
         formatted = format_chunk_for_context(chunk)
         if formatted:
@@ -1506,6 +1506,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         if source_context_pieces
         else "No source evidence found."
     )
+
 
     # -------------------------------------------------
     # FINAL MERGED CONTEXT
@@ -1525,7 +1526,6 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     new_state["context"] = final_context
     new_state["section_name"] = section_name
     return new_state
-
 
 
 # ============================================================
@@ -1913,4 +1913,4 @@ def answer(query: str, history: List[Dict]) -> str:
     return final_state.get("answer", "")
 
 
-answer("Subject Disposition Screening Population - RP Patients", [])
+answer("Subject Disposition Screening Population - RP Patients in tabuler", [])
