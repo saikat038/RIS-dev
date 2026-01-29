@@ -1087,30 +1087,47 @@ Please add this section to the authoring control schema."""
 def pick_active_control(authoring_control: dict, user_query: str) -> dict:
     """
     Pick the most relevant section control from the master schema based on the user's request.
-    This is a deterministic, non-LLM matcher (fast and auditable).
+    Deterministic, non-LLM matcher with ≥70% token overlap.
     """
 
-    q = (user_query or "").lower()
+    def normalize(text: str) -> list[str]:
+        return [
+            t for t in text.lower().replace("-", " ").split()
+            if t.isalnum() or t.isalpha()
+        ]
+
+    q_tokens = set(normalize(user_query or ""))
     sections = authoring_control.get("sections", [])
 
-    # 1) direct keyword match on 'section'
+    # 1) direct keyword match on full section name (unchanged)
     for sec in sections:
         name = (sec.get("section") or "").lower()
-        if name and name in q:
+        if name and name in (user_query or "").lower():
             return sec
 
-    # 2) match on optional synonyms if present
+    # 2) synonym exact containment (unchanged)
     for sec in sections:
         synonyms = sec.get("synonyms", [])
         if isinstance(synonyms, list):
             for s in synonyms:
-                if isinstance(s, str) and s.lower() in q:
+                if isinstance(s, str) and s.lower() in (user_query or "").lower():
                     return sec
 
-    # 3) fallback (you can make this stricter)
-    # If you prefer strict behavior, raise error instead.
+    # 3) ≥70% token overlap match (NEW)
+    for sec in sections:
+        section_name = sec.get("section") or ""
+        sec_tokens = set(normalize(section_name))
+
+        if not sec_tokens:
+            continue
+
+        overlap_ratio = len(sec_tokens & q_tokens) / len(sec_tokens)
+
+        if overlap_ratio >= 0.60:
+            return sec
+
+    # 4) fallback (original behavior preserved)
     return sections[0] if sections else {}
-    # return {}
 
 
     
@@ -1411,7 +1428,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     if len(active_control.get("section", "")) == 0:
         active_control = {
       "section": query,
-      "synonyms": [query],
+      "synonyms": [""],
       "ich_refs": [""],
       "allowed_sources": ["ocu400-101-protocol"],
       "detail_level": "high",
@@ -1914,4 +1931,4 @@ def answer(query: str, history: List[Dict]) -> str:
     return final_state.get("answer", "")
 
 
-answer("Summary of Subject Demographics Safety Population - RP Patients in tabuler", [])
+answer("Subject Disposition Screening Population - RP Patients", [])
