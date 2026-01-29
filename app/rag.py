@@ -1287,7 +1287,7 @@ def split_section(text: str):
 def vector_search_ich(
     search_client,
     query,
-    k_nearest_neighbors=200,
+    k_nearest_neighbors=100,
     filter_expr=None,
 ):
     
@@ -1344,7 +1344,7 @@ def vector_search_ich(
 
 
 
-def vector_search_source(search_client, query, k_nearest_neighbors=200, filter_expr=None):
+def vector_search_source(search_client, query, k_nearest_neighbors=100, filter_expr=None):
     q_vec = batch_embed([query])[0]
     vector_query = VectorizedQuery(vector=q_vec, fields="vector")
 
@@ -1480,7 +1480,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     print("matched shema: ", active_control)
     print("This is the final query:",type(query))
 
-    ich_chunks = vector_search_ich(ich_client, ich_query, k_nearest_neighbors=200, filter_expr=filter_expr)
+    ich_chunks = vector_search_ich(ich_client, ich_query, k_nearest_neighbors=100, filter_expr=filter_expr)
 
     ich_context_pieces = [
         (chunk.get("text") or "").strip()
@@ -1508,7 +1508,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     source_chunks = vector_search_source(
         source_client,
         query,
-        k_nearest_neighbors=200
+        k_nearest_neighbors=100
     )
 
 
