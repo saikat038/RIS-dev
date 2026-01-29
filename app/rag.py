@@ -983,6 +983,7 @@ if ROOT_DIR not in sys.path:
 
 import json
 from typing import List, Dict, TypedDict
+from azure.core.exceptions import HttpResponseError
 
 from openai import AzureOpenAI
 from langgraph.graph import StateGraph, END
@@ -1019,7 +1020,7 @@ from config.settings import (
     BLOB_CONTAINER,
 )
 
-print(AZURE_ICH_SEARCH_INDEX_NAME)
+print("ICH index name: ",AZURE_ICH_SEARCH_INDEX_NAME)
 # ============================================================
 # LOAD AUTHORING SCHEMA FROM BLOB STORAGE
 # ============================================================
@@ -1028,7 +1029,7 @@ def load_authoring_schema_from_blob(schema_name: str) -> dict:
     Load authoring control schema JSON directly from Azure Blob Storage
     into memory (RAM) without downloading to disk.
     """
-    print(schema_name)
+    print("name of the shcema: ",schema_name)
     blob_path = f"{AUTHOR_SCHEMA_PREFIX}{schema_name}"
 
     blob_client = BlobClient.from_connection_string(
@@ -1230,29 +1231,111 @@ def format_chunk_for_context(chunk: Dict) -> str:
     return f"{meta_line}\n{text}".strip()
 
 
+def build_generic_query(payload: dict) -> str:
+    section = payload.get("section", "").strip()
+    synonyms = payload.get("synonyms", [])
+
+    lines = []
+
+    if section:
+        lines.append(f"{section}.")
+
+    if synonyms:
+        lines.append("Also look for content related to the following terms:")
+        for term in synonyms:
+            if term != section:
+                lines.append(f"- {term}")
+
+    return "\n".join(lines)
+
+
+import re
+
+def split_section(text: str):
+    match = re.match(r"^\s*([\d\.]+)\s+(.*)$", text)
+    if not match:
+        return None, text.strip()
+
+    section_number = match.group(1)
+    section_text = match.group(2)
+
+    return section_number, section_text
+
+
+
 # ============================================================
 # VECTOR SEARCH (GENERIC, REUSED)
 # ============================================================
 
-def vector_search_ich(search_client, query, k_nearest_neighbors=100):
-    q_vec = batch_embed([query])[0]
-    vector_query = VectorizedQuery(vector=q_vec, k_nearest_neighbors = k_nearest_neighbors, fields="vector")
-    results = search_client.search(
-        search_text="",
-        vector_queries=[vector_query],
-        select=["text", "section_path", "rule_type"]
-    )
-    return [dict(r) for r in results]
+def vector_search_ich(
+    search_client,
+    query,
+    k_nearest_neighbors=100,
+    filter_expr=None,
+):
+    
+    min_results = 3
+    # ---------- Always-safe guards ----------
+    if not query or not isinstance(query, str):
+        return []   # or log and return empty safely
+
+    try:
+        q_vec = batch_embed([query])[0]
+    except Exception:
+        # Embedding failure → safest fallback
+        return []
+
+    vector_query = VectorizedQuery(vector=q_vec, fields="vector")
+
+    # ---------- Tier 1: vector + filter ----------
+    try:
+        filtered_results = list(
+            search_client.search(
+                search_text=None,
+                vector_queries=[vector_query],
+                filter=filter_expr,
+                top=k_nearest_neighbors,
+                select=["text", "section_path", "rule_type"]
+            )
+        )
+
+        if len(filtered_results) >= min_results:
+            return [dict(r) for r in filtered_results]
+
+    except HttpResponseError:
+        # Filter/schema issues → fallback
+        pass
+
+    except Exception:
+        # Any unexpected Azure/runtime issue → fallback
+        pass
+
+    # ---------- Tier 2: vector-only fallback ----------
+    try:
+        fallback_results = search_client.search(
+            search_text=None,
+            vector_queries=[vector_query],
+            top=k_nearest_neighbors,
+            select=["text", "section_path", "rule_type"]
+        )
+
+        return [dict(r) for r in fallback_results]
+
+    except Exception:
+        # Absolute worst-case safety net
+        return []
+
 
 
 def vector_search_source(search_client, query, k_nearest_neighbors=100, filter_expr=None):
     q_vec = batch_embed([query])[0]
-    vector_query = VectorizedQuery(vector=q_vec, k_nearest_neighbors=k_nearest_neighbors, fields="vector")
+    vector_query = VectorizedQuery(vector=q_vec, fields="vector")
 
     results = search_client.search(
         search_text="",
         vector_queries=[vector_query],
         filter=filter_expr,
+        top=k_nearest_neighbors,
         select=[
             "text",
             "chunk_type",
@@ -1317,13 +1400,12 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     3. Source Evidence (facts, INCLUDING TABLES)
     """
 
-    query = state.get("query", "")
+    query = query = state.get("query", "")
 
     # -------------------------------------------------
     # PICK ACTIVE AUTHORING CONTROL
     # -------------------------------------------------
     active_control = pick_active_control(AUTHORING_CONTROL, query)
-    print(active_control)
 
     if not active_control:
         new_state = dict(state)
@@ -1341,18 +1423,32 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     section_name = active_control.get("section", "")
     ich_refs = active_control.get("ich_refs", [])
 
-    ich_query_parts = [section_name] + ich_refs
+    section_number,section_text  =split_section(ich_refs[0])
+    
+    filter_expr = (
+        f"section_path eq '{section_number}' "
+        f"and section_title eq '{section_text}'"
+        
+    )
+    ich_query_parts = build_generic_query({k: active_control[k] for k in ('section', 'synonyms')})
+    print("part ich query:", ich_query_parts)
 
     # optional boost terms if your schema has them
-    if active_control.get("output_style"):
-        ich_query_parts.append(active_control["output_style"])
-    if active_control.get("detail_level"):
-        ich_query_parts.append(active_control["detail_level"])
+    # if active_control.get("output_style"):
+    #     ich_query_parts.append(active_control["output_style"])
+    # if active_control.get("detail_level"):
+    #     ich_query_parts.append(active_control["detail_level"])
 
-    ich_query = " ".join([p for p in ich_query_parts if p])
+    # ich_query = " ".join([p for p in ich_query_parts if p])
+    ich_query = ich_query_parts
 
+    print("Final ich query:", ich_query)
 
-    ich_chunks = vector_search_ich(ich_client, ich_query, k_nearest_neighbors=100)
+    query = build_generic_query({k: active_control[k] for k in ("section", "synonyms")})
+    print("matched shema: ", active_control)
+    print("This is the final query:",type(query))
+
+    ich_chunks = vector_search_ich(ich_client, ich_query, k_nearest_neighbors=100, filter_expr=filter_expr)
 
     ich_context_pieces = [
         (chunk.get("text") or "").strip()
@@ -1793,7 +1889,7 @@ def answer(query: str, history: List[Dict]) -> str:
     final_state = rag_graph.invoke(initial_state)
 
     section_name = final_state.get("section_name")
-    print(section_name)
+    print("Section name: ",section_name)
 
     store_temp_llm_output(
         section_name=section_name,
@@ -1803,4 +1899,4 @@ def answer(query: str, history: List[Dict]) -> str:
     return final_state.get("answer", "")
 
 
-# answer("populate synopsis", [])
+answer("Summary of Subject Demographics Safety Population - RP Patients", [])
