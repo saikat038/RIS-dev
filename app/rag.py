@@ -1344,84 +1344,124 @@ def split_section(text: str):
 # VECTOR SEARCH (GENERIC, REUSED)
 # ============================================================
 
+import re
+from typing import Dict, Any, List, Optional
+
+PAGE_POINTER_PATTERNS = [
+    r"\bPage\s+\d+\s+of\s+\d+\b",
+    r"\b\d+/\d+\b",
+    r"\bProgram name:\b",
+    r"\bSDTM date:\b",
+    r"\bAnalysis date:\b",
+]
+
 def vector_search_ich(
     search_client,
-    query,
-    k_nearest_neighbors=100,
-    filter_expr=None,
+    query: str,
+    k_nearest_neighbors: int = 100,
+    filter_expr: Optional[str] = None,
 ):
-    
+    """
+    Vector search against ICH index.
+    IMPORTANT: k is set on VectorizedQuery (not only top).
+    """
     min_results = 3
-    # ---------- Always-safe guards ----------
+
     if not query or not isinstance(query, str):
-        return []   # or log and return empty safely
+        return []
 
     try:
         q_vec = batch_embed([query])[0]
     except Exception:
-        # Embedding failure → safest fallback
         return []
 
-    vector_query = VectorizedQuery(vector=q_vec, fields="vector")
+    vector_query = VectorizedQuery(
+        vector=q_vec,
+        fields="vector",
+        k_nearest_neighbors=k_nearest_neighbors
+    )
 
-    # ---------- Tier 1: vector + filter ----------
+    # Tier 1: vector + filter
     try:
         filtered_results = list(
             search_client.search(
-                search_text=None,
+                search_text=None,                 # vector-only
                 vector_queries=[vector_query],
                 filter=filter_expr,
-                top=k_nearest_neighbors,
+                top=k_nearest_neighbors,          # cap returned docs
                 select=["text", "section_path", "rule_type"]
             )
         )
-
         if len(filtered_results) >= min_results:
             return [dict(r) for r in filtered_results]
 
     except HttpResponseError:
-        # Filter/schema issues → fallback
         pass
-
     except Exception:
-        # Any unexpected Azure/runtime issue → fallback
         pass
 
-    # ---------- Tier 2: vector-only fallback ----------
+    # Tier 2: vector-only fallback
     try:
-        fallback_results = search_client.search(
-            search_text=None,
-            vector_queries=[vector_query],
-            top=k_nearest_neighbors,
-            select=["text", "section_path", "rule_type"]
+        fallback_results = list(
+            search_client.search(
+                search_text=None,
+                vector_queries=[vector_query],
+                top=k_nearest_neighbors,
+                select=["text", "section_path", "rule_type"]
+            )
         )
-
         return [dict(r) for r in fallback_results]
 
     except Exception:
-        # Absolute worst-case safety net
         return []
 
 
+def vector_search_source(
+    search_client,
+    query: str,
+    k_nearest_neighbors: int = 100,
+    filter_expr: Optional[str] = None,
+    hybrid: bool = False,
+):
+    """
+    Source KB retrieval.
+    - vector-only: search_text=None (recommended for clean retrieval)
+    - hybrid: search_text=query (if you want lexical+vector)
+    """
+    if not query or not isinstance(query, str):
+        return []
 
-def vector_search_source(search_client, query, k_nearest_neighbors=100, filter_expr=None):
-    q_vec = batch_embed([query])[0]
-    vector_query = VectorizedQuery(vector=q_vec, fields="vector")
+    try:
+        q_vec = batch_embed([query])[0]
+    except Exception:
+        return []
 
-    results = search_client.search(
-        search_text="",
-        vector_queries=[vector_query],
-        filter=filter_expr,
-        top=k_nearest_neighbors,
-        select=[
-            "text",
-            "chunk_type",
-            "heading_path",
-            "page_numbers",
-            "doc_id",
-        ]
+    vector_query = VectorizedQuery(
+        vector=q_vec,
+        fields="vector",
+        k_nearest_neighbors=k_nearest_neighbors
     )
-    return [dict(r) for r in results]
+
+    # choose search_text mode
+    search_text = query if hybrid else None
+
+    try:
+        results = search_client.search(
+            search_text=search_text,
+            vector_queries=[vector_query],
+            filter=filter_expr,
+            top=k_nearest_neighbors,
+            select=[
+                "text",
+                "chunk_type",
+                "heading_path",
+                "page_numbers",
+                "doc_id",
+            ]
+        )
+        return [dict(r) for r in results]
+    except Exception:
+        return []
 
 
 # ============================================================
