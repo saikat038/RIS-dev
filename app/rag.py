@@ -1220,16 +1220,21 @@ def load_ich_search_client() -> SearchClient:
 # HELPER
 # ============================================================
 import re
-from typing import Dict, Any, List, Tuple
+from typing import Dict, Any
 
-# --- Generic page-pointer patterns (not table-specific) ---
 PAGE_POINTER_PATTERNS = [
-    r"\bPage\s+\d+\s+of\s+\d+\b",   # Page 1 of 7
-    r"\b\d+/\d+\b",                 # 25/1451
+    r"\bPage\s+\d+\s+of\s+\d+\b",
+    r"\b\d+/\d+\b",
     r"\bProgram name:\b",
     r"\bSDTM date:\b",
     r"\bAnalysis date:\b",
 ]
+
+def _is_page_pointer_heavy(text: str) -> bool:
+    t = text.strip()
+    hits = sum(bool(re.search(p, t, flags=re.IGNORECASE)) for p in PAGE_POINTER_PATTERNS)
+    # "heavy" if it looks like mostly logistics and not content
+    return hits >= 2 and len(t.split()) < 60
 
 def _normalize_heading(heading: Any) -> str:
     if not heading:
@@ -1245,127 +1250,19 @@ def _normalize_pages(pages: Any) -> str:
         return ",".join(str(p).strip() for p in pages if str(p).strip())
     return str(pages).strip()
 
-def _numeric_density(text: str) -> float:
-    if not text:
-        return 0.0
-    digits = sum(ch.isdigit() for ch in text)
-    return digits / max(len(text), 1)
-
-def _count_numeric_tokens(line: str) -> int:
-    return len(re.findall(r"[-+]?\d+(?:\.\d+)?", line))
-
-def _has_multi_space_columns(line: str) -> bool:
-    # looks like fixed-width columns: "Word<2+ spaces>Word"
-    return bool(re.search(r"\S\s{2,}\S", line))
-
-def _is_toc_like(text: str) -> bool:
-    """
-    Dynamic TOC detector (no keywords):
-    If many lines end with a small page number (often " | 18" or "... 18"),
-    and table-body signals are weak, treat as TOC/list-of-things.
-    """
-    lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
-    if len(lines) < 6:
-        return False
-
-    # lines ending in a page-like number (1-4 digits), optionally after pipes
-    page_end = 0
-    for ln in lines[:80]:
-        if re.search(r"(?:\|\s*)?\b\d{1,4}\b\s*$", ln):
-            page_end += 1
-
-    ratio = page_end / max(len(lines[:80]), 1)
-
-    # TOCs usually have low numeric density overall (mostly titles + page numbers)
-    nd = _numeric_density(text)
-
-    # If lots of lines end in page number AND overall numeric density is low,
-    # it's probably TOC/list pages.
-    return (ratio >= 0.45 and nd < 0.06)
-
-def _is_page_pointer_heavy(text: str) -> bool:
-    """
-    Drops chunks that look like mostly headers/footers/logistics.
-    But if the chunk looks strongly table-like, we keep it.
-    """
-    t = text.strip()
-    hits = sum(bool(re.search(p, t, flags=re.IGNORECASE)) for p in PAGE_POINTER_PATTERNS)
-
-    # If it's small and contains many footer markers, likely just footer/header.
-    if hits >= 2 and len(t.split()) < 60:
-        return True
-    return False
-
-def _looks_like_pipe_or_tab_table(text: str) -> bool:
+def _looks_like_table(text: str) -> bool:
+    # Simple but effective: multiple lines + delimiter OR tabs
     lines = [ln for ln in text.splitlines() if ln.strip()]
     return ("\t" in text) or (sum("|" in ln for ln in lines) >= 2)
 
-def _looks_like_fixed_width_table(text: str) -> bool:
-    """
-    Dynamic fixed-width table detector:
-    - multiple non-empty lines
-    - multiple lines have multi-space column gaps
-    - multiple lines have 2+ numeric tokens (typical of table body)
-    """
-    lines = [ln.rstrip() for ln in text.splitlines() if ln.strip()]
-    if len(lines) < 4:
-        return False
-
-    gap_lines = sum(1 for ln in lines[:60] if _has_multi_space_columns(ln))
-    numeric_lines = sum(1 for ln in lines[:60] if _count_numeric_tokens(ln) >= 2)
-
-    # Balanced heuristic: needs evidence of both "column structure" and "numbers"
-    return (gap_lines >= 3 and numeric_lines >= 3)
-
-def _looks_like_table(text: str) -> bool:
-    return _looks_like_pipe_or_tab_table(text) or _looks_like_fixed_width_table(text)
-
-def _pipe_table_has_rows_and_cols(text: str) -> bool:
+def _table_has_rows_and_cols(text: str) -> bool:
+    # Require at least 2 non-empty delimiter lines and at least 2 columns
     lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
     delim_lines = [ln for ln in lines if "|" in ln]
     if len(delim_lines) < 2:
         return False
+    # ensure at least one row has >= 2 separators (=> >=3 cells)
     return any(ln.count("|") >= 2 for ln in delim_lines)
-
-def _fixed_width_has_rows_and_cols(text: str) -> bool:
-    """
-    Validate fixed-width tables without knowing column names:
-    - require >= 3 lines that look columnar (multi-space splits)
-    - require at least one line with >= 3 implied columns
-    """
-    lines = [ln.rstrip() for ln in text.splitlines() if ln.strip()]
-    if len(lines) < 4:
-        return False
-
-    columnar = [ln for ln in lines if _has_multi_space_columns(ln)]
-    if len(columnar) < 3:
-        return False
-
-    # estimate columns by splitting on 2+ spaces
-    def col_count(ln: str) -> int:
-        cols = [c for c in re.split(r"\s{2,}", ln.strip()) if c]
-        return len(cols)
-
-    return any(col_count(ln) >= 3 for ln in columnar)
-
-def _table_has_rows_and_cols(text: str) -> bool:
-    if _looks_like_pipe_or_tab_table(text):
-        return _pipe_table_has_rows_and_cols(text)
-    return _fixed_width_has_rows_and_cols(text)
-
-def _strip_footer_noise(text: str) -> str:
-    """
-    Remove footer metadata lines that often repeat, but keep content.
-    This is generic (doesn't assume table names).
-    """
-    out = []
-    for ln in text.splitlines():
-        # drop short lines that are clearly footer markers
-        if re.search(r"\b(SDTM date:|Program name:|Analysis date:)\b", ln, flags=re.I):
-            if len(ln.strip().split()) <= 10:
-                continue
-        out.append(ln)
-    return "\n".join(out).strip()
 
 def format_chunk_for_context(chunk: Dict) -> str:
     if not isinstance(chunk, dict):
@@ -1383,30 +1280,21 @@ def format_chunk_for_context(chunk: Dict) -> str:
     if chunk_type == "heading":
         return ""
 
-    # 2) Drop TOC-like chunks (dynamic detector)
-    # This is NOT hardcoding specific table names; it's structural detection.
-    if _is_toc_like(text):
+    # 2) Drop obvious page-pointer chunks
+    if _is_page_pointer_heavy(text):
         return ""
 
-    # 3) Drop obvious page-pointer-only chunks
-    # But don't drop if it looks like a real table (tables often contain footer markers).
-    if _is_page_pointer_heavy(text) and not _looks_like_table(text):
-        return ""
-
-    # 4) Enforce table rule if declared table (now supports fixed-width tables)
+    # 3) Enforce table rule if declared table
     if chunk_type == "table":
         if not _looks_like_table(text) or not _table_has_rows_and_cols(text):
             return ""
-        text = _strip_footer_noise(text)
 
-    # 5) Drop very short chunks unless definition-like or table-like
+    # 4) Drop very short chunks unless they look like a table or a definition/note
     short = len(text.split()) < 15
     has_delims = ("|" in text) or ("\t" in text)
     looks_definition = bool(re.search(r"\b(is defined as|defined as|Note:|Baseline)\b", text, flags=re.I))
     if short and not has_delims and not looks_definition:
-        # keep if it still looks like a fixed-width table row
-        if not _looks_like_fixed_width_table(text):
-            return ""
+        return ""
 
     meta = []
     if heading:
