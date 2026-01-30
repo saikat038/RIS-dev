@@ -1263,7 +1263,7 @@ def build_generic_query(payload: dict) -> str:
             if term != section:
                 lines.append(f"- {term}")
     else:
-        lines = [f"{lines[0]}in study subject", ""]
+        lines = [f"{lines[0]}complete information from study", ""]
 
     return "\n".join(lines)
 
