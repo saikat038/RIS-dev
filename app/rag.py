@@ -1123,7 +1123,7 @@ def pick_active_control(authoring_control: dict, user_query: str) -> dict:
 
         overlap_ratio = len(sec_tokens & q_tokens) / len(sec_tokens)
 
-        if overlap_ratio >= 0.60:
+        if overlap_ratio >= 0.8:
             return sec
 
     # 4) fallback (original behavior preserved)
@@ -1956,4 +1956,4 @@ def answer(query: str, history: List[Dict]) -> str:
     return final_state.get("answer", "")
 
 
-# answer("Summary of Subject Demographics Safety Population of rp patient", [])
+# answer("Summary of Baseline and Clinical Characteristics Safety Population - RP Patients in tabuler", [])
