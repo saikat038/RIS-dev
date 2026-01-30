@@ -1123,7 +1123,7 @@ def pick_active_control(authoring_control: dict, user_query: str) -> dict:
 
         overlap_ratio = len(sec_tokens & q_tokens) / len(sec_tokens)
 
-        if overlap_ratio >= 0.8:
+        if overlap_ratio >= 0.75:
             return sec
 
     # 4) fallback (original behavior preserved)
@@ -1481,22 +1481,26 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     print("matched shema: ", active_control)
     print("This is the final query:",type(query))
 
-    ich_chunks = vector_search_ich(ich_client, ich_query, k_nearest_neighbors=100, filter_expr=filter_expr)
 
-    ich_context_pieces = [
-        (chunk.get("text") or "").strip()
-        for chunk in ich_chunks
-        if isinstance(chunk, dict) and chunk.get("text")
-    ]
+    if len(active_control.get("synonyms", ""))>1:
+        ich_chunks = vector_search_ich(ich_client, ich_query, k_nearest_neighbors=100, filter_expr=filter_expr)
+        
+
+        ich_context_pieces = [
+            (chunk.get("text") or "").strip()
+            for chunk in ich_chunks
+            if isinstance(chunk, dict) and chunk.get("text")
+        ]
 
 
-    ich_context = (
-        "\n\n".join(ich_context_pieces)
-        if ich_context_pieces
-        else "No ICH guidance found."
-    )
+        ich_context = (
+            "\n\n".join(ich_context_pieces)
+            if ich_context_pieces
+            else "No ICH guidance found."
+        )
 
-    print("ICH context >>>>>>>>>>>>>>>>>>>>>>>>>>>>>", ich_context)
+        print("ICH context >>>>>>>>>>>>>>>>>>>>>>>>>>>>>", ich_context)
+
 
 
     # -------------------------------------------------
@@ -1956,4 +1960,4 @@ def answer(query: str, history: List[Dict]) -> str:
     return final_state.get("answer", "")
 
 
-# answer("Summary of Baseline and Clinical Characteristics Safety Population - RP Patients in tabuler", [])
+# answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
