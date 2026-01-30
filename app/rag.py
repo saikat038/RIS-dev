@@ -1439,7 +1439,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
       "section": query,
       "synonyms": [""],
       "ich_refs": [""],
-      "allowed_sources": ["ocu400-101-protocol"],
+      "allowed_sources": ["ocu400-101-protocol.PDF", "OCU401_CSR_Final_Tables.PDF"],
       "detail_level": "high",
       "output_style": "verbatim",
       "forbidden_content": ["operational procedures"]
