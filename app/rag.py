@@ -1255,18 +1255,19 @@ def build_generic_query(payload: dict) -> str:
     lines = []
 
     if section:
-        lines.append(f"{section}.")
+        lines.append(f"{section} ")
 
-    if synonyms:
+    if len(synonyms)>1:
         lines.append("Also look for content related to the following terms:")
         for term in synonyms:
             if term != section:
                 lines.append(f"- {term}")
+    else:
+        lines = [f"{lines[0]}in study subject", ""]
 
     return "\n".join(lines)
 
 
-import re
 
 def split_section(text: str):
     match = re.match(r"^\s*([\d\.]+)\s+(.*)$", text)
@@ -1462,7 +1463,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         f"and section_title eq '{section_text}'"
         
     )
-    ich_query_parts = build_generic_query({k: active_control[k] for k in ('section', 'synonyms')})
+    ich_query_parts = build_generic_query({k: active_control[k] for k in ('section', 'synonyms')}).strip()
     print("part ich query:", ich_query_parts)
 
     # optional boost terms if your schema has them
@@ -1476,7 +1477,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
     print("Final ich query:", ich_query)
 
-    query = build_generic_query({k: active_control[k] for k in ("section", "synonyms")})
+    query = build_generic_query({k: active_control[k] for k in ("section", "synonyms")}).strip()
     print("matched shema: ", active_control)
     print("This is the final query:",type(query))
 
@@ -1931,4 +1932,4 @@ def answer(query: str, history: List[Dict]) -> str:
     return final_state.get("answer", "")
 
 
-# answer("Subject Disposition Screening Population - RP Patients", [])
+# answer("Summary of Baseline and Clinical Characteristics", [])
