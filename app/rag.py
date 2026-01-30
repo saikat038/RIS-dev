@@ -1219,33 +1219,92 @@ def load_ich_search_client() -> SearchClient:
 # ============================================================
 # HELPER
 # ============================================================
+import re
+from typing import Dict, Any
+
+PAGE_POINTER_PATTERNS = [
+    r"\bPage\s+\d+\s+of\s+\d+\b",
+    r"\b\d+/\d+\b",
+    r"\bProgram name:\b",
+    r"\bSDTM date:\b",
+    r"\bAnalysis date:\b",
+]
+
+def _is_page_pointer_heavy(text: str) -> bool:
+    t = text.strip()
+    hits = sum(bool(re.search(p, t, flags=re.IGNORECASE)) for p in PAGE_POINTER_PATTERNS)
+    # "heavy" if it looks like mostly logistics and not content
+    return hits >= 2 and len(t.split()) < 60
+
+def _normalize_heading(heading: Any) -> str:
+    if not heading:
+        return ""
+    if isinstance(heading, (list, tuple)):
+        return " > ".join(str(x).strip() for x in heading if str(x).strip())
+    return str(heading).strip()
+
+def _normalize_pages(pages: Any) -> str:
+    if not pages:
+        return ""
+    if isinstance(pages, (list, tuple)):
+        return ",".join(str(p).strip() for p in pages if str(p).strip())
+    return str(pages).strip()
+
+def _looks_like_table(text: str) -> bool:
+    # Simple but effective: multiple lines + delimiter OR tabs
+    lines = [ln for ln in text.splitlines() if ln.strip()]
+    return ("\t" in text) or (sum("|" in ln for ln in lines) >= 2)
+
+def _table_has_rows_and_cols(text: str) -> bool:
+    # Require at least 2 non-empty delimiter lines and at least 2 columns
+    lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
+    delim_lines = [ln for ln in lines if "|" in ln]
+    if len(delim_lines) < 2:
+        return False
+    # ensure at least one row has >= 2 separators (=> >=3 cells)
+    return any(ln.count("|") >= 2 for ln in delim_lines)
+
 def format_chunk_for_context(chunk: Dict) -> str:
-    """
-    Format SOURCE chunks.
-    Table chunks are preserved semantically (not structurally).
-    """
     if not isinstance(chunk, dict):
-        return str(chunk)
+        return ""
 
     text = (chunk.get("text") or "").strip()
     if not text:
         return ""
 
-    chunk_type = chunk.get("chunk_type")
-    heading = chunk.get("heading_path")
-    pages = chunk.get("page_numbers")
+    chunk_type = (chunk.get("chunk_type") or "").strip().lower()
+    heading = _normalize_heading(chunk.get("heading_path"))
+    pages = _normalize_pages(chunk.get("page_numbers"))
+
+    # 1) Drop heading-only chunks
+    if chunk_type == "heading":
+        return ""
+
+    # 2) Drop obvious page-pointer chunks
+    if _is_page_pointer_heavy(text):
+        return ""
+
+    # 3) Enforce table rule if declared table
+    if chunk_type == "table":
+        if not _looks_like_table(text) or not _table_has_rows_and_cols(text):
+            return ""
+
+    # 4) Drop very short chunks unless they look like a table or a definition/note
+    short = len(text.split()) < 15
+    has_delims = ("|" in text) or ("\t" in text)
+    looks_definition = bool(re.search(r"\b(is defined as|defined as|Note:|Baseline)\b", text, flags=re.I))
+    if short and not has_delims and not looks_definition:
+        return ""
 
     meta = []
-    if chunk_type:
-        meta.append(f"type={chunk_type}")
     if heading:
         meta.append(f"section={heading}")
     if pages:
         meta.append(f"pages={pages}")
-
     meta_line = f"[{', '.join(meta)}]" if meta else ""
 
-    return f"{meta_line}\n{text}".strip()
+    return f"{text}\n{meta_line}".strip()
+
 
 
 def build_generic_query(payload: dict) -> str:
@@ -1431,7 +1490,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
       "section": query,
       "synonyms": [""],
       "ich_refs": [""],
-      "allowed_sources": ["ocu400-101-protocol"],
+      "allowed_sources": ["ocu400-101-protocol", "OCU401_CSR_Final_Tables.PDF"],
       "detail_level": "high",
       "output_style": "verbatim",
       "forbidden_content": ["operational procedures"]
@@ -1569,6 +1628,9 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         new_state = dict(state)
         new_state["context"] = final_context
         new_state["section_name"] = section_name
+
+    
+    print("\n\nnew state:\n",new_state)
 
 
 
@@ -1960,4 +2022,4 @@ def answer(query: str, history: List[Dict]) -> str:
     return final_state.get("answer", "")
 
 
-# answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
+answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
