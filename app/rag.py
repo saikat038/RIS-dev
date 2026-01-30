@@ -1496,6 +1496,8 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         else "No ICH guidance found."
     )
 
+    print("ICH context >>>>>>>>>>>>>>>>>>>>>>>>>>>>>", ich_context)
+
 
     # -------------------------------------------------
     # SOURCE RETRIEVAL (EVIDENCE + TABLES)
@@ -1526,24 +1528,46 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         else "No source evidence found."
     )
 
+    if len(active_control.get("synonyms", ""))>1:
+        # -------------------------------------------------
+        # FINAL MERGED CONTEXT (meta data driven)
+        # -------------------------------------------------
+        print("inside meta driven mode >>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+        final_context = f"""
+        [AUTHORING CONTROL]
+        {json.dumps(active_control, indent=2)}
 
-    # -------------------------------------------------
-    # FINAL MERGED CONTEXT
-    # -------------------------------------------------
-    final_context = f"""
-[AUTHORING CONTROL]
-{json.dumps(active_control, indent=2)}
+        [ICH GUIDELINES]
+        {ich_context}
 
-[ICH GUIDELINES]
-{ich_context}
+        [SOURCE EVIDENCE]
+        {source_context}
+        """.strip()
 
-[SOURCE EVIDENCE]
-{source_context}
-""".strip()
+        new_state = dict(state)
+        new_state["context"] = final_context
+        new_state["section_name"] = section_name
 
-    new_state = dict(state)
-    new_state["context"] = final_context
-    new_state["section_name"] = section_name
+
+    else:
+        print("inside Q&A mode ?????????????????????????????????????")
+        # -------------------------------------------------
+        # FINAL MERGED CONTEXT (Q&A)
+        # -------------------------------------------------
+        final_context = f"""
+        [AUTHORING CONTROL]
+        {json.dumps(active_control, indent=2)}
+
+        [SOURCE EVIDENCE]
+        {source_context}
+        """.strip()
+
+        new_state = dict(state)
+        new_state["context"] = final_context
+        new_state["section_name"] = section_name
+
+
+
     return new_state
 
 
@@ -1932,4 +1956,4 @@ def answer(query: str, history: List[Dict]) -> str:
     return final_state.get("answer", "")
 
 
-# answer("Summary of Baseline and Clinical Characteristics", [])
+# answer("Summary of Subject Demographics Safety Population of rp patient", [])
