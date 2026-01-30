@@ -1467,55 +1467,6 @@ class RAGState(TypedDict, total=False):
 # NODE 1 — RETRIEVE CONTEXT (ICH FIRST, SOURCE SECOND)
 # ============================================================
 
-import re
-
-def _normalize_ws(s: str) -> str:
-    return " ".join((s or "").strip().split())
-
-def make_retrieval_query(user_query: str, active_control: dict) -> str:
-    """
-    Build a high-signal, document-style query for vector search
-    when metadata is weak or missing.
-    """
-
-    uq = _normalize_ws(user_query)
-
-    # Strip instruction-like phrases (bad for vector search)
-    uq = re.sub(
-        r"\b(in\s+tabular|tabular|table\s+format|also\s+look\s+for|give\s+me|show\s+me)\b",
-        "",
-        uq,
-        flags=re.I,
-    )
-    uq = _normalize_ws(uq)
-
-    section = _normalize_ws(active_control.get("section", ""))
-    synonyms = active_control.get("synonyms") or []
-
-    clean_synonyms = [
-        _normalize_ws(s)
-        for s in synonyms
-        if isinstance(s, str) and _normalize_ws(s)
-    ]
-
-    parts = []
-    if section:
-        parts.append(section)
-    parts.extend(clean_synonyms[:5])
-    parts.append(uq)
-
-    # de-duplicate, preserve order
-    seen = set()
-    ordered = []
-    for p in parts:
-        key = p.lower()
-        if key and key not in seen:
-            seen.add(key)
-            ordered.append(p)
-
-    return _normalize_ws(" ".join(ordered))
-
-
 def retrieve_context_node(state: RAGState) -> RAGState:
     """
     Retrieves context for AUTHORING.
@@ -1526,59 +1477,80 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     3. Source Evidence (facts, INCLUDING TABLES)
     """
 
-    user_query = state.get("query", "")
+    query = query = state.get("query", "")
 
     # -------------------------------------------------
     # PICK ACTIVE AUTHORING CONTROL
     # -------------------------------------------------
-    active_control = pick_active_control(AUTHORING_CONTROL, user_query)
+    active_control = pick_active_control(AUTHORING_CONTROL, query)
+    print(active_control.get("section", ""))
 
-    # Fallback control when metadata does not match
-    if not active_control or not active_control.get("section"):
+    if len(active_control.get("section", "")) == 0:
         active_control = {
-            "section": user_query,
-            "synonyms": [],
-            "ich_refs": [],
-            "allowed_sources": [
-                "ocu400-101-protocol",
-                "OCU401_CSR_Final_Tables.PDF",
-            ],
-            "detail_level": "high",
-            "output_style": "regulatory author",
-            "forbidden_content": ["operational procedures"],
-        }
+      "section": query,
+      "synonyms": [""],
+      "ich_refs": [""],
+      "allowed_sources": ["ocu400-101-protocol", "OCU401_CSR_Final_Tables.PDF"],
+      "detail_level": "high",
+      "output_style": "regulatory author",
+      "forbidden_content": ["operational procedures"]
+    }
 
-    section_name = active_control.get("section")
+    print("active control",active_control)
+
+    if not active_control:
+        new_state = dict(state)
+        new_state["answer"] = build_missing_section_message(AUTHORING_CONTROL)
+        new_state["context"] = ""
+        new_state["section_name"] = None
+        return new_state
+
 
     # -------------------------------------------------
-    # ICH RETRIEVAL (ONLY IF METADATA EXISTS)
+    # ICH RETRIEVAL (MANDATORY)
     # -------------------------------------------------
-    ich_context = ""
-    ich_refs = active_control.get("ich_refs") or []
+    ich_client = load_ich_search_client()
 
-    if ich_refs:
-        ich_client = load_ich_search_client()
+    section_name = active_control.get("section", "")
+    ich_refs = active_control.get("ich_refs", [])
 
-        section_number, section_text = split_section(ich_refs[0])
-        filter_expr = (
-            f"section_path eq '{section_number}' "
-            f"and section_title eq '{section_text}'"
-        )
+    print(ich_refs)
+    section_number,section_text  = split_section(ich_refs[0])
+    
+    filter_expr = (
+        f"section_path eq '{section_number}' "
+        f"and section_title eq '{section_text}'"
+        
+    )
+    ich_query_parts = build_generic_query({k: active_control[k] for k in ('section', 'synonyms')}).strip()
+    print("part ich query:", ich_query_parts)
 
-        ich_query = make_retrieval_query(user_query, active_control)
+    # optional boost terms if your schema has them
+    # if active_control.get("output_style"):
+    #     ich_query_parts.append(active_control["output_style"])
+    # if active_control.get("detail_level"):
+    #     ich_query_parts.append(active_control["detail_level"])
 
-        ich_chunks = vector_search_ich(
-            ich_client,
-            ich_query,
-            k_nearest_neighbors=100,
-            filter_expr=filter_expr,
-        )
+    # ich_query = " ".join([p for p in ich_query_parts if p])
+    ich_query = ich_query_parts
+
+    print("Final ich query:", ich_query)
+
+    query = build_generic_query({k: active_control[k] for k in ("section", "synonyms")}).strip()
+    print("matched shema: ", active_control)
+    print("This is the final query:",type(query))
+
+
+    if len(active_control.get("synonyms", ""))>1:
+        ich_chunks = vector_search_ich(ich_client, ich_query, k_nearest_neighbors=100, filter_expr=filter_expr)
+        
 
         ich_context_pieces = [
-            (c.get("text") or "").strip()
-            for c in ich_chunks
-            if isinstance(c, dict) and c.get("text")
+            (chunk.get("text") or "").strip()
+            for chunk in ich_chunks
+            if isinstance(chunk, dict) and chunk.get("text")
         ]
+
 
         ich_context = (
             "\n\n".join(ich_context_pieces)
@@ -1586,18 +1558,26 @@ def retrieve_context_node(state: RAGState) -> RAGState:
             else "No ICH guidance found."
         )
 
+        print("ICH context >>>>>>>>>>>>>>>>>>>>>>>>>>>>>", ich_context)
+
+
+
     # -------------------------------------------------
-    # SOURCE RETRIEVAL (ALWAYS)
+    # SOURCE RETRIEVAL (EVIDENCE + TABLES)
     # -------------------------------------------------
     source_client = load_source_search_client()
 
-    retrieval_query = make_retrieval_query(user_query, active_control)
+    filter_expr = None  # source index does not support doc_type filtering
 
+
+    # If filter is not supported in your index, just call without filter
     source_chunks = vector_search_source(
         source_client,
-        retrieval_query,
-        k_nearest_neighbors=100,
+        query,
+        k_nearest_neighbors=100
     )
+
+
 
     source_context_pieces = []
     for chunk in source_chunks:
@@ -1611,36 +1591,51 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         else "No source evidence found."
     )
 
-    # -------------------------------------------------
-    # FINAL MERGED CONTEXT
-    # -------------------------------------------------
-    if ich_refs:
-        # metadata-driven authoring
+    
+
+    if len(active_control.get("synonyms", ""))>1:
+        # -------------------------------------------------
+        # FINAL MERGED CONTEXT (meta data driven)
+        # -------------------------------------------------
+        print("inside meta driven mode >>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
         final_context = f"""
-[AUTHORING CONTROL]
-{json.dumps(active_control, indent=2)}
+        [AUTHORING CONTROL]
+        {json.dumps(active_control, indent=2)}
 
-[ICH GUIDELINES]
-{ich_context}
+        [ICH GUIDELINES]
+        {ich_context}
 
-[SOURCE EVIDENCE]
-{source_context}
-""".strip()
+        [SOURCE EVIDENCE]
+        {source_context}
+        """.strip()
+
+        new_state = dict(state)
+        new_state["context"] = final_context
+        new_state["section_name"] = section_name
+
+
     else:
-        # Q&A mode (no ICH metadata)
+        print("inside Q&A mode ?????????????????????????????????????")
+        # -------------------------------------------------
+        # FINAL MERGED CONTEXT (Q&A)
+        # -------------------------------------------------
         final_context = f"""
-[AUTHORING CONTROL]
-{json.dumps(active_control, indent=2)}
+        [AUTHORING CONTROL]
+        {json.dumps(active_control, indent=2)}
 
-[SOURCE EVIDENCE]
-{source_context}
-""".strip()
+        [SOURCE EVIDENCE]
+        {source_context}
+        """.strip()
 
-    new_state = dict(state)
-    new_state["context"] = final_context
-    new_state["section_name"] = section_name
+        new_state = dict(state)
+        new_state["context"] = final_context
+        new_state["section_name"] = section_name
+
+    
+
+
+    print("\n\nSource context >>>>>>>>>>>>>>>>>>:\n",new_state)
     return new_state
-
 
 
 # ============================================================
