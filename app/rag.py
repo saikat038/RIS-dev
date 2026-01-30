@@ -1404,105 +1404,6 @@ def vector_search_ich(
 
 
 
-import re
-from azure.search.documents.models import VectorizedQuery
-
-PAGE_OF_RE = re.compile(r"\bPage\s+(\d+)\s+of\s+(\d+)\b", re.I)
-
-def page_of(text: str):
-    m = PAGE_OF_RE.search(text or "")
-    if not m:
-        return None
-    return int(m.group(1)), int(m.group(2))
-
-def build_doc_filter(doc_ids):
-    # simple robust filter for doc_id
-    ors = []
-    for d in doc_ids or []:
-        d = (d or "").strip()
-        if not d:
-            continue
-        base = re.sub(r"\.pdf$", "", d, flags=re.I)
-        ors.append(f"doc_id eq '{d}'")
-        ors.append(f"doc_id eq '{base}'")
-        ors.append(f"startswith(doc_id, '{base}')")
-    ors = list(dict.fromkeys(ors))
-    return "(" + " or ".join(ors) + ")" if ors else None
-
-def hybrid_seed(search_client, batch_embed, query, doc_filter, k=120):
-    q_vec = batch_embed([query])[0]
-    vq = VectorizedQuery(vector=q_vec, fields="vector", k=k)
-    results = search_client.search(
-        search_text=query,              # ✅ hybrid
-        vector_queries=[vq],
-        filter=doc_filter,
-        top=k,
-        select=["doc_id","page_numbers","chunk_type","text"]
-    )
-    return [dict(r) for r in results]
-
-def fetch_page_range(search_client, doc_filter, start_page, end_page, top=1500):
-    page_clauses = [f"page_numbers/any(p: p eq {p})" for p in range(start_page, end_page + 1)]
-    page_filter = "(" + " or ".join(page_clauses) + ")"
-    filter_expr = f"{doc_filter} and {page_filter}" if doc_filter else page_filter
-
-    results = search_client.search(
-        search_text="*",
-        filter=filter_expr,
-        top=top,
-        select=["doc_id","page_numbers","chunk_type","text"]
-    )
-    return [dict(r) for r in results]
-
-def retrieve_source_chunks_table_aware(search_client, batch_embed, active_control, user_query):
-    """
-    Dynamic:
-    - Works for any multi-page CSR table that has 'Page X of Y' in text.
-    - Uses allowed_sources from active_control.
-    - Falls back to normal vector retrieval when not a multi-page table.
-    """
-    allowed_sources = active_control.get("allowed_sources", [])
-    doc_filter = build_doc_filter(allowed_sources)
-
-    # 1) Seed retrieval (hybrid works best for table headers)
-    seed_query = active_control.get("section") or user_query
-    seed = hybrid_seed(search_client, batch_embed, seed_query, doc_filter, k=150)
-
-    # 2) Detect if this looks like a paginated table
-    page_hits = []
-    for r in seed:
-        po = page_of(r.get("text",""))
-        if po:
-            page_hits.append((po, r))
-
-    # If no Page X of Y markers, return seed (normal behavior)
-    if not page_hits:
-        return seed
-
-    # 3) Pick the dominant "Y" (table length) and use those pages only
-    # (prevents mixing different tables with different page counts)
-    counts = {}
-    for (x, y), _ in page_hits:
-        counts[y] = counts.get(y, 0) + 1
-    dominant_y = max(counts, key=counts.get)
-
-    # 4) Compute pdf page range from hits with dominant_y
-    pdf_pages = []
-    for (x, y), r in page_hits:
-        if y == dominant_y:
-            pdf_pages.extend(r.get("page_numbers") or [])
-    if not pdf_pages:
-        return seed
-
-    start_page, end_page = min(pdf_pages), max(pdf_pages)
-
-    # 5) Fetch ALL chunks from that page range (this is what fixed your “big table”)
-    page_chunks = fetch_page_range(search_client, doc_filter, start_page, end_page, top=2000)
-
-    # 6) Return page_chunks (your downstream can split into subgroups if needed)
-    return page_chunks
-
-
 def vector_search_source(search_client, query, k_nearest_neighbors=100, filter_expr=None):
     q_vec = batch_embed([query])[0]
     vector_query = VectorizedQuery(vector=q_vec, fields="vector", k= k_nearest_neighbors)
@@ -1670,13 +1571,11 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
 
     # If filter is not supported in your index, just call without filter
-    # source_chunks = vector_search_source(
-    #     source_client,
-    #     query,
-    #     k_nearest_neighbors=100
-    # )
-
-    source_chunks = retrieve_source_chunks_table_aware(source_client, batch_embed, active_control, section_name)
+    source_chunks = vector_search_source(
+        source_client,
+        query,
+        k_nearest_neighbors=100
+    )
 
 
 
