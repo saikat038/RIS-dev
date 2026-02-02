@@ -2291,9 +2291,9 @@ def format_chunk_for_context(chunk: Dict) -> str:
     heading = chunk.get("heading_path")
     pages = chunk.get("page_numbers")
 
-    # Optional: suppress heading-only chunks
-    if chunk_type == "heading" and len(text.split()) < 12:
+    if chunk_type == "heading" and not text.strip():
         return ""
+
 
     meta = []
     if chunk_type:
