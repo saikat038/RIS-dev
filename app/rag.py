@@ -2822,8 +2822,15 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
 
 
+    table_chunks = [c for c in source_chunks if c.get("chunk_type") == "table"]
+    # paragraph_chunks = [c for c in source_chunks if c.get("chunk_type") == "paragraph"]
+
+    table_ratio = len(table_chunks) / max(len(source_chunks), 1)
 
     
+    if active_control.get("output_style") == "verbatim" and table_ratio > 0.4:
+        active_control = dict(active_control)
+        active_control["output_style"] = "regulatory author"
 
 
 
