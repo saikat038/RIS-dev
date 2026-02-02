@@ -3031,6 +3031,12 @@ including:
 - Interpreting tables as structured records
 - Performing mathematical operations using explicit numeric values
   (e.g., sums, differences, thresholds)
+- When Output Style = regulatory author, you are explicitly authorized to
+  derive narrative regulatory text from table data, provided that:
+• All values used come directly from tables in SOURCE_CONTEXT
+• No assumptions or extrapolations are made
+• No data is omitted or generalized
+
 
 STRICT RULE:
 - Analytical operations MUST NOT introduce assumptions or inferred values.
