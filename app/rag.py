@@ -2274,42 +2274,6 @@ def load_ich_search_client() -> SearchClient:
 # ============================================================
 # HELPER
 # ============================================================
-def format_chunk_for_context(chunk: Dict) -> str:
-    """
-    Format SOURCE chunks for LLM context.
-    Content first, metadata second.
-    """
-
-    if not isinstance(chunk, dict):
-        return str(chunk)
-
-    text = (chunk.get("text") or "").strip()
-    if not text:
-        return ""
-
-    chunk_type = chunk.get("chunk_type")
-    heading = chunk.get("heading_path")
-    pages = chunk.get("page_numbers")
-
-    if chunk_type == "heading" and not text.strip():
-        return ""
-
-
-    meta = []
-    if chunk_type:
-        meta.append(f"type={chunk_type}")
-    if heading:
-        meta.append(f"section={heading}")
-    if pages:
-        if isinstance(pages, list):
-            pages = ",".join(map(str, pages))
-        meta.append(f"pages={pages}")
-
-    meta_line = f"[{', '.join(meta)}]" if meta else ""
-
-    return f"{text}\n{meta_line}".strip()
-
-
 
 def build_generic_query(payload: dict) -> str:
     section = payload.get("section", "").strip()
@@ -2559,6 +2523,31 @@ def retrieve_tables_keyword(
 
     return out
 
+
+import re
+
+_BOILERPLATE_RE = re.compile(
+    r"""
+    ^\s*(program\s+name|analysis\s+dataset|proc\s+report)\b.*$ |
+    ^\s*ocugen,\s*inc\..*$ |
+    ^\s*ocu\d+[-–]\d+.*$ |
+    ^\s*page\s+\d+\s+of\s+\d+.*$ |
+    ^\s*\d+\s*/\s*\d+\s*$ |
+    ^\s*(dm|sv|ad)\.\s*sas.*$
+    """,
+    re.IGNORECASE | re.VERBOSE,
+)
+
+def clean_chunk_text(text: str) -> str:
+    lines = []
+    for line in text.splitlines():
+        l = line.strip()
+        if not l:
+            continue
+        if _BOILERPLATE_RE.match(l):
+            continue
+        lines.append(l)
+    return "\n".join(lines).strip()
 
 
 
@@ -2815,6 +2804,20 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         narrative_chunks + table_chunks_vector + table_chunks_keyword
     )
 
+    # -------------------------------------------------
+    # AUTO MODE FIX: table evidence cannot be authored in strict verbatim
+    # -------------------------------------------------
+    table_count = sum(1 for c in source_chunks if c.get("chunk_type") == "table")
+
+    # If ANY table exists, verbatim mode will usually fail or output nothing
+    if active_control.get("output_style") == "verbatim" and table_count > 0:
+        active_control = dict(active_control)  # avoid mutating cache
+        active_control["output_style"] = "regulatory author"
+
+    print("Final output_style used:", active_control.get("output_style"))
+    print("Table count in final source_chunks:", table_count)
+
+
     print("Narrative chunks:", len(narrative_chunks))
     print("Table chunks (vector):", len(table_chunks_vector))
     print("Table chunks (keyword):", len(table_chunks_keyword))
@@ -2832,6 +2835,55 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         active_control = dict(active_control)
         active_control["output_style"] = "regulatory author"
 
+
+
+    def format_chunk_for_context(chunk: Dict) -> str:
+        """
+        Format SOURCE chunks for LLM context.
+        Content first, metadata second.
+        """
+
+        if not isinstance(chunk, dict):
+            return str(chunk)
+
+        raw_text = (chunk.get("text") or "").strip()
+
+        text = clean_chunk_text(raw_text)
+        
+        section_title = active_control.get("section", "").strip().lower()
+
+        if (
+            chunk.get("chunk_type") == "paragraph"
+            and text.lower() == section_title
+        ):
+            return ""
+
+
+        if not text:
+            return ""
+
+
+        chunk_type = chunk.get("chunk_type")
+        heading = chunk.get("heading_path")
+        pages = chunk.get("page_numbers")
+
+        if chunk_type == "heading" and not text.strip():
+            return ""
+
+
+        meta = []
+        if chunk_type:
+            meta.append(f"type={chunk_type}")
+        if heading:
+            meta.append(f"section={heading}")
+        if pages:
+            if isinstance(pages, list):
+                pages = ",".join(map(str, pages))
+            meta.append(f"pages={pages}")
+
+        meta_line = f"[{', '.join(meta)}]" if meta else ""
+
+        return f"{text}\n{meta_line}".strip()
 
 
     # Format for LLM context
@@ -2878,6 +2930,13 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
     print("=======================")
 
+    print("\n====== DEBUG CONTEXT CHECK ======")
+    print("SOURCE_CONTEXT length:", len(source_context))
+    print("SOURCE_CONTEXT preview:")
+    print(source_context[:800])
+    print("====== END DEBUG ======\n")
+
+
     return new_state
 
 
@@ -2916,6 +2975,13 @@ def build_prompt_node(state: RAGState) -> RAGState:
     new_state = dict(state)
     new_state["conv_history"] = conv_history
     new_state["llm_input"] = user_content
+
+    print("\n====== DEBUG LLM INPUT ======")
+    print("LLM_INPUT length:", len(user_content))
+    print("LLM_INPUT preview:")
+    print(user_content[:800])
+    print("====== END DEBUG ======\n")
+
     return new_state
 
 # ============================================================
