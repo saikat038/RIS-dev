@@ -2840,6 +2840,11 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         else "No source evidence found."
     )
 
+    section_title = active_control.get("section", "").strip()
+
+    if section_title and section_title.lower() not in source_context.lower():
+        source_context = f"{section_title}\n\n{source_context}"
+
     # -------------------------------------------------
     # FINAL MERGED CONTEXT
     # -------------------------------------------------
