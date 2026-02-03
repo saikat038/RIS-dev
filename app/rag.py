@@ -1353,23 +1353,46 @@ def vector_search_ich(
 
 
 
-def vector_search_source(search_client, query, k_nearest_neighbors=100, filter_expr=None):
-    q_vec = batch_embed([query])[0]
-    vector_query = VectorizedQuery(vector=q_vec, fields="vector")
+from azure.search.documents.models import VectorizedQuery
 
+def vector_search_source(
+    search_client,
+    query: str,
+    k_nearest_neighbors: int = 100,
+    filter_expr: str | None = None,
+):
+    # 1. Embed query
+    q_vec = batch_embed([query])[0]
+
+    # 2. Vector query (STRICT vector-only)
+    vector_query = VectorizedQuery(
+        vector=q_vec,
+        k=k_nearest_neighbors,
+        fields="vector",
+    )
+
+    # 3. Search
     results = search_client.search(
-        search_text="",
+        search_text=None,              # 🔑 must be None for pure vector
         vector_queries=[vector_query],
         filter=filter_expr,
-        top=k_nearest_neighbors,
         select=[
+            # ---- core ----
             "text",
             "chunk_type",
             "heading_path",
             "page_numbers",
             "doc_id",
-        ]
+
+            # ---- table-aware fields ----
+            "table_context_heading",
+            "table_context_text",
+            "table_semantic_hint",
+            "table_headers",
+            "table_rows",
+        ],
     )
+
     return [dict(r) for r in results]
 
 
