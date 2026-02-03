@@ -74,8 +74,16 @@ def extract_layout_to_structured_json(
 
     for t_idx, table in enumerate(result.tables or []):
 
-        table_page = table.bounding_regions[0].page_number
-        table_bbox = get_polygon_bbox(table.bounding_regions[0].polygon)
+        if table.bounding_regions and len(table.bounding_regions) > 0:
+            table_page = table.bounding_regions[0].page_number
+        else:
+            table_page = page.get("page_number")
+
+        if table.bounding_regions and len(table.bounding_regions) > 0:
+            table_bbox = get_polygon_bbox(table.bounding_regions[0].polygon)
+        else:
+            table_bbox = None
+
 
         is_continuation = (
             previous_table_page is not None
