@@ -16,6 +16,42 @@ st.set_page_config(
     layout="wide"
 )
 
+
+
+# ========================
+# HELPER
+# ========================
+
+import re
+
+ALTCHUNK_PATTERN = re.compile(
+    r"<ALTCHUNK_TABLE>(.*?)</ALTCHUNK_TABLE>",
+    re.DOTALL
+)
+
+def render_llm_output(content: str):
+    """
+    Splits LLM output into text blocks and ALTCHUNK_TABLE blocks.
+    Text → st.markdown
+    Tables → placeholder preview (safe)
+    """
+
+    parts = ALTCHUNK_PATTERN.split(content)
+
+    for i, part in enumerate(parts):
+        # Even index → normal text
+        if i % 2 == 0:
+            if part.strip():
+                st.markdown(part)
+        else:
+            # Odd index → table HTML
+            with st.expander("📊 Table (will be rendered in final document)", expanded=False):
+                st.code(part.strip(), language="html")
+
+
+
+
+
 # # Path to your logo
 # LOGO_PATH = "C:/Users/SaikatSome/OneDrive - Ocugen OpCo Inc/Desktop/RIS-dev/assets/ocugen.png"
 
@@ -140,7 +176,8 @@ else:
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             result = answer(prompt, st.session_state.messages)
-            st.markdown(result)
+            render_llm_output(result)
+
 
     st.session_state.messages.append({
         "role": "assistant",
