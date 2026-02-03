@@ -384,7 +384,8 @@
 #     return "Unknown command."
 
 
-
+import os, sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import re
 from io import BytesIO
 from typing import Dict
