@@ -1292,108 +1292,326 @@ def split_section(text: str):
 # ============================================================
 # VECTOR SEARCH (GENERIC, REUSED)
 # ============================================================
+import re
+import json
+from typing import List, Dict, Any
+from azure.search.documents.models import VectorizedQuery
 
 def vector_search_ich(
     search_client,
-    query,
-    k_nearest_neighbors=100,
-    filter_expr=None,
-):
-    
-    min_results = 3
-    # ---------- Always-safe guards ----------
-    if not query or not isinstance(query, str):
-        return []   # or log and return empty safely
+    section: str,
+    synonyms: List[str],
+    ich_refs: List[str],
+    k_nearest_neighbors: int = 15,          # lowered default — less noise
+    min_score: float = 0.62,                 # new: filter low-relevance hits
+) -> List[Dict[str, Any]]:
+    """
+    Improved ICH vector search:
+    - Multiple queries + deduplication
+    - Score threshold to reduce noise
+    - Logging for debugging
+    - Ready for future hybrid / semantic
+    """
+    # Build query list
+    queries = [section.strip()] + [s.strip() for s in synonyms if s and s.strip() != section.strip()] + [r.strip() for r in ich_refs if r.strip()]
+    queries = [q for q in queries if q]  # remove empty
 
-    try:
-        q_vec = batch_embed([query])[0]
-    except Exception:
-        # Embedding failure → safest fallback
+    if not queries:
+        print("No valid ICH queries after cleaning")
         return []
 
-    vector_query = VectorizedQuery(vector=q_vec, fields="vector")
+    print(f"ICH search queries ({len(queries)}):")
+    for q in queries:
+        print(f"  - {q}")
 
-    # ---------- Tier 1: vector + filter ----------
-    try:
-        filtered_results = list(
-            search_client.search(
-                search_text=None,
-                vector_queries=[vector_query],
-                filter=filter_expr,
-                top=k_nearest_neighbors,
-                select=["text", "section_path", "rule_type"]
+    results = []
+
+    for q in queries:
+        try:
+            vector = batch_embed([q])[0]
+            print(f"  Embedding successful for: {q[:60]}{'...' if len(q)>60 else ''}")
+
+            vq = VectorizedQuery(
+                vector=vector,
+                k=k_nearest_neighbors,
+                fields="vector",
             )
-        )
 
-        if len(filtered_results) >= min_results:
-            return [dict(r) for r in filtered_results]
+            # Optional: add simple metadata filter if you know what to exclude
+            # filter_expr = "rule_type ne 'informational'"
 
-    except HttpResponseError:
-        # Filter/schema issues → fallback
-        pass
+            res = search_client.search(
+                search_text=None,                    # pure vector for now
+                vector_queries=[vq],
+                # filter=filter_expr,                # uncomment when needed
+                select=[
+                    "id", "doc_id", "source_type", "guideline", "block_type",
+                    "section_path", "section_title", "rule_type", "page_number", "text"
+                ],
+                top=k_nearest_neighbors,
+            )
 
-    except Exception:
-        # Any unexpected Azure/runtime issue → fallback
-        pass
+            found = list(res)
+            # Keep only reasonably relevant hits
+            good_hits = [r for r in found if r.get("@search.score", 0) >= min_score]
 
-    # ---------- Tier 2: vector-only fallback ----------
-    try:
-        fallback_results = search_client.search(
-            search_text=None,
-            vector_queries=[vector_query],
-            top=k_nearest_neighbors,
-            select=["text", "section_path", "rule_type"]
-        )
+            print(f"    → Query returned {len(found)} hits → kept {len(good_hits)} (score ≥ {min_score})")
 
-        return [dict(r) for r in fallback_results]
+            results.extend(dict(r) for r in good_hits)
 
-    except Exception:
-        # Absolute worst-case safety net
-        return []
+        except Exception as e:
+            print(f"ICH search failed for query '{q}': {type(e).__name__}: {e}")
 
+    # Deduplicate by id (preserve first occurrence)
+    seen = set()
+    deduplicated = []
 
+    for r in results:
+        key = r.get("id", "")
+        if key and key not in seen:
+            seen.add(key)
+            deduplicated.append(r)
+
+    print(f"Final ICH chunks after deduplication: {len(deduplicated)}")
+    return deduplicated
+
+##################################################################################################################################################################
 
 from azure.search.documents.models import VectorizedQuery
 
+TABLE_RE = re.compile(r"\bTable\s+\d+(\.\d+)*", re.IGNORECASE)
+
+def classify_source_chunk(chunk: Dict) -> Dict:
+    """Fallback classification if chunk_type is missing"""
+    if chunk.get("chunk_type"):
+        return chunk
+
+    text = (chunk.get("text") or "").strip()
+    if TABLE_RE.search(text):
+        chunk["chunk_type"] = "TABLE"
+    else:
+        chunk["chunk_type"] = "PARAGRAPH"
+    return chunk
+
+
 def vector_search_source(
     search_client,
-    query: str,
-    k_nearest_neighbors: int = 100,
-    filter_expr: str | None = None,
-):
-    # 1. Embed query
-    q_vec = batch_embed([query])[0]
+    section: str,
+    synonyms: List[str],
+    allowed_sources: List[str],
+    k_nearest_neighbors: int = 150,
+) -> List[Dict[str, Any]]:
+    """
+    Multi-query vector search on source index + deduplication by source_block_ids / id
+    """
+    if not allowed_sources:
+        return []
 
-    # 2. Vector query (STRICT vector-only)
-    vector_query = VectorizedQuery(
-        vector=q_vec,
-        k=k_nearest_neighbors,
-        fields="vector",
-    )
+    # Build OR filter for allowed documents
+    doc_filter = " or ".join([f"doc_id eq '{doc}'" for doc in allowed_sources])
 
-    # 3. Search
-    results = search_client.search(
-        search_text=None,              # 🔑 must be None for pure vector
-        vector_queries=[vector_query],
-        filter=filter_expr,
-        select=[
-            # ---- core ----
-            "text",
-            "chunk_type",
-            "heading_path",
-            "page_numbers",
-            "doc_id",
+    queries = [section] + [s for s in synonyms if s and s != section]
+    queries = [q.strip() for q in queries if q and q.strip()]
 
-            # ---- table-aware fields ----
-            "table_context_heading",
-            "table_context_text",
-            "table_semantic_hint",
-            "table_headers",
-            "table_rows",
-        ],
-    )
+    if not queries:
+        return []
 
-    return [dict(r) for r in results]
+    results = []
+
+    for q in queries:
+        try:
+            vector = batch_embed([q])[0]
+            vq = VectorizedQuery(
+                vector=vector,
+                k=k_nearest_neighbors,
+                fields="vector",
+            )
+
+            res = search_client.search(
+                search_text=None,
+                vector_queries=[vq],
+                filter=doc_filter,
+                select=[
+                    "id", "doc_id", "text", "chunk_type", "heading_path",
+                    "page_numbers", "source_block_ids",
+                    # table fields
+                    "table_context_heading", "table_context_text",
+                    "table_semantic_hint", "table_headers", "table_rows",
+                ],
+            )
+
+            results.extend(dict(r) for r in res)
+
+        except Exception as e:
+            print(f"Source vector search failed for query '{q}': {e}")
+            continue
+
+    # Deduplicate by source_block_ids[0] or id
+    seen = set()
+    deduplicated = []
+
+    for r in results:
+        key = (r.get("source_block_ids") or [r.get("id", "")])[0]
+        if key:                     # skip if key is empty string
+            if key not in seen:
+                seen.add(key)
+                deduplicated.append(r)
+
+    return deduplicated
+
+
+
+# ============================================================
+# save vector search as json
+# ============================================================
+import json
+import os
+from datetime import datetime
+
+def save_vector_search_results(
+    section_name: str,
+    source_chunks: List[Dict[str, Any]],
+    ich_sections: List[Dict[str, Any]],
+    debug_dir: str = "RIS-dev"
+) -> None:
+    """
+    Saves vector search results (source chunks + grouped ICH sections) 
+    to a timestamped JSON file in the specified debug directory.
+    
+    Args:
+        section_name: The name of the section being processed
+        source_chunks: List of raw source document chunks
+        ich_sections: List of grouped ICH guideline sections
+        debug_dir: Directory where debug files should be saved (default: "RIS-dev")
+    """
+    if not section_name:
+        section_name = "unknown_section"
+
+    # Clean section name for safe filename
+    safe_section = re.sub(r'[^a-zA-Z0-9_-]', '_', section_name.lower().strip())
+
+    # Always add timestamp to avoid overwriting files
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    # Normalize debug directory
+    debug_dir = debug_dir.strip()
+    if not debug_dir:
+        debug_dir = "RIS-dev"  # fallback if empty string passed
+
+    # Create directory if it doesn't exist
+    os.makedirs(debug_dir, exist_ok=True)
+
+    # Build full filename
+    filename = os.path.join(debug_dir, f"vector_search_{safe_section}_{ts}.json")
+
+    # Build payload (matches test file structure)
+    payload = {
+        "section": section_name,
+        "timestamp": datetime.now().isoformat(),
+        "source": {
+            "total_chunks": len(source_chunks),
+            "results": source_chunks,
+        },
+        "ich_guidelines": {
+            "total_sections": len(ich_sections),
+            "results": ich_sections,
+        }
+    }
+
+    try:
+        with open(filename, "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2, ensure_ascii=False)
+        
+        print(f"🔍 Debug file saved successfully:")
+        print(f"   Path: {filename}")
+        print(f"   Source chunks: {len(source_chunks):,}")
+        print(f"   ICH sections:  {len(ich_sections):,}")
+    
+    except PermissionError:
+        print(f"Permission denied: Cannot write to {filename}")
+    except OSError as e:
+        print(f"OS error while saving debug file {filename}: {e}")
+    except Exception as e:
+        print(f"Unexpected error while saving debug file {filename}: {e}")
+
+
+from collections import defaultdict
+
+def group_ich_by_section(chunks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Groups ICH chunks by section_path and assembles structured results.
+    
+    Improvements:
+    - Clauses are merged into a single coherent paragraph per section
+    - Removes very short / redundant fragments
+    - Sorts chunks by page_number and id for logical order
+    - Discards empty or meaningless sections
+    """
+    grouped = defaultdict(list)
+
+    # Group by section_path
+    for chunk in chunks:
+        section = chunk.get("section_path") or "UNKNOWN"
+        grouped[section].append(chunk)
+
+    assembled_sections = []
+
+    for section_path, items in grouped.items():
+        if not items:
+            continue
+
+        # Sort chunks: page number first, then id (for stable order)
+        items.sort(key=lambda x: (x.get("page_number") or 0, x.get("id") or ""))
+
+        # Collect clean clauses
+        raw_clauses = []
+        seen_texts = set()  # avoid perfect duplicates
+
+        for item in items:
+            text = (item.get("text") or "").strip()
+            if not text:
+                continue
+            if len(text.split()) <= 5:  # skip very short fragments
+                continue
+            if text in seen_texts:  # deduplicate identical text
+                continue
+            seen_texts.add(text)
+            raw_clauses.append(text)
+
+        if not raw_clauses:
+            continue
+
+        # Merge into one readable paragraph
+        # Join with space, but fix common punctuation issues
+        merged_text = " ".join(raw_clauses)
+        # Improve readability: fix spacing around punctuation
+        merged_text = merged_text.replace(" . ", ". ").replace(" , ", ", ").replace(" ; ", "; ")
+
+        # Final cleaning
+        merged_text = merged_text.strip()
+
+        # Skip if still too short after merging
+        if len(merged_text.split()) < 10:
+            continue
+
+        assembled_sections.append({
+            "section_path": section_path,
+            "guideline": items[0].get("guideline", "Unknown Guideline") if items else "Unknown",
+            "rule_type": sorted(list({i.get("rule_type") for i in items if i.get("rule_type")})),  # sorted for consistency
+            "source_type": "ich",
+            "guideline_text": merged_text,      # ← main merged version for LLM
+            "clauses": raw_clauses,             # ← keep original list if needed
+            "ids": [i["id"] for i in items if i.get("id")],
+            # Optional debug fields (comment out in production)
+            # "raw_chunk_count": len(items),
+            # "merged_length": len(merged_text.split())
+        })
+
+    # Sort sections naturally by section_path
+    assembled_sections.sort(key=lambda x: x["section_path"])
+
+    # Final filter: remove any empty results
+    return [s for s in assembled_sections if s["guideline_text"].strip()]
 
 
 # ============================================================
@@ -1435,6 +1653,8 @@ class RAGState(TypedDict, total=False):
     answer: str
     section_name: str
 
+
+
 # ============================================================
 # NODE 1 — RETRIEVE CONTEXT (ICH FIRST, SOURCE SECOND)
 # ============================================================
@@ -1455,7 +1675,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     # PICK ACTIVE AUTHORING CONTROL
     # -------------------------------------------------
     active_control = pick_active_control(AUTHORING_CONTROL, query)
-    print(active_control.get("section", ""))
+    # print(active_control.get("section", ""))
 
     if len(active_control.get("section", "")) == 0:
         active_control = {
@@ -1468,7 +1688,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
       "forbidden_content": ["operational procedures"]
     }
 
-    print("active control",active_control)
+    # print("active control",active_control)
 
     if not active_control:
         new_state = dict(state)
@@ -1479,88 +1699,101 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
 
     # -------------------------------------------------
-    # ICH RETRIEVAL (MANDATORY)
+    # ICH RETRIEVAL (multi-query + deduplication)
     # -------------------------------------------------
     ich_client = load_ich_search_client()
 
     section_name = active_control.get("section", "")
+    synonyms = active_control.get("synonyms", [])
     ich_refs = active_control.get("ich_refs", [])
 
-    print(ich_refs)
-    section_number,section_text  = split_section(ich_refs[0])
-    
-    filter_expr = (
-        f"section_path eq '{section_number}' "
-        f"and section_title eq '{section_text}'"
-        
-    )
-    ich_query_parts = build_generic_query({k: active_control[k] for k in ('section', 'synonyms')}).strip()
-    print("part ich query:", ich_query_parts)
-
-    # optional boost terms if your schema has them
-    # if active_control.get("output_style"):
-    #     ich_query_parts.append(active_control["output_style"])
-    # if active_control.get("detail_level"):
-    #     ich_query_parts.append(active_control["detail_level"])
-
-    # ich_query = " ".join([p for p in ich_query_parts if p])
-    ich_query = ich_query_parts
-
-    print("Final ich query:", ich_query)
-
-    query = build_generic_query({k: active_control[k] for k in ("section", "synonyms")}).strip()
-    print("matched shema: ", active_control)
-    print("This is the final query:",type(query))
-
-
-    if len(active_control.get("synonyms", ""))>1:
-        ich_chunks = vector_search_ich(ich_client, ich_query, k_nearest_neighbors=100, filter_expr=filter_expr)
-        
-
-        ich_context_pieces = [
-            (chunk.get("text") or "").strip()
-            for chunk in ich_chunks
-            if isinstance(chunk, dict) and chunk.get("text")
-        ]
-
-
-        ich_context = (
-            "\n\n".join(ich_context_pieces)
-            if ich_context_pieces
-            else "No ICH guidance found."
+    ich_chunks = vector_search_ich(
+        search_client=ich_client,
+        section=section_name,
+        synonyms=synonyms,
+        ich_refs=ich_refs,
+        k_nearest_neighbors=12,          # you can tune this
+        min_score=0.65                   # start here, adjust 0.58–0.68 based on results
         )
 
-        print("ICH context >>>>>>>>>>>>>>>>>>>>>>>>>>>>>", ich_context)
+    # -------------------------------------------------
+    # GROUP ICH CHUNKS INTO STRUCTURED SECTIONS
+    # -------------------------------------------------
+    ich_sections = group_ich_by_section(ich_chunks)
 
+    # -------------------------------------------------
+    # BUILD ICH CONTEXT FOR LLM (text version)
+    # -------------------------------------------------
+    ich_context_blocks = []
+
+    for section in ich_sections:
+        if not section["clauses"]:
+            continue
+            
+        block = f"""ICH E3 Section {section["section_path"]}
+    - """ + "\n- ".join(section["clauses"])
+        ich_context_blocks.append(block)
+
+    ich_context = (
+        "\n\n".join(ich_context_blocks)
+        if ich_context_blocks
+        else "No ICH guidance found."
+    )
+
+    # print(f"ICH sections found: {len(ich_sections)}")
 
 
     # -------------------------------------------------
-    # SOURCE RETRIEVAL (EVIDENCE + TABLES)
+    # SOURCE RETRIEVAL (multi-query + deduplication + classification)
     # -------------------------------------------------
     source_client = load_source_search_client()
 
-    filter_expr = None  # source index does not support doc_type filtering
+    allowed_sources = active_control.get("allowed_sources", [])
 
-
-    # If filter is not supported in your index, just call without filter
     source_chunks = vector_search_source(
-        source_client,
-        query,
-        k_nearest_neighbors=100
+        search_client=source_client,
+        section=section_name,
+        synonyms=synonyms,
+        allowed_sources=allowed_sources,
+        k_nearest_neighbors=50,
     )
 
+    source_context_pieces = [
+        format_chunk_for_context(chunk)
+        for chunk in source_chunks
+        if format_chunk_for_context(chunk).strip()
+    ]
+
+    source_context = "\n\n".join(source_context_pieces) if source_context_pieces else "No source evidence found."
 
 
-    source_context_pieces = []
-    for chunk in source_chunks:
-        formatted = format_chunk_for_context(chunk)
-        if formatted:
-            source_context_pieces.append(formatted)
+    # ────────────────────────────────────────────────
+    #  SAVE RAW VECTOR SEARCH RESULTS FOR DEBUGGING
+    # ────────────────────────────────────────────────
+    # Comment out or remove in production if not needed
+    # ────────────────────────────────────────────────
+    #  SAVE STRUCTURED VECTOR SEARCH RESULTS FOR DEBUGGING
+    # ────────────────────────────────────────────────
 
-    source_context = (
-        "\n\n".join(source_context_pieces)
-        if source_context_pieces
-        else "No source evidence found."
+    print("=== Debug: ICH retrieval status ===")
+    print(f"Raw ich_chunks count: {len(ich_chunks)}")
+    if ich_chunks:
+        print("First raw chunk keys:", list(ich_chunks[0].keys()))
+        print("First raw chunk section_path:", ich_chunks[0].get("section_path"))
+        print("First raw chunk text preview:", ich_chunks[0].get("text", "")[:100])
+
+    print(f"Grouped ich_sections count: {len(ich_sections)}")
+    if ich_sections:
+        print("First grouped section:", ich_sections[0])
+    else:
+        print("→ No ICH sections after grouping ←")
+
+    print("Saving debug file now...")
+    save_vector_search_results(
+        section_name=section_name,
+        source_chunks=source_chunks,
+        ich_sections=ich_sections,
+        debug_dir="RIS-dev"
     )
 
     if len(active_control.get("synonyms", ""))>1:
@@ -1602,7 +1835,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         new_state["section_name"] = section_name
 
     
-    print("\n\nnew state:\n",new_state)
+    # print("\n\nnew state:\n",new_state)
 
 
 
@@ -2215,6 +2448,7 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
+# answer("Summary of Subject Demographics Safety Population - RP Patients", [])
 
 
 
