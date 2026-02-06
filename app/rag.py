@@ -1333,7 +1333,7 @@ def vector_search_ich(
 
             vq = VectorizedQuery(
                 vector=vector,
-                k=k_nearest_neighbors,
+                k_nearest_neighbors=k_nearest_neighbors,
                 fields="vector",
             )
 
@@ -1423,7 +1423,7 @@ def vector_search_source(
             vector = batch_embed([q])[0]
             vq = VectorizedQuery(
                 vector=vector,
-                k=k_nearest_neighbors,
+                k_nearest_neighbors=k_nearest_neighbors,
                 fields="vector",
             )
 
