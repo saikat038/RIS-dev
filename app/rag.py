@@ -1835,15 +1835,12 @@ def build_prompt_node(state: RAGState) -> RAGState:
     conv_history = format_history(history)
 
     user_content = f"""
-[Knowledge Base Context]
-{context}
+    [Conversation So Far]
+    {conv_history if conv_history else "(no previous turns)"}
 
-[Conversation So Far]
-{conv_history if conv_history else "(no previous turns)"}
-
-[Current Authoring Request]
-{query}
-""".strip()
+    [Current Authoring Request]
+    {query}
+    """.strip()
 
     new_state = dict(state)
     new_state["conv_history"] = conv_history
@@ -2437,7 +2434,7 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Summary of Subject Demographics Safety Population - RP Patients", [])
+answer("Summary of Subject Demographics Safety Population - RP Patients", [])
 # answer("Independent Ethics Committee or Institutional Review Board", [])
 
 
