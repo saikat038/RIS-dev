@@ -1400,9 +1400,11 @@ def vector_search_source(
     synonyms: List[str],
     allowed_sources: List[str],
     k_nearest_neighbors: int = 150,
+    min_score: float = 0.60,           # ← NEW: default 60% threshold
 ) -> List[Dict[str, Any]]:
     """
-    Multi-query vector search on source index + deduplication by source_block_ids / id
+    Multi-query vector search on source index with minimum score filtering.
+    Deduplicates by source_block_ids[0] or id.
     """
     if not allowed_sources:
         return []
@@ -1423,9 +1425,9 @@ def vector_search_source(
             vector = batch_embed([q])[0]
             vq = VectorizedQuery(
                 vector=vector,
-                k_nearest_neighbors=k_nearest_neighbors,
                 fields="vector",
             )
+            vq.k = k_nearest_neighbors   # ← correct way (avoids warning)
 
             res = search_client.search(
                 search_text=None,
@@ -1434,13 +1436,20 @@ def vector_search_source(
                 select=[
                     "id", "doc_id", "text", "chunk_type", "heading_path",
                     "page_numbers", "source_block_ids",
-                    # table fields
                     "table_context_heading", "table_context_text",
-                    "table_semantic_hint", "table_headers", "table_rows",
+                    "table_semantic_hint", "table_headers", "table_rows"
                 ],
             )
 
-            results.extend(dict(r) for r in res)
+            # Filter by minimum score
+            good_hits = [
+                dict(r) for r in res
+                if r.get("@search.score", 0) >= min_score
+            ]
+
+            print(f"Query '{q[:60]}...' returned {len(list(res))} hits → kept {len(good_hits)} (≥ {min_score})")
+
+            results.extend(good_hits)
 
         except Exception as e:
             print(f"Source vector search failed for query '{q}': {e}")
@@ -1452,11 +1461,11 @@ def vector_search_source(
 
     for r in results:
         key = (r.get("source_block_ids") or [r.get("id", "")])[0]
-        if key:                     # skip if key is empty string
-            if key not in seen:
-                seen.add(key)
-                deduplicated.append(r)
+        if key and key not in seen:
+            seen.add(key)
+            deduplicated.append(r)
 
+    print(f"Final source chunks after deduplication & score filtering: {len(deduplicated)}")
     return deduplicated
 
 
@@ -1716,12 +1725,13 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     allowed_sources = active_control.get("allowed_sources", [])
 
     source_chunks = vector_search_source(
-        search_client=source_client,
-        section=section_name,
-        synonyms=synonyms,
-        allowed_sources=allowed_sources,
-        k_nearest_neighbors=100,
-    )
+    search_client=source_client,
+    section=section_name,
+    synonyms=synonyms,
+    allowed_sources=allowed_sources,
+    k_nearest_neighbors=100,
+    min_score=0.60          # ← 60% threshold
+)
 
     source_context_pieces = [
         format_chunk_for_context(chunk)
