@@ -1538,18 +1538,8 @@ def save_vector_search_results(
 from collections import defaultdict
 
 def group_ich_by_section(chunks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    """
-    Groups ICH chunks by section_path and assembles structured results.
-    
-    Improvements:
-    - Clauses are merged into a single coherent paragraph per section
-    - Removes very short / redundant fragments
-    - Sorts chunks by page_number and id for logical order
-    - Discards empty or meaningless sections
-    """
     grouped = defaultdict(list)
 
-    # Group by section_path
     for chunk in chunks:
         section = chunk.get("section_path") or "UNKNOWN"
         grouped[section].append(chunk)
@@ -1557,61 +1547,33 @@ def group_ich_by_section(chunks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     assembled_sections = []
 
     for section_path, items in grouped.items():
-        if not items:
-            continue
-
-        # Sort chunks: page number first, then id (for stable order)
         items.sort(key=lambda x: (x.get("page_number") or 0, x.get("id") or ""))
 
-        # Collect clean clauses
-        raw_clauses = []
-        seen_texts = set()  # avoid perfect duplicates
-
+        # Collect paragraphs (now separate blocks)
+        paragraphs = []
         for item in items:
-            text = (item.get("text") or "").strip()
-            if not text:
-                continue
-            if len(text.split()) <= 5:  # skip very short fragments
-                continue
-            if text in seen_texts:  # deduplicate identical text
-                continue
-            seen_texts.add(text)
-            raw_clauses.append(text)
+            text = item.get("text", "").strip()
+            if text and len(text.split()) > 5:
+                paragraphs.append(text)
 
-        if not raw_clauses:
+        if not paragraphs:
             continue
 
-        # Merge into one readable paragraph
-        # Join with space, but fix common punctuation issues
-        merged_text = " ".join(raw_clauses)
-        # Improve readability: fix spacing around punctuation
-        merged_text = merged_text.replace(" . ", ". ").replace(" , ", ", ").replace(" ; ", "; ")
-
-        # Final cleaning
-        merged_text = merged_text.strip()
-
-        # Skip if still too short after merging
-        if len(merged_text.split()) < 10:
-            continue
+        # Join paragraphs with double newline for readability
+        guideline_text = "\n\n".join(paragraphs)
 
         assembled_sections.append({
             "section_path": section_path,
-            "guideline": items[0].get("guideline", "Unknown Guideline") if items else "Unknown",
-            "rule_type": sorted(list({i.get("rule_type") for i in items if i.get("rule_type")})),  # sorted for consistency
+            "guideline": items[0].get("guideline", "Unknown Guideline"),
+            "rule_type": sorted(list({i.get("rule_type") for i in items if i.get("rule_type")})),
             "source_type": "ich",
-            "guideline_text": merged_text,      # ← main merged version for LLM
-            "clauses": raw_clauses,             # ← keep original list if needed
-            "ids": [i["id"] for i in items if i.get("id")],
-            # Optional debug fields (comment out in production)
-            # "raw_chunk_count": len(items),
-            # "merged_length": len(merged_text.split())
+            "guideline_text": guideline_text,
+            "paragraphs": paragraphs,  # optional: keep list
+            "ids": [i.get("source_block_ids", [i.get("id")]) for i in items]
         })
 
-    # Sort sections naturally by section_path
     assembled_sections.sort(key=lambda x: x["section_path"])
-
-    # Final filter: remove any empty results
-    return [s for s in assembled_sections if s["guideline_text"].strip()]
+    return assembled_sections
 
 
 # ============================================================
@@ -1724,14 +1686,17 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     # -------------------------------------------------
     # BUILD ICH CONTEXT FOR LLM (text version)
     # -------------------------------------------------
+
     ich_context_blocks = []
 
     for section in ich_sections:
-        if not section["clauses"]:
+        # Use whichever key you want to prioritize
+        content = section.get("guideline_text") or "\n\n".join(section.get("paragraphs", []))
+        if not content.strip():
             continue
-            
-        block = f"""ICH E3 Section {section["section_path"]}
-    - """ + "\n- ".join(section["clauses"])
+
+        block = f"""ICH E3 Section {section["section_path"]}:
+    {content}"""
         ich_context_blocks.append(block)
 
     ich_context = (
@@ -1755,7 +1720,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         section=section_name,
         synonyms=synonyms,
         allowed_sources=allowed_sources,
-        k_nearest_neighbors=50,
+        k_nearest_neighbors=100,
     )
 
     source_context_pieces = [
@@ -2449,6 +2414,7 @@ def answer(query: str, history: List[Dict]) -> str:
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
 # answer("Summary of Subject Demographics Safety Population - RP Patients", [])
+answer("Independent Ethics Committee or Institutional Review Board", [])
 
 
 
