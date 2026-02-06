@@ -2362,6 +2362,18 @@ Output ONLY the final authored section content.
 
     # Use "Not in knowledge base" ONLY as a last resort.""".strip()
 
+    # Add this before calling client.chat.completions.create
+    print("\n=== DEBUG: LLM INPUT SIZE ===")
+    print(f"Length of instructions: {len(instructions)} chars (~{len(instructions)//4} tokens)")
+    print(f"Length of llm_input: {len(llm_input)} chars (~{len(llm_input)//4} tokens)")
+    print(f"Estimated total tokens: ~{(len(instructions) + len(llm_input)) // 4}")
+    print(f"Model: {AZURE_OPENAI_CHAT_MODEL}")
+    print(f"Max context (typical): {'128k for gpt-4o' if 'gpt-4o' in AZURE_OPENAI_CHAT_MODEL else '16k for gpt-3.5-turbo'}")
+    print("First 200 chars of llm_input:")
+    print(llm_input[:200])
+    print("Last 200 chars of llm_input:")
+    print(llm_input[-200:])
+
     response = client.chat.completions.create(
         model=AZURE_OPENAI_CHAT_MODEL,
         messages=[
@@ -2371,6 +2383,11 @@ Output ONLY the final authored section content.
         temperature=0.0,
         max_tokens=4500,
     )
+
+    # Right after response = client.chat.completions.create(...)
+    import time
+    print("Rate limit safety delay — waiting 15 seconds...")
+    time.sleep(15)
 
     new_state = dict(state)
     new_state["answer"] = response.choices[0].message.content
