@@ -1777,9 +1777,6 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         # -------------------------------------------------
         print("inside meta driven mode >>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
         final_context = f"""
-        [AUTHORING CONTROL]
-        {json.dumps(active_control, indent=2)}
-
         [ICH GUIDELINES]
         {ich_context}
 
