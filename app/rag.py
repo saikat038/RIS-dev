@@ -1333,7 +1333,7 @@ def vector_search_ich(
 
             vq = VectorizedQuery(
                 vector=vector,
-                k=k_nearest_neighbors,
+                k_nearest_neighbors=k_nearest_neighbors,
                 fields="vector",
             )
 
@@ -1399,10 +1399,12 @@ def vector_search_source(
     section: str,
     synonyms: List[str],
     allowed_sources: List[str],
-    k_nearest_neighbors: int = 150,
+    k_nearest_neighbors: int = 50,
+    min_score: float = 0.60,           # ← NEW: default 60% threshold
 ) -> List[Dict[str, Any]]:
     """
-    Multi-query vector search on source index + deduplication by source_block_ids / id
+    Multi-query vector search on source index with minimum score filtering.
+    Deduplicates by source_block_ids[0] or id.
     """
     if not allowed_sources:
         return []
@@ -1423,9 +1425,9 @@ def vector_search_source(
             vector = batch_embed([q])[0]
             vq = VectorizedQuery(
                 vector=vector,
-                k=k_nearest_neighbors,
                 fields="vector",
             )
+            vq.k = k_nearest_neighbors   # ← correct way (avoids warning)
 
             res = search_client.search(
                 search_text=None,
@@ -1434,13 +1436,20 @@ def vector_search_source(
                 select=[
                     "id", "doc_id", "text", "chunk_type", "heading_path",
                     "page_numbers", "source_block_ids",
-                    # table fields
                     "table_context_heading", "table_context_text",
-                    "table_semantic_hint", "table_headers", "table_rows",
+                    "table_semantic_hint", "table_headers", "table_rows"
                 ],
             )
 
-            results.extend(dict(r) for r in res)
+            # Filter by minimum score
+            good_hits = [
+                dict(r) for r in res
+                if r.get("@search.score", 0) >= min_score
+            ]
+
+            print(f"Query '{q[:60]}...' returned {len(list(res))} hits → kept {len(good_hits)} (≥ {min_score})")
+
+            results.extend(good_hits)
 
         except Exception as e:
             print(f"Source vector search failed for query '{q}': {e}")
@@ -1452,11 +1461,11 @@ def vector_search_source(
 
     for r in results:
         key = (r.get("source_block_ids") or [r.get("id", "")])[0]
-        if key:                     # skip if key is empty string
-            if key not in seen:
-                seen.add(key)
-                deduplicated.append(r)
+        if key and key not in seen:
+            seen.add(key)
+            deduplicated.append(r)
 
+    print(f"Final source chunks after deduplication & score filtering: {len(deduplicated)}")
     return deduplicated
 
 
@@ -1547,26 +1556,33 @@ def group_ich_by_section(chunks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     assembled_sections = []
 
     for section_path, items in grouped.items():
-        # Sort by page_number for coherence
         items.sort(key=lambda x: (x.get("page_number") or 0, x.get("id") or ""))
 
-        clauses = [i["text"].strip() for i in items if i.get("text", "").strip() and len(i["text"].split()) > 5]  # discard short
+        # Collect paragraphs (now separate blocks)
+        paragraphs = []
+        for item in items:
+            text = item.get("text", "").strip()
+            if text and len(text.split()) > 5:
+                paragraphs.append(text)
 
-        # Merge into paragraph if they seem sequential (optional)
-        merged_clauses = [' '.join(clauses)] if clauses else []
+        if not paragraphs:
+            continue
+
+        # Join paragraphs with double newline for readability
+        guideline_text = "\n\n".join(paragraphs)
 
         assembled_sections.append({
             "section_path": section_path,
-            "guideline": items[0].get("guideline", "Unknown Guideline") if items else "Unknown",
-            "rule_type": list({i.get("rule_type") for i in items if i.get("rule_type")}),
+            "guideline": items[0].get("guideline", "Unknown Guideline"),
+            "rule_type": sorted(list({i.get("rule_type") for i in items if i.get("rule_type")})),
             "source_type": "ich",
-            "clauses": merged_clauses or clauses,  # merged or list
-            "ids": [i["id"] for i in items if i.get("id")]
+            "guideline_text": guideline_text,
+            "paragraphs": paragraphs,  # optional: keep list
+            "ids": [i.get("source_block_ids", [i.get("id")]) for i in items]
         })
 
     assembled_sections.sort(key=lambda x: x["section_path"])
-    return [s for s in assembled_sections if s["clauses"]]  # discard empty
-
+    return assembled_sections
 
 
 # ============================================================
@@ -1663,13 +1679,13 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     ich_refs = active_control.get("ich_refs", [])
 
     ich_chunks = vector_search_ich(
-    search_client=ich_client,
-    section=section_name,
-    synonyms=synonyms,
-    ich_refs=ich_refs,
-    k_nearest_neighbors=12,          # you can tune this
-    min_score=0.62                   # start here, adjust 0.58–0.68 based on results
-    )
+        search_client=ich_client,
+        section=section_name,
+        synonyms=synonyms,
+        ich_refs=ich_refs,
+        k_nearest_neighbors=12,          # you can tune this
+        min_score=0.65                   # start here, adjust 0.58–0.68 based on results
+        )
 
     # -------------------------------------------------
     # GROUP ICH CHUNKS INTO STRUCTURED SECTIONS
@@ -1679,14 +1695,17 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     # -------------------------------------------------
     # BUILD ICH CONTEXT FOR LLM (text version)
     # -------------------------------------------------
+
     ich_context_blocks = []
 
     for section in ich_sections:
-        if not section["clauses"]:
+        # Use whichever key you want to prioritize
+        content = section.get("guideline_text") or "\n\n".join(section.get("paragraphs", []))
+        if not content.strip():
             continue
-            
-        block = f"""ICH E3 Section {section["section_path"]}
-    - """ + "\n- ".join(section["clauses"])
+
+        block = f"""ICH E3 Section {section["section_path"]}:
+    {content}"""
         ich_context_blocks.append(block)
 
     ich_context = (
@@ -1706,12 +1725,13 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     allowed_sources = active_control.get("allowed_sources", [])
 
     source_chunks = vector_search_source(
-        search_client=source_client,
-        section=section_name,
-        synonyms=synonyms,
-        allowed_sources=allowed_sources,
-        k_nearest_neighbors=150,
-    )
+    search_client=source_client,
+    section=section_name,
+    synonyms=synonyms,
+    allowed_sources=allowed_sources,
+    k_nearest_neighbors=50,
+    min_score=0.60          # ← 60% threshold
+)
 
     source_context_pieces = [
         format_chunk_for_context(chunk)
@@ -2342,6 +2362,18 @@ Output ONLY the final authored section content.
 
     # Use "Not in knowledge base" ONLY as a last resort.""".strip()
 
+    # Add this before calling client.chat.completions.create
+    print("\n=== DEBUG: LLM INPUT SIZE ===")
+    print(f"Length of instructions: {len(instructions)} chars (~{len(instructions)//4} tokens)")
+    print(f"Length of llm_input: {len(llm_input)} chars (~{len(llm_input)//4} tokens)")
+    print(f"Estimated total tokens: ~{(len(instructions) + len(llm_input)) // 4}")
+    print(f"Model: {AZURE_OPENAI_CHAT_MODEL}")
+    print(f"Max context (typical): {'128k for gpt-4o' if 'gpt-4o' in AZURE_OPENAI_CHAT_MODEL else '16k for gpt-3.5-turbo'}")
+    print("First 200 chars of llm_input:")
+    print(llm_input[:200])
+    print("Last 200 chars of llm_input:")
+    print(llm_input[-200:])
+
     response = client.chat.completions.create(
         model=AZURE_OPENAI_CHAT_MODEL,
         messages=[
@@ -2404,6 +2436,7 @@ def answer(query: str, history: List[Dict]) -> str:
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
 answer("Summary of Subject Demographics Safety Population - RP Patients", [])
+# answer("Independent Ethics Committee or Institutional Review Board", [])
 
 
 
