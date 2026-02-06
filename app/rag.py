@@ -1399,7 +1399,7 @@ def vector_search_source(
     section: str,
     synonyms: List[str],
     allowed_sources: List[str],
-    k_nearest_neighbors: int = 150,
+    k_nearest_neighbors: int = 50,
     min_score: float = 0.60,           # ← NEW: default 60% threshold
 ) -> List[Dict[str, Any]]:
     """
@@ -1729,7 +1729,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     section=section_name,
     synonyms=synonyms,
     allowed_sources=allowed_sources,
-    k_nearest_neighbors=100,
+    k_nearest_neighbors=50,
     min_score=0.60          # ← 60% threshold
 )
 
