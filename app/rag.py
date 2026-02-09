@@ -1020,7 +1020,7 @@ from config.settings import (
     BLOB_CONTAINER,
 )
 
-print("ICH index name: ",AZURE_ICH_SEARCH_INDEX_NAME)
+# print("ICH index name: ",AZURE_ICH_SEARCH_INDEX_NAME)
 # ============================================================
 # LOAD AUTHORING SCHEMA FROM BLOB STORAGE
 # ============================================================
@@ -1029,7 +1029,7 @@ def load_authoring_schema_from_blob(schema_name: str) -> dict:
     Load authoring control schema JSON directly from Azure Blob Storage
     into memory (RAM) without downloading to disk.
     """
-    print("name of the shcema: ",schema_name)
+    # print("name of the shcema: ",schema_name)
     blob_path = f"{AUTHOR_SCHEMA_PREFIX}{schema_name}"
 
     blob_client = BlobClient.from_connection_string(
@@ -1333,9 +1333,10 @@ def vector_search_ich(
 
             vq = VectorizedQuery(
                 vector=vector,
-                k_nearest_neighbors=k_nearest_neighbors,
                 fields="vector",
             )
+            vq.k = k_nearest_neighbors
+
 
             # Optional: add simple metadata filter if you know what to exclude
             # filter_expr = "rule_type ne 'informational'"
@@ -1408,6 +1409,8 @@ def vector_search_source(
     """
     if not allowed_sources:
         return []
+    
+    print("min score >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",min_score)
 
     # Build OR filter for allowed documents
     doc_filter = " or ".join([f"doc_id eq '{doc}'" for doc in allowed_sources])
@@ -1683,7 +1686,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         section=section_name,
         synonyms=synonyms,
         ich_refs=ich_refs,
-        k_nearest_neighbors=12,          # you can tune this
+        k_nearest_neighbors=5,          # you can tune this
         min_score=0.65                   # start here, adjust 0.58–0.68 based on results
         )
 
@@ -1729,8 +1732,8 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     section=section_name,
     synonyms=synonyms,
     allowed_sources=allowed_sources,
-    k_nearest_neighbors=50,
-    min_score=0.60          # ← 60% threshold
+    k_nearest_neighbors=30,
+    min_score=0.75          # ← 60% threshold
 )
 
     source_context_pieces = [
@@ -1752,16 +1755,16 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
     print("=== Debug: ICH retrieval status ===")
     print(f"Raw ich_chunks count: {len(ich_chunks)}")
-    if ich_chunks:
-        print("First raw chunk keys:", list(ich_chunks[0].keys()))
-        print("First raw chunk section_path:", ich_chunks[0].get("section_path"))
-        print("First raw chunk text preview:", ich_chunks[0].get("text", "")[:100])
+    # if ich_chunks:
+    #     print("First raw chunk keys:", list(ich_chunks[0].keys()))
+    #     print("First raw chunk section_path:", ich_chunks[0].get("section_path"))
+    #     print("First raw chunk text preview:", ich_chunks[0].get("text", "")[:100])
 
-    print(f"Grouped ich_sections count: {len(ich_sections)}")
-    if ich_sections:
-        print("First grouped section:", ich_sections[0])
-    else:
-        print("→ No ICH sections after grouping ←")
+    # print(f"Grouped ich_sections count: {len(ich_sections)}")
+    # if ich_sections:
+    #     print("First grouped section:", ich_sections[0])
+    # else:
+    #     print("→ No ICH sections after grouping ←")
 
     print("Saving debug file now...")
     save_vector_search_results(
@@ -2031,11 +2034,11 @@ Output ONLY the final authored section content.
     print(f"Length of llm_input: {len(llm_input)} chars (~{len(llm_input)//4} tokens)")
     print(f"Estimated total tokens: ~{(len(instructions) + len(llm_input)) // 4}")
     print(f"Model: {AZURE_OPENAI_CHAT_MODEL}")
-    print(f"Max context (typical): {'128k for gpt-4o' if 'gpt-4o' in AZURE_OPENAI_CHAT_MODEL else '16k for gpt-3.5-turbo'}")
-    print("First 200 chars of llm_input:")
-    print(llm_input[:200])
-    print("Last 200 chars of llm_input:")
-    print(llm_input[-200:])
+    # print(f"Max context (typical): {'128k for gpt-4o' if 'gpt-4o' in AZURE_OPENAI_CHAT_MODEL else '16k for gpt-3.5-turbo'}")
+    # print("First 200 chars of llm_input:")
+    # print(llm_input[:200])
+    # print("Last 200 chars of llm_input:")
+    # print(llm_input[-200:])
 
     response = client.chat.completions.create(
         model=AZURE_OPENAI_CHAT_MODEL,
@@ -2098,5 +2101,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Summary of Subject Demographics Safety Population - RP Patients", [])
+answer("Summary of Subject Demographics Safety Population - RP Patients in tabular", [])
 # answer("Independent Ethics Committee or Institutional Review Board", [])
