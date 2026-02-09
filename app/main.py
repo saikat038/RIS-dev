@@ -58,92 +58,99 @@ else:
 st.write("")  # small spacing
 
 # ========================
-# SESSION STATE FOR CHAT
+# SESSION STATE INITIALIZATION
 # ========================
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
-    
+
+if "buffer" not in st.session_state:
+    st.session_state.buffer = []   # will store selected assistant responses
+
 
 # ========================
-# DISPLAY CHAT HISTORY (TOP → DOWN)
+# DISPLAY CHAT HISTORY
 # ========================
 
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
-# ========================
-# CHAT INPUT (BOTTOM, CHATGPT-LIKE)
-# ========================
-history = st.session_state.messages
-prompt = st.chat_input("Ask anything about regulations, guidance, policies, IND, etc...")
-
-
-
-
-# ⛔ Stop execution if no new input was submitted
-if prompt is None:
-    st.stop()
-
-prompt_clean = prompt.strip().lower()
 
 # ========================
-# COMMANDS
+# CHAT INPUT + COMMAND HANDLING
 # ========================
 
-if prompt_clean == "add":
-    add_last_section_to_final()
+prompt = st.chat_input("Ask anything about regulations, guidance, policies, IND, etc... or type 'add', 'remove', 'populate'")
 
-    with st.chat_message("assistant"):
-        st.markdown("✅ Section added to final CSR buffer.")
+if prompt:
+    prompt_clean = prompt.strip().lower()
 
-    st.session_state.messages.append({
-        "role": "assistant",
-        "content": "✅ Section added to final CSR buffer."
-    })
+    # ────────────────────────────────────────────────
+    # SPECIAL COMMANDS
+    # ────────────────────────────────────────────────
+    if prompt_clean in ["add", "remove", "populate"]:
+        if prompt_clean == "add":
+            # Add the LAST assistant message to buffer
+            if st.session_state.messages and st.session_state.messages[-1]["role"] == "assistant":
+                last_answer = st.session_state.messages[-1]["content"]
+                st.session_state.buffer.append(last_answer)
+                with st.chat_message("assistant"):
+                    st.success(f"Added to buffer ({len(st.session_state.buffer)} items now)")
+            else:
+                with st.chat_message("assistant"):
+                    st.warning("No assistant message available to add")
 
-elif prompt_clean == "remove":
-    remove_last_added_section()
+        elif prompt_clean == "remove":
+            if st.session_state.buffer:
+                removed = st.session_state.buffer.pop()
+                with st.chat_message("assistant"):
+                    st.success(f"Removed last item from buffer ({len(st.session_state.buffer)} items left)")
+            else:
+                with st.chat_message("assistant"):
+                    st.warning("Buffer is empty — nothing to remove")
 
-    with st.chat_message("assistant"):
-        st.markdown("🗑️ Section removed from final CSR buffer.")
+        elif prompt_clean == "populate":
+            if st.session_state.buffer:
+                with st.chat_message("assistant"):
+                    st.markdown("### Buffered Sections (ready for template):")
+                    for i, content in enumerate(st.session_state.buffer, 1):
+                        st.markdown(f"**Section {i}:**")
+                        st.markdown(content)
+                        st.markdown("---")
+            else:
+                with st.chat_message("assistant"):
+                    st.info("Buffer is empty — nothing to populate")
 
-    st.session_state.messages.append({
-        "role": "assistant",
-        "content": "🗑️ Section removed from final CSR buffer."
-    })
+        # Add command to history (optional — looks nice in chat)
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        st.session_state.messages.append({"role": "assistant", "content": st.session_state.messages[-1]["content"]})
 
-elif prompt_clean == "populate":
-    render_all_sections()
+    # ────────────────────────────────────────────────
+    # NORMAL QUESTION → SEND TO LLM
+    # ────────────────────────────────────────────────
+    else:
+        # Prevent duplicate processing of same prompt
+        if "last_processed_prompt" not in st.session_state or st.session_state.last_processed_prompt != prompt:
+            st.session_state.last_processed_prompt = prompt
 
-    with st.chat_message("assistant"):
-        st.markdown("📄 Population completed successfully!")
+            # Add user message
+            st.session_state.messages.append({"role": "user", "content": prompt})
 
-    st.session_state.messages.append({
-        "role": "assistant",
-        "content": "📄 Population completed successfully!"
-    })
+            # Show user message
+            with st.chat_message("user"):
+                st.markdown(prompt)
 
-# ========================
-# NORMAL QUERY → LLM
-# ========================
-else:
-    with st.chat_message("user"):
-        st.markdown(prompt)
+            # Generate answer
+            with st.chat_message("assistant"):
+                with st.spinner("Thinking..."):
+                    result = answer(prompt, st.session_state.messages)
+                    st.markdown(result)
 
-    st.session_state.messages.append({
-        "role": "user",
-        "content": prompt
-    })
+            # Save to history
+            st.session_state.messages.append({"role": "assistant", "content": result})
 
-    with st.chat_message("assistant"):
-        with st.spinner("Thinking..."):
-            result = answer(prompt, st.session_state.messages)
-            st.markdown(result)
-
-    st.session_state.messages.append({
-        "role": "assistant",
-        "content": result
-    })
-
+# Always re-display full chat history
+for msg in st.session_state.messages:
+    with st.chat_message(msg["role"]):
+        st.markdown(msg["content"])
