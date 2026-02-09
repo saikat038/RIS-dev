@@ -1733,7 +1733,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     synonyms=synonyms,
     allowed_sources=allowed_sources,
     k_nearest_neighbors=30,
-    min_score=0.75          # ← 60% threshold
+    min_score=0.60          # ← 60% threshold
 )
 
     source_context_pieces = [
@@ -2101,5 +2101,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Summary of Subject Demographics Safety Population - RP Patients in tabular", [])
+answer("Summary of Subject Demographics Safety Population - RP Patients in tabular", [])
 # answer("Independent Ethics Committee or Institutional Review Board", [])
