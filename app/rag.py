@@ -1404,7 +1404,7 @@ def vector_search_source(
     section: str,
     synonyms: List[str],
     allowed_sources: List[str],
-    k_nearest_neighbors: int = 30,
+    k_nearest_neighbors: int = 50,
     min_score: float = 0.60,           # ← NEW: default 60% threshold
 ) -> List[Dict[str, Any]]:
     """
