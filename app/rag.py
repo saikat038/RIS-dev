@@ -1733,7 +1733,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     synonyms=synonyms,
     allowed_sources=allowed_sources,
     k_nearest_neighbors=30,
-    min_score=0.65          # ← 60% threshold
+    min_score=0.80          # ← 60% threshold
 )
 
     source_context_pieces = [
