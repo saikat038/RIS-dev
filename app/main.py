@@ -128,6 +128,7 @@ if prompt := st.chat_input("Ask anything about regulations, guidance, policies, 
                 MAX_TURNS = 6
                 safe_history = st.session_state.messages[-MAX_TURNS:]
                 
+                st.markdown("inside")
                 result = answer(prompt, safe_history)
                 st.markdown(result)
 
