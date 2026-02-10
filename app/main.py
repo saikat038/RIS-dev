@@ -79,42 +79,6 @@ for msg in st.session_state.messages:
         st.markdown(msg["content"])
 
 
-
-# ────────────────────────────────────────────────
-if prompt := st.chat_input(...):
-
-    if prompt == st.session_state.get("last_prompt", None):
-        # Optional: only show this once, or remove it completely for now
-        # st.write("Duplicate prevented")
-        st.stop()
-
-    st.session_state.last_prompt = prompt
-
-    # Now it's safe to show debug info (if you still want it)
-    st.write(f"DEBUG: processing new prompt (len={len(prompt)})")
-
-    st.session_state.last_prompt = prompt
-
-    # ─── very important line ───
-    st.write(f"DEBUG: current message count before append = {len(st.session_state.messages)}")
-
-    st.session_state.messages.append({"role": "user", "content": prompt})
-
-    # Show what we're actually sending
-    MAX_TURNS = 6
-    safe_history = st.session_state.messages[-MAX_TURNS:]
-    st.write(f"DEBUG: sending {len(safe_history)} messages to LLM")
-
-    # Optional: show rough token estimate
-    rough_tokens = sum(len(m["content"]) // 4 + 10 for m in safe_history)
-    st.write(f"DEBUG: rough token estimate of history = ~{rough_tokens}")
-
-    # ─── now call your function ───
-    with st.spinner("Thinking..."):
-        result = answer(prompt, safe_history)
-        #                           ^^^^^^^^^^^^  ← must be this truncated version
-
-
 # ────────────────────────────────────────────────
 #           Only process when there's NEW input
 # ────────────────────────────────────────────────
@@ -151,22 +115,20 @@ if prompt := st.chat_input("Ask anything about regulations, guidance, policies, 
             proto.render_all_sections()
             response = "📄 Population completed successfully!"
 
+        # Show command response
+        with st.chat_message("assistant"):
+            st.markdown(response)
+
+        st.session_state.messages.append({"role": "assistant", "content": response})
+
     # ─── Normal LLM query ───
     else:
         with st.chat_message("assistant"):
             with st.spinner("Thinking..."):
-                # Hard limit history (good practice)
                 MAX_TURNS = 6
                 safe_history = st.session_state.messages[-MAX_TURNS:]
                 
                 result = answer(prompt, safe_history)
                 st.markdown(result)
 
-        response = result
-
-
-    # Add assistant response
-    with st.chat_message("assistant"):
-        st.markdown(response)
-
-    st.session_state.messages.append({"role": "assistant", "content": response})
+        st.session_state.messages.append({"role": "assistant", "content": result})
