@@ -79,6 +79,38 @@ for msg in st.session_state.messages:
         st.markdown(msg["content"])
 
 
+
+# ────────────────────────────────────────────────
+if prompt := st.chat_input(...):
+
+    st.write("DEBUG: new prompt received →", repr(prompt[:80]))
+
+    if prompt == st.session_state.get("last_prompt"):
+        st.write("DEBUG: duplicate prompt detected — stopping")
+        st.stop()
+
+    st.session_state.last_prompt = prompt
+
+    # ─── very important line ───
+    st.write(f"DEBUG: current message count before append = {len(st.session_state.messages)}")
+
+    st.session_state.messages.append({"role": "user", "content": prompt})
+
+    # Show what we're actually sending
+    MAX_TURNS = 6
+    safe_history = st.session_state.messages[-MAX_TURNS:]
+    st.write(f"DEBUG: sending {len(safe_history)} messages to LLM")
+
+    # Optional: show rough token estimate
+    rough_tokens = sum(len(m["content"]) // 4 + 10 for m in safe_history)
+    st.write(f"DEBUG: rough token estimate of history = ~{rough_tokens}")
+
+    # ─── now call your function ───
+    with st.spinner("Thinking..."):
+        result = answer(prompt, safe_history)
+        #                           ^^^^^^^^^^^^  ← must be this truncated version
+
+
 # ────────────────────────────────────────────────
 #           Only process when there's NEW input
 # ────────────────────────────────────────────────
