@@ -73,87 +73,64 @@ if "last_prompt" not in st.session_state:
     st.session_state.last_prompt = None
 
 
-# ========================
-# DISPLAY CHAT HISTORY
-# ========================
+# Display chat history (this should always run)
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
 
-# ========================
-# CHAT INPUT
-# ========================
-prompt = st.chat_input(
-    "Ask anything about regulations, guidance, policies, IND, etc..."
-)
+# ────────────────────────────────────────────────
+#           Only process when there's NEW input
+# ────────────────────────────────────────────────
+if prompt := st.chat_input("Ask anything about regulations, guidance, policies, IND, etc..."):
 
-# ⛔ stop if no input
-if prompt is None:
-    st.stop()
+    # ─── Prevent duplicate run on same prompt ───
+    if prompt == st.session_state.get("last_prompt"):
+        st.stop()           # ← safe, but usually not even needed anymore
 
-# ⛔ prevent duplicate execution on rerun
-if prompt == st.session_state.last_prompt:
-    st.stop()
+    st.session_state.last_prompt = prompt
 
-st.session_state.last_prompt = prompt
 
-prompt_clean = prompt.strip().lower()
-
-# ========================
-# COMMANDS
-# ========================
-if prompt_clean == "add":
-    proto.add_last_section_to_final()
-
-    response = "✅ Section added to final CSR buffer."
-
-elif prompt_clean == "remove":
-    proto.remove_last_added_section()
-
-    response = "🗑️ Section removed from final CSR buffer."
-
-elif prompt_clean == "populate":
-    proto.render_all_sections()
-
-    response = "📄 Population completed successfully!"
-
-# ========================
-# NORMAL QUERY → LLM
-# ========================
-else:
-    st.session_state.messages.append({
-        "role": "user",
-        "content": prompt
-    })
+    # Add user message to history & display it
+    st.session_state.messages.append({"role": "user", "content": prompt})
 
     with st.chat_message("user"):
         st.markdown(prompt)
 
+
+    prompt_clean = prompt.strip().lower()
+
+    # ─── Commands ───
+    if prompt_clean in ("add", "remove", "populate"):
+
+        if prompt_clean == "add":
+            proto.add_last_section_to_final()
+            response = "✅ Section added to final CSR buffer."
+
+        elif prompt_clean == "remove":
+            proto.remove_last_added_section()
+            response = "🗑️ Section removed from final CSR buffer."
+
+        elif prompt_clean == "populate":
+            proto.render_all_sections()
+            response = "📄 Population completed successfully!"
+
+    # ─── Normal LLM query ───
+    else:
+        with st.chat_message("assistant"):
+            with st.spinner("Thinking..."):
+                # Hard limit history (good practice)
+                MAX_TURNS = 6
+                safe_history = st.session_state.messages[-MAX_TURNS:]
+                
+                result = answer(prompt, safe_history)
+                st.markdown(result)
+
+        response = result
+
+
+    # Add assistant response
     with st.chat_message("assistant"):
-        with st.spinner("Thinking..."):
-            # ⛔ HARD LIMIT HISTORY (TOKEN SAFETY)
-            MAX_TURNS = 6
-            safe_history = st.session_state.messages[-MAX_TURNS:]
+        st.markdown(response)
 
-            result = answer(prompt, safe_history)
-            st.markdown(result)
-
-    st.session_state.messages.append({
-        "role": "assistant",
-        "content": result
-    })
-
-    st.stop()
-
-
-# ========================
-# COMMAND RESPONSE
-# ========================
-with st.chat_message("assistant"):
-    st.markdown(response)
-
-st.session_state.messages.append({
-    "role": "assistant",
-    "content": response
-})
+    st.session_state.messages.append({"role": "assistant", "content": response})
