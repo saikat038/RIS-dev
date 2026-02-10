@@ -1744,6 +1744,16 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
     source_context = "\n\n".join(source_context_pieces) if source_context_pieces else "No source evidence found."
 
+    # After building source_context and ich_context
+
+    print("[DEBUG RETRIEVAL STATS]")
+    print(f"  • source_chunks count: {len(source_chunks)}")
+    print(f"  • ich_chunks count:    {len(ich_chunks)}")
+    print(f"  • source_context len:  {len(source_context):,} chars")
+    print(f"  • ich_context len:     {len(ich_context):,} chars")
+    print(f"  • total context len:   {len(source_context) + len(ich_context):,} chars")
+    print(f"  • active_control json len: {len(json.dumps(active_control)):,} chars")
+
 
     # ────────────────────────────────────────────────
     #  SAVE RAW VECTOR SEARCH RESULTS FOR DEBUGGING
@@ -1850,6 +1860,18 @@ def build_prompt_node(state: RAGState) -> RAGState:
 [Current Authoring Request]
 {query}
 """.strip()
+    
+    print("[BUILD PROMPT DEBUG]")
+    print(f"  • context length: {len(context):,} chars")
+    print(f"  • conv_history length: {len(conv_history):,} chars")
+    print(f"  • query length: {len(query):,} chars")
+    print(f"  • final llm_input length: {len(user_content):,} chars")
+    print(f"  • history messages count: {len(history)}")
+    if conv_history:
+        print("  • conv_history preview (first 200):")
+        print(conv_history[:200])
+        print("  • conv_history preview (last 200):")
+        print(conv_history[-200:])
 
     new_state = dict(state)
     new_state["conv_history"] = conv_history
