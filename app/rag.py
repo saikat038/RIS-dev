@@ -1198,6 +1198,10 @@ def load_source_search_client() -> SearchClient:
     """
     Returns Azure Search client for SOURCE documents.
     """
+
+    print("[SOURCE INDEX]")
+    print("  AZURE_SEARCH_INDEX_NAME:", AZURE_SEARCH_INDEX_NAME)
+    print("  endpoint:", AZURE_SEARCH_SERVICE_ENDPOINT)
     return SearchClient(
         endpoint=AZURE_SEARCH_SERVICE_ENDPOINT,
         index_name=AZURE_SEARCH_INDEX_NAME,
