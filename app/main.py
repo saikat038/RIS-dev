@@ -83,11 +83,15 @@ for msg in st.session_state.messages:
 # ────────────────────────────────────────────────
 if prompt := st.chat_input(...):
 
-    st.write("DEBUG: new prompt received →", repr(prompt[:80]))
-
-    if prompt == st.session_state.get("last_prompt"):
-        st.write("DEBUG: duplicate prompt detected — stopping")
+    if prompt == st.session_state.get("last_prompt", None):
+        # Optional: only show this once, or remove it completely for now
+        # st.write("Duplicate prevented")
         st.stop()
+
+    st.session_state.last_prompt = prompt
+
+    # Now it's safe to show debug info (if you still want it)
+    st.write(f"DEBUG: processing new prompt (len={len(prompt)})")
 
     st.session_state.last_prompt = prompt
 
