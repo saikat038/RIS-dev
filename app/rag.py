@@ -1446,6 +1446,7 @@ def vector_search_source(
                     "table_context_heading", "table_context_text",
                     "table_semantic_hint", "table_headers", "table_rows"
                 ],
+                top=k_nearest_neighbors
             )
 
             # Filter by minimum score
