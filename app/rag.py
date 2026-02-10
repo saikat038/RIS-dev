@@ -1469,6 +1469,15 @@ def vector_search_source(
             deduplicated.append(r)
 
     print(f"Final source chunks after deduplication & score filtering: {len(deduplicated)}")
+
+
+    print("[SOURCE SEARCH]")
+    print("  queries used:", queries)
+    print("  number of queries:", len(queries))
+    print("  doc_filter:", doc_filter)
+    print("  k_nearest_neighbors:", k_nearest_neighbors)
+    print("  min_score:", min_score)
+    print("  raw results before dedup:", len(results))
     return deduplicated
 
 
@@ -1649,6 +1658,13 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     # PICK ACTIVE AUTHORING CONTROL
     # -------------------------------------------------
     active_control = pick_active_control(AUTHORING_CONTROL, query)
+
+    print("[ACTIVE CONTROL USED]")
+    print("section:", active_control.get("section"))
+    print("synonyms:", active_control.get("synonyms", []))
+    print("len(synonyms):", len(active_control.get("synonyms", [])))
+    print("allowed_sources:", active_control.get("allowed_sources", []))
+    print("len(allowed_sources):", len(active_control.get("allowed_sources", [])))
     # print(active_control.get("section", ""))
 
     if len(active_control.get("section", "")) == 0:
