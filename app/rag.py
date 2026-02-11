@@ -1515,7 +1515,7 @@ def vector_search_source(
             res = search_client.search(
                 search_text=None,
                 vector_queries=[vq],
-                filter=doc_filter,
+                # filter=doc_filter,
                 select=[
                     "id", "doc_id", "text", "chunk_type", "heading_path",
                     "page_numbers", "source_block_ids",
@@ -1876,7 +1876,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
                         synonyms=synonyms,
                         allowed_sources=allowed_sources,
                         k_nearest_neighbors=30,
-                        min_score=0.60          # ← 60% threshold
+                        min_score=0.50          # ← 60% threshold
                     )
 
     source_context_pieces = [
@@ -2271,5 +2271,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-answer("Inclusion Criteria", [])
+answer("Summary of Subject Demographics Safety Population - RP Patients in tabular", [])
 # answer("Independent Ethics Committee or Institutional Review Board", [])
