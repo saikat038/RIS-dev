@@ -1301,24 +1301,26 @@ import json
 from typing import List, Dict, Any
 from azure.search.documents.models import VectorizedQuery
 
+import re
+from typing import List, Dict, Any
+from azure.search.documents.models import VectorizedQuery
+
 def vector_search_ich(
     search_client,
     section: str,
     synonyms: List[str],
     ich_refs: List[str],
-    k_nearest_neighbors: int = 15,          # lowered default — less noise
-    min_score: float = 0.62,                 # new: filter low-relevance hits
+    k_nearest_neighbors: int = 15,
+    min_score: float = 0.62,
 ) -> List[Dict[str, Any]]:
     """
-    Improved ICH vector search:
-    - Multiple queries + deduplication
-    - Score threshold to reduce noise
-    - Logging for debugging
-    - Ready for future hybrid / semantic
+    ICH vector search — focused on ich_refs only.
+    Checks section_path directly, fetches ALL content under matched paths.
+    Minimal changes to original structure.
     """
-    # Build query list
-    queries = [section.strip()] + [s.strip() for s in synonyms if s and s.strip() != section.strip()] + [r.strip() for r in ich_refs if r.strip()]
-    queries = [q for q in queries if q]  # remove empty
+    # ── Prepare queries — only from ich_refs ─────────────────────────────
+    queries = [r.strip() for r in ich_refs if r.strip()]
+    queries = list(dict.fromkeys(q for q in queries if q))
 
     if not queries:
         print("No valid ICH queries after cleaning")
@@ -1328,8 +1330,38 @@ def vector_search_ich(
     for q in queries:
         print(f"  - {q}")
 
-    results = []
+    # ── Step 1: Locate candidates (headings or content with section_path) ──
+    results = []  # candidates
 
+    # Try exact section_path match first (from ich_refs)
+    section_number_match = None
+    for q in queries:
+        if re.match(r'^\d+(\.\d+)*$', q):
+            section_number_match = q
+            break
+
+    if section_number_match:
+        exact_filter = f"section_path eq '{section_number_match}'"
+        print(f"Using exact section_path filter: {exact_filter}")
+
+        try:
+            res = search_client.search(
+                search_text=section_number_match,
+                filter=exact_filter,
+                select=[
+                    "id", "section_path", "section_title", "guideline",
+                    "block_type", "text", "page_number"
+                ],
+                top=5,
+            )
+            found = list(res)
+            print(f"Exact section_path search returned {len(found)} items")
+            results.extend(dict(r) for r in found)
+        except Exception as e:
+            print(f"Exact section_path search failed: {e}")
+
+    # Fallback: vector search (only if needed)
+    heading_filter = None  # no strict heading filter — allow content too
     for q in queries:
         try:
             vector = batch_embed([q])[0]
@@ -1338,47 +1370,88 @@ def vector_search_ich(
             vq = VectorizedQuery(
                 vector=vector,
                 fields="vector",
+                k_nearest_neighbors=k_nearest_neighbors
             )
-            vq.k = k_nearest_neighbors
-
-
-            # Optional: add simple metadata filter if you know what to exclude
-            # filter_expr = "rule_type ne 'informational'"
 
             res = search_client.search(
-                search_text=None,                    # pure vector for now
+                search_text=None,
                 vector_queries=[vq],
-                # filter=filter_expr,                # uncomment when needed
+                filter=heading_filter,
                 select=[
-                    "id", "doc_id", "source_type", "guideline", "block_type",
-                    "section_path", "section_title", "rule_type", "page_number", "text"
+                    "id", "section_path", "section_title", "guideline",
+                    "block_type", "text", "page_number"
                 ],
                 top=k_nearest_neighbors,
             )
 
             found = list(res)
-            # Keep only reasonably relevant hits
             good_hits = [r for r in found if r.get("@search.score", 0) >= min_score]
 
-            print(f"    → Query returned {len(found)} hits → kept {len(good_hits)} (score ≥ {min_score})")
-
+            print(f"    → Query '{q[:50]}...' returned {len(found)} hits → kept {len(good_hits)}")
             results.extend(dict(r) for r in good_hits)
 
         except Exception as e:
-            print(f"ICH search failed for query '{q}': {type(e).__name__}: {e}")
+            print(f"Vector search failed for '{q}': {type(e).__name__}: {e}")
 
-    # Deduplicate by id (preserve first occurrence)
-    seen = set()
-    deduplicated = []
-
+    # Deduplicate by section_path (prefer content over heading if both exist)
+    seen_paths = set()
+    unique_candidates = []
     for r in results:
-        key = r.get("id", "")
-        if key and key not in seen:
-            seen.add(key)
-            deduplicated.append(r)
+        path = r.get("section_path")
+        if path and path not in seen_paths:
+            seen_paths.add(path)
+            unique_candidates.append(r)
 
-    print(f"Final ICH chunks after deduplication: {len(deduplicated)}")
-    return deduplicated
+    if not unique_candidates:
+        print("No ICH sections found above threshold")
+        return []
+
+    print(f"Found {len(unique_candidates)} unique sections by section_path")
+
+    # ── Step 2: Fetch ALL content under matched section_paths ─────────────
+    all_content_chunks = []
+
+    for candidate in unique_candidates:
+        path = candidate["section_path"]
+        print(f"Fetching content under section_path: {path}")
+
+        # Fetch everything under this section_path — no block_type filter
+        content_filter = f"section_path eq '{path}'"
+
+        try:
+            content_res = search_client.search(
+                search_text=None,
+                filter=content_filter,
+                select=[
+                    "id", "doc_id", "source_type", "guideline", "block_type",
+                    "section_path", "section_title", "rule_type", "page_number", "text"
+                ],
+                top=80,
+                order_by="page_number asc"
+            )
+
+            content_list = list(content_res)
+            print(f"  → Found {len(content_list)} items under {path}")
+
+            for doc in content_list:
+                t = (doc.get("text") or "").strip()
+                if len(t.split()) >= 4:
+                    all_content_chunks.append(dict(doc))
+
+        except Exception as e:
+            print(f"Content fetch failed for {path}: {e}")
+
+    # Final deduplication
+    seen_ids = set()
+    final_chunks = []
+    for chunk in all_content_chunks:
+        cid = chunk.get("id")
+        if cid and cid not in seen_ids:
+            seen_ids.add(cid)
+            final_chunks.append(chunk)
+
+    print(f"Final ICH content chunks after deduplication: {len(final_chunks)}")
+    return final_chunks
 
 ##################################################################################################################################################################
 
@@ -1436,10 +1509,13 @@ def vector_search_source(
             )
             vq.k = k_nearest_neighbors   # ← correct way (avoids warning)
 
+            print("Vector field being queried:", vq.fields)
+            print("Vector dimensions of query:", len(vector))
+
             res = search_client.search(
                 search_text=None,
                 vector_queries=[vq],
-                filter=doc_filter,
+                # filter=doc_filter,
                 select=[
                     "id", "doc_id", "text", "chunk_type", "heading_path",
                     "page_numbers", "source_block_ids",
@@ -1562,45 +1638,86 @@ def save_vector_search_results(
 
 
 from collections import defaultdict
+import re
 
-def group_ich_by_section(chunks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+from collections import defaultdict
+import re
+
+from collections import defaultdict
+import re
+
+def group_ich_by_section(chunks: list[dict], ich_refs: list[str] = None) -> dict:
+    """
+    ONLY keeps the section whose section_path matches a number in ich_refs.
+    Drops all others.
+    Returns clean structure with only requested fields.
+    """
+    # Extract numeric section numbers from ich_refs (e.g. "14.1")
+    allowed_paths = set()
+    if ich_refs:
+        for ref in ich_refs:
+            match = re.search(r'\b(\d+(\.\d+)*)\b', ref.strip())
+            if match:
+                allowed_paths.add(match.group(1))
+
+    print(f"Allowed paths from ich_refs: {allowed_paths or 'None provided'}")
+
+    if not allowed_paths:
+        print("No numeric section refs found → returning empty")
+        return {"total_sections": 0, "results": []}
+
+    # Group chunks
     grouped = defaultdict(list)
-
     for chunk in chunks:
-        section = chunk.get("section_path") or "UNKNOWN"
-        grouped[section].append(chunk)
+        path = chunk.get("section_path")
+        if path:
+            grouped[path].append(chunk)
 
-    assembled_sections = []
+    results = []
 
+    # Only process matching sections
     for section_path, items in grouped.items():
-        items.sort(key=lambda x: (x.get("page_number") or 0, x.get("id") or ""))
-
-        # Collect paragraphs (now separate blocks)
-        paragraphs = []
-        for item in items:
-            text = item.get("text", "").strip()
-            if text and len(text.split()) > 5:
-                paragraphs.append(text)
-
-        if not paragraphs:
+        if section_path not in allowed_paths:
+            print(f"Skipped {section_path} (not matching ich_refs)")
             continue
 
-        # Join paragraphs with double newline for readability
-        guideline_text = "\n\n".join(paragraphs)
+        items.sort(key=lambda x: x.get("page_number") or 0)
 
-        assembled_sections.append({
+        headings = []
+        guideline_parts = []
+
+        for item in items:
+            text = (item.get("text") or "").strip()
+            if not text:
+                continue
+
+            block_type = item.get("block_type", "").lower()
+
+            if block_type == "heading":
+                headings.append(text)
+                guideline_parts.append(text)
+            else:
+                guideline_parts.append(text)
+
+        guideline_text = "\n\n".join(guideline_parts).strip() or "(no content)"
+
+        results.append({
             "section_path": section_path,
-            "guideline": items[0].get("guideline", "Unknown Guideline"),
-            "rule_type": sorted(list({i.get("rule_type") for i in items if i.get("rule_type")})),
             "source_type": "ich",
             "guideline_text": guideline_text,
-            "paragraphs": paragraphs,  # optional: keep list
-            "ids": [i.get("source_block_ids", [i.get("id")]) for i in items]
+            "headings": headings
         })
 
-    assembled_sections.sort(key=lambda x: x["section_path"])
-    return assembled_sections
+    # Sort (though usually only 1)
+    results.sort(key=lambda x: x["section_path"])
 
+    print(f"Kept {len(results)} matching sections")
+    print("ich_refs before grouping:", ich_refs)
+
+    return {
+        "total_sections": len(results),
+        "results": results
+    }
 
 # ============================================================
 # CHAT HISTORY FORMATTING (UNCHANGED)
@@ -1702,19 +1819,21 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     synonyms = active_control.get("synonyms", [])
     ich_refs = active_control.get("ich_refs", [])
 
+    print("section name >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", section_name)
+
     ich_chunks = vector_search_ich(
         search_client=ich_client,
         section=section_name,
         synonyms=synonyms,
         ich_refs=ich_refs,
         k_nearest_neighbors=5,          # you can tune this
-        min_score=0.65                   # start here, adjust 0.58–0.68 based on results
+        min_score=0.60                   # start here, adjust 0.58–0.68 based on results
         )
 
     # -------------------------------------------------
     # GROUP ICH CHUNKS INTO STRUCTURED SECTIONS
     # -------------------------------------------------
-    ich_sections = group_ich_by_section(ich_chunks)
+    ich_sections = group_ich_by_section(ich_chunks, ich_refs=ich_refs)
 
     # -------------------------------------------------
     # BUILD ICH CONTEXT FOR LLM (text version)
@@ -1722,21 +1841,25 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
     ich_context_blocks = []
 
-    for section in ich_sections:
-        # Use whichever key you want to prioritize
-        content = section.get("guideline_text") or "\n\n".join(section.get("paragraphs", []))
+    for section in ich_sections.get("results", []):
+        if not isinstance(section, dict):
+            print(f"Skipping invalid section item: {section}")
+            continue
+
+        guideline_text = section.get("guideline_text") or ""
+        paragraphs = section.get("paragraphs", [])
+
+        content = guideline_text or "".join(paragraphs)
+
         if not content.strip():
             continue
 
-        block = f"""ICH E3 Section {section["section_path"]}:
-    {content}"""
+        # Format exactly as requested
+        block = f"\n{content}"
         ich_context_blocks.append(block)
 
-    ich_context = (
-        "\n\n".join(ich_context_blocks)
-        if ich_context_blocks
-        else "No ICH guidance found."
-    )
+    # Join with double newline between blocks (if multiple, though you likely have only one)
+    ich_context = "".join(ich_context_blocks) if ich_context_blocks else "No ICH guidance found."
 
     # print(f"ICH sections found: {len(ich_sections)}")
 
@@ -1747,15 +1870,14 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     source_client = load_source_search_client()
 
     allowed_sources = active_control.get("allowed_sources", [])
-
     source_chunks = vector_search_source(
-    search_client=source_client,
-    section=section_name,
-    synonyms=synonyms,
-    allowed_sources=allowed_sources,
-    k_nearest_neighbors=30,
-    min_score=0.60          # ← 60% threshold
-)
+                        search_client=source_client,
+                        section=section_name,
+                        synonyms=synonyms,
+                        allowed_sources=allowed_sources,
+                        k_nearest_neighbors=30,
+                        min_score=0.60          # ← 60% threshold
+                    )
 
     source_context_pieces = [
         format_chunk_for_context(chunk)
@@ -1804,8 +1926,8 @@ def retrieve_context_node(state: RAGState) -> RAGState:
         ich_sections=ich_sections,
         debug_dir="RIS-dev"
     )
-
-    if len(active_control.get("synonyms", ""))>1:
+    
+    if len(active_control.get("synonyms", "")[0])>1:
         # -------------------------------------------------
         # FINAL MERGED CONTEXT (meta data driven)
         # -------------------------------------------------
@@ -1845,6 +1967,8 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
     
     # print("\n\nnew state:\n",new_state)
+    with open("last_final_context.txt", "w", encoding="utf-8") as f:
+        f.write(final_context)
 
 
 
@@ -2147,5 +2271,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Summary of Subject Demographics Safety Population - RP Patients in tabular", [])
+answer("Inclusion Criteria", [])
 # answer("Independent Ethics Committee or Institutional Review Board", [])
