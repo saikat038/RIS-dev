@@ -1227,8 +1227,8 @@ def format_chunk_for_context(chunk: Dict) -> str:
     """
     Format SOURCE chunks for LLM context.
     Content first, metadata second.
+    Improved table rendering to help LLM understand structure.
     """
-
     if not isinstance(chunk, dict):
         return str(chunk)
 
@@ -1244,9 +1244,69 @@ def format_chunk_for_context(chunk: Dict) -> str:
     if chunk_type == "heading" and len(text.split()) < 12:
         return ""
 
-    meta = []
-    if chunk_type:
-        meta.append(f"type={chunk_type}")
+    # ── Special handling for tables ────────────────────────────────────────
+    if chunk_type == "table" or any(k.startswith("table_") for k in chunk):
+        lines = []
+
+        # Table title / context heading
+        table_title = (
+            chunk.get("table_context_heading")
+            or heading
+            or "Table (no caption)"
+        ).strip()
+        lines.append(f"**{table_title}**")
+        lines.append("")
+
+        # Use structured table_rows if available (best case)
+        rows = chunk.get("table_rows")
+        if rows:
+            # If rows is a string representation → try to parse it
+            if isinstance(rows, str):
+                try:
+                    # Very careful eval - only if you trust the data source
+                    import ast
+                    rows = ast.literal_eval(rows)
+                except:
+                    rows = None
+
+            if isinstance(rows, list) and rows and isinstance(rows[0], list):
+                # Header row
+                header = rows[0]
+                lines.append(" | ".join(str(cell).strip() for cell in header))
+                lines.append("|---" * len(header) + "|")
+
+                # Data rows - limit to avoid huge context
+                for row in rows[1:15]:
+                    cleaned_row = [str(cell).strip().replace("\n", " ") for cell in row]
+                    lines.append(" | ".join(cleaned_row))
+
+                # Add metadata
+                meta = [f"type=table", f"pages={pages if pages else '?'}"]
+                if heading:
+                    meta.append(f"section={heading}")
+                lines.append(f"[{', '.join(meta)}]")
+                return "\n".join(lines).strip()
+
+        # Fallback: use raw text if no usable table_rows
+        lines.append(text)
+
+    else:
+        # Original non-table logic (unchanged)
+        meta = []
+        if chunk_type:
+            meta.append(f"type={chunk_type}")
+        if heading:
+            meta.append(f"section={heading}")
+        if pages:
+            if isinstance(pages, list):
+                pages = ",".join(map(str, pages))
+            meta.append(f"pages={pages}")
+
+        meta_line = f"[{', '.join(meta)}]" if meta else ""
+        return f"{text}\n{meta_line}".strip()
+
+    # Final metadata for table case (if not already added)
+    meta = [f"type={chunk_type or 'table'}"]
     if heading:
         meta.append(f"section={heading}")
     if pages:
@@ -1255,8 +1315,7 @@ def format_chunk_for_context(chunk: Dict) -> str:
         meta.append(f"pages={pages}")
 
     meta_line = f"[{', '.join(meta)}]" if meta else ""
-
-    return f"{text}\n{meta_line}".strip()
+    return f"{'\n'.join(lines)}\n{meta_line}".strip()
 
 
 
