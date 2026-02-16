@@ -1257,32 +1257,43 @@ def format_chunk_for_context(chunk: Dict) -> str:
         lines.append(f"**{table_title}**")
         lines.append("")
 
-        # Use structured table_rows if available (best case)
         rows = chunk.get("table_rows")
+
         if rows:
-            # If rows is a string representation → try to parse it
+            # FIX 1: Proper parsing of newline-separated row lists
             if isinstance(rows, str):
                 try:
                     import ast
-                    rows = ast.literal_eval(rows)
-                except:
+                    parsed_rows = []
+                    for line in rows.splitlines():
+                        line = line.strip()
+                        if line.startswith("[") and line.endswith("]"):
+                            parsed_rows.append(ast.literal_eval(line))
+                    rows = parsed_rows if parsed_rows else None
+                except Exception:
                     rows = None
 
             if isinstance(rows, list) and rows and isinstance(rows[0], list):
                 # Header row
                 header = rows[0]
                 lines.append(" | ".join(str(cell).strip() for cell in header))
-                lines.append("|---" * len(header) + "|")
+                lines.append("|" + "|".join(["---"] * len(header)) + "|")
 
-                # Data rows - limit to avoid token blowup
-                for row in rows[1:15]:
-                    cleaned_row = [str(cell).strip().replace("\n", " ") for cell in row]
+                # FIX 2: Increased row limit so ethnicity and later rows are not dropped
+                MAX_ROWS = 50
+
+                for row in rows[1:MAX_ROWS]:
+                    cleaned_row = [
+                        str(cell).strip().replace("\n", " ")
+                        for cell in row
+                    ]
                     lines.append(" | ".join(cleaned_row))
 
-                # Add metadata
+                # Metadata
                 meta = [f"type=table", f"pages={pages if pages else '?'}"]
                 if heading:
                     meta.append(f"section={heading}")
+
                 lines.append(f"[{', '.join(meta)}]")
                 return "\n".join(lines).strip()
 
@@ -1304,7 +1315,7 @@ def format_chunk_for_context(chunk: Dict) -> str:
         meta_line = f"[{', '.join(meta)}]" if meta else ""
         return f"{text}\n{meta_line}".strip()
 
-    # Final metadata for table case (if not already added)
+    # Final metadata for table case (fallback path)
     meta = [f"type={chunk_type or 'table'}"]
     if heading:
         meta.append(f"section={heading}")
@@ -1315,11 +1326,11 @@ def format_chunk_for_context(chunk: Dict) -> str:
 
     meta_line = f"[{', '.join(meta)}]" if meta else ""
 
-    # ── Fixed return line ────────────────────────────────────────────────
     result = "\n".join(lines)
     if meta_line:
         result += "\n" + meta_line
     return result.strip()
+
 
 
 
@@ -1941,6 +1952,10 @@ def retrieve_context_node(state: RAGState) -> RAGState:
                         k_nearest_neighbors=30,
                         min_score=0.50          # ← 60% threshold
                     )
+    
+    # After getting source_chunks
+    # with open("source_chunks_raw.txt", "w", encoding="utf-8") as f:
+    #     f.write(str(source_chunks))
 
     source_context_pieces = [
         format_chunk_for_context(chunk)
@@ -2334,5 +2349,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Summary of Subject Demographics Safety Population - RP Patients in tabular", [])
+answer("Summary of Subject Demographics Safety Population - RP Patients in tabular", [])
 # answer("Independent Ethics Committee or Institutional Review Board", [])
