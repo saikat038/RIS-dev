@@ -1263,7 +1263,6 @@ def format_chunk_for_context(chunk: Dict) -> str:
             # If rows is a string representation → try to parse it
             if isinstance(rows, str):
                 try:
-                    # Very careful eval - only if you trust the data source
                     import ast
                     rows = ast.literal_eval(rows)
                 except:
@@ -1275,7 +1274,7 @@ def format_chunk_for_context(chunk: Dict) -> str:
                 lines.append(" | ".join(str(cell).strip() for cell in header))
                 lines.append("|---" * len(header) + "|")
 
-                # Data rows - limit to avoid huge context
+                # Data rows - limit to avoid token blowup
                 for row in rows[1:15]:
                     cleaned_row = [str(cell).strip().replace("\n", " ") for cell in row]
                     lines.append(" | ".join(cleaned_row))
@@ -1315,7 +1314,12 @@ def format_chunk_for_context(chunk: Dict) -> str:
         meta.append(f"pages={pages}")
 
     meta_line = f"[{', '.join(meta)}]" if meta else ""
-    return f"{'\n'.join(lines)}\n{meta_line}".strip()
+
+    # ── Fixed return line ────────────────────────────────────────────────
+    result = "\n".join(lines)
+    if meta_line:
+        result += "\n" + meta_line
+    return result.strip()
 
 
 
@@ -2330,5 +2334,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Summary of Subject Demographics Safety Population - RP Patients in tabular", [])
+answer("Summary of Subject Demographics Safety Population - RP Patients in tabular", [])
 # answer("Independent Ethics Committee or Institutional Review Board", [])
