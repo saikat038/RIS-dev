@@ -95,18 +95,18 @@ def chunk_ich_units(
     max_tokens: int = 300,
 ) -> List[Dict[str, Any]]:
     """
-    Convert ICH-normalized rule units into embedding-ready chunks.
+    Convert ICH-normalized document into embedding-ready chunks.
 
-    Rules:
-    - 1 normalized rule = 1 chunk
-    - NEVER merge rules
-    - Hard-split only if a single rule exceeds max_tokens
+    Now includes:
+    - Rule-like blocks (original behavior)
+    - All normal paragraphs / text blocks
     """
-
     chunks: List[Dict[str, Any]] = []
 
+    # ────────────────────────────────────────────────
+    # Part 1: Original rule-like chunking (unchanged)
+    # ────────────────────────────────────────────────
     for block in normalized_doc.get("blocks", []):
-        # ICH normalizer should only emit rule-like blocks
         block_text = (
             block.get("content")
             or block.get("text")
@@ -124,7 +124,6 @@ def chunk_ich_units(
             "page_numbers": [block.get("page_number")] if block.get("page_number") else [],
         }
 
-        # Oversized single rule → hard split (rare but safe)
         if token_len(block_text) > max_tokens:
             for part in hard_token_split(block_text, max_tokens):
                 chunks.append({
@@ -138,5 +137,35 @@ def chunk_ich_units(
                 "text": block_text,
                 "metadata": metadata
             })
+
+    # ────────────────────────────────────────────────
+    # Part 2: Add all normal text blocks (paragraphs, summaries, notes, etc.)
+    # ────────────────────────────────────────────────
+    for page in normalized_doc.get("pages", []):
+        for block in page.get("blocks", []):
+            text = resolve_block_text(block).strip()
+
+            if not text or len(text.split()) < 3:
+                continue
+
+            # Skip if it matches a rule chunk exactly (avoid duplicates)
+            if any(text == c["text"] for c in chunks):
+                continue
+
+            metadata = {
+                "guideline": normalized_doc.get("document_name", "ICH Guideline"),
+                "section_path": block.get("section_path") or page.get("section_path"),
+                "block_type": block.get("block_type", "paragraph"),
+                "page_number": page.get("page_number"),
+                "rule_type": block.get("rule_type", []),
+            }
+
+            chunks.append({
+                "chunk_type": "paragraph",
+                "text": text,
+                "metadata": metadata
+            })
+
+    print(f"Chunked {len(chunks)} total items (rules + paragraphs)")
 
     return chunks

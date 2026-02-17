@@ -158,31 +158,45 @@ def chunk_semantic_blocks(
         if block_type == "table":
             flush_chunk()
 
-            table_text = resolve_block_text(block)
+            table_text = "\n".join(filter(None, [
+                block.get("table_context_heading"),
+                block.get("table_context_text"),
+                resolve_block_text(block),
+            ]))
+
             if not table_text:
                 continue
 
-            # Hard-split large tables
+            heading_path = (
+                block.get("table_context_path")
+                or block.get("container_path")
+            )
+
+            table_metadata = {
+                "heading_path": heading_path,
+                "page_numbers": [block.get("page_number")],
+                "source_block_ids": block.get("source_block_ids", []),
+
+                # Preserve table structure
+                "table_context_heading": block.get("table_context_heading"),
+                "table_context_text": block.get("table_context_text"),
+                "table_semantic_hint": block.get("table_semantic_hint"),
+                "headers": block.get("headers"),
+                "rows": block.get("rows"),
+            }
+
             if token_len(table_text) > max_tokens:
                 for part in hard_token_split(table_text, max_tokens):
                     chunks.append({
                         "chunk_type": "table",
                         "text": part,
-                        "metadata": {
-                            "heading_path": block.get("heading_path"),
-                            "page_numbers": [block.get("page_number")],
-                            "source_block_ids": block.get("source_block_ids", [])
-                        }
+                        "metadata": dict(table_metadata)
                     })
             else:
                 chunks.append({
                     "chunk_type": "table",
                     "text": table_text,
-                    "metadata": {
-                        "heading_path": block.get("heading_path"),
-                        "page_numbers": [block.get("page_number")],
-                        "source_block_ids": block.get("source_block_ids", [])
-                    }
+                    "metadata": dict(table_metadata)
                 })
 
             continue
@@ -199,10 +213,15 @@ def chunk_semantic_blocks(
 
         block_tokens = token_len(block_text)
 
+        heading_path = (
+            block.get("heading_path")
+            or block.get("container_path")
+        )
+
         # New heading → flush
-        if cur_meta["heading_path"] != block.get("heading_path"):
+        if cur_meta["heading_path"] != heading_path:
             flush_chunk()
-            cur_meta["heading_path"] = block.get("heading_path")
+            cur_meta["heading_path"] = heading_path
 
         # Oversized paragraph → standalone
         if block_tokens > max_tokens:
@@ -212,7 +231,7 @@ def chunk_semantic_blocks(
                     "chunk_type": "paragraph",
                     "text": part,
                     "metadata": {
-                        "heading_path": block.get("heading_path"),
+                        "heading_path": heading_path,
                         "page_numbers": [block.get("page_number")],
                         "source_block_ids": block.get("source_block_ids", [])
                     }
@@ -222,7 +241,7 @@ def chunk_semantic_blocks(
         # Would exceed → flush
         if cur_text_parts and (cur_tokens + block_tokens) > max_tokens:
             flush_chunk()
-            cur_meta["heading_path"] = block.get("heading_path")
+            cur_meta["heading_path"] = heading_path
 
         cur_text_parts.append(block_text)
         cur_tokens += block_tokens

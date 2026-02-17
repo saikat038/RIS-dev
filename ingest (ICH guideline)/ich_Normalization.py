@@ -100,79 +100,113 @@ def detect_rule_type(text: str) -> str:
 
 def normalize_ich_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Normalize ICH guidelines into atomic rule blocks.
-
-    Output blocks:
-    - ONE rule per block
-    - No paragraph merging
-    - No containers
-    - No narrative context
+    Normalize layout JSON into structured blocks while preserving paragraph separation.
+    - Keeps paragraphs as separate items (with newlines)
+    - Detects headings / sections / tables
+    - Avoids forcing everything into single-line strings
     """
-
     normalized = {
         "doc_id": layout_json.get("document_name"),
         "blocks": []
     }
 
-    current_section_path = None
-    current_section_title = None
+    current_section = {
+        "section_path": None,
+        "section_title": None,
+        "container_id": None,
+    }
+
+    paragraph_buffer = []
+    buffer_page = None
+    buffer_ids = []
+
+    def flush_paragraph():
+        nonlocal buffer_page
+
+        if not paragraph_buffer:
+            return
+
+        # Join buffer with spaces inside paragraph, but keep paragraphs separate later
+        paragraph_text = " ".join(paragraph_buffer).strip()
+
+        if paragraph_text:
+            normalized["blocks"].append({
+                "block_type": "paragraph",
+                "text": paragraph_text,
+                "page_number": buffer_page,
+                "section_path": current_section["section_path"],
+                "section_title": current_section["section_title"],
+                "source_block_ids": buffer_ids.copy()
+            })
+
+        paragraph_buffer.clear()
+        buffer_ids.clear()
+        buffer_page = None
 
     for page in layout_json.get("pages", []):
         page_number = page.get("page_number")
         blocks = page.get("blocks", [])
 
-        # Order top-to-bottom, left-to-right
+        # Sort blocks top-to-bottom, left-to-right
         blocks_sorted = sorted(
             blocks,
-            key=lambda b: (get_bbox(b)[1], get_bbox(b)[0])
+            key=lambda b: (get_bbox(b)[1], get_bbox(b)[0]) if get_bbox(b) else (0, 0)
         )
 
         for block in blocks_sorted:
-            if block.get("block_type") != "paragraph":
-                continue
-
+            btype = block.get("block_type")
             text = (block.get("text") or "").strip()
+
             if not text:
                 continue
 
-            # Skip headers / footers aggressively
-            if is_page_header_footer(text):
-                continue
+            # Flush previous paragraph on structural change
+            if btype != "paragraph":
+                flush_paragraph()
 
-            # ----------------------------
-            # SECTION DETECTION
-            # ----------------------------
-            m = ICH_SECTION_REGEX.match(text)
-            if m:
-                current_section_path = m.group(1)
-                current_section_title = m.group(3).strip()
-                continue
-
-            # ----------------------------
-            # RULE DETECTION
-            # ----------------------------
-            if ICH_RULE_REGEX.search(text):
+            # ────────────────────────────────────────
+            # HEADINGS / SECTIONS
+            # ────────────────────────────────────────
+            if SECTION_REGEX.match(text):
+                flush_paragraph()
+                current_section["section_path"] = text.split(" ", 1)[0]
+                current_section["section_title"] = text.split(" ", 1)[1] if " " in text else text
                 normalized["blocks"].append({
-                    "block_type": "ich_rule",
-                    "content": text,
-                    "rule_type": detect_rule_type(text),
-                    "section_path": current_section_path or "NA",
-                    "section_title": current_section_title or "NA",
+                    "block_type": "heading",
+                    "level": 1,
+                    "text": text,
                     "page_number": page_number,
-                    "guideline": layout_json.get("document_name"),
+                    "section_path": current_section["section_path"],
+                    "section_title": current_section["section_title"]
                 })
                 continue
 
-            # ----------------------------
-            # OPTIONAL: retain informative lines
-            # (comment out if you want only rules)
-            # ----------------------------
-            # else:
-            #     normalized["blocks"].append({
-            #         "block_type": "ich_info",
-            #         "content": text,
-            #         "section_path": current_section_path or "NA",
-            #         "page_number": page_number,
-            #     })
+            # Table titles, figures, appendices (similar logic)
+            if TABLE_TITLE_REGEX.match(text) or FIGURE_REGEX.match(text) or APPENDIX_REGEX.match(text):
+                flush_paragraph()
+                normalized["blocks"].append({
+                    "block_type": "heading",
+                    "level": 2,
+                    "text": text,
+                    "page_number": page_number,
+                    "section_path": current_section["section_path"],
+                    "section_title": current_section["section_title"]
+                })
+                continue
+
+            # ────────────────────────────────────────
+            # NORMAL PARAGRAPH
+            # ────────────────────────────────────────
+            if btype == "paragraph":
+                if not paragraph_buffer:
+                    buffer_page = page_number
+                paragraph_buffer.append(text)
+                buffer_ids.append(block.get("block_id", str(uuid.uuid4())))
+
+        # Flush any remaining paragraph at end of page
+        flush_paragraph()
+
+    # Final flush
+    flush_paragraph()
 
     return normalized

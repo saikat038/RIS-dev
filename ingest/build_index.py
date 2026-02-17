@@ -787,30 +787,84 @@ def main():
 
         # Step 5: Build Azure Search documents
         for chunk, vector in zip(chunks, embeddings):
+
+            # ---- normalize page numbers ----
+            page_numbers = chunk["metadata"].get("page_numbers") or []
+            if isinstance(page_numbers, int):
+                page_numbers = [page_numbers]
+
+            # ---- normalize heading_path (MUST be string) ----
+            heading_path = chunk["metadata"].get("heading_path")
+            if isinstance(heading_path, list):
+                heading_path = " > ".join(heading_path)
+            elif heading_path is None:
+                heading_path = ""
+
             doc = {
                 "id": str(uuid.uuid4()),
                 "doc_id": doc_id,
-                "text": chunk["text"],
-                "chunk_type": chunk["chunk_type"],
-                "heading_path": " > ".join(chunk["metadata"].get("heading_path", []))
-                                if chunk["metadata"].get("heading_path")
-                                else None,
-                "page_numbers": chunk["metadata"].get("page_numbers"),
-                "source_block_ids": chunk["metadata"].get("source_block_ids"),
+                "text": str(chunk.get("text") or ""),
+                "chunk_type": str(chunk.get("chunk_type") or ""),
+                "heading_path": heading_path,
+                "page_numbers": page_numbers,
+                "source_block_ids": chunk["metadata"].get("source_block_ids") or [],
                 "vector": vector,
             }
 
+            # ============================
+            # TABLE-SPECIFIC FIELDS
+            # ============================
+            if chunk["chunk_type"] == "table":
+                rows = chunk["metadata"].get("rows") or []
+
+                # Azure index expects table_rows as STRING
+                table_rows_str = "\n".join(
+                    json.dumps(row, ensure_ascii=False)
+                    for row in rows
+                    if isinstance(row, (list, dict)) and row
+                )
+
+                doc.update({
+                    "table_context_heading": str(chunk["metadata"].get("table_context_heading") or ""),
+                    "table_context_text": str(chunk["metadata"].get("table_context_text") or ""),
+                    "table_semantic_hint": str(chunk["metadata"].get("table_semantic_hint") or ""),
+                    "table_headers": [
+                        str(h) for h in (chunk["metadata"].get("headers") or [])
+                    ],
+                    "table_rows": table_rows_str,   # ✅ STRING ONLY
+                })
+
             documents_to_upload.append(doc)
 
-    # Final upload
-    if documents_to_upload:
-        print(f"🚀 Uploading {len(documents_to_upload)} chunks to Azure AI Search...")
-        result = search_client.upload_documents(documents_to_upload)
-        print("🎯 Ingestion completed!")
-        print(result)
-    else:
-        print("⚠️ No documents to upload.")
 
+
+
+
+    # Final upload with retry
+    import time
+    if documents_to_upload:
+        print(f"🚀 Uploading {len(documents_to_upload)} chunks...")
+        
+        # batch_size = 100
+        # total_uploaded = 0
+        
+        # for i in range(0, len(documents_to_upload), batch_size):
+        #     batch = documents_to_upload[i:i + batch_size]
+        #     for attempt in range(3):  # retry up to 3 times
+        #         try:
+        #             result = search_client.upload_documents(batch)
+        #             total_uploaded += len(batch)
+        #             print(f"  Batch {i//batch_size + 1} uploaded ({len(batch)} chunks) — total: {total_uploaded}")
+        #             break
+        #         except Exception as e:
+        #             if attempt < 2:
+        #                 sleep = 2 ** attempt
+        #                 print(f"  Retry {attempt+1}/3 after {sleep}s: {e}")
+        #                 time.sleep(sleep)
+        #             else:
+        #                 print(f"  Failed batch {i//batch_size + 1} ({len(batch)} chunks): {e}")
+        #                 # Decide: raise or continue
+        #                 raise
 
 # ----------------------------
 # ENTRY POINT

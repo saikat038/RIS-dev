@@ -1,6 +1,10 @@
 import os
 import json
 from typing import Dict, Any, List
+import os
+import tempfile
+from docx import Document
+from docx2pdf import convert
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.documentintelligence import DocumentIntelligenceClient
 from azure.ai.documentintelligence.models import AnalyzeDocumentRequest
@@ -20,19 +24,45 @@ def extract_layout_to_structured_json(
     source_name: str
 ) -> Dict[str, Any]:
     """
-    Extract document using Azure prebuilt-layout model
-    and PRESERVE FULL TABLE SEMANTICS:
-    - captions
-    - headers
-    - rows
-    - cell geometry
-    - table geometry
+    Extract document using Azure Document Intelligence.
+    - Handles .docx by converting to PDF first
+    - Uses prebuilt-layout for best layout/table accuracy
     """
-
     client = DocumentIntelligenceClient(
         endpoint=os.getenv("DOC_INTELLIGENCE_ENDPOINT"),
         credential=AzureKeyCredential(os.getenv("DOC_INTELLIGENCE_KEY"))
     )
+
+    ext = os.path.splitext(source_name)[1].lower()
+
+    # -------------------------------------------------
+    # Handle DOCX: convert to PDF first
+    # -------------------------------------------------
+    if ext == ".docx":
+        print(f"Converting DOCX to PDF: {source_name}")
+        # Save bytes to temp .docx file
+        with tempfile.NamedTemporaryFile(suffix=".docx", delete=False) as tmp_docx:
+            tmp_docx.write(file_bytes)
+            tmp_docx_path = tmp_docx.name
+
+        # Convert to PDF
+        tmp_pdf_path = tmp_docx_path.replace(".docx", ".pdf")
+        convert(tmp_docx_path, tmp_pdf_path)
+
+        # Read PDF bytes
+        with open(tmp_pdf_path, "rb") as f:
+            file_bytes = f.read()
+
+        # Clean up temp files
+        os.unlink(tmp_docx_path)
+        os.unlink(tmp_pdf_path)
+
+        source_name = source_name.replace(".docx", ".pdf")  # update name
+
+    # -------------------------------------------------
+    # Now process (PDF or image bytes) with prebuilt-layout
+    # -------------------------------------------------
+    print(f"Using prebuilt-layout for: {source_name}")
 
     request = AnalyzeDocumentRequest(bytes_source=file_bytes)
     poller = client.begin_analyze_document("prebuilt-layout", body=request)
@@ -44,83 +74,79 @@ def extract_layout_to_structured_json(
         "pages": []
     }
 
-    # -------------------------------------------------
-    # Pages & paragraph blocks
-    # -------------------------------------------------
-    for page in result.pages:
-        page_data = {
-            "page_number": page.page_number,
-            "width": page.width,
-            "height": page.height,
-            "unit": page.unit,
-            "blocks": []
-        }
-
-        for idx, line in enumerate(page.lines or []):
-            page_data["blocks"].append({
-                "block_id": f"p{page.page_number}_line_{idx}",
-                "block_type": "paragraph",
-                "text": line.content,
-                "bbox": get_polygon_bbox(line.polygon)
-            })
-
-        structured_doc["pages"].append(page_data)
+    # Helper: get bbox
+    def get_bbox(polygon):
+        if not polygon or len(polygon) != 8:
+            return None
+        xs = polygon[0::2]
+        ys = polygon[1::2]
+        return [min(xs), min(ys), max(xs), max(ys)]
 
     # -------------------------------------------------
-    # Tables (NO INFERENCE – PURE AZURE OUTPUT)
+    # Process paragraphs
+    # -------------------------------------------------
+    page_map = {}
+
+    for para in result.paragraphs or []:
+        if not para.content or not para.bounding_regions:
+            continue
+
+        region = para.bounding_regions[0]
+        page_number = region.page_number
+        bbox = get_bbox(region.polygon)
+
+        if page_number not in page_map:
+            page_map[page_number] = {"page_number": page_number, "blocks": []}
+
+        page_map[page_number]["blocks"].append({
+            "block_id": f"p{page_number}_para_{len(page_map[page_number]['blocks'])}",
+            "block_type": "paragraph",
+            "text": para.content.strip(),
+            "bbox": bbox
+        })
+
+    # -------------------------------------------------
+    # Process tables (unchanged)
     # -------------------------------------------------
     previous_table_page = None
     previous_headers = None
 
     for t_idx, table in enumerate(result.tables or []):
+        if not table.bounding_regions:
+            continue
 
         table_page = table.bounding_regions[0].page_number
-        table_bbox = get_polygon_bbox(table.bounding_regions[0].polygon)
+        table_bbox = get_bbox(table.bounding_regions[0].polygon)
 
-        is_continuation = (
-            previous_table_page is not None
-            and table_page == previous_table_page + 1
-        )
+        is_continuation = previous_table_page is not None and table_page == previous_table_page + 1
 
-        # Build grid
         grid = [[""] * table.column_count for _ in range(table.row_count)]
-
         for cell in table.cells:
-            r = cell.row_index
-            c = cell.column_index
-            if grid[r][c] == "":
+            r, c = cell.row_index, cell.column_index
+            if 0 <= r < len(grid) and 0 <= c < len(grid[r]):
                 grid[r][c] = cell.content or ""
 
         headers = []
         rows = []
 
-        # ---------------- HEADER DETECTION ----------------
-        header_row_indices = {
-            cell.row_index
-            for cell in table.cells
-            if cell.kind == "columnHeader"
-        }
+        header_row_indices = {cell.row_index for cell in table.cells if cell.kind == "columnHeader"}
 
         if header_row_indices and not is_continuation:
             header_row = min(header_row_indices)
             headers = grid[header_row]
             rows = [row for i, row in enumerate(grid) if i != header_row]
             previous_headers = headers
-
         elif is_continuation and previous_headers:
             headers = previous_headers
             rows = grid
-
         else:
             headers = []
             rows = grid
 
-        # ---------------- REMOVE DUPLICATE HEADER ROW ----------------
         if headers:
             rows = [
                 row for row in rows
-                if any(cell.strip() != hdr.strip()
-                    for cell, hdr in zip(row, headers))
+                if any(cell.strip() != hdr.strip() for cell, hdr in zip(row, headers))
             ]
 
         table_block = {
@@ -132,20 +158,28 @@ def extract_layout_to_structured_json(
             "rows": rows
         }
 
-        for page in structured_doc["pages"]:
-            if page["page_number"] == table_page:
-                page["blocks"].append(table_block)
-                break
+        if table_page not in page_map:
+            page_map[table_page] = {"page_number": table_page, "blocks": []}
+        page_map[table_page]["blocks"].append(table_block)
 
         previous_table_page = table_page
 
+    # -------------------------------------------------
+    # Sort blocks per page (top-to-bottom)
+    # -------------------------------------------------
+    for page_num in sorted(page_map.keys()):
+        page = page_map[page_num]
+        page["blocks"].sort(key=lambda b: b["bbox"][1] if b["bbox"] else 0)
+        structured_doc["pages"].append(page)
 
 
     # -------------------------------------------------
-    # Save raw structured layout
+    # Save raw output for debugging
     # -------------------------------------------------
-    with open("ICH_layout_structured.json", "w", encoding="utf-8") as f:
+    debug_file = "ICH_layout_structured.json"
+    with open(debug_file, "w", encoding="utf-8") as f:
         json.dump(structured_doc, f, ensure_ascii=False, indent=2)
+    print(f"Structured layout saved to: {debug_file}")
 
     print("✅ Layout JSON saved to: ich_layout_structured.json")
     return structured_doc

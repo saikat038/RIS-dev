@@ -106,15 +106,19 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
 
     def flush_paragraph():
         nonlocal paragraph_buffer, buffer_ids, buffer_page, last_paragraph_text
+        
         if not paragraph_buffer:
-            return
+            return  # ← Nothing to flush → safe exit
 
-        text = " ".join(paragraph_buffer)
+        text = "\n\n".join(paragraph_buffer).strip()
+
+        # Only add page_number if we have one
+        page_info = buffer_page if buffer_page is not None else 0  # or None
 
         normalized["blocks"].append({
             "block_type": "paragraph",
             "text": text,
-            "page_number": buffer_page,
+            "page_number": page_info,
             "container_id": current_container["container_id"],
             "container_type": current_container["container_type"],
             "container_path": current_container["path"].copy(),
