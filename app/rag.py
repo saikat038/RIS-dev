@@ -2292,7 +2292,7 @@ Output ONLY the final authored section content.
             {"role": "user", "content": llm_input},
         ],
         temperature=0.0,
-        max_tokens=4500,
+        max_tokens=8000
     )
 
     new_state = dict(state)
@@ -2349,5 +2349,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-answer("Summary of Subject Demographics Safety Population - RP Patients in tabular", [])
+# answer("Summary of Subject Demographics Safety Population - RP Patients in tabular", [])
 # answer("Independent Ethics Committee or Institutional Review Board", [])
