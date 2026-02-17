@@ -2292,7 +2292,7 @@ Output ONLY the final authored section content.
             {"role": "user", "content": llm_input},
         ],
         temperature=0.0,
-        max_tokens=8000
+        max_tokens=10000
     )
 
     new_state = dict(state)
