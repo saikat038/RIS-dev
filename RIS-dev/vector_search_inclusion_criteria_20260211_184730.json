@@ -1,0 +1,24 @@
+{
+  "section": "Inclusion Criteria",
+  "timestamp": "2026-02-11T18:47:30.705208",
+  "source": {
+    "total_chunks": 0,
+    "results": []
+  },
+  "ich_guidelines": {
+    "total_sections": 2,
+    "results": {
+      "total_sections": 1,
+      "results": [
+        {
+          "section_path": "9.3.1",
+          "source_type": "ich",
+          "guideline_text": "The patient population and the selection criteria used to enter the patients into the study should be described, and the suitability of the population for the purposes of the study discussed. Specific diagnostic criteria used, as well as specific disease requirements (e.g., disease of a particular severity or duration, results of a particular test or rating scale(s) or physical examination, particular features of clinical history, such as failure or success on prior therapy, or other potential prognostic factors and any age, sex or ethnic factors) should be presented. Screening criteria and any additional criteria for randomisation or entry into the test drug/investigational product treatment part of the trial should be described. If there is reason to believe that there were additional entry criteria, not defined in the protocol, the implications of these should be discussed. For example, some investigators may have excluded, or entered into other studies, patients who were particularly ill or who had particular baseline characteristics.\n\n9.3.1 Inclusion Criteria\n\nThe patient population and the selection criteria used to enter the patients into the study should be described, and the suitability of the population for the purposes of the study discussed. Specific diagnostic criteria used, as well as specific disease requirements (e.g., disease of a particular severity or duration, results of a particular test or rating scale(s) or physical examination, particular features of clinical history, such as failure or success on prior therapy, or other potential prognostic factors and any age, sex or ethnic factors) should be presented. Screening criteria and any additional criteria for randomisation or entry into the test drug/investigational product treatment part of the trial should be described. If there is reason to believe that there were additional entry criteria, not defined in the protocol, the implications of these should be discussed. For example, some investigators may have excluded, or entered into other studies, patients who were particularly ill or who had particular baseline characteristics.",
+          "headings": [
+            "9.3.1 Inclusion Criteria\n\nThe patient population and the selection criteria used to enter the patients into the study should be described, and the suitability of the population for the purposes of the study discussed. Specific diagnostic criteria used, as well as specific disease requirements (e.g., disease of a particular severity or duration, results of a particular test or rating scale(s) or physical examination, particular features of clinical history, such as failure or success on prior therapy, or other potential prognostic factors and any age, sex or ethnic factors) should be presented. Screening criteria and any additional criteria for randomisation or entry into the test drug/investigational product treatment part of the trial should be described. If there is reason to believe that there were additional entry criteria, not defined in the protocol, the implications of these should be discussed. For example, some investigators may have excluded, or entered into other studies, patients who were particularly ill or who had particular baseline characteristics."
+          ]
+        }
+      ]
+    }
+  }
+}

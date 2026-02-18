@@ -1,0 +1,1920 @@
+[AUTHORING CONTROL]
+        {
+  "section": "Summary of Subject Demographics Safety Population - RP Patients",
+  "synonyms": [
+    "Summary of Subject Demographics Safety Population - RP Patients",
+    "Table 14.1.3.1.1",
+    "Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3",
+    "Subgroup: Mutation Subtype - Autosomal dominant NR2E3",
+    "Subgroup: Mutation Subtype - Autosomal dominant RHO"
+  ],
+  "ich_refs": [
+    "14.1 DEMOGRAPHIC DATA"
+  ],
+  "allowed_sources": [
+    "OCU401_CSR_Final_Tables.PDF"
+  ],
+  "detail_level": "high",
+  "output_style": "verbatim",
+  "forbidden_content": [
+    "operational procedures"
+  ]
+}
+
+        [ICH GUIDELINES]
+        
+14.1 DEMOGRAPHIC DATA
+
+27
+
+Summary figures and tables 27
+
+Structure and Content of Clinical Study Reports
+
+        [SOURCE EVIDENCE]
+        **Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+SDTM | date: 20AUG2024 |  | 14:37
+|---|---|---|---|
+Analysis | date: | 27AUG2024 | 15:08
+[type=table, pages=[16]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+SDTM | date: 20AUG2024 |  | 14:37
+|---|---|---|---|
+Analysis | date: | 27AUG2024 | 15:08
+[type=table, pages=[14]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+SDTM | date: 20AUG2024 |  | 14:37
+|---|---|---|---|
+Analysis | date: | 27AUG2024 | 15:08
+[type=table, pages=[23]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+SDTM | date: 20AUG2024 |  | 14:37
+|---|---|---|---|
+Analysis | date: | 27AUG2024 | 15:08
+[type=table, pages=[21]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+SDTM | date: 20AUG2024 | 14:37
+|---|---|---|
+Analysis date: 27AUG2024 |  | 15:08
+[type=table, pages=[19]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+SDTM | date: 20AUG2024 | 14:37
+|---|---|---|
+Analysis date: 27AUG2024 |  | 15:08
+[type=table, pages=[12]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+SDTM | date: | 20AUG2024 | 14:37
+|---|---|---|---|
+Analysis | date: | 27AUG2024 | 15:08
+[type=table, pages=[18]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+SDTM | date: | 20AUG2024 | 14:37
+|---|---|---|---|
+Analysis | date: | 27AUG2024 | 15:08
+[type=table, pages=[11]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+SDTM date: 20AUG2024 | 14:37
+|---|---|
+Analysis date: 27AUG2024 | 15:08
+[type=table, pages=[20]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+SDTM date: 20AUG2024 | 14:37
+|---|---|
+Analysis date: 27AUG2024 | 15:08
+[type=table, pages=[13]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+SDTM date: 20AUG2024 | 14:37
+|---|---|
+Analysis date: 27AUG2024 | 15:08
+[type=table, pages=[15]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+SDTM date: 20AUG2024 | 14:37
+|---|---|
+Analysis date: 27AUG2024 | 15:08
+[type=table, pages=[24]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+SDTM date: 20AUG2024 | 14:37
+|---|---|
+Analysis date: 27AUG2024 | 15:08
+[type=table, pages=[22]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+SDTM date: 20AUG2024 | 14:37
+|---|---|
+Analysis date: 27AUG2024 | 15:08
+[type=table, pages=[17]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) | Cohort 2 (N=2) | Cohort
+(N=3) | 3 | Phase 2 (N=8) | MTD (N=11) | Total (N=17)
+|---|---|---|---|---|---|---|---|
+Age (years) |  |  |  |  |  |  | 
+n | 4 | 2 | 3 |  | 8 | 11 | 17
+Mean | 67.8 | 35.0 | 60.0 |  | 42.9 | 47.5 | 50.8
+Standard deviation | 6.80 | 24.04 | 20.88 |  | 13.15 | 16.50 | 18.04
+Median | 66.5 | 35.0 | 70.0 |  | 44.0 | 45.0 | 51.0
+Minimum | 61 | 18 | 36 |  | 22 | 22 | 18
+Maximum | 77 | 52 | 74 |  | 66 | 74 | 77
+Age group, n (%) |  |  |  |  |  |  | 
+Adult | 4 (100.0) | 2 (100.0) | 3 | (100.0) | 8 (100.0) | 11 (100.0) | 17 (100.0)
+Pediatric | 0 ( 0.0) | 0 ( 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Sex, n (%) |  |  |  |  |  |  | 
+Male | 2 ( 50.0) | 1 ( 50.0) | 1 ( | 33.3) | 7 ( 87.5) | 8 ( 72.7) | 11 ( 64.7)
+Female | 2 ( 50.0) | 1 ( 50.0) | 2 ( 66.7) |  | 1 ( 12.5) | 3 ( 27.3) | 6 ( 35.3) :selected:
+Childbearing Potential [1], n (%) |  |  |  |  |  |  | 
+Yes | 0 ( 0.0) | 0 ( 0.0) | 1 ( | 50.0) | 1 (100.0) | 2 ( 66.7) | 2 ( 33.3)
+No | 2 (100.0) | 1 (100.0) | 1 ( | 50.0) | 0 ( 0.0) | 1 ( 33.3) | 4 ( 66.7)
+Race, n (%) |  |  |  |  |  |  | 
+White | 4 (100.0) | 1 ( 50.0) | 3 | (100.0) | 5 ( 62.5) | 8 ( 72.7) | 13 ( 76.5)
+Asian | 0 ( 0.0) | 0 ( 0.0) | 0 ( | 0.0) | 2 ( 25.0) | 2 ( 18.2) | 2 ( 11.8)
+Black or African American | 0 ( 0.0) | 1 ( 50.0) | 0 ( | 0.0) | 1 ( 12.5) | 1 ( 9.1) | 2 ( 11.8)
+American Indian or Alaska Native | 0 ( 0.0) | 0 ( 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Native Hawaiian or Other Pacific Islander | 0 ( 0.0) | 0 ( 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Multiple | 0 ( 0.0) | 0 ( 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Other | 0 ( 0.0) | 0 ( 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Not Reported | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Ethnicity, n (%) |  |  |  |  |  |  | 
+Hispanic or Latino | 1 ( 25.0) | 0 ( 0.0) | 0 ( | 0.0) | 3 ( 37.5) | 3 ( 27.3) | 4 ( 23.5)
+Not Hispanic or Latino | 3 ( 75.0) | 2 (100.0) | 3 | (100.0) | 5 ( 62.5) | 8 ( 72.7) | 13 ( 76.5)
+ |  |  |  |  |  |  | 
+[type=table, pages=[18]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) | Cohort
+(N=2) | 2 | Cohort
+(N=3) | 3 | Phase 2 (N=8) | MTD (N=11) | Total (N=17)
+|---|---|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  |  |  | 
+Race, n (%) |  |  |  |  |  |  |  | 
+White | 4 (100.0) | ) ( | 0.0) | 1 ( | 33.3) | 3 ( 37.5) | 4 ( 36.4) | 8 ( 47.1)
+Black or African American | 0 ( 0.0) :unselected: | 1 ( | 50.0) | 0 ( |  | 1 ( 12.5) | 1 ( 9.1) | 2 ( 11.8)
+American Indian or Alaska Native | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Asian | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Native Hawaiian or Other Pacific Islander | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Multiple | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Other | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Not Reported | 0 ( 0.0) | 0 ( | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Ethnicity, n (%) |  |  |  |  |  |  |  | 
+Hispanic or Latino | 1 ( 25.0) | 0 ( | 0.0) | 0 ( | 0.0) | 2 ( 25.0) | 2 ( 18.2) | 3 ( 17.6)
+Not Hispanic or Latino | 3 ( 75.0) | 1 ( | 50.0) | 1 ( | 33.3) | 2 ( 25.0) | 3 ( 27.3) | 7 ( 41.2)
+ |  |  |  |  |  |  |  | 
+[type=table, pages=[24]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) | Cohort
+(N=2) | 2 | Cohort 3 (N=3) |  | Phase 2 (N=8) | MTD (N=11) | Total (N=17)
+|---|---|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Autosomal dominant NR2E3 |  |  |  |  |  |  |  | 
+Age (years) |  |  |  |  |  |  |  | 
+n | 0 | 0 |  | 1 |  | 2 | 3 | 3
+Mean |  |  |  | 36.0 |  | 44.0 | 41.3 | 41.3
+Standard deviation |  |  |  |  |  | 1.41 | 4.73 | 4.73
+Median |  |  |  | 36.0 |  | 44.0 | 43.0 | 43.0
+Minimum |  |  |  | 36 |  | 43 | 36 | 36
+Maximum |  |  |  | 36 |  | 45 | 45 | 45
+Age group, n (%) |  |  |  |  |  |  |  | 
+Adult | 0 ( 0.0) | 0 ( | 0.0) | 1 ( 33.3) |  | 2 ( 25.0) | 3 ( 27.3) | 3 ( 17.6)
+Pediatric | 0 ( 0.0) | 0 ( | 0.0) | 0 ( 0.0) |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Sex, n (%) |  |  |  |  |  |  |  | 
+Male | 0 ( 0.0) | 0 | 0.0) | 0 ( 0.0) |  | 2 ( 25.0) | 2 ( 18.2) | 2 ( 11.8) :unselected:
+Female | 0 ( 0.0) | 0 ( | 0.0) | 1 ( 33.3) |  | 0 ( 0.0) | 1 ( 9.1) | 1 ( 5.9) :unselected:
+Childbearing Potential [1], n (%) |  |  |  |  |  |  |  | 
+Yes | 0 ( 0.0) | 0 ( | 0.0) | 1 ( 50.0) |  | 0 ( 0.0) | 1 ( 33.3) | 1 ( 16.7) :unselected:
+No | 0 ( 0.0) | 0 ( | 0.0) | 0 ( 0.0) |  | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected:
+[type=table, pages=[21]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) |  | Cohort
+(N=2) | 2 | Cohort
+(N=3) | 3 | Phase 2 (N=8) | MTD (N=11) |  | Total (N=17)
+|---|---|---|---|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Autosomal dominant NR2E3 |  |  |  |  |  |  |  |  |  | 
+Race, n (%) |  |  |  |  |  |  |  |  |  | 
+White | 0 ( | 0.0) :unselected: | 0 ( :unselected: | 0.0) | 1 ( | 33.3) | 2 ( 25.0) | 3 ( 27.3) |  | 3 ( 17.6)
+American Indian or Alaska Native | 0 ( 0.0) :unselected: |  | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) |  | 0 ( 0.0)
+Asian | 0 ( 0.0) :unselected: |  | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) |  | 0 ( 0.0) :unselected:
+Black or African American | 0 ( 0.0) :unselected: |  | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) |  | 0 ( 0.0)
+Native Hawaiian or Other Pacific Islander | 0 ( 0.0) :unselected: |  | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) |  | 0 ( 0.0)
+Multiple | 0 ( 0.0) :unselected: |  | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) |  | 0 ( 0.0)
+Other | 0 ( 0.0) :unselected: |  | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) |  | 0 ( 0.0)
+Not Reported | 0 ( 0.0) :unselected: |  | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) |  | 0 ( 0.0)
+Ethnicity, n (%) |  |  |  |  |  |  |  |  |  | 
+Hispanic or Latino | 0 ( 0.0) :unselected: |  | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 1 ( 12.5) | 1 ( 9.1) |  | 1 ( 5.9)
+Not Hispanic or Latino | 0 ( 0.0) :unselected: |  | 0 ( :unselected: | 0.0) | 1 ( | 33.3) | 1 ( 12.5) | 2 ( 18.2) |  | 2 ( 11.8)
+ |  |  |  |  |  |  |  |  |  | 
+[type=table, pages=[22]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) | Cohort 2 (N=2) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=17)
+|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  | 
+Age (years) |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 67.8 | 18.0 | 74.0 | 44.0 | 50.0 | 53.9
+Standard deviation | 6.80 |  |  | 18.85 | 21.13 | 21.23
+Median | 66.5 | 18.0 | 74.0 | 44.0 | 51.0 | 63.0
+Minimum | 61 | 18 | 74 | 22 | 22 | 18
+Maximum | 77 | 18 | 74 | 66 | 74 | 77
+Age group, n (%) |  |  |  |  |  | 
+Adult | 4 (100.0) | 1 ( 50.0) | 1 ( 33.3) | 4 ( 50.0) | 5 ( 45.5) | 10 ( 58.8)
+Pediatric | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Sex, n (%) |  |  |  |  |  | 
+Male | 2 ( 50.0) | 1 ( 50.0) | 0 ( 0.0) | 3 ( 37.5) | 3 ( 27.3) | 6 ( 35.3)
+Female | 2 ( 50.0) | 0 ( 0.0) | 1 ( 33.3) | 1 ( 12.5) | 2 ( 18.2) | 4 ( 23.5)
+Childbearing Potential [1], n (%) |  |  |  |  |  | 
+Yes | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 (100.0) | 1 ( 33.3) | 1 ( 16.7)
+No | 2 (100.0) | 0 ( 0.0) | 1 ( 50.0) | 0 ( 0.0) | 1 ( 33.3) | 3 ( 50.0)
+[type=table, pages=[23]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) | Cohort
+(N=3) | 2 | Cohort
+(N=3) | 3 | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  |  |  | 
+Race, n (%) |  |  |  |  |  |  |  | 
+White | 4 (100.0) | 0 ( | 0.0) :unselected: | 1 ( | 33.3) | 3 ( 37.5) | 4 ( 36.4) | 8 ( 44.4)
+Black or African American | 0 ( 0.0) :unselected: | 1 ( | 33.3) | 0 ( |  | 1 ( 12.5) | 1 ( 9.1) | 2 ( 11.1)
+American Indian or Alaska Native | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Asian | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Native Hawaiian or Other Pacific Islander | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Multiple | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Other | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Not Reported | 0 ( 0.0) :unselected: | 0 ( | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Ethnicity, n (%) |  |  |  |  |  |  |  | 
+Hispanic or Latino | 1 ( 25.0) | 0 ( | 0.0) | 0 ( | 0.0) | 2 ( 25.0) | 2 ( 18.2) | 3 ( 16.7)
+Not Hispanic or Latino | 3 ( 75.0) | 1 ( | 33.3) | 1 ( | 33.3) | 2 ( 25.0) | 3 ( 27.3) | 7 ( 38.9)
+ |  |  |  |  |  |  |  | 
+[type=table, pages=[17]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) | Cohort
+(N=3) | 2 | Cohort
+(N=3) | 3 | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Autosomal dominant NR2E3 |  |  |  |  |  |  |  | 
+Race, n (%) |  |  |  |  |  |  |  | 
+White | 0 ( 0.0) :unselected: | 0 ( :unselected: | 0.0) | 1 ( | 33.3) | 2 ( 25.0) | 3 ( 27.3) | 3 ( 16.7)
+American Indian or Alaska Native | 0 ( 0.0) :unselected: | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+Asian | 0 ( 0.0) :unselected: | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+Black or African American | 0 ( 0.0) :unselected: | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Native Hawaiian or Other Pacific Islander | 0 ( 0.0) :unselected: | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Multiple | 0 ( 0.0) :unselected: | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Other | 0 ( 0.0) :unselected: | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Not Reported | 0 ( 0.0) :unselected: | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Ethnicity, n (%) |  |  |  |  |  |  |  | 
+Hispanic or Latino | 0 ( 0.0) :unselected: | 0 ( :unselected: | 0.0) | 0 ( | 0.0) | 1 ( 12.5) | 1 ( 9.1) | 1 ( 5.6)
+Not Hispanic or Latino | 0 ( 0.0) :unselected: | 0 ( :unselected: | 0.0) | 1 ( | 33.3) | 1 ( 12.5) | 2 ( 18.2) | 2 ( 11.1)
+ |  |  |  |  |  |  |  | 
+[type=table, pages=[15]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) |  | Cohort
+(N=2) | 2 | Cohort 3 (N=3) |  | Phase 2 (N=8) | MTD (N=11) | Total (N=17)
+|---|---|---|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  |  |  |  | 
+Race, n (%) |  |  |  |  |  |  |  |  | 
+Asian | 0 ( 0.0) :unselected: |  | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 2 ( 25.0) | 2 ( 18.2) | 2 ( 11.8)
+White | 0 ( 0.0) :unselected: |  | 1 ( | 50.0) :unselected: | 1 ( | 33.3) | 0 ( 0.0) | 1 ( 9.1) | 2 ( 11.8)
+American Indian or Alaska Native | 0 ( 0.0) :unselected: |  | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Black or African American | 0 ( 0.0) :unselected: |  | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Native Hawaiian or Other Pacific Islander | 0 ( 0.0) :unselected: |  | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Multiple | 0 ( 0.0) :unselected: |  | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Other | 0 ( 0.0) :unselected: |  | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Not Reported | 0 ( 0.0) :unselected: |  | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Ethnicity, n (%) |  |  |  |  |  |  |  |  | 
+Hispanic or Latino | 0 ( 0.0) |  | 0 ( | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Not Hispanic or Latino | 0 ( 0.0) :unselected: |  | 1 ( | 50.0) | 1 ( | 33.3) | 2 ( 25.0) | 3 ( 27.3) | 4 ( 23.5)
+ |  |  |  |  |  |  |  |  | 
+[type=table, pages=[20]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|
+Age (years) |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 67.8 | 44.7 | 60.0 | 42.9 | 47.5 | 51.6
+Standard deviation | 6.80 | 23.86 | 20.88 | 13.15 | 16.50 | 17.77
+Median | 66.5 | 52.0 | 70.0 | 44.0 | 45.0 | 51.5
+Minimum | 61 | 18 | 36 | 22 | 22 | 18
+Maximum | 77 | 64 | 74 | 66 | 74 | 77
+Age group, n (%) |  |  |  |  |  | 
+Adult | 4 (100.0) | 3 (100.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 18 (100.0)
+Pediatric | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Sex, n (%) |  |  |  |  |  | 
+Male | 2 ( 50.0) | 1 ( 33.3) :selected: | 1 ( 33.3) :selected: | 7 ( 87.5) | 8 ( 72.7) | 11 ( 61.1)
+Female | 2 ( 50.0) :selected: | 2 ( 66.7) :selected: | 2 ( 66.7) :selected: | 1 ( 12.5) | 3 ( 27.3) | 7 ( 38.9)
+Childbearing Potential [1], n (%) |  |  |  |  |  | 
+Yes | 0 ( 0.0) | 0 ( 0.0) | 1 ( 50.0) | 1 (100.0) | 2 ( 66.7) | 2 ( 28.6)
+No | 2 (100.0) | 2 (100.0) | 1 ( 50.0) | 0 ( 0.0) | 1 ( 33.3) | 5 ( 71.4)
+Race, n (%) |  |  |  |  |  | 
+White | 4 (100.0) | 2 ( 66.7) :selected: | 3 (100.0) | 5 ( 62.5) :selected: | 8 ( 72.7) :selected: | 14 ( 77.8)
+Asian | ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 2 ( 25.0) :selected: | 2 ( 18.2) | 2 ( 11.1)
+Black or African American | 0 ( 0.0) :unselected: | 1 ( 33.3) | 0 ( 0.0) | 1 ( 12.5) :selected: | 1 ( 9.1) | 2 ( 11.1)
+American Indian or Alaska Native | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Native Hawaiian or Other Pacific Islander | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Multiple | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Other | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Not Reported | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Ethnicity, n (%) |  |  |  |  |  | 
+Hispanic or Latino | 1 ( 25.0) | 0 ( 0.0) | 0 ( 0.0) | 3 ( 37.5) | 3 ( 27.3) | 4 ( 22.2)
+Not Hispanic or Latino | 3 ( 75.0) | 3 (100.0) | 3 (100.0) | 5 ( 62.5) | 8 ( 72.7) | 14 ( 77.8)
+[type=table, pages=[11]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) | Cohort 2 (N=2) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=17)
+|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  | 
+Age (years) |  |  |  |  |  | 
+n | 0 | 1 | 1 | 2 | 3 | 4
+Mean |  | 52.0 | 70.0 | 39.5 | 49.7 | 50.3
+Standard deviation |  |  |  | 10.61 | 19.14 | 15.67
+Median |  | 52.0 | 70.0 | 39.5 | 47.0 | 49.5
+Minimum |  | 52 | 70 | 32 | 32 | 32
+Maximum |  | 52 | 70 | 47 | 70 | 70
+Age group, n (%) |  |  |  |  |  | 
+Adult | 0 ( 0.0) | 1 ( 50.0) | 1 ( 33.3) | 2 ( 25.0) | 3 ( 27.3) | 4 ( 23.5)
+Pediatric | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Sex, n (%) |  |  |  |  |  | 
+Male | 0 ( 0.0) | 0 ( 0.0) | 1 ( 33.3) | 2 ( 25.0) | 3 ( 27.3) | 3 ( 17.6)
+Female | 0 ( 0.0) | 1 ( 50.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 5.9)
+Childbearing Potential [1], n (%) |  |  |  |  |  | 
+Yes | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+No | 0 ( 0.0) | 1 (100.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 16.7)
+[type=table, pages=[19]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) | Cohort
+(N=3) | 2 | Cohort
+(N=3) | 3 | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Autosomal dominant NR2E3 |  |  |  |  |  |  |  | 
+Age (years) |  |  |  |  |  |  |  | 
+n | 0 | 0 |  | 1 |  | 2 | 3 | 3
+Mean |  |  |  | 36.0 |  | 44.0 | 41.3 | 41.3
+Standard deviation |  |  |  |  |  | 1.41 | 4.73 | 4.73
+Median |  |  |  | 36.0 |  | 44.0 | 43.0 | 43.0
+Minimum |  |  |  | 36 |  | 43 | 36 | 36
+Maximum |  |  |  | 36 |  | 45 | 45 | 45
+Age group, n (%) |  |  |  |  |  |  |  | 
+Adult | 0 ( 0.0) | 0 ( | 0.0) | 1 ( | 33.3) | 2 ( 25.0) | 3 ( 27.3) | 3 ( 16.7) :unselected:
+Pediatric | 0 ( 0.0) | 0 ( | 0.0) | 0 ( 0.0) |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Sex, n (%) |  |  |  |  |  |  |  | 
+Male | 0 ( 0.0) | 0 ( | 0.0) | 0 ( | 0.0) | 2 ( 25.0) | 2 ( 18.2) | 2 ( 11.1) :unselected:
+Female | 0 ( 0.0) | 0 ( | 0.0) | 1 ( 33.3) |  | 0 ( 0.0) | 1 ( 9.1) | 1 ( 5.6) :unselected:
+Childbearing Potential [1], n (%) |  |  |  |  |  |  |  | 
+Yes | 0 ( 0.0) | 0 ( | 0.0) | 1 ( | 50.0) | 0 ( 0.0) | 1 ( 33.3) | 1 ( 14.3) :unselected:
+No | 0 ( 0.0) | 0 ( | 0.0) | 0 ( 0.0) |  | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected:
+[type=table, pages=[14]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) |  | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  |  | 
+Age (years) |  |  |  |  |  |  | 
+n | 4 | 1 | 1 |  | 4 | 5 | 10
+Mean | 67.8 | 18.0 | 74.0 |  | 44.0 | 50.0 | 53.9
+Standard deviation | 6.80 |  |  |  | 18.85 | 21.13 | 21.23
+Median | 66.5 | 18.0 | 74.0 |  | 44.0 | 51.0 | 63.0
+Minimum | 61 | 18 | 74 |  | 22 | 22 | 18
+Maximum | 77 | 18 | 74 |  | 66 | 74 | 77
+Age group, n (%) |  |  |  |  |  |  | 
+Adult | 4 (100.0) | 1 ( 33.3) | 1 ( 33.3) |  | 4 ( 50.0) | 5 ( 45.5) | 10 ( 55.6)
+Pediatric | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Sex, n (%) |  |  |  |  |  |  | 
+Male | 2 ( 50.0) | 1 ( 33.3) | 0 ( 0.0) |  | 3 ( 37.5) | 3 ( 27.3) | 6 ( 33.3)
+Female | 2 ( 50.0) | 0 ( 0.0) | 1 ( 33.3) |  | 1 ( 12.5) | 2 ( 18.2) | 4 ( 22.2)
+Childbearing Potential [1], n (%) |  |  |  |  |  |  | 
+Yes | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |  | 1 (100.0) | 1 ( 33.3) | 1 ( 14.3)
+No | 2 (100.0) | 0 ( 0.0) | 1 ( 50.0) |  | 0 ( 0.0) | 1 ( 33.3) | 3 ( 42.9)
+[type=table, pages=[16]]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) | Cohort 2 (N=3) |  | Cohort
+(N=3) | 3 | Phase 2 (N=8) |  | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  |  |  |  | 
+Race, n (%) |  |  |  |  |  |  |  |  | 
+White | 0 ( 0.0) :unselected: | 2 ( | 66.7) | 1 ( | 33.3) | 0 ( | 0.0) | 1 ( 9.1) | 3 ( 16.7)
+Asian | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 2 ( 25.0) |  | 2 ( 18.2) | 2 ( 11.1)
+American Indian or Alaska Native | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) |  | 0 ( 0.0) | 0 ( 0.0)
+Black or African American | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) |  | 0 ( 0.0) | 0 ( 0.0)
+Native Hawaiian or Other Pacific Islander | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) |  | 0 ( 0.0) | 0 ( 0.0)
+Multiple | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( 0.0) |  | 0 ( 0.0) | 0 ( 0.0)
+Other | 0 ( 0.0) :unselected: | 0 ( | 0.0) :unselected: | 0 ( | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Not Reported | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: |  | 0 ( | 0.0) | 0 ( 0.0) |  | 0 ( 0.0) | 0 ( 0.0)
+Ethnicity, n (%) |  |  |  |  |  |  |  |  | 
+Hispanic or Latino | 0 ( 0.0) :unselected: | 0 ( | 0.0) | 0 ( | 0.0) | 0 ( 0.0) |  | 0 ( 0.0) | 0 ( 0.0)
+Not Hispanic or Latino | 0 ( 0.0) :unselected: | 2 ( 66.7) |  | 1 ( | 33.3) | 2 ( 25.0) |  | 3 ( 27.3) | 5 ( 27.8)
+ |  |  |  |  |  |  |  |  | 
+[type=table, pages=[13]]
+
+**Table 14.1.3.2 Summary of Baseline and Clinical Characteristics Safety Population - RP Patients**
+
+SDTM | date: | 20AUG2024 | 14:37
+|---|---|---|---|
+Analysis | date: | 27AUG2024 | 15:08
+[type=table, pages=[26]]
+
+**Table 14.1.3.2 Summary of Baseline and Clinical Characteristics Safety Population - RP Patients**
+
+SDTM | date: | 20AUG2024 | 14:37
+|---|---|---|---|
+Analysis | date: | 27AUG2024 | 15:08
+[type=table, pages=[27]]
+
+**Table 14.1.3.2 Summary of Baseline and Clinical Characteristics Safety Population - RP Patients**
+
+SDTM | date: 20AUG2024 | 14:37
+|---|---|---|
+Analysis | date: 27AUG2024 | 15:08
+[type=table, pages=[28]]
+
+**5 lost to follow up (2 NC, 3 MFX) 2 withdrew consent (1 NC, 1MFX) 7 Major PDs (2 NC, 5 MFX)**
+
+Source: Table 14.1.1.3
+
+Confidential
+
+13
+[type=paragraph, section=5 lost to follow up (2 NC, 3 MFX) 2 withdrew consent (1 NC, 1MFX) 7 Major PDs (2 NC, 5 MFX), pages=64]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Bicarbonate (mmol/L) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 29.0 | 27.7 | 28.3 | 27.6 | 27.8 | 28.1
+Standard deviation | 1.83 | 2.52 | 3.06 | 4.57 | 4.07 | 3.37
+Median | 29.0 | 28.0 | 29.0 | 29.5 | 29.0 | 29.0
+Minimum | 27 | 25 | 25 | 17 | 17 | 17
+Maximum | 31 | 30 | 31 | 31 | 31 | 31
+[type=table, pages=[1322]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Potassium (mmol/L) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 4.65 | 4.23 | 4.23 | 4.43 | 4.37 | 4.41
+Standard deviation | 0.465 | 0.153 | 0.252 | 0.301 | 0.290 | 0.332
+Median | 4.65 | 4.20 | 4.20 | 4.35 | 4.30 | 4.35
+Minimum | 4.1 | 4.1 | 4.0 | 4.0 | 4.0 | 4.0
+Maximum | 5.2 | 4.4 | 4.5 | 4.9 | 4.9 | 5.2
+[type=table, pages=[1377]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  | Cohort 2 Cohort 3 Phase 2 MTD (N=3) (N=3) (N=8) (N=11) |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) |  |  |  |  | Total (N=18)
+Phosphate (mg/dl) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 3.23 | 3.67 | 3.33 | 3.73 | 3.62 | 3.54
+Standard deviation | 0.450 | 0.651 | 0.503 | 0.534 | 0.533 | 0.532
+Median | 3.00 | 3.70 | 3.40 | 3.70 | 3.70 | 3.55
+Minimum | 3.0 | 3.0 | 2.8 | 3.2 | 2.8 | 2.8
+Maximum | 3.9 | 4.3 | 3.8 | 4.7 | 4.7 | 4.7
+[type=table, pages=[1372]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Sodium (mmol/L) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 138.5 | 137.7 | 140.3 | 139.5 | 139.7 | 139.1
+Standard deviation | 2.38 | 0.58 | 0.58 | 2.20 | 1.90 | 1.97
+Median | 138.5 | 138.0 | 140.0 | 140.0 | 140.0 | 140.0
+Minimum | 136 | 137 | 140 | 136 | 136 | 136
+Maximum | 141 | 138 | 141 | 143 | 143 | 143
+[type=table, pages=[1387]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  | Cohort 2 Cohort 3 Phase 2 MTD (N=3) (N=3) (N=8) (N=11) |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) |  |  |  |  | Total (N=18)
+Calcium (mg/dL) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 9.85 | 9.60 | 9.57 | 9.13 | 9.25 | 9.44
+Standard deviation | 0.520 | 0.346 | 0.451 | 0.365 | 0.420 | 0.484
+Median | 9.70 | 9.80 | 9.60 | 9.15 | 9.20 | 9.50
+Minimum | 9.4 | 9.2 | 9.1 | 8.6 | 8.6 | 8.6
+Maximum | 10.6 | 9.8 | 10.0 | 9.6 | 10.0 | 10.6
+[type=table, pages=[1332]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Urea Nitrogen (mg/dl) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 16.0 | 13.3 | 14.0 | 15.3 | 14.9 | 14.9
+Standard deviation | 4.69 | 4.16 | 3.46 | 5.73 | 5.07 | 4.66
+Median | 14.0 | 12.0 | 16.0 | 15.5 | 16.0 | 14.5
+Minimum | 13 | 10 | 10 | 10 | 10 | 10
+Maximum | 23 | 18 | 16 | 27 | 27 | 27
+[type=table, pages=[1397]]
+
+**Table 14.3.1.2 Potential Dose-Limiting Toxicities Safety Population - RP Patients**
+
+SDTM | date: | 20AUG2024 | 14:37
+|---|---|---|---|
+Analysis | date: | 27AUG2024 | 12:51
+[type=table, pages=[1168]]
+
+**Table 14.1.3.2 Summary of Baseline and Clinical Characteristics Safety Population - RP Patients**
+
+SDTM | date: 20AUG2024 | 14:37
+|---|---|---|
+Analysis | date: 27AUG2024 | 15:08
+[type=table, pages=[34]]
+
+**Table 14.1.3.2 Summary of Baseline and Clinical Characteristics Safety Population - RP Patients**
+
+SDTM | date: 20AUG2024 | 14:37
+|---|---|---|
+Analysis | date: 27AUG2024 | 15:08
+[type=table, pages=[31]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Protein (g/dL) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 7.30 | 7.63 | 7.47 | 7.26 | 7.32 | 7.37
+Standard deviation | 0.356 | 0.351 | 0.503 | 0.329 | 0.368 | 0.363
+Median | 7.40 | 7.60 | 7.40 | 7.25 | 7.30 | 7.30
+Minimum | 6.8 | 7.3 | 7.0 | 6.7 | 6.7 | 6.7
+Maximum | 7.6 | 8.0 | 8.0 | 7.7 | 8.0 | 8.0
+[type=table, pages=[1382]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Chloride (mmol/L) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 102.3 | 102.7 | 103.0 | 104.3 | 103.9 | 103.3
+Standard deviation | 1.26 | 1.53 | 1.00 | 3.62 | 3.11 | 2.61
+Median | 102.0 | 103.0 | 103.0 | 103.5 | 103.0 | 103.0
+Minimum | 101 | 101 | 102 | 101 | 101 | 101
+Maximum | 104 | 104 | 104 | 112 | 112 | 112
+[type=table, pages=[1337]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  | Cohort 2 Cohort 3 Phase 2 MTD (N=3) (N=3) (N=8) (N=11) |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) |  |  |  |  | Total (N=18)
+Albumin (g/dL) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 4.58 | 4.57 | 4.53 | 4.36 | 4.41 | 4.47
+Standard deviation | 0.250 | 0.451 | 0.321 | 0.262 | 0.274 | 0.293
+Median | 4.55 | 4.60 | 4.40 | 4.35 | 4.40 | 4.45
+Minimum | 4.3 | 4.1 | 4.3 | 4.1 | 4.1 | 4.1
+Maximum | 4.9 | 5.0 | 4.9 | 4.8 | 4.9 | 5.0
+[type=table, pages=[1307]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Urate (mg/dl) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 4.40 | 3.63 | 5.30 | 5.26 | 5.27 | 4.81
+Standard deviation | 0.408 | 0.681 | 2.234 | 0.878 | 1.240 | 1.188
+Median | 4.40 | 3.40 | 6.00 | 5.15 | 5.20 | 4.75
+Minimum | 4.0 | 3.1 | 2.8 | 4.0 | 2.8 | 2.8
+Maximum | 4.8 | 4.4 | 7.1 | 7.0 | 7.1 | 7.1
+[type=table, pages=[1392]]
+
+**The Informed consent process will be as follows:**
+
+Table 10A: Comparison Table of Changes from Protocol Amendment 1 to the Protocol Amendment 2
+[type=paragraph, section=The Informed consent process will be as follows:, pages=121]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Alanine Aminotransferase (U/L) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 35.0 | 13.7 | 16.0 | 22.6 | 20.8 | 22.8
+Standard deviation | 22.61 | 1.53 | 6.24 | 11.20 | 10.25 | 14.31
+Median | 36.0 | 14.0 | 14.0 | 18.5 | 18.0 | 17.5
+Minimum | 13 | 12 | 11 | 10 | 10 | 10
+Maximum | 55 | 15 | 23 | 45 | 45 | 55
+[type=table, pages=[1302]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Glucose (mg/dL) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 124.0 | 84.7 | 107.7 | 93.8 | 97.5 | 101.3
+Standard deviation | 21.18 | 8.33 | 13.32 | 17.12 | 16.82 | 20.81
+Median | 124.0 | 82.0 | 101.0 | 92.5 | 98.0 | 98.5
+Minimum | 101 | 78 | 99 | 65 | 65 | 65
+Maximum | 147 | 94 | 123 | 125 | 125 | 147
+[type=table, pages=[1362]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Alkaline Phosphatase (U/L) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 58.0 | 49.7 | 67.7 | 64.3 | 65.2 | 61.0
+Standard deviation | 12.33 | 2.31 | 33.08 | 18.27 | 21.33 | 18.20
+Median | 54.0 | 51.0 | 65.0 | 59.0 | 59.0 | 54.0
+Minimum | 48 | 47 | 36 | 44 | 36 | 36
+Maximum | 76 | 51 | 102 | 98 | 102 | 102
+[type=table, pages=[1312]]
+
+**The Informed consent process will be as follows:**
+
+Table 9A: Comparison Table of Changes from Original Protocol to the Protocol Amendment 1
+[type=paragraph, section=The Informed consent process will be as follows:, pages=123]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Bilirubin (mg/dL) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 0.493 | 0.583 | 1.610 | 0.715 | 0.959 | 0.793
+Standard deviation | 0.0888 | 0.1305 | 0.7332 | 0.5610 | 0.7090 | 0.5881
+Median | 0.475 | 0.570 | 1.450 | 0.525 | 0.550 | 0.540
+Minimum | 0.41 | 0.46 | 0.97 | 0.41 | 0.41 | 0.41
+Maximum | 0.61 | 0.72 | 2.41 | 2.08 | 2.41 | 2.41
+[type=table, pages=[1327]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Aspartate Aminotransferase (U/L) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 25.0 | 16.3 | 18.3 | 17.8 | 17.9 | 19.2
+Standard deviation | 4.32 | 5.77 | 7.51 | 4.13 | 4.83 | 5.60
+Median | 24.0 | 13.0 | 18.0 | 17.0 | 18.0 | 19.5
+Minimum | 21 | 13 | 11 | 13 | 11 | 11
+Maximum | 31 | 23 | 26 | 23 | 26 | 31
+[type=table, pages=[1317]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Direct Bilirubin (mg/dL) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 0.105 | 0.120 | 0.323 | 0.124 | 0.178 | 0.152
+Standard deviation | 0.0191 | 0.0265 | 0.1501 | 0.0902 | 0.1375 | 0.1114
+Median | 0.110 | 0.110 | 0.330 | 0.090 | 0.120 | 0.115
+Minimum | 0.08 | 0.10 | 0.17 | 0.07 | 0.07 | 0.07
+Maximum | 0.12 | 0.15 | 0.47 | 0.34 | 0.47 | 0.47
+[type=table, pages=[1352]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+Parameter (Unit) |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistic | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Indirect Bilirubin (mg/dl) |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 3 | 3 | 8 | 11 | 18
+Mean | 0.388 | 0.463 | 1.287 | 0.591 | 0.781 | 0.641
+Standard deviation | 0.0759 | 0.1050 | 0.5880 | 0.4717 | 0.5748 | 0.4796
+Median | 0.375 | 0.460 | 1.120 | 0.425 | 0.450 | 0.445
+Minimum | 0.31 | 0.36 | 0.80 | 0.34 | 0.34 | 0.31
+Maximum | 0.49 | 0.57 | 1.94 | 1.74 | 1.94 | 1.94
+[type=table, pages=[1367]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+SDTM date: 20AUG2024 | 14:37
+|---|---|
+Analysis date: 28AUG2024 | 16:05
+[type=table, pages=[1333]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+SDTM date: 20AUG2024 | 14:37
+|---|---|
+Analysis date: 28AUG2024 | 16:05
+[type=table, pages=[1331]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+SDTM date: 20AUG2024 | 14:37
+|---|---|
+Analysis date: 28AUG2024 | 16:05
+[type=table, pages=[1339]]
+
+**Table 14.3.4.1.2 Summary of Selected Chemistry Laboratory Parameters by Visit Safety Population - RP Patients**
+
+SDTM date: 20AUG2024 | 14:37
+|---|---|
+Analysis date: 28AUG2024 | 16:05
+[type=table, pages=[1340]]
+
+**Table (no caption)**
+
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3
+
+No non-ocular treatment-emergent serious AE (TESAE) reported
+
+Note: MTD = Maximum Tolerated Dose. % = 100 x n/N.
+
+TEAEs are defined as AEs that started after the date/time of study drug administration.
+
+AE reported terms were coded using the Medical Dictionary for Regulatory Activities (MedDRA) Version 24.1.
+[type=paragraph, pages=1273]
+
+**Inclusion Criteria for Pediatric RP:**
+
+1. Males or females 6 - 17 years of age (inclusive) at the time of parental permission and/or assent, whichever is applicable.
+
+2. Confirmed genetic diagnosis of biallelic autosomal recessive NR2E3 mutations or autosomal dominant NR2E3 mutation for Subgroup 1 or autosomal dominant RHO mutations for Subgroup 2.
+
+3. BCVA ≤ 20/32 or visual field less than 20° in any meridian, as measured by a III4e isopter or equivalent in study eye.
+
+4. Able to perform a Multi-Luminance Mobility Testing (MLMT) using study eye, but unable to pass the MLMT at 1 lux, the lowest luminance level tested.
+
+· Subject eligibility for NR2E3 and RHO subgroups who pass the MLMT at 1 lux may be assessed on a case-by-case basis by Ocugen following review of results of screening assessments
+
+OCUGEN Inc. - CONFIDENTIAL
+
+Page 9 of 124
+
+April 2025
+
+Protocol OCU400-101 Amendment 17
+
+OCU400
+[type=paragraph, section=Inclusion Criteria for Pediatric RP:, pages=9,10]
+
+**Table (no caption)**
+
+Subgroup: Mutation Subtype - Autosomal dominant NR2E3
+
+No ocular treatment-emergent serious AE (TESAE) reported
+
+Note: MTD = Maximum Tolerated Dose. % = 100 x n/N. TEAEs are defined as AEs that started after the date/time of study drug administration.
+
+AE reported terms were coded using the Medical Dictionary for Regulatory Activities (MedDRA) Version 24.1.
+[type=paragraph, pages=1267]
+
+**7.1.2. Subject Inclusion Criteria for Pediatric RP Patients:**
+
+1. Males or females 6 - 17 years of age (inclusive) at the time of parental permission and/or assent, whichever is applicable.
+
+2. Confirmed genetic diagnosis of biallelic autosomal recessive NR2E3 mutations or autosomal dominant NR2E3 mutation for Subgroup 1 or autosomal dominant RHO mutations for Subgroup 2.
+
+3. BCVA 20/32 or visual field less than 20° in any meridian, as measured by a III4e isopter or equivalent in study eye.
+
+4. Able to perform a Multi-Luminance Mobility Testing (MLMT) using study eye, but unable to pass the MLMT at 1 lux, the lowest luminance level tested.
+
+· Subject eligibility for NR2E3 and RHO subgroups who pass the MLMT at 1 lux may be assessed on a case-by-case basis by Ocugen following review of results of screening assessments.
+
+OCUGEN Inc. - CONFIDENTIAL
+
+Page 44 of 124
+
+April 2025
+
+Protocol OCU400-101 Amendment 17
+
+OCU400
+
+7.2. Subject Inclusion Criteria for LCA Patients
+[type=paragraph, section=7.1.2. Subject Inclusion Criteria for Pediatric RP Patients:, pages=44,45]
+
+**Inclusion Criteria for Adult RP:**
+
+1. Males or females ≥18 years of age at the time of informed consent.
+
+2. Confirmed genetic diagnosis of biallelic autosomal recessive NR2E3 mutations or autosomal dominant NR2E3 mutation for Subgroup 1 or autosomal dominant RHO mutations for Subgroup 2.
+
+3. For the sentinel subject of Cohort 1-3, BCVA ≤ 20/160 in study eye or visual field less than 20° in any meridian, as measured by a III4e isopter or equivalent in study eye.
+
+4. For non-sentinel subject, BCVA ≤ 20/50 or visual field less than 20° in any meridian, as measured by a III4e isopter or equivalent in study eye.
+
+5. Able to perform a Multi-Luminance Mobility Testing (MLMT) using study eye, but unable to pass the MLMT at 1 lux, the lowest luminance level tested.
+
+· Subject eligibility for NR2E3 and RHO subgroups who pass the MLMT at 1 lux may be assessed on a case-by-case basis by Ocugen following review of results of screening assessments.
+[type=paragraph, section=Inclusion Criteria for Adult RP:, pages=8]
+
+**7.1.1. Subject Inclusion Criteria for Adult RP Patients:**
+
+1. Males or females ≥18 years of age at the time of informed consent.
+
+2. Confirmed genetic diagnosis of biallelic autosomal recessive NR2E3 mutations or autosomal dominant NR2E3 mutation for Subgroup 1 or autosomal dominant RHO mutations for Subgroup 2.
+
+3. For the sentinel subject of Cohort 1-3, BCVA ≤ 20/160 in study eye or visual field less than 20° in any meridian, as measured by a III4e isopter or equivalent in study eye.
+
+4. For non-sentinel subject, BCVA ≤ 20/50 or visual field less than 20° in any meridian, as measured by a III4e isopter or equivalent in study eye.
+
+5. Able to perform a Multi-Luminance Mobility Testing (MLMT) using study eye, but unable to pass the MLMT at 1 lux, the lowest luminance level tested.
+
+· Subject eligibility for NR2E3 and RHO subgroups who pass the MLMT at 1 lux may be assessed on a case-by-case basis by Ocugen following review of results of screening assessments.
+[type=paragraph, section=7.1.1. Subject Inclusion Criteria for Adult RP Patients:, pages=44]
+
+**The Informed consent process will be as follows:**
+
+synopsis 7.1. subject inclusion criteria for RP patients | Confirmed genetic diagnosis of biallelic autosomal recessive NR2E3 mutations for Subgroup 1, autosomal dominant NR2E3 mutation for Subgroup 2 or autosomal dominant RHO mutations for Subgroup 3. | Confirmed genetic diagnosis of biallelic autosomal recessive NR2E3 mutations or autosomal dominant NR2E3 mutation for Subgroup 1 or autosomal dominant RHO mutations for Subgroup 2. | change RP mutation subgroups from three to two. Biallelic autosomal recessive and autosomal dominant NR2E3 will be considered as one genetic subgroup. | 7 41
+|---|---|---|---|---|
+[type=table, pages=[108], section=The Informed consent process will be as follows:]
+
+**Table 3**
+
+ |  |  | dominant RHO mutations. | 
+|---|---|---|---|---|
+Study Design and Methodology | A total of 18 subjects with at least 6 subjects from each of the following subgroups will be selected: 1. Biallelic autosomal recessive NR2E3 mutations 2. Autosomal dominant NR2E3 mutation or RHO mutations. | A total of 18 subjects with at least 6 subjects from each of the following subgroups will be selected: 1. Biallelic autosomal recessive NR2E3 mutations 2. Autosomal dominant NR2E3 mutation or 3. Autosomal dominant RHO mutations | Added subgroup "3. Autosomal dominant RHO mutations" | 5, 29
+Inclusion Criteria | 2. Confirmed genetic diagnosis of biallelic autosomal recessive NR2E3 mutations for Subgroup 1, autosomal dominant NR2E3 mutation or autosomal dominant RHO mutations for Subgroup 2. | 2. Confirmed genetic diagnosis of biallelic autosomal recessive NR2E3 mutations for Subgroup 1, autosomal dominant NR2E3 mutation for Subgroup 2 or autosomal dominant RHO mutations for Subgroup 3. | Added "subgroup 3" for subjects with autosomal dominant RHO mutations | 7, 35
+Benefits | The proposed indication for OCU400 (AAV5-hNR2E3) is for the treatment of retinitis pigmentosa. | The proposed indication for OCU400 (AAV5-hNR2E3) is for the treatment of retinitis pigmentosa associated with NR2E3 and RHO mutations. | Added proposed indication: "associated with NR2E3 and RHO mutations" | 20, 25
+[type=table, pages=[124], section=The Informed consent process will be as follows:]
+
+**Table 14.3.2.2 Summary of Non-Ocular Treatment-Emergent Serious Adverse Events by System Organ Class, Preferred Term and Severity Safety Population - RP Patients**
+
+SDTM | date: | 20AUG2024 | 14:37 | 
+|---|---|---|---|---|
+Analysis | date: | 27AUG2024 |  | 17:06
+[type=table, pages=[1273]]
+
+**37 Haider, N. B. J., S. G .; Cideciyan, A. V .; Swiderski, R .; Streb, L. M .; Searby, C .; Beck, G .; Hockey, R .; Hanna, D. B .; Gorman, S .; Duhl, D .; Carmi, R .; Bennett, J .; Weleber, R. G .;**
+
+Fishman, G. A .; Wright, A. F .; Stone, E. M .; Sheffield, V. C. Mutation of a nuclear receptor gene, NR2E3, causes enhanced S cone syndrome, a disorder of retinal cell fate. Nature Genetics 24, 127-131 (2000).
+[type=paragraph, section=37 Haider, N. B. J., S. G .; Cideciyan, A. V .; Swiderski, R .; Streb, L. M .; Searby, C .; Beck, G .; Hockey, R .; Hanna, D. B .; Gorman, S .; Duhl, D .; Carmi, R .; Bennett, J .; Weleber, R. G .;, pages=84]
+
+**Table 14.2.2.3.1 Summary of Slit Lamp Biomicroscopy Examination by Visit in Treated Eye Safety Population - RP Patients**
+
+Parameter Visit Category | Cohort 1 (N=4) n (%) | Cohort 2 (N=3) n (%) | Cohort 3 (N=3) n (%) | Phase 2 (N=8) n (%) | MTD (N=11) n (%) | Total (N=18) n (%)
+|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  | 
+Anterior Chamber |  |  |  |  |  | 
+9 Month | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Cell 0 |  | 2 (100.0) | 1 (100.0) | 2 (100.0) | 3 (100.0) | 5 (100.0)
+0.5+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+1+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+2+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+3+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+12 Month | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Cell 0 |  | 2 (100.0) | 1 (100.0) | 2 (100.0) | 3 (100.0) | 5 (100.0)
+0.5+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+1+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Hypopyon present Baseline [1] | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | 
+ |  |  |  |  |  | N'=5
+Yes |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+No |  | 2 (100.0) | 1 (100.0) | 2 (100.0) | 3 (100.0) | 5 (100.0)
+[type=table, pages=[180]]
+
+**Study Design and Methodology:**
+
+This is a multicenter, open-label, dose ranging study in two subgroups of subjects with three consecutive cohorts.
+
+Up to 24 subjects with at least 9 subjects from each of the following subgroups will be selected:
+
+1. Biallelic autosomal recessive NR2E3 mutations or autosomal dominant NR2E3 mutations
+
+2. Autosomal dominant RHO mutations
+
+For the Phase I portion of the study, the 3+3 design for sequential dose escalating cohorts will be used with scheduled 3 dosing levels between 9 and 18 subjects will be used to follow the design. The following algorithm will be followed:
+
+Cohort 1 Low Dose: 3+3 subjects will receive subretinal injection of OCU400 low dose concentration 1.66 x 1010 vg/mL. The sentinel subject will receive subretinal injection of up to 200 µL in low dose. Based on safety outcome in the first subject, dose volume will further be increased up to 300 µL (5.0x 109 vg/eye) in the subsequent subjects.
+[type=paragraph, section=Study Design and Methodology:, pages=6]
+
+**Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) |  | Cohort
+(N=3) | 2 | Cohort
+(N=3) | 3 | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  |  |  |  | 
+Age (years) |  |  |  |  |  |  |  |  | 
+n | 0 |  | 2 |  | 1 |  | 2 | 3 | 5
+Mean |  |  | 58.0 |  | 70.0 |  | 39.5 | 49.7 | 53.0
+Standard deviation |  |  | 8.49 |  |  |  | 10.61 | 19.14 | 14.90
+Median |  |  | 58.0 |  | 70.0 |  | 39.5 | 47.0 | 52.0
+Minimum |  |  | 52 |  | 70 |  | 32 | 32 | 32
+Maximum |  |  | 64 |  | 70 |  | 47 | 70 | 70
+Age group, n (%) |  |  |  |  |  |  |  |  | 
+Adult | 0 ( 0.0) |  | 2 ( | 66.7) | 1 ( | 33.3) | 2 ( 25.0) | 3 ( 27.3) | 5 ( 27.8)
+Pediatric | 0 ( 0.0) |  | 0 ( | 0.0) | 0 ( 0.0) |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Sex, n (%) |  |  |  |  |  |  |  |  | 
+Male | 0 ( 0.0) |  | 0 ( | 0.0) | 1 ( | 33.3) | 2 ( 25.0) | 3 ( 27.3) | 3 ( 16.7)
+Female | 0 ( 0.0) |  | 2 ( | 66.7) | 0 ( 0.0) |  | 0 ( 0.0) | 0 ( 0.0) | 2 ( 11.1)
+Childbearing Potential [1], n (%) |  |  |  |  |  |  |  |  | 
+Yes | 0 ( 0.0) |  | 0 ( | 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0)
+No | 0 ( 0.0) |  | 2 | (100.0) | 0 ( 0.0) |  | 0 ( 0.0) | 0 ( 0.0) | 2 ( 28.6)
+[type=table, pages=[12]]
+
+**Table 14.3.2.1 Summary of Ocular Treatment-Emergent Serious Adverse Events by System Organ Class, Preferred Term and Severity Safety Population - RP Patients**
+
+SDTM | date: | 20AUG2024 | 14:37 | 
+|---|---|---|---|---|
+Analysis | date: | 27AUG2024 |  | 17:06
+[type=table, pages=[1267]]
+
+**Statistical methods:**
+
+April 2025
+
+Protocol OCU400-101 Amendment 17
+
+OCU400
+
+delivery of the gene. Not all genes and disease expressions are amenable to gene therapy, and for the 50% of patients whose genetic mutations remain unknown, there are no therapeutic options. Currently, all gene therapy clinical trials for RP are Gene Replacement Therapy, none of which will treat the major subject population with unknown and unidentifiable molecular etiology.
+
+Ocugen, Inc., has developed the Gene Modifier Therapy with OCU400 to ameliorate multiple forms of RP without requiring knowledge of the mutated gene. The nuclear receptor NR2E3 has demonstrated a crucial role in regulating multiple transcriptional networks that modulate retinal cell homeostasis such as survival, metabolism, inflammation, and phototransduction that impact RP disease.31-34 These data indicate that NR2E3 functions as a modifier gene with therapeutic potential for RP with a wide range of genetic etiology.
+
+In pre-clinical studies, Nr2e3-associated retinal disease shows variation in phenotypes that are likely modulated by modifier genes. 18,33-41 Mouse studies demonstrate that the retinal degenerative phenotype associated with mutations in RP genes Nr2e3, rhodopsin, and Rp1 are significantly altered with genetic background.18,38,39,42-50 Mutations in the mouse NR2E3 (the retinal degeneration 7, rd7) represent these various clinical phenotypes.38 These observed phenotypic variations have shown that NR2E3 is a master regulator of photoreceptor cell development, maintenance, and function and modulates RP associated genes and networks,31,51- 54 and NR2E3 can modulate RP disease due to various mutations. 52,55,56
+
+In fact, AAV- NR2E3 rescues retinal degeneration in multiple mouse models of RP (Figure 1). Retinas injected at P0 and evaluated at 3 months demonstrating sustained rescue. Rescue is evaluated by changes in the fundus, morphology, and expression of opsin genes. We observed 30-80% rescue (increase in photoreceptor nuclei of outer nuclear layer (ONL) that includes rod and cone, or cone only, rescue largely dependent on how well NR2E3 was distributed in the retina with apparent treated and untreated regions (Figure 1).
+[type=paragraph, section=Statistical methods:, pages=22]
+
+**Table 14.2.2.3.1 Summary of Slit Lamp Biomicroscopy Examination by Visit in Treated Eye Safety Population - RP Patients**
+
+Parameter Visit | Cohort 1 (N=4) n (%) | Cohort 2 (N=3) n (%) | Cohort 3 (N=3) n (%) | Phase 2 (N=8) n (%) | MTD (N=11) n (%) | Total (N=18)
+|---|---|---|---|---|---|---|
+Category |  |  |  |  |  | n (%)
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  | 
+Anterior Chamber |  |  |  |  |  | 
+Day 3 | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Cell 0 |  | 1 ( 50.0) :unselected: | ( 0.0) | 1 ( 50.0) | 1 ( 33.3) | 2 ( 40.0)
+0.5+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 1 ( 50.0) | 1 ( 33.3) | 1 ( 20.0)
+1+ |  | 1 ( 50.0) :unselected: | 1 (100.0) | 0 ( 0.0) | 1 ( 33.3) | 2 ( 40.0)
+2+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2 Week | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Cell 0 |  | 1 ( 50.0) :unselected: | 1 (100.0) | 2 (100.0) | 3 (100.0) | 4 ( 80.0)
+0.5+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+1+ |  | 1 ( 50.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 20.0)
+2+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+1 Month | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Cell 0 |  | 2 (100.0) | 1 (100.0) | 1 ( 50.0) | 2 ( 66.7) | 4 ( 80.0)
+0.5+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 1 ( 50.0) | 1 ( 33.3) | 1 ( 20.0)
+1+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0)
+[type=table, pages=[178]]
+
+**Table 14.2.2.3.1 Summary of Slit Lamp Biomicroscopy Examination by Visit in Treated Eye Safety Population - RP Patients**
+
+Parameter Visit | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|
+Category | n (%) | n (%) | n (%) | n (%) | n (%) | n (%)
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  | 
+Nuclear Lens opacity |  |  |  |  |  | 
+3 Month | N'=0 | N' =0 | N'=0 | N'=1 | N'=1 | N'=1
+1 degree |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+2 degrees |  |  |  | 1 (100.0) | 1 (100.0) | 1 (100.0)
+3 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+4 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+5 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+6 Month | N'=0 | N'=0 | N'=0 | N'=1 | N'=1 | N'=1
+1 degree |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2 degrees |  |  |  | 1 (100.0) | 1 (100.0) | 1 (100.0)
+3 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+5 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+9 Month | N'=0 | N'=0 | N'=0 | N'=1 | N'=1 | N'=1
+1 degree |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+2 degrees |  |  |  | 1 (100.0) | 1 (100.0) | 1 (100.0)
+3 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+4 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+5 degrees |  |  |  | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0)
+ |  |  |  |  |  | 
+[type=table, pages=[196]]
+
+**Table 14.2.2.3.1 Summary of Slit Lamp Biomicroscopy Examination by Visit in Treated Eye Safety Population - RP Patients**
+
+Parameter Visit | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|
+Category | n (%) | n (%) | n (%) | n (%) | n (%) | n (%)
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  | 
+Nuclear Lens opacity |  |  |  |  |  | 
+2 Week | N'=0 | N' =0 | N'=0 | N'=1 | N'=1 | N'=1
+1 degree |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+2 degrees |  |  |  | 1 (100.0) | 1 (100.0) | 1 (100.0)
+3 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+4 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+5 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+1 Month | N'=0 | N'=0 | N'=0 | N'=1 | N'=1 | N'=1
+1 degree |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2 degrees |  |  |  | 1 (100.0) | 1 (100.0) | 1 (100.0)
+3 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+5 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2 Month | N'=0 | N'=0 | N'=0 | N'=1 | N'=1 | N'=1
+1 degree |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+2 degrees |  |  |  | 1 (100.0) | 1 (100.0) | 1 (100.0)
+3 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+4 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+5 degrees |  |  |  | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0)
+ |  |  |  |  |  | 
+[type=table, pages=[195]]
+
+**Table 14.2.2.3.1 Summary of Slit Lamp Biomicroscopy Examination by Visit in Treated Eye Safety Population - RP Patients**
+
+Parameter Visit | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|
+Category | n (%) | n (%) | n (%) | n (%) | n (%) | n (%)
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  | 
+Nuclear Lens opacity |  |  |  |  |  | 
+Baseline [1] | N'=0 | N' =0 | N'=0 | N'=1 | N'=1 | N'=1
+1 degree |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+2 degrees |  |  |  | 1 (100.0) | 1 (100.0) | 1 (100.0)
+3 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+4 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+5 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Day 1 | N'=0 | N'=0 | N'=0 | N'=1 | N'=1 | N'=1
+1 degree |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2 degrees |  |  |  | 1 (100.0) | 1 (100.0) | 1 (100.0)
+3 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+5 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Day 3 | N'=0 | N'=0 | N'=0 | N'=1 | N'=1 | N'=1
+1 degree |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+2 degrees |  |  |  | 1 (100.0) | 1 (100.0) | 1 (100.0)
+3 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+4 degrees |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+5 degrees |  |  |  | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0)
+[type=table, pages=[194]]
+
+**Table 14.2.2.3.1 Summary of Slit Lamp Biomicroscopy Examination by Visit in Treated Eye Safety Population - RP Patients**
+
+Parameter Visit Category | Cohort 1 (N=4) n (%) | Cohort 2 (N=3) n (%) | Cohort 3 (N=3) n (%) | Phase 2 (N=8) n (%) | MTD (N=11) n (%) | Total (N=18)
+|---|---|---|---|---|---|---|
+ |  |  |  |  |  | n (%)
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  | 
+Anterior Chamber |  |  |  |  |  | 
+2 Month | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Cell 0 |  | 1 ( 50.0) :unselected: | 1 (100.0) | 1 ( 50.0) | 2 ( 66.7) | 3 ( 60.0)
+0.5+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 1 ( 50.0) | 1 ( 33.3) | 1 ( 20.0)
+1+ |  | 1 ( 50.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 20.0)
+2+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3 Month | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Cell 0 |  | 2 (100.0) | 1 (100.0) | 2 (100.0) | 3 (100.0) | 5 (100.0)
+0.5+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+1+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+6 Month | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Cell 0 |  | 2 (100.0) | 1 (100.0) | 2 (100.0) | 3 (100.0) | 5 (100.0)
+0.5+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+1+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+[type=table, pages=[179]]
+
+**Table 14.1.3.2 Summary of Baseline and Clinical Characteristics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  | 
+Genetic Diagnosis, n (%) |  |  |  |  |  | 
+NR2E3 Mutation | 0 ( 0.0) | 2 ( 66.7) | 1 ( 33.3) | 2 ( 25.0) | 3 ( 27.3) | 5 ( 27.8)
+RHO Mutation | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Height (cm) |  |  |  |  |  | 
+n | 0 | 2 | 1 | 2 | 3 | 5
+Mean |  | 161.0 | 191.0 | 176.5 | 181.3 | 173.2
+Standard deviation |  | 5.66 |  | 7.78 | 10.02 | 13.50
+Median |  | 161.0 | 191.0 | 176.5 | 182.0 | 171.0
+Minimum |  | 157 | 191 | 171 | 171 | 157
+Maximum |  | 165 | 191 | 182 | 191 | 191
+Weight (kg) |  |  |  |  |  | 
+n | 0 | 2 | 1 | 2 | 3 | 5
+Mean |  | 79.00 | 81.30 | 72.95 | 75.73 | 77.04
+Standard deviation |  | 12.304 |  | 9.122 | 8.053 | 8.571
+Median |  | 79.00 | 81.30 | 72.95 | 79.40 | 79.40
+Minimum |  | 70.3 | 81.3 | 66.5 | 66.5 | 66.5
+Maximum |  | 87.7 | 81.3 | 79.4 | 81.3 | 87.7
+[type=table, pages=[28]]
+
+**Table 14.2.2.3.1 Summary of Slit Lamp Biomicroscopy Examination by Visit in Treated Eye Safety Population - RP Patients**
+
+Parameter Visit | Cohort 1 (N=4) n (%) | Cohort 2 (N=3) n (%) | Cohort 3 (N=3) n (%) | Phase 2 (N=8) n (%) | MTD (N=11) n (%) | Total (N=18)
+|---|---|---|---|---|---|---|
+Category |  |  |  |  |  | n (%)
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  | 
+Vitreous |  |  |  |  |  | 
+1 Month | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Cell 0 |  | 1 ( 50.0) :unselected: | 1 (100.0) | 1 ( 50.0) | 2 ( 66.7) | 3 ( 60.0)
+0.5+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 1 ( 50.0) | 1 ( 33.3) | 1 ( 20.0)
+1+ |  | 1 ( 50.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 20.0)
+2+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2 Month | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Cell 0 |  | 1 ( 50.0) :unselected: | 1 (100.0) | 1 ( 50.0) | 2 ( 66.7) | 3 ( 60.0)
+0.5+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 1 ( 50.0) | 1 ( 33.3) | 1 ( 20.0)
+1+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2+ |  | 1 ( 50.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 20.0)
+3+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3 Month | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Cell 0 |  | 1 ( 50.0) :unselected: | 1 (100.0) | 2 (100.0) | 3 (100.0) | 4 ( 80.0)
+0.5+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+1+ |  | 1 ( 50.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 20.0)
+2+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0)
+[type=table, pages=[202]]
+
+**Table 14.2.2.3.1 Summary of Slit Lamp Biomicroscopy Examination by Visit in Treated Eye Safety Population - RP Patients**
+
+Parameter Visit | Cohort 1 (N=4) n (%) | Cohort 2 (N=3) n (%) | Cohort 3 (N=3) n (%) | Phase 2 (N=8) n (%) | MTD (N=11) n (%) | Total (N=18) n (%)
+|---|---|---|---|---|---|---|
+Category |  |  |  |  |  | 
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  | 
+Vitreous |  |  |  |  |  | 
+6 Month | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Cell 0 |  | 2 (100.0) | 1 (100.0) | 2 (100.0) | 3 (100.0) | 5 (100.0)
+0.5+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+1+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+2+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+3+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+9 Month | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Cell 0 |  | 2 (100.0) | 1 (100.0) | 2 (100.0) | 3 (100.0) | 5 (100.0)
+0.5+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+1+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+12 Month | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N'=5
+Cell 0 |  | 1 ( 50.0) :unselected: | 1 (100.0) | 2 (100.0) | 3 (100.0) | 4 ( 80.0)
+0.5+ |  | 1 ( 50.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 1 ( 20.0)
+1+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+[type=table, pages=[203]]
+
+**6 Adult subjects only.**
+
+*MLMT needs to be performed and assessed for treated and untreated eye as recommended by the manual of procedure
+
+37
+
+OCUGEN Inc. - CONFIDENTIAL
+
+OCU400 OCU400-101
+
+Statistical Analysis Plan
+
+3.3. Recruitment
+
+3.3.1. Number of Subjects
+
+Up to 24 with at least 9 adult subjects from each RP mutation subgroup (NR2E3 autosomal recessive or NR2E3 autosomal dominate and RHO autosomal dominant) and up to 3 adult subjects with LCA due to CEP290, at least 1 additional pediatric with LCA due to CEP290 mutation.
+
+3.3.2. Number of Sites
+
+There will be approximately seven study centers in the US.
+
+3.3.3. Sample Size Justification
+
+The trial will enroll up to 24 patients, 19 adult RP in both Phase 1 and Phase 2 components, up to 3 LCA patients and at least 1 additional pediatric LCA in Phase 2 component. The sample size was estimated based on the minimum number necessary to obtain a preliminary clinical assessment regarding OCU400's safety profile. The limited number for LCA patients is necessitated by the rarity of patients with LCA10 and was chosen per FDA's recommendation to include 3 subjects.
+
+3.4. Inclusion, Exclusion, and Discontinuation
+
+These criteria are established to determine the generalizability and validity of the study population.
+
+3.4.1. Inclusion Criteria for Adult RP Subjects
+
+1. Males or females ≥18 years of age at the time of informed consent.
+
+2. Confirmed genetic diagnosis of biallelic autosomal recessive NR2E3 mutations or autosomal dominant NR2E3 mutation for Subgroup 1 or autosomal dominant RHO mutations for Subgroup 2.
+
+3. For the sentinel subject of Cohort 1-3, BCVA ≤ 20/160 in study eye or visual field less than 20° in any meridian, as measured by a III4e isopter or equivalent in study eye.
+
+4. For the non-sentinel subject, BCVA ≤ 20/50 or visual field less than 20° in any meridian, as measured by a III4e isopter or equivalent in study eye.
+
+5. Able to perform a multi-luminance mobility testing (MLMT) using study eye, but unable to pass the MLMT at 1 lux, the lowest luminance level tested.
+
+a. Subject eligibility for NR2E3 and RHO subgroups who pass the MLMT at 1 lux may be assessed on a case-by-case basis by Ocugen, Inc. following review of results of screening assessments.
+
+38
+
+OCUGEN Inc. - CONFIDENTIAL
+[type=paragraph, section=6 Adult subjects only., pages=38,39]
+
+**Table 14.2.2.3.1 Summary of Slit Lamp Biomicroscopy Examination by Visit in Treated Eye Safety Population - RP Patients**
+
+Parameter Visit | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|
+Category | n (%) | n (%) | n (%) | n (%) | n (%) | n (%)
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  | 
+External Structures |  |  |  |  |  | 
+3 Month | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Normal |  | 2 (100.0) | 1 (100.0) | 2 (100.0) | 3 (100.0) | 5 (100.0)
+Abnormal, not clinically significant |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Abnormal, clinically significant |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Not Done |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+6 Month | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Normal |  | 2 (100.0) | 1 (100.0) | 2 (100.0) | 3 (100.0) | 5 (100.0)
+Abnormal, not clinically significant |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Abnormal, clinically significant |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Not Done |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+9 Month | N'=0 | N'=2 | N'=1 | N'=2 | N'=3 | N' =5
+Normal |  | 2 (100.0) | 0 ( 0.0) | 2 (100.0) | 2 ( 66.7) | 4 ( 80.0)
+Abnormal, not clinically significant |  | 0 ( 0.0) :unselected: | 1 (100.0) | 0 ( 0.0) | 1 ( 33.3) | 1 ( 20.0)
+Abnormal, clinically significant |  | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Not Done |  | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+[type=table, pages=[166]]
+
+**Table 14.2.2.7.1.5 Summary of Michigan Retinal Degeneration Questionnaire Domain Scores Safety Population - RP Patients**
+
+Domain |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistics | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  | 
+Photosensitivity |  |  |  |  |  | 
+12 Month |  |  |  |  |  | 
+n | 0 | 2 | 1 | 2 | 3 | 5
+Mean |  | -0.575 | 0.938 | 1.037 | 1.004 | 0.372
+Standard deviation |  | 1.7305 |  | 0.0159 | 0.0584 | 1.2240
+Median |  | -0.575 | 0.938 | 1.037 | 1.026 | 0.938
+Minimum |  | -1.80 | 0.94 | 1.03 | 0.94 | -1.80
+Maximum |  | 0.65 | 0.94 | 1.05 | 1.05 | 1.05
+ |  |  |  |  |  | 
+[type=table, pages=[661]]
+
+**Table 14.1.3.2 Summary of Baseline and Clinical Characteristics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Autosomal dominant NR2E3 |  |  |  |  |  | 
+Genetic Diagnosis, n (%) |  |  |  |  |  | 
+NR2E3 Mutation | 0 ( 0.0) | 0 ( 0.0) | 1 ( 33.3) | 2 ( 25.0) | 3 ( 27.3) | 3 ( 16.7)
+RHO Mutation | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Height (cm) |  |  |  |  |  | 
+n | 0 | 0 | 1 | 2 | 3 | 3
+Mean |  |  | 173.0 | 176.5 | 175.3 | 175.3
+Standard deviation |  |  |  | 13.44 | 9.71 | 9.71
+Median |  |  | 173.0 | 176.5 | 173.0 | 173.0
+Minimum |  |  | 173 | 167 | 167 | 167
+Maximum |  |  | 173 | 186 | 186 | 186
+Weight (kg) |  |  |  |  |  | 
+n | 0 | 0 | 1 | 2 | 3 | 3
+Mean |  |  | 62.10 | 95.10 | 84.10 | 84.10
+Standard deviation |  |  |  | 16.829 | 22.464 | 22.464
+Median |  |  | 62.10 | 95.10 | 83.20 | 83.20
+Minimum |  |  | 62.1 | 83.2 | 62.1 | 62.1
+Maximum |  |  | 62.1 | 107.0 | 107.0 | 107.0
+[type=table, pages=[31]]
+
+**Table 14.2.2.7.1.5 Summary of Michigan Retinal Degeneration Questionnaire Domain Scores Safety Population - RP Patients**
+
+Domain |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistics | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Subgroup: Mutation Subtype - Autosomal dominant NR2E3 |  |  |  |  |  | 
+Photosensitivity |  |  |  |  |  | 
+12 Month |  |  |  |  |  | 
+n | 0 | 0 | 1 | 2 | 3 | 3
+Mean |  |  | 1.143 | 0.541 | 0.742 | 0.742
+Standard deviation |  |  |  | 0.0060 | 0.3481 | 0.3481
+Median |  |  | 1.143 | 0.541 | 0.545 | 0.545
+Minimum |  |  | 1.14 | 0.54 | 0.54 | 0.54
+Maximum |  |  | 1.14 | 0.54 | 1.14 | 1.14
+ |  |  |  |  |  | 
+[type=table, pages=[678]]
+
+**Table 14.2.2.7.1.5 Summary of Michigan Retinal Degeneration Questionnaire Domain Scores Safety Population - RP Patients**
+
+Domain |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistics | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Subgroup: Mutation Subtype - Autosomal dominant NR2E3 |  |  |  |  |  | 
+Contrast Sensitivity |  |  |  |  |  | 
+1 Month |  |  |  |  |  | 
+n | 0 | 0 | 1 | 2 | 3 | 3
+Mean |  |  | -0.035 | 0.185 | 0.112 | 0.112
+Standard deviation |  |  |  | 0.5970 | 0.4408 | 0.4408
+Median |  |  | -0.035 | 0.185 | -0.035 | -0.035
+Minimum |  |  | -0.03 | -0.24 | -0.24 | -0.24
+Maximum |  |  | -0.03 | 0.61 | 0.61 | 0.61
+2 Month |  |  |  |  |  | 
+n | 0 | 0 | 1 | 2 | 3 | 3
+Mean |  |  | -0.126 | 0.535 | 0.314 | 0.314
+Standard deviation |  |  |  | 0.3105 | 0.4404 | 0.4404
+Median |  |  | -0.126 | 0.535 | 0.315 | 0.315
+Minimum |  |  | -0.13 | 0.32 | -0.13 | -0.13
+Maximum |  |  | -0.13 | 0.75 | 0.75 | 0.75
+3 Month |  |  |  |  |  | 
+n | 0 | 0 | 1 | 2 | 3 | 3
+Mean |  |  | -0.036 | 0.364 | 0.231 | 0.231
+Standard deviation |  |  |  | 0.4315 | 0.3828 | 0.3828
+Median |  |  | -0.036 | 0.364 | 0.059 | 0.059
+Minimum |  |  | -0.04 | 0.06 | -0.04 | -0.04
+Maximum |  |  | -0.04 | 0.67 | 0.67 | 0.67
+[type=table, pages=[667]]
+
+**Variables collected as:**
+
+Statistical Analysis Plan
+
+OCU400 OCU400-101
+
+5.3.3. Subgroups
+
+Demographics, clinical characteristics, and treatment administration will be summarized by subgroups of mutation subtype (biallelic autosomal recessive NR2E3, autosomal dominant NR2E3, autosomal dominant RHO, CEP290), and age group (adult/pediatric).
+
+5.4. Secondary Safety Endpoint Analyses
+
+Categorical values will be presented descriptively using frequencies and percentages. Continuous values will be presented descriptively using means and standard deviations. These will be presented stratified by visit to show changes over time.
+
+5.4.1. Secondary Safety Measures
+
+The secondary safety measures will be performed for the below assessments:
+
+· BCVA measures
+
+· LLVA measures
+
+· Slit-lamp biomicroscopy
+
+· Intraocular pressure (IOP)
+
+· Indirect ophthalmoscopy
+
+· Anti-AAV5 and anti-hNR2E3 antibodies, PBMC interferon-gamma response (T-cell response)
+
+· Serum chemistry
+
+· Hematology
+
+· Vector Shedding
+
+For measures collected in both eyes, only measures from the treated eye will be included in this portion of the analysis.
+
+5.4.2. Populations
+
+Secondary safety analyses will be based on the Safety Population. Summaries will be presented by Actual Dose Cohort, Subjects at the Maximum Tolerated Dose, and Overall.
+
+5.4.3. Subgroups
+
+Secondary safety endpoints will be summarized by subgroups of mutation subtype (biallelic autosomal recessive NR2E3, autosomal dominant NR2E3, autosomal dominant RHO, CEP290) and age group (adult/pediatric).
+
+5.5. Exploratory Efficacy Analyses
+
+5.5.1. Measures and Analysis
+
+Ophthalmology Assessments and Questionnaires
+
+51
+
+OCUGEN Inc. - CONFIDENTIAL
+[type=paragraph, section=Variables collected as:, pages=52]
+
+**Table 14.2.2.7.1.5 Summary of Michigan Retinal Degeneration Questionnaire Domain Scores Safety Population - RP Patients**
+
+Domain |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistics | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  | 
+Photosensitivity |  |  |  |  |  | 
+3 Month |  |  |  |  |  | 
+n | 0 | 2 | 1 | 2 | 3 | 5
+Mean |  | -0.518 | 0.203 | 0.453 | 0.370 | 0.015
+Standard deviation |  | 1.8109 |  | 0.2656 | 0.2369 | 1.0412
+Median |  | -0.518 | 0.203 | 0.453 | 0.265 | 0.265
+Minimum |  | -1.80 | 0.20 | 0.27 | 0.20 | -1.80
+Maximum |  | 0.76 | 0.20 | 0.64 | 0.64 | 0.76
+6 Month |  |  |  |  |  | 
+n | 0 | 2 | 1 | 2 | 3 | 5
+Mean |  | -0.465 | 0.496 | 0.406 | 0.436 | 0.076
+Standard deviation |  | 1.5292 |  | 0.6424 | 0.4572 | 0.9659
+Median |  | -0.465 | 0.496 | 0.406 | 0.496 | 0.496
+Minimum |  | -1.55 | 0.50 | -0.05 | -0.05 | -1.55
+Maximum |  | 0.62 | 0.50 | 0.86 | 0.86 | 0.86
+9 Month |  |  |  |  |  | 
+n | 0 | 2 | 1 | 2 | 3 | 5
+Mean |  | -0.507 | 0.497 | 0.376 | 0.416 | 0.047
+Standard deviation |  | 1.8265 |  | 0.5359 | 0.3853 | 1.0789
+Median |  | -0.507 | 0.497 | 0.376 | 0.497 | 0.497
+Minimum |  | -1.80 | 0.50 | -0.00 | -0.00 | -1.80
+Maximum |  | 0.78 | 0.50 | 0.75 | 0.75 | 0.78
+ |  |  |  |  |  | 
+[type=table, pages=[660]]
+
+**Table 14.2.2.7.1.5 Summary of Michigan Retinal Degeneration Questionnaire Domain Scores Safety Population - RP Patients**
+
+Domain |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistics | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Subgroup: Mutation Subtype - Autosomal dominant NR2E3 |  |  |  |  |  | 
+Photosensitivity |  |  |  |  |  | 
+3 Month |  |  |  |  |  | 
+n | 0 | 0 | 1 | 2 | 3 | 3
+Mean |  |  | 0.265 | 0.846 | 0.652 | 0.652
+Standard deviation |  |  |  | 0.2681 | 0.3853 | 0.3853
+Median |  |  | 0.265 | 0.846 | 0.657 | 0.657
+Minimum |  |  | 0.27 | 0.66 | 0.27 | 0.27
+Maximum |  |  | 0.27 | 1.04 | 1.04 | 1.04
+6 Month |  |  |  |  |  | 
+n | 0 | 0 | 1 | 2 | 3 | 3
+Mean |  |  | 0.211 | 1.012 | 0.745 | 0.745
+Standard deviation |  |  |  | 0.4078 | 0.5450 | 0.5450
+Median |  |  | 0.211 | 1.012 | 0.724 | 0.724
+Minimum |  |  | 0.21 | 0.72 | 0.21 | 0.21
+Maximum |  |  | 0.21 | 1.30 | 1.30 | 1.30
+9 Month |  |  |  |  |  | 
+n | 0 | 0 | 1 | 2 | 3 | 3
+Mean |  |  | 0.757 | 1.354 | 1.155 | 1.155
+Standard deviation |  |  |  | 0.0754 | 0.3488 | 0.3488
+Median |  |  | 0.757 | 1.354 | 1.301 | 1.301
+Minimum |  |  | 0.76 | 1.30 | 0.76 | 0.76
+Maximum |  |  | 0.76 | 1.41 | 1.41 | 1.41
+ |  |  |  |  |  | 
+[type=table, pages=[677]]
+
+**Statistical methods: > Figure 1: : AAV-NR2E3 Rescues Early State RP Disease**
+
+RhoP23H+
+
+Rho --
+
+rd1+
+
+rd10+/-
+
+rd7+
+
+Cep290
+
+B6
+
+Untreated
+
+AAV-Nr2e3 Treated
+
+A
+
+Rho-/-
+
+RhoP23H-
+
+C57B16/J
+
+rd7 ---
+
+Cep290
+
+rd10-+-
+
+rd1+
+
+GCL
+
+INL ONL
+
+Untreated
+
+GCL
+
+AAV-Nr2e3 Treated
+
+INL
+
+ONL
+
+B
+
+A. fundus of rd7, RhoP23H, and Cep290; B. histology, hematoxylin/eosin staining shows preservation of 30-50% of photoreceptor cells in RP models after disease onset. Animals were injected at postnatal (P)0 and evaluated at 3 months. N > 5. Eyes were fixed with either 4% parafolmadehyde in phoshate buffered solution (PBS) or 3:1 methanol:acetic acid and embedded in paraffin. Retinas were sectioned at 5u and stained as described42,58-60 Sections were visualized using the Leica DMI6000 microscope
+
+While the specific reset will vary with each diseased retina, the cumulative impact is towards restoration of a homeostatic state in the retina. This is consistent with the hypothesis that the OCUGEN Inc. - CONFIDENTIAL
+
+Page 22 of 124
+[type=paragraph, section=Statistical methods: > Figure 1: : AAV-NR2E3 Rescues Early State RP Disease, pages=22]
+
+**Table 14.1.3.2 Summary of Baseline and Clinical Characteristics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort
+(N=3) | 3 | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  |  | 
+Genetic Diagnosis, n (%) |  |  |  |  |  |  | 
+NR2E3 Mutation | 0 ( 0.0) | 0 ( 0.0) | 0 ( | 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+RHO Mutation | 4 (100.0) | 1 ( 33.3) | 1 ( 33.3) |  | 4 ( 50.0) | 5 ( 45.5) | 10 ( 55.6)
+Height (cm) |  |  |  |  |  |  | 
+n | 4 | 1 | 1 |  | 3 | 4 | 9
+Mean | 167.5 | 172.0 | 157.0 |  | 172.0 | 168.3 | 168.3
+Standard deviation | 9.18 |  |  |  | 3.61 | 8.06 | 7.62
+Median | 166.0 | 172.0 | 157.0 |  | 173.0 | 170.5 | 168.0
+Minimum | 158 | 172 | 157 |  | 168 | 157 | 157
+Maximum | 180 | 172 | 157 |  | 175 | 175 | 180
+Weight (kg) |  |  |  |  |  |  | 
+n | 4 | 1 | 1 |  | 3 | 4 | 9
+Mean | 77.35 | 60.30 | 59.50 |  | 66.40 | 64.68 | 69.82
+Standard deviation | 15.411 |  |  |  | 10.739 | 9.423 | 13.239
+Median | 79.45 | 60.30 | 59.50 |  | 72.50 | 66.00 | 70.50
+Minimum | 58.9 | 60.3 | 59.5 |  | 54.0 | 54.0 | 54.0
+Maximum | 91.6 | 60.3 | 59.5 |  | 72.7 | 72.7 | 91.6
+[type=table, pages=[34]]
+
+**Table 14.2.2.7.1.5 Summary of Michigan Retinal Degeneration Questionnaire Domain Scores Safety Population - RP Patients**
+
+Domain |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistics | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Subgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  | 
+Photosensitivity |  |  |  |  |  | 
+12 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 0.246 | -0.349 | 1.466 | 0.270 | 0.510 | 0.318
+Standard deviation | 1.2603 |  |  | 0.7371 | 0.8328 | 0.9538
+Median | 0.073 | -0.349 | 1.466 | 0.186 | 0.500 | 0.186
+Minimum | -0.96 | -0.35 | 1.47 | -0.48 | -0.48 | -0.96
+Maximum | 1.80 | -0.35 | 1.47 | 1.19 | 1.47 | 1.80
+[type=table, pages=[695]]
+
+**Table 14.1.3.2 Summary of Baseline and Clinical Characteristics Safety Population - RP Patients**
+
+Characteristic Statistic/Category | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|
+Genetic Diagnosis, n (%) |  |  |  |  |  | 
+NR2E3 Mutation | 0 ( 0.0) | 2 ( 66.7) | 2 ( 66.7) | 4 ( 50.0) | 6 ( 54.5) | 8 ( 44.4)
+RHO Mutation | 4 (100.0) | 1 ( 33.3) | 1 ( 33.3) | 4 ( 50.0) | 5 ( 45.5) | 10 ( 55.6)
+Subgroup - Mutation Subtype, n (%) |  |  |  |  |  | 
+Subgroup 1 - Biallelic autosomal recessive NR2E3 mutations | 0 ( 0.0) | 2 ( 66.7) | 1 ( 33.3) | 2 ( 25.0) | 3 ( 27.3) | 5 ( 27.8)
+Subgroup 2 - Autosomal dominant | 0 ( 0.0) | 0 ( 0.0) | 1 ( 33.3) | 2 ( 25.0) | 3 ( 27.3) | 3 ( 16.7)
+NR2E3 mutations |  |  |  |  |  | 
+Subgroup 3 - Autosomal dominant | 4 (100.0) | 1 ( 33.3) | 1 ( 33.3) | 4 ( 50.0) | 5 ( 45.5) | 10 ( 55.6)
+RHO mutations |  |  |  |  |  | 
+Height (cm) |  |  |  |  |  | 
+n | 4 | 3 | 3 | 7 | 10 | 17
+Mean | 167.5 | 164.7 | 173.7 | 174.6 | 174.3 | 171.0
+Standard deviation | 9.18 | 7.51 | 17.01 | 7.09 | 9.90 | 9.77
+Median | 166.0 | 165.0 | 173.0 | 173.0 | 173.0 | 171.0
+Minimum | 158 | 157 | 157 | 167 | 157 | 157
+Maximum | 180 | 172 | 191 | 186 | 191 | 191
+Weight (kg) |  |  |  |  |  | 
+n | 4 | 3 | 3 | 7 | 10 | 17
+Mean | 77.35 | 72.77 | 67.63 | 76.47 | 73.82 | 74.46
+Standard deviation | 15.411 | 13.866 | 11.907 | 16.433 | 15.158 | 14.166
+Median | 79.45 | 70.30 | 62.10 | 72.70 | 72.60 | 72.50
+Minimum | 58.9 | 60.3 | 59.5 | 54.0 | 54.0 | 54.0
+Maximum | 91.6 | 87.7 | 81.3 | 107.0 | 107.0 | 107.0
+[type=table, pages=[25]]
+
+**Table 14.2.2.7.1.5 Summary of Michigan Retinal Degeneration Questionnaire Domain Scores Safety Population - RP Patients**
+
+Domain |  | Cohort 2 (N=3) | Cohort 3 (N=3) |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistics | Cohort 1 (N=4) |  |  | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Subgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  | 
+Photosensitivity |  |  |  |  |  | 
+3 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 0.176 | -1.624 | 0.923 | 0.121 | 0.281 | 0.048
+Standard deviation | 0.9176 |  |  | 0.4691 | 0.5419 | 0.8714
+Median | 0.202 | -1.624 | 0.923 | 0.166 | 0.371 | 0.166
+Minimum | -0.78 | -1.62 | 0.92 | -0.46 | -0.46 | -1.62
+Maximum | 1.08 | -1.62 | 0.92 | 0.61 | 0.92 | 1.08
+6 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 0.545 | -0.259 | 1.798 | 0.218 | 0.534 | 0.459
+Standard deviation | 1.4249 |  |  | 0.6844 | 0.9223 | 1.0577
+Median | 0.827 | -0.259 | 1.798 | 0.117 | 0.396 | 0.247
+Minimum | -1.27 | -0.26 | 1.80 | -0.46 | -0.46 | -1.27
+Maximum | 1.80 | -0.26 | 1.80 | 1.10 | 1.80 | 1.80
+9 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 0.486 | -0.259 | 0.792 | 0.421 | 0.495 | 0.416
+Standard deviation | 1.4073 |  |  | 0.5933 | 0.5400 | 0.9199
+Median | 0.709 | -0.259 | 0.792 | 0.351 | 0.508 | 0.351
+Minimum | -1.27 | -0.26 | 0.79 | -0.21 | -0.21 | -1.27
+Maximum | 1.80 | -0.26 | 0.79 | 1.19 | 1.19 | 1.80
+ |  |  |  |  |  | 
+[type=table, pages=[694]]
+
+**Table 14.2.2.7.1.5 Summary of Michigan Retinal Degeneration Questionnaire Domain Scores Safety Population - RP Patients**
+
+Domain |  | Cohort 2 (N=3) |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistics | Cohort 1 (N=4) |  | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Subgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  | 
+Photosensitivity |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 0.508 | -0.924 | 0.142 | 0.592 | 0.502 | 0.362
+Standard deviation | 1.2508 |  |  | 0.8981 | 0.8035 | 1.0063
+Median | 0.708 | -0.924 | 0.142 | 0.462 | 0.332 | 0.408
+Minimum | -1.18 | -0.92 | 0.14 | -0.36 | -0.36 | -1.18
+Maximum | 1.80 | -0.92 | 0.14 | 1.80 | 1.80 | 1.80
+1 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 0.382 | -2.278 | 0.142 | 0.706 | 0.593 | 0.221
+Standard deviation | 1.3317 |  |  | 0.5194 | 0.5158 | 1.2214
+Median | 0.391 | -2.278 | 0.142 | 0.772 | 0.509 | 0.325
+Minimum | -1.05 | -2.28 | 0.14 | 0.07 | 0.07 | -2.28
+Maximum | 1.80 | -2.28 | 0.14 | 1.21 | 1.21 | 1.80
+2 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 0.208 | -1.301 | 0.142 | 0.080 | 0.092 | -0.001
+Standard deviation | 0.6990 |  |  | 0.4349 | 0.3776 | 0.6620
+Median | 0.173 | -1.301 | 0.142 | 0.085 | 0.085 | 0.085
+Minimum | -0.42 | -1.30 | 0.14 | -0.46 | -0.46 | -1.30
+Maximum | 0.91 | -1.30 | 0.14 | 0.61 | 0.61 | 0.91
+[type=table, pages=[693]]
+
+**Table 14.2.2.7.1.5 Summary of Michigan Retinal Degeneration Questionnaire Domain Scores Safety Population - RP Patients**
+
+Domain |  | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) |  | 
+|---|---|---|---|---|---|---|
+Visit Statistics | Cohort 1 (N=4) |  |  |  | MTD (N=11) | Total (N=18)
+Subgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  | 
+Central Vision |  |  |  |  |  | 
+3 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | -0.107 | -1.023 | 0.835 | 0.089 | 0.238 | -0.026
+Standard deviation | 1.0244 |  |  | 0.6423 | 0.6487 | 0.8300
+Median | 0.172 | -1.023 | 0.835 | 0.115 | 0.358 | 0.115
+Minimum | -1.51 | -1.02 | 0.84 | -0.68 | -0.68 | -1.51
+Maximum | 0.74 | -1.02 | 0.84 | 0.81 | 0.84 | 0.84
+6 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | -0.127 | -0.470 | 1.462 | -0.258 | 0.086 | -0.055
+Standard deviation | 0.8255 |  |  | 0.6172 | 0.9369 | 0.8061
+Median | -0.009 | -0.470 | 1.462 | -0.214 | 0.038 | -0.112
+Minimum | -1.21 | -0.47 | 1.46 | -1.01 | -1.01 | -1.21
+Maximum | 0.72 | -0.47 | 1.46 | 0.41 | 1.46 | 1.46
+9 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 0.045 | -0.470 | 1.113 | 0.025 | 0.243 | 0.092
+Standard deviation | 1.0192 |  |  | 0.7777 | 0.8307 | 0.8376
+Median | 0.112 | -0.470 | 1.113 | -0.227 | -0.167 | -0.214
+Minimum | -1.21 | -0.47 | 1.11 | -0.60 | -0.60 | -1.21
+Maximum | 1.17 | -0.47 | 1.11 | 1.16 | 1.16 | 1.17
+ |  |  |  |  |  | 
+[type=table, pages=[680]]
+
+**Table 14.2.2.7.1.5 Summary of Michigan Retinal Degeneration Questionnaire Domain Scores Safety Population - RP Patients**
+
+Domain |  | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) |  | 
+|---|---|---|---|---|---|---|
+Visit Statistics | Cohort 1 (N=4) |  |  |  | MTD (N=11) | Total (N=18)
+Subgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  | 
+Contrast Sensitivity |  |  |  |  |  | 
+1 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 0.375 | -0.276 | 1.048 | 0.475 | 0.589 | 0.417
+Standard deviation | 0.4126 |  |  | 0.6996 | 0.6579 | 0.5655
+Median | 0.306 | -0.276 | 1.048 | 0.286 | 0.421 | 0.306
+Minimum | -0.05 | -0.28 | 1.05 | -0.14 | -0.14 | -0.28
+Maximum | 0.94 | -0.28 | 1.05 | 1.47 | 1.47 | 1.47
+2 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 0.322 | -0.555 | 1.060 | 0.422 | 0.550 | 0.348
+Standard deviation | 0.6748 |  |  | 0.7890 | 0.7405 | 0.7134
+Median | 0.124 | -0.555 | 1.060 | 0.151 | 0.318 | 0.142
+Minimum | -0.24 | -0.55 | 1.06 | -0.18 | -0.18 | -0.55
+Maximum | 1.28 | -0.55 | 1.06 | 1.56 | 1.56 | 1.56
+3 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 0.446 | -1.401 | 1.268 | 0.283 | 0.480 | 0.278
+Standard deviation | 0.6655 |  |  | 0.5907 | 0.6750 | 0.8358
+Median | 0.333 | -1.401 | 1.268 | 0.086 | 0.187 | 0.224
+Minimum | -0.24 | -1.40 | 1.27 | -0.18 | -0.18 | -1.40
+Maximum | 1.35 | -1.40 | 1.27 | 1.14 | 1.27 | 1.35
+ |  |  |  |  |  | 
+[type=table, pages=[684]]
+
+**Table 14.2.2.7.1.5 Summary of Michigan Retinal Degeneration Questionnaire Domain Scores Safety Population - RP Patients**
+
+Domain | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | 
+|---|---|---|---|---|---|---|
+Visit Statistics |  |  |  |  |  | Total (N=18)
+Subgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  | 
+Contrast Sensitivity |  |  |  |  |  | 
+6 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 0.163 | -0.316 | 1.480 | 0.366 | 0.589 | 0.328
+Standard deviation | 0.7131 |  |  | 0.6530 | 0.7536 | 0.7197
+Median | 0.074 | -0.316 | 1.480 | 0.071 | 0.159 | 0.071
+Minimum | -0.49 | -0.32 | 1.48 | -0.02 | -0.02 | -0.49
+Maximum | 1.00 | -0.32 | 1.48 | 1.34 | 1.48 | 1.48
+9 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 0.554 | -0.316 | 1.089 | 0.300 | 0.458 | 0.419
+Standard deviation | 0.8348 |  |  | 0.6548 | 0.6680 | 0.7068
+Median | 0.715 | -0.316 | 1.089 | -0.016 | -0.016 | 0.121
+Minimum | -0.49 | -0.32 | 1.09 | -0.05 | -0.05 | -0.49
+Maximum | 1.28 | -0.32 | 1.09 | 1.28 | 1.28 | 1.28
+12 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 0.402 | -0.263 | 1.061 | 0.306 | 0.457 | 0.363
+Standard deviation | 0.5644 |  |  | 0.6660 | 0.6683 | 0.5947
+Median | 0.344 | -0.263 | 1.061 | 0.082 | 0.097 | 0.177
+Minimum | -0.22 | -0.26 | 1.06 | -0.22 | -0.22 | -0.26
+Maximum | 1.14 | -0.26 | 1.06 | 1.28 | 1.28 | 1.28
+[type=table, pages=[685]]
+
+**Table 14.2.2.7.1.5 Summary of Michigan Retinal Degeneration Questionnaire Domain Scores Safety Population - RP Patients**
+
+Domain |  |  |  |  |  | 
+|---|---|---|---|---|---|---|
+Visit Statistics | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+Subgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  | 
+Central Vision |  |  |  |  |  | 
+Baseline [1] |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | -0.207 | -0.447 | 0.981 | 0.247 | 0.394 | 0.070
+Standard deviation | 0.6960 |  |  | 0.5398 | 0.5711 | 0.6545
+Median | -0.288 | -0.447 | 0.981 | 0.146 | 0.400 | -0.023
+Minimum | -0.89 | -0.45 | 0.98 | -0.24 | -0.24 | -0.89
+Maximum | 0.64 | -0.45 | 0.98 | 0.94 | 0.98 | 0.98
+1 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | -0.226 | -0.372 | 0.981 | 0.298 | 0.434 | 0.089
+Standard deviation | 0.3674 |  |  | 0.3543 | 0.4330 | 0.5122
+Median | -0.140 | -0.372 | 0.981 | 0.388 | 0.389 | 0.010
+Minimum | -0.74 | -0.37 | 0.98 | -0.21 | -0.21 | -0.74
+Maximum | 0.12 | -0.37 | 0.98 | 0.62 | 0.98 | 0.98
+2 Month |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | -0.045 | -0.769 | 0.981 | -0.116 | 0.103 | -0.043
+Standard deviation | 0.5421 |  |  | 0.6583 | 0.7522 | 0.6479
+Median | -0.066 | -0.769 | 0.981 | -0.343 | -0.103 | -0.162
+Minimum | -0.67 | -0.77 | 0.98 | -0.59 | -0.59 | -0.77
+Maximum | 0.62 | -0.77 | 0.98 | 0.81 | 0.98 | 0.98
+ |  |  |  |  |  | 
+[type=table, pages=[679]]
+
+**Table 14.1.6 Treatment Summary Safety Population - RP Patients**
+
+ | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)
+|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  | 
+Treated Eye, n (%) |  |  |  |  |  | 
+OD | 2 ( 50.0) | 0 ( 0.0) | 1 ( 33.3) | 3 ( 37.5) | 4 ( 36.4) | 6 ( 33.3)
+OS | 2 ( 50.0) | 1 ( 33.3) | 0 ( 0.0) | 1 ( 12.5) | 1 ( 9.1) | 4 ( 22.2)
+Dose Administered (vg/eye) |  |  |  |  |  | 
+Low Dose | 4 (100.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 4 ( 22.2)
+Medium Dose | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 5.6)
+High Dose | 0 ( 0.0) | 0 ( 0.0) | 1 ( 33.3) | 4 ( 50.0) | 5 ( 45.5) | 5 ( 27.8)
+Other | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Actual Dose Volume Administered (microliters) |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 247.5 | 300.0 | 300.0 | 250.0 | 260.0 | 259.0
+Standard deviation | 67.02 |  |  | 100.00 | 89.44 | 72.79
+Median | 250.0 | 300.0 | 300.0 | 300.0 | 300.0 | 300.0
+Minimum | 180 | 300 | 300 | 100 | 100 | 100
+Maximum | 310 | 300 | 300 | 300 | 300 | 310
+Length of Time of Vitrectomy (minutes) |  |  |  |  |  | 
+n | 4 | 1 | 1 | 4 | 5 | 10
+Mean | 52.3 | 49.0 | 74.0 | 55.3 | 59.0 | 55.3
+Standard deviation | 15.28 |  |  | 19.22 | 18.64 | 15.76
+Median | 50.5 | 49.0 | 74.0 | 56.5 | 67.0 | 52.0
+Minimum | 36 | 49 | 74 | 33 | 33 | 33
+Maximum | 72 | 49 | 74 | 75 | 75 | 75
+MI-OCT Completed with Subretinal Injection, n (%) |  |  |  |  |  | 
+Yes | 3 ( 75.0) | 1 ( 33.3) | 1 ( 33.3) | 3 ( 37.5) | 4 ( 36.4) | 8 ( 44.4)
+No | 1 ( 25.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 12.5) | 1 ( 9.1) | 2 ( 11.1)
+ |  |  |  |  |  | 
+[type=table, pages=[43]]
+
+**Table 14.2.2.3.1 Summary of Slit Lamp Biomicroscopy Examination by Visit in Treated Eye Safety Population - RP Patients**
+
+Parameter Visit Category | Cohort 1 (N=4) n (%) | Cohort 2 (N=3) n (%) | Cohort 3 (N=3) n (%) | Phase 2 (N=8) n (%) | MTD (N=11) n (%) | Total (N=18) n (%)
+|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  | 
+Anterior Chamber |  |  |  |  |  | 
+9 Month | N' =4 | N'=1 | N'=1 | N' =4 | N'=5 | N'=10
+Cell 0 | 4 (100.0) | 1 (100.0) | 1 (100.0) | 4 (100.0) | 5 (100.0) | 10 (100.0)
+0.5+ | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+1+ | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+2+ | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+3+ | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+12 Month | N' =4 | N'=1 | N'=1 | N' =4 | N'=5 | N'=10
+Cell 0 | 4 (100.0) | 1 (100.0) | 1 (100.0) | 4 (100.0) | 5 (100.0) | 10 (100.0)
+0.5+ | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+1+ | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2+ | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3+ | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+Hypopyon present |  |  |  |  |  | 
+Baseline [1] | N' =4 | N'=1 | N'=1 | N' =4 | N' =5 | N'=10
+Yes | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+No | 4 (100.0) | 1 (100.0) | 1 (100.0) | 4 (100.0) | 5 (100.0) | 10 (100.0)
+[type=table, pages=[269]]
+
+**Table 14.2.2.3.1 Summary of Slit Lamp Biomicroscopy Examination by Visit in Treated Eye Safety Population - RP Patients**
+
+Parameter Visit Category | Cohort 1 (N=4) n (%) | Cohort 2 (N=3) n (%) | Cohort 3 (N=3) n (%) | Phase 2 (N=8) n (%) | MTD (N=11) n (%) | Total (N=18) n (%)
+|---|---|---|---|---|---|---|
+Subgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  | 
+Anterior Chamber |  |  |  |  |  | 
+2 Month | N' =4 | N'=1 | N'=1 | N' =4 | N'=5 | N'=10
+Cell 0 | 4 (100.0) | 1 (100.0) | 1 (100.0) | 4 (100.0) | 5 (100.0) | 10 (100.0)
+0.5+ | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+1+ | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+2+ | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) :unselected:
+3+ | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3 Month | N' =4 | N'=1 | N'=1 | N' =4 | N' =5 | N'=10
+Cell 0 | 4 (100.0) | 1 (100.0) | 1 (100.0) | 4 (100.0) | 5 (100.0) | 10 (100.0)
+0.5+ | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+1+ | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2+ | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3+ | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+6 Month Cell 0 | N' =4 | N'=1 | N'=1 | N' =4 | N' =5 | N'=10
+ | 4 (100.0) | 1 (100.0) | 1 (100.0) | 4 (100.0) | 5 (100.0) | 10 (100.0)
+0.5+ | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+1+ | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+2+ | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+3+ | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)
+4+ | 0 ( 0.0) :unselected: | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0) :unselected: | 0 ( 0.0) | 0 ( 0.0)
+[type=table, pages=[268]]
