@@ -597,6 +597,12 @@ def normalize_prefix(prefix: str) -> str:
     return prefix.rstrip("/")
 
 
+def is_pipe_table(text: str) -> bool:
+    lines = [l.strip() for l in text.split("\n") if l.strip()]
+    pipe_lines = [l for l in lines if "|" in l]
+    return len(pipe_lines) >= 2
+
+
 def render_all_sections():
     if not FINAL_SECTION_BUFFER:
         raise ValueError("No sections added. Nothing to populate.")
@@ -616,18 +622,30 @@ def render_all_sections():
 
     template_bytes = template_blob.download_blob().readall()
 
-    # First render text via docxtpl
     tpl = DocxTemplate(BytesIO(template_bytes))
+
     context = {}
+    table_sections = {}
+
+    # ---------------------------------
+    # 1️⃣ Build context dynamically
+    # ---------------------------------
 
     for section_name, llm_text in FINAL_SECTION_BUFFER.items():
         template_var = SECTION_TO_TEMPLATE_VAR.get(section_name)
-
-        # Skip table section for now
-        if section_name == "Summary of Subject Demographics Safety Population - RP Patients":
+        if not template_var:
             continue
 
-        context[template_var] = markdown_to_richtext(llm_text)
+        if is_pipe_table(llm_text):
+            marker = f"__TABLE_MARKER_{template_var}__"
+            context[template_var] = marker
+            table_sections[marker] = llm_text
+        else:
+            context[template_var] = markdown_to_richtext(llm_text)
+
+    # ---------------------------------
+    # 2️⃣ First pass render (docxtpl)
+    # ---------------------------------
 
     tpl.render(context)
 
@@ -635,20 +653,14 @@ def render_all_sections():
     tpl.save(temp_stream)
     temp_stream.seek(0)
 
-    # Now open as python-docx Document for table injection
+    # ---------------------------------
+    # 3️⃣ Second pass (python-docx)
+    # ---------------------------------
+
     doc = Document(temp_stream)
 
-    # Inject table if present
-    table_section = FINAL_SECTION_BUFFER.get(
-        "Summary of Subject Demographics Safety Population - RP Patients"
-    )
-
-    if table_section:
-        insert_table_into_document(
-            doc,
-            "{{ safety_p_rp_p }}",
-            table_section
-        )
+    for marker, table_text in table_sections.items():
+        insert_table_into_document(doc, marker, table_text)
 
     final_stream = BytesIO()
     doc.save(final_stream)
@@ -658,4 +670,5 @@ def render_all_sections():
     output_blob = container.get_blob_client(output_blob_path)
     output_blob.upload_blob(final_stream, overwrite=True)
 
-    print("✅ CSR populated successfully with all approved sections")
+    print("✅ CSR populated successfully with dynamic table detection")
+
