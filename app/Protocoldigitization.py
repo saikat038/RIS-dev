@@ -542,7 +542,22 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
 
                 for c_idx, value in enumerate(row_data):
                     cell = table.rows[r_idx].cells[c_idx]
-                    cell.text = value
+                    cell.paragraphs[0].clear()
+
+                    pos = 0
+                    for match in re.finditer(r"\*\*(.*?)\*\*", value):
+                        start, end = match.span()
+
+                        if start > pos:
+                            cell.paragraphs[0].add_run(value[pos:start])
+
+                        run = cell.paragraphs[0].add_run(match.group(1))
+                        run.bold = True
+                        pos = end
+
+                    if pos < len(value):
+                        cell.paragraphs[0].add_run(value[pos:])
+
 
                     if c_idx > 0:
                         cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
