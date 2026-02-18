@@ -169,195 +169,195 @@
 
 
 
-import os, sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# import os, sys
+# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-import re
-from io import BytesIO
-from typing import Dict
+# import re
+# from io import BytesIO
+# from typing import Dict
 
-from docxtpl import DocxTemplate, RichText
-from azure.storage.blob import BlobServiceClient
-from config.settings import (
-    AZURE_BLOB_CONN_STRING,
-    BLOB_CONTAINER,
-    INDEX_PREFIX,
-)
-TEMPLATE_NAME = "CSR.docx"
-OUTPUT_NAME = "CSR_filled.docx"
+# from docxtpl import DocxTemplate, RichText
+# from azure.storage.blob import BlobServiceClient
+# from config.settings import (
+#     AZURE_BLOB_CONN_STRING,
+#     BLOB_CONTAINER,
+#     INDEX_PREFIX,
+# )
+# TEMPLATE_NAME = "CSR.docx"
+# OUTPUT_NAME = "CSR_filled.docx"
 
-# ============================================================
-# CONFIG
-# ============================================================
+# # ============================================================
+# # CONFIG
+# # ============================================================
 
-SECTION_TO_TEMPLATE_VAR = {
-    "Clinical Trial Synopsis": "clinical_trial_synopsis",
-    "Inclusion Criteria": "inclusion_criteria",
-    "Exclusion Criteria": "exclusion_criteria",
-    "Subject Withdrawal Criteria": "subject_withdrawal_criteria",
-    "Study Objectives": "study_objectives",
-    "Overall Study Design And plan: Description": "O_study_design",
-    "Discussion of Study Design, Including the Choice of Control Groups": "D_study_design",
-    "Summary of Subject Demographics Safety Population - RP Patients": "safety_p_rp_p",
-    "Independent Ethics Committee (IEC)/Institutional Review Board (IRB)": "iec_irb",
-    "Ethical Conduct of Study": "ethical_conduct_of_study",
-    "Subject Information and Consent": "subject_information_and_consent"
-}
+# SECTION_TO_TEMPLATE_VAR = {
+#     "Clinical Trial Synopsis": "clinical_trial_synopsis",
+#     "Inclusion Criteria": "inclusion_criteria",
+#     "Exclusion Criteria": "exclusion_criteria",
+#     "Subject Withdrawal Criteria": "subject_withdrawal_criteria",
+#     "Study Objectives": "study_objectives",
+#     "Overall Study Design And plan: Description": "O_study_design",
+#     "Discussion of Study Design, Including the Choice of Control Groups": "D_study_design",
+#     "Summary of Subject Demographics Safety Population - RP Patients": "safety_p_rp_p",
+#     "Independent Ethics Committee (IEC)/Institutional Review Board (IRB)": "iec_irb",
+#     "Ethical Conduct of Study": "ethical_conduct_of_study",
+#     "Subject Information and Consent": "subject_information_and_consent"
+# }
 
-# ============================================================
-# IN-MEMORY STATE (SESSION SCOPED)
-# ============================================================
+# # ============================================================
+# # IN-MEMORY STATE (SESSION SCOPED)
+# # ============================================================
 
-# Holds only the LAST LLM response
-TEMP_LLM_BUFFER = {
-    "section": None,
-    "text": None
-}
+# # Holds only the LAST LLM response
+# TEMP_LLM_BUFFER = {
+#     "section": None,
+#     "text": None
+# }
 
-# Holds ONLY approved sections
-FINAL_SECTION_BUFFER: Dict[str, str] = {}
+# # Holds ONLY approved sections
+# FINAL_SECTION_BUFFER: Dict[str, str] = {}
 
-# ============================================================
-# MARKDOWN → RichText (bold support)
-# ============================================================
+# # ============================================================
+# # MARKDOWN → RichText (bold support)
+# # ============================================================
 
-BOLD_PATTERN = re.compile(r"\*\*(.*?)\*\*")
+# BOLD_PATTERN = re.compile(r"\*\*(.*?)\*\*")
 
-def markdown_to_richtext(text: str) -> RichText:
-    """
-    Converts markdown-style **bold** into docxtpl RichText.
-    Preserves all characters (<, >, etc).
-    """
-    rt = RichText()
-    pos = 0
+# def markdown_to_richtext(text: str) -> RichText:
+#     """
+#     Converts markdown-style **bold** into docxtpl RichText.
+#     Preserves all characters (<, >, etc).
+#     """
+#     rt = RichText()
+#     pos = 0
 
-    for match in BOLD_PATTERN.finditer(text):
-        start, end = match.span()
+#     for match in BOLD_PATTERN.finditer(text):
+#         start, end = match.span()
 
-        if start > pos:
-            rt.add(text[pos:start])
+#         if start > pos:
+#             rt.add(text[pos:start])
 
-        rt.add(match.group(1), bold=True)
-        pos = end
+#         rt.add(match.group(1), bold=True)
+#         pos = end
 
-    if pos < len(text):
-        rt.add(text[pos:])
+#     if pos < len(text):
+#         rt.add(text[pos:])
 
-    return rt
+#     return rt
 
-# ============================================================
-# STATE MANAGEMENT HELPERS
-# ============================================================
+# # ============================================================
+# # STATE MANAGEMENT HELPERS
+# # ============================================================
 
-def store_temp_llm_output(section_name: str, llm_text: str):
-    """
-    Store last LLM output temporarily (overwrites previous).
-    """
-    TEMP_LLM_BUFFER["section"] = section_name
-    TEMP_LLM_BUFFER["text"] = llm_text
-
-
-def add_last_section_to_final():
-    """
-    Moves TEMP buffer → FINAL buffer.
-    """
-    section = TEMP_LLM_BUFFER.get("section")
-    text = TEMP_LLM_BUFFER.get("text")
-
-    if not section or not text:
-        raise ValueError("No LLM output available to add.")
-
-    if section not in SECTION_TO_TEMPLATE_VAR:
-        raise ValueError(f"No template mapping for section: {section}")
-
-    FINAL_SECTION_BUFFER[section] = text
+# def store_temp_llm_output(section_name: str, llm_text: str):
+#     """
+#     Store last LLM output temporarily (overwrites previous).
+#     """
+#     TEMP_LLM_BUFFER["section"] = section_name
+#     TEMP_LLM_BUFFER["text"] = llm_text
 
 
-def remove_last_added_section():
-    """
-    Removes most recently added section from FINAL buffer.
-    """
-    if not FINAL_SECTION_BUFFER:
-        raise ValueError("FINAL buffer is empty.")
+# def add_last_section_to_final():
+#     """
+#     Moves TEMP buffer → FINAL buffer.
+#     """
+#     section = TEMP_LLM_BUFFER.get("section")
+#     text = TEMP_LLM_BUFFER.get("text")
 
-    last_key = list(FINAL_SECTION_BUFFER.keys())[-1]
-    del FINAL_SECTION_BUFFER[last_key]
+#     if not section or not text:
+#         raise ValueError("No LLM output available to add.")
 
+#     if section not in SECTION_TO_TEMPLATE_VAR:
+#         raise ValueError(f"No template mapping for section: {section}")
 
-# ============================================================
-# DOCX CONTEXT BUILDING
-# ============================================================
-
-def build_context_from_final_buffer() -> Dict[str, RichText]:
-    """
-    Builds full docxtpl context from FINAL_SECTION_BUFFER.
-    """
-    context = {}
-
-    for section_name, llm_text in FINAL_SECTION_BUFFER.items():
-        template_var = SECTION_TO_TEMPLATE_VAR.get(section_name)
-        if not template_var:
-            continue
-
-        context[template_var] = markdown_to_richtext(llm_text)
-
-    return context
-
-# ============================================================
-# DOCX RENDERING (FINAL POPULATE)
-# ============================================================
-
-def normalize_prefix(prefix: str) -> str:
-    return prefix.rstrip("/")
+#     FINAL_SECTION_BUFFER[section] = text
 
 
-def render_all_sections():
-    """
-    Renders ALL approved sections into CSR template at once.
-    """
-    if not FINAL_SECTION_BUFFER:
-        raise ValueError("No sections added. Nothing to populate.")
+# def remove_last_added_section():
+#     """
+#     Removes most recently added section from FINAL buffer.
+#     """
+#     if not FINAL_SECTION_BUFFER:
+#         raise ValueError("FINAL buffer is empty.")
 
-    prefix = normalize_prefix(INDEX_PREFIX)
+#     last_key = list(FINAL_SECTION_BUFFER.keys())[-1]
+#     del FINAL_SECTION_BUFFER[last_key]
 
-    blob_service = BlobServiceClient.from_connection_string(
-        AZURE_BLOB_CONN_STRING
-    )
-    container = blob_service.get_container_client(BLOB_CONTAINER)
 
-    # -------------------------------
-    # Download template
-    # -------------------------------
-    template_blob_path = f"{prefix}/{TEMPLATE_NAME}"
-    template_blob = container.get_blob_client(template_blob_path)
+# # ============================================================
+# # DOCX CONTEXT BUILDING
+# # ============================================================
 
-    if not template_blob.exists():
-        raise FileNotFoundError(
-            f"Template not found: {template_blob_path}"
-        )
+# def build_context_from_final_buffer() -> Dict[str, RichText]:
+#     """
+#     Builds full docxtpl context from FINAL_SECTION_BUFFER.
+#     """
+#     context = {}
 
-    template_bytes = template_blob.download_blob().readall()
-    doc = DocxTemplate(BytesIO(template_bytes))
+#     for section_name, llm_text in FINAL_SECTION_BUFFER.items():
+#         template_var = SECTION_TO_TEMPLATE_VAR.get(section_name)
+#         if not template_var:
+#             continue
 
-    # -------------------------------
-    # Build full context
-    # -------------------------------
-    context = build_context_from_final_buffer()
+#         context[template_var] = markdown_to_richtext(llm_text)
 
-    # -------------------------------
-    # Render once
-    # -------------------------------
-    doc.render(context)
+#     return context
 
-    output_stream = BytesIO()
-    doc.save(output_stream)
-    output_stream.seek(0)
+# # ============================================================
+# # DOCX RENDERING (FINAL POPULATE)
+# # ============================================================
 
-    output_blob_path = f"{prefix}/{OUTPUT_NAME}"
-    output_blob = container.get_blob_client(output_blob_path)
-    output_blob.upload_blob(output_stream, overwrite=True)
+# def normalize_prefix(prefix: str) -> str:
+#     return prefix.rstrip("/")
 
-    print("✅ CSR populated successfully with all approved sections")
+
+# def render_all_sections():
+#     """
+#     Renders ALL approved sections into CSR template at once.
+#     """
+#     if not FINAL_SECTION_BUFFER:
+#         raise ValueError("No sections added. Nothing to populate.")
+
+#     prefix = normalize_prefix(INDEX_PREFIX)
+
+#     blob_service = BlobServiceClient.from_connection_string(
+#         AZURE_BLOB_CONN_STRING
+#     )
+#     container = blob_service.get_container_client(BLOB_CONTAINER)
+
+#     # -------------------------------
+#     # Download template
+#     # -------------------------------
+#     template_blob_path = f"{prefix}/{TEMPLATE_NAME}"
+#     template_blob = container.get_blob_client(template_blob_path)
+
+#     if not template_blob.exists():
+#         raise FileNotFoundError(
+#             f"Template not found: {template_blob_path}"
+#         )
+
+#     template_bytes = template_blob.download_blob().readall()
+#     doc = DocxTemplate(BytesIO(template_bytes))
+
+#     # -------------------------------
+#     # Build full context
+#     # -------------------------------
+#     context = build_context_from_final_buffer()
+
+#     # -------------------------------
+#     # Render once
+#     # -------------------------------
+#     doc.render(context)
+
+#     output_stream = BytesIO()
+#     doc.save(output_stream)
+#     output_stream.seek(0)
+
+#     output_blob_path = f"{prefix}/{OUTPUT_NAME}"
+#     output_blob = container.get_blob_client(output_blob_path)
+#     output_blob.upload_blob(output_stream, overwrite=True)
+
+#     print("✅ CSR populated successfully with all approved sections")
 
 # ============================================================
 # OPTIONAL: COMMAND DISPATCHER (CHAT CONTROL)
@@ -382,3 +382,280 @@ def render_all_sections():
 #         return "CSR populated."
 
 #     return "Unknown command."
+
+
+
+
+
+
+
+
+
+
+
+
+################################new code logic####################################################
+import os, sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+import re
+from io import BytesIO
+from typing import Dict
+
+from docxtpl import DocxTemplate, RichText
+from azure.storage.blob import BlobServiceClient
+from config.settings import (
+    AZURE_BLOB_CONN_STRING,
+    BLOB_CONTAINER,
+    INDEX_PREFIX,
+)
+
+from docx import Document
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.table import WD_TABLE_ALIGNMENT
+
+TEMPLATE_NAME = "CSR.docx"
+OUTPUT_NAME = "CSR_filled.docx"
+
+# ============================================================
+# CONFIG
+# ============================================================
+
+SECTION_TO_TEMPLATE_VAR = {
+    "Clinical Trial Synopsis": "clinical_trial_synopsis",
+    "Inclusion Criteria": "inclusion_criteria",
+    "Exclusion Criteria": "exclusion_criteria",
+    "Subject Withdrawal Criteria": "subject_withdrawal_criteria",
+    "Study Objectives": "study_objectives",
+    "Overall Study Design And plan: Description": "O_study_design",
+    "Discussion of Study Design, Including the Choice of Control Groups": "D_study_design",
+    "Summary of Subject Demographics Safety Population - RP Patients": "safety_p_rp_p",
+    "Independent Ethics Committee (IEC)/Institutional Review Board (IRB)": "iec_irb",
+    "Ethical Conduct of Study": "ethical_conduct_of_study",
+    "Subject Information and Consent": "subject_information_and_consent"
+}
+
+# ============================================================
+# IN-MEMORY STATE
+# ============================================================
+
+TEMP_LLM_BUFFER = {
+    "section": None,
+    "text": None
+}
+
+FINAL_SECTION_BUFFER: Dict[str, str] = {}
+
+# ============================================================
+# MARKDOWN → RichText
+# ============================================================
+
+BOLD_PATTERN = re.compile(r"\*\*(.*?)\*\*")
+
+def markdown_to_richtext(text: str) -> RichText:
+    rt = RichText()
+    pos = 0
+    for match in BOLD_PATTERN.finditer(text):
+        start, end = match.span()
+        if start > pos:
+            rt.add(text[pos:start])
+        rt.add(match.group(1), bold=True)
+        pos = end
+    if pos < len(text):
+        rt.add(text[pos:])
+    return rt
+
+# ============================================================
+# TABLE UTILITIES (NEW)
+# ============================================================
+
+def parse_pipe_table(raw_text):
+    lines = [l.strip() for l in raw_text.split("\n") if l.strip()]
+    lines = [l for l in lines if not re.match(r"^\|?-+\|", l)]
+
+    data = []
+    max_cols = 0
+
+    for line in lines:
+        parts = [c.strip() for c in line.split("|")]
+        parts = [p for p in parts if p != ""]
+        data.append(parts)
+        max_cols = max(max_cols, len(parts))
+
+    for row in data:
+        while len(row) < max_cols:
+            row.append("")
+
+    return data
+
+
+def prevent_row_split(row):
+    tr = row._tr
+    trPr = tr.get_or_add_trPr()
+    trPr.append(OxmlElement('w:cantSplit'))
+
+
+def repeat_header(row):
+    tr = row._tr
+    trPr = tr.get_or_add_trPr()
+    trPr.append(OxmlElement('w:tblHeader'))
+
+
+def apply_table_borders(table):
+    tbl = table._element
+    tblPr = tbl.tblPr
+
+    borders = OxmlElement('w:tblBorders')
+
+    for border_name in ['top', 'left', 'bottom', 'right', 'insideH', 'insideV']:
+        border = OxmlElement(f'w:{border_name}')
+        border.set(qn('w:val'), 'single')
+        border.set(qn('w:sz'), '8')
+        border.set(qn('w:space'), '0')
+        border.set(qn('w:color'), '000000')
+        borders.append(border)
+
+    tblPr.append(borders)
+
+
+def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: str):
+    table_data = parse_pipe_table(raw_table_text)
+
+    for paragraph in doc.paragraphs:
+        if placeholder in paragraph.text:
+
+            parent = paragraph._element.getparent()
+            index = parent.index(paragraph._element)
+
+            rows = len(table_data)
+            cols = len(table_data[0])
+
+            table = doc.add_table(rows=rows, cols=cols)
+            table.alignment = WD_TABLE_ALIGNMENT.CENTER
+            apply_table_borders(table)
+
+            for r_idx, row_data in enumerate(table_data):
+
+                is_section_row = all(cell == "" for cell in row_data[1:])
+
+                for c_idx, value in enumerate(row_data):
+                    cell = table.rows[r_idx].cells[c_idx]
+                    cell.text = value
+
+                    if c_idx > 0:
+                        cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
+                    else:
+                        cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.LEFT
+
+                    if is_section_row:
+                        for run in cell.paragraphs[0].runs:
+                            run.bold = True
+
+                prevent_row_split(table.rows[r_idx])
+
+            repeat_header(table.rows[0])
+
+            parent.insert(index, table._element)
+            parent.remove(paragraph._element)
+            break
+
+# ============================================================
+# STATE HELPERS (UNCHANGED)
+# ============================================================
+
+def store_temp_llm_output(section_name: str, llm_text: str):
+    TEMP_LLM_BUFFER["section"] = section_name
+    TEMP_LLM_BUFFER["text"] = llm_text
+
+
+def add_last_section_to_final():
+    section = TEMP_LLM_BUFFER.get("section")
+    text = TEMP_LLM_BUFFER.get("text")
+
+    if not section or not text:
+        raise ValueError("No LLM output available to add.")
+
+    if section not in SECTION_TO_TEMPLATE_VAR:
+        raise ValueError(f"No template mapping for section: {section}")
+
+    FINAL_SECTION_BUFFER[section] = text
+
+
+def remove_last_added_section():
+    if not FINAL_SECTION_BUFFER:
+        raise ValueError("FINAL buffer is empty.")
+    last_key = list(FINAL_SECTION_BUFFER.keys())[-1]
+    del FINAL_SECTION_BUFFER[last_key]
+
+# ============================================================
+# DOCX RENDERING (MODIFIED ONLY HERE)
+# ============================================================
+
+def normalize_prefix(prefix: str) -> str:
+    return prefix.rstrip("/")
+
+
+def render_all_sections():
+    if not FINAL_SECTION_BUFFER:
+        raise ValueError("No sections added. Nothing to populate.")
+
+    prefix = normalize_prefix(INDEX_PREFIX)
+
+    blob_service = BlobServiceClient.from_connection_string(
+        AZURE_BLOB_CONN_STRING
+    )
+    container = blob_service.get_container_client(BLOB_CONTAINER)
+
+    template_blob_path = f"{prefix}/{TEMPLATE_NAME}"
+    template_blob = container.get_blob_client(template_blob_path)
+
+    if not template_blob.exists():
+        raise FileNotFoundError(f"Template not found: {template_blob_path}")
+
+    template_bytes = template_blob.download_blob().readall()
+
+    # First render text via docxtpl
+    tpl = DocxTemplate(BytesIO(template_bytes))
+    context = {}
+
+    for section_name, llm_text in FINAL_SECTION_BUFFER.items():
+        template_var = SECTION_TO_TEMPLATE_VAR.get(section_name)
+
+        # Skip table section for now
+        if section_name == "Summary of Subject Demographics Safety Population - RP Patients":
+            continue
+
+        context[template_var] = markdown_to_richtext(llm_text)
+
+    tpl.render(context)
+
+    temp_stream = BytesIO()
+    tpl.save(temp_stream)
+    temp_stream.seek(0)
+
+    # Now open as python-docx Document for table injection
+    doc = Document(temp_stream)
+
+    # Inject table if present
+    table_section = FINAL_SECTION_BUFFER.get(
+        "Summary of Subject Demographics Safety Population - RP Patients"
+    )
+
+    if table_section:
+        insert_table_into_document(
+            doc,
+            "{{ safety_p_rp_p }}",
+            table_section
+        )
+
+    final_stream = BytesIO()
+    doc.save(final_stream)
+    final_stream.seek(0)
+
+    output_blob_path = f"{prefix}/{OUTPUT_NAME}"
+    output_blob = container.get_blob_client(output_blob_path)
+    output_blob.upload_blob(final_stream, overwrite=True)
+
+    print("✅ CSR populated successfully with all approved sections")
