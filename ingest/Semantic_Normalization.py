@@ -9,7 +9,9 @@ from typing import Dict, List, Any, Tuple
 SECTION_REGEX = re.compile(r"^\d+(\.\d+)*\s+.+$")
 APPENDIX_REGEX = re.compile(r"^APPENDIX\s+[A-Z0-9]+", re.IGNORECASE)
 FIGURE_REGEX = re.compile(r"^FIGURE\s+\d+", re.IGNORECASE)
-TABLE_TITLE_REGEX = re.compile(r"^(table|figure)\s+\d+", re.IGNORECASE)
+TABLE_TITLE_REGEX = re.compile(
+    r"^(?:Table|TABLE)\s+[0-9.]+[A-Za-z0-9\s\.\-\:\/]*$", re.IGNORECASE
+)
 
 # ----------------------------
 # GEOMETRY HELPERS
