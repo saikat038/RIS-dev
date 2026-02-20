@@ -160,19 +160,61 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
             # TABLE
             # ============================
             if btype == "table":
+
+                table_context_heading = ""
+                table_context_text = last_paragraph_text or ""
+
+                # Prefer immediate previous paragraph if it looks like caption
+                if normalized["blocks"]:
+                    prev = normalized["blocks"][-1]
+                    if prev["block_type"] == "paragraph":
+                        candidate = (prev.get("text") or "").strip()
+                        if "table" in candidate.lower():
+                            table_context_heading = candidate
+
+                # If no caption-like paragraph → inherit from nearest previous table or heading
+                if not table_context_heading:
+                    for prev in reversed(normalized["blocks"][-30:]):  # safer window
+                        if prev["block_type"] == "table":
+                            if prev.get("table_context_heading"):
+                                table_context_heading = prev["table_context_heading"]
+                            break
+
+                        if prev["block_type"] == "heading":
+                            candidate = prev.get("text", "").strip()
+                            if "table" in candidate.lower():
+                                table_context_heading = candidate
+                                break
+                            # optional: table_context_heading = candidate  # fallback to any heading
+
+                        # Stop at unrelated content (don't inherit from very old tables)
+                        if prev["block_type"] == "paragraph" and "table" not in prev.get("text", "").lower():
+                            # Stop early on unrelated paragraph **once we already have a good context**
+                            if table_context_heading:
+                                break
+
+                # Ultimate fallback
+                if not table_context_heading:
+                    table_context_heading = last_heading_text or "Section context"
+
+                # Prefer caption if available
+                if block.get("caption") and "table" in block["caption"].lower():
+                    table_context_heading = block["caption"]
+
+                # Debug print (keep for 1-2 runs)
+                # print(f"[TABLE DEBUG] Page {page_number} | rows={len(block.get('rows', []))} | heading={table_context_heading[:80]!r}")
+
                 normalized["blocks"].append({
                     "block_type": "table",
-
-                    "table_context_heading": last_heading_text,
+                    "table_context_heading": table_context_heading,
                     "table_context_path": last_heading_path,
-                    "table_context_text": last_paragraph_text,
+                    "table_context_text": table_context_text,
                     "table_semantic_hint": (
-                        f"This table contains structured data related to '{last_heading_text}'. "
+                        f"This table contains structured data related to '{table_context_heading or 'the corresponding section'}'. "
                         f"Interpret the rows using the column headers."
-                        if last_heading_text
-                        else "This table contains structured data. Interpret the rows using the column headers."
+                        if table_context_heading else
+                        "This table contains structured data. Interpret the rows using the column headers."
                     ),
-
                     "caption": block.get("caption"),
                     "headers": block.get("headers", []),
                     "rows": block.get("rows", []),
@@ -182,6 +224,7 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
                     "container_path": current_container["path"].copy(),
                     "source_block_ids": block.get("source_block_ids", [])
                 })
+
                 continue
 
             # ============================
@@ -196,6 +239,8 @@ def normalize_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
                 if line_bbox != (0.0, 0.0, 0.0, 0.0):
                     if any(is_duplicate_table_line(line_bbox, tb) for tb in table_bboxes):
                         continue
+
+                flush_paragraph()
 
                 # -------- SECTION --------
                 if SECTION_REGEX.match(text) and not is_page_header_footer(text):
