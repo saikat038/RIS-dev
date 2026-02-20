@@ -598,15 +598,25 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
             table_data, text_content = content
 
             if text_content:
-                # Insert paragraph for headings/text
-                p = doc.add_paragraph(text_content)
-                # Apply markdown bold if any
-                p.clear()
-                rt = markdown_to_richtext(text_content)
-                for part in rt.parts:
-                    run = p.add_run(part.text)
-                    if part.bold:
+                # Insert paragraph for headings / preceding text
+                p = doc.add_paragraph()
+                pos = 0
+                for match in re.finditer(r"\*\*(.*?)\*\*", text_content):
+                    start, end = match.span()
+                    if start > pos:
+                        p.add_run(text_content[pos:start])
+                    bold_run = p.add_run(match.group(1))
+                    bold_run.bold = True
+                    pos = end
+                if pos < len(text_content):
+                    p.add_run(text_content[pos:])
+                
+                # Optional: make headings bold/larger if they look like # Heading
+                if text_content.strip().startswith('#'):
+                    for run in p.runs:
                         run.bold = True
+                    p.style = 'Heading 2'  # or 'Heading 1', etc. – adjust as needed
+                
                 parent.insert(current_index, p._element)
                 current_index += 1
             elif table_data:
