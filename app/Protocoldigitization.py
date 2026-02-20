@@ -523,58 +523,68 @@ def apply_table_borders(table):
 def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: str):
     table_data = parse_pipe_table(raw_table_text)
 
-    for paragraph in doc.paragraphs:
-        if placeholder in paragraph.text:
+    for paragraph in list(doc.paragraphs):  # ← use list() to avoid modification-during-iteration issues
+        if placeholder not in paragraph.text:
+            continue
 
-            parent = paragraph._element.getparent()
-            index = parent.index(paragraph._element)
+        parent = paragraph._element.getparent()
+        index = parent.index(paragraph._element)
 
-            rows = len(table_data)
-            cols = len(table_data[0])
+        rows = len(table_data)
+        cols = len(table_data[0]) if table_data else 0
 
-            table = doc.add_table(rows=rows, cols=cols)
-            table.alignment = WD_TABLE_ALIGNMENT.CENTER
-            apply_table_borders(table)
+        table = doc.add_table(rows=rows, cols=cols)
+        table.alignment = WD_TABLE_ALIGNMENT.CENTER
+        apply_table_borders(table)
 
-            for r_idx, row_data in enumerate(table_data):
+        for r_idx, row_data in enumerate(table_data):
+            is_header = (r_idx == 0)               # ← only first row
+            is_section_row = all(cell == "" for cell in row_data[1:])  # your logic
 
-                is_section_row = all(cell == "" for cell in row_data[1:])
+            tr = table.rows[r_idx]._tr
+            trPr = tr.get_or_add_trPr()
 
-                for c_idx, value in enumerate(row_data):
-                    cell = table.rows[r_idx].cells[c_idx]
-                    cell.paragraphs[0].clear()
+            # ──── Key change ────
+            if is_header:
+                # Protect header → don't split it
+                trPr.append(OxmlElement('w:cantSplit'))
+                # Also mark as header (repeats on every page if table breaks)
+                trPr.append(OxmlElement('w:tblHeader'))
 
-                    pos = 0
-                    for match in re.finditer(r"\*\*(.*?)\*\*", value):
-                        start, end = match.span()
+            # Optional: you can also protect section title rows if they must stay together
+            # elif is_section_row and len(row_data) > 1 and row_data[0].strip():
+            #     trPr.append(OxmlElement('w:cantSplit'))
 
-                        if start > pos:
-                            cell.paragraphs[0].add_run(value[pos:start])
+            for c_idx, value in enumerate(row_data):
+                cell = table.rows[r_idx].cells[c_idx]
+                cell.paragraphs[0].clear()
 
-                        run = cell.paragraphs[0].add_run(match.group(1))
+                # Your bold parsing logic (unchanged)
+                pos = 0
+                for match in re.finditer(r"\*\*(.*?)\*\*", value):
+                    start, end = match.span()
+                    if start > pos:
+                        cell.paragraphs[0].add_run(value[pos:start])
+                    run = cell.paragraphs[0].add_run(match.group(1))
+                    run.bold = True
+                    pos = end
+                if pos < len(value):
+                    cell.paragraphs[0].add_run(value[pos:])
+
+                # Alignment
+                if c_idx > 0:
+                    cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
+                else:
+                    cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.LEFT
+
+                # Bold section rows
+                if is_section_row:
+                    for run in cell.paragraphs[0].runs:
                         run.bold = True
-                        pos = end
 
-                    if pos < len(value):
-                        cell.paragraphs[0].add_run(value[pos:])
-
-
-                    if c_idx > 0:
-                        cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
-                    else:
-                        cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.LEFT
-
-                    if is_section_row:
-                        for run in cell.paragraphs[0].runs:
-                            run.bold = True
-
-                prevent_row_split(table.rows[r_idx])
-
-            repeat_header(table.rows[0])
-
-            parent.insert(index, table._element)
-            parent.remove(paragraph._element)
-            break
+        parent.insert(index, table._element)
+        parent.remove(paragraph._element)
+        break
 
 # ============================================================
 # STATE HELPERS (UNCHANGED)
