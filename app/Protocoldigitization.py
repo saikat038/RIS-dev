@@ -784,6 +784,7 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT
+from docx.shared import Pt
 
 TEMPLATE_NAME = "CSR.docx"
 OUTPUT_NAME = "CSR_filled.docx"
@@ -859,69 +860,102 @@ def split_tall_cell(text: str, max_lines: int = MAX_LINES_PER_CELL) -> list[str]
     return chunks
 
 def parse_pipe_tables(raw_text: str):
-    """Parse multiple markdown tables from raw_text, returning list of (table_data, preceding_text)"""
-    lines = raw_text.split("\n")
+    """Improved multi-table + heading parser"""
+    lines = [line.rstrip() for line in raw_text.splitlines()]  # keep original spacing but strip trailing
     tables = []
     current_table_lines = []
-    preceding_text = []
+    preceding = []
     in_table = False
 
-    for line in lines:
-        stripped = line.strip()
-        if stripped.startswith("|") and "|" in stripped[1:]:  # likely a table row
-            if not in_table:
-                # Start new table, save any preceding text
-                if preceding_text:
-                    tables.append((None, "\n".join(preceding_text).strip()))
-                    preceding_text = []
-                in_table = True
-            current_table_lines.append(line)
-        elif in_table and re.match(r"^\|?[-: ]+\|?$", stripped):  # separator line
-            current_table_lines.append(line)
-        else:
+    i = 0
+    while i < len(lines):
+        line = lines[i].strip()
+
+        # Skip completely empty lines
+        if not line:
             if in_table:
-                # End table, parse it
-                table_data = parse_single_pipe_table("\n".join(current_table_lines))
-                if table_data:
-                    tables.append((table_data, None))
+                # End current table on blank line after table content
+                if current_table_lines:
+                    table_data = parse_single_pipe_table("\n".join(current_table_lines))
+                    if table_data:
+                        tables.append((table_data, "\n".join(preceding).strip() if preceding else None))
+                        preceding = []
+                    current_table_lines = []
+                in_table = False
+            i += 1
+            continue
+
+        # Likely table row: starts with | and has at least one more |
+        if line.startswith('|') and '|' in line[1:]:
+            if not in_table:
+                # Save any preceding text as heading/paragraph
+                if preceding:
+                    tables.append((None, "\n".join(preceding).strip()))
+                    preceding = []
+                in_table = True
+            current_table_lines.append(lines[i])  # use original line (not stripped)
+        elif in_table and ('---' in line or '=== ' in line or re.match(r'^[-:| ]+$', line)):
+            # Separator line - add only the first one
+            if not any('---' in l for l in current_table_lines):
+                current_table_lines.append(lines[i])
+        else:
+            # Non-table content
+            if in_table:
+                # End table
+                if current_table_lines:
+                    table_data = parse_single_pipe_table("\n".join(current_table_lines))
+                    if table_data:
+                        tables.append((table_data, "\n".join(preceding).strip() if preceding else None))
+                        preceding = []
                 current_table_lines = []
                 in_table = False
-            # Add to preceding text (headings, etc.)
-            if stripped:
-                preceding_text.append(line)
+            preceding.append(lines[i])
 
-    # Last table if any
+        i += 1
+
+    # Flush last table
     if in_table and current_table_lines:
         table_data = parse_single_pipe_table("\n".join(current_table_lines))
         if table_data:
-            tables.append((table_data, None))
+            tables.append((table_data, "\n".join(preceding).strip() if preceding else None))
 
-    # Any trailing text
-    if preceding_text:
-        tables.append((None, "\n".join(preceding_text).strip()))
+    # Trailing text
+    if preceding:
+        tables.append((None, "\n".join(preceding).strip()))
 
     return tables
 
-def parse_single_pipe_table(raw_table: str):
-    lines = [l.strip() for l in raw_table.split("\n") if l.strip()]
-    lines = [l for l in lines if not re.match(r"^\|?[-: ]+\|?$", l)]  # remove separators
 
+def parse_single_pipe_table(raw_table: str):
+    lines = raw_table.splitlines()
     data = []
     max_cols = 0
 
+    header_found = False
     for line in lines:
-        if not line.startswith("|"):
-            continue  # skip non-row lines
-        parts = [c.strip() for c in line.split("|") if c.strip()]
-        if parts:
-            data.append(parts)
-            max_cols = max(max_cols, len(parts))
+        stripped = line.strip()
+        if not stripped or re.match(r'^[-|: ]+$', stripped):
+            continue  # skip separators & empty
 
+        # Split on | but ignore leading/trailing
+        parts = [p.strip() for p in line.split('|')[1:-1]] if line.startswith('|') and line.endswith('|') else \
+                [p.strip() for p in line.split('|') if p.strip()]
+
+        if not parts:
+            continue
+
+        data.append(parts)
+        max_cols = max(max_cols, len(parts))
+
+        if not header_found and len(parts) > 1:
+            header_found = True
+
+    # Pad short rows
     for row in data:
         while len(row) < max_cols:
             row.append("")
 
-    return data if data else None
+    return data if data and len(data) >= 2 else None  # at least header + one row
 
 def prevent_row_split(row):
     tr = row._tr
@@ -963,8 +997,9 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
             table_data, text_content = content
 
             if text_content:
-                # Insert paragraph for headings/text
                 p = doc.add_paragraph()
+                text_content = text_content.strip()
+
                 pos = 0
                 for match in re.finditer(r"\*\*(.*?)\*\*", text_content):
                     start, end = match.span()
@@ -975,13 +1010,15 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
                     pos = end
                 if pos < len(text_content):
                     p.add_run(text_content[pos:])
-                
-                # Optional: make headings bold/larger if they look like # Heading
-                if text_content.strip().startswith('#'):
+
+                # Better heading styling
+                stripped = text_content.strip()
+                if stripped.startswith('Table ') or stripped.startswith('#') or stripped.isupper():
+                    p.style = 'Heading 2'  # or 'Heading 1' / custom style
                     for run in p.runs:
                         run.bold = True
-                    p.style = 'Heading 2'  # or 'Heading 1', etc. – adjust as needed
-                
+                        run.font.size = Pt(14)
+
                 parent.insert(current_index, p._element)
                 current_index += 1
             elif table_data:
