@@ -543,8 +543,7 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
     for paragraph in list(doc.paragraphs):
         if placeholder not in paragraph.text:
             continue
-        
-        paragraph.clear()
+
         parent = paragraph._element.getparent()
         index = parent.index(paragraph._element)
 
