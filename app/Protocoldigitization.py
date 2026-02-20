@@ -470,6 +470,23 @@ def markdown_to_richtext(text: str) -> RichText:
 # ============================================================
 # TABLE UTILITIES (NEW)
 # ============================================================
+MAX_LINES_PER_CELL = 22   # tune this (or use len(text.splitlines()) > XX)
+
+def split_tall_cell(text: str, max_lines: int = 15) -> list[str]:
+    lines = text.splitlines()
+    if len(lines) <= max_lines:
+        return [text]
+    
+    chunks = []
+    current = []
+    for line in lines:
+        current.append(line)
+        if len(current) >= max_lines:
+            chunks.append("\n".join(current))
+            current = []
+    if current:
+        chunks.append("\n".join(current))
+    return chunks
 
 def parse_pipe_table(raw_text):
     lines = [l.strip() for l in raw_text.split("\n") if l.strip()]
@@ -523,65 +540,109 @@ def apply_table_borders(table):
 def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: str):
     table_data = parse_pipe_table(raw_table_text)
 
-    for paragraph in list(doc.paragraphs):  # ← use list() to avoid modification-during-iteration issues
+    for paragraph in list(doc.paragraphs):
         if placeholder not in paragraph.text:
             continue
 
         parent = paragraph._element.getparent()
         index = parent.index(paragraph._element)
 
-        rows = len(table_data)
+        # ─── We will build the final table data with possible extra rows ───
+        final_table_rows = []           # list of row_data lists
+
+        for original_row_idx, row_data in enumerate(table_data):
+            is_header = (original_row_idx == 0)
+            is_section_row = all(cell.strip() == "" for cell in row_data[1:])
+
+            # Check if any cell in this row needs splitting
+            split_results = []
+            needs_split = False
+            max_splits = 1
+
+            for cell_text in row_data:
+                chunks = split_tall_cell(cell_text)
+                split_results.append(chunks)
+                max_splits = max(max_splits, len(chunks))
+                if len(chunks) > 1:
+                    needs_split = True
+
+            if not needs_split:
+                # Normal row — add as is
+                final_table_rows.append(row_data)
+                continue
+
+            # ─── Row needs splitting → create max_splits copies ───
+            for chunk_idx in range(max_splits):
+                new_row = []
+                for col_idx, chunks in enumerate(split_results):
+                    if chunk_idx < len(chunks):
+                        new_row.append(chunks[chunk_idx])
+                    else:
+                        new_row.append("")  # empty in continuation rows
+                final_table_rows.append(new_row)
+
+        # ─── Now create the actual table with final rows ───
+        rows_count = len(final_table_rows)
         cols = len(table_data[0]) if table_data else 0
 
-        table = doc.add_table(rows=rows, cols=cols)
+        table = doc.add_table(rows=rows_count, cols=cols)
         table.alignment = WD_TABLE_ALIGNMENT.CENTER
         apply_table_borders(table)
 
-        for r_idx, row_data in enumerate(table_data):
-            is_header = (r_idx == 0)               # ← only first row
-            is_section_row = all(cell == "" for cell in row_data[1:])  # your logic
+        current_row_idx = 0
 
-            tr = table.rows[r_idx]._tr
-            trPr = tr.get_or_add_trPr()
+        for original_row_idx, orig_row_data in enumerate(table_data):
+            is_header = (original_row_idx == 0)
+            is_section_row = all(cell.strip() == "" for cell in orig_row_data[1:])
 
-            # ──── Key change ────
-            if is_header:
-                # Protect header → don't split it
-                trPr.append(OxmlElement('w:cantSplit'))
-                # Also mark as header (repeats on every page if table breaks)
-                trPr.append(OxmlElement('w:tblHeader'))
+            # How many continuation rows were created for this original row?
+            split_results = [split_tall_cell(c) for c in orig_row_data]
+            row_span_count = max(len(chunks) for chunks in split_results) if split_results else 1
 
-            # Optional: you can also protect section title rows if they must stay together
-            # elif is_section_row and len(row_data) > 1 and row_data[0].strip():
-            #     trPr.append(OxmlElement('w:cantSplit'))
+            for chunk_idx in range(row_span_count):
+                row_data = final_table_rows[current_row_idx]
+                tr = table.rows[current_row_idx]._tr
+                trPr = tr.get_or_add_trPr()
 
-            for c_idx, value in enumerate(row_data):
-                cell = table.rows[r_idx].cells[c_idx]
-                cell.paragraphs[0].clear()
+                # Only protect the very first header row
+                if is_header and chunk_idx == 0:
+                    trPr.append(OxmlElement('w:cantSplit'))
+                    trPr.append(OxmlElement('w:tblHeader'))
 
-                # Your bold parsing logic (unchanged)
-                pos = 0
-                for match in re.finditer(r"\*\*(.*?)\*\*", value):
-                    start, end = match.span()
-                    if start > pos:
-                        cell.paragraphs[0].add_run(value[pos:start])
-                    run = cell.paragraphs[0].add_run(match.group(1))
-                    run.bold = True
-                    pos = end
-                if pos < len(value):
-                    cell.paragraphs[0].add_run(value[pos:])
+                # Optional: protect section rows (if you want)
+                # if is_section_row and chunk_idx == 0:
+                #     trPr.append(OxmlElement('w:cantSplit'))
 
-                # Alignment
-                if c_idx > 0:
-                    cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
-                else:
-                    cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.LEFT
+                for c_idx, value in enumerate(row_data):
+                    cell = table.rows[current_row_idx].cells[c_idx]
+                    cell.paragraphs[0].clear()
 
-                # Bold section rows
-                if is_section_row:
-                    for run in cell.paragraphs[0].runs:
+                    # Bold parsing (unchanged)
+                    pos = 0
+                    for match in re.finditer(r"\*\*(.*?)\*\*", value):
+                        start, end = match.span()
+                        if start > pos:
+                            cell.paragraphs[0].add_run(value[pos:start])
+                        run = cell.paragraphs[0].add_run(match.group(1))
                         run.bold = True
+                        pos = end
+                    if pos < len(value):
+                        cell.paragraphs[0].add_run(value[pos:])
 
+                    # Alignment
+                    if c_idx > 0:
+                        cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
+                    else:
+                        cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.LEFT
+
+                    # Bold whole section row
+                    if is_section_row and chunk_idx == 0:  # only first chunk
+                        for run in cell.paragraphs[0].runs:
+                            run.bold = True
+
+                current_row_idx += 1
+
+        # Insert table and remove placeholder
         parent.insert(index, table._element)
         parent.remove(paragraph._element)
         break
