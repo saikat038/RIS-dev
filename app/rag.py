@@ -2227,29 +2227,6 @@ IF Output Style = regulatory author:
 - Do NOT introduce new criteria, rationale, interpretation, or procedures.
 - Do NOT operationalize content.
 
-────────────────────────
-SECTION SCOPING RULE
-────────────────────────
-
-When operating in Section Authoring Mode:
-
-- You may use ONLY content that:
-  • Explicitly belongs to SECTION_METADATA.section
-  • OR matches SECTION_METADATA.synonyms
-
-- All other visible content must be ignored.
-
-- If content is absent under the authorized headings,
-  follow the FAIL-SAFE BEHAVIOR defined for authoring mode.
-
-When operating in Q&A Mode:
-
-- You may use any content from SOURCE_CONTEXT
-  that directly answers the question,
-  regardless of section location.
-
-- You must still follow all hallucination and traceability rules.
-
 
 ────────────────────────
 FORMAT & STRUCTURE ENFORCEMENT
