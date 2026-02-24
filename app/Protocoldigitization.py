@@ -428,7 +428,7 @@ SECTION_TO_TEMPLATE_VAR = {
     "Inclusion Criteria": "inclusion_criteria",
     "Exclusion Criteria": "exclusion_criteria",
     "Subject Withdrawal Criteria": "subject_withdrawal_criteria",
-    "STUDY OBJECTIVES AND ENDPOINTS": "Stdy_objectives",
+    "Objectives": "Stdy_objectives",
     "Overall Study Design And plan: Description": "O_study_design",
     "Discussion of Study Design, Including the Choice of Control Groups": "D_study_design",
     "Summary of Subject Demographics Safety Population - RP Patients": "safety_p_rp_p",
