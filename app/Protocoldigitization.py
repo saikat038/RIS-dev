@@ -425,16 +425,24 @@ OUTPUT_NAME = "CSR_filled.docx"
 
 SECTION_TO_TEMPLATE_VAR = {
     "Clinical Trial Synopsis": "clinical_trial_synopsis",
+    "Independent Ethics Committee (IEC)/Institutional Review Board (IRB)": "iec_irb",
+    "Ethical Conduct of Study": "ethical_conduct_of_study",
+    "STUDY OBJECTIVES AND ENDPOINTS": "Stdy_objectives",
+    "Overall Study Design And plan: Description": "O_study_design",
     "Inclusion Criteria": "inclusion_criteria",
     "Exclusion Criteria": "exclusion_criteria",
     "Subject Withdrawal Criteria": "subject_withdrawal_criteria",
-    "STUDY OBJECTIVES AND ENDPOINTS": "Stdy_objectives",
-    "Overall Study Design And plan: Description": "O_study_design",
-    "Discussion of Study Design, Including the Choice of Control Groups": "D_study_design",
+    "Investigational Product": "Trt_admin",
+    "Summarize Investigational Product": "IP_identity",
+    "Selection of the starting dose": "Dose_selection",
+    "Duration of Treatment": "Dose_timing_pt",
+    "Concomitant Medications and Procedures": "Prior_concom_trt",
+    "Treatment compliance": "Trt_compliance",
+    
     "Summary of Subject Demographics Safety Population - RP Patients": "safety_p_rp_p",
-    "Independent Ethics Committee (IEC)/Institutional Review Board (IRB)": "iec_irb",
-    "Ethical Conduct of Study": "ethical_conduct_of_study",
-    "Subject Information and Consent": "subject_information_and_consent"
+    "Subject Information and Consent": "subject_information_and_consent",
+
+
 }
 
 # ============================================================
