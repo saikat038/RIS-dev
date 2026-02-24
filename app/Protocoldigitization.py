@@ -428,17 +428,17 @@ SECTION_TO_TEMPLATE_VAR = {
     "Independent Ethics Committee (IEC)/Institutional Review Board (IRB)": "iec_irb",
     "Ethical Conduct of Study": "ethical_conduct_of_study",
     "STUDY OBJECTIVES AND ENDPOINTS": "Stdy_objectives",
-    "Overall Study Design And plan: Description": "O_study_design",
-    "Inclusion Criteria": "inclusion_criteria",
-    "Exclusion Criteria": "exclusion_criteria",
-    "Subject Withdrawal Criteria": "subject_withdrawal_criteria",
+    "INVESTIGATIONAL PLAN": "Overall_design_desc",
+    "Inclusion Criteria": "Incl_crit",
+    "Exclusion Criteria": "Excl_crit",
+    "Subject Withdrawal Criteria": "Subj_withdraw_crit",
     "Investigational Product": "Trt_admin",
     "Summarize Investigational Product": "IP_identity",
     "Selection of the starting dose": "Dose_selection",
     "Duration of Treatment": "Dose_timing_pt",
     "Concomitant Medications and Procedures": "Prior_concom_trt",
     "Treatment compliance": "Trt_compliance",
-    
+
     "Summary of Subject Demographics Safety Population - RP Patients": "safety_p_rp_p",
     "Subject Information and Consent": "subject_information_and_consent",
 
