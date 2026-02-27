@@ -1587,7 +1587,7 @@ def vector_search_source(
             print("Vector dimensions of query:", len(vector))
 
             res = search_client.search(
-                search_text=None,
+                search_text=q,
                 vector_queries=[vq],
                 filter=doc_filter,
                 select=[
@@ -1600,12 +1600,10 @@ def vector_search_source(
             )
 
             # Filter by minimum score
-            good_hits = [
-                dict(r) for r in res
-                if r.get("@search.score", 0) >= min_score
-            ]
+            res_list = list(res)          # consume iterator once
+            good_hits = [dict(r) for r in res_list]   # keep all hits
 
-            print(f"Query '{q[:60]}...' returned {len(list(res))} hits → kept {len(good_hits)} (≥ {min_score})")
+            print(f"Query '{q[:60]}...' returned {len(res_list)} hits → kept {len(good_hits)}")
 
             results.extend(good_hits)
 
@@ -2351,4 +2349,4 @@ def answer(query: str, history: List[Dict]) -> str:
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
 # answer("Summary of Subject Demographics Safety Population - RP Patients in tabular along with all the subgroups in tabular", [])
-# answer("INVESTIGATIONAL PLAN", [])
+# answer("Selection of the starting dose", [])
