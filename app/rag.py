@@ -1086,48 +1086,55 @@ Please add this section to the authoring control schema."""
 
 def pick_active_control(authoring_control: dict, user_query: str) -> dict:
     """
-    Pick the most relevant section control from the master schema based on the user's request.
-    Deterministic, non-LLM matcher with ≥70% token overlap.
+    Pick the section with the highest token overlap score.
+    Rules:
+      1) Exact match = score 1.0 (always wins)
+      2) Otherwise choose section with highest token overlap
+      3) Must be >= 0.75 overlap
+      4) If none qualify → fallback to first section
     """
 
-    def normalize(text: str) -> list[str]:
-        return [
+    def normalize(text: str) -> set[str]:
+        return {
             t for t in text.lower().replace("-", " ").split()
-            if t.isalnum() or t.isalpha()
-        ]
+            if t.isalnum()
+        }
 
-    q_tokens = set(normalize(user_query or ""))
+    query = (user_query or "").lower().strip()
+    q_tokens = normalize(query)
+
     sections = authoring_control.get("sections", [])
+    if not sections:
+        return {}
 
-    # 1) direct keyword match on full section name (unchanged)
-    for sec in sections:
-        name = (sec.get("section") or "").lower()
-        if name and name in (user_query or "").lower():
-            return sec
+    best_section = None
+    best_score = 0.0
 
-    # 2) synonym exact containment (unchanged)
     for sec in sections:
-        synonyms = sec.get("synonyms", [])
-        if isinstance(synonyms, list):
-            for s in synonyms:
-                if isinstance(s, str) and s.lower() in (user_query or "").lower():
-                    return sec
-
-    # 3) ≥70% token overlap match (NEW)
-    for sec in sections:
-        section_name = sec.get("section") or ""
-        sec_tokens = set(normalize(section_name))
+        name = (sec.get("section") or "").lower().strip()
+        sec_tokens = normalize(name)
 
         if not sec_tokens:
             continue
 
-        overlap_ratio = len(sec_tokens & q_tokens) / len(sec_tokens)
-
-        if overlap_ratio >= 0.75:
+        # 1️⃣ Exact match wins immediately
+        if name == query:
             return sec
 
-    # 4) fallback (original behavior preserved)
-    return sections[0] if sections else {}
+        # 2️⃣ Token overlap score
+        overlap = len(sec_tokens & q_tokens)
+        score = overlap / len(sec_tokens)
+
+        if score > best_score:
+            best_score = score
+            best_section = sec
+
+    # 3️⃣ Accept only if >= 75%
+    if best_section and best_score >= 0.75:
+        return best_section
+
+    # 4️⃣ Fallback
+    return sections[0]
 
 
     
@@ -2349,4 +2356,4 @@ def answer(query: str, history: List[Dict]) -> str:
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
 # answer("Summary of Subject Demographics Safety Population - RP Patients in tabular along with all the subgroups in tabular", [])
-# answer("Selection of the starting dose", [])
+# answer("Summarize Investigational Product", [])
