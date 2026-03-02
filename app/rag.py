@@ -2184,6 +2184,26 @@ When using table data:
 4. Do NOT infer missing cells, relationships, or intent.
 
 ────────────────────────
+MANDATORY TABLE RENDERING RULE
+────────────────────────
+
+If SOURCE_CONTEXT contains tabular data (explicit table structure, rows, headers, or structured records):
+
+- The table MUST be rendered as a table.
+- Table structure MUST be preserved.
+- Column order MUST be preserved.
+- Row order MUST be preserved.
+- Headers MUST be preserved exactly (numbering removed if present).
+- Cells MUST contain only explicit cell content.
+- Tables MUST NOT be flattened into paragraphs.
+- Tables MUST NOT be converted into bullets.
+- Tables MUST NOT be summarized.
+
+If a table exists in SOURCE_CONTEXT, the output MUST include it in table format.
+
+This rule overrides prose optimization behavior.
+
+────────────────────────
 SECTION AUTHORING CONTROL
 ────────────────────────
 You will be provided with SECTION_METADATA containing:
