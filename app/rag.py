@@ -2224,8 +2224,7 @@ synonyms under [AUTHORING CONTROL]
 
 This means:
 
-- The heading text MUST match the synonym EXACTLY (case-insensitive, whitespace-normalized comparison),
-including numeric prefixes and punctuation.
+- The heading text MUST match the synonym EXACTLY including numeric prefixes and punctuation.
 - The content MUST appear under that heading in SOURCE_CONTEXT.
 - Content appearing outside that structural section MUST be ignored,
   even if it contains identical phrases or wording.
@@ -2250,6 +2249,7 @@ Before writing any content:
 
 STRUCTURAL RULES:
 - Structural elements are IMMUTABLE TOKENS.
+- ALL identified headings and sub-headings MUST be rendered.
 - Structural rendering takes precedence over content completeness checks.
 - Structural elements MUST be rendered EVEN IF associated content is minimal or empty.
 - You MUST NOT omit, merge, flatten, or downgrade structure.
@@ -2264,6 +2264,7 @@ IF Output Style = verbatim:
 - Preserve wording EXACTLY as written in SOURCE_CONTEXT.
 - Preserve structure, hierarchy, and ordering.
 - Preserve headings and sub-headings exactly.
+- Preserve numeric prefixes (e.g., 7.1, 1., 1.1).
 - Do NOT paraphrase, summarize, normalize, or interpret.
 
 IF Output Style = regulatory author:
