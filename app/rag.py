@@ -2248,19 +2248,19 @@ STRUCTURAL EXTRACTION & RENDERING (HIGHEST PRIORITY)
 Before writing any content:
 
 - Scan SOURCE_CONTEXT line-by-line.
-- Identify ALL structural elements in order:
-  • Headings
-  • Sub-headings
-  • Group labels
+- Identify structural elements under the authorized section.
 
-STRUCTURAL RULES:
-- Structural elements are IMMUTABLE TOKENS.
-- ALL identified headings and sub-headings MUST be rendered.
-- Structural rendering takes precedence over content completeness checks.
-- Structural elements MUST be rendered EVEN IF associated content is minimal or empty.
-- You MUST NOT omit, merge, flatten, or downgrade structure.
+IF Output Style = verbatim:
+  • ALL structural elements MUST be rendered.
+  • Structural elements are IMMUTABLE TOKENS.
+  • You MUST NOT omit, merge, flatten, or downgrade structure.
+  • Preserve hierarchy exactly as written.
 
-If a line qualifies as a heading or sub-heading, it MUST be rendered.
+IF Output Style = regulatory author:
+  • Structural elements MAY be reorganized for alignment with ICH Guideline structure.
+  • Structural elements MUST NOT be fabricated.
+  • Reorganization is allowed ONLY if supported by SOURCE_CONTEXT.
+  • Headings may be harmonized to ICH terminology if ICH_CONTEXT supports it.
 
 ────────────────────────
 OUTPUT STYLE RULES
@@ -2403,4 +2403,4 @@ def answer(query: str, history: List[Dict]) -> str:
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
 # answer("Summary of Subject Demographics Safety Population - RP Patients in tabular along with all the subgroups in tabular", [])
-# answer("Summarize Investigational Product", [])
+answer("Summarize Investigational Product", [])
