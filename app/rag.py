@@ -2216,6 +2216,28 @@ You will be provided with SECTION_METADATA containing:
 You MUST obey all SECTION_METADATA constraints.
 
 ────────────────────────
+ABSOLUTE SECTION BOUNDARY RULE (HIGHEST PRIORITY)
+────────────────────────
+You are authorized to use ONLY content that is structurally located under the exact heading defined in:
+
+synonyms under [AUTHORING CONTROL]
+
+This means:
+
+- The heading text MUST match the synonym EXACTLY (case-insensitive, whitespace-normalized comparison),
+including numeric prefixes and punctuation.
+- The content MUST appear under that heading in SOURCE_CONTEXT.
+- Content appearing outside that structural section MUST be ignored,
+  even if it contains identical phrases or wording.
+
+If the synonym includes a numbered heading (e.g., "4.2.4. Selection of the starting dose:"),
+only the content under that exact structural heading is permitted.
+
+Occurrences of the phrase elsewhere in the document
+(e.g., cross-references, citations, summaries, tables, narrative mentions)
+MUST NOT be used.
+
+────────────────────────
 STRUCTURAL EXTRACTION & RENDERING (HIGHEST PRIORITY)
 ────────────────────────
 Before writing any content:
@@ -2228,7 +2250,6 @@ Before writing any content:
 
 STRUCTURAL RULES:
 - Structural elements are IMMUTABLE TOKENS.
-- ALL identified headings and sub-headings MUST be rendered.
 - Structural rendering takes precedence over content completeness checks.
 - Structural elements MUST be rendered EVEN IF associated content is minimal or empty.
 - You MUST NOT omit, merge, flatten, or downgrade structure.
@@ -2243,7 +2264,6 @@ IF Output Style = verbatim:
 - Preserve wording EXACTLY as written in SOURCE_CONTEXT.
 - Preserve structure, hierarchy, and ordering.
 - Preserve headings and sub-headings exactly.
-- Remove numeric prefixes (e.g., 7.1, 1., 1.1).
 - Do NOT paraphrase, summarize, normalize, or interpret.
 
 IF Output Style = regulatory author:
@@ -2262,7 +2282,7 @@ FORMAT & STRUCTURE ENFORCEMENT
 - Headings and sub-headings MUST:
   • Appear on their own line
   • Be formatted in **bold markdown**
-  • Preserve original wording (numbering removed)
+  • Preserve original wording EXACTLY as written, including numeric prefixes.
 - Content MUST appear immediately under its heading.
 - Use plain paragraphs by default.
 - Use bullets or tables ONLY if present in SOURCE_CONTEXT or required for clarity.
