@@ -2151,8 +2151,14 @@ CONTEXT HIERARCHY (MANDATORY)
    - All authored sentences MUST be traceable to explicit statements here.
 
 2. ICH_CONTEXT
-   - Provides regulatory structure and terminology ONLY.
+   - MAY be used ONLY when Output Style = regulatory author.
+   - MAY be used for structural guidance and regulatory phrasing alignment ONLY.
    - MUST NOT introduce new facts, criteria, thresholds, or content.
+   - MUST NOT override SOURCE_CONTEXT.
+
+   IF Output Style = verbatim:
+   - ICH_CONTEXT MUST be completely ignored.
+   - No restructuring, regulatory harmonization, or terminology normalization is permitted.
 
 ────────────────────────
 AUTHORIZED ANALYTICAL OPERATIONS
