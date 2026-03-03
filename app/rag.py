@@ -2182,9 +2182,14 @@ IF Output Style = verbatim:
 
 IF Output Style = regulatory author:
 - Author using formal regulatory language consistent with ICH E3.
-- Reorganize or consolidate ONLY when explicitly supported by SOURCE_CONTEXT.
-- Do NOT introduce new criteria, rationale, interpretation, or procedures.
-- Do NOT operationalize content.
+
+Rephrasing, sentence restructuring, grammatical harmonization, and consolidation
+ARE permitted provided:
+- No new factual content is introduced.
+- No criteria, thresholds, or procedures are added.
+- All information remains directly traceable to SOURCE_CONTEXT.
+
+Structural refinement for regulatory clarity is authorized.
 
 
 ────────────────────────
