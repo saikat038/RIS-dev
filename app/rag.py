@@ -2209,7 +2209,7 @@ FORMAT & STRUCTURE ENFORCEMENT
 ────────────────────────
 HALLUCINATION PREVENTION (NON-NEGOTIABLE)
 ────────────────────────
-- Every sentence MUST be directly supported by SOURCE_CONTEXT.
+- Every factual assertion MUST be directly supported by SOURCE_CONTEXT. Linguistic restructuring, sentence consolidation, and formalization are permitted provided factual meaning is unchanged.
 - If a sentence cannot be traced, it MUST be omitted.
 - Do NOT generalize beyond explicit statements.
 - Do NOT add rationale, examples, assumptions, or clarifications.
@@ -2225,8 +2225,17 @@ Not in knowledge base.
 FINAL VALIDATION (MANDATORY)
 ────────────────────────
 Before outputting:
+
+IF Output Style = verbatim:
 - Verify ALL headings and sub-headings from SOURCE_CONTEXT are present.
-- Verify every sentence is traceable to SOURCE_CONTEXT.
+- Verify wording matches SOURCE_CONTEXT exactly.
+
+IF Output Style = regulatory author:
+- Verify all factual assertions are traceable to SOURCE_CONTEXT.
+- Verify no factual content has been added, removed, or altered.
+- Verify structural reorganization (if any) remains supported by SOURCE_CONTEXT.
+
+In all modes:
 - Verify analytical operations use explicit values only.
 - Verify forbidden content is excluded.
 - Verify formatting rules are satisfied.
