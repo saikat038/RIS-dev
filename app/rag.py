@@ -1394,145 +1394,52 @@ def vector_search_ich(
     k_nearest_neighbors: int = 15,
     min_score: float = 0.62,
 ) -> List[Dict[str, Any]]:
-    """
-    ICH vector search — focused on ich_refs only.
-    Checks section_path directly, fetches ALL content under matched paths.
-    Minimal changes to original structure.
-    """
-    # ── Prepare queries — only from ich_refs ─────────────────────────────
-    queries = [r.strip() for r in ich_refs if r.strip()]
-    queries = list(dict.fromkeys(q for q in queries if q))
 
-    if not queries:
-        print("No valid ICH queries after cleaning")
-        return []
+    section_number = None
 
-    print(f"ICH search queries ({len(queries)}):")
-    for q in queries:
-        print(f"  - {q}")
-
-    # ── Step 1: Locate candidates (headings or content with section_path) ──
-    results = []  # candidates
-
-    # Try exact section_path match first (from ich_refs)
-    section_number_match = None
-    for q in queries:
-        if re.match(r'^\d+(\.\d+)*$', q):
-            section_number_match = q
+    for ref in ich_refs:
+        match = re.match(r'^(\d+(\.\d+)*)', ref.strip())
+        if match:
+            section_number = match.group(1)
             break
 
-    if section_number_match:
-        exact_filter = f"section_path eq '{section_number_match}'"
-        print(f"Using exact section_path filter: {exact_filter}")
-
-        try:
-            res = search_client.search(
-                search_text=section_number_match,
-                filter=exact_filter,
-                select=[
-                    "id", "section_path", "section_title", "guideline",
-                    "block_type", "text", "page_number"
-                ],
-                top=5,
-            )
-            found = list(res)
-            print(f"Exact section_path search returned {len(found)} items")
-            results.extend(dict(r) for r in found)
-        except Exception as e:
-            print(f"Exact section_path search failed: {e}")
-
-    # Fallback: vector search (only if needed)
-    heading_filter = None  # no strict heading filter — allow content too
-    for q in queries:
-        try:
-            vector = batch_embed([q])[0]
-            print(f"  Embedding successful for: {q[:60]}{'...' if len(q)>60 else ''}")
-
-            vq = VectorizedQuery(
-                vector=vector,
-                fields="vector",
-                k_nearest_neighbors=k_nearest_neighbors
-            )
-
-            res = search_client.search(
-                search_text=None,
-                vector_queries=[vq],
-                filter=heading_filter,
-                select=[
-                    "id", "section_path", "section_title", "guideline",
-                    "block_type", "text", "page_number"
-                ],
-                top=k_nearest_neighbors,
-            )
-
-            found = list(res)
-            good_hits = [r for r in found if r.get("@search.score", 0) >= min_score]
-
-            print(f"    → Query '{q[:50]}...' returned {len(found)} hits → kept {len(good_hits)}")
-            results.extend(dict(r) for r in good_hits)
-
-        except Exception as e:
-            print(f"Vector search failed for '{q}': {type(e).__name__}: {e}")
-
-    # Deduplicate by section_path (prefer content over heading if both exist)
-    seen_paths = set()
-    unique_candidates = []
-    for r in results:
-        path = r.get("section_path")
-        if path and path not in seen_paths:
-            seen_paths.add(path)
-            unique_candidates.append(r)
-
-    if not unique_candidates:
-        print("No ICH sections found above threshold")
+    if not section_number:
+        print("No valid section number found in ich_refs")
         return []
 
-    print(f"Found {len(unique_candidates)} unique sections by section_path")
+    print(f"Fetching paragraph chunks under section_path: {section_number}")
 
-    # ── Step 2: Fetch ALL content under matched section_paths ─────────────
-    all_content_chunks = []
+    filter_query = (
+        f"section_path eq '{section_number}' "
+        "and block_type eq 'paragraph'"
+    )
 
-    for candidate in unique_candidates:
-        path = candidate["section_path"]
-        print(f"Fetching content under section_path: {path}")
+    try:
+        results = search_client.search(
+            search_text=None,
+            filter=filter_query,
+            select=[
+                "id", "doc_id", "source_type", "guideline",
+                "section_path", "section_title",
+                "block_type", "rule_type",
+                "page_number", "text"
+            ],
+            order_by="page_number asc",
+            top=100
+        )
 
-        # Fetch everything under this section_path — no block_type filter
-        content_filter = f"section_path eq '{path}'"
+        chunks = [
+            dict(r)
+            for r in results
+            if (r.get("text") or "").strip()
+        ]
 
-        try:
-            content_res = search_client.search(
-                search_text=None,
-                filter=content_filter,
-                select=[
-                    "id", "doc_id", "source_type", "guideline", "block_type",
-                    "section_path", "section_title", "rule_type", "page_number", "text"
-                ],
-                top=80,
-                order_by="page_number asc"
-            )
+        print(f"Fetched {len(chunks)} paragraph chunks")
+        return chunks
 
-            content_list = list(content_res)
-            print(f"  → Found {len(content_list)} items under {path}")
-
-            for doc in content_list:
-                t = (doc.get("text") or "").strip()
-                if len(t.split()) >= 4:
-                    all_content_chunks.append(dict(doc))
-
-        except Exception as e:
-            print(f"Content fetch failed for {path}: {e}")
-
-    # Final deduplication
-    seen_ids = set()
-    final_chunks = []
-    for chunk in all_content_chunks:
-        cid = chunk.get("id")
-        if cid and cid not in seen_ids:
-            seen_ids.add(cid)
-            final_chunks.append(chunk)
-
-    print(f"Final ICH content chunks after deduplication: {len(final_chunks)}")
-    return final_chunks
+    except Exception as e:
+        print(f"ICH paragraph retrieval failed: {e}")
+        return []
 
 ##################################################################################################################################################################
 
@@ -1778,7 +1685,7 @@ def group_ich_by_section(chunks: list[dict], ich_refs: list[str] = None) -> dict
             else:
                 guideline_parts.append(text)
 
-        guideline_text = "\n\n".join(guideline_parts).strip() or "(no content)"
+        guideline_text = " ".join(guideline_parts).strip() or "(no content)"
 
         results.append({
             "section_path": section_path,
