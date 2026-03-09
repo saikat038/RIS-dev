@@ -2055,7 +2055,7 @@ CONTEXT HIERARCHY (MANDATORY)
 ────────────────────────
 1. SOURCE_CONTEXT
    - The ONLY authoritative source for factual content.
-   - All authored sentences MUST be traceable to explicit statements here.
+   - All factual assertions MUST be traceable to explicit statements in SOURCE_CONTEXT.
 
 2. ICH_CONTEXT
    - MAY be used ONLY when Output Style = regulatory author.
