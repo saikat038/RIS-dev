@@ -2099,10 +2099,9 @@ When using table data:
 ────────────────────────
 MANDATORY TABLE RENDERING RULE
 ────────────────────────
+IF Output Style = verbatim:
 
-If SOURCE_CONTEXT contains tabular data (explicit table structure, rows, headers, or structured records):
-
-- The table MUST be rendered as a table.
+- Tables MUST be rendered exactly as tables.
 - Table structure MUST be preserved.
 - Column order MUST be preserved.
 - Row order MUST be preserved.
@@ -2112,9 +2111,13 @@ If SOURCE_CONTEXT contains tabular data (explicit table structure, rows, headers
 - Tables MUST NOT be converted into bullets.
 - Tables MUST NOT be summarized.
 
-If a table exists in SOURCE_CONTEXT, the output MUST include it in table format.
+IF Output Style = regulatory author:
 
-This rule overrides prose optimization behavior.
+- Table data MAY be transformed into narrative form when necessary for regulatory clarity.
+- All factual values from the table MUST remain unchanged.
+- No rows, columns, or values may be omitted unless they are structurally irrelevant to the section being authored.
+- No new information may be introduced.
+- Narrative text MUST remain fully traceable to the original table cells in SOURCE_CONTEXT.
 
 ────────────────────────
 SECTION AUTHORING CONTROL
