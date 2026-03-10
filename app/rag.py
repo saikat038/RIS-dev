@@ -2135,7 +2135,7 @@ IF Output Style = verbatim:
 - Tables MUST be rendered as tables.
 - All rows, columns, and cell values MUST be preserved exactly.
 - Tables MUST NOT be flattened into paragraphs, bullets, or narrative text.
-- The entire table including all subgroup rows must be rendered; row selection or omission is not permitted.
+- When Output Style = verbatim and a table is present in SOURCE_CONTEXT, the entire table including all subgroup rows must be rendered; row selection or omission is not permitted.
 
 IF Output Style = regulatory author:
 
