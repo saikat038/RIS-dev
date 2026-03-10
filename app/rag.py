@@ -2157,7 +2157,6 @@ Before writing any content:
 IF Output Style = verbatim:
   • ALL structural elements MUST be rendered.
   • Headings and paragraph text are IMMUTABLE TOKENS.
-  • Tabular data MUST be reconstructed as a table while preserving all cell values and row order.
   • You MUST NOT omit, merge, flatten, or downgrade structure.
   • Preserve hierarchy exactly as written.
 
