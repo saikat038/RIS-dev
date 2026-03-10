@@ -1281,15 +1281,24 @@ def format_chunk_for_context(chunk: Dict) -> str:
                     rows = None
 
             if isinstance(rows, list) and rows and isinstance(rows[0], list):
-                # Header row
-                header = rows[0]
-                lines.append(" | ".join(str(cell).strip() for cell in header))
+
+                # USE TRUE HEADERS FROM INDEX
+                headers = chunk.get("table_headers")
+
+                if headers:
+                    header = [str(h).strip() for h in headers]
+                    data_rows = rows
+                else:
+                    # fallback if headers missing
+                    header = rows[0]
+                    data_rows = rows[1:]
+
+                lines.append(" | ".join(header))
                 lines.append("|" + "|".join(["---"] * len(header)) + "|")
 
-                # FIX 2: Increased row limit so ethnicity and later rows are not dropped
                 MAX_ROWS = 50
 
-                for row in rows[1:MAX_ROWS]:
+                for row in data_rows[:MAX_ROWS]:
                     cleaned_row = [
                         str(cell).strip().replace("\n", " ")
                         for cell in row
@@ -1503,7 +1512,7 @@ def vector_search_source(
             res = search_client.search(
                 search_text=q,
                 vector_queries=[vq],
-                filter=doc_filter,
+                # filter=doc_filter,
                 select=[
                     "id", "doc_id", "text", "chunk_type", "heading_path",
                     "page_numbers", "source_block_ids",
@@ -1760,7 +1769,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     3. Source Evidence (facts, INCLUDING TABLES)
     """
 
-    query = query = state.get("query", "")
+    query = state.get("query", "")
 
     # -------------------------------------------------
     # PICK ACTIVE AUTHORING CONTROL
@@ -2099,22 +2108,19 @@ When using table data:
 ────────────────────────
 MANDATORY TABLE RENDERING RULE
 ────────────────────────
+IF Output Style = verbatim:
 
-If SOURCE_CONTEXT contains tabular data (explicit table structure, rows, headers, or structured records):
+- Tables MUST be rendered as tables.
+- All rows, columns, and cell values MUST be preserved exactly.
+- Tables MUST NOT be flattened into paragraphs, bullets, or narrative text.
 
-- The table MUST be rendered as a table.
-- Table structure MUST be preserved.
-- Column order MUST be preserved.
-- Row order MUST be preserved.
-- Headers MUST be preserved exactly (numbering removed if present).
-- Cells MUST contain only explicit cell content.
-- Tables MUST NOT be flattened into paragraphs.
-- Tables MUST NOT be converted into bullets.
-- Tables MUST NOT be summarized.
+IF Output Style = regulatory author:
 
-If a table exists in SOURCE_CONTEXT, the output MUST include it in table format.
-
-This rule overrides prose optimization behavior.
+- Table data MAY be transformed into narrative form when necessary for regulatory clarity.
+- All factual values from the table MUST remain unchanged.
+- No rows, columns, or values may be omitted unless they are structurally irrelevant to the section being authored.
+- No new information may be introduced.
+- Narrative text MUST remain fully traceable to the original table cells in SOURCE_CONTEXT.
 
 ────────────────────────
 SECTION AUTHORING CONTROL
@@ -2159,7 +2165,7 @@ Before writing any content:
 
 IF Output Style = verbatim:
   • ALL structural elements MUST be rendered.
-  • Structural elements are IMMUTABLE TOKENS.
+  • Headings and paragraph text are IMMUTABLE TOKENS.
   • You MUST NOT omit, merge, flatten, or downgrade structure.
   • Preserve hierarchy exactly as written.
 
@@ -2203,8 +2209,8 @@ FORMAT & STRUCTURE ENFORCEMENT
   • Be formatted in **bold markdown**
   • Preserve original wording EXACTLY as written, including numeric prefixes.
 - Content MUST appear immediately under its heading.
-- Use plain paragraphs by default.
-- Use bullets or tables ONLY if present in SOURCE_CONTEXT or required for clarity.
+- Use plain paragraphs by default for non-tabular content.
+- If SOURCE_CONTEXT contains tabular data, it MUST be rendered as a table. Bullets may be used only if present in SOURCE_CONTEXT.
 
 ────────────────────────
 HALLUCINATION PREVENTION (NON-NEGOTIABLE)
@@ -2323,5 +2329,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Summary of Subject Demographics Safety Population - RP Patients in tabular along with all the subgroups in tabular", [])
+# answer("Summary of Subject Demographics Safety Population - RP Patients ", [])
 # answer("Summarize Investigational Product", [])
