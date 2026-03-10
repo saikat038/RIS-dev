@@ -2135,6 +2135,7 @@ IF Output Style = verbatim:
 - Tables MUST be rendered as tables.
 - All rows, columns, and cell values MUST be preserved exactly.
 - Tables MUST NOT be flattened into paragraphs, bullets, or narrative text.
+- The entire table including all subgroup rows must be rendered; row selection or omission is not permitted.
 
 IF Output Style = regulatory author:
 
@@ -2351,5 +2352,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Duration of Treatment", [])
+# answer("Summary of Subject Demographics Safety Population - RP Patients", [])
 # answer("Summarize Investigational Product", [])
