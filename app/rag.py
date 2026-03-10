@@ -1523,8 +1523,30 @@ def vector_search_source(
             )
 
             # Filter by minimum score
-            res_list = list(res)          # consume iterator once
-            good_hits = [dict(r) for r in res_list]   # keep all hits
+            res_list = list(res)
+
+            good_hits = []
+
+            for r in res_list:
+                d = dict(r)
+
+                ordered = {
+                    "doc_id": d.get("doc_id"),
+                    "table_context_heading": d.get("table_context_heading"),
+                    "table_headers": d.get("table_headers"),
+                    "table_rows": d.get("table_rows"),
+                    "text": d.get("text"),
+                    "source_block_ids": d.get("source_block_ids"),
+                    "page_numbers": d.get("page_numbers"),
+                    "heading_path": d.get("heading_path"),
+                    "chunk_type": d.get("chunk_type"),
+                    "id": d.get("id"),
+                    "table_context_text": d.get("table_context_text"),
+                    "table_semantic_hint": d.get("table_semantic_hint"),
+                    "@search.score": d.get("@search.score")
+                }
+
+                good_hits.append(ordered)
 
             print(f"Query '{q[:60]}...' returned {len(res_list)} hits → kept {len(good_hits)}")
 
