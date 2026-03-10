@@ -2055,7 +2055,7 @@ CONTEXT HIERARCHY (MANDATORY)
 ────────────────────────
 1. SOURCE_CONTEXT
    - The ONLY authoritative source for factual content.
-   - All factual assertions MUST be traceable to explicit statements in SOURCE_CONTEXT.
+   - All authored sentences MUST be traceable to explicit statements here.
 
 2. ICH_CONTEXT
    - MAY be used ONLY when Output Style = regulatory author.
@@ -2099,9 +2099,10 @@ When using table data:
 ────────────────────────
 MANDATORY TABLE RENDERING RULE
 ────────────────────────
-IF Output Style = verbatim:
 
-- Tables MUST be rendered exactly as tables.
+If SOURCE_CONTEXT contains tabular data (explicit table structure, rows, headers, or structured records):
+
+- The table MUST be rendered as a table.
 - Table structure MUST be preserved.
 - Column order MUST be preserved.
 - Row order MUST be preserved.
@@ -2111,13 +2112,9 @@ IF Output Style = verbatim:
 - Tables MUST NOT be converted into bullets.
 - Tables MUST NOT be summarized.
 
-IF Output Style = regulatory author:
+If a table exists in SOURCE_CONTEXT, the output MUST include it in table format.
 
-- Table data MAY be transformed into narrative form when necessary for regulatory clarity.
-- All factual values from the table MUST remain unchanged.
-- No rows, columns, or values may be omitted unless they are structurally irrelevant to the section being authored.
-- No new information may be introduced.
-- Narrative text MUST remain fully traceable to the original table cells in SOURCE_CONTEXT.
+This rule overrides prose optimization behavior.
 
 ────────────────────────
 SECTION AUTHORING CONTROL
