@@ -2202,7 +2202,7 @@ FORMAT & STRUCTURE ENFORCEMENT
   • Preserve original wording EXACTLY as written, including numeric prefixes.
 - Content MUST appear immediately under its heading.
 - Use plain paragraphs by default for non-tabular content.
-- Bullets may be used only if present in SOURCE_CONTEXT.
+- If SOURCE_CONTEXT contains tabular data, it MUST be rendered as a table. Bullets may be used only if present in SOURCE_CONTEXT.
 
 ────────────────────────
 HALLUCINATION PREVENTION (NON-NEGOTIABLE)
