@@ -2101,9 +2101,15 @@ MANDATORY TABLE RENDERING RULE
 ────────────────────────
 IF Output Style = verbatim:
 
-- Tables MUST be rendered as tables.
-- All rows, columns, and cell values MUST be preserved exactly.
-- Tables MUST NOT be flattened into paragraphs, bullets, or narrative text.
+- Tables MUST be rendered exactly as tables.
+- Table structure MUST be preserved.
+- Column order MUST be preserved.
+- Row order MUST be preserved.
+- Headers MUST be preserved exactly (numbering removed if present).
+- Cells MUST contain only explicit cell content.
+- Tables MUST NOT be flattened into paragraphs.
+- Tables MUST NOT be converted into bullets.
+- Tables MUST NOT be summarized.
 
 IF Output Style = regulatory author:
 
@@ -2156,7 +2162,7 @@ Before writing any content:
 
 IF Output Style = verbatim:
   • ALL structural elements MUST be rendered.
-  • Headings and paragraph text are IMMUTABLE TOKENS.
+  • Structural elements are IMMUTABLE TOKENS.
   • You MUST NOT omit, merge, flatten, or downgrade structure.
   • Preserve hierarchy exactly as written.
 
@@ -2200,8 +2206,8 @@ FORMAT & STRUCTURE ENFORCEMENT
   • Be formatted in **bold markdown**
   • Preserve original wording EXACTLY as written, including numeric prefixes.
 - Content MUST appear immediately under its heading.
-- Use plain paragraphs by default for non-tabular content.
-- If SOURCE_CONTEXT contains tabular data, it MUST be rendered as a table. Bullets may be used only if present in SOURCE_CONTEXT.
+- Use plain paragraphs by default.
+- Use bullets or tables ONLY if present in SOURCE_CONTEXT or required for clarity.
 
 ────────────────────────
 HALLUCINATION PREVENTION (NON-NEGOTIABLE)
