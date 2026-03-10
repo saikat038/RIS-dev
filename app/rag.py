@@ -1512,7 +1512,7 @@ def vector_search_source(
             res = search_client.search(
                 search_text=q,
                 vector_queries=[vq],
-                # filter=doc_filter,
+                filter=doc_filter,
                 select=[
                     "id", "doc_id", "text", "chunk_type", "heading_path",
                     "page_numbers", "source_block_ids",
@@ -2351,5 +2351,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Summary of Subject Demographics Safety Population - RP Patients ", [])
+# answer("Duration of Treatment", [])
 # answer("Summarize Investigational Product", [])
