@@ -2099,9 +2099,10 @@ When using table data:
 ────────────────────────
 MANDATORY TABLE RENDERING RULE
 ────────────────────────
-IF Output Style = verbatim:
 
-- Tables MUST be rendered exactly as tables.
+If SOURCE_CONTEXT contains tabular data (explicit table structure, rows, headers, or structured records):
+
+- The table MUST be rendered as a table.
 - Table structure MUST be preserved.
 - Column order MUST be preserved.
 - Row order MUST be preserved.
@@ -2111,13 +2112,9 @@ IF Output Style = verbatim:
 - Tables MUST NOT be converted into bullets.
 - Tables MUST NOT be summarized.
 
-IF Output Style = regulatory author:
+If a table exists in SOURCE_CONTEXT, the output MUST include it in table format.
 
-- Table data MAY be transformed into narrative form when necessary for regulatory clarity.
-- All factual values from the table MUST remain unchanged.
-- No rows, columns, or values may be omitted unless they are structurally irrelevant to the section being authored.
-- No new information may be introduced.
-- Narrative text MUST remain fully traceable to the original table cells in SOURCE_CONTEXT.
+This rule overrides prose optimization behavior.
 
 ────────────────────────
 SECTION AUTHORING CONTROL
@@ -2162,8 +2159,7 @@ Before writing any content:
 
 IF Output Style = verbatim:
   • ALL structural elements MUST be rendered.
-  • Headings and paragraph text are IMMUTABLE TOKENS.
-  • Tabular data MUST be reconstructed as a table while preserving all cell values and row order.
+  • Structural elements are IMMUTABLE TOKENS.
   • You MUST NOT omit, merge, flatten, or downgrade structure.
   • Preserve hierarchy exactly as written.
 
@@ -2208,7 +2204,7 @@ FORMAT & STRUCTURE ENFORCEMENT
   • Preserve original wording EXACTLY as written, including numeric prefixes.
 - Content MUST appear immediately under its heading.
 - Use plain paragraphs by default.
-- If SOURCE_CONTEXT contains tabular data, it MUST be rendered as a table. Bullets may be used only if present in SOURCE_CONTEXT.
+- Use bullets or tables ONLY if present in SOURCE_CONTEXT or required for clarity.
 
 ────────────────────────
 HALLUCINATION PREVENTION (NON-NEGOTIABLE)
