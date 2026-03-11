@@ -2130,6 +2130,8 @@ When using table data:
 ────────────────────────
 MANDATORY TABLE RENDERING RULE
 ────────────────────────
+chunks with same table_context_heading belong to the same table
+
 IF Output Style = verbatim:
 
 - Tables MUST be rendered as tables.
