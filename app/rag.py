@@ -2122,7 +2122,7 @@ STRICT RULE:
 STRICT TABLE SAFETY RULE
 ────────────────────────
 When using table data:
-1. Identify the exact row(s) used.
+1. 1. Identify the exact row(s) used ONLY when performing analytical operations. In verbatim mode the full table must be rendered.
 2. Use ONLY explicit cell content.
 3. A single cell may be decomposed into multiple items ONLY if explicitly written.
 4. Do NOT infer missing cells, relationships, or intent.
