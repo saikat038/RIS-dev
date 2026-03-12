@@ -424,7 +424,7 @@ OUTPUT_NAME = "CSR_filled.docx"
 # ============================================================
 
 SECTION_TO_TEMPLATE_VAR = {
-    "Clinical Trial Synopsis": "clinical_trial_synopsis",
+    "Synopsis": "clinical_trial_synopsis",
     "Independent Ethics Committee (IEC)/Institutional Review Board (IRB)": "iec_irb",
     "Ethical Conduct of Study": "ethical_conduct_of_study",
     "STUDY OBJECTIVES AND ENDPOINTS": "Stdy_objectives",
@@ -438,10 +438,12 @@ SECTION_TO_TEMPLATE_VAR = {
     "Duration of Treatment": "Dose_timing_pt",
     "Concomitant Medications and Procedures": "Prior_concom_trt",
     "Treatment compliance": "Trt_compliance",
-
+    "Independent ethics committee (iec) or institutional review board (irb)": "iec_irb",
+    "Ethical conduct of the study": "ethical_conduct_of_study",
+    "ASSESSMENT OF EFFICACY AND EXPLORATORY EVALUATIONS": "Primary_eff_vars",
+    "QUALITY CONTROL AND QUALITY ASSURANCE": "Data_QA",
     "Summary of Subject Demographics Safety Population - RP Patients": "safety_p_rp_p",
     "Subject Information and Consent": "subject_information_and_consent",
-
 
 }
 
