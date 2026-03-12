@@ -443,7 +443,7 @@ SECTION_TO_TEMPLATE_VAR = {
     "ASSESSMENT OF EFFICACY AND EXPLORATORY EVALUATIONS": "Primary_eff_vars",
     "QUALITY CONTROL AND QUALITY ASSURANCE": "Data_QA",
     "Summary of Subject Demographics Safety Population - RP Patients": "safety_p_rp_p",
-    "Subject Information and Consent": "subject_information_and_consent",
+    "Patient Information and Consent": "subject_information_and_consent",
 
 }
 
