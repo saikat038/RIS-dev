@@ -401,7 +401,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import re
 from io import BytesIO
 from typing import Dict
-
+from docx.shared import Pt
 from docxtpl import DocxTemplate, RichText
 from azure.storage.blob import BlobServiceClient
 from config.settings import (
@@ -610,12 +610,19 @@ def build_word_table_from_pipe_text(doc: Document, raw_table_text: str):
                 for match in re.finditer(r"\*\*(.*?)\*\*", value):
                     start, end = match.span()
                     if start > pos:
-                        cell.paragraphs[0].add_run(value[pos:start])
+                        run = cell.paragraphs[0].add_run(value[pos:start])
+                        run.font.size = Pt(9)
                     run = cell.paragraphs[0].add_run(match.group(1))
                     run.bold = True
+                    run.font.size = Pt(9)
                     pos = end
                 if pos < len(value):
-                    cell.paragraphs[0].add_run(value[pos:])
+                    run = cell.paragraphs[0].add_run(value[pos:])
+                    run.font.size = Pt(9)
+
+                if is_header:
+                    for run in cell.paragraphs[0].runs:
+                        run.bold = True
 
                 if c_idx > 0:
                     cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
