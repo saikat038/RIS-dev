@@ -693,10 +693,31 @@ def normalize_prefix(prefix: str) -> str:
     return prefix.rstrip("/")
 
 
-def is_pipe_table(text: str) -> bool:
-    lines = [l.strip() for l in text.split("\n") if l.strip()]
-    pipe_lines = [l for l in lines if "|" in l]
-    return len(pipe_lines) >= 2
+def split_text_and_table(text: str):
+    """
+    Splits LLM output into:
+    - paragraph text
+    - pipe table text
+
+    Returns (paragraph, table)
+    """
+
+    lines = text.split("\n")
+
+    table_start = None
+
+    for i, line in enumerate(lines):
+        if "|" in line and "---" in line:
+            table_start = i - 1
+            break
+
+    if table_start is None:
+        return text.strip(), None
+
+    paragraph = "\n".join(lines[:table_start]).strip()
+    table = "\n".join(lines[table_start:]).strip()
+
+    return paragraph, table
 
 
 def render_all_sections():
@@ -732,12 +753,14 @@ def render_all_sections():
         if not template_var:
             continue
 
-        if is_pipe_table(llm_text):
+        paragraph, table = split_text_and_table(llm_text)
+
+        if table:
             marker = f"__TABLE_MARKER_{template_var}__"
-            context[template_var] = marker
-            table_sections[marker] = llm_text
+            context[template_var] = markdown_to_richtext(paragraph) + marker
+            table_sections[marker] = table
         else:
-            context[template_var] = markdown_to_richtext(llm_text)
+            context[template_var] = markdown_to_richtext(paragraph)
 
     # ---------------------------------
     # 2️⃣ First pass render (docxtpl)
