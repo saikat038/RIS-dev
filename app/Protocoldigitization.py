@@ -551,7 +551,10 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
     table_data = parse_pipe_table(raw_table_text)
 
     for paragraph in list(doc.paragraphs):
-        if placeholder not in paragraph.text:
+
+        full_text = "".join(run.text for run in paragraph.runs)
+
+        if placeholder not in full_text:
             continue
 
         parent = paragraph._element.getparent()
@@ -654,7 +657,7 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
 
         # Insert table and remove placeholder
         parent.insert(index, table._element)
-        parent.remove(paragraph._element)
+        paragraph.text = paragraph.text.replace(placeholder, "")
         break
 
 # ============================================================
