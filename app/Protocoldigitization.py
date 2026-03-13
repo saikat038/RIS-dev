@@ -713,36 +713,53 @@ def normalize_prefix(prefix: str) -> str:
     return prefix.rstrip("/")
 
 
-def split_text_and_table(text: str):
+def split_into_blocks(text: str):
     """
-    Splits paragraph text from markdown pipe table.
-    Keeps captions like 'Table 6: ...' in paragraph section.
+    Parse LLM output into ordered blocks of:
+    text or table.
+    Works for ANY sequence.
     """
 
     lines = [l.rstrip() for l in text.split("\n")]
 
-    table_start = None
+    blocks = []
+    buffer = []
+    in_table = False
 
-    for i, line in enumerate(lines):
+    for line in lines:
 
         stripped = line.strip()
 
-        # Detect real markdown table row
-        if (
+        is_table_line = (
             stripped.startswith("|")
             and stripped.endswith("|")
             and stripped.count("|") >= 2
-        ):
-            table_start = i
-            break
+        )
 
-    if table_start is None:
-        return text.strip(), None
+        if is_table_line:
 
-    paragraph = "\n".join(lines[:table_start]).strip()
-    table = "\n".join(lines[table_start:]).strip()
+            if not in_table:
+                if buffer:
+                    blocks.append(("text", "\n".join(buffer).strip()))
+                    buffer = []
+                in_table = True
 
-    return paragraph, table
+            buffer.append(line)
+
+        else:
+
+            if in_table:
+                blocks.append(("table", "\n".join(buffer).strip()))
+                buffer = []
+                in_table = False
+
+            buffer.append(line)
+
+    if buffer:
+        block_type = "table" if in_table else "text"
+        blocks.append((block_type, "\n".join(buffer).strip()))
+
+    return blocks
 
 
 def render_all_sections():
@@ -778,20 +795,28 @@ def render_all_sections():
         if not template_var:
             continue
 
-        paragraph, table = split_text_and_table(llm_text)
+        blocks = split_into_blocks(llm_text)
 
-        if table:
-            marker = f"<<TABLE_{template_var}>>"
+        rt = RichText()
+        table_counter = 0
 
-            rt = markdown_to_richtext(paragraph)
-            rt.add("\n")   # spacing before table
-            rt.add(marker)
+        for block_type, content in blocks:
 
-            context[template_var] = rt
-            table_sections[marker] = table
+            if block_type == "text":
+                rt.add(content)
+                rt.add("\n")
 
-        else:
-            context[template_var] = markdown_to_richtext(paragraph)
+            elif block_type == "table":
+
+                marker = f"<<TABLE_{template_var}_{table_counter}>>"
+
+                rt.add(marker)
+                rt.add("\n")
+
+                table_sections[marker] = content
+                table_counter += 1
+
+        context[template_var] = rt
 
     # ---------------------------------
     # 2️⃣ First pass render (docxtpl)
