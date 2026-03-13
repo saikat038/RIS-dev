@@ -550,6 +550,8 @@ def apply_table_borders(table):
 def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: str):
     table_data = parse_pipe_table(raw_table_text)
 
+    paragraph = None
+
     for p in doc.element.body.iter():
 
         if p.tag.endswith('p'):  # paragraph element
@@ -560,114 +562,116 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
 
             full_text = "".join(texts)
 
-            if placeholder not in full_text:
-                continue
+            if placeholder in full_text:
+                from docx.text.paragraph import Paragraph
+                paragraph = Paragraph(p, doc)
+                break
 
-            paragraph = Document().add_paragraph()  # temp wrapper
-            paragraph._element = p
+    if paragraph is None:
+        print(f"⚠️ Marker not found: {placeholder}")
+        return
 
-        parent = paragraph._element.getparent()
-        index = parent.index(paragraph._element)
+    parent = paragraph._element.getparent()
+    index = parent.index(paragraph._element)
 
-        # ─── We will build the final table data with possible extra rows ───
-        final_table_rows = []           # list of row_data lists
+    # ─── We will build the final table data with possible extra rows ───
+    final_table_rows = []           # list of row_data lists
 
-        for original_row_idx, row_data in enumerate(table_data):
-            is_header = (original_row_idx == 0)
-            is_section_row = all(cell.strip() == "" for cell in row_data[1:])
+    for original_row_idx, row_data in enumerate(table_data):
+        is_header = (original_row_idx == 0)
+        is_section_row = all(cell.strip() == "" for cell in row_data[1:])
 
-            # Check if any cell in this row needs splitting
-            split_results = []
-            needs_split = False
-            max_splits = 1
+        # Check if any cell in this row needs splitting
+        split_results = []
+        needs_split = False
+        max_splits = 1
 
-            for cell_text in row_data:
-                chunks = split_tall_cell(cell_text)
-                split_results.append(chunks)
-                max_splits = max(max_splits, len(chunks))
-                if len(chunks) > 1:
-                    needs_split = True
+        for cell_text in row_data:
+            chunks = split_tall_cell(cell_text)
+            split_results.append(chunks)
+            max_splits = max(max_splits, len(chunks))
+            if len(chunks) > 1:
+                needs_split = True
 
-            if not needs_split:
-                # Normal row — add as is
-                final_table_rows.append(row_data)
-                continue
+        if not needs_split:
+            # Normal row — add as is
+            final_table_rows.append(row_data)
+            continue
 
-            # ─── Row needs splitting → create max_splits copies ───
-            for chunk_idx in range(max_splits):
-                new_row = []
-                for col_idx, chunks in enumerate(split_results):
-                    if chunk_idx < len(chunks):
-                        new_row.append(chunks[chunk_idx])
-                    else:
-                        new_row.append("")  # empty in continuation rows
-                final_table_rows.append(new_row)
+        # ─── Row needs splitting → create max_splits copies ───
+        for chunk_idx in range(max_splits):
+            new_row = []
+            for col_idx, chunks in enumerate(split_results):
+                if chunk_idx < len(chunks):
+                    new_row.append(chunks[chunk_idx])
+                else:
+                    new_row.append("")  # empty in continuation rows
+            final_table_rows.append(new_row)
 
-        # ─── Now create the actual table with final rows ───
-        rows_count = len(final_table_rows)
-        cols = len(table_data[0]) if table_data else 0
+    # ─── Now create the actual table with final rows ───
+    rows_count = len(final_table_rows)
+    cols = len(table_data[0]) if table_data else 0
 
-        table = doc.add_table(rows=rows_count, cols=cols)
-        table.alignment = WD_TABLE_ALIGNMENT.CENTER
-        apply_table_borders(table)
+    table = doc.add_table(rows=rows_count, cols=cols)
+    table.alignment = WD_TABLE_ALIGNMENT.CENTER
+    apply_table_borders(table)
 
-        current_row_idx = 0
+    current_row_idx = 0
 
-        for original_row_idx, orig_row_data in enumerate(table_data):
-            is_header = (original_row_idx == 0)
-            is_section_row = all(cell.strip() == "" for cell in orig_row_data[1:])
+    for original_row_idx, orig_row_data in enumerate(table_data):
+        is_header = (original_row_idx == 0)
+        is_section_row = all(cell.strip() == "" for cell in orig_row_data[1:])
 
-            # How many continuation rows were created for this original row?
-            split_results = [split_tall_cell(c) for c in orig_row_data]
-            row_span_count = max(len(chunks) for chunks in split_results) if split_results else 1
+        # How many continuation rows were created for this original row?
+        split_results = [split_tall_cell(c) for c in orig_row_data]
+        row_span_count = max(len(chunks) for chunks in split_results) if split_results else 1
 
-            for chunk_idx in range(row_span_count):
-                row_data = final_table_rows[current_row_idx]
-                tr = table.rows[current_row_idx]._tr
-                trPr = tr.get_or_add_trPr()
+        for chunk_idx in range(row_span_count):
+            row_data = final_table_rows[current_row_idx]
+            tr = table.rows[current_row_idx]._tr
+            trPr = tr.get_or_add_trPr()
 
-                # Only protect the very first header row
-                if is_header and chunk_idx == 0:
-                    trPr.append(OxmlElement('w:cantSplit'))
-                    trPr.append(OxmlElement('w:tblHeader'))
+            # Only protect the very first header row
+            if is_header and chunk_idx == 0:
+                trPr.append(OxmlElement('w:cantSplit'))
+                trPr.append(OxmlElement('w:tblHeader'))
 
-                # Optional: protect section rows (if you want)
-                # if is_section_row and chunk_idx == 0:
-                #     trPr.append(OxmlElement('w:cantSplit'))
+            # Optional: protect section rows (if you want)
+            # if is_section_row and chunk_idx == 0:
+            #     trPr.append(OxmlElement('w:cantSplit'))
 
-                for c_idx, value in enumerate(row_data):
-                    cell = table.rows[current_row_idx].cells[c_idx]
-                    cell.paragraphs[0].clear()
+            for c_idx, value in enumerate(row_data):
+                cell = table.rows[current_row_idx].cells[c_idx]
+                cell.paragraphs[0].clear()
 
-                    # Bold parsing (unchanged)
-                    pos = 0
-                    for match in re.finditer(r"\*\*(.*?)\*\*", value):
-                        start, end = match.span()
-                        if start > pos:
-                            cell.paragraphs[0].add_run(value[pos:start])
-                        run = cell.paragraphs[0].add_run(match.group(1))
+                # Bold parsing (unchanged)
+                pos = 0
+                for match in re.finditer(r"\*\*(.*?)\*\*", value):
+                    start, end = match.span()
+                    if start > pos:
+                        cell.paragraphs[0].add_run(value[pos:start])
+                    run = cell.paragraphs[0].add_run(match.group(1))
+                    run.bold = True
+                    pos = end
+                if pos < len(value):
+                    cell.paragraphs[0].add_run(value[pos:])
+
+                # Alignment
+                if c_idx > 0:
+                    cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
+                else:
+                    cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.LEFT
+
+                # Bold whole section row
+                if is_section_row and chunk_idx == 0:  # only first chunk
+                    for run in cell.paragraphs[0].runs:
                         run.bold = True
-                        pos = end
-                    if pos < len(value):
-                        cell.paragraphs[0].add_run(value[pos:])
 
-                    # Alignment
-                    if c_idx > 0:
-                        cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
-                    else:
-                        cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.LEFT
+            current_row_idx += 1
 
-                    # Bold whole section row
-                    if is_section_row and chunk_idx == 0:  # only first chunk
-                        for run in cell.paragraphs[0].runs:
-                            run.bold = True
-
-                current_row_idx += 1
-
-        # Insert table and remove placeholder
-        paragraph.text = paragraph.text.replace(placeholder, "")
-        parent.insert(index + 1, table._element)
-        break
+    # Insert table and remove placeholder
+    paragraph.text = paragraph.text.replace(placeholder, "").strip()
+    parent.insert(index + 1, table._element)
 
 # ============================================================
 # STATE HELPERS (UNCHANGED)
