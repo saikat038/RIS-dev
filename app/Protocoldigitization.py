@@ -550,19 +550,21 @@ def apply_table_borders(table):
 def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: str):
     table_data = parse_pipe_table(raw_table_text)
 
-    for paragraph in list(doc.paragraphs):
+    for p in doc.element.body.iter():
 
-        full_text = paragraph.text
+        if p.tag.endswith('p'):  # paragraph element
+            texts = [t.text for t in p.iter() if t.text]
 
-        # also check run-by-run
-        if placeholder not in full_text:
-            for run in paragraph.runs:
-                if placeholder in run.text:
-                    full_text = run.text
-                    break
+            if not texts:
+                continue
 
-        if placeholder not in full_text:
-            continue
+            full_text = "".join(texts)
+
+            if placeholder not in full_text:
+                continue
+
+            paragraph = Document().add_paragraph()  # temp wrapper
+            paragraph._element = p
 
         parent = paragraph._element.getparent()
         index = parent.index(paragraph._element)
@@ -663,8 +665,8 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
                 current_row_idx += 1
 
         # Insert table and remove placeholder
-        parent.insert(index + 1, table._element)
         paragraph.text = paragraph.text.replace(placeholder, "")
+        parent.insert(index + 1, table._element)
         break
 
 # ============================================================
@@ -762,7 +764,7 @@ def render_all_sections():
         paragraph, table = split_text_and_table(llm_text)
 
         if table:
-            marker = f"__TABLE_MARKER_{template_var}__"
+            marker = f"<<TABLE_{template_var}>>"
 
             rt = markdown_to_richtext(paragraph)
             rt.add("\n")   # spacing before table
