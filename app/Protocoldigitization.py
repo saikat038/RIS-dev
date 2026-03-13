@@ -779,8 +779,9 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
 
     # remove marker text
     for node in target_paragraph._element.iter():
-        if node.text and placeholder in node.text:
-            node.text = node.text.replace(placeholder, "")
+        if node.tag.endswith("}t"):  # Word text node
+            if node.text and placeholder in node.text:
+                node.text = node.text.replace(placeholder, "")
 
     # insert blocks in exact order
     for block_type, content in blocks:
@@ -831,7 +832,7 @@ def render_all_sections():
 
         blocks = split_into_blocks(llm_text)
 
-        section_marker = f"[[[SECTION_{template_var}]]]"
+        section_marker = f"__SECTION_{template_var}__"
         context[template_var] = section_marker
         table_sections[section_marker] = blocks
 
