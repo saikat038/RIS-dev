@@ -715,50 +715,45 @@ def normalize_prefix(prefix: str) -> str:
 
 def split_into_blocks(text: str):
     """
-    Split text into ordered blocks: ('text', content) or ('table', content)
-    Detects real Markdown tables using the header + separator rule.
+    Parse LLM output into ordered blocks of:
+    text or table.
+    Works for ANY sequence.
     """
 
-    lines = text.split("\n")
+    lines = [l.rstrip() for l in text.split("\n")]
+
     blocks = []
+    buffer = []
+    in_table = False
 
-    text_buffer = []
-    i = 0
-    n = len(lines)
+    for line in lines:
 
-    def flush_text():
-        nonlocal text_buffer
-        if text_buffer:
-            blocks.append(("text", "\n".join(text_buffer).strip()))
-            text_buffer = []
-
-    while i < n:
-        line = lines[i].rstrip()
         stripped = line.strip()
 
-        # Check for Markdown table start
-        if (
-            stripped.startswith("|")
-            and i + 1 < n
-            and re.match(r"^\|\s*[-:]+", lines[i + 1].strip())
-        ):
-            flush_text()
+        is_table_line = stripped.startswith("|")
 
-            table_lines = [line, lines[i + 1]]
-            i += 2
+        if is_table_line:
 
-            # Collect table rows
-            while i < n and lines[i].strip().startswith("|"):
-                table_lines.append(lines[i])
-                i += 1
+            if not in_table:
+                if buffer:
+                    blocks.append(("text", "\n".join(buffer).strip()))
+                    buffer = []
+                in_table = True
 
-            blocks.append(("table", "\n".join(table_lines)))
-            continue
+            buffer.append(line)
 
-        text_buffer.append(line)
-        i += 1
+        else:
 
-    flush_text()
+            if in_table:
+                blocks.append(("table", "\n".join(buffer).strip()))
+                buffer = []
+                in_table = False
+
+            buffer.append(line)
+
+    if buffer:
+        block_type = "table" if in_table else "text"
+        blocks.append((block_type, "\n".join(buffer).strip()))
 
     return blocks
 
@@ -804,23 +799,14 @@ def render_all_sections():
         for block_type, content in blocks:
 
             if block_type == "text":
-
-                lines = content.split("\n")
-
-                for i, line in enumerate(lines):
-
-                    formatted = markdown_to_richtext(line)
-                    rt.add(formatted)
-
-                    # preserve paragraph breaks
-                    if i < len(lines) - 1:
-                        rt.add("\n")
+                formatted = markdown_to_richtext(content)
+                rt.add(formatted)
+                rt.add("\n")
 
             elif block_type == "table":
 
                 marker = f"<<TABLE_{template_var}_{table_counter}>>"
 
-                rt.add("\n")
                 rt.add(marker)
                 rt.add("\n")
 
