@@ -705,20 +705,16 @@ def normalize_prefix(prefix: str) -> str:
 
 def split_text_and_table(text: str):
     """
-    Splits LLM output into:
-    - paragraph text
-    - pipe table text
-
-    Returns (paragraph, table)
+    Detects Markdown pipe tables reliably.
     """
 
-    lines = text.split("\n")
+    lines = [l.rstrip() for l in text.split("\n")]
 
     table_start = None
 
     for i, line in enumerate(lines):
-        if "|" in line and "---" in line:
-            table_start = i - 1
+        if line.count("|") >= 2:
+            table_start = i
             break
 
     if table_start is None:
