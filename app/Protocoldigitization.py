@@ -552,7 +552,14 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
 
     for paragraph in list(doc.paragraphs):
 
-        full_text = "".join(run.text for run in paragraph.runs)
+        full_text = paragraph.text
+
+        # also check run-by-run
+        if placeholder not in full_text:
+            for run in paragraph.runs:
+                if placeholder in run.text:
+                    full_text = run.text
+                    break
 
         if placeholder not in full_text:
             continue
@@ -656,7 +663,7 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
                 current_row_idx += 1
 
         # Insert table and remove placeholder
-        parent.insert(index, table._element)
+        parent.insert(index + 1, table._element)
         paragraph.text = paragraph.text.replace(placeholder, "")
         break
 
