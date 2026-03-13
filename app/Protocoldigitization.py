@@ -670,7 +670,9 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
             current_row_idx += 1
 
     # Insert table and remove placeholder
-    paragraph.text = paragraph.text.replace(placeholder, "").strip()
+    for run in paragraph.runs:
+        if placeholder in run.text:
+            run.text = run.text.replace(placeholder, "")
     parent.insert(index + 1, table._element)
 
 # ============================================================
