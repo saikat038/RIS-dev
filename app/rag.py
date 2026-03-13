@@ -1301,10 +1301,15 @@ def format_chunk_for_context(chunk: Dict) -> str:
                 MAX_ROWS = 50
 
                 for row in data_rows[:MAX_ROWS]:
-                    cleaned_row = [
-                        str(cell).strip().replace("\n", " ")
-                        for cell in row
-                    ]
+                    cleaned_row = []
+
+                    for cell in row:
+                        cell = str(cell).strip().replace("\n", " ")
+
+                        # normalize OCR checkbox artifacts
+                        cell = cell.replace(":selected:", "✗")
+
+                        cleaned_row.append(cell)
                     lines.append("| " + " | ".join(cleaned_row) + " |")
 
                 # Metadata
