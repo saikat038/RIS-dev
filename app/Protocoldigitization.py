@@ -715,45 +715,50 @@ def normalize_prefix(prefix: str) -> str:
 
 def split_into_blocks(text: str):
     """
-    Parse LLM output into ordered blocks of:
-    text or table.
-    Works for ANY sequence.
+    Split text into ordered blocks: ('text', content) or ('table', content)
+    Detects real Markdown tables using the header + separator rule.
     """
 
-    lines = [l.rstrip() for l in text.split("\n")]
-
+    lines = text.split("\n")
     blocks = []
-    buffer = []
-    in_table = False
 
-    for line in lines:
+    text_buffer = []
+    i = 0
+    n = len(lines)
 
+    def flush_text():
+        nonlocal text_buffer
+        if text_buffer:
+            blocks.append(("text", "\n".join(text_buffer).strip()))
+            text_buffer = []
+
+    while i < n:
+        line = lines[i].rstrip()
         stripped = line.strip()
 
-        is_table_line = stripped.startswith("|")
+        # Check for Markdown table start
+        if (
+            stripped.startswith("|")
+            and i + 1 < n
+            and re.match(r"^\|\s*[-:]+", lines[i + 1].strip())
+        ):
+            flush_text()
 
-        if is_table_line:
+            table_lines = [line, lines[i + 1]]
+            i += 2
 
-            if not in_table:
-                if buffer:
-                    blocks.append(("text", "\n".join(buffer).strip()))
-                    buffer = []
-                in_table = True
+            # Collect table rows
+            while i < n and lines[i].strip().startswith("|"):
+                table_lines.append(lines[i])
+                i += 1
 
-            buffer.append(line)
+            blocks.append(("table", "\n".join(table_lines)))
+            continue
 
-        else:
+        text_buffer.append(line)
+        i += 1
 
-            if in_table:
-                blocks.append(("table", "\n".join(buffer).strip()))
-                buffer = []
-                in_table = False
-
-            buffer.append(line)
-
-    if buffer:
-        block_type = "table" if in_table else "text"
-        blocks.append((block_type, "\n".join(buffer).strip()))
+    flush_text()
 
     return blocks
 
