@@ -804,14 +804,23 @@ def render_all_sections():
         for block_type, content in blocks:
 
             if block_type == "text":
-                formatted = markdown_to_richtext(content)
-                rt.add(formatted)
-                rt.add("\n")
+
+                lines = content.split("\n")
+
+                for i, line in enumerate(lines):
+
+                    formatted = markdown_to_richtext(line)
+                    rt.add(formatted)
+
+                    # preserve paragraph breaks
+                    if i < len(lines) - 1:
+                        rt.add("\n")
 
             elif block_type == "table":
 
                 marker = f"<<TABLE_{template_var}_{table_counter}>>"
 
+                rt.add("\n")
                 rt.add(marker)
                 rt.add("\n")
 
