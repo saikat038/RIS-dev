@@ -1307,9 +1307,13 @@ def format_chunk_for_context(chunk: Dict) -> str:
                         cell = str(cell).strip().replace("\n", " ")
 
                         # normalize OCR checkbox artifacts
-                        cell = cell.replace(":selected:", "✗")
+                        cell = cell.replace(":selected:", "✕")
+
+                        # normalize OCR symbol errors
+                        cell = cell.replace("士", "±")
 
                         cleaned_row.append(cell)
+                        
                     lines.append("| " + " | ".join(cleaned_row) + " |")
 
                 # Metadata
