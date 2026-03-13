@@ -982,19 +982,21 @@ if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
 import json
-from typing import List, Dict, TypedDict
-from azure.core.exceptions import HttpResponseError
-
+import re
+import json
 from openai import AzureOpenAI
-from langgraph.graph import StateGraph, END
-from azure.search.documents.models import VectorizedQuery
-from azure.search.documents import SearchClient
-from azure.core.credentials import AzureKeyCredential
-
-from ingest.embed import batch_embed
-from azure.storage.blob import BlobClient
+from typing import List, Dict, Any
 from Protocoldigitization import *
-
+from collections import defaultdict
+from ingest.embed import batch_embed
+from typing import List, Dict, TypedDict
+from azure.storage.blob import BlobClient
+from langgraph.graph import StateGraph, END
+from azure.search.documents import SearchClient
+from azure.core.exceptions import HttpResponseError
+from azure.core.credentials import AzureKeyCredential
+from azure.search.documents.models import VectorizedQuery
+from azure.search.documents.models import VectorizedQuery
 from config.settings import (
     # Chat model (authoring)
     AZURE_OPENAI_CHAT_API_KEY,
@@ -1293,7 +1295,7 @@ def format_chunk_for_context(chunk: Dict) -> str:
                     header = rows[0]
                     data_rows = rows[1:]
 
-                lines.append(" | ".join(header))
+                lines.append("| " + " | ".join(header) + " |")
                 lines.append("|" + "|".join(["---"] * len(header)) + "|")
 
                 MAX_ROWS = 50
@@ -1303,7 +1305,7 @@ def format_chunk_for_context(chunk: Dict) -> str:
                         str(cell).strip().replace("\n", " ")
                         for cell in row
                     ]
-                    lines.append(" | ".join(cleaned_row))
+                    lines.append("| " + " | ".join(cleaned_row) + " |")
 
                 # Metadata
                 meta = [f"type=table", f"pages={pages if pages else '?'}"]
@@ -1386,14 +1388,6 @@ def split_section(text: str):
 # ============================================================
 # VECTOR SEARCH (GENERIC, REUSED)
 # ============================================================
-import re
-import json
-from typing import List, Dict, Any
-from azure.search.documents.models import VectorizedQuery
-
-import re
-from typing import List, Dict, Any
-from azure.search.documents.models import VectorizedQuery
 
 def vector_search_ich(
     search_client,
@@ -1654,15 +1648,6 @@ def save_vector_search_results(
         print(f"Unexpected error while saving debug file {filename}: {e}")
 
 
-from collections import defaultdict
-import re
-
-from collections import defaultdict
-import re
-
-from collections import defaultdict
-import re
-
 def group_ich_by_section(chunks: list[dict], ich_refs: list[str] = None) -> dict:
     """
     ONLY keeps the section whose section_path matches a number in ich_refs.
@@ -1900,11 +1885,12 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     # with open("source_chunks_raw.txt", "w", encoding="utf-8") as f:
     #     f.write(str(source_chunks))
 
-    source_context_pieces = [
-        format_chunk_for_context(chunk)
-        for chunk in source_chunks
-        if format_chunk_for_context(chunk).strip()
-    ]
+    source_context_pieces = []
+
+    for chunk in source_chunks:
+        formatted = format_chunk_for_context(chunk)
+        if formatted.strip():
+            source_context_pieces.append(formatted)
 
     source_context = "\n\n".join(source_context_pieces) if source_context_pieces else "No source evidence found."
 
@@ -2355,4 +2341,4 @@ def answer(query: str, history: List[Dict]) -> str:
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
 # answer("Summary of Subject Demographics Safety Population - RP Patients", [])
-# answer("Summarize Investigational Product", [])
+answer("Investigational Product", [])
