@@ -757,8 +757,14 @@ def render_all_sections():
 
         if table:
             marker = f"__TABLE_MARKER_{template_var}__"
-            context[template_var] = markdown_to_richtext(paragraph) + marker
+
+            rt = markdown_to_richtext(paragraph)
+            rt.add("\n")   # spacing before table
+            rt.add(marker)
+
+            context[template_var] = rt
             table_sections[marker] = table
+
         else:
             context[template_var] = markdown_to_richtext(paragraph)
 
