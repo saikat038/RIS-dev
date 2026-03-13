@@ -427,7 +427,7 @@ SECTION_TO_TEMPLATE_VAR = {
     "Synopsis": "clinical_trial_synopsis",
     "Independent Ethics Committee (IEC)/Institutional Review Board (IRB)": "iec_irb",
     "Ethical Conduct of Study": "ethical_conduct_of_study",
-    "STUDY OBJECTIVES AND ENDPOINTS": "Stdy_objectives",
+    "STUDY OBJECTIVES": "Stdy_objectives",
     "INVESTIGATIONAL PLAN": "Overall_design_desc",
     "Inclusion Criteria": "Incl_crit",
     "Exclusion Criteria": "Excl_crit",
