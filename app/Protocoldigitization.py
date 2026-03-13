@@ -594,7 +594,6 @@ def build_word_table_from_pipe_text(doc: Document, raw_table_text: str):
     cols = len(table_data[0]) if table_data else 0
 
     table = doc.add_table(rows=rows_count, cols=cols)
-    table.style = "Table Grid"
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
     table.autofit = False
     for col in table.columns:
