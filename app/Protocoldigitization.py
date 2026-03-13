@@ -730,11 +730,7 @@ def split_into_blocks(text: str):
 
         stripped = line.strip()
 
-        is_table_line = (
-            stripped.startswith("|")
-            and stripped.endswith("|")
-            and stripped.count("|") >= 2
-        )
+        is_table_line = stripped.startswith("|")
 
         if is_table_line:
 
@@ -803,7 +799,8 @@ def render_all_sections():
         for block_type, content in blocks:
 
             if block_type == "text":
-                rt.add(content)
+                formatted = markdown_to_richtext(content)
+                rt.add(formatted)
                 rt.add("\n")
 
             elif block_type == "table":
