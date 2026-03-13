@@ -715,7 +715,8 @@ def normalize_prefix(prefix: str) -> str:
 
 def split_text_and_table(text: str):
     """
-    Detects Markdown pipe tables reliably.
+    Splits paragraph text from markdown pipe table.
+    Keeps captions like 'Table 6: ...' in paragraph section.
     """
 
     lines = [l.rstrip() for l in text.split("\n")]
@@ -723,7 +724,15 @@ def split_text_and_table(text: str):
     table_start = None
 
     for i, line in enumerate(lines):
-        if line.count("|") >= 2:
+
+        stripped = line.strip()
+
+        # Detect real markdown table row
+        if (
+            stripped.startswith("|")
+            and stripped.endswith("|")
+            and stripped.count("|") >= 2
+        ):
             table_start = i
             break
 
