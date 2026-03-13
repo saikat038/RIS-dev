@@ -804,8 +804,7 @@ def render_all_sections():
 
             if block_type == "text":
                 formatted = markdown_to_richtext(content)
-                for r in formatted:
-                    rt.add(r.text, bold=r.bold)
+                rt.add(formatted)
                 rt.add("\n")
 
             elif block_type == "table":
