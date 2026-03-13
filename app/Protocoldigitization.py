@@ -499,18 +499,29 @@ def split_tall_cell(text: str, max_lines: int = 15) -> list[str]:
     return chunks
 
 def parse_pipe_table(raw_text):
+
     lines = [l.strip() for l in raw_text.split("\n") if l.strip()]
-    lines = [l for l in lines if not re.match(r"^\|?-+\|", l)]
+
+    # remove markdown separator row
+    lines = [l for l in lines if not re.match(r"^\|\s*-+", l)]
 
     data = []
     max_cols = 0
 
     for line in lines:
+
         parts = [c.strip() for c in line.split("|")]
-        parts = [p for p in parts if p != ""]
+
+        # remove only outer pipes
+        if parts and parts[0] == "":
+            parts = parts[1:]
+        if parts and parts[-1] == "":
+            parts = parts[:-1]
+
         data.append(parts)
         max_cols = max(max_cols, len(parts))
 
+    # pad rows
     for row in data:
         while len(row) < max_cols:
             row.append("")
