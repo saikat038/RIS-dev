@@ -595,31 +595,6 @@ def build_word_table_from_pipe_text(doc: Document, raw_table_text: str):
 
     table = doc.add_table(rows=rows_count, cols=cols)
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
-
-    section = doc.sections[0]
-    page_width = section.page_width
-    left_margin = section.left_margin
-    right_margin = section.right_margin
-
-    usable_width = page_width - left_margin - right_margin
-
-    # Stretch wide tables
-    if cols >= 10:
-
-        section = doc.sections[0]
-        usable_width = section.page_width - section.left_margin - section.right_margin
-
-        col_width = int(usable_width / cols)
-
-        for col in table.columns:
-            col.width = col_width
-
-    else:
-        # default width behavior
-        table.autofit = True
-
-    
-
     for col in table.columns:
         col.width = Inches(2)
     apply_table_borders(table)
