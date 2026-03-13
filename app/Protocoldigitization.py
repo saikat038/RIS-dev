@@ -595,7 +595,6 @@ def build_word_table_from_pipe_text(doc: Document, raw_table_text: str):
 
     table = doc.add_table(rows=rows_count, cols=cols)
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
-    cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
 
     section = doc.sections[0]
     usable_width = section.page_width - section.left_margin - section.right_margin
