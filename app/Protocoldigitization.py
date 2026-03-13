@@ -547,41 +547,12 @@ def apply_table_borders(table):
     tblPr.append(borders)
 
 
-def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: str):
+def build_word_table_from_pipe_text(doc: Document, raw_table_text: str):
     table_data = parse_pipe_table(raw_table_text)
 
-    paragraph = None
-
-    for p in doc.element.body.iter():
-
-        if p.tag.endswith('p'):  # paragraph element
-            texts = [t.text for t in p.iter() if t.text]
-
-            if not texts:
-                continue
-
-            full_text = "".join(texts)
-
-            if placeholder in full_text:
-                from docx.text.paragraph import Paragraph
-                paragraph = Paragraph(p, doc)
-                break
-
-    if paragraph is None:
-        print(f"⚠️ Marker not found: {placeholder}")
-        return
-
-    parent = paragraph._element.getparent()
-    index = parent.index(paragraph._element)
-
-    # ─── We will build the final table data with possible extra rows ───
-    final_table_rows = []           # list of row_data lists
+    final_table_rows = []
 
     for original_row_idx, row_data in enumerate(table_data):
-        is_header = (original_row_idx == 0)
-        is_section_row = all(cell.strip() == "" for cell in row_data[1:])
-
-        # Check if any cell in this row needs splitting
         split_results = []
         needs_split = False
         max_splits = 1
@@ -594,21 +565,18 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
                 needs_split = True
 
         if not needs_split:
-            # Normal row — add as is
             final_table_rows.append(row_data)
             continue
 
-        # ─── Row needs splitting → create max_splits copies ───
         for chunk_idx in range(max_splits):
             new_row = []
-            for col_idx, chunks in enumerate(split_results):
+            for chunks in split_results:
                 if chunk_idx < len(chunks):
                     new_row.append(chunks[chunk_idx])
                 else:
-                    new_row.append("")  # empty in continuation rows
+                    new_row.append("")
             final_table_rows.append(new_row)
 
-    # ─── Now create the actual table with final rows ───
     rows_count = len(final_table_rows)
     cols = len(table_data[0]) if table_data else 0
 
@@ -622,7 +590,6 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
         is_header = (original_row_idx == 0)
         is_section_row = all(cell.strip() == "" for cell in orig_row_data[1:])
 
-        # How many continuation rows were created for this original row?
         split_results = [split_tall_cell(c) for c in orig_row_data]
         row_span_count = max(len(chunks) for chunks in split_results) if split_results else 1
 
@@ -631,20 +598,14 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
             tr = table.rows[current_row_idx]._tr
             trPr = tr.get_or_add_trPr()
 
-            # Only protect the very first header row
             if is_header and chunk_idx == 0:
                 trPr.append(OxmlElement('w:cantSplit'))
                 trPr.append(OxmlElement('w:tblHeader'))
-
-            # Optional: protect section rows (if you want)
-            # if is_section_row and chunk_idx == 0:
-            #     trPr.append(OxmlElement('w:cantSplit'))
 
             for c_idx, value in enumerate(row_data):
                 cell = table.rows[current_row_idx].cells[c_idx]
                 cell.paragraphs[0].clear()
 
-                # Bold parsing (unchanged)
                 pos = 0
                 for match in re.finditer(r"\*\*(.*?)\*\*", value):
                     start, end = match.span()
@@ -656,26 +617,18 @@ def insert_table_into_document(doc: Document, placeholder: str, raw_table_text: 
                 if pos < len(value):
                     cell.paragraphs[0].add_run(value[pos:])
 
-                # Alignment
                 if c_idx > 0:
                     cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
                 else:
                     cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.LEFT
 
-                # Bold whole section row
-                if is_section_row and chunk_idx == 0:  # only first chunk
+                if is_section_row and chunk_idx == 0:
                     for run in cell.paragraphs[0].runs:
                         run.bold = True
 
             current_row_idx += 1
 
-    # Insert table and remove placeholder
-
-    for node in paragraph._element.iter():
-        if node.text and placeholder in node.text:
-            node.text = node.text.replace(placeholder, "")
-
-    parent.insert(index + 1, table._element)
+    return table
 
 # ============================================================
 # STATE HELPERS (UNCHANGED)
@@ -715,51 +668,132 @@ def normalize_prefix(prefix: str) -> str:
 
 def split_into_blocks(text: str):
     """
-    Parse LLM output into ordered blocks of:
-    text or table.
-    Works for ANY sequence.
+    Split text into ordered blocks: ('text', content) or ('table', content)
+    Detects real Markdown tables using the header + separator rule.
     """
 
-    lines = [l.rstrip() for l in text.split("\n")]
-
+    lines = text.split("\n")
     blocks = []
-    buffer = []
-    in_table = False
 
-    for line in lines:
+    text_buffer = []
+    i = 0
+    n = len(lines)
 
+    def flush_text():
+        nonlocal text_buffer
+        if text_buffer:
+            blocks.append(("text", "\n".join(text_buffer).strip()))
+            text_buffer = []
+
+    while i < n:
+        line = lines[i].rstrip()
         stripped = line.strip()
 
-        is_table_line = (
+        # Check for Markdown table start
+        if (
             stripped.startswith("|")
-            and stripped.endswith("|")
-            and stripped.count("|") >= 2
-        )
+            and i + 1 < n
+            and re.match(r"^\|\s*[-:]+", lines[i + 1].strip())
+        ):
+            flush_text()
 
-        if is_table_line:
+            table_lines = [line, lines[i + 1]]
+            i += 2
 
-            if not in_table:
-                if buffer:
-                    blocks.append(("text", "\n".join(buffer).strip()))
-                    buffer = []
-                in_table = True
+            # Collect table rows
+            while i < n and lines[i].strip().startswith("|"):
+                table_lines.append(lines[i])
+                i += 1
 
-            buffer.append(line)
+            blocks.append(("table", "\n".join(table_lines)))
+            continue
 
-        else:
+        text_buffer.append(line)
+        i += 1
 
-            if in_table:
-                blocks.append(("table", "\n".join(buffer).strip()))
-                buffer = []
-                in_table = False
-
-            buffer.append(line)
-
-    if buffer:
-        block_type = "table" if in_table else "text"
-        blocks.append((block_type, "\n".join(buffer).strip()))
+    flush_text()
 
     return blocks
+
+
+from docx.text.paragraph import Paragraph
+
+def insert_text_block_after(parent, index, text: str, doc: Document):
+    """
+    Insert text block as real Word paragraphs after index.
+    Supports markdown bold (**...**).
+    Returns new index after insertion.
+    """
+    lines = [l for l in text.split("\n")]
+
+    for line in lines:
+        new_p = OxmlElement("w:p")
+        parent.insert(index + 1, new_p)
+        para = Paragraph(new_p, doc)
+
+        pos = 0
+        for match in BOLD_PATTERN.finditer(line):
+            start, end = match.span()
+            if start > pos:
+                para.add_run(line[pos:start])
+            run = para.add_run(match.group(1))
+            run.bold = True
+            pos = end
+
+        if pos < len(line):
+            para.add_run(line[pos:])
+
+        index += 1
+
+    return index
+
+
+
+def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks):
+    """
+    Replace one section marker with an ordered sequence of text/table blocks.
+    """
+    from docx.text.paragraph import Paragraph
+
+    target_paragraph = None
+
+    for p in doc.element.body.iter():
+        if not p.tag.endswith("p"):
+            continue
+
+        texts = [t.text for t in p.iter() if t.text]
+        if not texts:
+            continue
+
+        full_text = "".join(texts)
+        if placeholder in full_text:
+            target_paragraph = Paragraph(p, doc)
+            break
+
+    if target_paragraph is None:
+        print(f"⚠️ Section marker not found: {placeholder}")
+        return
+
+    parent = target_paragraph._element.getparent()
+    index = parent.index(target_paragraph._element)
+
+    # remove marker text
+    for node in target_paragraph._element.iter():
+        if node.text and placeholder in node.text:
+            node.text = node.text.replace(placeholder, "")
+
+    # insert blocks in exact order
+    for block_type, content in blocks:
+        if not content.strip():
+            continue
+
+        if block_type == "text":
+            index = insert_text_block_after(parent, index, content, doc)
+
+        elif block_type == "table":
+            table = build_word_table_from_pipe_text(doc, content)
+            parent.insert(index + 1, table._element)
+            index += 1
 
 
 def render_all_sections():
@@ -797,27 +831,9 @@ def render_all_sections():
 
         blocks = split_into_blocks(llm_text)
 
-        rt = RichText()
-        table_counter = 0
-
-        for block_type, content in blocks:
-
-            if block_type == "text":
-                formatted = markdown_to_richtext(content)
-                rt.add(formatted)
-                rt.add("\n")
-
-            elif block_type == "table":
-
-                marker = f"<<TABLE_{template_var}_{table_counter}>>"
-
-                rt.add(marker)
-                rt.add("\n")
-
-                table_sections[marker] = content
-                table_counter += 1
-
-        context[template_var] = rt
+        section_marker = f"[[[SECTION_{template_var}]]]"
+        context[template_var] = section_marker
+        table_sections[section_marker] = blocks
 
     # ---------------------------------
     # 2️⃣ First pass render (docxtpl)
@@ -835,8 +851,8 @@ def render_all_sections():
 
     doc = Document(temp_stream)
 
-    for marker, table_text in table_sections.items():
-        insert_table_into_document(doc, marker, table_text)
+    for marker, blocks in table_sections.items():
+        insert_section_blocks_into_document(doc, marker, blocks)
 
     final_stream = BytesIO()
     doc.save(final_stream)
