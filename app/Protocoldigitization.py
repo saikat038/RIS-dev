@@ -402,8 +402,10 @@ import re
 from io import BytesIO
 from typing import Dict
 from docx.shared import Pt
+from docx.shared import Inches
 from docxtpl import DocxTemplate, RichText
 from azure.storage.blob import BlobServiceClient
+from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT
 from config.settings import (
     AZURE_BLOB_CONN_STRING,
     BLOB_CONTAINER,
@@ -592,7 +594,11 @@ def build_word_table_from_pipe_text(doc: Document, raw_table_text: str):
     cols = len(table_data[0]) if table_data else 0
 
     table = doc.add_table(rows=rows_count, cols=cols)
+    table.style = "Table Grid"
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
+    table.autofit = False
+    for col in table.columns:
+        col.width = Inches(2)
     apply_table_borders(table)
 
     current_row_idx = 0
@@ -615,6 +621,7 @@ def build_word_table_from_pipe_text(doc: Document, raw_table_text: str):
 
             for c_idx, value in enumerate(row_data):
                 cell = table.rows[current_row_idx].cells[c_idx]
+                cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
                 cell.paragraphs[0].clear()
 
                 pos = 0
