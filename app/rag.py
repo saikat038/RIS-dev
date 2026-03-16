@@ -2274,13 +2274,13 @@ You MUST obey all SECTION_METADATA constraints.
 ────────────────────────
 ABSOLUTE SECTION BOUNDARY RULE (HIGHEST PRIORITY)
 ────────────────────────
-You are authorized to use ONLY content that is structurally located under the exact heading defined in:
+You are authorized to use content located under ANY heading listed in:
 
 synonyms under [AUTHORING CONTROL]
 
 This means:
 
-- The heading text MUST match the synonym EXACTLY including numeric prefixes and punctuation.
+- Each synonym defines an independent structural section that MUST be extracted and rendered if present in SOURCE_CONTEXT. including numeric prefixes and punctuation.
 - The content MUST appear under that heading in SOURCE_CONTEXT.
 - Content appearing outside that structural section MUST be ignored,
   even if it contains identical phrases or wording.
