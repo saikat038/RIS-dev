@@ -712,7 +712,7 @@ def split_into_blocks(text: str):
         line = lines[i].rstrip()
         stripped = line.strip()
 
-        # Check for Markdown table start
+        # Detect start of table
         if (
             stripped.startswith("|")
             and i + 1 < n
@@ -723,10 +723,24 @@ def split_into_blocks(text: str):
             table_lines = [line, lines[i + 1]]
             i += 2
 
-            # Collect table rows
-            while i < n and lines[i].strip().startswith("|"):
-                table_lines.append(lines[i])
-                i += 1
+            # Collect rows but STOP if another header+separator appears
+            while i < n:
+
+                next_line = lines[i].strip()
+
+                # stop table if next table starts
+                if (
+                    next_line.startswith("|")
+                    and i + 1 < n
+                    and re.match(r"^\|\s*[-:]+", lines[i + 1].strip())
+                ):
+                    break
+
+                if next_line.startswith("|"):
+                    table_lines.append(lines[i])
+                    i += 1
+                else:
+                    break
 
             blocks.append(("table", "\n".join(table_lines)))
             continue
