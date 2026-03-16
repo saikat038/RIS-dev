@@ -690,10 +690,6 @@ def normalize_prefix(prefix: str) -> str:
 
 
 def split_into_blocks(text: str):
-    """
-    Split text into ordered blocks: ('text', content) or ('table', content)
-    Detects real Markdown tables using the header + separator rule.
-    """
 
     lines = text.split("\n")
     blocks = []
@@ -723,24 +719,24 @@ def split_into_blocks(text: str):
             table_lines = [line, lines[i + 1]]
             i += 2
 
-            # Collect rows but STOP if another header+separator appears
+            # Collect table rows
             while i < n:
 
                 next_line = lines[i].strip()
 
-                # stop table if next table starts
+                if not next_line.startswith("|"):
+                    break
+
+                # detect new table start
                 if (
-                    next_line.startswith("|")
-                    and i + 1 < n
+                    i + 1 < n
                     and re.match(r"^\|\s*[-:]+", lines[i + 1].strip())
+                    and len(table_lines) > 2
                 ):
                     break
 
-                if next_line.startswith("|"):
-                    table_lines.append(lines[i])
-                    i += 1
-                else:
-                    break
+                table_lines.append(lines[i])
+                i += 1
 
             blocks.append(("table", "\n".join(table_lines)))
             continue
