@@ -691,6 +691,7 @@ def normalize_prefix(prefix: str) -> str:
 
 def split_into_blocks(text: str):
 
+    text = re.sub(r"\n(\s*\|)", r"\n\n\1", text)  # force separation of tables
     lines = text.split("\n")
     blocks = []
 
