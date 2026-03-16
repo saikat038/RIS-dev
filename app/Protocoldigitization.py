@@ -825,7 +825,14 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
 
         elif block_type == "table":
             table = build_word_table_from_pipe_text(doc, content)
+
+            # move table to correct place
             parent.insert(index + 1, table._element)
+            index += 1
+
+            # IMPORTANT: add empty paragraph after table
+            spacer_p = OxmlElement("w:p")
+            parent.insert(index + 1, spacer_p)
             index += 1
 
 
