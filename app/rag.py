@@ -1362,6 +1362,76 @@ def format_chunk_for_context(chunk: Dict) -> str:
 
 
 
+def normalize_section_numbering(answer_text: str, context: dict) -> str:
+    """
+    1. Remove top-level section headers like '6. INVESTIGATIONAL PLAN'
+    2. Renumber subsections according to ICH reference in context
+    """
+
+    # ---------------------------
+    # 1. Extract ICH reference
+    # ---------------------------
+    ich_refs = context.get("ich_refs", [])
+
+    if not ich_refs:
+        return answer_text
+
+    ich_ref = ich_refs[0]   # example: "9.4.1 Treatments Administered"
+
+    # extract numeric prefix
+    match = re.match(r"(\d+(?:\.\d+)*)", ich_ref)
+
+    if not match:
+        return answer_text
+
+    ich_number = match.group(1)  # "9.4.1"
+
+    # split levels
+    ich_levels = ich_number.split(".")
+
+    # ---------------------------
+    # 2. Remove top-level header
+    # ---------------------------
+    lines = answer_text.split("\n")
+
+    cleaned_lines = []
+    for line in lines:
+        if re.match(r"^\d+\.\s+[A-Z\s\-]+$", line.strip()):
+            # skip top-level section like "6. INVESTIGATIONAL PLAN"
+            continue
+        cleaned_lines.append(line)
+
+    text = "\n".join(cleaned_lines)
+
+    # ---------------------------
+    # 3. Adjust numbering
+    # ---------------------------
+    # detect subsection numbers like 6.1 , 6.2 , etc
+
+    def replace_number(match_obj):
+        old_num = match_obj.group(1)
+        suffix = match_obj.group(2)
+
+        parts = old_num.split(".")
+
+        # If ich ref has deeper hierarchy
+        if len(ich_levels) == 1:
+            # e.g. ICH = 9
+            new_num = f"{ich_levels[0]}.{parts[1]}"
+        elif len(ich_levels) == 2:
+            # e.g. ICH = 9.1
+            new_num = f"{ich_levels[0]}.{ich_levels[1]}.{parts[1]}"
+        else:
+            # e.g. ICH = 9.4.1
+            new_num = f"{ich_levels[0]}.{ich_levels[1]}.{ich_levels[2]}"
+
+        return f"{new_num}{suffix}"
+
+    text = re.sub(r"^(\d+\.\d+)(\.\s+|\s+)", replace_number, text, flags=re.MULTILINE)
+
+    return text
+
+
 
 def build_generic_query(payload: dict) -> str:
     section = payload.get("section", "").strip()
@@ -2340,12 +2410,19 @@ def answer(query: str, history: List[Dict]) -> str:
     section_name = final_state.get("section_name")
     print("Section name: ",section_name)
 
-    store_temp_llm_output(
-        section_name=section_name,
-        llm_text=final_state["answer"]
+    context = final_state.get("context", {})
+
+    processed_answer = normalize_section_numbering(
+        final_state["answer"],
+        context
     )
 
-    return final_state.get("answer", "")
+    store_temp_llm_output(
+        section_name=section_name,
+        llm_text=processed_answer
+    )
+
+    return processed_answer
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
