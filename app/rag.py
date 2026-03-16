@@ -1420,17 +1420,39 @@ def normalize_section_numbering(answer_text: str, context) -> str:
     # -----------------------------
     # Remove top-level headers
     # -----------------------------
-    lines = answer_text.split("\n")
+    lines = answer_text.splitlines()
+    output_lines = []
+    heading_counter = 1
 
-    cleaned_lines = []
     for line in lines:
 
-        if re.match(r"^\d+\.\s+[A-Z\s\-/(),]+:?$", line.strip()):
+        stripped = line.strip()
+
+        # Remove top level section like:
+        # 6. INVESTIGATIONAL PLAN
+        if re.match(r"^\d+\.\s+[A-Z][A-Z\s\-/(),:]+$", stripped):
             continue
 
-        cleaned_lines.append(line)
+        # Detect bold heading
+        bold_heading_match = re.match(
+            r"^\*\*(\d+(?:\.\d+)+)\.?\s+(.*?)\*\*$",
+            stripped
+        )
 
-    text = "\n".join(cleaned_lines)
+        if bold_heading_match:
+
+            title = bold_heading_match.group(2).strip()
+
+            new_heading = f"**{ich_number}.{heading_counter} {title}**"
+
+            output_lines.append(new_heading)
+
+            heading_counter += 1
+            continue
+
+        output_lines.append(line)
+
+    text = "\n".join(output_lines)
 
     # -----------------------------
     # Renumber headings
