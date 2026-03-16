@@ -1400,6 +1400,7 @@ def normalize_section_numbering(answer_text: str, context) -> str:
         return []
 
     ich_refs = extract_ich_refs(context)
+    print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>ICH refs:", ich_refs)
 
     if not ich_refs:
         return answer_text
