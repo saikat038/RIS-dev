@@ -1436,23 +1436,21 @@ def normalize_section_numbering(answer_text: str, context) -> str:
     # Renumber headings
     # -----------------------------
     heading_pattern = re.compile(
-        r"^(\d+(?:\.\d+)+)(\.)?(\s+)(.+)$",
-        flags=re.MULTILINE
+    r"^(\d+(?:\.\d+)+)\.?\s+(.+)$",
+    flags=re.MULTILINE
     )
 
     counter = 1
 
-    def replace_heading(match_obj):
+    def replace_heading(match):
         nonlocal counter
 
-        dot = match_obj.group(2) or ""
-        spaces = match_obj.group(3)
-        title = match_obj.group(4)
+        title = match.group(2)
 
         new_number = f"{ich_number}.{counter}"
         counter += 1
 
-        return f"{new_number}{dot}{spaces}{title}"
+        return f"{new_number} {title}"
 
     text = heading_pattern.sub(replace_heading, text)
 
@@ -2454,4 +2452,4 @@ def answer(query: str, history: List[Dict]) -> str:
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
 # answer("Summary of Subject Demographics Safety Population - RP Patients", [])
-# answer("Investigational Product", [])
+answer("inclusion criteria", [])
