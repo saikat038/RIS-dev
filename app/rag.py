@@ -1362,16 +1362,42 @@ def format_chunk_for_context(chunk: Dict) -> str:
 
 
 
-def normalize_section_numbering(answer_text: str, context: dict) -> str:
+def normalize_section_numbering(answer_text: str, context) -> str:
     """
     1. Remove top-level section headers like '6. INVESTIGATIONAL PLAN'
     2. Renumber subsections according to ICH reference in context
     """
 
-    # ---------------------------
-    # 1. Extract ICH reference
-    # ---------------------------
-    ich_refs = context.get("ich_refs", [])
+    # ---------------------------------------------------
+    # Helper: Extract ich_refs safely from context
+    # ---------------------------------------------------
+    def extract_ich_refs(ctx):
+        # Case 1: dict
+        if isinstance(ctx, dict):
+            return ctx.get("ich_refs", [])
+
+        # Case 2: list of documents
+        if isinstance(ctx, list):
+            for item in ctx:
+                if isinstance(item, dict) and "ich_refs" in item:
+                    return item["ich_refs"]
+
+        # Case 3: string containing JSON
+        if isinstance(ctx, str):
+            match = re.search(r"\{.*?\}", ctx, re.DOTALL)
+            if match:
+                try:
+                    data = json.loads(match.group())
+                    return data.get("ich_refs", [])
+                except Exception:
+                    pass
+
+        return []
+
+    # ---------------------------------------------------
+    # 1️⃣ Extract ICH reference
+    # ---------------------------------------------------
+    ich_refs = extract_ich_refs(context)
 
     if not ich_refs:
         return answer_text
@@ -1384,50 +1410,58 @@ def normalize_section_numbering(answer_text: str, context: dict) -> str:
     if not match:
         return answer_text
 
-    ich_number = match.group(1)  # "9.4.1"
-
-    # split levels
+    ich_number = match.group(1)   # e.g. "9.4.1"
     ich_levels = ich_number.split(".")
 
-    # ---------------------------
-    # 2. Remove top-level header
-    # ---------------------------
+    # ---------------------------------------------------
+    # 2️⃣ Remove top-level section header
+    # Example: "6. INVESTIGATIONAL PLAN"
+    # ---------------------------------------------------
     lines = answer_text.split("\n")
 
     cleaned_lines = []
     for line in lines:
         if re.match(r"^\d+\.\s+[A-Z\s\-]+$", line.strip()):
-            # skip top-level section like "6. INVESTIGATIONAL PLAN"
             continue
         cleaned_lines.append(line)
 
     text = "\n".join(cleaned_lines)
 
-    # ---------------------------
-    # 3. Adjust numbering
-    # ---------------------------
-    # detect subsection numbers like 6.1 , 6.2 , etc
-
+    # ---------------------------------------------------
+    # 3️⃣ Adjust subsection numbering
+    # Example:
+    # 6.1 → 9.1.1
+    # ---------------------------------------------------
     def replace_number(match_obj):
         old_num = match_obj.group(1)
         suffix = match_obj.group(2)
 
         parts = old_num.split(".")
 
-        # If ich ref has deeper hierarchy
+        if len(parts) < 2:
+            return match_obj.group(0)
+
+        subsection = parts[1]
+
+        # Build new number according to ICH depth
         if len(ich_levels) == 1:
-            # e.g. ICH = 9
-            new_num = f"{ich_levels[0]}.{parts[1]}"
+            new_num = f"{ich_levels[0]}.{subsection}"
+
         elif len(ich_levels) == 2:
-            # e.g. ICH = 9.1
-            new_num = f"{ich_levels[0]}.{ich_levels[1]}.{parts[1]}"
+            new_num = f"{ich_levels[0]}.{ich_levels[1]}.{subsection}"
+
         else:
-            # e.g. ICH = 9.4.1
-            new_num = f"{ich_levels[0]}.{ich_levels[1]}.{ich_levels[2]}"
+            # ICH already has 3 levels
+            new_num = ich_number
 
         return f"{new_num}{suffix}"
 
-    text = re.sub(r"^(\d+\.\d+)(\.\s+|\s+)", replace_number, text, flags=re.MULTILINE)
+    text = re.sub(
+        r"^(\d+\.\d+)(\.\s+|\s+)",
+        replace_number,
+        text,
+        flags=re.MULTILINE
+    )
 
     return text
 
@@ -2410,10 +2444,10 @@ def answer(query: str, history: List[Dict]) -> str:
     section_name = final_state.get("section_name")
     print("Section name: ",section_name)
 
-    context = final_state.get("context", {})
+    context = final_state.get("context", "")
 
     processed_answer = normalize_section_numbering(
-        final_state["answer"],
+        final_state.get("answer", ""),
         context
     )
 
