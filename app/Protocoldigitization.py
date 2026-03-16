@@ -691,7 +691,6 @@ def normalize_prefix(prefix: str) -> str:
 
 def split_into_blocks(text: str):
 
-    text = re.sub(r"\n(\s*\|)", r"\n\n\1", text)  # force separation of tables
     lines = text.split("\n")
     blocks = []
 
@@ -720,7 +719,6 @@ def split_into_blocks(text: str):
             table_lines = [line, lines[i + 1]]
             i += 2
 
-            # Collect table rows
             while i < n:
 
                 next_line = lines[i].strip()
@@ -728,7 +726,7 @@ def split_into_blocks(text: str):
                 if not next_line.startswith("|"):
                     break
 
-                # detect new table start
+                # new table detected
                 if (
                     i + 1 < n
                     and re.match(r"^\|\s*[-:]+", lines[i + 1].strip())
