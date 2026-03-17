@@ -2274,16 +2274,17 @@ You MUST obey all SECTION_METADATA constraints.
 ────────────────────────
 ABSOLUTE SECTION BOUNDARY RULE (HIGHEST PRIORITY)
 ────────────────────────
-You are authorized to use content located under ANY heading listed in:
+You are authorized to use content if ANY synonym appears either:
 
-synonyms under [AUTHORING CONTROL]
+- as a heading, OR
+- within table content (including any row or cell)
+
+If a synonym appears anywhere inside a table, the ENTIRE table containing that occurrence MUST be extracted and rendered.
 
 This means:
 
-- Each synonym defines an independent structural section that MUST be extracted and rendered if present in SOURCE_CONTEXT. including numeric prefixes and punctuation.
-- The content MUST follow that heading in SOURCE_CONTEXT, even if the heading appears between table blocks or adjacent to table rows.
-- Content appearing outside that structural section MUST be ignored for narrative text, but for tables, all contiguous rows following the heading MUST be included until another recognized heading appears.
-  even if it contains identical phrases or wording.
+- The content MUST include the full structural unit (e.g., complete table or section) in which the synonym appears, even if the synonym appears between table blocks or within table rows.
+- Content outside the matched structural unit MUST be ignored, EXCEPT when the structural unit (e.g., a table) spans multiple contiguous blocks or pages, in which case all such blocks MUST be included to preserve the complete structure.
 
 If the synonym includes a numbered heading (e.g., "4.2.4. Selection of the starting dose:"),
 only the content under that exact structural heading is permitted.
