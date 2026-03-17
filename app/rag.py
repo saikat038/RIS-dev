@@ -1430,7 +1430,7 @@ def normalize_section_numbering(answer_text: str, context) -> str:
 
         # Remove top level section like:
         # 6. INVESTIGATIONAL PLAN
-        if re.match(r"^\d+\.\s+[A-Z][A-Z\s\-/(),:]+$", stripped):
+        if re.match(r"^\*?\*?\d+\.\s+[A-Z][A-Z\s\-/(),:]+\*?\*?$", stripped):
             continue
 
         # Detect bold heading
