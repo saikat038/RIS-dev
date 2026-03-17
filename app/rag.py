@@ -2281,7 +2281,7 @@ synonyms under [AUTHORING CONTROL]
 This means:
 
 - Each synonym defines an independent structural section that MUST be extracted and rendered if present in SOURCE_CONTEXT. including numeric prefixes and punctuation.
-- The content MUST appear under that heading in SOURCE_CONTEXT.
+- The content MUST follow that heading in SOURCE_CONTEXT, even if the heading appears between table blocks or adjacent to table rows, and it MUST be treated as a structural heading.
 - Content appearing outside that structural section MUST be ignored,
   even if it contains identical phrases or wording.
 
@@ -2473,5 +2473,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Summary of Subject Demographics Safety Population - RP Patients", [])
+answer("Summary of Subject Demographics Safety Population - RP Patients", [])
 # answer("inclusion criteria", [])
