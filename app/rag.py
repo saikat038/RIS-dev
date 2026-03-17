@@ -2282,7 +2282,7 @@ This means:
 
 - Each synonym defines an independent structural section that MUST be extracted and rendered if present in SOURCE_CONTEXT. including numeric prefixes and punctuation.
 - The content MUST follow that heading in SOURCE_CONTEXT, even if the heading appears between table blocks or adjacent to table rows.
-- Content appearing outside that structural section MUST be ignored,
+- Content appearing outside that structural section MUST be ignored for narrative text, but for tables, all contiguous rows following the heading MUST be included until another recognized heading appears.
   even if it contains identical phrases or wording.
 
 If the synonym includes a numbered heading (e.g., "4.2.4. Selection of the starting dose:"),
