@@ -2281,7 +2281,7 @@ synonyms under [AUTHORING CONTROL]
 This means:
 
 - Each synonym defines an independent structural section that MUST be extracted and rendered if present in SOURCE_CONTEXT. including numeric prefixes and punctuation.
-- The content MUST follow that heading in SOURCE_CONTEXT, even if the heading appears between table blocks or adjacent to table rows, and it MUST be treated as a structural heading.
+- The content MUST follow that heading in SOURCE_CONTEXT, even if the heading appears between table blocks or adjacent to table rows.
 - Content appearing outside that structural section MUST be ignored,
   even if it contains identical phrases or wording.
 
