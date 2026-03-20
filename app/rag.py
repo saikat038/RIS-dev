@@ -2337,7 +2337,6 @@ IF Output Style = verbatim:
   • ALL structural elements MUST be rendered.
   • Headings and paragraph text are IMMUTABLE TOKENS.
   • You MUST NOT omit, merge, flatten, or downgrade structure.
-  • Preserve hierarchy exactly as written, EXCEPT when a synonym matches a specific heading, in which case ONLY that exact heading must be used without parent hierarchy.
 
 IF Output Style = regulatory author:
   • Structural elements MAY be reorganized for alignment with ICH Guideline structure.
