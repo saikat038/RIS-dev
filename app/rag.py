@@ -2310,11 +2310,11 @@ You are authorized to use content if ANY synonym appears either:
 
 If a synonym appears anywhere inside a table, the ENTIRE table MUST be extracted and rendered.
 
-This does NOT exclude other authorized content. Any heading or paragraph that independently matches the section under the same authorization rule MUST ALSO be included.
+This does NOT exclude other authorized content. If a synonym matches a heading, the full content under that heading MUST ALSO be included, even if individual paragraphs do not repeat the synonym.
 
 This means:
 
-- Each matched structural unit (e.g., table, heading with its section content) MUST be included in full.
+- Each matched structural unit (e.g., table, exact heading with its section content) MUST be included in full.
 - Content outside all matched structural units MUST be ignored.
 - If a structural unit (e.g., a table) spans multiple contiguous blocks or pages, all such blocks MUST be included to preserve the complete structure.
 
@@ -2331,8 +2331,8 @@ STRUCTURAL EXTRACTION & RENDERING (HIGHEST PRIORITY)
 Before writing any content:
 
 - Scan the entire SOURCE_CONTEXT line-by-line before generating output.
-- Identify structural elements under the authorized section.
-- You MUST include ALL relevant structural elements present in SOURCE_CONTEXT. Do NOT omit any paragraphs or tables.
+- Identify all structural elements belonging to each matched structural unit.
+- You MUST include all structural elements belonging to the matched structural units. Do NOT omit any authorized paragraphs or tables.
 
 IF Output Style = verbatim:
   • ALL structural elements MUST be rendered.
