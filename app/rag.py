@@ -2263,7 +2263,7 @@ STRICT RULE:
 STRICT TABLE SAFETY RULE
 ────────────────────────
 When using table data:
-1. 1. Identify the exact row(s) used ONLY when performing analytical operations. In verbatim mode the full table must be rendered.
+1. Identify the exact row(s) used ONLY when performing analytical operations. In verbatim mode the full table must be rendered.
 2. Use ONLY explicit cell content.
 3. A single cell may be decomposed into multiple items ONLY if explicitly written.
 4. Do NOT infer missing cells, relationships, or intent.
@@ -2337,7 +2337,7 @@ IF Output Style = verbatim:
   • ALL structural elements MUST be rendered.
   • Headings and paragraph text are IMMUTABLE TOKENS.
   • You MUST NOT omit, merge, flatten, or downgrade structure.
-  • Preserve hierarchy exactly as written.
+  • Preserve hierarchy exactly as written, EXCEPT when a synonym matches a specific heading, in which case ONLY that exact heading must be used without parent hierarchy.
 
 IF Output Style = regulatory author:
   • Structural elements MAY be reorganized for alignment with ICH Guideline structure.
@@ -2381,7 +2381,7 @@ FORMAT & STRUCTURE ENFORCEMENT
 - Content MUST appear immediately under its heading.
 - Use plain paragraphs by default for non-tabular content.
 - If SOURCE_CONTEXT contains tabular data, it MUST be rendered as a table. Bullets may be used only if present in SOURCE_CONTEXT.
-- - If a specific synonym matches a heading, ONLY that exact heading must be used. Do NOT concatenate, prepend, or include parent or hierarchical headings.
+- If a specific synonym matches a heading, ONLY that exact heading must be used. Do NOT concatenate, prepend, or include parent or hierarchical headings.
 
 ────────────────────────
 HALLUCINATION PREVENTION (NON-NEGOTIABLE)
