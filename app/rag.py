@@ -2310,19 +2310,20 @@ You are authorized to use content if ANY synonym appears either:
 
 If a synonym appears anywhere inside a table, the ENTIRE table MUST be extracted and rendered.
 
-This requirement does NOT exclude other relevant content. Paragraphs and headings that match the section MUST ALSO be included.
+This does NOT exclude other authorized content. Any heading or paragraph that independently matches the section under the same authorization rule MUST ALSO be included.
 
 This means:
 
-- The content MUST include the full structural unit (e.g., complete table or section) in which the synonym appears, even if the synonym appears between table blocks or within table rows.
-- Content outside the matched structural unit MUST be ignored, EXCEPT when the structural unit (e.g., a table) spans multiple contiguous blocks or pages, in which case all such blocks MUST be included to preserve the complete structure.
+- Each matched structural unit (e.g., table, heading with its section content) MUST be included in full.
+- Content outside all matched structural units MUST be ignored.
+- If a structural unit (e.g., a table) spans multiple contiguous blocks or pages, all such blocks MUST be included to preserve the complete structure.
 
 If the synonym includes a numbered heading (e.g., "4.2.4. Selection of the starting dose:"),
 only the content under that exact structural heading is permitted.
 
 Occurrences of the phrase elsewhere in the document
 (e.g., cross-references, citations, summaries, tables, narrative mentions)
-MUST NOT be used.
+MUST NOT be used unless they themselves form part of a matched structural unit.
 
 ────────────────────────
 STRUCTURAL EXTRACTION & RENDERING (HIGHEST PRIORITY)
