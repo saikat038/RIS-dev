@@ -1609,7 +1609,7 @@ def vector_search_source(
     print("min score >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",min_score)
 
     # Build OR filter for allowed documents
-    doc_filter = " or ".join([f"doc_id eq '{doc}'" for doc in allowed_sources])
+    doc_filter = f"search.in(doc_id, '{','.join(allowed_sources)}', ',')"
 
     queries = [section] + [s for s in synonyms if s and s != section]
     queries = [q.strip() for q in queries if q and q.strip()]
@@ -2474,5 +2474,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Summary of Subject Demographics Safety Population - RP Patients", [])
+# answer("DEMOGRAPHIC AND OTHER BASELINE CHARACTERISTICS", [])
 # answer("inclusion criteria", [])
