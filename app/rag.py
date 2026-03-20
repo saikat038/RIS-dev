@@ -2263,7 +2263,7 @@ STRICT RULE:
 STRICT TABLE SAFETY RULE
 ────────────────────────
 When using table data:
-1. Identify the exact row(s) used ONLY when performing analytical operations. In verbatim mode the full table must be rendered.
+1. 1. Identify the exact row(s) used ONLY when performing analytical operations. In verbatim mode the full table must be rendered.
 2. Use ONLY explicit cell content.
 3. A single cell may be decomposed into multiple items ONLY if explicitly written.
 4. Do NOT infer missing cells, relationships, or intent.
@@ -2277,8 +2277,6 @@ IF Output Style = verbatim:
 - All rows, columns, and cell values MUST be preserved exactly.
 - Tables MUST NOT be flattened into paragraphs, bullets, or narrative text.
 - When Output Style = verbatim and a table is present in SOURCE_CONTEXT, the entire table including all subgroup rows must be rendered; row selection or omission is not permitted.
-- Each table must be rendered exactly as it appears in SOURCE_CONTEXT, preserving its boundaries.
-- Do NOT merge tables. Each table occurrence must be rendered separately exactly as it appears.
 
 IF Output Style = regulatory author:
 
@@ -2308,36 +2306,36 @@ You are authorized to use content if ANY synonym appears either:
 - as a heading, OR
 - within table content (including any row or cell)
 
-If a synonym appears anywhere inside a table, the ENTIRE table MUST be extracted and rendered, but this alone is NOT sufficient; all other matched structural content MUST ALSO be included.
+If a synonym appears anywhere inside a table, the ENTIRE table MUST be extracted and rendered.
 
-This does NOT exclude other authorized content. If a synonym matches a heading, the full content under that heading MUST ALSO be included, even if individual paragraphs do not repeat the synonym.
+This requirement does NOT exclude other relevant content. Paragraphs and headings that match the section MUST ALSO be included.
 
 This means:
 
-- Each matched structural unit (e.g., table, exact heading with its section content) MUST be included in full.
-- Content outside all matched structural units MUST be ignored.
-- If a structural unit (e.g., a table) spans multiple contiguous blocks or pages, all such blocks MUST be included to preserve the complete structure.
+- The content MUST include the full structural unit (e.g., complete table or section) in which the synonym appears, even if the synonym appears between table blocks or within table rows.
+- Content outside the matched structural unit MUST be ignored, EXCEPT when the structural unit (e.g., a table) spans multiple contiguous blocks or pages, in which case all such blocks MUST be included to preserve the complete structure.
 
 If the synonym includes a numbered heading (e.g., "4.2.4. Selection of the starting dose:"),
 only the content under that exact structural heading is permitted.
 
 Occurrences of the phrase elsewhere in the document
 (e.g., cross-references, citations, summaries, tables, narrative mentions)
-MUST NOT be used unless they themselves form part of a matched structural unit.
+MUST NOT be used.
 
 ────────────────────────
 STRUCTURAL EXTRACTION & RENDERING (HIGHEST PRIORITY)
 ────────────────────────
 Before writing any content:
 
-- Scan the entire SOURCE_CONTEXT line-by-line before generating output.
-- Identify all structural elements belonging to each matched structural unit.
-- You MUST include all structural elements belonging to the matched structural units. Do NOT omit any authorized paragraphs or tables.
+- Scan SOURCE_CONTEXT line-by-line.
+- Identify structural elements under the authorized section.
+- You MUST include ALL relevant structural elements present in SOURCE_CONTEXT. Do NOT omit paragraphs when tables are present, or vice versa.
 
 IF Output Style = verbatim:
   • ALL structural elements MUST be rendered.
   • Headings and paragraph text are IMMUTABLE TOKENS.
   • You MUST NOT omit, merge, flatten, or downgrade structure.
+  • Preserve hierarchy exactly as written.
 
 IF Output Style = regulatory author:
   • Structural elements MAY be reorganized for alignment with ICH Guideline structure.
@@ -2381,7 +2379,6 @@ FORMAT & STRUCTURE ENFORCEMENT
 - Content MUST appear immediately under its heading.
 - Use plain paragraphs by default for non-tabular content.
 - If SOURCE_CONTEXT contains tabular data, it MUST be rendered as a table. Bullets may be used only if present in SOURCE_CONTEXT.
-- If a specific synonym matches a heading, ONLY that exact heading must be used. Do NOT concatenate, prepend, or include parent or hierarchical headings.
 
 ────────────────────────
 HALLUCINATION PREVENTION (NON-NEGOTIABLE)
