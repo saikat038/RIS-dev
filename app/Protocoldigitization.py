@@ -444,9 +444,24 @@ SECTION_TO_TEMPLATE_VAR = {
     "Ethical conduct of the study": "ethical_conduct_of_study",
     "ASSESSMENT OF EFFICACY AND EXPLORATORY EVALUATIONS": "Primary_eff_vars",
     "QUALITY CONTROL AND QUALITY ASSURANCE": "Data_QA",
+    "DATA HANDLING": "Data_sets",
     "Summary of Subject Demographics Safety Population - RP Patients": "safety_p_rp_p",
     "Patient information and consent": "subject_information_and_consent",
-
+    "Overall Study Design": "overall_study_design",
+    "ASSESSMENT OF SAFETY": "Eff_efficacy_safety_meas_flow",
+    "Sample Size Justification": "Sample_Size_Detn",
+    "Subject Disposition Screening Population - RP Patients": "Pt_disposition",
+    "Protocol Deviations": "Prot_dev",
+    "Missing Values": "Drop_miss_data",
+    "Interim Analyses": "Interim_DM",
+    "DEMOGRAPHIC AND OTHER BASELINE CHARACTERISTICS": "Demo_base_char",
+    "Summary of 16.2.6.3.1.2 BCVA-Part 2 & 16.2.6.3.2.2 LLVA – Part 2 & 16.2.6.3.7.3 NEI-VFQ-25 & 16.2.6.3.7.3 NEI-VFQ-25 & 16.2.6.3.8 & 16.2.6.3.9 Contrast Sensitivity & 16.2.6.3.10 Perimetry & 16.2.6.3.12 Full Field Electroretinogram & 16.2.6.3.13 Multi-luminance Mobility Testing": "Eff_analysis",
+    "Summary of 14.2.2.1.1 BCVA & 14.2.2.2.1 & LLVA & 14.2.3.12.1 MLMT with Subgroups": "Subgroup_exam",
+    "Summary of BCVA Scores by Visit in Treated Eye Safety Population - RP Patients": "Ind_resp_tab",
+    "Adverse events (aes)": "Aes",
+    "Display Tables 14.3.1.3 & 14.3.1.4 & 14.3.1.5 & 14.3.1.6  & of Adverse Events": "AE_display",
+    "Treatment-Emergent Adverse Events Safety Population - RP Patients": "AE_list_pt",
+    "Summary of table 14.3.2.2 & 14.3.2.3 & 14.3.2.4 ofListing of Deaths, other Serious Adverse Events": "List_Deaths_SAE_sigAE"
 }
 
 # ============================================================
