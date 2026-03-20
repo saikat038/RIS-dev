@@ -2271,20 +2271,23 @@ When using table data:
 ────────────────────────
 MANDATORY TABLE RENDERING RULE
 ────────────────────────
+
 IF Output Style = verbatim:
 
 - Tables MUST be rendered as tables.
 - All rows, columns, and cell values MUST be preserved exactly.
 - Tables MUST NOT be flattened into paragraphs, bullets, or narrative text.
-- When Output Style = verbatim and a table is present in SOURCE_CONTEXT, the entire table including all subgroup rows must be rendered; row selection or omission is not permitted.
+- When a table contains clear subgroup divisions (sub-captions, repeated headers for different populations, explicit group labels in rows/columns, blank-row separators followed by new group title, or similar structural cues),
+  - split the content into **separate markdown tables**, one per detected subgroup
+  - each sub-table must have:
+    - its own bold caption above it, using pattern: **Table [original number or name] – [subgroup label]**
+    - repeated column headers appropriate to that subgroup
+    - only the rows belonging to that subgroup
+- When Output Style = verbatim and a table is present in SOURCE_CONTEXT, the entire original table structure must be respected, but subgroups MUST be separated as described above; row selection or omission within a subgroup is not permitted.
 
 IF Output Style = regulatory author:
 
-- Table data MAY be transformed into narrative form when necessary for regulatory clarity.
-- All factual values from the table MUST remain unchanged.
-- No rows, columns, or values may be omitted unless they are structurally irrelevant to the section being authored.
-- No new information may be introduced.
-- Narrative text MUST remain fully traceable to the original table cells in SOURCE_CONTEXT.
+- (keep the existing paragraph unchanged)
 
 ────────────────────────
 SECTION AUTHORING CONTROL
@@ -2321,6 +2324,11 @@ only the content under that exact structural heading is permitted.
 Occurrences of the phrase elsewhere in the document
 (e.g., cross-references, citations, summaries, tables, narrative mentions)
 MUST NOT be used.
+
+PARENT HEADING STRIPPING RULE (OVERRIDES BOUNDARY RULE WHEN NESTED)
+When the matched synonym appears nested under any parent heading(s) (e.g. 11.2.1 … > 5.3.1. Populations, or any other higher-level structure),
+- output ONLY the matched synonym heading itself + content directly under it
+- completely exclude / strip all parent heading text, numbering, and surrounding narrative from the output
 
 ────────────────────────
 STRUCTURAL EXTRACTION & RENDERING (HIGHEST PRIORITY)
