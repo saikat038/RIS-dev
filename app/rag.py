@@ -1849,6 +1849,31 @@ def group_ich_by_section(chunks: list[dict], ich_refs: list[str] = None) -> dict
         "results": results
     }
 
+
+def filter_by_synonyms(results: List[Dict[str, Any]], synonyms: List[str]) -> List[Dict[str, Any]]:
+    """
+    Filters vector search results by checking if any synonym
+    appears anywhere in the JSON object.
+
+    - Case insensitive
+    - Matches across all fields
+    """
+
+    # normalize synonyms
+    normalized_synonyms = [s.lower().strip() for s in synonyms if s]
+
+    filtered_results = []
+
+    for item in results:
+        # Convert entire JSON object to string
+        full_text = json.dumps(item, ensure_ascii=False).lower()
+
+        # Check if any synonym is present
+        if any(syn in full_text for syn in normalized_synonyms):
+            filtered_results.append(item)
+
+    return filtered_results
+
 # ============================================================
 # CHAT HISTORY FORMATTING (UNCHANGED)
 # ============================================================
@@ -2008,6 +2033,8 @@ def retrieve_context_node(state: RAGState) -> RAGState:
                         k_nearest_neighbors=30,
                         min_score=0.50          # ← 60% threshold
                     )
+    
+    source_chunks = filter_by_synonyms(source_chunks, synonyms)
     
     # After getting source_chunks
     # with open("source_chunks_raw.txt", "w", encoding="utf-8") as f:
