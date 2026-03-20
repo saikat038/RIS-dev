@@ -2278,7 +2278,7 @@ IF Output Style = verbatim:
 - Tables MUST NOT be flattened into paragraphs, bullets, or narrative text.
 - When Output Style = verbatim and a table is present in SOURCE_CONTEXT, the entire table including all subgroup rows must be rendered; row selection or omission is not permitted.
 - Each table must be rendered exactly as it appears in SOURCE_CONTEXT, preserving its boundaries.
-- Do NOT merge or split tables, even if titles or headers are identical.
+- Do NOT merge tables. Each table occurrence must be rendered separately exactly as it appears.
 
 IF Output Style = regulatory author:
 
@@ -2308,7 +2308,7 @@ You are authorized to use content if ANY synonym appears either:
 - as a heading, OR
 - within table content (including any row or cell)
 
-If a synonym appears anywhere inside a table, the ENTIRE table MUST be extracted and rendered.
+If a synonym appears anywhere inside a table, the ENTIRE table MUST be extracted and rendered, but this alone is NOT sufficient; all other matched structural content MUST ALSO be included.
 
 This does NOT exclude other authorized content. If a synonym matches a heading, the full content under that heading MUST ALSO be included, even if individual paragraphs do not repeat the synonym.
 
