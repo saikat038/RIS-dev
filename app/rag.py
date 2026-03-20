@@ -2279,7 +2279,9 @@ You are authorized to use content if ANY synonym appears either:
 - as a heading, OR
 - within table content (including any row or cell)
 
-If a synonym appears anywhere inside a table, the ENTIRE table containing that occurrence MUST be extracted and rendered.
+If a synonym appears anywhere inside a table, the ENTIRE table MUST be extracted and rendered.
+
+This requirement does NOT exclude other relevant content. Paragraphs and headings that match the section MUST ALSO be included.
 
 This means:
 
@@ -2300,6 +2302,7 @@ Before writing any content:
 
 - Scan SOURCE_CONTEXT line-by-line.
 - Identify structural elements under the authorized section.
+- You MUST include ALL relevant structural elements present in SOURCE_CONTEXT. Do NOT omit paragraphs when tables are present, or vice versa.
 
 IF Output Style = verbatim:
   • ALL structural elements MUST be rendered.
