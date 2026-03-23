@@ -2030,7 +2030,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
                         section=section_name,
                         synonyms=synonyms,
                         allowed_sources=allowed_sources,
-                        k_nearest_neighbors=30,
+                        k_nearest_neighbors=50,
                         min_score=0.50          # ← 60% threshold
                     )
     
@@ -2512,5 +2512,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("DEMOGRAPHIC AND OTHER BASELINE CHARACTERISTICS", [])
+# answer("Selection and timing of dose for each patient", [])
 # answer("inclusion criteria", [])
