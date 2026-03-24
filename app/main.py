@@ -103,17 +103,22 @@ if prompt := st.chat_input("Ask anything about regulations, guidance, policies, 
     # ─── Commands ───
     if prompt_clean in ("add", "remove", "populate"):
 
-        if prompt_clean == "add":
-            proto.add_last_section_to_final()
-            response = "✅ Section added to final CSR buffer."
+        try:
 
-        elif prompt_clean == "remove":
-            proto.remove_last_added_section()
-            response = "🗑️ Section removed from final CSR buffer."
+            if prompt_clean == "add":
+                proto.add_last_section_to_final()
+                response = "✅ Section added to final CSR buffer."
 
-        elif prompt_clean == "populate":
-            proto.render_all_sections()
-            response = "📄 Population completed successfully!"
+            elif prompt_clean == "remove":
+                proto.remove_last_added_section()
+                response = "🗑️ Section removed from final CSR buffer."
+
+            elif prompt_clean == "populate":
+                proto.render_all_sections()
+                response = "📄 Population completed successfully!"
+
+        except ValueError as e:
+            response = str(e)
 
         # Show command response
         with st.chat_message("assistant"):
