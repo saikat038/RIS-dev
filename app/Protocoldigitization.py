@@ -694,7 +694,7 @@ def add_last_section_to_final():
         raise ValueError("No LLM output available to add.")
 
     if section not in SECTION_TO_TEMPLATE_VAR:
-        raise ValueError(f"📄 No section is there in the template.")
+        raise ValueError(f"📄 No placeholder is there in the template.")
 
     FINAL_SECTION_BUFFER[section] = text
 
