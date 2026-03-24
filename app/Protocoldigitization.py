@@ -468,7 +468,9 @@ SECTION_TO_TEMPLATE_VAR = {
     "Evaluation of each laboratory parameter": "Evaluation_of_each_laboratory_parameter",
     "Demographic data": "Demographic_data",
     "Displays of Adverse Events": "Displays_of_adverse_events",
-    "Study Disposition All Screened Subjects - RP Patients": "Tables_figures_and_graphs_referred_to_but_not_included_in_the_text"
+    "Study Disposition All Screened Subjects - RP Patients": "Tables_figures_and_graphs_referred_to_but_not_included_in_the_text",
+    "Demographic and other baseline characteristics": "Demographic_and_other_baseline_characteristics",
+    "Measurements of treatment compliance": "Measurements_of_treatment_compliance",
 }
 
 # ============================================================
