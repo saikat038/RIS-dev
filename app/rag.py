@@ -1949,7 +1949,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
       "section": query,
       "synonyms": [""],
       "ich_refs": [""],
-      "allowed_sources": ["ocu400-101-protocol.PDF", "OCU401_CSR_Final_Tables.PDF"],
+      "allowed_sources": ["ocu400-101-protocol.pdf", "OCU401_CSR_Final_Tables.pdf", "ocu400-101-SAP.pdf", "OCU401_CSR_Final_Figures.pdf", "OCU401_CSR_Final_listing.pdf", "OCU400-101_ValidityListings.pdf"],
       "detail_level": "high",
       "output_style": "verbatim",
       "forbidden_content": ["operational procedures"]
@@ -2034,7 +2034,11 @@ def retrieve_context_node(state: RAGState) -> RAGState:
                         min_score=0.50          # ← 60% threshold
                     )
     
-    source_chunks = filter_by_synonyms(source_chunks, synonyms)
+
+    if len(synonyms) > 1:
+        source_chunks = filter_by_synonyms(source_chunks, synonyms)
+    else:
+        source_chunks = filter_by_synonyms(source_chunks, [section_name])
     
     # After getting source_chunks
     # with open("source_chunks_raw.txt", "w", encoding="utf-8") as f:
@@ -2513,4 +2517,4 @@ def answer(query: str, history: List[Dict]) -> str:
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
 # answer("Selection and timing of dose for each patient", [])
-# answer("inclusion criteria", [])
+# answer("Risks and Benefits OCU400 Risks", [])
