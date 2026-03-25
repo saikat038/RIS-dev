@@ -2,6 +2,7 @@ import streamlit as st
 import os, sys
 import base64
 
+is_dev = st.query_params.get("dev") == "true"
 # --------------------------------------------------
 # SAFE PATH SETUP
 # --------------------------------------------------
@@ -27,6 +28,25 @@ st.set_page_config(
     page_title="Regulatory Authoring Intelligence System",
     layout="wide"
 )
+
+if not is_dev:
+    st.markdown("""
+    <style>
+    /* Hide full Streamlit header */
+    header {visibility: hidden;}
+
+    /* Hide 3 dots menu */
+    #MainMenu {visibility: hidden;}
+
+    /* Hide footer */
+    footer {visibility: hidden;}
+
+    /* Fix spacing after removing header */
+    .block-container {
+        padding-top: 1rem;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
 # ========================
 # LOGO PATH
