@@ -2,8 +2,6 @@ import streamlit as st
 import os, sys
 import base64
 
-params = st.experimental_get_query_params()
-is_dev = params.get("dev", ["false"])[0].lower() == "true"
 # --------------------------------------------------
 # SAFE PATH SETUP
 # --------------------------------------------------
@@ -30,20 +28,30 @@ st.set_page_config(
     layout="wide"
 )
 
+params = st.experimental_get_query_params()
+is_dev = params.get("dev", ["false"])[0].lower() == "true"
+
+# Temporary debug banner
+st.write("Mode:", "DEV" if is_dev else "USER")
+st.write("Query params:", params)
+
+# ========================
+# UI CONTROL
+# ========================
 if not is_dev:
     st.markdown("""
     <style>
-    header {visibility: hidden;}
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    .block-container {padding-top: 1rem;}
+    header {visibility: hidden !important;}
+    #MainMenu {visibility: hidden !important;}
+    footer {visibility: hidden !important;}
+    .block-container {padding-top: 1rem !important;}
     </style>
     """, unsafe_allow_html=True)
 else:
     st.markdown("""
     <style>
-    footer {visibility: hidden;}
-    .block-container {padding-top: 1rem;}
+    footer {visibility: hidden !important;}
+    .block-container {padding-top: 1rem !important;}
     </style>
     """, unsafe_allow_html=True)
 
