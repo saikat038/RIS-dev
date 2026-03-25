@@ -11,27 +11,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 
 import streamlit as st
-
-st.markdown("""
-    <style>
-    /* Hide top-right menu (⋮) */
-    #MainMenu {visibility: hidden;}
-
-    /* Hide deploy button */
-    .stDeployButton {display: none;}
-
-    /* Hide header (top bar) */
-    header {visibility: hidden;}
-
-    /* Hide footer */
-    footer {visibility: hidden;}
-
-    /* Remove extra top padding */
-    .block-container {
-        padding-top: 1rem;
-    }
-    </style>
-""", unsafe_allow_html=True)
+st.set_option("client.toolbarMode", "auto")
 # --------------------------------------------------
 # CACHED HEAVY IMPORTS (CRITICAL)
 # --------------------------------------------------
