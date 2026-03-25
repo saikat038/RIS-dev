@@ -16,24 +16,14 @@ import streamlit as st
 
 st.markdown("""
 <style>
-/* KEEP the 3 dots menu */
+/* Show menu */
 #MainMenu {visibility: visible;}
 
-/* Hide deploy button */
+/* Hide deploy */
 .stDeployButton {display: none;}
 
-/* Hide GitHub icon (best-effort) */
-a[href*="github"] {
-    display: none !important;
-}
-
-/* Hide footer */
-footer {visibility: hidden;}
-
-/* Adjust top spacing */
-.block-container {
-    padding-top: 1rem;
-}
+/* DO NOT hide header */
+header {visibility: visible;}
 </style>
 """, unsafe_allow_html=True)
 # --------------------------------------------------
