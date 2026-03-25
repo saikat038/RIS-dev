@@ -33,21 +33,8 @@ st.set_page_config(
 if not is_dev:
     st.markdown("""
     <style>
-    /* ❌ Hide full header (your existing logic) */
-    header {visibility: hidden !important;}
-    #MainMenu {visibility: hidden !important;}
-
-    /* ❌ Hide footer completely */
-    footer {visibility: hidden !important;}
-
-    /* ❌ Extra: hide any bottom fixed elements */
-    .st-emotion-cache-uf99v8 {
-        display: none !important;
-    }
-
-    /* ✅ Fix spacing */
-    .block-container {
-        padding-top: 1rem !important;
+    footer, footer * {
+        visibility: hidden !important;
     }
     </style>
     """, unsafe_allow_html=True)
