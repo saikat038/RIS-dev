@@ -16,14 +16,8 @@ import streamlit as st
 
 st.markdown("""
 <style>
-/* Show menu */
-#MainMenu {visibility: visible;}
-
-/* Hide deploy */
-.stDeployButton {display: none;}
-
-/* DO NOT hide header */
-header {visibility: visible;}
+footer {visibility: hidden;}
+.block-container {padding-top: 1rem;}
 </style>
 """, unsafe_allow_html=True)
 # --------------------------------------------------
