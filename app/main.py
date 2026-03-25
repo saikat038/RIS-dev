@@ -33,13 +33,24 @@ st.set_page_config(
 if not is_dev:
     st.markdown("""
     <style>
-    footer, footer * {
-        pointer-events: none !important;
+    /* ❌ Hide full header (your existing logic) */
+    header {visibility: hidden !important;}
+    #MainMenu {visibility: hidden !important;}
+
+    /* ❌ Hide footer completely */
+    footer {
+    pointer-events: none !important;
+    opacity: 0.3;
+}
+
+    /* ❌ Extra: hide any bottom fixed elements */
+    .st-emotion-cache-uf99v8 {
+        display: none !important;
     }
 
-    /* Catch-all for any floating bottom links */
-    a[href*="streamlit"] {
-        pointer-events: none !important;
+    /* ✅ Fix spacing */
+    .block-container {
+        padding-top: 1rem !important;
     }
     </style>
     """, unsafe_allow_html=True)
