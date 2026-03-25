@@ -12,13 +12,9 @@ import streamlit as st
 
 st.markdown("""
 <style>
-/* More aggressive targeting */
-div[role="menu"] a[href*="github"] {
-    display: none !important;
-}
+#MainMenu {visibility: hidden;}
 </style>
 """, unsafe_allow_html=True)
-
 # --------------------------------------------------
 # CACHED HEAVY IMPORTS (CRITICAL)
 # --------------------------------------------------
