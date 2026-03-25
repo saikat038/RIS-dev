@@ -30,7 +30,12 @@ from app.rag import answer
 # ========================
 st.set_page_config(
     page_title="Regulatory Authoring Intelligence System",
-    layout="wide"
+    layout="wide",
+    menu_items={
+        "Get help": None,
+        "Report a bug": None,
+        "About": None,
+    },
 )
 
 # ========================
