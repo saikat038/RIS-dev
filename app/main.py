@@ -12,11 +12,7 @@ import streamlit as st
 
 st.markdown("""
 <style>
-/* Hide only GitHub option */
-div[role="menu"] button[title*="GitHub"],
-div[role="menu"] a[title*="GitHub"] {
-    display: none !important;
-}
+#MainMenu {visibility: hidden;}
 </style>
 """, unsafe_allow_html=True)
 # --------------------------------------------------
