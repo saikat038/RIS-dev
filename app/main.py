@@ -2,7 +2,12 @@ import streamlit as st
 import os, sys
 import base64
 
-is_dev = st.query_params.get("dev") == "true"
+dev_param = st.query_params.get("dev")
+
+if isinstance(dev_param, list):
+    dev_param = dev_param[0]
+
+is_dev = str(dev_param).lower() == "true"
 # --------------------------------------------------
 # SAFE PATH SETUP
 # --------------------------------------------------
