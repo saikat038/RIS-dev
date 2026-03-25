@@ -33,26 +33,26 @@ st.set_page_config(
 if not is_dev:
     st.markdown("""
     <style>
+    /* Hide header */
     header {visibility: hidden !important;}
     #MainMenu {visibility: hidden !important;}
 
+    /* Disable ALL links (this catches bottom icons) */
+    a {
+        pointer-events: none !important;
+        cursor: default !important;
+    }
+
+    /* Optional: make them look disabled */
+    a {
+        opacity: 0.4;
+    }
+
+    /* Fix spacing */
     .block-container {
         padding-top: 1rem !important;
     }
-
-    /* invisible layer over bottom icons */
-    .bottom-click-blocker {
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 42px;
-        z-index: 999999;
-        background: transparent;
-    }
     </style>
-
-    <div class="bottom-click-blocker"></div>
     """, unsafe_allow_html=True)
 
 # ========================
