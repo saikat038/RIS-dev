@@ -32,14 +32,13 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-/* Hide left-side cloud/app icon */
-header div[data-testid="stToolbar"] > div:first-child {
+/* Hide first 2 elements inside header (icons area) */
+header > div > div:first-child {
     display: none !important;
 }
 
-/* Hide red crown / deploy badge */
-header button[title*="Deploy"],
-header div[title*="Deploy"] {
+/* Hide any button with crown-like appearance */
+header button svg {
     display: none !important;
 }
 </style>
