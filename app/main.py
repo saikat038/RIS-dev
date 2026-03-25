@@ -7,11 +7,22 @@ import base64
 # --------------------------------------------------
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-
-
-
 import streamlit as st
-st.set_option("client.toolbarMode", "auto")
+
+st.markdown("""
+<style>
+/* Hide ALL buttons in top right except menu */
+header button {
+    display: none !important;
+}
+
+/* Bring back menu (3 dots) */
+#MainMenu {
+    visibility: visible !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # --------------------------------------------------
 # CACHED HEAVY IMPORTS (CRITICAL)
 # --------------------------------------------------
@@ -30,22 +41,8 @@ from app.rag import answer
 # ========================
 st.set_page_config(
     page_title="Regulatory Authoring Intelligence System",
-    layout="wide",
-    menu_items={
-        "Get help": None,
-        "Report a bug": None,
-        "About": None,
-    },
+    layout="wide"
 )
-
-st.markdown("""
-<style>
-/* Hide fullscreen button */
-button[title="View fullscreen"] {
-    display: none !important;
-}
-</style>
-""", unsafe_allow_html=True)
 
 # ========================
 # LOGO PATH
