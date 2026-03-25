@@ -12,22 +12,29 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import streamlit as st
 
+import streamlit as st
+
 st.markdown("""
-    <style>
-    /* Hide deploy button */
-    .stDeployButton {display: none;}
+<style>
+/* KEEP the 3 dots menu */
+#MainMenu {visibility: visible;}
 
-    /* Hide header (top bar) */
-    header {visibility: hidden;}
+/* Hide deploy button */
+.stDeployButton {display: none;}
 
-    /* Hide footer */
-    footer {visibility: hidden;}
+/* Hide GitHub icon (best-effort) */
+a[href*="github"] {
+    display: none !important;
+}
 
-    /* Remove extra top padding */
-    .block-container {
-        padding-top: 1rem;
-    }
-    </style>
+/* Hide footer */
+footer {visibility: hidden;}
+
+/* Adjust top spacing */
+.block-container {
+    padding-top: 1rem;
+}
+</style>
 """, unsafe_allow_html=True)
 # --------------------------------------------------
 # CACHED HEAVY IMPORTS (CRITICAL)
