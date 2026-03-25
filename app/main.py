@@ -38,6 +38,15 @@ st.set_page_config(
     },
 )
 
+st.markdown("""
+<style>
+/* Hide fullscreen button */
+button[title="View fullscreen"] {
+    display: none !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # ========================
 # LOGO PATH
 # ========================
