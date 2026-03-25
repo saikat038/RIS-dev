@@ -8,11 +8,34 @@ import base64
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 
-import streamlit as st
+
 
 st.markdown("""
 <style>
-#MainMenu {visibility: hidden;}
+/* Hide GitHub icon */
+button[data-testid="stToolbarGithub"] {
+    display: none !important;
+}
+
+/* Hide Deploy button */
+button[data-testid="stDeployButton"] {
+    display: none !important;
+}
+
+/* Optional: hide Share */
+button[data-testid="stToolbarShare"] {
+    display: none !important;
+}
+
+/* Optional: hide Edit (pencil icon) */
+button[data-testid="stToolbarEdit"] {
+    display: none !important;
+}
+
+/* Optional: hide Star */
+button[data-testid="stToolbarStar"] {
+    display: none !important;
+}
 </style>
 """, unsafe_allow_html=True)
 # --------------------------------------------------
