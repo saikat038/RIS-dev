@@ -7,22 +7,6 @@ import base64
 # --------------------------------------------------
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-import streamlit as st
-
-st.markdown("""
-<style>
-/* Hide ALL buttons in top right except menu */
-header button {
-    display: none !important;
-}
-
-/* Bring back menu (3 dots) */
-#MainMenu {
-    visibility: visible !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
 # --------------------------------------------------
 # CACHED HEAVY IMPORTS (CRITICAL)
 # --------------------------------------------------
