@@ -26,7 +26,6 @@ from app.rag import answer
 # ========================
 # CONFIG
 # ========================
-st.set_option("client.toolbarMode", "viewer")
 st.set_page_config(
     page_title="Regulatory Authoring Intelligence System",
     layout="wide",
@@ -36,6 +35,16 @@ st.set_page_config(
         "About": None,
     },
 )
+
+st.set_option("client.toolbarMode", "minimal")
+
+st.markdown("""
+<style>
+footer {visibility: hidden;}
+.block-container {padding-top: 1rem;}
+</style>
+""", unsafe_allow_html=True)
+
 
 # ========================
 # LOGO PATH
