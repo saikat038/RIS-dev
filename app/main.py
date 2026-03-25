@@ -33,23 +33,13 @@ st.set_page_config(
 if not is_dev:
     st.markdown("""
     <style>
-    /* ✅ Keep header visible */
+    /* ✅ Keep header */
     header {
         visibility: visible;
     }
 
-    /* ❌ Hide left logo / workspace icon */
-    header div[data-testid="stToolbar"] > div:first-child {
-        display: none !important;
-    }
-
-    /* ❌ Hide deploy / crown button */
-    button[data-testid="stDeployButton"] {
-        display: none !important;
-    }
-
-    /* ❌ Hide GitHub icon (best effort) */
-    a[href*="github"] {
+    /* ❌ Hide LEFT ICON GROUP (logo + crown) */
+    header > div > div:first-child {
         display: none !important;
     }
 
@@ -58,7 +48,7 @@ if not is_dev:
         visibility: hidden;
     }
 
-    /* ✅ Adjust spacing */
+    /* ✅ Fix spacing */
     .block-container {
         padding-top: 1rem;
     }
