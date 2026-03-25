@@ -38,10 +38,11 @@ if not is_dev:
     #MainMenu {visibility: hidden !important;}
 
     /* ❌ Hide footer completely */
+    /* Footer: visible but faded + not clickable */
     footer {
-    pointer-events: none !important;
-    opacity: 0.3;
-}
+        pointer-events: none !important;
+        opacity: 0.3;
+    }
 
     /* ❌ Extra: hide any bottom fixed elements */
     .st-emotion-cache-uf99v8 {
