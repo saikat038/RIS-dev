@@ -33,27 +33,26 @@ st.set_page_config(
 if not is_dev:
     st.markdown("""
     <style>
-    /* ❌ Hide full header (your existing logic) */
     header {visibility: hidden !important;}
     #MainMenu {visibility: hidden !important;}
 
-    /* ❌ Hide footer completely */
-    /* Footer: visible but faded + not clickable */
-    footer {
-        pointer-events: none !important;
-        opacity: 0.3;
-    }
-
-    /* ❌ Extra: hide any bottom fixed elements */
-    .st-emotion-cache-uf99v8 {
-        display: none !important;
-    }
-
-    /* ✅ Fix spacing */
     .block-container {
         padding-top: 1rem !important;
     }
+
+    /* invisible layer over bottom icons */
+    .bottom-click-blocker {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 42px;
+        z-index: 999999;
+        background: transparent;
+    }
     </style>
+
+    <div class="bottom-click-blocker"></div>
     """, unsafe_allow_html=True)
 
 # ========================
