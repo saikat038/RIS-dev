@@ -30,33 +30,35 @@ st.set_page_config(
     layout="wide"
 )
 
-st.markdown("""
-<style>
-/* Hide first 2 elements inside header (icons area) */
-header > div > div:first-child {
-    display: none !important;
-}
-
-/* Hide any button with crown-like appearance */
-header button svg {
-    display: none !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
 if not is_dev:
     st.markdown("""
     <style>
-    /* Hide full Streamlit header */
-    header {visibility: hidden;}
+    /* ✅ Keep header visible */
+    header {
+        visibility: visible;
+    }
 
-    /* Hide 3 dots menu */
-    #MainMenu {visibility: hidden;}
+    /* ❌ Hide left logo / workspace icon */
+    header div[data-testid="stToolbar"] > div:first-child {
+        display: none !important;
+    }
 
-    /* Hide footer */
-    footer {visibility: hidden;}
+    /* ❌ Hide deploy / crown button */
+    button[data-testid="stDeployButton"] {
+        display: none !important;
+    }
 
-    /* Fix spacing after removing header */
+    /* ❌ Hide GitHub icon (best effort) */
+    a[href*="github"] {
+        display: none !important;
+    }
+
+    /* ❌ Hide footer */
+    footer {
+        visibility: hidden;
+    }
+
+    /* ✅ Adjust spacing */
     .block-container {
         padding-top: 1rem;
     }
