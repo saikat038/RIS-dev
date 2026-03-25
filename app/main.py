@@ -33,8 +33,20 @@ st.set_page_config(
 if not is_dev:
     st.markdown("""
     <style>
-    footer, footer * {
-        visibility: hidden !important;
+    /* Disable clicks on footer */
+    footer {
+        pointer-events: none !important;
+        opacity: 0.6;  /* optional: slightly faded */
+    }
+
+    /* Disable clicks on all footer children */
+    footer * {
+        pointer-events: none !important;
+    }
+
+    /* Optional: disable bottom fixed elements too */
+    div[data-testid="stFooter"] {
+        pointer-events: none !important;
     }
     </style>
     """, unsafe_allow_html=True)
