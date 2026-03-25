@@ -10,6 +10,28 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 
 
+import streamlit as st
+
+st.markdown("""
+    <style>
+    /* Hide top-right menu (⋮) */
+    #MainMenu {visibility: hidden;}
+
+    /* Hide deploy button */
+    .stDeployButton {display: none;}
+
+    /* Hide header (top bar) */
+    header {visibility: hidden;}
+
+    /* Hide footer */
+    footer {visibility: hidden;}
+
+    /* Remove extra top padding */
+    .block-container {
+        padding-top: 1rem;
+    }
+    </style>
+""", unsafe_allow_html=True)
 # --------------------------------------------------
 # CACHED HEAVY IMPORTS (CRITICAL)
 # --------------------------------------------------
@@ -28,23 +50,8 @@ from app.rag import answer
 # ========================
 st.set_page_config(
     page_title="Regulatory Authoring Intelligence System",
-    layout="wide",
-    menu_items={
-        "Get help": None,
-        "Report a bug": None,
-        "About": None,
-    },
+    layout="wide"
 )
-
-st.set_option("client.toolbarMode", "minimal")
-
-st.markdown("""
-<style>
-footer {visibility: hidden;}
-.block-container {padding-top: 1rem;}
-</style>
-""", unsafe_allow_html=True)
-
 
 # ========================
 # LOGO PATH
