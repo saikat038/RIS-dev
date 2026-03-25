@@ -2,6 +2,8 @@ import streamlit as st
 import os, sys
 import base64
 
+params = st.experimental_get_query_params()
+is_dev = params.get("dev", ["false"])[0].lower() == "true"
 # --------------------------------------------------
 # SAFE PATH SETUP
 # --------------------------------------------------
@@ -28,30 +30,25 @@ st.set_page_config(
     layout="wide"
 )
 
-params = st.experimental_get_query_params()
-is_dev = params.get("dev", ["false"])[0].lower() == "true"
-
-# Temporary debug banner
-st.write("Mode:", "DEV" if is_dev else "USER")
-st.write("Query params:", params)
-
-# ========================
-# UI CONTROL
-# ========================
 if not is_dev:
     st.markdown("""
     <style>
+    /* ❌ Hide full header (your existing logic) */
     header {visibility: hidden !important;}
     #MainMenu {visibility: hidden !important;}
+
+    /* ❌ Hide footer completely */
     footer {visibility: hidden !important;}
-    .block-container {padding-top: 1rem !important;}
-    </style>
-    """, unsafe_allow_html=True)
-else:
-    st.markdown("""
-    <style>
-    footer {visibility: hidden !important;}
-    .block-container {padding-top: 1rem !important;}
+
+    /* ❌ Extra: hide any bottom fixed elements */
+    .st-emotion-cache-uf99v8 {
+        display: none !important;
+    }
+
+    /* ✅ Fix spacing */
+    .block-container {
+        padding-top: 1rem !important;
+    }
     </style>
     """, unsafe_allow_html=True)
 
