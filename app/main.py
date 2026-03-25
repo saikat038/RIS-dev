@@ -12,8 +12,8 @@ import streamlit as st
 
 st.markdown("""
 <style>
-/* Hide only the GitHub link inside the menu */
-a[href*="github"] {
+/* More aggressive targeting */
+div[role="menu"] a[href*="github"] {
     display: none !important;
 }
 </style>
