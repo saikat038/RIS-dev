@@ -33,25 +33,17 @@ st.set_page_config(
 if not is_dev:
     st.markdown("""
     <style>
-    /* ✅ Keep header */
-    header {
-        visibility: visible;
-    }
-
-    /* ❌ Hide LEFT ICON GROUP (logo + crown) */
-    header > div > div:first-child {
-        display: none !important;
-    }
-
-    /* ❌ Hide footer */
-    footer {
-        visibility: hidden;
-    }
-
-    /* ✅ Fix spacing */
-    .block-container {
-        padding-top: 1rem;
-    }
+    header {visibility: hidden;}
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    .block-container {padding-top: 1rem;}
+    </style>
+    """, unsafe_allow_html=True)
+else:
+    st.markdown("""
+    <style>
+    footer {visibility: hidden;}
+    .block-container {padding-top: 1rem;}
     </style>
     """, unsafe_allow_html=True)
 
