@@ -2,12 +2,8 @@ import streamlit as st
 import os, sys
 import base64
 
-dev_param = st.query_params.get("dev")
-
-if isinstance(dev_param, list):
-    dev_param = dev_param[0]
-
-is_dev = str(dev_param).lower() == "true"
+params = st.experimental_get_query_params()
+is_dev = params.get("dev", ["false"])[0].lower() == "true"
 # --------------------------------------------------
 # SAFE PATH SETUP
 # --------------------------------------------------
@@ -33,6 +29,21 @@ st.set_page_config(
     page_title="Regulatory Authoring Intelligence System",
     layout="wide"
 )
+
+st.markdown("""
+<style>
+/* Hide left-side cloud/app icon */
+header div[data-testid="stToolbar"] > div:first-child {
+    display: none !important;
+}
+
+/* Hide red crown / deploy badge */
+header button[title*="Deploy"],
+header div[title*="Deploy"] {
+    display: none !important;
+}
+</style>
+""", unsafe_allow_html=True)
 
 if not is_dev:
     st.markdown("""
