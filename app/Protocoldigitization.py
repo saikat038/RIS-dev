@@ -471,6 +471,9 @@ SECTION_TO_TEMPLATE_VAR = {
     "Study Disposition All Screened Subjects - RP Patients": "Tables_figures_and_graphs_referred_to_but_not_included_in_the_text",
     "Demographic and other baseline characteristics": "Demographic_and_other_baseline_characteristics",
     "Measurements of treatment compliance": "Measurements_of_treatment_compliance",
+    "Analysis of Efficacy": "Analysis_of_efficacy",
+    "Statistical and Analytical Plans": "Statistical_and_analytical_plan",
+    "SAFETY CONCLUSIONS": "Safety_conclusions"
 }
 
 # ============================================================
