@@ -1251,7 +1251,22 @@ def format_chunk_for_context(chunk: Dict) -> str:
 
     # -------- TABLE --------
     if chunk.get("block_type") == "table":
-        return chunk.get("table_markdown") or chunk.get("text", "")
+        table_md = chunk.get("table_markdown") or chunk.get("text", "")
+
+    meta = []
+
+    # 🔥 VERY IMPORTANT
+    meta.append("type=table")
+
+    if chunk.get("table_context_heading"):
+        meta.append(f"section={chunk['table_context_heading']}")
+
+    if chunk.get("page_number"):
+        meta.append(f"pages={chunk['page_number']}")
+
+    meta_line = f"[{', '.join(meta)}]"
+
+    return f"{table_md}\n{meta_line}".strip()
 
     # -------- NON-TABLE --------
     meta = []
@@ -2534,4 +2549,4 @@ def answer(query: str, history: List[Dict]) -> str:
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
 # answer("Selection and timing of dose for each patient", [])
-# answer("Risks and Benefits OCU400 Risks", [])
+answer("Analysis of Efficacy", [])
