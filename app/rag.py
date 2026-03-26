@@ -2627,4 +2627,4 @@ def answer(query: str, history: List[Dict]) -> str:
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
 # answer("Selection and timing of dose for each patient", [])
-answer("Analysis of Efficacy", [])
+# answer("Analysis of Efficacy", [])
