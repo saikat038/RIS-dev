@@ -2100,8 +2100,8 @@ def retrieve_context_node(state: RAGState) -> RAGState:
                         min_score=0.50          # ← 60% threshold
                     )
     
-
-    if len(synonyms) > 1:
+    print("lengthhhhhhh:",len(synonyms[0]))
+    if len(synonyms[0]) > 1:
         source_chunks = filter_by_synonyms(source_chunks, synonyms)
     else:
         source_chunks = filter_by_synonyms(source_chunks, [section_name])
@@ -2584,4 +2584,4 @@ def answer(query: str, history: List[Dict]) -> str:
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
 # answer("Selection and timing of dose for each patient", [])
-# answer("Analysis of Efficacy", [])
+# answer("Treatments Administered", [])
