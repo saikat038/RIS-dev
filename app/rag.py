@@ -1657,7 +1657,7 @@ def vector_search_ich(
 
     try:
         results = search_client.search(
-            search_text=None,
+            search_text="*",
             filter=filter_query,
             select=[
                 "id", "doc_id", "source_type", "guideline",
@@ -1665,7 +1665,7 @@ def vector_search_ich(
                 "block_type", "rule_type",
                 "page_number", "text"
             ],
-            order_by="page_number asc",
+            order_by="page_number asc, id asc",
             top=100
         )
 
@@ -1886,78 +1886,42 @@ def save_vector_search_results(
         print(f"Unexpected error while saving debug file {filename}: {e}")
 
 
-def group_ich_by_section(chunks: list[dict], ich_refs: list[str] = None) -> dict:
-    """
-    ONLY keeps the section whose section_path matches a number in ich_refs.
-    Drops all others.
-    Returns clean structure with only requested fields.
-    """
-    # Extract numeric section numbers from ich_refs (e.g. "14.1")
-    allowed_paths = set()
-    if ich_refs:
-        for ref in ich_refs:
-            match = re.search(r'\b(\d+(\.\d+)*)\b', ref.strip())
-            if match:
-                allowed_paths.add(match.group(1))
+def smart_join(texts: list[str]) -> str:
+    final = []
 
-    print(f"Allowed paths from ich_refs: {allowed_paths or 'None provided'}")
+    for t in texts:
+        t = t.strip()
 
-    if not allowed_paths:
-        print("No numeric section refs found → returning empty")
-        return {"total_sections": 0, "results": []}
-
-    # Group chunks
-    grouped = defaultdict(list)
-    for chunk in chunks:
-        path = chunk.get("section_path")
-        if path:
-            grouped[path].append(chunk)
-
-    results = []
-
-    # Only process matching sections
-    for section_path, items in grouped.items():
-        if section_path not in allowed_paths:
-            print(f"Skipped {section_path} (not matching ich_refs)")
+        if not final:
+            final.append(t)
             continue
 
-        items.sort(key=lambda x: x.get("page_number") or 0)
+        prev = final[-1]
 
-        headings = []
-        guideline_parts = []
+        # If previous line does NOT end properly → continue sentence
+        if not re.search(r"[\.!?]$", prev):
+            final[-1] = prev + " " + t
+        else:
+            final.append(t)
 
-        for item in items:
-            text = (item.get("text") or "").strip()
-            if not text:
-                continue
+    return "\n\n".join(final)
 
-            block_type = item.get("block_type", "").lower()
+def extract_exact_section(chunks: list[dict]) -> str:
+    if not chunks:
+        return ""
 
-            if block_type == "heading":
-                headings.append(text)
-                guideline_parts.append(text)
-            else:
-                guideline_parts.append(text)
+    texts = []
+    seen = set()
 
-        guideline_text = " ".join(guideline_parts).strip() or "(no content)"
+    for c in chunks:
+        t = (c.get("text") or "").strip()
 
-        results.append({
-            "section_path": section_path,
-            "source_type": "ich",
-            "guideline_text": guideline_text,
-            "headings": headings
-        })
+        # remove duplicates safely
+        if t and t not in seen:
+            seen.add(t)
+            texts.append(t)
 
-    # Sort (though usually only 1)
-    results.sort(key=lambda x: x["section_path"])
-
-    print(f"Kept {len(results)} matching sections")
-    print("ich_refs before grouping:", ich_refs)
-
-    return {
-        "total_sections": len(results),
-        "results": results
-    }
+    return smart_join(texts)
 
 
 def filter_by_synonyms(results: List[Dict[str, Any]], synonyms: List[str]) -> List[Dict[str, Any]]:
@@ -2098,33 +2062,25 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     # -------------------------------------------------
     # GROUP ICH CHUNKS INTO STRUCTURED SECTIONS
     # -------------------------------------------------
-    ich_sections = group_ich_by_section(ich_chunks, ich_refs=ich_refs)
+    ich_text = extract_exact_section(ich_chunks)
+
+    ich_sections = {
+        "total_sections": 1 if ich_text else 0,
+        "results": [
+            {
+                "section_path": ich_refs[0] if ich_refs else "",
+                "source_type": "ich",
+                "guideline_text": ich_text,
+                "headings": []
+            }
+        ] if ich_text else []
+    }
 
     # -------------------------------------------------
     # BUILD ICH CONTEXT FOR LLM (text version)
     # -------------------------------------------------
 
-    ich_context_blocks = []
-
-    for section in ich_sections.get("results", []):
-        if not isinstance(section, dict):
-            print(f"Skipping invalid section item: {section}")
-            continue
-
-        guideline_text = section.get("guideline_text") or ""
-        paragraphs = section.get("paragraphs", [])
-
-        content = guideline_text or "".join(paragraphs)
-
-        if not content.strip():
-            continue
-
-        # Format exactly as requested
-        block = f"\n{content}"
-        ich_context_blocks.append(block)
-
-    # Join with double newline between blocks (if multiple, though you likely have only one)
-    ich_context = "".join(ich_context_blocks) if ich_context_blocks else "No ICH guidance found."
+    ich_context = ich_text if ich_text else "No ICH guidance found."
 
     # print(f"ICH sections found: {len(ich_sections)}")
 
@@ -2584,6 +2540,7 @@ def build_rag_graph():
     graph_builder.add_edge("retrieve_context", "build_prompt")
     graph_builder.add_edge("build_prompt", "generate_answer")
     graph_builder.add_edge("generate_answer", END)
+    # graph_builder.add_edge("build_prompt", END)
 
     return graph_builder.compile()
 
