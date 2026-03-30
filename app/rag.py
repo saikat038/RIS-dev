@@ -1232,142 +1232,12 @@ def load_ich_search_client() -> SearchClient:
 # ============================================================
 # HELPER
 # ============================================================
-# def format_chunk_for_context(chunk: Dict) -> str:
-#     """
-#     Format SOURCE chunks for LLM context.
-#     Content first, metadata second.
-#     Improved table rendering to help LLM understand structure.
-#     """
-#     if not isinstance(chunk, dict):
-#         return str(chunk)
-
-#     text = (chunk.get("text") or "").strip()
-#     if not text:
-#         return ""
-
-#     chunk_type = chunk.get("chunk_type")
-#     heading = chunk.get("heading_path")
-#     pages = chunk.get("page_numbers")
-
-#     # Optional: suppress heading-only chunks
-#     if chunk_type == "heading" and len(text.split()) < 12:
-#         return ""
-
-#     # ── Special handling for tables ────────────────────────────────────────
-#     if chunk_type == "table" or any(k.startswith("table_") for k in chunk):
-#         lines = []
-
-#         # Table title / context heading
-#         table_title = (
-#             chunk.get("table_context_heading")
-#             or heading
-#             or "Table (no caption)"
-#         ).strip()
-#         lines.append(f"**{table_title}**")
-#         lines.append("")
-
-#         rows = chunk.get("table_rows")
-
-#         if rows:
-#             # FIX 1: Proper parsing of newline-separated row lists
-#             if isinstance(rows, str):
-#                 try:
-#                     import ast
-#                     parsed_rows = []
-#                     for line in rows.splitlines():
-#                         line = line.strip()
-#                         if line.startswith("[") and line.endswith("]"):
-#                             parsed_rows.append(ast.literal_eval(line))
-#                     rows = parsed_rows if parsed_rows else None
-#                 except Exception:
-#                     rows = None
-
-#             if isinstance(rows, list) and rows and isinstance(rows[0], list):
-
-#                 # USE TRUE HEADERS FROM INDEX
-#                 headers = chunk.get("table_headers")
-
-#                 if headers:
-#                     header = [str(h).strip() for h in headers]
-#                     data_rows = rows
-#                 else:
-#                     # fallback if headers missing
-#                     header = rows[0]
-#                     data_rows = rows[1:]
-
-#                 lines.append("| " + " | ".join(header) + " |")
-#                 lines.append("|" + "|".join(["---"] * len(header)) + "|")
-
-#                 MAX_ROWS = 50
-
-#                 for row in data_rows[:MAX_ROWS]:
-#                     cleaned_row = []
-
-#                     for cell in row:
-#                         cell = str(cell).strip().replace("\n", " ")
-
-#                         # normalize OCR checkbox artifacts
-#                         cell = cell.replace(":selected: X", "✕")
-#                         cell = cell.replace(":selected:", "✕")
-#                         cell = cell.replace(":unselected:", "")
-#                         cell = cell.replace("응", "%")
-
-#                         # normalize OCR symbol errors
-#                         cell = cell.replace("士", "±")
-#                         cell = cell.replace("土", "±")
-
-#                         cleaned_row.append(cell)
-
-#                     lines.append("| " + " | ".join(cleaned_row) + " |")
-
-#                 # Metadata
-#                 meta = [f"type=table", f"pages={pages if pages else '?'}"]
-#                 if heading:
-#                     meta.append(f"section={heading}")
-
-#                 lines.append(f"[{', '.join(meta)}]")
-#                 return "\n".join(lines).strip()
-
-#         # Fallback: use raw text if no usable table_rows
-#         lines.append(text)
-
-#     else:
-#         # Original non-table logic (unchanged)
-#         meta = []
-#         if chunk_type:
-#             meta.append(f"type={chunk_type}")
-#         if heading:
-#             meta.append(f"section={heading}")
-#         if pages:
-#             if isinstance(pages, list):
-#                 pages = ",".join(map(str, pages))
-#             meta.append(f"pages={pages}")
-
-#         meta_line = f"[{', '.join(meta)}]" if meta else ""
-#         return f"{text}\n{meta_line}".strip()
-
-#     # Final metadata for table case (fallback path)
-#     meta = [f"type={chunk_type or 'table'}"]
-#     if heading:
-#         meta.append(f"section={heading}")
-#     if pages:
-#         if isinstance(pages, list):
-#             pages = ",".join(map(str, pages))
-#         meta.append(f"pages={pages}")
-
-#     meta_line = f"[{', '.join(meta)}]" if meta else ""
-
-#     result = "\n".join(lines)
-#     if meta_line:
-#         result += "\n" + meta_line
-#     return result.strip()
-
 def format_chunk_for_context(chunk: Dict) -> str:
     """
     Format SOURCE chunks for LLM context.
-    Assumes all normalization is already done upstream.
+    Content first, metadata second.
+    Improved table rendering to help LLM understand structure.
     """
-
     if not isinstance(chunk, dict):
         return str(chunk)
 
@@ -1379,83 +1249,107 @@ def format_chunk_for_context(chunk: Dict) -> str:
     heading = chunk.get("heading_path")
     pages = chunk.get("page_numbers")
 
-    # Optional: suppress small headings
+    # Optional: suppress heading-only chunks
     if chunk_type == "heading" and len(text.split()) < 12:
         return ""
 
-    # ── TABLE HANDLING ───────────────────────────────────────
+    # ── Special handling for tables ────────────────────────────────────────
     if chunk_type == "table" or any(k.startswith("table_") for k in chunk):
-
         lines = []
 
+        # Table title / context heading
         table_title = (
             chunk.get("table_context_heading")
             or heading
             or "Table (no caption)"
         ).strip()
-
         lines.append(f"**{table_title}**")
         lines.append("")
 
         rows = chunk.get("table_rows")
 
-        if isinstance(rows, list) and rows and isinstance(rows[0], list):
+        if rows:
+            # FIX 1: Proper parsing of newline-separated row lists
+            if isinstance(rows, str):
+                try:
+                    import ast
+                    parsed_rows = []
+                    for line in rows.splitlines():
+                        line = line.strip()
+                        if line.startswith("[") and line.endswith("]"):
+                            parsed_rows.append(ast.literal_eval(line))
+                    rows = parsed_rows if parsed_rows else None
+                except Exception:
+                    rows = None
 
-            headers = chunk.get("table_headers")
+            if isinstance(rows, list) and rows and isinstance(rows[0], list):
 
-            if headers:
-                header = [str(h).strip() for h in headers]
-                data_rows = rows
-            else:
-                header = rows[0]
-                data_rows = rows[1:]
+                # USE TRUE HEADERS FROM INDEX
+                headers = chunk.get("table_headers")
 
-            lines.append("| " + " | ".join(header) + " |")
-            lines.append("|" + "|".join(["---"] * len(header)) + "|")
+                if headers:
+                    header = [str(h).strip() for h in headers]
+                    data_rows = rows
+                else:
+                    # fallback if headers missing
+                    header = rows[0]
+                    data_rows = rows[1:]
 
-            MAX_ROWS = 50
+                lines.append("| " + " | ".join(header) + " |")
+                lines.append("|" + "|".join(["---"] * len(header)) + "|")
 
-            for row in data_rows[:MAX_ROWS]:
-                cleaned_row = [str(cell).strip().replace("\n", " ") for cell in row]
-                lines.append("| " + " | ".join(cleaned_row) + " |")
+                MAX_ROWS = 50
 
-            meta = [f"type=table", f"pages={pages if pages else '?'}"]
+                for row in data_rows[:MAX_ROWS]:
+                    cleaned_row = []
 
-            if heading:
-                meta.append(f"section={heading}")
+                    for cell in row:
+                        cell = str(cell).strip().replace("\n", " ")
 
-            lines.append(f"[{', '.join(meta)}]")
+                        # normalize OCR checkbox artifacts
+                        cell = cell.replace(":selected: X", "✕")
+                        cell = cell.replace(":selected:", "✕")
+                        cell = cell.replace(":unselected:", "")
+                        cell = cell.replace("응", "%")
 
-            return "\n".join(lines).strip()
+                        # normalize OCR symbol errors
+                        cell = cell.replace("士", "±")
+                        cell = cell.replace("土", "±")
 
-        # fallback
+                        cleaned_row.append(cell)
+
+                    lines.append("| " + " | ".join(cleaned_row) + " |")
+
+                # Metadata
+                meta = [f"type=table", f"pages={pages if pages else '?'}"]
+                if heading:
+                    meta.append(f"section={heading}")
+
+                lines.append(f"[{', '.join(meta)}]")
+                return "\n".join(lines).strip()
+
+        # Fallback: use raw text if no usable table_rows
         lines.append(text)
 
     else:
-        # ── NON-TABLE ───────────────────────────────────────
+        # Original non-table logic (unchanged)
         meta = []
-
         if chunk_type:
             meta.append(f"type={chunk_type}")
-
         if heading:
             meta.append(f"section={heading}")
-
         if pages:
             if isinstance(pages, list):
                 pages = ",".join(map(str, pages))
             meta.append(f"pages={pages}")
 
         meta_line = f"[{', '.join(meta)}]" if meta else ""
-
         return f"{text}\n{meta_line}".strip()
 
-    # ── TABLE FALLBACK ───────────────────────────────────────
+    # Final metadata for table case (fallback path)
     meta = [f"type={chunk_type or 'table'}"]
-
     if heading:
         meta.append(f"section={heading}")
-
     if pages:
         if isinstance(pages, list):
             pages = ",".join(map(str, pages))
@@ -1464,11 +1358,117 @@ def format_chunk_for_context(chunk: Dict) -> str:
     meta_line = f"[{', '.join(meta)}]" if meta else ""
 
     result = "\n".join(lines)
-
     if meta_line:
         result += "\n" + meta_line
-
     return result.strip()
+
+# def format_chunk_for_context(chunk: Dict) -> str:
+#     """
+#     Format SOURCE chunks for LLM context.
+#     Assumes all normalization is already done upstream.
+#     """
+
+#     if not isinstance(chunk, dict):
+#         return str(chunk)
+
+#     text = (chunk.get("text") or "").strip()
+#     if not text:
+#         return ""
+
+#     chunk_type = chunk.get("chunk_type")
+#     heading = chunk.get("heading_path")
+#     pages = chunk.get("page_numbers")
+
+#     # Optional: suppress small headings
+#     if chunk_type == "heading" and len(text.split()) < 12:
+#         return ""
+
+#     # ── TABLE HANDLING ───────────────────────────────────────
+#     if chunk_type == "table" or any(k.startswith("table_") for k in chunk):
+
+#         lines = []
+
+#         table_title = (
+#             chunk.get("table_context_heading")
+#             or heading
+#             or "Table (no caption)"
+#         ).strip()
+
+#         lines.append(f"**{table_title}**")
+#         lines.append("")
+
+#         rows = chunk.get("table_rows")
+
+#         if isinstance(rows, list) and rows and isinstance(rows[0], list):
+
+#             headers = chunk.get("table_headers")
+
+#             if headers:
+#                 header = [str(h).strip() for h in headers]
+#                 data_rows = rows
+#             else:
+#                 header = rows[0]
+#                 data_rows = rows[1:]
+
+#             lines.append("| " + " | ".join(header) + " |")
+#             lines.append("|" + "|".join(["---"] * len(header)) + "|")
+
+#             MAX_ROWS = 50
+
+#             for row in data_rows[:MAX_ROWS]:
+#                 cleaned_row = [str(cell).strip().replace("\n", " ") for cell in row]
+#                 lines.append("| " + " | ".join(cleaned_row) + " |")
+
+#             meta = [f"type=table", f"pages={pages if pages else '?'}"]
+
+#             if heading:
+#                 meta.append(f"section={heading}")
+
+#             lines.append(f"[{', '.join(meta)}]")
+
+#             return "\n".join(lines).strip()
+
+#         # fallback
+#         lines.append(text)
+
+#     else:
+#         # ── NON-TABLE ───────────────────────────────────────
+#         meta = []
+
+#         if chunk_type:
+#             meta.append(f"type={chunk_type}")
+
+#         if heading:
+#             meta.append(f"section={heading}")
+
+#         if pages:
+#             if isinstance(pages, list):
+#                 pages = ",".join(map(str, pages))
+#             meta.append(f"pages={pages}")
+
+#         meta_line = f"[{', '.join(meta)}]" if meta else ""
+
+#         return f"{text}\n{meta_line}".strip()
+
+#     # ── TABLE FALLBACK ───────────────────────────────────────
+#     meta = [f"type={chunk_type or 'table'}"]
+
+#     if heading:
+#         meta.append(f"section={heading}")
+
+#     if pages:
+#         if isinstance(pages, list):
+#             pages = ",".join(map(str, pages))
+#         meta.append(f"pages={pages}")
+
+#     meta_line = f"[{', '.join(meta)}]" if meta else ""
+
+#     result = "\n".join(lines)
+
+#     if meta_line:
+#         result += "\n" + meta_line
+
+#     return result.strip()
 
 
 
@@ -2101,7 +2101,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
                     )
     
     print("lengthhhhhhh:",len(synonyms[0]))
-    if len(synonyms[0]) > 1:
+    if len(synonyms[0]) > 0:
         source_chunks = filter_by_synonyms(source_chunks, synonyms)
     else:
         source_chunks = filter_by_synonyms(source_chunks, [section_name])
@@ -2584,4 +2584,4 @@ def answer(query: str, history: List[Dict]) -> str:
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
 # answer("Selection and timing of dose for each patient", [])
-# answer("Treatments Administered", [])
+# answer("Statistical and Analytical Plans", [])
