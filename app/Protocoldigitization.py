@@ -473,7 +473,11 @@ SECTION_TO_TEMPLATE_VAR = {
     "Measurements of treatment compliance": "Measurements_of_treatment_compliance",
     "Analysis of Efficacy": "Analysis_of_efficacy",
     "Statistical and Analytical Plans": "Statistical_and_analytical_plan",
-    "SAFETY CONCLUSIONS": "Safety_conclusions"
+    "SAFETY CONCLUSIONS": "Safety_conclusions",
+    "Tabulation of individual response data": "Tabulation_of_individual_response_data",
+    "Efficacy conclusions": "Efficacy_conclusions",
+    "Extent of exposure": "Extent_of_exposure",
+    "Brief Summary of Adverse Events": "Brief_summary_of_adverse_events"
 }
 
 # ============================================================
