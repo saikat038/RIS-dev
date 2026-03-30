@@ -2556,13 +2556,6 @@ HALLUCINATION PREVENTION (NON-NEGOTIABLE)
 - Do NOT add rationale, examples, assumptions, or clarifications.
 
 ────────────────────────
-FAIL-SAFE BEHAVIOR
-────────────────────────
-If the section cannot be authored using SOURCE_CONTEXT alone,
-output exactly:
-Not in knowledge base.
-
-────────────────────────
 FINAL VALIDATION (MANDATORY)
 ────────────────────────
 Before outputting:
@@ -2668,7 +2661,7 @@ def answer(query: str, history: List[Dict]) -> str:
         llm_text=processed_answer
     )
 
-    return context
+    return processed_answer
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
