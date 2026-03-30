@@ -1362,6 +1362,8 @@ def format_chunk_for_context(chunk: Dict) -> str:
         result += "\n" + meta_line
     return result.strip()
 
+
+
 # def format_chunk_for_context(chunk: Dict) -> str:
 #     """
 #     Format SOURCE chunks for LLM context.
@@ -1399,25 +1401,81 @@ def format_chunk_for_context(chunk: Dict) -> str:
 
 #         rows = chunk.get("table_rows")
 
-#         if isinstance(rows, list) and rows and isinstance(rows[0], list):
+#         # 🔥 FIX: parse stringified JSON → list
+#         if isinstance(rows, str):
+#             try:
+#                 rows = json.loads(rows)
+#             except:
+#                 rows = None
+
+#         if isinstance(rows, list) and rows:
+
+#             # 🔥 Normalize 1D → 2D
+#             if rows and not isinstance(rows[0], list):
+#                 rows = [rows]
 
 #             headers = chunk.get("table_headers")
 
 #             if headers:
-#                 header = [str(h).strip() for h in headers]
+#                 header = [str(h).strip().replace("\n", " ") or "N/A" for h in headers]
 #                 data_rows = rows
 #             else:
-#                 header = rows[0]
+#                 header = [str(h).strip().replace("\n", " ") or "N/A" for h in rows[0]]
 #                 data_rows = rows[1:]
 
+#             # ✅ Header
 #             lines.append("| " + " | ".join(header) + " |")
-#             lines.append("|" + "|".join(["---"] * len(header)) + "|")
+#             lines.append("| " + " | ".join(["---"] * len(header)) + " |")
 
 #             MAX_ROWS = 50
+#             valid_row_count = 0
 
 #             for row in data_rows[:MAX_ROWS]:
-#                 cleaned_row = [str(cell).strip().replace("\n", " ") for cell in row]
-#                 lines.append("| " + " | ".join(cleaned_row) + " |")
+
+#                 if not isinstance(row, list):
+#                     continue
+
+#                 # 🔥 STRICT column-based filtering (FINAL FIX)
+
+#                 non_empty_indices = [
+#                     i for i, cell in enumerate(row)
+#                     if str(cell).strip()
+#                 ]
+
+#                 # ❌ If only ONE column has data → drop
+#                 if len(non_empty_indices) <= 1:
+#                     continue
+
+#                 # ❌ If only ONE meaningful column and it's NOT a key column → drop
+#                 # (e.g., only "Changes from Previous" filled)
+#                 if len(non_empty_indices) == 1:
+#                     continue
+
+#                 cleaned_cells = []
+
+#                 for i in range(len(header)):
+#                     cell = str(row[i]).strip() if i < len(row) else ""
+
+#                     # Empty → N/A
+#                     if not cell:
+#                         cell = "N/A"
+
+#                     # Multi-line → bullets
+#                     if "\n" in cell:
+#                         parts = [p.strip() for p in cell.split("\n") if p.strip()]
+#                         if len(parts) > 1:
+#                             cell = "- " + "<br>- ".join(parts)
+#                         else:
+#                             cell = parts[0]
+
+#                     cleaned_cells.append(cell)
+
+#                 lines.append("| " + " | ".join(cleaned_cells) + " |")
+#                 valid_row_count += 1
+
+#             # 🔥 If no valid rows → DROP table
+#             if valid_row_count == 0:
+#                 return ""
 
 #             meta = [f"type=table", f"pages={pages if pages else '?'}"]
 
@@ -1428,7 +1486,23 @@ def format_chunk_for_context(chunk: Dict) -> str:
 
 #             return "\n".join(lines).strip()
 
-#         # fallback
+#         # ── SMART FALLBACK ───────────────────────────────────────
+#         lines_in_text = [l.strip() for l in text.split("\n") if l.strip()]
+
+#         meaningful_lines = [
+#             l for l in lines_in_text
+#             if not re.match(r"^-{3,}$", l)
+#         ]
+
+#         valid_lines = [
+#             l for l in meaningful_lines
+#             if not re.match(r"^\|?\s*(\|\s*)+\|?$", l)
+#         ]
+
+#         # Drop garbage OCR tables
+#         if len(valid_lines) <= 1:
+#             return ""
+
 #         lines.append(text)
 
 #     else:
@@ -1669,11 +1743,26 @@ def vector_search_ich(
             top=100
         )
 
-        chunks = [
-            dict(r)
-            for r in results
-            if (r.get("text") or "").strip()
-        ]
+        chunks = []
+        for r in results:
+            text = (r.get("text") or "").strip()
+            if not text:
+                continue
+
+            # 🔥 DROP contaminated chunks (minimal inline logic)
+            sections = re.findall(r"\b\d+(?:\.\d+)+\b", text)
+            other_sections = [s for s in sections if not s.startswith(section_number)]
+
+            # Rule 1: foreign section numbers present
+            if other_sections:
+                continue
+
+            # Rule 2: standalone section number lines (like "9.7.2")
+            lines = [l.strip() for l in text.split("\n") if l.strip()]
+            if any(re.match(r"^\d+(?:\.\d+)+$", l) for l in lines):
+                continue
+
+            chunks.append(dict(r))
 
         print(f"Fetched {len(chunks)} paragraph chunks")
         return chunks
