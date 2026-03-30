@@ -2643,13 +2643,8 @@ def answer(query: str, history: List[Dict]) -> str:
     """
     Entry point for AUTHORING requests.
     """
-    print("\n" + "=" * 100)
-    print("[ANSWER ENTRY]")
-    print("query:", repr(query))
-    print("history length:", len(history))
-    print("history last 3 messages:")
     for i, msg in enumerate(history[-3:], 1):
-        print(f"  {i}. role={msg.get('role')} content={repr(msg.get('content', '')[:300])}")
+        debug = (f"  {i}. role={msg.get('role')} content={repr(msg.get('content', '')[:300])}")
         
     print(f"[DEBUG] answer() received history of length: {len(history)}")
     if history:
@@ -2676,7 +2671,7 @@ def answer(query: str, history: List[Dict]) -> str:
         llm_text=processed_answer
     )
 
-    return processed_answer
+    return debug
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
