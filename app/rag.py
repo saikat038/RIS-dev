@@ -2643,9 +2643,6 @@ def answer(query: str, history: List[Dict]) -> str:
     """
     Entry point for AUTHORING requests.
     """
-    for i, msg in enumerate(history[-3:], 1):
-        debug = (f"  {i}. role={msg.get('role')} content={repr(msg.get('content', '')[:300])}")
-        
     print(f"[DEBUG] answer() received history of length: {len(history)}")
     if history:
         print(f"Last message: {history[-1]['content'][:80]}...")
@@ -2671,7 +2668,7 @@ def answer(query: str, history: List[Dict]) -> str:
         llm_text=processed_answer
     )
 
-    return debug
+    return context
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
