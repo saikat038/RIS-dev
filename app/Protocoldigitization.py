@@ -472,7 +472,7 @@ SECTION_TO_TEMPLATE_VAR = {
     "Demographic and other baseline characteristics": "Demographic_and_other_baseline_characteristics",
     "Measurements of treatment compliance": "Measurements_of_treatment_compliance",
     "Analysis of Efficacy": "Analysis_of_efficacy",
-    "Statistical and Analytical Plans": "Statistical_and_analytical_plan",
+    "Statistical and Analytical Plans": "Statistical_and_analytical_plans",
     "SAFETY CONCLUSIONS": "Safety_conclusions",
     "Tabulation of individual response data": "Tabulation_of_individual_response_data",
     "Efficacy conclusions": "Efficacy_conclusions",
