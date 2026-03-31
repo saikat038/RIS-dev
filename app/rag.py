@@ -1311,6 +1311,7 @@ def format_chunk_for_context(chunk: Dict) -> str:
                         cell = cell.replace(":selected:", "✕")
                         cell = cell.replace(":unselected:", "")
                         cell = cell.replace("응", "%")
+                        cell = cell.replace("(응)", "(%)")
 
                         # normalize OCR symbol errors
                         cell = cell.replace("士", "±")
@@ -2666,4 +2667,4 @@ def answer(query: str, history: List[Dict]) -> str:
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
 # answer("Selection and timing of dose for each patient", [])
-# answer("Statistical and Analytical Plans", [])
+# answer("Efficacy conclusions", [])
