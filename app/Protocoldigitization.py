@@ -478,7 +478,9 @@ SECTION_TO_TEMPLATE_VAR = {
     "Efficacy conclusions": "Efficacy_conclusions",
     "Extent of exposure": "Extent_of_exposure",
     "Brief Summary of Adverse Events": "Brief_summary_of_adverse_events",
-    "Listing of individual laboratory measurements by patient (16.2.8) and each abnormal laboratory value (14.3.4)": "Listing_of_individual_laboratory_measurements_by_patient_and_each_abnormal_laboratory_value"
+    "Listing of individual laboratory measurements by patient (16.2.8) and each abnormal laboratory value (14.3.4)": "Listing_of_individual_laboratory_measurements_by_patient_and_each_abnormal_laboratory_value",
+    "Overview of Adverse Events Safety Population - RP Patients":"Overview_of_Adverse_Events_Safety_Population_RP_Patients"
+
 }
 
 # ============================================================
