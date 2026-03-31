@@ -1311,7 +1311,6 @@ def format_chunk_for_context(chunk: Dict) -> str:
                         cell = cell.replace(":selected:", "✕")
                         cell = cell.replace(":unselected:", "")
                         cell = cell.replace("응", "%")
-                        cell = cell.replace("(응)", "(%)")
 
                         # normalize OCR symbol errors
                         cell = cell.replace("士", "±")
@@ -1330,7 +1329,19 @@ def format_chunk_for_context(chunk: Dict) -> str:
                 return "\n".join(lines).strip()
 
         # Fallback: use raw text if no usable table_rows
-        lines.append(text)
+        clean_text = text
+
+        # normalize OCR checkbox artifacts
+        clean_text = clean_text.replace(":selected: X", "✕")
+        clean_text = clean_text.replace(":selected:", "✕")
+        clean_text = clean_text.replace(":unselected:", "")
+        clean_text = clean_text.replace("응", "%")
+
+        # normalize OCR symbol errors
+        clean_text = clean_text.replace("士", "±")
+        clean_text = clean_text.replace("土", "±")
+
+        lines.append(clean_text)
 
     else:
         # Original non-table logic (unchanged)
@@ -2667,4 +2678,4 @@ def answer(query: str, history: List[Dict]) -> str:
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
 # answer("Selection and timing of dose for each patient", [])
-# answer("Efficacy conclusions", [])
+# answer("Statistical and Analytical Plans", [])
