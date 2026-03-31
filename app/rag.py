@@ -2680,7 +2680,7 @@ def answer(query: str, history: List[Dict]) -> str:
         llm_text=processed_answer
     )
 
-    return context, processed_answer
+    return processed_answer
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
