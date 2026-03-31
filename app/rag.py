@@ -1768,22 +1768,16 @@ def vector_search_ich(
         )
 
         chunks = []
+
         for r in results:
             text = (r.get("text") or "").strip()
-            if not text:
+
+            # only paragraph blocks
+            if r.get("block_type") != "paragraph":
                 continue
 
-            # 🔥 DROP contaminated chunks (minimal inline logic)
-            sections = re.findall(r"\b\d+(?:\.\d+)+\b", text)
-            other_sections = [s for s in sections if not s.startswith(section_number)]
-
-            # Rule 1: foreign section numbers present
-            if other_sections:
-                continue
-
-            # Rule 2: standalone section number lines (like "9.7.2")
-            lines = [l.strip() for l in text.split("\n") if l.strip()]
-            if any(re.match(r"^\d+(?:\.\d+)+$", l) for l in lines):
+            # keep only meaningful text
+            if len(text) <= 10:
                 continue
 
             chunks.append(dict(r))
@@ -2175,6 +2169,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
     # -------------------------------------------------
     # GROUP ICH CHUNKS INTO STRUCTURED SECTIONS
     # -------------------------------------------------
+    # print(ich_chunks)
     ich_text = extract_exact_section(ich_chunks)
 
     ich_sections = {
