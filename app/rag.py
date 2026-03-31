@@ -1288,7 +1288,19 @@ def format_chunk_for_context(chunk: Dict) -> str:
                 headers = chunk.get("table_headers")
 
                 if headers:
-                    header = [str(h).strip() for h in headers]
+                    header = []
+                    for h in headers:
+                        h = str(h).strip()
+
+                        # normalize here
+                        h = h.replace(":selected: X", "✕")
+                        h = h.replace(":selected:", "✕")
+                        h = h.replace(":unselected:", "")
+                        h = h.replace("응", "%")
+                        h = h.replace("士", "±")
+                        h = h.replace("土", "±")
+
+                        header.append(h)
                     data_rows = rows
                 else:
                     # fallback if headers missing
@@ -2678,4 +2690,4 @@ def answer(query: str, history: List[Dict]) -> str:
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
 # answer("Selection and timing of dose for each patient", [])
-# answer("Statistical and Analytical Plans", [])
+# answer("Overview of Adverse Events Safety Population - RP Patients", [])
