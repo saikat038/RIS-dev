@@ -1737,7 +1737,7 @@ def vector_search_ich(
     section_number = None
 
     for ref in ich_refs:
-        match = re.match(r'^(\d+(\.\d+)*)', ref.strip())
+        match = re.match(r'^(\d+(?:\.\d+)*\.?)', ref.strip())
         if match:
             section_number = match.group(1)
             break
@@ -2578,7 +2578,6 @@ HALLUCINATION PREVENTION (NON-NEGOTIABLE)
 FINAL VALIDATION (MANDATORY)
 ────────────────────────
 Before outputting:
-
 IF Output Style = verbatim:
 - Verify ALL headings and sub-headings from SOURCE_CONTEXT are present.
 - Verify wording matches SOURCE_CONTEXT exactly.
@@ -2684,5 +2683,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Selection and timing of dose for each patient", [])
+# answer("Tabulation of individual response data", [])
 # answer("Overview of Adverse Events Safety Population - RP Patients", [])
