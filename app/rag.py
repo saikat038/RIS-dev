@@ -2130,7 +2130,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
       "section": query,
       "synonyms": [""],
       "ich_refs": [""],
-      "allowed_sources": ["ocu400-101-protocol.pdf", "OCU401_CSR_Final_Tables.pdf", "ocu400-101-SAP.pdf", "OCU401_CSR_Final_Figures.pdf", "OCU401_CSR_Final_listing.pdf", "OCU400-101_ValidityListings.pdf"],
+      "allowed_sources": ["ocu400-101-protocol.pdf", "OCU401_CSR_Final_Tables.pdf", "ocu400-101-SAP.pdf", "OCU401_CSR_Final_Figures.pdf", "OCU401_CSR_Final_listing.pdf", "OCU400-101_ValidityListings.pdf", "OCU410-101_Protocol.pdf"],
       "detail_level": "high",
       "output_style": "verbatim",
       "forbidden_content": ["operational procedures"]
