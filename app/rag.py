@@ -1213,7 +1213,7 @@ def load_source_search_client() -> SearchClient:
     print("  endpoint:", AZURE_SEARCH_SERVICE_ENDPOINT)
     return SearchClient(
         endpoint=AZURE_SEARCH_SERVICE_ENDPOINT,
-        index_name=AZURE_SEARCH_INDEX_NAME,
+        index_name="410-ga-study_index",
         credential=AzureKeyCredential(AZURE_SEARCH_API_KEY),
     )
 
@@ -1232,6 +1232,21 @@ def load_ich_search_client() -> SearchClient:
 # ============================================================
 # HELPER
 # ============================================================
+
+def remove_heading_from_text(text, heading):
+    if not text or not heading:
+        return text
+
+    text_clean = text.strip()
+    heading_clean = heading.strip()
+
+    # remove exact match at start
+    if text_clean.startswith(heading_clean):
+        return text_clean[len(heading_clean):].strip()
+
+    return text
+
+
 def format_chunk_for_context(chunk: Dict) -> str:
     """
     Format SOURCE chunks for LLM context.
@@ -1341,7 +1356,7 @@ def format_chunk_for_context(chunk: Dict) -> str:
                 return "\n".join(lines).strip()
 
         # Fallback: use raw text if no usable table_rows
-        clean_text = text
+        clean_text = remove_heading_from_text(text, heading)
 
         # normalize OCR checkbox artifacts
         clean_text = clean_text.replace(":selected: X", "✕")
@@ -1900,7 +1915,7 @@ def vector_search_source(
     deduplicated = []
 
     for r in results:
-        key = (r.get("source_block_ids") or [r.get("id", "")])[0]
+        key = r.get("id")
         if key and key not in seen:
             seen.add(key)
             deduplicated.append(r)
@@ -2204,7 +2219,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
                         section=section_name,
                         synonyms=synonyms,
                         allowed_sources=allowed_sources,
-                        k_nearest_neighbors=50,
+                        k_nearest_neighbors=100,
                         min_score=0.50          # ← 60% threshold
                     )
     
@@ -2561,7 +2576,8 @@ FORMAT & STRUCTURE ENFORCEMENT
 - Headings and sub-headings MUST:
   • Appear on their own line
   • Be formatted in **bold markdown**
-  • Preserve original wording EXACTLY as written, including numeric prefixes.
+  • If a heading contains hierarchical separators like ">" (e.g., "1. SYNOPSIS > Country:"), output ONLY the last segment (e.g., "Country:")
+  • Do NOT include parent hierarchy or numeric prefixes when rendering headings
 - Content MUST appear immediately under its heading.
 - Use plain paragraphs by default for non-tabular content.
 - If SOURCE_CONTEXT contains tabular data, it MUST be rendered as a table. Bullets may be used only if present in SOURCE_CONTEXT.
@@ -2683,5 +2699,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Tabulation of individual response data", [])
+# answer("SYNOPSIS", [])
 # answer("Overview of Adverse Events Safety Population - RP Patients", [])
