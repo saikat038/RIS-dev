@@ -1589,20 +1589,12 @@ import re
 import json
 
 def normalize_section_numbering(answer_text: str, context) -> str:
-    """
-    1. Remove top-level uppercase headers like '6. INVESTIGATIONAL PLAN'
-    2. Extract ICH reference number (e.g. 9.3.1)
-    3. Renumber headings sequentially:
-       9.3.1.1
-       9.3.1.2
-       9.3.1.3
-    """
+    import re, json
 
     # -----------------------------
     # Extract ich_refs from context
     # -----------------------------
     def extract_ich_refs(ctx):
-
         if isinstance(ctx, dict):
             return ctx.get("ich_refs", [])
 
@@ -1623,7 +1615,6 @@ def normalize_section_numbering(answer_text: str, context) -> str:
         return []
 
     ich_refs = extract_ich_refs(context)
-    print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>ICH refs:", ich_refs)
 
     if not ich_refs:
         return answer_text
@@ -1645,10 +1636,8 @@ def normalize_section_numbering(answer_text: str, context) -> str:
     # -----------------------------
     lines = answer_text.splitlines()
     output_lines = []
-    heading_counter = 1
 
     for line in lines:
-
         stripped = line.strip()
 
         # Remove top level section like:
@@ -1663,14 +1652,20 @@ def normalize_section_numbering(answer_text: str, context) -> str:
         )
 
         if bold_heading_match:
-
+            original_number = bold_heading_match.group(1)
             title = bold_heading_match.group(2).strip()
 
-            new_heading = f"**{ich_number}.{heading_counter} {title}**"
+            parts = original_number.split(".")
+
+            # drop first level
+            if len(parts) > 1:
+                new_suffix = ".".join(parts[1:])
+            else:
+                new_suffix = parts[0]
+
+            new_heading = f"**{ich_number}.{new_suffix} {title}**"
 
             output_lines.append(new_heading)
-
-            heading_counter += 1
             continue
 
         output_lines.append(line)
@@ -1678,22 +1673,25 @@ def normalize_section_numbering(answer_text: str, context) -> str:
     text = "\n".join(output_lines)
 
     # -----------------------------
-    # Renumber headings
+    # Renumber plain headings
     # -----------------------------
     heading_pattern = re.compile(
-    r"^(\d+(?:\.\d+)+)\.?\s+(.+)$",
-    flags=re.MULTILINE
+        r"^(\d+(?:\.\d+)+)\.?\s+(.+)$",
+        flags=re.MULTILINE
     )
 
-    counter = 1
-
     def replace_heading(match):
-        nonlocal counter
-
+        original_number = match.group(1)
         title = match.group(2)
 
-        new_number = f"{ich_number}.{counter}"
-        counter += 1
+        parts = original_number.split(".")
+
+        if len(parts) > 1:
+            new_suffix = ".".join(parts[1:])
+        else:
+            new_suffix = parts[0]
+
+        new_number = f"{ich_number}.{new_suffix}"
 
         return f"{new_number} {title}"
 
@@ -2685,7 +2683,10 @@ def answer(query: str, history: List[Dict]) -> str:
 
     context = final_state.get("context", "")
 
-    processed_answer = final_state.get("answer", "")
+    processed_answer = normalize_section_numbering(
+        final_state.get("answer", ""),
+        context
+    )
 
     store_temp_llm_output(
         section_name=section_name,
