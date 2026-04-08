@@ -2697,5 +2697,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-answer("Introduction", [])
+# answer("Introduction", [])
 # answer("Overview of Adverse Events Safety Population - RP Patients", [])
