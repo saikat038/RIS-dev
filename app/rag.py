@@ -2683,10 +2683,7 @@ def answer(query: str, history: List[Dict]) -> str:
 
     context = final_state.get("context", "")
 
-    processed_answer = normalize_section_numbering(
-        final_state.get("answer", ""),
-        context
-    )
+    processed_answer = final_state.get("answer", "")
 
     store_temp_llm_output(
         section_name=section_name,
