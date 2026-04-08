@@ -2542,9 +2542,6 @@ IF Output Style = regulatory author:
   • Reorganization is allowed ONLY if supported by SOURCE_CONTEXT.
   • Headings may be harmonized to ICH terminology if ICH_CONTEXT supports it.
 
-FIGURE NOISE FILTER:
-Ignore standalone tokens, labels, or fragmented OCR lines (e.g., gene names, short codes, single letters like A/B, or multi-line non-sentence text). Only include complete sentences or meaningful descriptive paragraphs.
-
 ────────────────────────
 OUTPUT STYLE RULES
 ────────────────────────
