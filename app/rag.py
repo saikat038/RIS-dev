@@ -2576,7 +2576,7 @@ FORMAT & STRUCTURE ENFORCEMENT
   • Be formatted in **bold markdown**
   • Preserve original wording EXACTLY as written, including numeric prefixes.
   • If a heading contains hierarchical separators like ">" (e.g., "1. SYNOPSIS > Country:"), output ONLY the last segment (e.g., "Country:")
-  • Always attach content to the most recent heading encountered (last heading wins).
+  • Do NOT create or infer hierarchical chains (e.g., using ">" or similar separators).
 - Content MUST appear immediately under its heading.
 - Use plain paragraphs by default for non-tabular content.
 - If SOURCE_CONTEXT contains tabular data, it MUST be rendered as a table. Bullets may be used only if present in SOURCE_CONTEXT.
