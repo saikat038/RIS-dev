@@ -784,11 +784,11 @@ def split_into_blocks(text: str):
 
 from docx.text.paragraph import Paragraph
 
-from docx.shared import Pt
-
 def insert_text_block_after(parent, index, text: str, doc: Document):
     """
-    Hard-coded paragraph formatting + bold support
+    Insert text block as real Word paragraphs after index.
+    Supports markdown bold (**...**).
+    Returns new index after insertion.
     """
     lines = [l for l in text.split("\n")]
 
@@ -797,23 +797,11 @@ def insert_text_block_after(parent, index, text: str, doc: Document):
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # === HARD-CODED PARAGRAPH SETTINGS (this fixes vertical gaps) ===
-        pf = para.paragraph_format
-        pf.space_before = Pt(4)      # Small gap after heading / between items
-        pf.space_after  = Pt(8)      # Gap after each paragraph
-        pf.line_spacing = 1.15       # Nice line spacing (you can change to 1.0 or 1.08)
-        pf.left_indent = Pt(0)
-        pf.right_indent = Pt(0)
-        pf.first_line_indent = Pt(0)   # Set to Pt(18) if you want indented text
-
-        para.alignment = WD_ALIGN_PARAGRAPH.LEFT
-
-        # Handle **bold** markdown
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
             if start > pos:
-                run = para.add_run(line[pos:start])
+                para.add_run(line[pos:start])
             run = para.add_run(match.group(1))
             run.bold = True
             pos = end
@@ -888,9 +876,7 @@ def render_all_sections():
 
     prefix = normalize_prefix(INDEX_PREFIX)
 
-    blob_service = BlobServiceClient.from_connection_string(
-        AZURE_BLOB_CONN_STRING
-    )
+    blob_service = BlobServiceClient.from_connection_string(AZURE_BLOB_CONN_STRING)
     container = blob_service.get_container_client(BLOB_CONTAINER)
 
     template_blob_path = f"{prefix}/{TEMPLATE_NAME}"
@@ -906,10 +892,6 @@ def render_all_sections():
     context = {}
     table_sections = {}
 
-    # ---------------------------------
-    # 1️⃣ Build context dynamically
-    # ---------------------------------
-
     for section_name, llm_text in FINAL_SECTION_BUFFER.items():
         template_var = SECTION_TO_TEMPLATE_VAR.get(section_name)
         if not template_var:
@@ -921,33 +903,35 @@ def render_all_sections():
         context[template_var] = section_marker
         table_sections[section_marker] = blocks
 
-    # ---------------------------------
-    # 2️⃣ First pass render (docxtpl)
-    # ---------------------------------
-
+    # First pass: docxtpl render
     tpl.render(context)
 
     temp_stream = BytesIO()
     tpl.save(temp_stream)
     temp_stream.seek(0)
 
-    # ---------------------------------
-    # 3️⃣ Second pass (python-docx)
-    # ---------------------------------
-
+    # ==================== SECOND PASS ====================
     doc = Document(temp_stream)
 
-    # === FORCE PAGE MARGINS ON ALL SECTIONS ===
-    from docx.shared import Inches
-
+    # FORCE PAGE MARGINS ON ALL SECTIONS - Do this FIRST
     for section in doc.sections:
         section.top_margin    = Inches(0.97)
         section.bottom_margin = Inches(0.76)
         section.left_margin   = Inches(0.79)
         section.right_margin  = Inches(0.49)
-        section.gutter        = Inches(0)        # as per your screenshot
+        section.gutter        = Inches(0)
 
-    # Now continue with your existing loop
+    # Optional: Also force the same margins on the first section more aggressively
+    if doc.sections:
+        sect = doc.sections[0]
+        sect_pr = sect._sectPr
+        # This helps in some stubborn cases
+        for margin in ['top', 'bottom', 'left', 'right', 'gutter']:
+            elem = sect_pr.find(qn(f'w:{margin}'))
+            if elem is not None:
+                elem.set(qn('w:w'), str(int(Inches(0.79) * 1440)))  # rough fallback
+
+    # Now insert your content
     for marker, blocks in table_sections.items():
         insert_section_blocks_into_document(doc, marker, blocks)
 
@@ -959,4 +943,4 @@ def render_all_sections():
     output_blob = container.get_blob_client(output_blob_path)
     output_blob.upload_blob(final_stream, overwrite=True)
 
-    print("✅ CSR populated successfully with dynamic table detection")
+    print("✅ CSR populated with forced page margins")
