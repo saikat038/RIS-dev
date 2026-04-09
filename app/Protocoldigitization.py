@@ -925,6 +925,17 @@ def render_all_sections():
 
     doc = Document(temp_stream)
 
+    # === FORCE PAGE MARGINS ON ALL SECTIONS ===
+    from docx.shared import Inches
+
+    for section in doc.sections:
+        section.top_margin    = Inches(0.97)
+        section.bottom_margin = Inches(0.76)
+        section.left_margin   = Inches(0.79)
+        section.right_margin  = Inches(0.49)
+        section.gutter        = Inches(0)        # as per your screenshot
+
+    # Now continue with your existing loop
     for marker, blocks in table_sections.items():
         insert_section_blocks_into_document(doc, marker, blocks)
 
