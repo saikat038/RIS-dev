@@ -786,9 +786,7 @@ from docx.text.paragraph import Paragraph
 
 def insert_text_block_after(parent, index, text: str, doc: Document):
     """
-    Insert text block as real Word paragraphs after index.
-    Supports markdown bold (**...**).
-    Returns new index after insertion.
+    Insert text + FORCE section margins on every new paragraph
     """
     lines = [l for l in text.split("\n")]
 
@@ -797,6 +795,31 @@ def insert_text_block_after(parent, index, text: str, doc: Document):
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
+        # === FORCE MARGINS ON THIS PARAGRAPH ===
+        pPr = para._element.get_or_add_pPr()
+        sectPr = pPr.get_or_add_sectPr()   # This links the paragraph to section margins
+
+        # Hard-code your exact margins (in twips - 1 inch = 1440 twips)
+        margins = {
+            'top':    Inches(0.97),
+            'bottom': Inches(0.76),
+            'left':   Inches(0.79),
+            'right':  Inches(0.49),
+            'gutter': Inches(0)
+        }
+
+        for name, value in margins.items():
+            elem = OxmlElement(f'w:{name}')
+            elem.set(qn('w:w'), str(int(value * 1440)))   # convert to twips
+            sectPr.append(elem)
+
+        # Optional: also set paragraph spacing (you can ignore if not needed)
+        pf = para.paragraph_format
+        pf.space_before = Pt(4)
+        pf.space_after = Pt(8)
+        pf.line_spacing = 1.15
+
+        # Bold handling
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
