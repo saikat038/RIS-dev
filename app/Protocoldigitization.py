@@ -786,7 +786,7 @@ from docx.text.paragraph import Paragraph
 
 def insert_text_block_after(parent, index, text: str, doc: Document):
     """
-    Simple version with forced section margins
+    Insert paragraphs while forcing correct page margins
     """
     lines = [l for l in text.split("\n")]
 
@@ -795,13 +795,14 @@ def insert_text_block_after(parent, index, text: str, doc: Document):
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # Hard-code paragraph formatting (no sectPr to avoid page break issue)
-        pf = para.paragraph_format
-        pf.space_before = Pt(4)
-        pf.space_after = Pt(8)
-        pf.line_spacing = 1.15
+        # Force paragraph to respect section margins
+        pPr = para._element.get_or_add_pPr()
 
-        # Bold support
+        # Add sectPr to link to current section margins
+        sectPr = OxmlElement('w:sectPr')
+        pPr.append(sectPr)
+
+        # Bold handling
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
@@ -908,17 +909,17 @@ def render_all_sections():
         context[template_var] = section_marker
         table_sections[section_marker] = blocks
 
-    # First pass: docxtpl render
+    # First pass: docxtpl
     tpl.render(context)
 
     temp_stream = BytesIO()
     tpl.save(temp_stream)
     temp_stream.seek(0)
 
-        # Second pass: python-docx
+    # Second pass
     doc = Document(temp_stream)
 
-    # === STRONGER PAGE MARGIN FORCE ===
+    # FORCE MARGINS VERY STRONGLY
     for section in doc.sections:
         section.top_margin    = Inches(0.97)
         section.bottom_margin = Inches(0.76)
@@ -926,21 +927,21 @@ def render_all_sections():
         section.right_margin  = Inches(0.49)
         section.gutter        = Inches(0)
 
-        # Extra step to make margins stick better
+        # Extra reinforcement
         sectPr = section._sectPr
-        for margin_name, value in [
-            ('top', Inches(0.97)),
+        for name, val in [
+            ('left',   Inches(0.79)),
+            ('right',  Inches(0.49)),
+            ('top',    Inches(0.97)),
             ('bottom', Inches(0.76)),
-            ('left', Inches(0.79)),
-            ('right', Inches(0.49)),
             ('gutter', Inches(0))
         ]:
-            elem = sectPr.find(qn(f'w:{margin_name}'))
+            elem = sectPr.find(qn(f'w:{name}'))
             if elem is not None:
-                elem.set(qn('w:w'), str(int(value * 1440)))
+                elem.set(qn('w:w'), str(int(val * 1440)))
             else:
-                new_elem = OxmlElement(f'w:{margin_name}')
-                new_elem.set(qn('w:w'), str(int(value * 1440)))
+                new_elem = OxmlElement(f'w:{name}')
+                new_elem.set(qn('w:w'), str(int(val * 1440)))
                 sectPr.append(new_elem)
 
     # Insert content
