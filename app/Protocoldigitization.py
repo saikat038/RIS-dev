@@ -782,13 +782,34 @@ def split_into_blocks(text: str):
     return blocks
 
 
+def copy_section_properties(source_para, target_para):
+    """Copy section margins and properties from source to target paragraph"""
+    try:
+        # Get section properties from source
+        source_pPr = source_para._element.get_or_add_pPr()
+        source_sectPr = source_pPr.find(qn('w:sectPr'))
+        
+        if source_sectPr is not None:
+            target_pPr = target_para._element.get_or_add_pPr()
+            # Remove existing sectPr if any
+            existing = target_pPr.find(qn('w:sectPr'))
+            if existing is not None:
+                target_pPr.remove(existing)
+            # Clone and add
+            new_sectPr = OxmlElement('w:sectPr')
+            for child in source_sectPr:
+                new_child = OxmlElement(child.tag)
+                for k, v in child.attrib.items():
+                    new_child.set(k, v)
+                new_sectPr.append(new_child)
+            target_pPr.append(new_sectPr)
+    except:
+        pass  # fallback silently
+
 from docx.text.paragraph import Paragraph
 
-from docx.shared import Pt
-from docx.enum.text import WD_ALIGN_PARAGRAPH
-
-def insert_text_block_after(parent, index, text: str, doc: Document, style_name: str = "Normal"):
-    """Final version - better margin + spacing control"""
+def insert_text_block_after(parent, index, text: str, doc: Document, style_name: str = "Normal", source_para=None):
+    """Final robust version with section margin fix"""
     lines = text.split("\n")
 
     for line in lines:
@@ -796,14 +817,18 @@ def insert_text_block_after(parent, index, text: str, doc: Document, style_name:
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # Apply template style
+        # 1. Apply style
         if style_name in doc.styles:
             para.style = doc.styles[style_name]
 
-        # Force paragraph formatting
+        # 2. Copy section margins (this is the key for left/right margins)
+        if source_para is not None:
+            copy_section_properties(source_para, para)
+
+        # 3. Force paragraph spacing
         pf = para.paragraph_format
-        pf.space_before = Pt(0)      # ← Reduced to 0 (important for after heading)
-        pf.space_after = Pt(8)       # Gap between list items
+        pf.space_before = Pt(0)      # Tight after heading
+        pf.space_after = Pt(8)       # Reasonable gap between points
         pf.line_spacing = 1.15
         pf.left_indent = Pt(0)
         pf.right_indent = Pt(0)
@@ -811,7 +836,7 @@ def insert_text_block_after(parent, index, text: str, doc: Document, style_name:
 
         para.alignment = WD_ALIGN_PARAGRAPH.LEFT
 
-        # Bold handling
+        # Bold markdown
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
@@ -830,9 +855,6 @@ def insert_text_block_after(parent, index, text: str, doc: Document, style_name:
 
 
 def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks):
-    """
-    Replace placeholder with text blocks and tables while maintaining proper spacing.
-    """
     target_paragraph = None
 
     for p in doc.element.body.iter():
@@ -853,19 +875,22 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
     parent = target_paragraph._element.getparent()
     index = parent.index(target_paragraph._element)
 
-    # Remove the placeholder text
+    # Remove placeholder
     for node in target_paragraph._element.iter():
         if node.tag.endswith("}t") and node.text and placeholder in node.text:
             node.text = node.text.replace(placeholder, "").strip()
 
-    # Insert blocks
+    # Insert blocks - pass the original paragraph as source for margins
     for block_type, content in blocks:
         if not content or not content.strip():
             continue
 
         if block_type == "text":
-            # Pass style_name here
-            index = insert_text_block_after(parent, index, content, doc, style_name="Normal")
+            index = insert_text_block_after(
+                parent, index, content, doc, 
+                style_name="Normal", 
+                source_para=target_paragraph   # ← This passes the margin source
+            )
 
         elif block_type == "table":
             table = build_word_table_from_pipe_text(doc, content)
@@ -878,6 +903,8 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
             spacer_para = Paragraph(spacer_p, doc)
             if "Normal" in doc.styles:
                 spacer_para.style = doc.styles["Normal"]
+            if target_paragraph is not None:
+                copy_section_properties(target_paragraph, spacer_para)
 
             pf = spacer_para.paragraph_format
             pf.space_before = Pt(8)
