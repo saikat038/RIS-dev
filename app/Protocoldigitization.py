@@ -786,7 +786,7 @@ from docx.text.paragraph import Paragraph
 
 def insert_text_block_after(parent, index, text: str, doc: Document):
     """
-    Insert text + FORCE section margins on every new paragraph
+    Simple version with forced section margins
     """
     lines = [l for l in text.split("\n")]
 
@@ -795,36 +795,18 @@ def insert_text_block_after(parent, index, text: str, doc: Document):
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # === FORCE MARGINS ON THIS PARAGRAPH ===
-        pPr = para._element.get_or_add_pPr()
-        sectPr = pPr.get_or_add_sectPr()   # This links the paragraph to section margins
-
-        # Hard-code your exact margins (in twips - 1 inch = 1440 twips)
-        margins = {
-            'top':    Inches(0.97),
-            'bottom': Inches(0.76),
-            'left':   Inches(0.79),
-            'right':  Inches(0.49),
-            'gutter': Inches(0)
-        }
-
-        for name, value in margins.items():
-            elem = OxmlElement(f'w:{name}')
-            elem.set(qn('w:w'), str(int(value * 1440)))   # convert to twips
-            sectPr.append(elem)
-
-        # Optional: also set paragraph spacing (you can ignore if not needed)
+        # Hard-code paragraph formatting (no sectPr to avoid page break issue)
         pf = para.paragraph_format
         pf.space_before = Pt(4)
         pf.space_after = Pt(8)
         pf.line_spacing = 1.15
 
-        # Bold handling
+        # Bold support
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
             if start > pos:
-                para.add_run(line[pos:start])
+                run = para.add_run(line[pos:start])
             run = para.add_run(match.group(1))
             run.bold = True
             pos = end
@@ -933,10 +915,10 @@ def render_all_sections():
     tpl.save(temp_stream)
     temp_stream.seek(0)
 
-    # ==================== SECOND PASS ====================
+        # Second pass: python-docx
     doc = Document(temp_stream)
 
-    # FORCE PAGE MARGINS ON ALL SECTIONS - Do this FIRST
+    # === STRONGER PAGE MARGIN FORCE ===
     for section in doc.sections:
         section.top_margin    = Inches(0.97)
         section.bottom_margin = Inches(0.76)
@@ -944,17 +926,24 @@ def render_all_sections():
         section.right_margin  = Inches(0.49)
         section.gutter        = Inches(0)
 
-    # Optional: Also force the same margins on the first section more aggressively
-    if doc.sections:
-        sect = doc.sections[0]
-        sect_pr = sect._sectPr
-        # This helps in some stubborn cases
-        for margin in ['top', 'bottom', 'left', 'right', 'gutter']:
-            elem = sect_pr.find(qn(f'w:{margin}'))
+        # Extra step to make margins stick better
+        sectPr = section._sectPr
+        for margin_name, value in [
+            ('top', Inches(0.97)),
+            ('bottom', Inches(0.76)),
+            ('left', Inches(0.79)),
+            ('right', Inches(0.49)),
+            ('gutter', Inches(0))
+        ]:
+            elem = sectPr.find(qn(f'w:{margin_name}'))
             if elem is not None:
-                elem.set(qn('w:w'), str(int(Inches(0.79) * 1440)))  # rough fallback
+                elem.set(qn('w:w'), str(int(value * 1440)))
+            else:
+                new_elem = OxmlElement(f'w:{margin_name}')
+                new_elem.set(qn('w:w'), str(int(value * 1440)))
+                sectPr.append(new_elem)
 
-    # Now insert your content
+    # Insert content
     for marker, blocks in table_sections.items():
         insert_section_blocks_into_document(doc, marker, blocks)
 
