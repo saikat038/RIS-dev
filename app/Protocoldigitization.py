@@ -782,89 +782,65 @@ def split_into_blocks(text: str):
     return blocks
 
 
-def apply_safe_paragraph_layout(src_para, dst_para):
-    """
-    Copy only visible paragraph layout properties.
-    Do NOT copy raw XML pPr because that can bring numbering/outline behavior.
-    """
-    src_fmt = src_para.paragraph_format
-    dst_fmt = dst_para.paragraph_format
-
-    dst_para.alignment = src_para.alignment
-
-    dst_fmt.left_indent = src_fmt.left_indent
-    dst_fmt.right_indent = src_fmt.right_indent
-    dst_fmt.first_line_indent = src_fmt.first_line_indent
-
-    dst_fmt.space_before = src_fmt.space_before
-    dst_fmt.space_after = src_fmt.space_after
-
-    dst_fmt.line_spacing = src_fmt.line_spacing
-    dst_fmt.line_spacing_rule = src_fmt.line_spacing_rule
-
-
-def write_text_to_paragraph(para, text: str):
-    """
-    Fill an existing paragraph with text, preserving its position/layout.
-    Supports markdown bold.
-    """
-    # clear existing runs/text
-    p = para._element
-    for child in list(p):
-        if child.tag.endswith("}r"):
-            p.remove(child)
-
-    pos = 0
-    for match in BOLD_PATTERN.finditer(text):
-        start, end = match.span()
-
-        if start > pos:
-            para.add_run(text[pos:start])
-
-        run = para.add_run(match.group(1))
-        run.bold = True
-        pos = end
-
-    if pos < len(text):
-        para.add_run(text[pos:])
-
 from docx.text.paragraph import Paragraph
 
-from docx.text.paragraph import Paragraph
+from docx.shared import Pt
+from docx.enum.text import WD_ALIGN_PARAGRAPH
 
-def insert_text_block_after(parent, index, text: str, doc: Document, reference_paragraph):
+def insert_text_block_after(parent, index, text: str, doc: Document, style_name: str = "Normal"):
     """
-    Insert text below the placeholder while following the placeholder's visible layout.
-    First line stays in the placeholder paragraph itself.
-    Remaining lines are inserted as new paragraphs with safe copied layout.
+    Insert text while properly applying paragraph style + forcing paragraph formatting.
+    This fixes page margins + paragraph spacing (before/after).
     """
     lines = text.split("\n")
 
-    if not lines:
-        return index
-
-    # ---- first line goes into the placeholder paragraph itself ----
-    first_line = lines[0]
-    write_text_to_paragraph(reference_paragraph, first_line)
-
-    current_index = index
-
-    # ---- remaining lines are inserted below ----
-    for line in lines[1:]:
+    for line in lines:
         new_p = OxmlElement("w:p")
-        parent.insert(current_index + 1, new_p)
+        parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        apply_safe_paragraph_layout(reference_paragraph, para)
-        write_text_to_paragraph(para, line)
+        # 1. Apply the style from your template (this brings most formatting)
+        if style_name in doc.styles:
+            para.style = doc.styles[style_name]
+        else:
+            print(f"Warning: Style '{style_name}' not found. Using default.")
 
-        current_index += 1
+        # 2. Force paragraph formatting (this fixes space before/after, line spacing, etc.)
+        pf = para.paragraph_format
+        
+        # Common good settings for CSR documents (adjust if needed)
+        pf.space_before = Pt(6)      # or Pt(0) if you want tight
+        pf.space_after = Pt(8)       # typical value for body text
+        pf.line_spacing = 1.15       # or 1.08, 1.0, etc.
+        pf.left_indent = Pt(0)
+        pf.right_indent = Pt(0)
+        pf.first_line_indent = Pt(18)  # optional: small first-line indent
 
-    return current_index
+        # Alignment
+        para.alignment = WD_ALIGN_PARAGRAPH.LEFT
+
+        # Handle **bold** markdown
+        pos = 0
+        for match in BOLD_PATTERN.finditer(line):
+            start, end = match.span()
+            if start > pos:
+                run = para.add_run(line[pos:start])
+            run = para.add_run(match.group(1))
+            run.bold = True
+            pos = end
+        if pos < len(line):
+            para.add_run(line[pos:])
+
+        index += 1
+
+    return index
 
 
 
 def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks):
+    """
+    Replace one section marker with an ordered sequence of text/table blocks.
+    """
     from docx.text.paragraph import Paragraph
 
     target_paragraph = None
@@ -889,44 +865,37 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
     parent = target_paragraph._element.getparent()
     index = parent.index(target_paragraph._element)
 
-    # remove placeholder text only
+    # remove marker text
     for node in target_paragraph._element.iter():
-        if node.tag.endswith("}t"):
+        if node.tag.endswith("}t"):  # Word text node
             if node.text and placeholder in node.text:
                 node.text = node.text.replace(placeholder, "")
 
-    first_text_block_used_placeholder = False
-
+    # insert blocks in exact order
     for block_type, content in blocks:
         if not content.strip():
             continue
 
         if block_type == "text":
-            if not first_text_block_used_placeholder:
-                index = insert_text_block_after(parent, index, content, doc, target_paragraph)
-                first_text_block_used_placeholder = True
-            else:
-                # later text blocks should not overwrite the original placeholder paragraph
-                lines = content.split("\n")
-                for line in lines:
-                    new_p = OxmlElement("w:p")
-                    parent.insert(index + 1, new_p)
-                    para = Paragraph(new_p, doc)
-
-                    apply_safe_paragraph_layout(target_paragraph, para)
-                    write_text_to_paragraph(para, line)
-
-                    index += 1
+            index = insert_text_block_after(parent, index, content, doc)
 
         elif block_type == "table":
             table = build_word_table_from_pipe_text(doc, content)
             parent.insert(index + 1, table._element)
             index += 1
 
+            # Spacer paragraph after table
             spacer_p = OxmlElement("w:p")
             parent.insert(index + 1, spacer_p)
             spacer_para = Paragraph(spacer_p, doc)
-            apply_safe_paragraph_layout(target_paragraph, spacer_para)
+            style_name="Normal"
+            
+            if style_name in doc.styles:
+                spacer_para.style = doc.styles[style_name]
+            
+            pf = spacer_para.paragraph_format
+            pf.space_before = Pt(6)
+            pf.space_after = Pt(12)   # a bit more after table
             index += 1
 
 
