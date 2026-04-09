@@ -796,26 +796,31 @@ from docx.text.paragraph import Paragraph
 
 from docx.shared import Inches
 
-def insert_text_block_after(parent, index, text: str, doc: Document):
+def insert_text_block_after(parent, index, text: str, doc: Document, source_para: Paragraph):
     """
-    Insert text block as real Word paragraphs after index.
-    Hardcodes left/right indentation to 0 inches (so only page margins apply).
-    Supports markdown bold (**...**).
-    Returns new index after insertion.
+    Insert text block after index, using the EXACT same paragraph formatting
+    as the source_para (the placeholder paragraph). This preserves lists,
+    indentation, spacing, and margins.
     """
-    lines = [l for l in text.split("\n") if l.strip()]   # non‑empty lines
+    lines = [l for l in text.split("\n") if l.strip()]
 
     for line in lines:
         new_p = OxmlElement("w:p")
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # ----- HARDCODED MARGINS (no extra indentation) -----
-        para.paragraph_format.left_indent = Inches(0)
-        para.paragraph_format.right_indent = Inches(0)
+        # ----- COPY ALL FORMATTING FROM SOURCE PARAGRAPH -----
+        if source_para.style:
+            para.style = source_para.style
+        # Copy paragraph alignment, indentation, spacing
+        para.paragraph_format.alignment = source_para.paragraph_format.alignment
+        para.paragraph_format.left_indent = Inches(0.25) 
+        para.paragraph_format.right_indent = source_para.paragraph_format.right_indent
+        para.paragraph_format.first_line_indent = Inches(-0.25)
         para.paragraph_format.space_before = Pt(0)
         para.paragraph_format.space_after = Pt(0)
-        # -----------------------------------------------------
+        para.paragraph_format.line_spacing = source_para.paragraph_format.line_spacing
+        # ------------------------------------------------------
 
         # Add runs with bold support
         pos = 0
@@ -835,11 +840,7 @@ def insert_text_block_after(parent, index, text: str, doc: Document):
 
 
 def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks):
-    """
-    Replace one section marker with an ordered sequence of text/table blocks.
-    """
     target_paragraph = None
-
     for p in doc.element.body.iter():
         if not p.tag.endswith("p"):
             continue
@@ -864,19 +865,16 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
             if node.text and placeholder in node.text:
                 node.text = node.text.replace(placeholder, "")
 
-    # insert blocks in exact order
     for block_type, content in blocks:
         if not content.strip():
             continue
-
         if block_type == "text":
-            index = insert_text_block_after(parent, index, content, doc)
-
+            # Pass the source_para (target_paragraph) to preserve formatting
+            index = insert_text_block_after(parent, index, content, doc, target_paragraph)
         elif block_type == "table":
             table = build_word_table_from_pipe_text(doc, content)
             parent.insert(index + 1, table._element)
             index += 1
-            # add empty paragraph after table
             spacer_p = OxmlElement("w:p")
             parent.insert(index + 1, spacer_p)
             index += 1
