@@ -785,7 +785,7 @@ def split_into_blocks(text: str):
 from docx.text.paragraph import Paragraph
 
 def insert_text_block_after(parent, index, text: str, doc: Document):
-    """Simple and clean - lets the document section margins take effect"""
+    """Minimal version - only handles bold, no spacing changes"""
     lines = [l for l in text.split("\n")]
 
     for line in lines:
@@ -793,20 +793,12 @@ def insert_text_block_after(parent, index, text: str, doc: Document):
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # Do NOT add sectPr here (it causes page break issues)
-        # Just keep it clean so it inherits from the document section
-
-        pf = para.paragraph_format
-        pf.space_before = Pt(4)
-        pf.space_after = Pt(8)
-        pf.line_spacing = 1.15
-
-        # Bold support
+        # Only bold handling - nothing else
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
             if start > pos:
-                run = para.add_run(line[pos:start])
+                para.add_run(line[pos:start])
             run = para.add_run(match.group(1))
             run.bold = True
             pos = end
