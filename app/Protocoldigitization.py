@@ -882,12 +882,6 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
             index += 1
 
 
-def enforce_document_margins(doc):
-    section = doc.sections[0]
-    section.top_margin = Inches(0.97)
-    section.bottom_margin = Inches(0.76)
-    section.left_margin = Inches(0.79)
-    section.right_margin = Inches(0.49)
 
 def render_all_sections():
     if not FINAL_SECTION_BUFFER:
@@ -943,7 +937,6 @@ def render_all_sections():
     # ---------------------------------
 
     doc = Document(temp_stream)
-    enforce_document_margins(doc)
 
     for marker, blocks in table_sections.items():
         insert_section_blocks_into_document(doc, marker, blocks)
