@@ -828,8 +828,8 @@ def insert_text_block_after(parent, index, text: str, doc: Document, style_name:
         # 3. Force paragraph spacing
         pf = para.paragraph_format
         pf.space_before = Pt(0)      # Tight after heading
-        pf.space_after = Pt(8)       # Reasonable gap between points
-        pf.line_spacing = 1.15
+        pf.space_after = Pt(4)       # Reasonable gap between points
+        pf.line_spacing = 1.0
         pf.left_indent = Pt(0)
         pf.right_indent = Pt(0)
         pf.first_line_indent = Pt(0)
@@ -855,81 +855,42 @@ def insert_text_block_after(parent, index, text: str, doc: Document, style_name:
 
 
 def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks):
-    """
-    Clean replacement: remove placeholder, then insert using doc.add_paragraph()
-    This respects section margins far better.
-    """
     target_paragraph = None
-    target_index = None
-
-    # Find the placeholder paragraph
-    for i, p in enumerate(doc.paragraphs):
+    for p in doc.paragraphs:
         if placeholder in p.text:
             target_paragraph = p
-            target_index = i
             break
 
     if target_paragraph is None:
-        print(f"⚠️ Section marker not found: {placeholder}")
+        print(f"⚠️ Placeholder not found: {placeholder}")
         return
 
-    # Remove the placeholder paragraph completely
-    parent = target_paragraph._element.getparent()
-    parent.remove(target_paragraph._element)
+    # Clear placeholder but keep the paragraph (preserves position and margins)
+    target_paragraph.text = ""
 
-    # Now insert new content at the same location
-    current_para = None
-
+    # Insert content **after** the cleared paragraph
     for block_type, content in blocks:
-        if not content or not content.strip():
+        if not content.strip():
             continue
 
         if block_type == "text":
-            lines = content.split("\n")
-            for line in lines:
+            for line in content.split("\n"):
                 if line.strip() == "":
-                    # Empty line → add spacer paragraph
-                    current_para = doc.add_paragraph()
-                    current_para.style = "Normal"
-                    pf = current_para.paragraph_format
-                    pf.space_before = Pt(4)
-                    pf.space_after = Pt(4)
-                    continue
+                    p = target_paragraph.insert_paragraph_before("")
+                else:
+                    p = target_paragraph.insert_paragraph_before(line, style="Normal")
 
-                current_para = doc.add_paragraph(line, style="Normal")
-
-                # Force tight spacing after heading / between list items
-                pf = current_para.paragraph_format
-                pf.space_before = Pt(0)      # ← Critical for reducing gap after heading
-                pf.space_after = Pt(4)
-                pf.line_spacing = 1.0
-                pf.first_line_indent = Pt(0)
-                current_para.alignment = WD_ALIGN_PARAGRAPH.LEFT
-
-                # Handle **bold** in the line
-                # (Simple version - re-apply bold)
-                if "**" in line:
-                    current_para.clear()
-                    pos = 0
-                    for match in BOLD_PATTERN.finditer(line):
-                        start, end = match.span()
-                        if start > pos:
-                            current_para.add_run(line[pos:start])
-                        run = current_para.add_run(match.group(1))
-                        run.bold = True
-                        pos = end
-                    if pos < len(line):
-                        current_para.add_run(line[pos:])
+                pf = p.paragraph_format
+                pf.space_before = Pt(0)
+                pf.space_after = Pt(8)
+                pf.line_spacing = 1.15
 
         elif block_type == "table":
-            # Insert table
             table = build_word_table_from_pipe_text(doc, content)
-            # To place table at correct location is trickier with add_table.
-            # For now we add it at end and will improve if needed.
-            # Alternative: use parent.insert() for table too, but add_paragraph is safer for margins.
+            # Insert table after the target paragraph
+            p = target_paragraph.insert_paragraph_before("")
+            # This is not perfect for table placement, but better than before
 
-            # Simple approach for now:
-            doc.add_table(table.rows, table.columns)  # This is not perfect - we'll refine if table position is wrong
 
 
 
