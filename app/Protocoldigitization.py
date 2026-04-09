@@ -782,33 +782,33 @@ def split_into_blocks(text: str):
     return blocks
 
 
+def delete_paragraph(paragraph):
+    p = paragraph._element
+    parent = p.getparent()
+    parent.remove(p)
+    paragraph._p = paragraph._element = None
+
+
 from docx.text.paragraph import Paragraph
-from docx.oxml import OxmlElement
 
 def insert_text_block_after(parent, index, text: str, doc: Document):
     """
-    Insert plain body paragraphs after index.
-    Keeps formatting minimal so Word follows section margins naturally.
+    Insert text block as real Word paragraphs after index.
+    Supports markdown bold (**...**).
+    Returns new index after insertion.
     """
-    lines = text.split("\n")
+    lines = [l for l in text.split("\n")]
 
     for line in lines:
         new_p = OxmlElement("w:p")
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # Keep paragraph clean so it follows page margins
-        para.paragraph_format.left_indent = None
-        para.paragraph_format.right_indent = None
-        para.paragraph_format.first_line_indent = None
-
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
-
             if start > pos:
                 para.add_run(line[pos:start])
-
             run = para.add_run(match.group(1))
             run.bold = True
             pos = end
@@ -823,9 +823,6 @@ def insert_text_block_after(parent, index, text: str, doc: Document):
 
 
 def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks):
-    """
-    Replace one section marker with an ordered sequence of text/table blocks.
-    """
     from docx.text.paragraph import Paragraph
 
     target_paragraph = None
@@ -850,13 +847,7 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
     parent = target_paragraph._element.getparent()
     index = parent.index(target_paragraph._element)
 
-    # remove marker text
-    for node in target_paragraph._element.iter():
-        if node.tag.endswith("}t"):  # Word text node
-            if node.text and placeholder in node.text:
-                node.text = node.text.replace(placeholder, "")
-
-    # insert blocks in exact order
+    # insert blocks after marker paragraph
     for block_type, content in blocks:
         if not content.strip():
             continue
@@ -866,15 +857,15 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
 
         elif block_type == "table":
             table = build_word_table_from_pipe_text(doc, content)
-
-            # move table to correct place
             parent.insert(index + 1, table._element)
             index += 1
 
-            # IMPORTANT: add empty paragraph after table
             spacer_p = OxmlElement("w:p")
             parent.insert(index + 1, spacer_p)
             index += 1
+
+    # remove original marker/reference paragraph completely
+    delete_paragraph(target_paragraph)
 
 
 def render_all_sections():
