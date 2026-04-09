@@ -782,69 +782,30 @@ def split_into_blocks(text: str):
     return blocks
 
 
-def copy_section_properties(source_para, target_para):
-    """Copy section margins and properties from source to target paragraph"""
-    try:
-        # Get section properties from source
-        source_pPr = source_para._element.get_or_add_pPr()
-        source_sectPr = source_pPr.find(qn('w:sectPr'))
-        
-        if source_sectPr is not None:
-            target_pPr = target_para._element.get_or_add_pPr()
-            # Remove existing sectPr if any
-            existing = target_pPr.find(qn('w:sectPr'))
-            if existing is not None:
-                target_pPr.remove(existing)
-            # Clone and add
-            new_sectPr = OxmlElement('w:sectPr')
-            for child in source_sectPr:
-                new_child = OxmlElement(child.tag)
-                for k, v in child.attrib.items():
-                    new_child.set(k, v)
-                new_sectPr.append(new_child)
-            target_pPr.append(new_sectPr)
-    except:
-        pass  # fallback silently
-
 from docx.text.paragraph import Paragraph
 
-def insert_text_block_after(parent, index, text: str, doc: Document, style_name: str = "Normal", source_para=None):
-    """Final robust version with section margin fix"""
-    lines = text.split("\n")
+def insert_text_block_after(parent, index, text: str, doc: Document):
+    """
+    Insert text block as real Word paragraphs after index.
+    Supports markdown bold (**...**).
+    Returns new index after insertion.
+    """
+    lines = [l for l in text.split("\n")]
 
     for line in lines:
         new_p = OxmlElement("w:p")
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # 1. Apply style
-        if style_name in doc.styles:
-            para.style = doc.styles[style_name]
-
-        # 2. Copy section margins (this is the key for left/right margins)
-        if source_para is not None:
-            copy_section_properties(source_para, para)
-
-        # 3. Force paragraph spacing
-        pf = para.paragraph_format
-        pf.space_before = Pt(0)      # Tight after heading
-        pf.space_after = Pt(4)       # Reasonable gap between points
-        pf.line_spacing = 1.0
-        pf.left_indent = Pt(0)
-        pf.right_indent = Pt(0)
-        pf.first_line_indent = Pt(0)
-
-        para.alignment = WD_ALIGN_PARAGRAPH.LEFT
-
-        # Bold markdown
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
             if start > pos:
-                run = para.add_run(line[pos:start])
+                para.add_run(line[pos:start])
             run = para.add_run(match.group(1))
             run.bold = True
             pos = end
+
         if pos < len(line):
             para.add_run(line[pos:])
 
@@ -856,75 +817,57 @@ def insert_text_block_after(parent, index, text: str, doc: Document, style_name:
 
 def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks):
     """
-    Simple, reliable version that preserves headings and margins.
+    Replace one section marker with an ordered sequence of text/table blocks.
     """
-    # Find the placeholder paragraph
-    target_p = None
-    for p in doc.paragraphs:
-        if placeholder in p.text:
-            target_p = p
+    from docx.text.paragraph import Paragraph
+
+    target_paragraph = None
+
+    for p in doc.element.body.iter():
+        if not p.tag.endswith("p"):
+            continue
+
+        texts = [t.text for t in p.iter() if t.text]
+        if not texts:
+            continue
+
+        full_text = "".join(texts)
+        if placeholder in full_text:
+            target_paragraph = Paragraph(p, doc)
             break
 
-    if target_p is None:
-        print(f"Placeholder not found: {placeholder}")
+    if target_paragraph is None:
+        print(f"⚠️ Section marker not found: {placeholder}")
         return
 
-    # Clear only the placeholder text, keep the paragraph (this preserves position & style)
-    target_p.text = ""
+    parent = target_paragraph._element.getparent()
+    index = parent.index(target_paragraph._element)
 
-    # Now add content AFTER this cleared paragraph
+    # remove marker text
+    for node in target_paragraph._element.iter():
+        if node.tag.endswith("}t"):  # Word text node
+            if node.text and placeholder in node.text:
+                node.text = node.text.replace(placeholder, "")
+
+    # insert blocks in exact order
     for block_type, content in blocks:
-        if not content or not content.strip():
+        if not content.strip():
             continue
 
         if block_type == "text":
-            for raw_line in content.split("\n"):
-                line = raw_line.strip()
-                if not line:
-                    # Empty line - small spacing
-                    p = target_p.insert_paragraph_before("", style="Normal")
-                    pf = p.paragraph_format
-                    pf.space_before = Pt(4)
-                    pf.space_after = Pt(4)
-                    continue
-
-                # Add normal paragraph
-                p = target_p.insert_paragraph_before(line, style="Normal")
-
-                # Fix spacing
-                pf = p.paragraph_format
-                pf.space_before = Pt(0)      # tight after heading
-                pf.space_after = Pt(8)
-                pf.line_spacing = 1.15
-
-                # Handle bold **text** properly
-                if "**" in raw_line:
-                    p.clear()
-                    pos = 0
-                    for match in BOLD_PATTERN.finditer(raw_line):
-                        start, end = match.span()
-                        if start > pos:
-                            p.add_run(raw_line[pos:start])
-                        run = p.add_run(match.group(1))
-                        run.bold = True
-                        pos = end
-                    if pos < len(raw_line):
-                        p.add_run(raw_line[pos:])
+            index = insert_text_block_after(parent, index, content, doc)
 
         elif block_type == "table":
-            # Add some space before table
-            spacer = target_p.insert_paragraph_before("", style="Normal")
-            pf = spacer.paragraph_format
-            pf.space_before = Pt(8)
-            pf.space_after = Pt(8)
-
-            # Insert the table
             table = build_word_table_from_pipe_text(doc, content)
-            # Note: table will be added at the end. We'll fix position later if needed.
-            doc.add_table(table.rows, table.columns)   # temporary
 
+            # move table to correct place
+            parent.insert(index + 1, table._element)
+            index += 1
 
-
+            # IMPORTANT: add empty paragraph after table
+            spacer_p = OxmlElement("w:p")
+            parent.insert(index + 1, spacer_p)
+            index += 1
 
 
 def render_all_sections():
