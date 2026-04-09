@@ -789,32 +789,54 @@ from docx.shared import Inches, Pt
 from docx.enum.text import WD_LINE_SPACING
 from docx.shared import Pt
 
+def get_body_paragraph_format(doc: Document, start_paragraph: Paragraph):
+    """Find the first non-heading paragraph after start_paragraph and return its format."""
+    # Traverse from start_paragraph onward
+    current = start_paragraph._element
+    while current is not None:
+        next_elem = current.getnext()
+        if next_elem is not None and next_elem.tag.endswith('p'):
+            next_para = Paragraph(next_elem, doc)
+            # Skip empty paragraphs and headings (you can customize heading detection)
+            if next_para.text.strip() and not next_para.style.name.startswith('Heading'):
+                return next_para.paragraph_format
+        current = next_elem
+    return None
+
 def insert_text_block_after(parent, index, text: str, doc: Document, source_para: Paragraph):
     lines = [l for l in text.split("\n") if l.strip()]
-
+    
+    # Get formatting from a nearby body paragraph (not the heading)
+    body_format = get_body_paragraph_format(doc, source_para)
+    
     for line in lines:
         new_p = OxmlElement("w:p")
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
-
-        # ----- HARDCODE THE EXACT BODY TEXT SPACING -----
-        # Example: Single, 0 before, 0 after
-        para.paragraph_format.line_spacing_rule = WD_LINE_SPACING.SINGLE
-        para.paragraph_format.space_before = Pt(0)
-        para.paragraph_format.space_after = Pt(0)
-        # If you need 1.15:
-        para.paragraph_format.line_spacing_rule = WD_LINE_SPACING.MULTIPLE
-        para.paragraph_format.line_spacing = 1.15
-        # ------------------------------------------------
-
-        # Copy left/right indent from source (heading) to match margins
+        
+        # Apply body paragraph formatting (spacing, line spacing, etc.)
+        if body_format:
+            # Copy all paragraph formatting EXCEPT left/right indent (we want heading margins)
+            if body_format.alignment is not None:
+                para.paragraph_format.alignment = body_format.alignment
+            if body_format.line_spacing_rule is not None:
+                para.paragraph_format.line_spacing_rule = body_format.line_spacing_rule
+            if body_format.line_spacing is not None:
+                para.paragraph_format.line_spacing = body_format.line_spacing
+            if body_format.space_before is not None:
+                para.paragraph_format.space_before = body_format.space_before
+            if body_format.space_after is not None:
+                para.paragraph_format.space_after = body_format.space_after
+            # Also copy other properties like widow/orphan control if needed
+        
+        # Copy left/right indent from the heading (source_para) to match margins
         if source_para.paragraph_format.left_indent is not None:
             para.paragraph_format.left_indent = source_para.paragraph_format.left_indent
         if source_para.paragraph_format.right_indent is not None:
             para.paragraph_format.right_indent = source_para.paragraph_format.right_indent
         if source_para.paragraph_format.first_line_indent is not None:
             para.paragraph_format.first_line_indent = source_para.paragraph_format.first_line_indent
-
+        
         # Add runs with bold support
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
@@ -826,7 +848,7 @@ def insert_text_block_after(parent, index, text: str, doc: Document, source_para
             pos = end
         if pos < len(line):
             para.add_run(line[pos:])
-
+        
         index += 1
     return index
 
