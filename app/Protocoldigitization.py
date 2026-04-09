@@ -788,8 +788,9 @@ from docx.shared import Inches, Pt
 
 def insert_text_block_after(parent, index, text: str, doc: Document, source_para: Paragraph):
     """
-    Insert text block. Uses Normal style (correct line spacing for body text).
-    Only copies left/right indent from source_para.
+    Insert text block after index.
+    Preserves default document spacing by using the Normal style.
+    Only copies left/right indent from source_para (margins).
     """
     lines = [l for l in text.split("\n") if l.strip()]
 
@@ -798,18 +799,18 @@ def insert_text_block_after(parent, index, text: str, doc: Document, source_para
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # ----- USE NORMAL STYLE (fixes line spacing) -----
+        # ----- USE DEFAULT NORMAL STYLE (preserves default spacing) -----
         para.style = doc.styles['Normal']
-        # -------------------------------------------------
+        # -----------------------------------------------------------------
 
-        # ----- COPY ONLY LEFT/RIGHT INDENT -----
+        # ----- COPY ONLY LEFT/RIGHT INDENT (margins) -----
         if source_para.paragraph_format.left_indent is not None:
             para.paragraph_format.left_indent = source_para.paragraph_format.left_indent
         if source_para.paragraph_format.right_indent is not None:
             para.paragraph_format.right_indent = source_para.paragraph_format.right_indent
         if source_para.paragraph_format.first_line_indent is not None:
             para.paragraph_format.first_line_indent = source_para.paragraph_format.first_line_indent
-        # ---------------------------------------
+        # -------------------------------------------------
 
         # Add runs with bold support
         pos = 0
