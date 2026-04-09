@@ -788,10 +788,7 @@ from docx.shared import Pt
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 def insert_text_block_after(parent, index, text: str, doc: Document, style_name: str = "Normal"):
-    """
-    Insert text while properly applying paragraph style + forcing paragraph formatting.
-    This fixes page margins + paragraph spacing (before/after).
-    """
+    """Forces correct paragraph spacing and respects template margins"""
     lines = text.split("\n")
 
     for line in lines:
@@ -799,24 +796,19 @@ def insert_text_block_after(parent, index, text: str, doc: Document, style_name:
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # 1. Apply the style from your template (this brings most formatting)
+        # Apply style from template
         if style_name in doc.styles:
             para.style = doc.styles[style_name]
-        else:
-            print(f"Warning: Style '{style_name}' not found. Using default.")
 
-        # 2. Force paragraph formatting (this fixes space before/after, line spacing, etc.)
+        # === FORCE PARAGRAPH SETTINGS (this controls gap) ===
         pf = para.paragraph_format
-        
-        # Common good settings for CSR documents (adjust if needed)
-        pf.space_before = Pt(6)      # or Pt(0) if you want tight
-        pf.space_after = Pt(8)       # typical value for body text
-        pf.line_spacing = 1.15       # or 1.08, 1.0, etc.
+        pf.space_before = Pt(2)      # Very small gap after heading
+        pf.space_after = Pt(6)       # Gap between list items
+        pf.line_spacing = 1.15
         pf.left_indent = Pt(0)
         pf.right_indent = Pt(0)
-        pf.first_line_indent = Pt(18)  # optional: small first-line indent
+        pf.first_line_indent = Pt(0)   # Set to Pt(18) if you want indented paragraphs
 
-        # Alignment
         para.alignment = WD_ALIGN_PARAGRAPH.LEFT
 
         # Handle **bold** markdown
@@ -839,20 +831,16 @@ def insert_text_block_after(parent, index, text: str, doc: Document, style_name:
 
 def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks):
     """
-    Replace one section marker with an ordered sequence of text/table blocks.
+    Replace placeholder with text blocks and tables while maintaining proper spacing.
     """
-    from docx.text.paragraph import Paragraph
-
     target_paragraph = None
 
     for p in doc.element.body.iter():
         if not p.tag.endswith("p"):
             continue
-
         texts = [t.text for t in p.iter() if t.text]
         if not texts:
             continue
-
         full_text = "".join(texts)
         if placeholder in full_text:
             target_paragraph = Paragraph(p, doc)
@@ -865,21 +853,22 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
     parent = target_paragraph._element.getparent()
     index = parent.index(target_paragraph._element)
 
-    # remove marker text
+    # Remove the placeholder text
     for node in target_paragraph._element.iter():
-        if node.tag.endswith("}t"):  # Word text node
-            if node.text and placeholder in node.text:
-                node.text = node.text.replace(placeholder, "")
+        if node.tag.endswith("}t") and node.text and placeholder in node.text:
+            node.text = node.text.replace(placeholder, "").strip()
 
-    # insert blocks in exact order
+    # Insert blocks
     for block_type, content in blocks:
-        if not content.strip():
+        if not content or not content.strip():
             continue
 
         if block_type == "text":
-            index = insert_text_block_after(parent, index, content, doc)
+            # Pass style_name here
+            index = insert_text_block_after(parent, index, content, doc, style_name="Normal")
 
         elif block_type == "table":
+            # Insert table
             table = build_word_table_from_pipe_text(doc, content)
             parent.insert(index + 1, table._element)
             index += 1
@@ -888,14 +877,15 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
             spacer_p = OxmlElement("w:p")
             parent.insert(index + 1, spacer_p)
             spacer_para = Paragraph(spacer_p, doc)
-            style_name="Normal"
-            
-            if style_name in doc.styles:
-                spacer_para.style = doc.styles[style_name]
-            
+
+            if "Normal" in doc.styles:
+                spacer_para.style = doc.styles["Normal"]
+
             pf = spacer_para.paragraph_format
-            pf.space_before = Pt(6)
-            pf.space_after = Pt(12)   # a bit more after table
+            pf.space_before = Pt(8)      # Gap after table
+            pf.space_after = Pt(10)
+            pf.line_spacing = 1.15
+
             index += 1
 
 
