@@ -781,31 +781,21 @@ def split_into_blocks(text: str):
 
     return blocks
 
-
 from copy import deepcopy
-def copy_paragraph_properties(src_para, dst_para):
+
+def copy_paragraph_alignment(src_para, dst_para):
     """
-    Copy only paragraph-level properties (indent, spacing, alignment, tabs, etc.)
-    from source paragraph to destination paragraph.
+    Copy only paragraph layout (alignment, indent, spacing)
     """
-    src_pPr = src_para._element.pPr
-    if src_pPr is not None:
-        dst_pPr = dst_para._element.pPr
-        if dst_pPr is not None:
-            dst_para._element.remove(dst_pPr)
-        dst_para._element.insert(0, deepcopy(src_pPr))
+    if src_para._element.pPr is not None:
+        dst_para._element.insert(
+            0,
+            deepcopy(src_para._element.pPr)
+        )
 
 from docx.text.paragraph import Paragraph
-
-from docx.text.paragraph import Paragraph
-from docx.oxml import OxmlElement
 
 def insert_text_block_after(parent, index, text: str, doc: Document, reference_paragraph):
-    """
-    Insert text block after index, copying only paragraph-level layout
-    from the reference paragraph so the inserted content follows the same
-    indentation/margin behavior as the placeholder.
-    """
     lines = text.split("\n")
 
     for line in lines:
@@ -813,9 +803,10 @@ def insert_text_block_after(parent, index, text: str, doc: Document, reference_p
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # Copy paragraph layout from placeholder paragraph
-        copy_paragraph_properties(reference_paragraph, para)
+        # ✅ ONLY copy alignment/indent from placeholder
+        copy_paragraph_alignment(reference_paragraph, para)
 
+        # add text
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
