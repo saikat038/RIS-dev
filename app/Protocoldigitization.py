@@ -786,11 +786,14 @@ from docx.text.paragraph import Paragraph
 
 from docx.shared import Inches, Pt
 
+from docx.enum.text import WD_LINE_SPACING
+from docx.shared import Pt
+
 def insert_text_block_after(parent, index, text: str, doc: Document, source_para: Paragraph):
     """
-    Insert text block after index.
-    Preserves default document spacing by using the Normal style.
-    Only copies left/right indent from source_para (margins).
+    Insert text block with preserved default spacing.
+    - Uses SINGLE line spacing, zero space before/after (standard body text)
+    - Only copies left/right indent from source_para (margins)
     """
     lines = [l for l in text.split("\n") if l.strip()]
 
@@ -799,8 +802,10 @@ def insert_text_block_after(parent, index, text: str, doc: Document, source_para
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # ----- USE DEFAULT NORMAL STYLE (preserves default spacing) -----
-        para.style = doc.styles['Normal']
+        # ----- SET STANDARD BODY TEXT SPACING (SINGLE, NO EXTRA SPACE) -----
+        para.paragraph_format.line_spacing_rule = WD_LINE_SPACING.SINGLE
+        para.paragraph_format.space_before = Pt(0)
+        para.paragraph_format.space_after = Pt(0)
         # -----------------------------------------------------------------
 
         # ----- COPY ONLY LEFT/RIGHT INDENT (margins) -----
