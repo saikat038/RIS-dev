@@ -628,9 +628,7 @@ def build_word_table_from_pipe_text(doc: Document, raw_table_text: str):
     cols = len(table_data[0]) if table_data else 0
 
     table = doc.add_table(rows=rows_count, cols=cols)
-    # ----- HARDCODED ALIGNMENT -----
-    table.alignment = WD_TABLE_ALIGNMENT.LEFT
-    # --------------------------------
+    table.alignment = WD_TABLE_ALIGNMENT.CENTER
     for col in table.columns:
         col.width = Inches(2)
     apply_table_borders(table)
@@ -656,14 +654,6 @@ def build_word_table_from_pipe_text(doc: Document, raw_table_text: str):
             for c_idx, value in enumerate(row_data):
                 cell = table.rows[current_row_idx].cells[c_idx]
                 cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
-
-                # ----- ZERO CELL MARGINS -----
-                cell.margin_top = Inches(0)
-                cell.margin_bottom = Inches(0)
-                cell.margin_left = Inches(0)
-                cell.margin_right = Inches(0)
-                # -----------------------------
-
                 cell.paragraphs[0].clear()
 
                 pos = 0
@@ -794,8 +784,6 @@ def split_into_blocks(text: str):
 
 from docx.text.paragraph import Paragraph
 
-from docx.shared import Inches
-
 def insert_text_block_after(parent, index, text: str, doc: Document, source_para: Paragraph):
     """
     Insert text block after index, using the EXACT same paragraph formatting
@@ -813,10 +801,8 @@ def insert_text_block_after(parent, index, text: str, doc: Document, source_para
         if source_para.style:
             para.style = source_para.style
         # Copy paragraph alignment, indentation, spacing
-        para.paragraph_format.alignment = source_para.paragraph_format.alignment
         para.paragraph_format.left_indent = source_para.paragraph_format.left_indent
         para.paragraph_format.right_indent = source_para.paragraph_format.right_indent
-
         # ------------------------------------------------------
 
         # Add runs with bold support
@@ -837,13 +823,21 @@ def insert_text_block_after(parent, index, text: str, doc: Document, source_para
 
 
 def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks):
+    """
+    Replace one section marker with an ordered sequence of text/table blocks.
+    """
+    from docx.text.paragraph import Paragraph
+
     target_paragraph = None
+
     for p in doc.element.body.iter():
         if not p.tag.endswith("p"):
             continue
+
         texts = [t.text for t in p.iter() if t.text]
         if not texts:
             continue
+
         full_text = "".join(texts)
         if placeholder in full_text:
             target_paragraph = Paragraph(p, doc)
@@ -858,24 +852,29 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
 
     # remove marker text
     for node in target_paragraph._element.iter():
-        if node.tag.endswith("}t"):
+        if node.tag.endswith("}t"):  # Word text node
             if node.text and placeholder in node.text:
                 node.text = node.text.replace(placeholder, "")
 
+    # insert blocks in exact order
     for block_type, content in blocks:
         if not content.strip():
             continue
+
         if block_type == "text":
-            # Pass the source_para (target_paragraph) to preserve formatting
-            index = insert_text_block_after(parent, index, content, doc, target_paragraph)
+            index = insert_text_block_after(parent, index, content, doc)
+
         elif block_type == "table":
             table = build_word_table_from_pipe_text(doc, content)
+
+            # move table to correct place
             parent.insert(index + 1, table._element)
             index += 1
+
+            # IMPORTANT: add empty paragraph after table
             spacer_p = OxmlElement("w:p")
             parent.insert(index + 1, spacer_p)
             index += 1
-
 
 
 def render_all_sections():
