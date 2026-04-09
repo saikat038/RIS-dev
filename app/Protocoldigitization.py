@@ -816,10 +816,7 @@ def insert_text_block_after(parent, index, text: str, doc: Document, source_para
         para.paragraph_format.alignment = source_para.paragraph_format.alignment
         para.paragraph_format.left_indent = source_para.paragraph_format.left_indent
         para.paragraph_format.right_indent = source_para.paragraph_format.right_indent
-        para.paragraph_format.first_line_indent = source_para.paragraph_format.first_line_indent
-        para.paragraph_format.space_before = source_para.paragraph_format.space_before
-        para.paragraph_format.space_after = source_para.paragraph_format.space_after
-        para.paragraph_format.line_spacing = source_para.paragraph_format.line_spacing
+
         # ------------------------------------------------------
 
         # Add runs with bold support
