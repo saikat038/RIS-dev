@@ -790,11 +790,6 @@ from docx.enum.text import WD_LINE_SPACING
 from docx.shared import Pt
 
 def insert_text_block_after(parent, index, text: str, doc: Document, source_para: Paragraph):
-    """
-    Insert text block with preserved default spacing.
-    - Uses SINGLE line spacing, zero space before/after (standard body text)
-    - Only copies left/right indent from source_para (margins)
-    """
     lines = [l for l in text.split("\n") if l.strip()]
 
     for line in lines:
@@ -802,20 +797,23 @@ def insert_text_block_after(parent, index, text: str, doc: Document, source_para
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # ----- SET STANDARD BODY TEXT SPACING (SINGLE, NO EXTRA SPACE) -----
+        # ----- HARDCODE THE EXACT BODY TEXT SPACING -----
+        # Example: Single, 0 before, 0 after
         para.paragraph_format.line_spacing_rule = WD_LINE_SPACING.SINGLE
         para.paragraph_format.space_before = Pt(0)
         para.paragraph_format.space_after = Pt(0)
-        # -----------------------------------------------------------------
+        # If you need 1.15:
+        # para.paragraph_format.line_spacing_rule = WD_LINE_SPACING.MULTIPLE
+        # para.paragraph_format.line_spacing = 1.15
+        # ------------------------------------------------
 
-        # ----- COPY ONLY LEFT/RIGHT INDENT (margins) -----
+        # Copy left/right indent from source (heading) to match margins
         if source_para.paragraph_format.left_indent is not None:
             para.paragraph_format.left_indent = source_para.paragraph_format.left_indent
         if source_para.paragraph_format.right_indent is not None:
             para.paragraph_format.right_indent = source_para.paragraph_format.right_indent
         if source_para.paragraph_format.first_line_indent is not None:
             para.paragraph_format.first_line_indent = source_para.paragraph_format.first_line_indent
-        # -------------------------------------------------
 
         # Add runs with bold support
         pos = 0
