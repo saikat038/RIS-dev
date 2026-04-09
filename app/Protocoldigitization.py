@@ -785,9 +785,7 @@ def split_into_blocks(text: str):
 from docx.text.paragraph import Paragraph
 
 def insert_text_block_after(parent, index, text: str, doc: Document):
-    """
-    Insert paragraphs while forcing correct page margins
-    """
+    """Simple and clean - lets the document section margins take effect"""
     lines = [l for l in text.split("\n")]
 
     for line in lines:
@@ -795,14 +793,15 @@ def insert_text_block_after(parent, index, text: str, doc: Document):
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # Force paragraph to respect section margins
-        pPr = para._element.get_or_add_pPr()
+        # Do NOT add sectPr here (it causes page break issues)
+        # Just keep it clean so it inherits from the document section
 
-        # Add sectPr to link to current section margins
-        sectPr = OxmlElement('w:sectPr')
-        pPr.append(sectPr)
+        pf = para.paragraph_format
+        pf.space_before = Pt(4)
+        pf.space_after = Pt(8)
+        pf.line_spacing = 1.15
 
-        # Bold handling
+        # Bold support
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
