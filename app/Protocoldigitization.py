@@ -788,9 +788,8 @@ from docx.shared import Inches, Pt
 
 def insert_text_block_after(parent, index, text: str, doc: Document, source_para: Paragraph):
     """
-    Insert text block after index.
-    Only copies left_indent and right_indent from source_para.
-    Does NOT copy style, line spacing, bold, or any other formatting.
+    Insert text block. Uses Normal style (correct line spacing for body text).
+    Only copies left/right indent from source_para.
     """
     lines = [l for l in text.split("\n") if l.strip()]
 
@@ -799,29 +798,30 @@ def insert_text_block_after(parent, index, text: str, doc: Document, source_para
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # ----- ONLY COPY LEFT/RIGHT INDENT (no style, no spacing) -----
+        # ----- USE NORMAL STYLE (fixes line spacing) -----
+        para.style = doc.styles['Normal']
+        # -------------------------------------------------
+
+        # ----- COPY ONLY LEFT/RIGHT INDENT -----
         if source_para.paragraph_format.left_indent is not None:
             para.paragraph_format.left_indent = source_para.paragraph_format.left_indent
         if source_para.paragraph_format.right_indent is not None:
             para.paragraph_format.right_indent = source_para.paragraph_format.right_indent
-        # Optional: copy first_line_indent if your lists need hanging indent
         if source_para.paragraph_format.first_line_indent is not None:
             para.paragraph_format.first_line_indent = source_para.paragraph_format.first_line_indent
-        # -------------------------------------------------------------
+        # ---------------------------------------
 
-        # Add runs with bold support – default runs are NOT bold
+        # Add runs with bold support
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
             if start > pos:
-                run = para.add_run(line[pos:start])
-                run.bold = False   # explicitly not bold
+                para.add_run(line[pos:start])
             run = para.add_run(match.group(1))
-            run.bold = True        # only bold inside ** **
+            run.bold = True
             pos = end
         if pos < len(line):
-            run = para.add_run(line[pos:])
-            run.bold = False
+            para.add_run(line[pos:])
 
         index += 1
     return index
