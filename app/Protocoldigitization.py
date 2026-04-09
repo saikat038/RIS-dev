@@ -803,8 +803,8 @@ def insert_text_block_after(parent, index, text: str, doc: Document, source_para
         para.paragraph_format.space_before = Pt(0)
         para.paragraph_format.space_after = Pt(0)
         # If you need 1.15:
-        # para.paragraph_format.line_spacing_rule = WD_LINE_SPACING.MULTIPLE
-        # para.paragraph_format.line_spacing = 1.15
+        para.paragraph_format.line_spacing_rule = WD_LINE_SPACING.MULTIPLE
+        para.paragraph_format.line_spacing = 1.15
         # ------------------------------------------------
 
         # Copy left/right indent from source (heading) to match margins
