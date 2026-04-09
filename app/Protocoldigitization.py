@@ -785,7 +785,11 @@ def split_into_blocks(text: str):
 from docx.text.paragraph import Paragraph
 
 def insert_text_block_after(parent, index, text: str, doc: Document):
-    """Minimal version - only handles bold, no spacing changes"""
+    """
+    Insert text block as real Word paragraphs after index.
+    Supports markdown bold (**...**).
+    Returns new index after insertion.
+    """
     lines = [l for l in text.split("\n")]
 
     for line in lines:
@@ -793,7 +797,6 @@ def insert_text_block_after(parent, index, text: str, doc: Document):
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # Only bold handling - nothing else
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
@@ -873,7 +876,9 @@ def render_all_sections():
 
     prefix = normalize_prefix(INDEX_PREFIX)
 
-    blob_service = BlobServiceClient.from_connection_string(AZURE_BLOB_CONN_STRING)
+    blob_service = BlobServiceClient.from_connection_string(
+        AZURE_BLOB_CONN_STRING
+    )
     container = blob_service.get_container_client(BLOB_CONTAINER)
 
     template_blob_path = f"{prefix}/{TEMPLATE_NAME}"
@@ -889,6 +894,10 @@ def render_all_sections():
     context = {}
     table_sections = {}
 
+    # ---------------------------------
+    # 1️⃣ Build context dynamically
+    # ---------------------------------
+
     for section_name, llm_text in FINAL_SECTION_BUFFER.items():
         template_var = SECTION_TO_TEMPLATE_VAR.get(section_name)
         if not template_var:
@@ -900,42 +909,22 @@ def render_all_sections():
         context[template_var] = section_marker
         table_sections[section_marker] = blocks
 
-    # First pass: docxtpl
+    # ---------------------------------
+    # 2️⃣ First pass render (docxtpl)
+    # ---------------------------------
+
     tpl.render(context)
 
     temp_stream = BytesIO()
     tpl.save(temp_stream)
     temp_stream.seek(0)
 
-    # Second pass
+    # ---------------------------------
+    # 3️⃣ Second pass (python-docx)
+    # ---------------------------------
+
     doc = Document(temp_stream)
 
-    # FORCE MARGINS VERY STRONGLY
-    for section in doc.sections:
-        section.top_margin    = Inches(0.97)
-        section.bottom_margin = Inches(0.76)
-        section.left_margin   = Inches(0.79)
-        section.right_margin  = Inches(0.49)
-        section.gutter        = Inches(0)
-
-        # Extra reinforcement
-        sectPr = section._sectPr
-        for name, val in [
-            ('left',   Inches(0.79)),
-            ('right',  Inches(0.49)),
-            ('top',    Inches(0.97)),
-            ('bottom', Inches(0.76)),
-            ('gutter', Inches(0))
-        ]:
-            elem = sectPr.find(qn(f'w:{name}'))
-            if elem is not None:
-                elem.set(qn('w:w'), str(int(val * 1440)))
-            else:
-                new_elem = OxmlElement(f'w:{name}')
-                new_elem.set(qn('w:w'), str(int(val * 1440)))
-                sectPr.append(new_elem)
-
-    # Insert content
     for marker, blocks in table_sections.items():
         insert_section_blocks_into_document(doc, marker, blocks)
 
@@ -947,4 +936,4 @@ def render_all_sections():
     output_blob = container.get_blob_client(output_blob_path)
     output_blob.upload_blob(final_stream, overwrite=True)
 
-    print("✅ CSR populated with forced page margins")
+    print("✅ CSR populated successfully with dynamic table detection")
