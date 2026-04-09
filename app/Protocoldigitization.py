@@ -628,7 +628,9 @@ def build_word_table_from_pipe_text(doc: Document, raw_table_text: str):
     cols = len(table_data[0]) if table_data else 0
 
     table = doc.add_table(rows=rows_count, cols=cols)
-    table.alignment = WD_TABLE_ALIGNMENT.CENTER
+    # ----- HARDCODED ALIGNMENT -----
+    table.alignment = WD_TABLE_ALIGNMENT.LEFT
+    # --------------------------------
     for col in table.columns:
         col.width = Inches(2)
     apply_table_borders(table)
@@ -654,6 +656,14 @@ def build_word_table_from_pipe_text(doc: Document, raw_table_text: str):
             for c_idx, value in enumerate(row_data):
                 cell = table.rows[current_row_idx].cells[c_idx]
                 cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
+
+                # ----- ZERO CELL MARGINS -----
+                cell.margin_top = Inches(0)
+                cell.margin_bottom = Inches(0)
+                cell.margin_left = Inches(0)
+                cell.margin_right = Inches(0)
+                # -----------------------------
+
                 cell.paragraphs[0].clear()
 
                 pos = 0
@@ -784,19 +794,30 @@ def split_into_blocks(text: str):
 
 from docx.text.paragraph import Paragraph
 
+from docx.shared import Inches
+
 def insert_text_block_after(parent, index, text: str, doc: Document):
     """
     Insert text block as real Word paragraphs after index.
+    Hardcodes left/right indentation to 0 inches (so only page margins apply).
     Supports markdown bold (**...**).
     Returns new index after insertion.
     """
-    lines = [l for l in text.split("\n")]
+    lines = [l for l in text.split("\n") if l.strip()]   # non‑empty lines
 
     for line in lines:
         new_p = OxmlElement("w:p")
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
+        # ----- HARDCODED MARGINS (no extra indentation) -----
+        para.paragraph_format.left_indent = Inches(0)
+        para.paragraph_format.right_indent = Inches(0)
+        para.paragraph_format.space_before = Pt(0)
+        para.paragraph_format.space_after = Pt(0)
+        # -----------------------------------------------------
+
+        # Add runs with bold support
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
@@ -805,12 +826,10 @@ def insert_text_block_after(parent, index, text: str, doc: Document):
             run = para.add_run(match.group(1))
             run.bold = True
             pos = end
-
         if pos < len(line):
             para.add_run(line[pos:])
 
         index += 1
-
     return index
 
 
@@ -819,18 +838,14 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
     """
     Replace one section marker with an ordered sequence of text/table blocks.
     """
-    from docx.text.paragraph import Paragraph
-
     target_paragraph = None
 
     for p in doc.element.body.iter():
         if not p.tag.endswith("p"):
             continue
-
         texts = [t.text for t in p.iter() if t.text]
         if not texts:
             continue
-
         full_text = "".join(texts)
         if placeholder in full_text:
             target_paragraph = Paragraph(p, doc)
@@ -845,7 +860,7 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
 
     # remove marker text
     for node in target_paragraph._element.iter():
-        if node.tag.endswith("}t"):  # Word text node
+        if node.tag.endswith("}t"):
             if node.text and placeholder in node.text:
                 node.text = node.text.replace(placeholder, "")
 
@@ -859,16 +874,20 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
 
         elif block_type == "table":
             table = build_word_table_from_pipe_text(doc, content)
-
-            # move table to correct place
             parent.insert(index + 1, table._element)
             index += 1
-
-            # IMPORTANT: add empty paragraph after table
+            # add empty paragraph after table
             spacer_p = OxmlElement("w:p")
             parent.insert(index + 1, spacer_p)
             index += 1
 
+
+def enforce_document_margins(doc):
+    section = doc.sections[0]
+    section.top_margin = Inches(0.97)
+    section.bottom_margin = Inches(0.76)
+    section.left_margin = Inches(0.79)
+    section.right_margin = Inches(0.49)
 
 def render_all_sections():
     if not FINAL_SECTION_BUFFER:
@@ -924,6 +943,7 @@ def render_all_sections():
     # ---------------------------------
 
     doc = Document(temp_stream)
+    enforce_document_margins(doc)
 
     for marker, blocks in table_sections.items():
         insert_section_blocks_into_document(doc, marker, blocks)
