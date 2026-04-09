@@ -784,11 +784,11 @@ def split_into_blocks(text: str):
 
 from docx.text.paragraph import Paragraph
 
+from docx.shared import Pt
+
 def insert_text_block_after(parent, index, text: str, doc: Document):
     """
-    Insert text block as real Word paragraphs after index.
-    Supports markdown bold (**...**).
-    Returns new index after insertion.
+    Hard-coded paragraph formatting + bold support
     """
     lines = [l for l in text.split("\n")]
 
@@ -797,11 +797,23 @@ def insert_text_block_after(parent, index, text: str, doc: Document):
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
+        # === HARD-CODED PARAGRAPH SETTINGS (this fixes vertical gaps) ===
+        pf = para.paragraph_format
+        pf.space_before = Pt(4)      # Small gap after heading / between items
+        pf.space_after  = Pt(8)      # Gap after each paragraph
+        pf.line_spacing = 1.15       # Nice line spacing (you can change to 1.0 or 1.08)
+        pf.left_indent = Pt(0)
+        pf.right_indent = Pt(0)
+        pf.first_line_indent = Pt(0)   # Set to Pt(18) if you want indented text
+
+        para.alignment = WD_ALIGN_PARAGRAPH.LEFT
+
+        # Handle **bold** markdown
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
             if start > pos:
-                para.add_run(line[pos:start])
+                run = para.add_run(line[pos:start])
             run = para.add_run(match.group(1))
             run.bold = True
             pos = end
