@@ -782,43 +782,13 @@ def split_into_blocks(text: str):
     return blocks
 
 
-from copy import deepcopy
 from docx.text.paragraph import Paragraph
-from docx.shared import Pt
-from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.oxml import OxmlElement
 
-def copy_paragraph_format(src_para, dst_para):
+def insert_text_block_after(parent, index, text: str, doc: Document):
     """
-    Copy paragraph formatting from source paragraph to destination paragraph.
-    """
-    try:
-        dst_para.style = src_para.style
-    except Exception:
-        pass
-
-    src_fmt = src_para.paragraph_format
-    dst_fmt = dst_para.paragraph_format
-
-    dst_fmt.left_indent = src_fmt.left_indent
-    dst_fmt.right_indent = src_fmt.right_indent
-    dst_fmt.first_line_indent = src_fmt.first_line_indent
-    dst_fmt.space_before = src_fmt.space_before
-    dst_fmt.space_after = src_fmt.space_after
-    dst_fmt.line_spacing = src_fmt.line_spacing
-    dst_fmt.line_spacing_rule = src_fmt.line_spacing_rule
-    dst_fmt.keep_together = src_fmt.keep_together
-    dst_fmt.keep_with_next = src_fmt.keep_with_next
-    dst_fmt.page_break_before = src_fmt.page_break_before
-    dst_fmt.widow_control = src_fmt.widow_control
-
-    dst_para.alignment = src_para.alignment
-
-
-def insert_text_block_after(parent, index, text: str, doc: Document, reference_paragraph):
-    """
-    Insert text block as real Word paragraphs after index.
-    Paragraphs inherit formatting from the reference paragraph
-    so they stay aligned with template margins and layout.
+    Insert plain body paragraphs after index.
+    Keeps formatting minimal so Word follows section margins naturally.
     """
     lines = text.split("\n")
 
@@ -827,20 +797,17 @@ def insert_text_block_after(parent, index, text: str, doc: Document, reference_p
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # Copy formatting from template paragraph
-        copy_paragraph_format(reference_paragraph, para)
-
-        # Optional safety reset:
-        # uncomment these only if rogue indentation is happening
-        # para.paragraph_format.left_indent = None
-        # para.paragraph_format.right_indent = None
-        # para.paragraph_format.first_line_indent = None
+        # Keep paragraph clean so it follows page margins
+        para.paragraph_format.left_indent = None
+        para.paragraph_format.right_indent = None
+        para.paragraph_format.first_line_indent = None
 
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
+
             if start > pos:
-                run = para.add_run(line[pos:start])
+                para.add_run(line[pos:start])
 
             run = para.add_run(match.group(1))
             run.bold = True
@@ -895,7 +862,7 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
             continue
 
         if block_type == "text":
-            index = insert_text_block_after(parent, index, content, doc, target_paragraph)
+            index = insert_text_block_after(parent, index, content, doc)
 
         elif block_type == "table":
             table = build_word_table_from_pipe_text(doc, content)
