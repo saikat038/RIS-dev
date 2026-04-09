@@ -781,56 +781,90 @@ def split_into_blocks(text: str):
 
     return blocks
 
-from copy import deepcopy
 
-def copy_paragraph_alignment(src_para, dst_para):
+def apply_safe_paragraph_layout(src_para, dst_para):
     """
-    Copy only paragraph layout (alignment, indent, spacing)
+    Copy only visible paragraph layout properties.
+    Do NOT copy raw XML pPr because that can bring numbering/outline behavior.
     """
-    if src_para._element.pPr is not None:
-        dst_para._element.insert(
-            0,
-            deepcopy(src_para._element.pPr)
-        )
+    src_fmt = src_para.paragraph_format
+    dst_fmt = dst_para.paragraph_format
+
+    dst_para.alignment = src_para.alignment
+
+    dst_fmt.left_indent = src_fmt.left_indent
+    dst_fmt.right_indent = src_fmt.right_indent
+    dst_fmt.first_line_indent = src_fmt.first_line_indent
+
+    dst_fmt.space_before = src_fmt.space_before
+    dst_fmt.space_after = src_fmt.space_after
+
+    dst_fmt.line_spacing = src_fmt.line_spacing
+    dst_fmt.line_spacing_rule = src_fmt.line_spacing_rule
+
+
+def write_text_to_paragraph(para, text: str):
+    """
+    Fill an existing paragraph with text, preserving its position/layout.
+    Supports markdown bold.
+    """
+    # clear existing runs/text
+    p = para._element
+    for child in list(p):
+        if child.tag.endswith("}r"):
+            p.remove(child)
+
+    pos = 0
+    for match in BOLD_PATTERN.finditer(text):
+        start, end = match.span()
+
+        if start > pos:
+            para.add_run(text[pos:start])
+
+        run = para.add_run(match.group(1))
+        run.bold = True
+        pos = end
+
+    if pos < len(text):
+        para.add_run(text[pos:])
+
+from docx.text.paragraph import Paragraph
 
 from docx.text.paragraph import Paragraph
 
 def insert_text_block_after(parent, index, text: str, doc: Document, reference_paragraph):
+    """
+    Insert text below the placeholder while following the placeholder's visible layout.
+    First line stays in the placeholder paragraph itself.
+    Remaining lines are inserted as new paragraphs with safe copied layout.
+    """
     lines = text.split("\n")
 
-    for line in lines:
+    if not lines:
+        return index
+
+    # ---- first line goes into the placeholder paragraph itself ----
+    first_line = lines[0]
+    write_text_to_paragraph(reference_paragraph, first_line)
+
+    current_index = index
+
+    # ---- remaining lines are inserted below ----
+    for line in lines[1:]:
         new_p = OxmlElement("w:p")
-        parent.insert(index + 1, new_p)
+        parent.insert(current_index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # ✅ ONLY copy alignment/indent from placeholder
-        copy_paragraph_alignment(reference_paragraph, para)
+        apply_safe_paragraph_layout(reference_paragraph, para)
+        write_text_to_paragraph(para, line)
 
-        # add text
-        pos = 0
-        for match in BOLD_PATTERN.finditer(line):
-            start, end = match.span()
+        current_index += 1
 
-            if start > pos:
-                para.add_run(line[pos:start])
-
-            run = para.add_run(match.group(1))
-            run.bold = True
-            pos = end
-
-        if pos < len(line):
-            para.add_run(line[pos:])
-
-        index += 1
-
-    return index
+    return current_index
 
 
 
 def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks):
-    """
-    Replace one section marker with an ordered sequence of text/table blocks.
-    """
     from docx.text.paragraph import Paragraph
 
     target_paragraph = None
@@ -855,30 +889,44 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
     parent = target_paragraph._element.getparent()
     index = parent.index(target_paragraph._element)
 
-    # remove marker text
+    # remove placeholder text only
     for node in target_paragraph._element.iter():
-        if node.tag.endswith("}t"):  # Word text node
+        if node.tag.endswith("}t"):
             if node.text and placeholder in node.text:
                 node.text = node.text.replace(placeholder, "")
 
-    # insert blocks in exact order
+    first_text_block_used_placeholder = False
+
     for block_type, content in blocks:
         if not content.strip():
             continue
 
         if block_type == "text":
-            index = insert_text_block_after(parent, index, content, doc, target_paragraph)
+            if not first_text_block_used_placeholder:
+                index = insert_text_block_after(parent, index, content, doc, target_paragraph)
+                first_text_block_used_placeholder = True
+            else:
+                # later text blocks should not overwrite the original placeholder paragraph
+                lines = content.split("\n")
+                for line in lines:
+                    new_p = OxmlElement("w:p")
+                    parent.insert(index + 1, new_p)
+                    para = Paragraph(new_p, doc)
+
+                    apply_safe_paragraph_layout(target_paragraph, para)
+                    write_text_to_paragraph(para, line)
+
+                    index += 1
 
         elif block_type == "table":
             table = build_word_table_from_pipe_text(doc, content)
-
-            # move table to correct place
             parent.insert(index + 1, table._element)
             index += 1
 
-            # IMPORTANT: add empty paragraph after table
             spacer_p = OxmlElement("w:p")
             parent.insert(index + 1, spacer_p)
+            spacer_para = Paragraph(spacer_p, doc)
+            apply_safe_paragraph_layout(target_paragraph, spacer_para)
             index += 1
 
 
