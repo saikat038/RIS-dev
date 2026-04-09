@@ -788,7 +788,7 @@ from docx.shared import Pt
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 def insert_text_block_after(parent, index, text: str, doc: Document, style_name: str = "Normal"):
-    """Forces correct paragraph spacing and respects template margins"""
+    """Final version - better margin + spacing control"""
     lines = text.split("\n")
 
     for line in lines:
@@ -796,22 +796,22 @@ def insert_text_block_after(parent, index, text: str, doc: Document, style_name:
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # Apply style from template
+        # Apply template style
         if style_name in doc.styles:
             para.style = doc.styles[style_name]
 
-        # === FORCE PARAGRAPH SETTINGS (this controls gap) ===
+        # Force paragraph formatting
         pf = para.paragraph_format
-        pf.space_before = Pt(2)      # Very small gap after heading
-        pf.space_after = Pt(6)       # Gap between list items
+        pf.space_before = Pt(0)      # ← Reduced to 0 (important for after heading)
+        pf.space_after = Pt(8)       # Gap between list items
         pf.line_spacing = 1.15
         pf.left_indent = Pt(0)
         pf.right_indent = Pt(0)
-        pf.first_line_indent = Pt(0)   # Set to Pt(18) if you want indented paragraphs
+        pf.first_line_indent = Pt(0)
 
         para.alignment = WD_ALIGN_PARAGRAPH.LEFT
 
-        # Handle **bold** markdown
+        # Bold handling
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
@@ -868,24 +868,20 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
             index = insert_text_block_after(parent, index, content, doc, style_name="Normal")
 
         elif block_type == "table":
-            # Insert table
             table = build_word_table_from_pipe_text(doc, content)
             parent.insert(index + 1, table._element)
             index += 1
 
-            # Spacer paragraph after table
+            # Spacer after table
             spacer_p = OxmlElement("w:p")
             parent.insert(index + 1, spacer_p)
             spacer_para = Paragraph(spacer_p, doc)
-
             if "Normal" in doc.styles:
                 spacer_para.style = doc.styles["Normal"]
 
             pf = spacer_para.paragraph_format
-            pf.space_before = Pt(8)      # Gap after table
+            pf.space_before = Pt(8)
             pf.space_after = Pt(10)
-            pf.line_spacing = 1.15
-
             index += 1
 
 
