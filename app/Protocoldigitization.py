@@ -786,13 +786,11 @@ from docx.text.paragraph import Paragraph
 
 from docx.shared import Inches, Pt
 
-def insert_text_block_after(parent, index, text: str, doc: Document):
+def insert_text_block_after(parent, index, text: str, doc: Document, source_para: Paragraph):
     """
-    Insert text block with HARDCODED margins (no line spacing changes).
-    - Left indent: 0.25 inches (for list numbers)
-    - First line indent: -0.25 inches (hanging indent)
-    - Right indent: 0 inches
-    - Line spacing, space before/after = Word defaults (not modified)
+    Insert text block after index.
+    Only copies left_indent and right_indent from source_para.
+    Does NOT copy style, line spacing, bold, or any other formatting.
     """
     lines = [l for l in text.split("\n") if l.strip()]
 
@@ -801,24 +799,29 @@ def insert_text_block_after(parent, index, text: str, doc: Document):
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
 
-        # ----- HARDCODED MARGINS ONLY (no spacing) -----
-        para.paragraph_format.left_indent = Inches(0.25)      # space for the number
-        para.paragraph_format.first_line_indent = Inches(-0.25)  # hanging indent
-        para.paragraph_format.right_indent = Inches(0)
-        # Do NOT set space_before, space_after, line_spacing, alignment, etc.
-        # -------------------------------------------------
+        # ----- ONLY COPY LEFT/RIGHT INDENT (no style, no spacing) -----
+        if source_para.paragraph_format.left_indent is not None:
+            para.paragraph_format.left_indent = source_para.paragraph_format.left_indent
+        if source_para.paragraph_format.right_indent is not None:
+            para.paragraph_format.right_indent = source_para.paragraph_format.right_indent
+        # Optional: copy first_line_indent if your lists need hanging indent
+        if source_para.paragraph_format.first_line_indent is not None:
+            para.paragraph_format.first_line_indent = source_para.paragraph_format.first_line_indent
+        # -------------------------------------------------------------
 
-        # Add runs with bold support
+        # Add runs with bold support – default runs are NOT bold
         pos = 0
         for match in BOLD_PATTERN.finditer(line):
             start, end = match.span()
             if start > pos:
-                para.add_run(line[pos:start])
+                run = para.add_run(line[pos:start])
+                run.bold = False   # explicitly not bold
             run = para.add_run(match.group(1))
-            run.bold = True
+            run.bold = True        # only bold inside ** **
             pos = end
         if pos < len(line):
-            para.add_run(line[pos:])
+            run = para.add_run(line[pos:])
+            run.bold = False
 
         index += 1
     return index
@@ -855,8 +858,8 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
         if not content.strip():
             continue
         if block_type == "text":
-            # No source_para argument needed now
-            index = insert_text_block_after(parent, index, content, doc)
+            # Pass the source_para (target_paragraph) to preserve formatting
+            index = insert_text_block_after(parent, index, content, doc, target_paragraph)
         elif block_type == "table":
             table = build_word_table_from_pipe_text(doc, content)
             parent.insert(index + 1, table._element)
