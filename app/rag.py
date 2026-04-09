@@ -2534,7 +2534,6 @@ IF Output Style = verbatim:
   • ALL structural elements MUST be rendered.
   • Headings and paragraph text are IMMUTABLE TOKENS.
   • You MUST NOT omit, merge, flatten, or downgrade structure.
-  • Preserve hierarchy exactly as written.
 
 IF Output Style = regulatory author:
   • Structural elements MAY be reorganized for alignment with ICH Guideline structure.
@@ -2698,5 +2697,5 @@ def answer(query: str, history: List[Dict]) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Introduction", [])
+# answer("Title page", [])
 # answer("Overview of Adverse Events Safety Population - RP Patients", [])
