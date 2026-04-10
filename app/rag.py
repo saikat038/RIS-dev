@@ -1592,7 +1592,7 @@ def normalize_section_numbering(answer_text: str, context) -> str:
     import re, json
 
     # -----------------------------
-    # Extract ich_refs from context
+    # Extract ich_refs
     # -----------------------------
     def extract_ich_refs(ctx):
         if isinstance(ctx, dict):
@@ -1615,24 +1615,39 @@ def normalize_section_numbering(answer_text: str, context) -> str:
         return []
 
     ich_refs = extract_ich_refs(context)
-
     if not ich_refs:
         return answer_text
 
     ich_ref = ich_refs[0]
 
-    # -----------------------------
-    # Extract numeric prefix
-    # -----------------------------
     match = re.match(r"(\d+(?:\.\d+)*)", ich_ref)
-
     if not match:
         return answer_text
 
-    ich_number = match.group(1)  # e.g. "9.3.1"
+    base_number = match.group(1)  # e.g. 9.3.1
 
     # -----------------------------
-    # Remove top-level headers
+    # State for hierarchy
+    # -----------------------------
+    counters = []  # dynamic depth counters
+
+    def update_counters(level):
+        nonlocal counters
+
+        # expand
+        while len(counters) < level:
+            counters.append(0)
+
+        # trim deeper levels
+        counters = counters[:level]
+
+        # increment current level
+        counters[level - 1] += 1
+
+        return counters
+
+    # -----------------------------
+    # Process lines
     # -----------------------------
     lines = answer_text.splitlines()
     output_lines = []
@@ -1640,64 +1655,54 @@ def normalize_section_numbering(answer_text: str, context) -> str:
     for line in lines:
         stripped = line.strip()
 
-        # Remove top level section like:
-        # 6. INVESTIGATIONAL PLAN
+        # Remove top-level headings
         if re.match(r"^\*?\*?\d+\.\s+[A-Z][A-Z\s\-/(),:]+\*?\*?$", stripped):
             continue
 
-        # Detect bold heading
-        bold_heading_match = re.match(
-            r"^\*\*(\d+(?:\.\d+)+)\.?\s+(.*?)\*\*$",
+        # -----------------------------
+        # Detect heading (bold)
+        # -----------------------------
+        bold_match = re.match(
+            r"^\*\*(\d+(?:\.\d+)*)\.?\s*(.*?)\*\*$",
             stripped
         )
 
-        if bold_heading_match:
-            original_number = bold_heading_match.group(1)
-            title = bold_heading_match.group(2).strip()
+        if bold_match:
+            original_number = bold_match.group(1)
+            title = bold_match.group(2).strip()
 
-            parts = original_number.split(".")
+            level = original_number.count(".") + 1
+            current = update_counters(level)
 
-            # drop first level
-            if len(parts) > 1:
-                new_suffix = ".".join(parts[1:])
-            else:
-                new_suffix = parts[0]
+            new_number = base_number + "." + ".".join(map(str, current))
 
-            new_heading = f"**{ich_number}.{new_suffix} {title}**"
-
-            output_lines.append(new_heading)
+            output_lines.append(f"**{new_number} {title}**")
             continue
 
+        # -----------------------------
+        # Detect heading (plain)
+        # -----------------------------
+        plain_match = re.match(
+            r"^(\d+(?:\.\d+)*)\.?\s+(.*)$",
+            stripped
+        )
+
+        if plain_match:
+            original_number = plain_match.group(1)
+            title = plain_match.group(2).strip()
+
+            level = original_number.count(".") + 1
+            current = update_counters(level)
+
+            new_number = base_number + "." + ".".join(map(str, current))
+
+            output_lines.append(f"{new_number} {title}")
+            continue
+
+        # Normal text
         output_lines.append(line)
 
-    text = "\n".join(output_lines)
-
-    # -----------------------------
-    # Renumber plain headings
-    # -----------------------------
-    heading_pattern = re.compile(
-        r"^(\d+(?:\.\d+)+)\.?\s+(.+)$",
-        flags=re.MULTILINE
-    )
-
-    def replace_heading(match):
-        original_number = match.group(1)
-        title = match.group(2)
-
-        parts = original_number.split(".")
-
-        if len(parts) > 1:
-            new_suffix = ".".join(parts[1:])
-        else:
-            new_suffix = parts[0]
-
-        new_number = f"{ich_number}.{new_suffix}"
-
-        return f"{new_number} {title}"
-
-    text = heading_pattern.sub(replace_heading, text)
-
-    return text.strip()
+    return "\n".join(output_lines).strip()
 
 
 
