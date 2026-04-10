@@ -1592,7 +1592,7 @@ def normalize_section_numbering(answer_text: str, context) -> str:
     import re, json
 
     # -----------------------------
-    # Extract ich_refs
+    # Extract ich_refs from context
     # -----------------------------
     def extract_ich_refs(ctx):
         if isinstance(ctx, dict):
@@ -1615,39 +1615,24 @@ def normalize_section_numbering(answer_text: str, context) -> str:
         return []
 
     ich_refs = extract_ich_refs(context)
+
     if not ich_refs:
         return answer_text
 
     ich_ref = ich_refs[0]
 
+    # -----------------------------
+    # Extract numeric prefix
+    # -----------------------------
     match = re.match(r"(\d+(?:\.\d+)*)", ich_ref)
+
     if not match:
         return answer_text
 
-    base_number = match.group(1)  # e.g. "9.3.1"
+    ich_number = match.group(1)  # e.g. "9.3.1"
 
     # -----------------------------
-    # Safe Level Detection
-    # -----------------------------
-    def get_safe_level(original_number: str) -> int:
-        parts = original_number.split(".")
-
-        # remove garbage like 0
-        parts = [p for p in parts if p.isdigit() and int(p) > 0]
-
-        if len(parts) <= 1:
-            return 1
-        else:
-            return 2   # clamp to max 2 levels
-
-    # -----------------------------
-    # State for numbering
-    # -----------------------------
-    level1_counter = 0
-    level2_counter = 0
-
-    # -----------------------------
-    # Process lines
+    # Remove top-level headers
     # -----------------------------
     lines = answer_text.splitlines()
     output_lines = []
@@ -1655,68 +1640,64 @@ def normalize_section_numbering(answer_text: str, context) -> str:
     for line in lines:
         stripped = line.strip()
 
-        # Remove top-level headers like "6. INVESTIGATIONAL PLAN"
+        # Remove top level section like:
+        # 6. INVESTIGATIONAL PLAN
         if re.match(r"^\*?\*?\d+\.\s+[A-Z][A-Z\s\-/(),:]+\*?\*?$", stripped):
             continue
 
-        # -----------------------------
         # Detect bold heading
-        # -----------------------------
-        bold_match = re.match(
-            r"^\*\*(\d+(?:\.\d+)*)\.?\s*(.*?)\*\*$",
+        bold_heading_match = re.match(
+            r"^\*\*(\d+(?:\.\d+)+)\.?\s+(.*?)\*\*$",
             stripped
         )
 
-        if bold_match:
-            original_number = bold_match.group(1)
-            title = bold_match.group(2).strip()
+        if bold_heading_match:
+            original_number = bold_heading_match.group(1)
+            title = bold_heading_match.group(2).strip()
 
-            level = get_safe_level(original_number)
+            parts = original_number.split(".")
 
-            if level == 1:
-                level1_counter += 1
-                level2_counter = 0
-                new_number = f"{base_number}.{level1_counter}"
+            # drop first level
+            if len(parts) > 1:
+                new_suffix = ".".join(parts[1:])
             else:
-                if level1_counter == 0:
-                    level1_counter = 1  # safety
-                level2_counter += 1
-                new_number = f"{base_number}.{level1_counter}.{level2_counter}"
+                new_suffix = parts[0]
 
-            output_lines.append(f"**{new_number} {title}**")
+            new_heading = f"**{ich_number}.{new_suffix} {title}**"
+
+            output_lines.append(new_heading)
             continue
 
-        # -----------------------------
-        # Detect plain heading
-        # -----------------------------
-        plain_match = re.match(
-            r"^(\d+(?:\.\d+)*)\.?\s+(.*)$",
-            stripped
-        )
-
-        if plain_match:
-            original_number = plain_match.group(1)
-            title = plain_match.group(2).strip()
-
-            level = get_safe_level(original_number)
-
-            if level == 1:
-                level1_counter += 1
-                level2_counter = 0
-                new_number = f"{base_number}.{level1_counter}"
-            else:
-                if level1_counter == 0:
-                    level1_counter = 1
-                level2_counter += 1
-                new_number = f"{base_number}.{level1_counter}.{level2_counter}"
-
-            output_lines.append(f"{new_number} {title}")
-            continue
-
-        # Normal text
         output_lines.append(line)
 
-    return "\n".join(output_lines).strip()
+    text = "\n".join(output_lines)
+
+    # -----------------------------
+    # Renumber plain headings
+    # -----------------------------
+    heading_pattern = re.compile(
+        r"^(\d+(?:\.\d+)+)\.?\s+(.+)$",
+        flags=re.MULTILINE
+    )
+
+    def replace_heading(match):
+        original_number = match.group(1)
+        title = match.group(2)
+
+        parts = original_number.split(".")
+
+        if len(parts) > 1:
+            new_suffix = ".".join(parts[1:])
+        else:
+            new_suffix = parts[0]
+
+        new_number = f"{ich_number}.{new_suffix}"
+
+        return f"{new_number} {title}"
+
+    text = heading_pattern.sub(replace_heading, text)
+
+    return text.strip()
 
 
 
