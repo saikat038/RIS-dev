@@ -1624,27 +1624,27 @@ def normalize_section_numbering(answer_text: str, context) -> str:
     if not match:
         return answer_text
 
-    base_number = match.group(1)  # e.g. 9.3.1
+    base_number = match.group(1)  # e.g. "9.3.1"
 
     # -----------------------------
-    # State for hierarchy
+    # Safe Level Detection
     # -----------------------------
-    counters = []  # dynamic depth counters
+    def get_safe_level(original_number: str) -> int:
+        parts = original_number.split(".")
 
-    def update_counters(level):
-        nonlocal counters
+        # remove garbage like 0
+        parts = [p for p in parts if p.isdigit() and int(p) > 0]
 
-        # expand
-        while len(counters) < level:
-            counters.append(0)
+        if len(parts) <= 1:
+            return 1
+        else:
+            return 2   # clamp to max 2 levels
 
-        # trim deeper levels
-        counters = counters[:level]
-
-        # increment current level
-        counters[level - 1] += 1
-
-        return counters
+    # -----------------------------
+    # State for numbering
+    # -----------------------------
+    level1_counter = 0
+    level2_counter = 0
 
     # -----------------------------
     # Process lines
@@ -1655,12 +1655,12 @@ def normalize_section_numbering(answer_text: str, context) -> str:
     for line in lines:
         stripped = line.strip()
 
-        # Remove top-level headings
+        # Remove top-level headers like "6. INVESTIGATIONAL PLAN"
         if re.match(r"^\*?\*?\d+\.\s+[A-Z][A-Z\s\-/(),:]+\*?\*?$", stripped):
             continue
 
         # -----------------------------
-        # Detect heading (bold)
+        # Detect bold heading
         # -----------------------------
         bold_match = re.match(
             r"^\*\*(\d+(?:\.\d+)*)\.?\s*(.*?)\*\*$",
@@ -1671,16 +1671,23 @@ def normalize_section_numbering(answer_text: str, context) -> str:
             original_number = bold_match.group(1)
             title = bold_match.group(2).strip()
 
-            level = original_number.count(".") + 1
-            current = update_counters(level)
+            level = get_safe_level(original_number)
 
-            new_number = base_number + "." + ".".join(map(str, current))
+            if level == 1:
+                level1_counter += 1
+                level2_counter = 0
+                new_number = f"{base_number}.{level1_counter}"
+            else:
+                if level1_counter == 0:
+                    level1_counter = 1  # safety
+                level2_counter += 1
+                new_number = f"{base_number}.{level1_counter}.{level2_counter}"
 
             output_lines.append(f"**{new_number} {title}**")
             continue
 
         # -----------------------------
-        # Detect heading (plain)
+        # Detect plain heading
         # -----------------------------
         plain_match = re.match(
             r"^(\d+(?:\.\d+)*)\.?\s+(.*)$",
@@ -1691,10 +1698,17 @@ def normalize_section_numbering(answer_text: str, context) -> str:
             original_number = plain_match.group(1)
             title = plain_match.group(2).strip()
 
-            level = original_number.count(".") + 1
-            current = update_counters(level)
+            level = get_safe_level(original_number)
 
-            new_number = base_number + "." + ".".join(map(str, current))
+            if level == 1:
+                level1_counter += 1
+                level2_counter = 0
+                new_number = f"{base_number}.{level1_counter}"
+            else:
+                if level1_counter == 0:
+                    level1_counter = 1
+                level2_counter += 1
+                new_number = f"{base_number}.{level1_counter}.{level2_counter}"
 
             output_lines.append(f"{new_number} {title}")
             continue
