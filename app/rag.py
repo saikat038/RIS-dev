@@ -1591,13 +1591,18 @@ import json
 def normalize_section_numbering(answer_text: str, context) -> str:
     import re, json
 
+    # -----------------------------
+    # Extract ich_refs from context
+    # -----------------------------
     def extract_ich_refs(ctx):
         if isinstance(ctx, dict):
             return ctx.get("ich_refs", [])
+
         if isinstance(ctx, list):
             for item in ctx:
                 if isinstance(item, dict) and "ich_refs" in item:
                     return item.get("ich_refs", [])
+
         if isinstance(ctx, str):
             match = re.search(r"\{.*?\}", ctx, re.DOTALL)
             if match:
@@ -1606,43 +1611,65 @@ def normalize_section_numbering(answer_text: str, context) -> str:
                     return data.get("ich_refs", [])
                 except:
                     pass
+
         return []
 
     ich_refs = extract_ich_refs(context)
+
     if not ich_refs:
         return answer_text
 
     ich_ref = ich_refs[0]
+
+    # -----------------------------
+    # Extract numeric prefix
+    # -----------------------------
     match = re.match(r"(\d+(?:\.\d+)*)", ich_ref)
+
     if not match:
         return answer_text
+
     ich_number = match.group(1)  # e.g. "9.3.1"
 
+    # -----------------------------
+    # Remove top-level headers and renumber headings sequentially
+    # -----------------------------
     lines = answer_text.splitlines()
     output_lines = []
-    heading_counter = 0  # sequential counter for headings under ich_number
+    heading_counter = 0  # sequential counter under ich_number
 
     for line in lines:
         stripped = line.strip()
 
-        # Remove top-level section headings (e.g., "6. INVESTIGATIONAL PLAN")
+        # Remove top level section like:
+        # 6. INVESTIGATIONAL PLAN
         if re.match(r"^\*?\*?\d+\.\s+[A-Z][A-Z\s\-/(),:]+\*?\*?$", stripped):
             continue
 
-        # ---- Bold heading ----
-        bold_match = re.match(r"^\*\*(\d+(?:\.\d+)*)\.?\s*(.*?)\*\*$", stripped)
-        if bold_match:
+        # Detect bold heading
+        bold_heading_match = re.match(
+            r"^\*\*(\d+(?:\.\d+)+)\.?\s+(.*?)\*\*$",
+            stripped
+        )
+
+        if bold_heading_match:
             heading_counter += 1
-            title = bold_match.group(2).strip()
-            output_lines.append(f"**{ich_number}.{heading_counter} {title}**")
+            title = bold_heading_match.group(2).strip()
+            new_heading = f"**{ich_number}.{heading_counter} {title}**"
+            output_lines.append(new_heading)
             continue
 
-        # ---- Plain heading ----
-        plain_match = re.match(r"^(\d+(?:\.\d+)*)\.?\s+(.*)$", stripped)
-        if plain_match:
+        # Detect plain heading (not bold)
+        plain_heading_match = re.match(
+            r"^(\d+(?:\.\d+)+)\.?\s+(.+)$",
+            stripped
+        )
+
+        if plain_heading_match:
             heading_counter += 1
-            title = plain_match.group(2).strip()
-            output_lines.append(f"{ich_number}.{heading_counter} {title}")
+            title = plain_heading_match.group(2).strip()
+            new_heading = f"{ich_number}.{heading_counter} {title}"
+            output_lines.append(new_heading)
             continue
 
         # Normal text
