@@ -29,44 +29,15 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-st.markdown("""
-<style>
-/* Ensure it's always visible above everything */
-.rais-btn {
-    position: fixed;
-    top: 12px;
-    left: 250px;
-    z-index: 99999;
+col1, col2 = st.columns([1, 10])
 
-    text-decoration: none !important;
-    color: black !important;
-    font-weight: 600;
-    font-size: 14px;
-
-    display: flex;
-    align-items: center;
-    gap: 6px;
-
-    background: white;   /* 🔥 important: prevents blending */
-    padding: 4px 8px;
-    border-radius: 6px;
-
-    pointer-events: auto !important;
-    opacity: 1 !important;
-}
-
-/* Override ANY global anchor disabling */
-a.rais-btn {
-    pointer-events: auto !important;
-    opacity: 1 !important;
-}
-</style>
-
-<a href="https://ris-dev-rvx5qbbut4mydxxnkzn5fz.streamlit.app/" target="_self" class="rais-btn">
-    <span style="color:#4A90E2;">⬅️</span>
-    RAIS
-</a>
-""", unsafe_allow_html=True)
+with col1:
+    st.markdown(
+        '<a href="https://ris-dev-rvx5qbbut4mydxxnkzn5fz.streamlit.app/" target="_self" '
+        'style="text-decoration:none; color:black; font-weight:600;">'
+        '<span style="color:#4A90E2;">⬅️</span> RAIS</a>',
+        unsafe_allow_html=True
+    )
 
 st.markdown("""
 <style>
