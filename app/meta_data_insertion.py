@@ -61,12 +61,12 @@ button[aria-label="Collapse sidebar"] {
 
 st.markdown("""
 <style>
-/* 🔥 Fix for RAIS button */
+/* Ensure it's always visible above everything */
 .rais-btn {
     position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 9999;
+    top: 12px;
+    left: 12px;
+    z-index: 99999;
 
     text-decoration: none !important;
     color: black !important;
@@ -77,6 +77,16 @@ st.markdown("""
     align-items: center;
     gap: 6px;
 
+    background: white;   /* 🔥 important: prevents blending */
+    padding: 4px 8px;
+    border-radius: 6px;
+
+    pointer-events: auto !important;
+    opacity: 1 !important;
+}
+
+/* Override ANY global anchor disabling */
+a.rais-btn {
     pointer-events: auto !important;
     opacity: 1 !important;
 }
