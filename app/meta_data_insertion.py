@@ -31,20 +31,18 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-/* Hide collapse button */
-button[aria-label="Collapse sidebar"] {
+/* 🚫 Remove collapse button */
+[data-testid="collapsedControl"] {
     display: none !important;
 }
 
-/* Force sidebar to stay visible */
+/* 🚫 Prevent sidebar from collapsing */
 section[data-testid="stSidebar"] {
-    transform: none !important;
-    visibility: visible !important;
-    display: block !important;
+    transform: translateX(0px) !important;
 }
 
-/* Remove collapsed control (new Streamlit versions) */
-[data-testid="collapsedControl"] {
+/* 🚫 Hide old button (backup) */
+button[aria-label="Collapse sidebar"] {
     display: none !important;
 }
 </style>
