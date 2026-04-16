@@ -1,5 +1,6 @@
 
 import os, sys, uuid
+import base64
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
@@ -162,7 +163,40 @@ def delete_section(data, section_name):
 
 # ================= UI =================
 
-st.title("📄 Authoring Schema Manager")
+# ========================
+# LOGO PATH
+# ========================
+LOGO_PATH = os.path.join(
+    os.path.dirname(os.path.dirname(__file__)),
+    "assets",
+    "ocugen.png"
+)
+
+def get_base64_image(path: str) -> str:
+    with open(path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
+
+# ========================
+# HEADER
+# ========================
+if os.path.exists(LOGO_PATH):
+    logo_b64 = get_base64_image(LOGO_PATH)
+    st.markdown(
+        f"""
+        <div style="text-align:center; margin-bottom: 1rem;">
+            <img src="data:image/png;base64,{logo_b64}" style="width:120px;" />
+            <h1 style="margin-top:0.5rem;">📄 Authoring Schema Manager</h1>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+else:
+    st.markdown(
+        "<h1 style='text-align:center; margin-top: 0.5rem;'>Authoring Schema Manager</h1>",
+        unsafe_allow_html=True,
+    )
+
+st.write("")
 
 data = load_schema()
 
