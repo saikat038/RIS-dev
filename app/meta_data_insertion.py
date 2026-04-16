@@ -34,7 +34,7 @@ col1, col2 = st.columns([1, 10])
 with col1:
     st.markdown("""
     <div style="
-        text-align:left;
+        text-align:right;
         margin-top:-260px;   /* 🔥 move upward */
         margin-bottom:10px;
     ">
