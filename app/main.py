@@ -90,6 +90,30 @@ else:
 
 st.write("")
 
+col1, col2 = st.columns([8, 1])
+
+with col2:
+    st.markdown("""
+    <a href="https://ris-dev-metainsertion.streamlit.app/" target="_blank">
+        <button style="
+            background: linear-gradient(135deg, #6C63FF, #00C9A7);
+            color:white;
+            border:none;
+            padding:10px 18px;
+            border-radius:10px;
+            cursor:pointer;
+            font-weight:600;
+            font-size:14px;
+            display:flex;
+            align-items:center;
+            gap:8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        ">
+            🤖 Train Model
+        </button>
+    </a>
+    """, unsafe_allow_html=True)
+
 # ========================
 # SESSION STATE
 # ========================
