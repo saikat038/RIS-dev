@@ -31,17 +31,28 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-/* 🚫 Remove collapse button */
-[data-testid="collapsedControl"] {
-    display: none !important;
+/* ✅ Force proper sidebar width */
+section[data-testid="stSidebar"] {
+    width: 260px !important;
+    min-width: 260px !important;
+    max-width: 260px !important;
 }
 
-/* 🚫 Prevent sidebar from collapsing */
+/* ✅ Fix inner content so text doesn’t wrap vertically */
+section[data-testid="stSidebar"] * {
+    white-space: normal !important;
+}
+
+/* ✅ Prevent collapse behavior */
 section[data-testid="stSidebar"] {
     transform: translateX(0px) !important;
 }
 
-/* 🚫 Hide old button (backup) */
+/* ❌ Hide collapse button */
+[data-testid="collapsedControl"] {
+    display: none !important;
+}
+
 button[aria-label="Collapse sidebar"] {
     display: none !important;
 }
