@@ -91,6 +91,17 @@ else:
 st.write("")
 
 st.markdown("""
+<style>
+.top-right-btn {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 9999;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
 <div style="text-align:right;">
     <a href="https://ris-dev-metainsertion.streamlit.app/" target="_blank"
        style="
@@ -103,7 +114,7 @@ st.markdown("""
            gap:6px;
        "
     >
-        <span style="color:#4A90E2;">⚙️</span>
+        <span style="color:#4A90E2;">🤖</span>
         Train Model
     </a>
 </div>
