@@ -212,10 +212,20 @@ operation = st.sidebar.selectbox(
 if operation == "View":
     st.subheader("All Sections")
 
-    st.code(
-        json.dumps(data, indent=2),
-        language="json"
-    )
+    st.markdown("""
+    <div style="
+        height:500px;
+        overflow-y:auto;
+        border:1px solid #ddd;
+        border-radius:8px;
+        padding:10px;
+        background-color:#0e1117;
+    ">
+    """, unsafe_allow_html=True)
+
+    st.json(data)
+
+    st.markdown("</div>", unsafe_allow_html=True)
 
 
 # ================= ADD =================
