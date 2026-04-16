@@ -329,7 +329,32 @@ elif operation == "Delete":
 
     selected_section = st.selectbox("Select Section", sections)
 
+    # 🔴 Trigger popup
     if st.button("Delete"):
-        data = delete_section(data, selected_section)
-        save_schema(data)
-        st.success("🗑️ Section deleted successfully")
+        st.session_state.show_delete_popup = True
+
+    # 🔥 Popup-like UI
+    if st.session_state.get("show_delete_popup", False):
+        with st.container(border=True):
+            st.warning("⚠️ Confirm Deletion")
+
+            password = st.text_input("Enter Admin Password", type="password")
+
+            col1, col2 = st.columns(2)
+
+            with col1:
+                if st.button("Confirm Delete"):
+                    if password == "Admin123":
+                        data = delete_section(data, selected_section)
+                        save_schema(data)
+
+                        st.success("🗑️ Section deleted successfully")
+
+                        # close popup
+                        st.session_state.show_delete_popup = False
+                    else:
+                        st.error("❌ Incorrect password")
+
+            with col2:
+                if st.button("Cancel"):
+                    st.session_state.show_delete_popup = False
