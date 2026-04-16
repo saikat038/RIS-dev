@@ -33,7 +33,7 @@ col1, col2 = st.columns([1, 10])
 
 with col1:
     st.markdown(
-        '<a href="https://ris-dev-rvx5qbbut4mydxxnkzn5fz.streamlit.app/" target="_self" '
+        '<a href="https://ris-dev-rvx5qbbut4mydxxnkzn5fz.streamlit.app/" target="_blank" '
         'style="text-decoration:none; color:black; font-weight:600;">'
         '<span style="color:#4A90E2;">⬅️</span> RAIS</a>',
         unsafe_allow_html=True
