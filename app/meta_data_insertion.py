@@ -329,32 +329,37 @@ elif operation == "Delete":
 
     selected_section = st.selectbox("Select Section", sections)
 
-    # 🔴 Trigger popup
+    # Trigger popup
     if st.button("Delete"):
         st.session_state.show_delete_popup = True
 
-    # 🔥 Popup-like UI
+    # Popup
     if st.session_state.get("show_delete_popup", False):
         with st.container(border=True):
             st.warning("⚠️ Confirm Deletion")
 
-            password = st.text_input("Enter Admin Password", type="password")
+            # 🔥 FORM (fixes "press enter" issue)
+            with st.form("delete_form"):
+                password = st.text_input("Enter Admin Password", type="password")
 
-            col1, col2 = st.columns(2)
+                col1, col2 = st.columns(2)
 
-            with col1:
-                if st.button("Confirm Delete"):
+                with col1:
+                    confirm = st.form_submit_button("Confirm Delete")
+
+                with col2:
+                    cancel = st.form_submit_button("Cancel")
+
+                # Handle actions
+                if confirm:
                     if password == "Admin123":
                         data = delete_section(data, selected_section)
                         save_schema(data)
 
                         st.success("🗑️ Section deleted successfully")
-
-                        # close popup
                         st.session_state.show_delete_popup = False
                     else:
                         st.error("❌ Incorrect password")
 
-            with col2:
-                if st.button("Cancel"):
+                if cancel:
                     st.session_state.show_delete_popup = False
