@@ -6,6 +6,8 @@ if ROOT_DIR not in sys.path:
 import streamlit as st
 import json
 from azure.storage.blob import BlobClient
+params = st.experimental_get_query_params()
+is_dev = params.get("dev", ["false"])[0].lower() == "true"
 
 # ================= CONFIG =================
 from config.settings import (
@@ -16,6 +18,40 @@ from config.settings import (
     BLOB_CONTAINER,
 )
 SCHEMA_FILE = "master_schema.json"
+
+
+# ========================
+# CONFIG
+# ========================
+st.set_page_config(
+    page_title="Regulatory Authoring Intelligence System",
+    layout="wide"
+)
+
+if not is_dev:
+    st.markdown("""
+    <style>
+    /* Hide header */
+    header {visibility: hidden !important;}
+    #MainMenu {visibility: hidden !important;}
+
+    /* Disable ALL links (this catches bottom icons) */
+    a {
+        pointer-events: none !important;
+        cursor: default !important;
+    }
+
+    /* Optional: make them look disabled */
+    a {
+        opacity: 0.4;
+    }
+
+    /* Fix spacing */
+    .block-container {
+        padding-top: 1rem !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
 
 # ================= BLOB FUNCTIONS =================
