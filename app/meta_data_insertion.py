@@ -211,7 +211,11 @@ operation = st.sidebar.selectbox(
 # ================= VIEW =================
 if operation == "View":
     st.subheader("All Sections")
-    st.json(data)
+
+    st.code(
+        json.dumps(data, indent=2),
+        language="json"
+    )
 
 
 # ================= ADD =================
