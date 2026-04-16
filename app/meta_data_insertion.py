@@ -1,5 +1,6 @@
 
 import os, sys, uuid
+import time
 import base64
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if ROOT_DIR not in sys.path:
@@ -307,7 +308,7 @@ elif operation == "Update":
         try:
             updated_entry = json.loads(user_input)
 
-            # 🔥 MINIMAL FIX: remove tabs
+            # 🔥 minimal fix: remove tabs
             def clean_tabs(obj):
                 if isinstance(obj, str):
                     return obj.replace("\t", " ")
@@ -329,7 +330,18 @@ elif operation == "Update":
                 st.warning("📄 No section found in template")
             else:
                 save_schema(updated_data)
-                st.success("✅ Section updated successfully")
+
+                # 🔥 success message with timer
+                success_placeholder = st.empty()
+                success_placeholder.success("✅ Section updated successfully")
+
+                time.sleep(2)
+
+                success_placeholder.empty()
+
+                # 🔥 reload + refresh UI
+                data = load_schema()
+                st.rerun()
 
         except Exception as e:
             st.error(f"❌ Error: {str(e)}")
