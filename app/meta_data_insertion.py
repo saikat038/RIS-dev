@@ -28,6 +28,19 @@ st.set_page_config(
     layout="wide"
 )
 
+st.markdown("""
+<style>
+/* Hide sidebar toggle (<<) ALWAYS */
+button[aria-label="Collapse sidebar"] {
+    display: none !important;
+}
+
+[data-testid="collapsedControl"] {
+    display: none !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 if not is_dev:
     st.markdown("""
     <style>
