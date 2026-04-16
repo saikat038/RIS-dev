@@ -212,20 +212,8 @@ operation = st.sidebar.selectbox(
 if operation == "View":
     st.subheader("All Sections")
 
-    st.markdown("""
-    <div style="
-        height:500px;
-        overflow-y:auto;
-        border:1px solid #ddd;
-        border-radius:8px;
-        padding:10px;
-        background-color:#0e1117;
-    ">
-    """, unsafe_allow_html=True)
-
-    st.json(data)
-
-    st.markdown("</div>", unsafe_allow_html=True)
+    with st.container(height=500):   # ✅ scrollable window
+        st.json(data)               # ✅ original colors preserved
 
 
 # ================= ADD =================
