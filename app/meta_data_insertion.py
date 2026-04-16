@@ -31,36 +31,6 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-/* ✅ Force proper sidebar width */
-section[data-testid="stSidebar"] {
-    width: 260px !important;
-    min-width: 260px !important;
-    max-width: 260px !important;
-}
-
-/* ✅ Fix inner content so text doesn’t wrap vertically */
-section[data-testid="stSidebar"] * {
-    white-space: normal !important;
-}
-
-/* ✅ Prevent collapse behavior */
-section[data-testid="stSidebar"] {
-    transform: translateX(0px) !important;
-}
-
-/* ❌ Hide collapse button */
-[data-testid="collapsedControl"] {
-    display: none !important;
-}
-
-button[aria-label="Collapse sidebar"] {
-    display: none !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<style>
 /* Ensure it's always visible above everything */
 .rais-btn {
     position: fixed;
@@ -97,6 +67,37 @@ a.rais-btn {
     RAIS
 </a>
 """, unsafe_allow_html=True)
+
+st.markdown("""
+<style>
+/* ✅ Force proper sidebar width */
+section[data-testid="stSidebar"] {
+    width: 260px !important;
+    min-width: 260px !important;
+    max-width: 260px !important;
+}
+
+/* ✅ Fix inner content so text doesn’t wrap vertically */
+section[data-testid="stSidebar"] * {
+    white-space: normal !important;
+}
+
+/* ✅ Prevent collapse behavior */
+section[data-testid="stSidebar"] {
+    transform: translateX(0px) !important;
+}
+
+/* ❌ Hide collapse button */
+[data-testid="collapsedControl"] {
+    display: none !important;
+}
+
+button[aria-label="Collapse sidebar"] {
+    display: none !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 
 if not is_dev:
     st.markdown("""
