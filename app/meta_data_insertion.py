@@ -307,6 +307,18 @@ elif operation == "Update":
         try:
             updated_entry = json.loads(user_input)
 
+            # 🔥 MINIMAL FIX: remove tabs
+            def clean_tabs(obj):
+                if isinstance(obj, str):
+                    return obj.replace("\t", " ")
+                if isinstance(obj, list):
+                    return [clean_tabs(i) for i in obj]
+                if isinstance(obj, dict):
+                    return {k: clean_tabs(v) for k, v in obj.items()}
+                return obj
+
+            updated_entry = clean_tabs(updated_entry)
+
             updated_data = update_section(
                 data,
                 selected_section,
