@@ -59,32 +59,10 @@ button[aria-label="Collapse sidebar"] {
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-<div style="
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-top:-40px;
-    margin-bottom:10px;
-">
-    
-    <!-- LEFT: RAIS -->
-    <a href="https://ris-dev-rvx5qbbut4mydxxnkzn5fz.streamlit.app/" target="_self"
-       style="
-           text-decoration:none;
-           color:black;
-           font-weight:600;
-           font-size:14px;
-           display:flex;
-           align-items:center;
-           gap:6px;
-       ">
-        <span style="color:#4A90E2;">⬅️</span>
-        RAIS
-    </a>
-
-</div>
-""", unsafe_allow_html=True)
+st.markdown(
+    '<a href="https://ris-dev-rvx5qbbut4mydxxnkzn5fz.streamlit.app/" target="_self">⬅️ RAIS</a>',
+    unsafe_allow_html=True
+)
 
 if not is_dev:
     st.markdown("""
