@@ -48,8 +48,8 @@ st.markdown("""
            gap:6px;
        "
     >
-        <span style="color:#4A90E2;">🧠</span>
-        Train Model
+        <span style="color:#4A90E2;">⬅️</span>
+        RAIS
     </a>
 </div>
 """, unsafe_allow_html=True)
