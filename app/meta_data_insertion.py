@@ -31,12 +31,28 @@ st.set_page_config(
 
 col1, col2 = st.columns([1, 10])
 
-st.markdown(
-    '<a href="https://ris-dev-rvx5qbbut4mydxxnkzn5fz.streamlit.app/" target="_blank" '
-    'style="text-decoration:none; color:black; font-weight:600;">'
-    '<span style="color:#4A90E2;">⬅️</span> RAIS</a>',
-    unsafe_allow_html=True
-)
+st.markdown("""
+<div style="
+    text-align:left;
+    margin-top:-240px;   /* 🔥 move upward */
+    margin-bottom:10px;
+">
+    <a href="https://ris-dev-rvx5qbbut4mydxxnkzn5fz.streamlit.app/" target="_blank"
+       style="
+           text-decoration:none;
+           color:black;
+           font-weight:600;
+           font-size:14px;
+           display:inline-flex;
+           align-items:center;
+           gap:6px;
+       "
+    >
+        <span style="color:#4A90E2;">🧠</span>
+        Train Model
+    </a>
+</div>
+""", unsafe_allow_html=True)
 
 st.markdown("""
 <style>
