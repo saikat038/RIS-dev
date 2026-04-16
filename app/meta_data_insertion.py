@@ -25,21 +25,9 @@ SCHEMA_FILE = "master_schema.json"
 # ========================
 st.set_page_config(
     page_title="Regulatory Authoring Intelligence System",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
-
-st.markdown("""
-<style>
-/* Hide sidebar toggle (<<) ALWAYS */
-button[aria-label="Collapse sidebar"] {
-    display: none !important;
-}
-
-[data-testid="collapsedControl"] {
-    display: none !important;
-}
-</style>
-""", unsafe_allow_html=True)
 
 if not is_dev:
     st.markdown("""
