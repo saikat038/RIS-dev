@@ -30,7 +30,34 @@ st.set_page_config(
     layout="wide"
 )
 
+if not is_dev:
+    st.markdown("""
+    <style>
+    /* Hide header */
+    header {visibility: hidden !important;}
+    #MainMenu {visibility: hidden !important;}
 
+    /* Disable ALL links EXCEPT allowed ones */
+    a:not(.train-link) {
+        pointer-events: none !important;
+        cursor: default !important;
+        opacity: 0.4;
+    }
+
+    /* Ensure Train Model looks active */
+    a.train-link {
+        pointer-events: auto !important;
+        opacity: 1 !important;
+        color: black !important;
+        cursor: pointer !important;
+    }
+
+    /* Fix spacing */
+    .block-container {
+        padding-top: 1rem !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
 # ========================
 # LOGO PATH
@@ -90,35 +117,6 @@ st.markdown("""
     </a>
 </div>
 """, unsafe_allow_html=True)
-
-if not is_dev:
-    st.markdown("""
-    <style>
-    /* Hide header */
-    header {visibility: hidden !important;}
-    #MainMenu {visibility: hidden !important;}
-
-    /* Disable ALL links EXCEPT allowed ones */
-    a:not(.train-link) {
-        pointer-events: none !important;
-        cursor: default !important;
-        opacity: 0.4;
-    }
-
-    /* Ensure Train Model looks active */
-    a.train-link {
-        pointer-events: auto !important;
-        opacity: 1 !important;
-        color: black !important;
-        cursor: pointer !important;
-    }
-
-    /* Fix spacing */
-    .block-container {
-        padding-top: 1rem !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
 
 # ========================
 # SESSION STATE
