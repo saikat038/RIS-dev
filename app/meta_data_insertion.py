@@ -59,10 +59,34 @@ button[aria-label="Collapse sidebar"] {
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown(
-    '<a href="https://ris-dev-rvx5qbbut4mydxxnkzn5fz.streamlit.app/" target="_self">⬅️ RAIS</a>',
-    unsafe_allow_html=True
-)
+st.markdown("""
+<style>
+/* 🔥 Fix for RAIS button */
+.rais-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+
+    text-decoration: none !important;
+    color: black !important;
+    font-weight: 600;
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    pointer-events: auto !important;
+    opacity: 1 !important;
+}
+</style>
+
+<a href="https://ris-dev-rvx5qbbut4mydxxnkzn5fz.streamlit.app/" target="_self" class="rais-btn">
+    <span style="color:#4A90E2;">⬅️</span>
+    RAIS
+</a>
+""", unsafe_allow_html=True)
 
 if not is_dev:
     st.markdown("""
