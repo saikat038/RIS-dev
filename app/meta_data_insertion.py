@@ -29,6 +29,27 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+st.markdown("""
+<style>
+/* Hide collapse button */
+button[aria-label="Collapse sidebar"] {
+    display: none !important;
+}
+
+/* Force sidebar to stay visible */
+section[data-testid="stSidebar"] {
+    transform: none !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+/* Remove collapsed control (new Streamlit versions) */
+[data-testid="collapsedControl"] {
+    display: none !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 if not is_dev:
     st.markdown("""
     <style>
