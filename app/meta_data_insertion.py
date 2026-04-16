@@ -30,6 +30,33 @@ st.set_page_config(
 )
 
 st.markdown("""
+<div style="
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:-40px;
+    margin-bottom:10px;
+">
+    
+    <!-- LEFT: RAIS -->
+    <a href="https://ris-dev-rvx5qbbut4mydxxnkzn5fz.streamlit.app/" target="_self"
+       style="
+           text-decoration:none;
+           color:black;
+           font-weight:600;
+           font-size:14px;
+           display:inline-flex;
+           align-items:center;
+           gap:6px;
+       ">
+        <span style="color:#4A90E2;">⬅️</span>
+        RAIS
+    </a>
+
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
 <style>
 /* ✅ Force proper sidebar width */
 section[data-testid="stSidebar"] {
