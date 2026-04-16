@@ -31,10 +31,11 @@ st.set_page_config(
 
 st.markdown("""
 <style>
+/* Ensure it's always visible above everything */
 .rais-btn {
     position: fixed;
     top: 12px;
-    left: 270px;   /* 🔥 move right of sidebar */
+    left: 250px;
     z-index: 99999;
 
     text-decoration: none !important;
@@ -46,11 +47,15 @@ st.markdown("""
     align-items: center;
     gap: 6px;
 
+    background: white;   /* 🔥 important: prevents blending */
+    padding: 4px 8px;
+    border-radius: 6px;
+
     pointer-events: auto !important;
     opacity: 1 !important;
 }
 
-/* override global anchor disabling */
+/* Override ANY global anchor disabling */
 a.rais-btn {
     pointer-events: auto !important;
     opacity: 1 !important;
