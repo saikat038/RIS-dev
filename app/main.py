@@ -90,25 +90,24 @@ else:
 
 st.write("")
 
-col1, col2 = st.columns([9, 1])
-
-with col2:
-    st.markdown("""
-    <div style="text-align:right;">
-        <a href="https://ris-dev-metainsertion.streamlit.app/" target="_blank"
-           style="
-               text-decoration:none;
-               color:#6C63FF;
-               font-weight:600;
-               font-size:14px;
-               display:inline-flex;
-               align-items:center;
-               gap:6px;
-           ">
-            🤖 Train Model
-        </a>
-    </div>
-    """, unsafe_allow_html=True)
+st.markdown("""
+<div style="text-align:right;">
+    <a href="https://ris-dev-metainsertion.streamlit.app/" target="_blank"
+       style="
+           text-decoration:none;
+           color:black;
+           font-weight:600;
+           font-size:14px;
+           display:inline-flex;
+           align-items:center;
+           gap:6px;
+       "
+    >
+        <span style="color:#4A90E2;">⚙️</span>
+        Train Model
+    </a>
+</div>
+""", unsafe_allow_html=True)
 
 # ========================
 # SESSION STATE
