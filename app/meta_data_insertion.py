@@ -185,7 +185,7 @@ if os.path.exists(LOGO_PATH):
         f"""
         <div style="text-align:center; margin-bottom: 1rem;">
             <img src="data:image/png;base64,{logo_b64}" style="width:120px;" />
-            <h1 style="margin-top:0.5rem;">📄 Authoring Schema Manager</h1>
+            <h1 style="margin-top:0.5rem;">📄 Train Model</h1>
         </div>
         """,
         unsafe_allow_html=True,
