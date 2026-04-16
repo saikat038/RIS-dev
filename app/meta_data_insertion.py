@@ -90,9 +90,9 @@ if not is_dev:
     #MainMenu {visibility: hidden !important;}
 
     /* Disable ALL links (this catches bottom icons) */
-    a {
+    a:not(.rais-link) {
         pointer-events: none !important;
-        cursor: default !important;
+        opacity: 0.4;
     }
 
     /* Optional: make them look disabled */
