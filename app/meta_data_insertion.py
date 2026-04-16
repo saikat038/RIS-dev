@@ -35,7 +35,7 @@ with col1:
     st.markdown("""
     <div style="
         text-align:right;
-        margin-top:-260px;   /* 🔥 move upward */
+        margin-top:-240px;   /* 🔥 move upward */
         margin-bottom:10px;
     ">
         <a href="https://ris-dev-rvx5qbbut4mydxxnkzn5fz.streamlit.app/" target="_blank"
