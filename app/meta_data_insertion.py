@@ -340,7 +340,7 @@ elif operation == "Delete":
 
             password = st.text_input("Enter Admin Password", type="password")
 
-            col1, col2 = st.columns(2)
+            col1, col2, col3 = st.columns([1, 1, 6])  # 🔥 third column pushes left
 
             with col1:
                 if st.button("Confirm Delete"):
