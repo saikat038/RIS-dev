@@ -36,6 +36,11 @@ if not is_dev:
     /* Hide header */
     header {visibility: hidden !important;}
     #MainMenu {visibility: hidden !important;}
+                
+    /* Hide sidebar toggle button (<<) */
+button[aria-label="Collapse sidebar"] {
+    display: none !important;
+}
 
     /* Disable ALL links (this catches bottom icons) */
     a {
