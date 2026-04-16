@@ -37,15 +37,19 @@ if not is_dev:
     header {visibility: hidden !important;}
     #MainMenu {visibility: hidden !important;}
 
-    /* Disable ALL links (this catches bottom icons) */
-    a {
+    /* Disable ALL links EXCEPT RAIS */
+    a:not(.rais-link) {
         pointer-events: none !important;
+        opacity: 0.4;
         cursor: default !important;
     }
 
-    /* Optional: make them look disabled */
-    a {
-        opacity: 0.4;
+    /* Ensure RAIS looks active */
+    a.rais-link {
+        pointer-events: auto !important;
+        opacity: 1 !important;
+        color: black !important;
+        cursor: pointer !important;
     }
 
     /* Fix spacing */
