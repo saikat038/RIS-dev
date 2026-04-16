@@ -212,7 +212,7 @@ operation = st.sidebar.selectbox(
 if operation == "View":
     st.subheader("All Sections")
 
-    with st.container(height=600):   # ✅ scrollable window
+    with st.container(height=550):   # ✅ scrollable window
         st.json(data)               # ✅ original colors preserved
 
 
