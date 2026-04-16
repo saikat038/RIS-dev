@@ -33,12 +33,9 @@ col1, col2 = st.columns([1, 10])
 
 with col1:
     st.markdown("""
-    <div style="
-        text-align:right;
-        margin-top:-240px;   /* 🔥 move upward */
-        margin-bottom:10px;
-    ">
+    <div style="margin-top:10px;">
         <a href="https://ris-dev-rvx5qbbut4mydxxnkzn5fz.streamlit.app/" target="_blank"
+        class="rais-link"
         style="
             text-decoration:none;
             color:black;
@@ -47,8 +44,7 @@ with col1:
             display:inline-flex;
             align-items:center;
             gap:6px;
-        "
-        >
+        ">
             <span style="color:#4A90E2;">⬅️</span>
             RAIS
         </a>
