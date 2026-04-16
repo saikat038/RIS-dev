@@ -221,7 +221,7 @@ elif operation == "Add":
     st.subheader("Add New Section")
 
     # -------- FORM INPUTS --------
-    section = st.text_area(
+    section = st.text_input(
         "Section",
         placeholder="Inclusion Criteria"
     )
