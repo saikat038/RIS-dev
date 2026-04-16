@@ -75,7 +75,7 @@ st.markdown("""
            color:black;
            font-weight:600;
            font-size:14px;
-           display:inline-flex;
+           display:flex;
            align-items:center;
            gap:6px;
        ">
