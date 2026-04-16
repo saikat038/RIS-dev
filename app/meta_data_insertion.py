@@ -238,7 +238,7 @@ elif operation == "Add":
 
     detail_level = st.selectbox(
         "Detail Level",
-        ["low", "medium", "high"]
+        ["high", "medium", "low"]
     )
 
     output_style = st.selectbox(
