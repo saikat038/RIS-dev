@@ -96,18 +96,16 @@ with col2:
     st.markdown("""
     <a href="https://ris-dev-metainsertion.streamlit.app/" target="_blank">
         <button style="
-            background: linear-gradient(135deg, #6C63FF, #00C9A7);
+            background-color:#4CAF50;
             color:white;
             border:none;
-            padding:10px 18px;
-            border-radius:10px;
+            padding:10px 16px;
+            border-radius:8px;
             cursor:pointer;
             font-weight:600;
-            font-size:14px;
             display:flex;
             align-items:center;
             gap:8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         ">
             🤖 Train Model
         </button>
