@@ -37,15 +37,15 @@ if not is_dev:
     header {visibility: hidden !important;}
     #MainMenu {visibility: hidden !important;}
 
-    /* Disable ALL links EXCEPT RAIS */
-    a:not(.rais-link) {
+    /* Disable ALL links EXCEPT allowed ones */
+    a:not(.train-link) {
         pointer-events: none !important;
-        opacity: 0.4;
         cursor: default !important;
+        opacity: 0.4;
     }
 
-    /* Ensure RAIS looks active */
-    a.rais-link {
+    /* Ensure Train Model looks active */
+    a.train-link {
         pointer-events: auto !important;
         opacity: 1 !important;
         color: black !important;
