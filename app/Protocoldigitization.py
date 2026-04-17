@@ -884,12 +884,9 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
     parent = target_paragraph._element.getparent()
     index = parent.index(target_paragraph._element)
 
-    # 🔥 REMOVE ONLY IF NOT A HEADING
-    style_name = target_paragraph.style.name.lower() if target_paragraph.style else ""
-
-    if "heading" not in style_name:
-        parent.remove(target_paragraph._element)
-        index -= 1
+    # CLEAR ENTIRE PARAGRAPH CONTENT (but keep paragraph)
+    for node in list(target_paragraph._element):
+        target_paragraph._element.remove(node)
 
     for block_type, content in blocks:
         if not content.strip():
