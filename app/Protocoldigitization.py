@@ -823,9 +823,6 @@ def insert_text_block_after(parent, index, text: str, doc: Document, source_para
         new_p = OxmlElement("w:p")
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
-        # 🔥 REMOVE ALL EXTRA SPACING
-        para.paragraph_format.space_before = Pt(0)
-        para.paragraph_format.space_after = Pt(0)
         
         # Apply body paragraph formatting (spacing, line spacing, etc.)
         if body_format:
@@ -892,11 +889,6 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
         if node.tag.endswith("}t"):
             if node.text and placeholder in node.text:
                 node.text = node.text.replace(placeholder, "")
-
-    # 🔥 FIX: remove empty paragraph completely
-    if not target_paragraph.text.strip():
-        parent.remove(target_paragraph._element)
-        index -= 1
 
     for block_type, content in blocks:
         if not content.strip():
