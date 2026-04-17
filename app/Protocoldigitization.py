@@ -708,7 +708,15 @@ def add_last_section_to_final():
     if section not in SECTION_TO_TEMPLATE_VAR:
         raise ValueError(f"📄 No placeholder is there in the template.")
 
-    FINAL_SECTION_BUFFER[section] = text
+    # ✅ FIX: append instead of overwrite
+    if section in FINAL_SECTION_BUFFER:
+        FINAL_SECTION_BUFFER[section] += "\n\n" + text
+    else:
+        FINAL_SECTION_BUFFER[section] = text
+
+    # ✅ IMPORTANT: clear TEMP after adding
+    TEMP_LLM_BUFFER["section"] = None
+    TEMP_LLM_BUFFER["text"] = None
 
 
 def remove_last_added_section():
