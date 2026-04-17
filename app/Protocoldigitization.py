@@ -866,15 +866,11 @@ def insert_text_block_after(parent, index, text: str, doc: Document, source_para
 
 def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks):
     target_paragraph = None
+
+    # ✅ Correct paragraph detection
     for p in doc.paragraphs:
-        if not p.tag.endswith("p"):
-            continue
-        texts = [t.text for t in p.iter() if t.text]
-        if not texts:
-            continue
-        full_text = "".join(texts)
-        if placeholder in full_text:
-            target_paragraph = Paragraph(p, doc)
+        if placeholder in p.text:
+            target_paragraph = p
             break
 
     if target_paragraph is None:
@@ -884,16 +880,17 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
     parent = target_paragraph._element.getparent()
     index = parent.index(target_paragraph._element)
 
-    # CLEAR ENTIRE PARAGRAPH CONTENT (but keep paragraph)
+    # ✅ Remove ONLY placeholder paragraph
     parent.remove(target_paragraph._element)
     index -= 1
 
     for block_type, content in blocks:
         if not content.strip():
             continue
+
         if block_type == "text":
-            # Pass the source_para (target_paragraph) to preserve formatting
             index = insert_text_block_after(parent, index, content, doc, target_paragraph)
+
         elif block_type == "table":
             table = build_word_table_from_pipe_text(doc, content)
             parent.insert(index + 1, table._element)
