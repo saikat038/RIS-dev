@@ -884,11 +884,9 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
     parent = target_paragraph._element.getparent()
     index = parent.index(target_paragraph._element)
 
-    # remove marker text
-    for node in target_paragraph._element.iter():
-        if node.tag.endswith("}t"):
-            if node.text and placeholder in node.text:
-                node.text = node.text.replace(placeholder, "")
+    # 🔥 REMOVE ENTIRE PLACEHOLDER PARAGRAPH
+    parent.remove(target_paragraph._element)
+    index -= 1
 
     for block_type, content in blocks:
         if not content.strip():
