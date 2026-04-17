@@ -819,24 +819,25 @@ def insert_text_block_after(parent, index, text: str, doc: Document, source_para
     if not lines:
         return index
 
-    # 🔥 FIRST LINE → SAME PARAGRAPH (no gap)
-    first_line = lines[0]
+    for i, line in enumerate(lines):
+        # add line break BEFORE every line
+        source_para.add_run("\n")
 
-    source_para.add_run("\n")  # move to next line inside same paragraph
+        pos = 0
+        for match in BOLD_PATTERN.finditer(line):
+            start, end = match.span()
 
-    pos = 0
-    for match in BOLD_PATTERN.finditer(first_line):
-        start, end = match.span()
-        if start > pos:
-            source_para.add_run(first_line[pos:start])
-        run = source_para.add_run(match.group(1))
-        run.bold = True
-        pos = end
-    if pos < len(first_line):
-        source_para.add_run(first_line[pos:])
+            if start > pos:
+                source_para.add_run(line[pos:start])
 
-    # remaining lines → new paragraphs (normal behavior)
-    remaining_text = "\n".join(lines[1:])
+            run = source_para.add_run(match.group(1))
+            run.bold = True
+            pos = end
+
+        if pos < len(line):
+            source_para.add_run(line[pos:])
+
+    return index
 
 
 
