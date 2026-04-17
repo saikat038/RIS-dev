@@ -866,7 +866,7 @@ def insert_text_block_after(parent, index, text: str, doc: Document, source_para
 
 def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks):
     target_paragraph = None
-    for p in doc.element.body.iter():
+    for p in doc.paragraphs:
         if not p.tag.endswith("p"):
             continue
         texts = [t.text for t in p.iter() if t.text]
@@ -885,8 +885,8 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
     index = parent.index(target_paragraph._element)
 
     # CLEAR ENTIRE PARAGRAPH CONTENT (but keep paragraph)
-    for node in list(target_paragraph._element):
-        target_paragraph._element.remove(node)
+    parent.remove(target_paragraph._element)
+    index -= 1
 
     for block_type, content in blocks:
         if not content.strip():
