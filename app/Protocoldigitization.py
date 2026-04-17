@@ -814,29 +814,7 @@ def get_body_paragraph_format(doc: Document, start_paragraph: Paragraph):
     return None
 
 def insert_text_block_after(parent, index, text: str, doc: Document, source_para: Paragraph):
-
-    lines = [l for l in text.split("\n") if l.strip()]
-    if not lines:
-        return index
-
-    # 🔥 FIRST LINE → SAME PARAGRAPH (no gap)
-    first_line = lines[0]
-
-    source_para.add_run("\n")  # move to next line inside same paragraph
-
-    pos = 0
-    for match in BOLD_PATTERN.finditer(first_line):
-        start, end = match.span()
-        if start > pos:
-            source_para.add_run(first_line[pos:start])
-        run = source_para.add_run(match.group(1))
-        run.bold = True
-        pos = end
-    if pos < len(first_line):
-        source_para.add_run(first_line[pos:])
-
-    # remaining lines → new paragraphs (normal behavior)
-    remaining_text = "\n".join(lines[1:])
+    lines = [text.strip()]
     
     # Get formatting from a nearby body paragraph (not the heading)
     body_format = get_body_paragraph_format(doc, source_para)
