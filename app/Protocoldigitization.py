@@ -814,7 +814,7 @@ def get_body_paragraph_format(doc: Document, start_paragraph: Paragraph):
     return None
 
 def insert_text_block_after(parent, index, text: str, doc: Document, source_para: Paragraph):
-    lines = [l for l in text.split("\n") if l.strip()]
+    lines = [text.strip()]
     
     # Get formatting from a nearby body paragraph (not the heading)
     body_format = get_body_paragraph_format(doc, source_para)
@@ -899,9 +899,6 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
         elif block_type == "table":
             table = build_word_table_from_pipe_text(doc, content)
             parent.insert(index + 1, table._element)
-            index += 1
-            spacer_p = OxmlElement("w:p")
-            parent.insert(index + 1, spacer_p)
             index += 1
 
 
