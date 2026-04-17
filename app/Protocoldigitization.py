@@ -823,6 +823,9 @@ def insert_text_block_after(parent, index, text: str, doc: Document, source_para
         new_p = OxmlElement("w:p")
         parent.insert(index + 1, new_p)
         para = Paragraph(new_p, doc)
+        # 🔥 REMOVE ALL EXTRA SPACING
+        para.paragraph_format.space_before = Pt(0)
+        para.paragraph_format.space_after = Pt(0)
         
         # Apply body paragraph formatting (spacing, line spacing, etc.)
         if body_format:
