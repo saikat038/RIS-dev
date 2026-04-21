@@ -482,7 +482,12 @@ SECTION_TO_TEMPLATE_VAR = {
     "Overview of Adverse Events Safety Population - RP Patients":"Overview_of_Adverse_Events_Safety_Population_RP_Patients",
     "Therapeutic Rationale": "Therapeutic_rationale",
     "Study Rationale": "Study_rationale",
-    "Disease Background": "Disease_background"
+    "Disease Background": "Disease_background",
+    #module 2
+    "Chemical Name": "name",
+    "Description of drug product kit": "act_ingre",
+    "Dosage Preparation": "formulation_dose_form",
+    "Description of Dosage Form": "formulation_dose_form"
 }
 
 # ============================================================
