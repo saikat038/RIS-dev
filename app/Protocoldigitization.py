@@ -863,25 +863,49 @@ def insert_section_blocks_into_document(doc: Document, placeholder: str, blocks)
         print(f"⚠️ Section marker not found: {placeholder}")
         return
 
-    parent = target_paragraph._element.getparent()
-    index = parent.index(target_paragraph._element)
-
-    # remove marker text
-    # 🔥 remove ONLY placeholder text (keep heading intact)
+    # remove only placeholder text
     for run in target_paragraph.runs:
         if placeholder in run.text:
             run.text = run.text.replace(placeholder, "")
 
+    current_anchor = target_paragraph._element
+
     for block_type, content in blocks:
-        if not content.strip():
+        if not content or not content.strip():
             continue
+
         if block_type == "text":
-            # Pass the source_para (target_paragraph) to preserve formatting
-            index = insert_text_block_after(parent, index, content, doc, target_paragraph)
+            lines = content.split("\n")
+
+            for raw_line in lines:
+                line = raw_line.rstrip()
+                if not line.strip():
+                    continue
+
+                new_p = OxmlElement("w:p")
+                current_anchor.addnext(new_p)
+                new_para = Paragraph(new_p, doc)
+
+                pos = 0
+                for match in BOLD_PATTERN.finditer(line):
+                    start, end = match.span()
+
+                    if start > pos:
+                        new_para.add_run(line[pos:start])
+
+                    run = new_para.add_run(match.group(1))
+                    run.bold = True
+                    pos = end
+
+                if pos < len(line):
+                    new_para.add_run(line[pos:])
+
+                current_anchor = new_p
+
         elif block_type == "table":
             table = build_word_table_from_pipe_text(doc, content)
-            parent.insert(index + 1, table._element)
-            index += 1
+            current_anchor.addnext(table._element)
+            current_anchor = table._element
 
 
 def render_all_sections():
