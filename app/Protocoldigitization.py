@@ -487,7 +487,7 @@ SECTION_TO_TEMPLATE_VAR = {
     "Chemical Name": "name",
     "Description of drug product kit": "act_ingre",
     "Dosage Preparation": "formulation_dose_form",
-    "Description of Dosage Form": "formulation_dose_form"
+    "Description of Dosage Form": "rout_admin"
 }
 
 # ============================================================
