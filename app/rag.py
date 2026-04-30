@@ -2671,9 +2671,9 @@ def answer(query: str, history: List[Dict]) -> str:
         llm_text=processed_answer
     )
 
-    return processed_answer
+    return context
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Extent of exposure", [])
+# answer("Brief Summary of Adverse Events", [])
 # answer("Overview of Adverse Events Safety Population - RP Patients", [])
