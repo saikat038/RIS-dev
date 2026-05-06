@@ -483,11 +483,16 @@ SECTION_TO_TEMPLATE_VAR = {
     "Therapeutic Rationale": "Therapeutic_rationale",
     "Study Rationale": "Study_rationale",
     "Disease Background": "Disease_background",
-    #module 2
+    # module 2
     "Chemical Name": "name",
     "Description of drug product kit": "act_ingre",
     "Dosage Preparation": "formulation_dose_form",
     "Description of Dosage Form": "rout_admin"
+    # module 3
+    "Description of the Manufacturing Process": "manu_process",
+    "PRODUCTION OF OCU400 (AAV5-HNR2E3)": "outline_manu_steps",
+    "Detailed Manufacturing Step for {Drug Substance Name}": "detail_manu_steps",
+    "Description of the In Process Controls": "desc_process_control "
 }
 
 # ============================================================
