@@ -186,9 +186,9 @@ if prompt := st.chat_input("Ask anything about regulations, guidance, policies, 
         with st.chat_message("assistant"):
             with st.spinner("Thinking..."):
                 MAX_TURNS = 6
-                safe_history = st.session_state.messages[-MAX_TURNS:]
+                # safe_history = st.session_state.messages[-MAX_TURNS:]
                 
-                result = answer(prompt, safe_history)
+                result = answer(prompt)
                 st.markdown(result)
 
         st.session_state.messages.append({"role": "assistant", "content": result})
