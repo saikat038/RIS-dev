@@ -1213,7 +1213,7 @@ def load_source_search_client() -> SearchClient:
     print("  endpoint:", AZURE_SEARCH_SERVICE_ENDPOINT)
     return SearchClient(
         endpoint=AZURE_SEARCH_SERVICE_ENDPOINT,
-        index_name=AZURE_SEARCH_INDEX_NAME,
+        index_name="module3",
         credential=AzureKeyCredential(AZURE_SEARCH_API_KEY),
     )
 
@@ -2004,6 +2004,36 @@ def smart_join(texts: list[str]) -> str:
 
     return "\n\n".join(final)
 
+
+def chunk_text_with_overlap(text, max_chars=40000, overlap=5000):
+    """
+    Splits large context into overlapping chunks
+    to avoid GPT output/context overflow.
+    """
+
+    if not text:
+        return []
+
+    chunks = []
+
+    start = 0
+    text_length = len(text)
+
+    while start < text_length:
+        end = start + max_chars
+
+        chunk = text[start:end]
+
+        chunks.append(chunk)
+
+        if end >= text_length:
+            break
+
+        start = end - overlap
+
+    return chunks
+
+
 def extract_exact_section(chunks: list[dict]) -> str:
     if not chunks:
         return ""
@@ -2218,6 +2248,11 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
     source_context = "\n\n".join(source_context_pieces) if source_context_pieces else "No source evidence found."
 
+    source_context_chunks = chunk_text_with_overlap(
+        source_context,
+        max_chars=40000,
+        overlap=5000
+    )
     # After building source_context and ich_context
 
     print("[DEBUG RETRIEVAL STATS]")
@@ -2276,6 +2311,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
         new_state = dict(state)
         new_state["context"] = final_context
+        new_state["source_context_chunks"] = source_context_chunks
         new_state["section_name"] = section_name
 
 
@@ -2294,6 +2330,7 @@ def retrieve_context_node(state: RAGState) -> RAGState:
 
         new_state = dict(state)
         new_state["context"] = final_context
+        new_state["source_context_chunks"] = source_context_chunks
         new_state["section_name"] = section_name
 
     
@@ -2368,6 +2405,25 @@ def generate_answer_node(state: RAGState) -> RAGState:
         return state
 
     llm_input = state.get("llm_input", "")
+    context = state.get("context", "")
+
+    output_style = "regulatory author"
+
+    try:
+        authoring_control_match = re.search(
+            r'\[AUTHORING CONTROL\]\s*(\{.*?\})\s*\[',
+            context,
+            re.DOTALL
+        )
+
+        if authoring_control_match:
+            control_json = json.loads(authoring_control_match.group(1))
+            output_style = control_json.get("output_style", "regulatory author")
+
+    except Exception as e:
+        print("Failed to extract output_style:", e)
+    source_context_chunks = state.get("source_context_chunks", [])
+    query = state.get("query", "")
 
 
 ##################################################################################last working prompt#####################################################################################
@@ -2600,18 +2656,76 @@ Output ONLY the final authored section content.
     # print("Last 200 chars of llm_input:")
     # print(llm_input[-200:])
 
-    response = client.chat.completions.create(
-        model=AZURE_OPENAI_CHAT_MODEL,
-        messages=[
-            {"role": "system", "content": instructions},
-            {"role": "user", "content": llm_input},
-        ],
-        temperature=0.0,
-        # max_tokens=20000
-    )
+    # =========================================================
+    # VERBATIM MODE → CHUNKED GENERATION
+    # =========================================================
+
+    if output_style == "verbatim":
+
+        print("\n[MODE] VERBATIM → Chunked generation enabled")
+
+        source_context_chunks = state.get("source_context_chunks", [])
+        query = state.get("query", "")
+
+        final_outputs = []
+
+        for idx, chunk in enumerate(source_context_chunks):
+
+            print(f"\n[PROCESSING CHUNK {idx+1}/{len(source_context_chunks)}]")
+            print(f"Chunk size: {len(chunk):,} chars")
+
+            chunk_input = f"""
+    [Knowledge Base Context]
+    {chunk}
+
+    [Current Authoring Request]
+    {query}
+    """.strip()
+
+            response = client.chat.completions.create(
+                model=AZURE_OPENAI_CHAT_MODEL,
+                messages=[
+                    {"role": "system", "content": instructions},
+                    {"role": "user", "content": chunk_input},
+                ],
+                temperature=0.0,
+                max_tokens=12000
+            )
+
+            content = response.choices[0].message.content.strip()
+
+            if (
+                content
+                and content != "Not in knowledge base."
+                and content not in final_outputs
+            ):
+                final_outputs.append(content)
+
+        final_answer = "\n\n".join(final_outputs)
+
+    # =========================================================
+    # REGULATORY AUTHOR MODE → ORIGINAL FLOW
+    # =========================================================
+
+    else:
+
+        print("\n[MODE] REGULATORY AUTHOR → Original single-call generation")
+
+        response = client.chat.completions.create(
+            model=AZURE_OPENAI_CHAT_MODEL,
+            messages=[
+                {"role": "system", "content": instructions},
+                {"role": "user", "content": llm_input},
+            ],
+            temperature=0.0,
+            max_tokens=12000
+        )
+
+        final_answer = response.choices[0].message.content
 
     new_state = dict(state)
-    new_state["answer"] = response.choices[0].message.content
+    new_state["answer"] = final_answer
+
     return new_state
 
 # ============================================================
@@ -2672,5 +2786,5 @@ def answer(query: str) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Brief Summary of Adverse Events", [])
+answer("Description of the Manufacturing Process")
 # answer("Overview of Adverse Events Safety Population - RP Patients", [])
