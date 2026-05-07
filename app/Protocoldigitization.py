@@ -487,7 +487,7 @@ SECTION_TO_TEMPLATE_VAR = {
     "Chemical Name": "name",
     "Description of drug product kit": "act_ingre",
     "Dosage Preparation": "formulation_dose_form",
-    "Description of Dosage Form": "rout_admin"
+    "Description of Dosage Form": "rout_admin",
     # module 3
     "Description of the Manufacturing Process": "manu_process",
     "PRODUCTION OF OCU400 (AAV5-HNR2E3)": "outline_manu_steps",
