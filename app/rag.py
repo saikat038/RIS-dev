@@ -2330,9 +2330,6 @@ def build_prompt_node(state: RAGState) -> RAGState:
 [Knowledge Base Context]
 {context}
 
-# [Conversation So Far]
-# {conv_history if conv_history else "(no previous turns)"}
-
 [Current Authoring Request]
 {query}
 """.strip()
@@ -2642,7 +2639,7 @@ rag_graph = build_rag_graph()
 # PUBLIC ENTRY POINT
 # ============================================================
 
-def answer(query: str, history: List[Dict]) -> str:
+def answer(query: str) -> str:
     """
     Entry point for AUTHORING requests.
     """
@@ -2650,8 +2647,8 @@ def answer(query: str, history: List[Dict]) -> str:
     # if history:
     #     print(f"Last message: {history[-1]['content'][:80]}...")
     initial_state: RAGState = {
-        "query": query,
-        "history": history,
+        "query": query
+        # "history": history,
     }
 
     final_state = rag_graph.invoke(initial_state)
