@@ -2643,7 +2643,7 @@ def answer(query: str) -> str:
     """
     Entry point for AUTHORING requests.
     """
-    print(f"[DEBUG] answer() received history of length: {len(history)}")
+    # print(f"[DEBUG] answer() received history of length: {len(history)}")
     # if history:
     #     print(f"Last message: {history[-1]['content'][:80]}...")
     initial_state: RAGState = {
