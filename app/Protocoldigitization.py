@@ -492,7 +492,7 @@ SECTION_TO_TEMPLATE_VAR = {
     "Description of the Manufacturing Process": "manu_process",
     "PRODUCTION OF OCU400 (AAV5-HNR2E3)": "outline_manu_steps",
     "Detailed Manufacturing Step for {Drug Substance Name}": "detail_manu_steps",
-    "Description of the In Process Controls": "desc_process_control "
+    "Description of the In Process Controls": "desc_process_control"
 }
 
 # ============================================================
