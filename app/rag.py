@@ -2324,14 +2324,14 @@ def build_prompt_node(state: RAGState) -> RAGState:
     history = state.get("history", [])
     query = state.get("query", "")
 
-    conv_history = format_history(history)
+    # conv_history = format_history(history)
 
     user_content = f"""
 [Knowledge Base Context]
 {context}
 
-[Conversation So Far]
-{conv_history if conv_history else "(no previous turns)"}
+# [Conversation So Far]
+# {conv_history if conv_history else "(no previous turns)"}
 
 [Current Authoring Request]
 {query}
@@ -2339,18 +2339,18 @@ def build_prompt_node(state: RAGState) -> RAGState:
     
     print("[BUILD PROMPT DEBUG]")
     print(f"  • context length: {len(context):,} chars")
-    print(f"  • conv_history length: {len(conv_history):,} chars")
+    # print(f"  • conv_history length: {len(conv_history):,} chars")
     print(f"  • query length: {len(query):,} chars")
     print(f"  • final llm_input length: {len(user_content):,} chars")
     print(f"  • history messages count: {len(history)}")
-    if conv_history:
-        print("  • conv_history preview (first 200):")
-        print(conv_history[:200])
-        print("  • conv_history preview (last 200):")
-        print(conv_history[-200:])
+    # if conv_history:
+    #     print("  • conv_history preview (first 200):")
+    #     print(conv_history[:200])
+    #     print("  • conv_history preview (last 200):")
+    #     print(conv_history[-200:])
 
     new_state = dict(state)
-    new_state["conv_history"] = conv_history
+    # new_state["conv_history"] = conv_history
     new_state["llm_input"] = user_content
     return new_state
 
@@ -2647,8 +2647,8 @@ def answer(query: str, history: List[Dict]) -> str:
     Entry point for AUTHORING requests.
     """
     print(f"[DEBUG] answer() received history of length: {len(history)}")
-    if history:
-        print(f"Last message: {history[-1]['content'][:80]}...")
+    # if history:
+    #     print(f"Last message: {history[-1]['content'][:80]}...")
     initial_state: RAGState = {
         "query": query,
         "history": history,
