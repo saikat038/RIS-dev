@@ -1213,7 +1213,7 @@ def load_source_search_client() -> SearchClient:
     print("  endpoint:", AZURE_SEARCH_SERVICE_ENDPOINT)
     return SearchClient(
         endpoint=AZURE_SEARCH_SERVICE_ENDPOINT,
-        index_name="module3",
+        index_name="410-ga-study_index",
         credential=AzureKeyCredential(AZURE_SEARCH_API_KEY),
     )
 
@@ -2672,5 +2672,5 @@ def answer(query: str) -> str:
 
 
 # answer("Summary of Baseline and Clinical Characteristics Safety Population", [])
-# answer("Description of the Manufacturing Process")
+# answer("PRODUCTION OF OCU400 (AAV5-HNR2E3)")
 # answer("Overview of Adverse Events Safety Population - RP Patients", [])
