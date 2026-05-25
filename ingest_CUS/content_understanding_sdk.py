@@ -116,8 +116,8 @@ from azure.ai.contentunderstanding import ContentUnderstandingClient
 from azure.ai.contentunderstanding.models import AnalyzeInput
 from azure.core.credentials import AzureKeyCredential
 
-AZURE_CONTENT_UNDERSTANDING_ENDPOINT = "https://ris-dev-resource-0974.services.ai.azure.com/"
-AZURE_CONTENT_UNDERSTANDING_KEY = "3v5tHxuHYmbnYZvTEGFOJTaTskzn2riTzCfDYB058NrR1Xz19um5JQQJ99CBACYeBjFXJ3w3AAAAACOG2KhK"
+AZURE_CONTENT_UNDERSTANDING_ENDPOINT = ""
+AZURE_CONTENT_UNDERSTANDING_KEY = ""
 
 
 ANALYZER_ID = "prebuilt-documentSearch"
