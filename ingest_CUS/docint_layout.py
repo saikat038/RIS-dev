@@ -28,9 +28,9 @@ import tempfile
 def extract_layout_to_structured_json(file_bytes: bytes, source_name: str):
 
     client = AzureContentUnderstandingClient(
-        endpoint="https://vishv-mhk5wnpr-eastus2.services.ai.azure.com/",
-        api_version="2025-11-01",
-        subscription_key="EecruWgqsnfExqvhutcZrXM1OUhiHNSA1n2ow7XvQng8HUXlwU27JQQJ99BKACHYHv6XJ3w3AAAAACOGKctF"
+        endpoint="",
+        api_version="",
+        subscription_key=""
     )
 
     # ---------------------------------------
