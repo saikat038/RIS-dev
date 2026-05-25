@@ -1,0 +1,61 @@
+{
+  "section": "Study objectives",
+  "timestamp": "2026-04-08T12:19:06.109976",
+  "source": {
+    "total_chunks": 2,
+    "results": [
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "5. STUDY OBJECTIVES AND ENDPOINTS > 5.2. Secondary Objectives\n\nTo assess humoral and cellular immune responses to OCU400 and shedding of the viral vector.",
+        "source_block_ids": [
+          "p30_para_7"
+        ],
+        "page_numbers": [
+          30
+        ],
+        "heading_path": "5. STUDY OBJECTIVES AND ENDPOINTS > 5.2. Secondary Objectives",
+        "chunk_type": "paragraph",
+        "id": "8e06447d-e243-49e0-a263-fffd674ec1ac",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.03333333507180214
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "5. STUDY OBJECTIVES AND ENDPOINTS > 5.1. Primary Objective\n\nTo assess the safety of unilateral subretinal administration of OCU400 in subjects with RP associated with NR2E3, RHO and LCA associated with CEP290 mutations.",
+        "source_block_ids": [
+          "p30_para_5"
+        ],
+        "page_numbers": [
+          30
+        ],
+        "heading_path": "5. STUDY OBJECTIVES AND ENDPOINTS > 5.1. Primary Objective",
+        "chunk_type": "paragraph",
+        "id": "04ec6a31-4c33-4e0d-89af-7bd8d9f15c17",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.032786883413791656
+      }
+    ]
+  },
+  "ich_guidelines": {
+    "total_sections": 2,
+    "results": {
+      "total_sections": 1,
+      "results": [
+        {
+          "section_path": "8. STUDY OBJECTIVES",
+          "source_type": "ich",
+          "guideline_text": "A statement describing the overall purpose(s) of the study should be provided.",
+          "headings": []
+        }
+      ]
+    }
+  }
+}

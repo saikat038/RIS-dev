@@ -1,0 +1,121 @@
+{
+  "section": "PRODUCTION OF OCU400 (AAV5-HNR2E3)",
+  "timestamp": "2026-05-08T19:10:08.639744",
+  "source": {
+    "total_chunks": 5,
+    "results": [
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Figure 2: Process flow diagram of OCU400 (AAV5-hNR2E3) DS Production",
+        "table_headers": [
+          "ocugen.",
+          "TECHNICAL REPORT"
+        ],
+        "table_rows": "[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 12 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_v :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "2. PRODUCTION OF OCU400 (AAV5-HNR2E3) > 2.1. Overview of Manufacturing Process for OCU400 (AAV5- hNR2E3) Drug Substance > Figure 2: Process flow diagram of OCU400 (AAV5-hNR2E3) DS Production\nFigure 2: Process flow diagram of OCU400 (AAV5-hNR2E3) DS Production\nocugen. | TECHNICAL REPORT\n----------------------------------------\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 12 of 109 | EFFECTIVE DATE: vault_r:effective_date_v :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          12
+        ],
+        "heading_path": "2. PRODUCTION OF OCU400 (AAV5-HNR2E3) > 2.1. Overview of Manufacturing Process for OCU400 (AAV5- hNR2E3) Drug Substance > Figure 2: Process flow diagram of OCU400 (AAV5-hNR2E3) DS Production",
+        "chunk_type": "table",
+        "id": "2892ac5e-370d-434f-a6c4-8ee84ea91c0e",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Figure 2: Process flow diagram of OCU400 (AAV5-hNR2E3) DS Production'. Interpret the rows using the column headers.",
+        "@search.score": 0.03279569745063782
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "2.1. Overview of Manufacturing Process for OCU400 (AAV5- hNR2E3) Drug Substance",
+        "table_headers": [
+          "ocugen.",
+          "TECHNICAL REPORT"
+        ],
+        "table_rows": "[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 11 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_v :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "2. PRODUCTION OF OCU400 (AAV5-HNR2E3) > 2.1. Overview of Manufacturing Process for OCU400 (AAV5- hNR2E3) Drug Substance\n2.1. Overview of Manufacturing Process for OCU400 (AAV5- hNR2E3) Drug Substance\nocugen. | TECHNICAL REPORT\n----------------------------------------\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 11 of 109 | EFFECTIVE DATE: vault_r:effective_date_v :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          11
+        ],
+        "heading_path": "2. PRODUCTION OF OCU400 (AAV5-HNR2E3) > 2.1. Overview of Manufacturing Process for OCU400 (AAV5- hNR2E3) Drug Substance",
+        "chunk_type": "table",
+        "id": "c597d967-56e7-49b7-9878-b476c9867e41",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '2.1. Overview of Manufacturing Process for OCU400 (AAV5- hNR2E3) Drug Substance'. Interpret the rows using the column headers.",
+        "@search.score": 0.032522473484277725
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "The treated lysate is clarified by centrifugation followed by depth filtration and bioburden reduction filtration. The clarified lysate is tested for vector genome (Vg) titer and subsequently purified using Capto AVB column for affinity purification. This column contains 14 kDa antibody expressed in Saccharomyces cerevisiae, which binds to AAV5. The AAV5-hNR2E3 viral particles bound to the Capto AVB column are eluted with elution buffer. The affinity-purified eluate is concentrated by tangential flow filtration. To separate full capsids from empty capsids and other impurities, the material is further purified by iodixanol density gradient ultracentrifugation. The fraction containing full AAV5-hNR2E3 viral particles is collected and pooled. The pooled fractions are concentrated by tangential flow filtration followed by diafiltration using DS buffer. Following final sterile filtration, the OCU400 bulk drug substance (BDS) is filled in sterile SEBC bottles and stored at ≤- 60℃. The production of the OCU400 DS at manufacturing scale is summarized in Figure 2.",
+        "source_block_ids": [
+          "p11_para_0"
+        ],
+        "page_numbers": [
+          11
+        ],
+        "heading_path": "2. PRODUCTION OF OCU400 (AAV5-HNR2E3) > 2.1. Overview of Manufacturing Process for OCU400 (AAV5- hNR2E3) Drug Substance",
+        "chunk_type": "paragraph",
+        "id": "4fd836d8-8dd8-43d2-bc2d-e746e4165d1e",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.014492753893136978
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Triple Transfection and Production of AAV5-hNR2E3\nCell Harvest and Lysis > Clarification\nPurification (Affinity & Density gradient ultracentrifugation)\nUF/DF > DS > Critical Release Test (Conc. ID & Purity). Hold (2-8℃/≤ -60℃)",
+        "source_block_ids": [
+          "p11_para_2",
+          "p11_para_3",
+          "p11_para_4",
+          "p11_para_5",
+          "p11_para_6",
+          "p11_para_7"
+        ],
+        "page_numbers": [
+          11
+        ],
+        "heading_path": "2. PRODUCTION OF OCU400 (AAV5-HNR2E3) > 2.1. Overview of Manufacturing Process for OCU400 (AAV5- hNR2E3) Drug Substance > Figure 2: Process flow diagram of OCU400 (AAV5-hNR2E3) DS Production",
+        "chunk_type": "paragraph",
+        "id": "da8a2a74-1247-4667-8b7b-97eca1189d34",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.012345679104328156
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "The OCU400 drug substance (DS) manufacturing process consists of upstream cell expansion, transient transfection, harvest and lysis, clarification, purification, concentration, and formulation steps performed under specified GLP/GMP conditions. The process is scalable and applicable across clinical, engineering, validation, and commercial manufacturing batches.\n\nThe HEK293 cells are expanded through a stepwise scale-up in shake flasks and subsequently transferred to a production bioreactor. The manufacturing process utilizes a Working Cell Bank (WCB) derived from a well-characterized Master Cell Bank (MCB) prepared and qualified under GMP conditions (Refer the MCB and WCB characterization report: ERPT-0150).\n\nUpon reaching the target cell density in the production bioreactor, the suspension culture is transiently transfected with a plasmid mixture containing the expression plasmid encoding hNR2E3, the AAV rep2/cap5 plasmid, and the adenoviral helper plasmid. The plasmids are manufactured from qualified bacterial cell banks and purified using chromatography-based methods prior to formulation in an appropriate buffer. The plasmid mixture is complexed with cationic lipid polyethylenimine (PEI) in Balan CD HEK293 media and added into the bioreactor. The culture is maintained under controlled conditions to allow AAV production.\n\nFollowing the production phase, the culture is harvested, and the cell biomass is collected by centrifugation. The cell pellet is resuspended in lysis buffer and subjected to controlled freeze-thaw processing to generate cell lysate. The lysate is treated with nuclease to degrade host cell DNA and residual plasmid DNA.",
+        "source_block_ids": [
+          "p10_para_3",
+          "p10_para_4",
+          "p10_para_5",
+          "p10_para_6"
+        ],
+        "page_numbers": [
+          10
+        ],
+        "heading_path": "2. PRODUCTION OF OCU400 (AAV5-HNR2E3) > 2.1. Overview of Manufacturing Process for OCU400 (AAV5- hNR2E3) Drug Substance",
+        "chunk_type": "paragraph",
+        "id": "5c418e35-92c4-4544-bb91-5cef22cb2135",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.010309278033673763
+      }
+    ]
+  },
+  "ich_guidelines": {
+    "total_sections": 2,
+    "results": {
+      "total_sections": 0,
+      "results": []
+    }
+  }
+}

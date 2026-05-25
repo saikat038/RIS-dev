@@ -111,7 +111,13 @@ def chunk_semantic_blocks(
         if not cur_text_parts:
             return
 
-        text = "\n\n".join(cur_text_parts).strip()
+        heading_path = cur_meta["heading_path"] or []
+        # heading_prefix = " > ".join(heading_path)
+
+        body_text = "\n\n".join(cur_text_parts)
+
+        text = body_text
+
         if not text:
             return
 
@@ -158,7 +164,16 @@ def chunk_semantic_blocks(
         if block_type == "table":
             flush_chunk()
 
+            heading_path = (
+                block.get("table_context_path")
+                or block.get("container_path")
+                or []
+            )
+
+            heading_prefix = " > ".join(heading_path)
+
             table_text = "\n".join(filter(None, [
+                heading_prefix,
                 block.get("table_context_heading"),
                 block.get("table_context_text"),
                 resolve_block_text(block),
@@ -226,10 +241,12 @@ def chunk_semantic_blocks(
         # Oversized paragraph → standalone
         if block_tokens > max_tokens:
             flush_chunk()
+            heading_prefix = " > ".join(heading_path or [])
             for part in hard_token_split(block_text, max_tokens):
+                chunk_text = f"{heading_prefix}\n\n{part}".strip()
                 chunks.append({
                     "chunk_type": "paragraph",
-                    "text": part,
+                    "text": chunk_text,
                     "metadata": {
                         "heading_path": heading_path,
                         "page_numbers": [block.get("page_number")],

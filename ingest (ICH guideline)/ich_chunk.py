@@ -14,7 +14,7 @@ import tiktoken
 # Tokenizer setup (MUST match embedding model)
 # -------------------------------------------------
 
-ENCODING_MODEL = "text-embedding-3-large"
+ENCODING_MODEL = "text-embedding-3-small"
 enc = tiktoken.encoding_for_model(ENCODING_MODEL)
 
 
@@ -92,80 +92,99 @@ def resolve_block_text(block: Dict[str, Any]) -> str:
 
 def chunk_ich_units(
     normalized_doc: Dict[str, Any],
-    max_tokens: int = 300,
+    max_tokens: int = 800,
 ) -> List[Dict[str, Any]]:
     """
     Convert ICH-normalized document into embedding-ready chunks.
 
-    Now includes:
-    - Rule-like blocks (original behavior)
-    - All normal paragraphs / text blocks
+    Now properly:
+    - Tracks section heading
+    - Extracts section_path + section_title
+    - Attaches section metadata to ALL chunks
     """
-    chunks: List[Dict[str, Any]] = []
 
-    # ────────────────────────────────────────────────
-    # Part 1: Original rule-like chunking (unchanged)
-    # ────────────────────────────────────────────────
+    import re
+
+    SECTION_EXTRACT_RE = re.compile(r"^(\d+(?:\.\d+)*\.?)\s+(.*)")
+
+    chunks: List[Dict[str, Any]] = []
+    seen_texts = set()
+
+    current_heading = None
+    current_section_path = None
+    current_section_title = None
+
+    guideline_name = normalized_doc.get("document_name") or normalized_doc.get("doc_id")
+
+    # We iterate over normalized blocks ONLY
     for block in normalized_doc.get("blocks", []):
-        block_text = (
+
+        block_type = block.get("block_type")
+        text = (
             block.get("content")
             or block.get("text")
             or block.get("flattened_text")
             or ""
         ).strip()
 
-        if not block_text:
+        if not text:
+            continue
+
+        # ────────────────────────────────
+        # 1️⃣ If heading → update context
+        # ────────────────────────────────
+        if block_type == "heading":
+            current_heading = text
+
+            match = SECTION_EXTRACT_RE.match(text)
+            if match:
+                current_section_path = match.group(1)
+                current_section_title = match.group(2).strip()
+            else:
+                current_section_path = None
+                current_section_title = None
+
+            continue
+
+        # ────────────────────────────────
+        # 2️⃣ For paragraphs / rules
+        # ────────────────────────────────
+        if not current_section_path:
+            # Skip anything not under a numbered section
             continue
 
         metadata = {
-            "guideline": block.get("guideline"),
-            "section_path": block.get("section_path"),
+            "guideline": guideline_name,
+            "section_heading": current_heading,
+            "section_path": current_section_path,
+            "section_title": current_section_title,
+            "block_type": block_type or "paragraph",
             "rule_type": block.get("rule_type"),
-            "page_numbers": [block.get("page_number")] if block.get("page_number") else [],
+            "page_number": block.get("page_number"),
         }
 
-        if token_len(block_text) > max_tokens:
-            for part in hard_token_split(block_text, max_tokens):
+        if token_len(text) > max_tokens:
+            for part in hard_token_split(text, max_tokens):
+                if part in seen_texts:
+                    continue
+
                 chunks.append({
-                    "chunk_type": "ich_rule",
+                    "chunk_type": block_type or "paragraph",
                     "text": part,
                     "metadata": metadata
                 })
+                seen_texts.add(part)
         else:
-            chunks.append({
-                "chunk_type": "ich_rule",
-                "text": block_text,
-                "metadata": metadata
-            })
-
-    # ────────────────────────────────────────────────
-    # Part 2: Add all normal text blocks (paragraphs, summaries, notes, etc.)
-    # ────────────────────────────────────────────────
-    for page in normalized_doc.get("pages", []):
-        for block in page.get("blocks", []):
-            text = resolve_block_text(block).strip()
-
-            if not text or len(text.split()) < 3:
+            if text in seen_texts:
                 continue
 
-            # Skip if it matches a rule chunk exactly (avoid duplicates)
-            if any(text == c["text"] for c in chunks):
-                continue
-
-            metadata = {
-                "guideline": normalized_doc.get("document_name", "ICH Guideline"),
-                "section_path": block.get("section_path") or page.get("section_path"),
-                "block_type": block.get("block_type", "paragraph"),
-                "page_number": page.get("page_number"),
-                "rule_type": block.get("rule_type", []),
-            }
-
             chunks.append({
-                "chunk_type": "paragraph",
+                "chunk_type": block_type or "paragraph",
                 "text": text,
                 "metadata": metadata
             })
+            seen_texts.add(text)
 
-    print(f"Chunked {len(chunks)} total items (rules + paragraphs)")
+    print(f"Chunked {len(chunks)} total items (section-aware)")
 
     return chunks

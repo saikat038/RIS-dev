@@ -1,0 +1,350 @@
+{
+  "section": "Synopsis",
+  "timestamp": "2026-04-03T20:11:41.895485",
+  "source": {
+    "total_chunks": 15,
+    "results": [
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "OCU400-101",
+        "source_block_ids": [
+          "p5_para_11",
+          "p5_para_12",
+          "p5_para_13",
+          "p5_para_15",
+          "p5_para_14"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "heading_path": "1. SYNOPSIS > Protocol Number:",
+        "chunk_type": "paragraph",
+        "id": "ab7806dd-174e-4bef-a351-fb4e30952ce7",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.026919757947325706
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "· Screening Period (up to 3 months)\n\n· Baseline Period (up to 2 weeks)\n\n· Treatment Observation Period (up to 1 year after dosing)\n\n· A Long-Term Safety Follow-up Period for 2 years duration from the end of study visit.\n\nParticipants are considered to have completed this study if they complete the final EOS visit Week 48 (12 months following the IP dose). The study duration will be approximately 58 weeks for each participant and will be followed in Long Term Safety Follow Up for an additional 2 years.\n\nStudy Endpoints: Primary",
+        "source_block_ids": [
+          "p11_para_16",
+          "p11_para_17",
+          "p11_para_18",
+          "p11_para_19",
+          "p11_para_20",
+          "p12_para_3"
+        ],
+        "page_numbers": [
+          11,
+          12
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the first 3 subjects: > The study will include the following phases:",
+        "chunk_type": "paragraph",
+        "id": "c6921b81-0b0e-4a59-935a-9c7d179b8bae",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.023973586037755013
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "OCU400",
+        "source_block_ids": [
+          "p5_para_9"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "heading_path": "1. SYNOPSIS > Name of Investigational Product:",
+        "chunk_type": "paragraph",
+        "id": "2656f4dd-b0e1-41cd-93da-852e049f7516",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.01666666753590107
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "To assess the effect of OCU400 on best-corrected visual acuity (BCVA), low-luminance visual acuity (LLVA), Multi-Luminance Mobility Test (MLMT), full-field stimulus testing (FST), total photopic static visual field (Vtot) with white-on-white and blue-on-yellow protocols, two-color dark-adapted perimetry, contrast sensitivity (CS), full field ERG (ff-ERG), ellipsoid zone area, outer segment length and cyst cavity volume via spectral-domain optical coherence tomography (SD-OCT at 20°), wide-field fundus autofluorescence (wf-FAF), and the quality of life questionnaires including Michigan Retinal Degeneration Questionnaire (MRDQ) and NEI-VFQ25.",
+        "source_block_ids": [
+          "p5_para_20",
+          "p5_para_21",
+          "p5_para_22",
+          "p5_para_23"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "heading_path": "1. SYNOPSIS > Exploratory (for RP):",
+        "chunk_type": "paragraph",
+        "id": "0a451ba9-d071-450d-bc20-3edc09f1206d",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.015625
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. Subject lacks evidence of outer nuclear layer, i.e., containing the nuclei of the retinal photoreceptors as determined by spectral-domain optical coherence tomography (SD- OCT).\n\n2. Considered unsuitable for any reason that may either place the subject at increased risk during participation or interfere with the interpretation of the study outcomes by the Investigator, or the Sponsor after reviewing medical, ocular, and psychiatric history, clinical examination, and laboratory evaluation, as determined by the Investigator, i.e., inability to fixate, high myopia ≥10 diopters, glaucoma, medium haze, other retinal pathologies, and > 3-fold elevation of liver enzymes or > 2-fold elevation of serum creatinine, etc.\n\n3. Previous treatment with a gene-therapy or cell therapy product.\n\n4. Previous treatment with any investigational drug or device within one year.\n\n5. Any contraindications for subretinal injection.\n\n6. Cataract surgery within 3 months. YAG capsulotomy within 1 month. Any other intraocular surgery within 6 months.\n\n7. Breast-feeding, pregnancy, sperm donation or inability to practice strict contraception within the Treatment Observation Period. (Section 8.3.2)\n\n8. Any medical condition with life expectancy < 6 years.",
+        "source_block_ids": [
+          "p8_para_14",
+          "p8_para_15",
+          "p8_para_16",
+          "p8_para_17",
+          "p8_para_18",
+          "p8_para_19",
+          "p9_para_3",
+          "p9_para_4"
+        ],
+        "page_numbers": [
+          8,
+          9
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the first 3 subjects: > Exclusion Criteria for Adult RP:",
+        "chunk_type": "paragraph",
+        "id": "230d79a0-75c8-416e-86b8-d10b0265a94d",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.014925372786819935
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "This is a multicenter, open-label, dose ranging study in two subgroups of subjects with three consecutive cohorts.",
+        "source_block_ids": [
+          "p6_para_4"
+        ],
+        "page_numbers": [
+          6
+        ],
+        "heading_path": "1. SYNOPSIS > Study Design and Methodology:",
+        "chunk_type": "paragraph",
+        "id": "525888d8-d4de-4b63-8a34-bbe5ba37d4dd",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.014705882407724857
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Approximately seven study centers in the US.",
+        "source_block_ids": [
+          "p5_para_17",
+          "p5_para_18"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "heading_path": "1. SYNOPSIS > Study center(s):",
+        "chunk_type": "paragraph",
+        "id": "90367fd9-6b21-4b65-8a62-67d4950de3d5",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.014285714365541935
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Ocugen\n\n11 Great Valley Parkway\n\nMalvern, PA 19355",
+        "source_block_ids": [
+          "p5_para_5",
+          "p5_para_6",
+          "p5_para_7"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "heading_path": "1. SYNOPSIS > Name of Sponsor/Company:",
+        "chunk_type": "paragraph",
+        "id": "d0467ca4-936a-4911-b2e9-97e8ca247a5b",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.013333333656191826
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Participants who meet eligibility criteria, will be enrolled, and receive a single subretinal injection of OCU400 in one study eye on Day 0 (Baseline).",
+        "source_block_ids": [
+          "p11_para_14"
+        ],
+        "page_numbers": [
+          11
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the first 3 subjects: > Duration of treatment:",
+        "chunk_type": "paragraph",
+        "id": "7804b31a-f4aa-4af5-bab2-73741df03f3b",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.01315789483487606
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "The primary endpoint is safety, determined by the number of Study Drug-related adverse events (SDAE), treatment-emergent adverse events (TEAEs) and serious adverse events (SAEs).",
+        "source_block_ids": [
+          "p12_para_5"
+        ],
+        "page_numbers": [
+          12
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the first 3 subjects: > Safety Endpoint:",
+        "chunk_type": "paragraph",
+        "id": "004da69d-3a8f-4952-9872-ace446bce82d",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.012987012974917889
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. Any symptom of central nervous system involvement/disease that would impact the ability to measure visual function\n\n2. Considered unsuitable for any reason that may either place the patient at increased risk during participation or interfere with the interpretation of the study safety and efficacy outcomes by the Investigator, after reviewing medical, ocular, and psychiatric history, clinical examination, and laboratory evaluation, as determined by the Investigator, i.e., high myopia ≥10 diopters, glaucoma, insufficient ocular media clarity and pupil dilation, other retinal pathologies, unstable systemic disease, etc.\n\n3. Any contraindications for subretinal injection.\n\n4. Any intraocular surgery within 6 months.\n\n5. Active ocular/intraocular infection (e.g., conjunctivitis, keratitis, scleritis, endophthalmitis)\n\n6. Breast-feeding, pregnancy, sperm donation or inability to practice strict contraception within the Treatment Observation Period.",
+        "source_block_ids": [
+          "p9_para_11",
+          "p9_para_12",
+          "p9_para_13",
+          "p9_para_14",
+          "p9_para_15",
+          "p9_para_16"
+        ],
+        "page_numbers": [
+          9
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the first 3 subjects: > Exclusion Criteria for Adult LCA:",
+        "chunk_type": "paragraph",
+        "id": "3ffff489-89b2-470e-b8e8-861f1663e02d",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.012820512987673283
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. Males or females at least 18 years of age at the time of informed consent.\n\n2. Clinical diagnosis of LCA and confirmed genetic diagnosis of CEP290 mutation.\n\n3. Best corrected visual acuity (BCVA) equal to or worse than LogMAR +0.7 but equal to or better than LogMAR 3.8 (light perception) in the study eye.\n\n4. Detectable outer nuclear layer in the macular region as determined by spectral-domain optical coherence tomography (SD-OCT).",
+        "source_block_ids": [
+          "p9_para_6",
+          "p9_para_7",
+          "p9_para_8",
+          "p9_para_9"
+        ],
+        "page_numbers": [
+          9
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the first 3 subjects: > Inclusion Criteria for Adult LCA:",
+        "chunk_type": "paragraph",
+        "id": "eb8c9109-35f6-4e74-9076-30ce017fb290",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.012500000186264515
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Primary Safety Endpoints\n\nAdverse events and specific types will be described using descriptive methods, including counts, frequencies, percentages, by covariates of gene subtype, age group, eye, dosage level, actual dose, MedRA classifications, and relationship to study procedures.\n\nSecondary Safety Endpoints\n\nChanges from baseline in the secondary safety endpoints will be estimated using summary statistics, graphical displays and statistical modeling using differences, ratios, and cross-tabs as appropriate.\n\nExploratory Efficacy Endpoints\n\nSummary statistics, graphical displays, and statistical modeling approaches will be used to evaluate efficacy endpoints across timepoints, dosing levels in a particular eye, and gene subtype.",
+        "source_block_ids": [
+          "p13_para_13",
+          "p13_para_14",
+          "p13_para_15",
+          "p13_para_16",
+          "p13_para_17",
+          "p13_para_18"
+        ],
+        "page_numbers": [
+          13
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the first 3 subjects: > Statistical methods:",
+        "chunk_type": "paragraph",
+        "id": "d68d614d-c2d4-4d7d-8b2d-0b7b8ebd8afd",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.012195121496915817
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. Biallelic autosomal recessive NR2E3 mutations or autosomal dominant NR2E3 mutations\n\n2. Autosomal dominant RHO mutations",
+        "source_block_ids": [
+          "p6_para_6",
+          "p6_para_7"
+        ],
+        "page_numbers": [
+          6
+        ],
+        "heading_path": "1. SYNOPSIS > Up to 24 subjects with at least 9 subjects from each of the following subgroups will be selected:",
+        "chunk_type": "paragraph",
+        "id": "20f8104d-5312-40f3-899b-f957e3a05c65",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.012048192322254181
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. Males or females 6- 17 years of age (inclusive) at the time of parental permission and/or assent, whichever is applicable.\n\n2. Confirmed genetic diagnosis of biallelic autosomal recessive NR2E3 mutations or autosomal dominant NR2E3 mutation for Subgroup 1 or autosomal dominant RHO mutations for Subgroup 2.\n\n3. BCVA ≤ 20/32 or visual field less than 20° in any meridian, as measured by a III4e isopter or equivalent in study eye.\n\n4. Able to perform a Multi-Luminance Mobility Testing (MLMT) using study eye, but unable to pass the MLMT at 1 lux, the lowest luminance level tested.\n\n· Subject eligibility for NR2E3 and RHO subgroups who pass the MLMT at 1 lux may be assessed on a case-by-case basis by Ocugen following review of results of screening assessments",
+        "source_block_ids": [
+          "p9_para_18",
+          "p9_para_19",
+          "p9_para_20",
+          "p9_para_21",
+          "p9_para_22"
+        ],
+        "page_numbers": [
+          9
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the first 3 subjects: > Inclusion Criteria for Pediatric RP:",
+        "chunk_type": "paragraph",
+        "id": "2494f5ad-6b85-4254-9541-32c210b4bc9e",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.015625
+      }
+    ]
+  },
+  "ich_guidelines": {
+    "total_sections": 2,
+    "results": {
+      "total_sections": 1,
+      "results": [
+        {
+          "section_path": "2. SYNOPSIS",
+          "source_type": "ich",
+          "guideline_text": "A brief synopsis (usually limited to 3 pages) that summarises the study should be provided (see Annex I of the guideline for an example of a synopsis format used in Europe). The synopsis should include numerical data to illustrate results, not just text or p-values.",
+          "headings": []
+        }
+      ]
+    }
+  }
+}

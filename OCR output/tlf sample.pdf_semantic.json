@@ -1,0 +1,147 @@
+{
+  "doc_id": "tlf sample.pdf",
+  "blocks": [
+    {
+      "block_type": "heading",
+      "level": 1,
+      "text": "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients",
+      "page_number": 1,
+      "container_id": "bb7a57a9-642a-48cc-93bc-f9d230eb4090",
+      "container_type": "table_title",
+      "container_path": [
+        "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients"
+      ]
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients",
+      "table_context_path": [
+        "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Cohort Genetic Subtype Subject",
+        "System Organ Class / Preferred Term / Reported Term",
+        "Specify Site [1]",
+        "Start Date (Day) / End Date (Day)",
+        "Serious? [2]/ Severity",
+        "Outcome [3]/ Action Taken/ Treatment Required/ Caused study discontinuation",
+        "Related to study drug/ Related to study surgery/ Related to other study procedures"
+      ],
+      "rows": [
+        [
+          "Cohort 1",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "RHO MUTATION 001-002",
+          "Eye disorders /",
+          "OD*",
+          "2022-03-29 (1) /",
+          "No/",
+          "1 /",
+          "NOT RELATED /"
+        ],
+        [
+          "",
+          "Ocular discomfort / EYE DISCOMFORT",
+          "",
+          "2022-03-29 (10)",
+          "No",
+          "NOT APPLICABLE / CONCOMITANT MEDICATION / No",
+          "RELATED / NOT RELATED"
+        ],
+        [
+          "",
+          "Eye disorders /",
+          "OD*",
+          "2022-03-30 (2) / 2022-03-30 (9)",
+          "No/",
+          "1 / NOT APPLICABLE / NONE / No",
+          "NOT RELATED / RELATED / NOT RELATED"
+        ],
+        [
+          "",
+          "Eyelid ptosis / PTOSIS OD",
+          "",
+          "",
+          "No",
+          "",
+          ""
+        ]
+      ],
+      "table_markdown": "| Cohort Genetic Subtype Subject | System Organ Class / Preferred Term / Reported Term | Specify Site [1] | Start Date (Day) / End Date (Day) | Serious? [2]/ Severity | Outcome [3]/ Action Taken/ Treatment Required/ Caused study discontinuation | Related to study drug/ Related to study surgery/ Related to other study procedures |\n|---|---|---|---|---|---|---|\n| Cohort 1 |  |  |  |  |  |  |\n| RHO MUTATION 001-002 | Eye disorders / | OD* | 2022-03-29 (1) / | No/ | 1 / | NOT RELATED / |\n|  | Ocular discomfort / EYE DISCOMFORT |  | 2022-03-29 (10) | No | NOT APPLICABLE / CONCOMITANT MEDICATION / No | RELATED / NOT RELATED |\n|  | Eye disorders / | OD* | 2022-03-30 (2) / 2022-03-30 (9) | No/ | 1 / NOT APPLICABLE / NONE / No | NOT RELATED / RELATED / NOT RELATED |\n|  | Eyelid ptosis / PTOSIS OD |  |  | No |  |  |",
+      "page_number": 1,
+      "container_id": "59073d38-99a0-483d-8839-a1516d97ab8b",
+      "container_type": "table_group",
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Treatment-emergent adverse events (TEAEs) are defined as AEs that started after the date/time of study drug administration. AE reported terms were coded using the Medical Dictionary for Regulatory Activities (MedDRA) Version 24.1.\n\nDay - Date - Date of Injection (+ 1 if Date >> Date of Injection). Day is calculated only for complete dates.\n\n[1] OD = Ocular dexter (right) ; OS - Ocular sinister (left) ; OU - Both eyes. * indicates study eye.\n\n[2] Serious ?: 1 = Death; 2 - Life-threatening; 3 - Hospitalization (initial or prolonged) ; 4 - Disability or permanent damage; 5 = Congenital anomaly/birth defect; 6 - Other important medical event\n\n[3] Outcome: 1 - Recovered or Resolved, 2 - Recovered or Resolved with Sequelae, 3 - Recovering or Resolving, 4 - Not Recovered or Not Resolved, 5 - Fatal, 6 - Unknown.",
+      "page_number": 1,
+      "container_id": "bb7a57a9-642a-48cc-93bc-f9d230eb4090",
+      "container_type": "table_title",
+      "container_path": [
+        "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients"
+      ],
+      "source_block_ids": [
+        "p1_para_31",
+        "p1_para_32",
+        "p1_para_33",
+        "p1_para_34",
+        "p1_para_35"
+      ]
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients",
+      "table_context_path": [
+        "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [],
+      "rows": [
+        [
+          "SDTM",
+          "date:",
+          "20AUG2024",
+          "14:37"
+        ],
+        [
+          "Analysis",
+          "date:",
+          "26AUG2024",
+          "16:54"
+        ]
+      ],
+      "table_markdown": "|  |\n||\n| SDTM | date: | 20AUG2024 | 14:37 |\n| Analysis | date: | 26AUG2024 | 16:54 |",
+      "page_number": 1,
+      "container_id": "aa7aeb4f-d0c5-4e94-857e-e3be5641bb96",
+      "container_type": "table_group",
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Program name: 1teae.sas",
+      "page_number": 1,
+      "container_id": "bb7a57a9-642a-48cc-93bc-f9d230eb4090",
+      "container_type": "table_title",
+      "container_path": [
+        "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients"
+      ],
+      "source_block_ids": [
+        "p1_para_36"
+      ]
+    }
+  ]
+}

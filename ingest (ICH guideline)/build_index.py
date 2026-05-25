@@ -739,73 +739,82 @@ import re
 
 ICH_SECTION_PATTERN = re.compile(r"^\d+(\.\d+)*$")
 
-def is_valid_ich_section(section_path: str) -> bool:
-    if not section_path:
-        return False
-    return bool(ICH_SECTION_PATTERN.match(section_path))
+# def is_valid_ich_section(section_path: str) -> bool:
+#     if not section_path:
+#         return False
+#     return bool(ICH_SECTION_PATTERN.match(section_path))
 
 
 VALID_SECTION_PATH_RE = re.compile(r"^\d+(\.\d+)*$")
 
-def is_valid_section_path(section_path: str | None) -> bool:
-    if not section_path:
-        return False
-    return bool(VALID_SECTION_PATH_RE.fullmatch(section_path))
+# def is_valid_section_path(section_path: str | None) -> bool:
+#     if not section_path:
+#         return False
+#     return bool(VALID_SECTION_PATH_RE.fullmatch(section_path))
 
 
 from collections import defaultdict
+SECTION_EXTRACT_RE = re.compile(r"^(\d+(?:\.\d+)*)\s+(.*)")
+
+def extract_section_parts(section_heading: str | None):
+    if not section_heading:
+        return None, None
+
+    match = SECTION_EXTRACT_RE.match(section_heading.strip())
+    if not match:
+        return None, None
+
+    return match.group(1), match.group(2).strip()
+
+
+
 def build_section_chunks(normalized_doc):
-    """
-    Build one section-level chunk per section_path by aggregating
-    heading + all paragraph/rule text under that section.
-    """
+    from collections import defaultdict
 
     sections = defaultdict(list)
     section_titles = {}
-    guideline_name = normalized_doc.get("document_name")
+    guideline_name = normalized_doc.get("doc_id") or normalized_doc.get("document_name")
 
-    # -------------------------------------------------
-    # 1️⃣ Collect blocks by section_path
-    # -------------------------------------------------
+    current_heading = None
+
     for block in normalized_doc.get("blocks", []):
-        section_path = block.get("section_path")
-        if not is_valid_ich_section(section_path):
+        btype = block.get("block_type")
+        text = (block.get("text") or "").strip()
+
+        if btype == "heading":
+            current_heading = text
+            match = SECTION_EXTRACT_RE.match(current_heading)
+            if match:
+                section_path = match.group(1)
+                section_title = match.group(2).strip()
+                section_titles[section_path] = section_title
             continue
 
+        if btype == "paragraph":
+            if not current_heading:
+                continue
 
-        block_type = block.get("block_type")
-        text = (
-            block.get("text")
-            or block.get("content")
-            or block.get("flattened_text")
-            or ""
-        ).strip()
+            match = SECTION_EXTRACT_RE.match(current_heading)
+            if not match:
+                continue
 
-        if not text:
-            continue
+            section_path = match.group(1)
+            section_title = match.group(2).strip()
 
-        # Capture section title from heading
-        if block_type == "heading":
-            section_titles[section_path] = block.get("section_title") or text
-            continue
+            para_text = text
+            if not para_text:
+                continue
 
-        # Collect paragraph / rule text
-        sections[section_path].append(text)
+            sections[section_path].append(para_text)
+            section_titles[section_path] = section_title
 
-    # -------------------------------------------------
-    # 2️⃣ Build section chunks
-    # -------------------------------------------------
     section_chunks = []
-
     for section_path, texts in sections.items():
         if not texts:
             continue
 
-        title = section_titles.get(section_path)
-
-        full_text = (
-            f"{section_path} {title}\n\n" if title else f"{section_path}\n\n"
-        ) + "\n\n".join(texts)
+        title = section_titles.get(section_path, "")
+        full_text = f"{section_path} {title}\n\n" + "\n\n".join(texts)
 
         section_chunks.append({
             "text": full_text,
@@ -813,7 +822,7 @@ def build_section_chunks(normalized_doc):
                 "guideline": guideline_name,
                 "section_path": section_path,
                 "section_title": title,
-            },
+            }
         })
 
     return section_chunks
@@ -895,90 +904,119 @@ def main():
             continue
 
         # ----------------------------------------------------------
-        # 1️⃣ SECTION-LEVEL (HEADING) CHUNKS
+        # HEADING CHUNKS (ONLY heading text, no paragraph merging)
         # ----------------------------------------------------------
-        section_chunks = build_section_chunks(normalized)
-        
-        print(f"   → Built {len(section_chunks)} section chunks")
 
-        section_texts = [c["text"] for c in section_chunks]
-        section_vectors = batch_embed(section_texts)
+        heading_chunks = [
+            b for b in normalized.get("blocks", [])
+            if b.get("block_type") == "heading"
+        ]
 
-        for chunk, vector in zip(section_chunks, section_vectors):
+        heading_texts = [h["text"] for h in heading_chunks]
+        heading_vectors = batch_embed(heading_texts)
+
+        for heading, vector in zip(heading_chunks, heading_vectors):
+            match = SECTION_EXTRACT_RE.match(heading["text"].strip())
+
+            if not match:
+                continue
+
+            section_path = match.group(1)
+            section_title = match.group(2).strip()
+
             documents_to_upload.append({
                 "id": str(uuid.uuid4()),
                 "doc_id": doc_id,
                 "source_type": "ich",
-                "guideline": chunk["metadata"].get("guideline"),
-                "section_path": chunk["metadata"].get("section_path"),
-                "section_title": chunk["metadata"].get("section_title"),
-                "block_type": "heading",        # ✅ section anchor
-                "text": chunk["text"],
+                "guideline": doc_id,
+                "section_path": section_path,
+                "section_title": section_title,
+                "block_type": "heading",
+                "rule_type": None,
+                "page_number": heading.get("page_number"),
+                "text": heading["text"],
                 "vector": vector,
             })
 
+
         # ----------------------------------------------------------
-        # 2️⃣ PARAGRAPH + RULE CHUNKS
+        # PARAGRAPH CHUNKS (structured)
         # ----------------------------------------------------------
+        
         atomic_chunks = chunk_ich_units(normalized)
-        print(f"   → Built {len(atomic_chunks)} atomic chunks")
-
-        # ----------------------------------------------------------
-        # FILTER INVALID PARAGRAPHS (INGESTION HYGIENE)
-        # ----------------------------------------------------------
-        clean_atomic_chunks = []
-
-        for chunk in atomic_chunks:
-            text = chunk["text"]
-            meta = chunk["metadata"]
-
-            block_type = meta.get("block_type", "paragraph")
-            rule_type = meta.get("rule_type")
-            section_path = meta.get("section_path")
-
-            # ❌ Drop anything without a valid section
-            if not is_valid_section_path(section_path):
-                continue
-
-            # ✅ Always keep rules (they already passed section validation)
-            if rule_type:
-                clean_atomic_chunks.append(chunk)
-                continue
-
-            # ✅ Keep only real narrative paragraphs
-            if block_type == "paragraph" and is_valid_ich_paragraph(text):
-                clean_atomic_chunks.append(chunk)
-
-        atomic_chunks = clean_atomic_chunks
-        print(f"   → Retained {len(atomic_chunks)} clean atomic chunks")
-
-
-
 
         atomic_texts = [c["text"] for c in atomic_chunks]
         atomic_vectors = batch_embed(atomic_texts)
 
         for chunk, vector in zip(atomic_chunks, atomic_vectors):
 
-            rule_type = chunk["metadata"].get("rule_type")
+            meta = chunk["metadata"]
+            print("PARA META:", meta)
 
-            # 🔐 rule_type MUST be string (index expects Edm.String)
-            if isinstance(rule_type, list):
-                rule_type = ", ".join(rule_type) if rule_type else None
+            section_path = meta.get("section_path")
+            section_title = meta.get("section_title")
+
+            # fallback if section_path missing
+            if not section_path:
+                section_heading = meta.get("section_heading")
+                if not section_heading:
+                    continue
+
+                match = SECTION_EXTRACT_RE.match(section_heading.strip())
+                if not match:
+                    continue
+
+                section_path = match.group(1)
+                section_title = match.group(2).strip()
 
             documents_to_upload.append({
                 "id": str(uuid.uuid4()),
                 "doc_id": doc_id,
                 "source_type": "ich",
-                "guideline": chunk["metadata"].get("guideline"),
-                "section_path": chunk["metadata"].get("section_path"),
-                "section_title": chunk["metadata"].get("section_title"),
-                "block_type": chunk["metadata"].get("block_type", "paragraph"),
-                "rule_type": rule_type,
-                "page_number": chunk["metadata"].get("page_number"),
+                "guideline": doc_id,
+                "section_path": section_path,
+                "section_title": section_title,
+                "block_type": "paragraph",
+                "rule_type": meta.get("rule_type"),
+                "page_number": meta.get("page_number"),
                 "text": chunk["text"],
                 "vector": vector,
             })
+
+        # ----------------------------------------------------------
+        # FILTER INVALID PARAGRAPHS (INGESTION HYGIENE)
+        # ----------------------------------------------------------
+        # clean_atomic_chunks = []
+
+        # for chunk in atomic_chunks:
+        #     text = chunk["text"]
+        #     meta = chunk["metadata"]
+
+        #     block_type = meta.get("block_type", "paragraph")
+        #     rule_type = meta.get("rule_type")
+        #     section_heading = meta.get("section_heading")
+
+        #     if not section_heading:
+        #         continue
+
+        #     match = re.match(r"^(\d+(\.\d+)*)", section_heading)
+        #     if not match:
+        #         continue
+
+        #     section_path = match.group(1)
+
+        #     # ✅ Always keep rules (they already passed section validation)
+        #     if rule_type:
+        #         clean_atomic_chunks.append(chunk)
+        #         continue
+
+        #     # ✅ Keep only real narrative paragraphs
+        #     if block_type == "paragraph" and is_valid_ich_paragraph(text):
+        #         clean_atomic_chunks.append(chunk)
+
+        # atomic_chunks = clean_atomic_chunks
+        print("Skipping paragraph filtering for debugging")
+        print(f"   → Retained {len(atomic_chunks)} clean atomic chunks")
 
     # --------------------------------------------------------------
     # UPLOAD
@@ -986,8 +1024,18 @@ def main():
     if documents_to_upload:
         print(f"\n🚀 Uploading {len(documents_to_upload)} total chunks...")
         result = search_client.upload_documents(documents_to_upload)
+
+        failed = [r for r in result if not r.succeeded]
+
+        print("Upload results:")
+        print("Total:", len(result))
+        print("Failed:", len(failed))
+
+        if failed:
+            print("Some documents failed:")
+            for f in failed[:5]:
+                print(f.key, f.error_message)
         print("✅ ICH ingestion complete")
-        print(result)
     else:
         print("⚠️ No ICH documents to upload")
 

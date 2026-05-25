@@ -1,0 +1,22 @@
+{
+  "section": "SYNOPSIS",
+  "timestamp": "2026-04-03T20:38:33.004096",
+  "source": {
+    "total_chunks": 0,
+    "results": []
+  },
+  "ich_guidelines": {
+    "total_sections": 2,
+    "results": {
+      "total_sections": 1,
+      "results": [
+        {
+          "section_path": "2. SYNOPSIS",
+          "source_type": "ich",
+          "guideline_text": "A brief synopsis (usually limited to 3 pages) that summarises the study should be provided (see Annex I of the guideline for an example of a synopsis format used in Europe). The synopsis should include numerical data to illustrate results, not just text or p-values.",
+          "headings": []
+        }
+      ]
+    }
+  }
+}

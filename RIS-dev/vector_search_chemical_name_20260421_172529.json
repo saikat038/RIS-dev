@@ -1,0 +1,55 @@
+{
+  "section": "Chemical Name",
+  "timestamp": "2026-04-21T17:25:29.270061",
+  "source": {
+    "total_chunks": 2,
+    "results": [
+      {
+        "doc_id": "OCU400-301_Investigator_Brochure_Edition_No.5.pdf",
+        "table_context_heading": "Sponsor:",
+        "table_headers": [
+          "OCU400-301",
+          "Ocugen, Inc."
+        ],
+        "table_rows": "[\"Investigator's Brochure\", \"\"]\n[\"Table of Contents\", \"\"]\n[\"Table of Contents\", \"3\"]\n[\"LIST OF TABLES\", \"6\"]\n[\"LIST OF FIGURES\", \"7\"]\n[\"LIST OF ABBREVIATIONS\", \"8\"]\n[\"1. SUMMARY\", \"10\"]\n[\"2. INTRODUCTION\", \"13\"]\n[\"2.1. Disease Background\", \"13\"]\n[\"2.1.1. Retinitis Pigmentosa\", \"13\"]\n[\"2.1.2. Leber Congenital Amaurosis\", \"15\"]\n[\"2.2. Clinical Need\", \"16\"]\n[\"2.3. Therapeutic Rationale\", \"16\"]\n[\"3. PHYSICAL, CHEMICAL, AND PHARMACEUTICAL PROPERTIES\", \"\"]\n[\"AND FORMULATIONS\", \"23\"]\n[\"3.1. Physical Properties\", \"23\"]\n[\"3.2. Chemical Properties\", \"23\"]\n[\"3.2.1. Chemical Name\", \"23\"]\n[\"3.2.2. Structural Formula\", \"23\"]\n[\"3.2.3. Molecular Formula\", \"23\"]\n[\"3.2.4. Target Product Profile\", \"23\"]\n[\"3.2.5. Components of the Drug Product\", \"24\"]\n[\"3.3. Description of the Manufacturing Process\", \"25\"]\n[\"3.3.1. Overview of Manufacturing Process of OCU400 Drug Substance\", \"25\"]\n[\"3.4. Description and Composition of the Drug Product\", \"25\"]\n[\"3.4.1. Description\", \"25\"]\n[\"3.4.2. Description of Dosage Form\", \"26\"]\n[\"3.4.3. Composition\", \"26\"]\n[\"3.5. Storage Conditions\", \"27\"]\n[\"3.6. Conclusions\", \"27\"]\n[\"4. NON-CLINICAL STUDIES\", \"27\"]\n[\"4.1. Nonclinical Pharmacology\", \"28\"]\n[\"4.1.1. In Vitro Pharmacology\", \"29\"]\n[\"4.1.2. In Vivo Pharmacology\", \"29\"]",
+        "text": "Sponsor:\nSponsor:\nOCU400-301 | Ocugen, Inc.\n----------------------------------------\nInvestigator's Brochure | \nTable of Contents | \nTable of Contents | 3\nLIST OF TABLES | 6\nLIST OF FIGURES | 7\nLIST OF ABBREVIATIONS | 8\n1. SUMMARY | 10\n2. INTRODUCTION | 13\n2.1. Disease Background | 13\n2.1.1. Retinitis Pigmentosa | 13\n2.1.2. Leber Congenital Amaurosis | 15\n2.2. Clinical Need | 16\n2.3. Therapeutic Rationale | 16\n3. PHYSICAL, CHEMICAL, AND PHARMACEUTICAL PROPERTIES | \nAND FORMULATIONS | 23\n3.1. Physical Properties | 23\n3.2. Chemical Properties | 23\n3.2.1. Chemical Name | 23\n3.2.2. Structural Formula | 23\n3.2.3. Molecular Formula | 23\n3.2.4. Target Product Profile | 23\n3.2.5. Components of the Drug Product | 24\n3.3. Description of the Manufacturing Process | 25\n3.3.1. Overview of Manufacturing Process of OCU400 Drug Substance | 25\n3.4. Description and Composition of the Drug Product | 25\n3.4.1. Description | 25\n3.4.2. Description of Dosage Form | 26\n3.4.3. Composition | 26\n3.5. Storage Conditions | 27\n3.6. Conclusions | 27\n4. NON-CLINICAL STUDIES | 27\n4.1. Nonclinical Pharmacology | 28\n4.1.1. In Vitro Pharmacology | 29\n4.1.2. In Vivo Pharmacology | 29",
+        "source_block_ids": [],
+        "page_numbers": [
+          3
+        ],
+        "heading_path": "Sponsor:",
+        "chunk_type": "table",
+        "id": "1ff59657-3392-4a2e-9137-ccdbf338de28",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Sponsor:'. Interpret the rows using the column headers.",
+        "@search.score": 0.03102453239262104
+      },
+      {
+        "doc_id": "OCU400-301_Investigator_Brochure_Edition_No.5.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Human Nuclear Hormone Receptor NR2E3 (Nuclear Receptor Subfamily 2, Group E, Member 3).",
+        "source_block_ids": [
+          "p23_para_19"
+        ],
+        "page_numbers": [
+          23
+        ],
+        "heading_path": "3. PHYSICAL, CHEMICAL, AND PHARMACEUTICAL PROPERTIES AND FORMULATIONS > 3.2. Chemical Properties > 3.2.1. Chemical Name",
+        "chunk_type": "paragraph",
+        "id": "29c634c0-7630-468c-82cc-ae87f0c385d4",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.03095238283276558
+      }
+    ]
+  },
+  "ich_guidelines": {
+    "total_sections": 2,
+    "results": {
+      "total_sections": 0,
+      "results": []
+    }
+  }
+}

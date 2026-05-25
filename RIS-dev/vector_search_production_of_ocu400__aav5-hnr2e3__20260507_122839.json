@@ -1,0 +1,33 @@
+{
+  "section": "PRODUCTION OF OCU400 (AAV5-HNR2E3)",
+  "timestamp": "2026-05-07T12:28:39.984594",
+  "source": {
+    "total_chunks": 1,
+    "results": [
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "SYNOPSIS 2",
+        "table_headers": [],
+        "table_rows": "[\"1.\", \"INTRODUCTION 9\"]\n[\"OCU400\", \"DS MANUFACTURING PROCESS 10\"]\n[\"2.\", \"PRODUCTION OF OCU400 (AAV5-HNR2E3) 10\"]\n[\"2.1.\", \"Overview of Manufacturing Process for OCU400 (AAV5-hNR2E3) Drug Substance 10\"]\n[\"3.\", \"MATERIALS AND EQUIPMENT 12\"]\n[\"4.\", \"DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS 28\"]\n[\"4.1.\", \"Overview of the Upstream Manufacturing Process 28\"]\n[\"4.2.\", \"Production of Plasmids (Transgene, Helper, and Rep/Cap) 30\"]\n[\"4.3.\", \"Seed Flask Preparation and Inoculation 30\"]\n[\"4.3.1.\", \"Overview of Seed Flask Preparation and Inoculation 30\"]\n[\"4.3.2.\", \"Strain description 30\"]\n[\"4.3.3.\", \"Cell Thaw and Recovery 30\"]\n[\"4.3.4.\", \"Cell Passage 1 34\"]\n[\"4.3.5.\", \"Cell Passage 2 37\"]\n[\"4.3.6.\", \"Cell Passage 3 40\"]\n[\"4.3.7.\", \"Cell Passage 4 43\"]\n[\"4.3.8.\", \"GLP batch (50L) process 47\"]\n[\"4.3.9.\", \"GMP Phase 1/2 Process 47\"]\n[\"4.3.10.\", \"Phase 3 & PPQ Process: 48\"]\n[\"4.3.10.1.\", \"AAV Production in Bioreactor 48\"]\n[\"4.3.10.2.\", \"Transfection 48\"]\n[\"4.3.10.3.\", \"In-Process Testing of Control and Harvest 50\"]\n[\"5.\", \"DOWNSTREAM PRODUCTION OF OCU400 (AAV5-HNR2E3)56\"]\n[\"5.1.\", \"Overview of Downstream Production Process 56\"]",
+        "text": "SYNOPSIS 2\nSYNOPSIS 2\n1. | INTRODUCTION 9\nOCU400 | DS MANUFACTURING PROCESS 10\n2. | PRODUCTION OF OCU400 (AAV5-HNR2E3) 10\n2.1. | Overview of Manufacturing Process for OCU400 (AAV5-hNR2E3) Drug Substance 10\n3. | MATERIALS AND EQUIPMENT 12\n4. | DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS 28\n4.1. | Overview of the Upstream Manufacturing Process 28\n4.2. | Production of Plasmids (Transgene, Helper, and Rep/Cap) 30\n4.3. | Seed Flask Preparation and Inoculation 30\n4.3.1. | Overview of Seed Flask Preparation and Inoculation 30\n4.3.2. | Strain description 30\n4.3.3. | Cell Thaw and Recovery 30\n4.3.4. | Cell Passage 1 34\n4.3.5. | Cell Passage 2 37\n4.3.6. | Cell Passage 3 40\n4.3.7. | Cell Passage 4 43\n4.3.8. | GLP batch (50L) process 47\n4.3.9. | GMP Phase 1/2 Process 47\n4.3.10. | Phase 3 & PPQ Process: 48\n4.3.10.1. | AAV Production in Bioreactor 48\n4.3.10.2. | Transfection 48\n4.3.10.3. | In-Process Testing of Control and Harvest 50\n5. | DOWNSTREAM PRODUCTION OF OCU400 (AAV5-HNR2E3)56\n5.1. | Overview of Downstream Production Process 56",
+        "source_block_ids": [],
+        "page_numbers": [
+          3
+        ],
+        "heading_path": "SYNOPSIS 2",
+        "chunk_type": "table",
+        "id": "91fd8b34-b81c-47eb-a048-c6b0775e1841",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'SYNOPSIS 2'. Interpret the rows using the column headers.",
+        "@search.score": 0.019960615783929825
+      }
+    ]
+  },
+  "ich_guidelines": {
+    "total_sections": 2,
+    "results": {
+      "total_sections": 0,
+      "results": []
+    }
+  }
+}

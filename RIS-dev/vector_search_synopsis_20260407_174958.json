@@ -1,0 +1,791 @@
+{
+  "section": "SYNOPSIS",
+  "timestamp": "2026-04-07T17:49:58.920045",
+  "source": {
+    "total_chunks": 36,
+    "results": [
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > Country:\n\nUS",
+        "source_block_ids": [
+          "p5_para_10",
+          "p5_para_11",
+          "p5_para_13",
+          "p5_para_12"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "heading_path": "1. SYNOPSIS > Country:",
+        "chunk_type": "paragraph",
+        "id": "e9fc7790-deee-44cb-84d2-80b72c1d33bb",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.0317540317773819
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > Name of Investigational Product:\n\nOCU410",
+        "source_block_ids": [
+          "p5_para_8"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "heading_path": "1. SYNOPSIS > Name of Investigational Product:",
+        "chunk_type": "paragraph",
+        "id": "5ff7bcbe-8e5d-4c3e-bc69-1dcb5e1b03bb",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.03151364624500275
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > Name of Sponsor/Company:\n\nOcugen, Inc.\n\n11 Great Valley Parkway\n\nMalvern, PA 19355",
+        "source_block_ids": [
+          "p5_para_4",
+          "p5_para_5",
+          "p5_para_6"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "heading_path": "1. SYNOPSIS > Name of Sponsor/Company:",
+        "chunk_type": "paragraph",
+        "id": "d5f9017d-7053-49d5-bd88-2494b81c8121",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.03109932318329811
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > Title of Study:\n\nA Phase 1/2 Study to Assess the Safety and Efficacy of OCU410 for Geographic Atrophy Secondary to Dry Age-Related Macular Degeneration (AMD).",
+        "source_block_ids": [
+          "p5_para_15",
+          "p5_para_16",
+          "p5_para_17"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "heading_path": "1. SYNOPSIS > Title of Study:",
+        "chunk_type": "paragraph",
+        "id": "6f86a433-b523-4409-b611-91d726004ad8",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.029487181454896927
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > Exploratory:\n\nTo assess change in prospectively collected functional and structural ocular parameters and quality-of-life measures.",
+        "source_block_ids": [
+          "p5_para_22",
+          "p5_para_23",
+          "p5_para_24",
+          "p5_para_25",
+          "p5_para_26"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "heading_path": "1. SYNOPSIS > Exploratory:",
+        "chunk_type": "paragraph",
+        "id": "9913d743-d0d1-4168-b057-c1e5f06c53cb",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.029323630034923553
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > Note on Choroidal Neovascularization (CNV):\n\nNo subjects were excluded from participating in the study due to the history of CNV.",
+        "source_block_ids": [
+          "p8_para_5",
+          "p8_para_6",
+          "p8_para_7",
+          "p8_para_8"
+        ],
+        "page_numbers": [
+          8
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > Note on Choroidal Neovascularization (CNV):",
+        "chunk_type": "paragraph",
+        "id": "88c83bb4-7d5f-4e9e-bf9e-f98e862c2d89",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.028039216995239258
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Investigational Product, Dosage, and Mode of Administration:\n\nSubsequent meetings continue this pattern until final data is collected and reviewed\n\nSubjects #1-51\n\nFinal DSMB Meeting\n\n12-month data\n\nThe data review timepoint will be modified according to availability of data.",
+        "source_block_ids": [
+          "p13_para_43",
+          "p13_para_45",
+          "p13_para_44",
+          "p13_para_46",
+          "p13_para_47"
+        ],
+        "page_numbers": [
+          13
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Investigational Product, Dosage, and Mode of Administration:",
+        "chunk_type": "paragraph",
+        "id": "ca1718e5-129d-47a6-8641-62748191c0cb",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.026584506034851074
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > Study Objectives:\n\nratios, which correlate with photoreceptor function, disease progression, and treatment response in GA.",
+        "source_block_ids": [
+          "p6_para_3"
+        ],
+        "page_numbers": [
+          6
+        ],
+        "heading_path": "1. SYNOPSIS > Study Objectives:",
+        "chunk_type": "paragraph",
+        "id": "1bd2baea-e3d3-4009-aab9-a0432cb7914e",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.026500526815652847
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows: > The primary endpoint is safety, determined by the number of:\n\n· Treatment-Emergent Adverse Events (TEAEs)\n\n· Related TEAEs\n\n· Treatment-Emergent Serious Adverse Events (TESAEs)\n\n· Severe TEAEs",
+        "source_block_ids": [
+          "p17_para_19",
+          "p17_para_20",
+          "p17_para_21",
+          "p17_para_22"
+        ],
+        "page_numbers": [
+          17
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows: > The primary endpoint is safety, determined by the number of:",
+        "chunk_type": "paragraph",
+        "id": "500110c8-e0b9-4975-a97a-503b92e8d9c5",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.026084009557962418
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Note:\n\nData will be collected for the untreated eye at Baseline, 3-month, 6-month, 9-month, 12- month, and early termination visits.",
+        "source_block_ids": [
+          "p14_para_3",
+          "p14_para_4",
+          "p14_para_5",
+          "p14_para_6"
+        ],
+        "page_numbers": [
+          14
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Note:",
+        "chunk_type": "paragraph",
+        "id": "a95de16b-7bea-4963-88b3-cfa531066daf",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.02603648416697979
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": "Investigational Product, Dosage, and Mode of Administration:",
+        "table_headers": [
+          "DSMB Review",
+          "1-Month",
+          "3-Month",
+          "6-Month",
+          "9-Month",
+          "12-Month"
+        ],
+        "table_rows": "[\"15 Subjects\", \"✕\", \"✕\", \"✕\", \"✕\", \"✕\"]\n[\"15 Subjects\", \"✕\", \"✕\", \"✕\", \"✕\", \"✕\"]\n[\"21 Subjects\", \"✕\", \"✕\", \"✕\", \"✕\", \"✕\"]",
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Investigational Product, Dosage, and Mode of Administration:\nInvestigational Product, Dosage, and Mode of Administration:\nDSMB Review | 1-Month | 3-Month | 6-Month | 9-Month | 12-Month\n----------------------------------------\n15 Subjects | ✕ | ✕ | ✕ | ✕ | ✕\n15 Subjects | ✕ | ✕ | ✕ | ✕ | ✕\n21 Subjects | ✕ | ✕ | ✕ | ✕ | ✕",
+        "source_block_ids": [],
+        "page_numbers": [
+          13
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Investigational Product, Dosage, and Mode of Administration:",
+        "chunk_type": "table",
+        "id": "73fbe12b-c532-40d8-bae4-8cd6b84e9d1c",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Investigational Product, Dosage, and Mode of Administration:'. Interpret the rows using the column headers.",
+        "@search.score": 0.02418670430779457
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > Study Design and Methodology:\n\nPhase 1 is a multicenter, open-label, dose-ranging/dose-escalating study that will enroll up to 18 subjects.\n\nA 3+3 design will be used for sequential dose-escalation cohorts in which subjects will receive a single subretinal injection of OCU410 in the study eye on Day 1.",
+        "source_block_ids": [
+          "p5_para_19",
+          "p5_para_20"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "heading_path": "1. SYNOPSIS > Study Design and Methodology:",
+        "chunk_type": "paragraph",
+        "id": "24699e12-950b-4b32-b947-a40d1cafb372",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.023796193301677704
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": "Investigational Product, Dosage, and Mode of Administration:",
+        "table_headers": [
+          "DSMB Meeting #",
+          "Triggering Data Availability (whichever occurs first)",
+          "Subjects Reviewed",
+          "Data Interval Reviewed"
+        ],
+        "table_rows": "[\"1 st DSMB Meeting\", \"1-month safety data (First 15 subjects)\", \"Subjects #1-15\", \"1-month data\"]\n[\"2nd DSMB Meeting\", \"1-month safety data (Second 15 subjects)\", \"Subjects #16-30\", \"1-month data\"]\n[\"3rd DSMB Meeting\", \"Either: Next scheduled interval (e.g., 6- month) from first group OR 3-month data from the second group of 15 subjects (#16- 30) OR 1-month data from the final group of subjects (#31-51)\", \"Subjects #1-15 (6-month) OR Subjects #15-30 (3-month) OR Subjects #31-51 (1-month)\", \"6-month data OR 3-month data OR 1-month data\"]",
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Investigational Product, Dosage, and Mode of Administration:\nInvestigational Product, Dosage, and Mode of Administration:\nDSMB Meeting # | Triggering Data Availability (whichever occurs first) | Subjects Reviewed | Data Interval Reviewed\n----------------------------------------\n1 st DSMB Meeting | 1-month safety data (First 15 subjects) | Subjects #1-15 | 1-month data\n2nd DSMB Meeting | 1-month safety data (Second 15 subjects) | Subjects #16-30 | 1-month data\n3rd DSMB Meeting | Either: Next scheduled interval (e.g., 6- month) from first group OR 3-month data from the second group of 15 subjects (#16- 30) OR 1-month data from the final group of subjects (#31-51) | Subjects #1-15 (6-month) OR Subjects #15-30 (3-month) OR Subjects #31-51 (1-month) | 6-month data OR 3-month data OR 1-month data",
+        "source_block_ids": [],
+        "page_numbers": [
+          13
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Investigational Product, Dosage, and Mode of Administration:",
+        "chunk_type": "table",
+        "id": "937eaeb6-07b5-4bd7-aab1-65a84160f21b",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Investigational Product, Dosage, and Mode of Administration:'. Interpret the rows using the column headers.",
+        "@search.score": 0.02326839789748192
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Exploratory Endpoints:\n\n· To assess change in prospectively collected functional and structural ocular parameters and quality-of-life measures.",
+        "source_block_ids": [
+          "p11_para_14"
+        ],
+        "page_numbers": [
+          11
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Exploratory Endpoints:",
+        "chunk_type": "paragraph",
+        "id": "a97432a1-9082-4b51-b43a-bb0164144092",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.02270408160984516
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Control Group:\n\nSubjects will not receive treatment if randomized to control group",
+        "source_block_ids": [
+          "p11_para_19",
+          "p11_para_20",
+          "p11_para_21",
+          "p11_para_22"
+        ],
+        "page_numbers": [
+          11
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Control Group:",
+        "chunk_type": "paragraph",
+        "id": "13e887a0-2343-43aa-892b-1757d0471cc7",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.022446688264608383
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Investigational Product, Dosage, and Mode of Administration:\n\nSchema for Phase 1/ 2 Trial\n\nMTD established from Phase 1 trial\n\nPhase 2 Randomization 1:1:1\n\nPhase 1 Dose-escalation 3+3+3 Design\n\nMedium-dose Group n=17\n\nHigh-dose Group n=17\n\nControl Group n=17",
+        "source_block_ids": [
+          "p12_para_3",
+          "p12_para_4",
+          "p12_para_6",
+          "p12_para_5",
+          "p12_para_8",
+          "p12_para_7",
+          "p12_para_9"
+        ],
+        "page_numbers": [
+          12
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Investigational Product, Dosage, and Mode of Administration:",
+        "chunk_type": "paragraph",
+        "id": "78705994-4618-466c-a35c-642abf16b2d8",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.022245638072490692
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Secondary Efficacy Endpoint:\n\n· Changes in visual function as assessed by Low-Luminance Visual Acuity (LLVA) in the study eye when compared to the untreated eye control when using ETDRS chart letter score.",
+        "source_block_ids": [
+          "p11_para_12"
+        ],
+        "page_numbers": [
+          11
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Secondary Efficacy Endpoint:",
+        "chunk_type": "paragraph",
+        "id": "cb1c598f-616c-42ae-85ab-fa3c2955f342",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.02183254063129425
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": "Investigational Product, Dosage, and Mode of Administration:",
+        "table_headers": [
+          "DSMB Meeting",
+          "Trigger Event"
+        ],
+        "table_rows": "[\"First DSMB Meeting\", \"The First DSMB meeting will be conducted after the first fifteen (15) subjects complete the 4-week follow-up visit (Month 1).\"]\n[\"Second DSMB Meeting\", \"The Second DSMB meeting will be conducted after the next fifteen (15) subjects complete the 4-week follow-up visit (Month 1).\"]\n[\"Ongoing Safety Review\", \"Subsequent DSMB Meetings/safety data review after the second meeting (scheduled upon collection and review of the 1-Month safety data from the first two groups of 15 subjects each) will be followed as below\"]",
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Investigational Product, Dosage, and Mode of Administration:\nInvestigational Product, Dosage, and Mode of Administration:\nDSMB Meeting | Trigger Event\n----------------------------------------\nFirst DSMB Meeting | The First DSMB meeting will be conducted after the first fifteen (15) subjects complete the 4-week follow-up visit (Month 1).\nSecond DSMB Meeting | The Second DSMB meeting will be conducted after the next fifteen (15) subjects complete the 4-week follow-up visit (Month 1).\nOngoing Safety Review | Subsequent DSMB Meetings/safety data review after the second meeting (scheduled upon collection and review of the 1-Month safety data from the first two groups of 15 subjects each) will be followed as below",
+        "source_block_ids": [],
+        "page_numbers": [
+          12
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Investigational Product, Dosage, and Mode of Administration:",
+        "chunk_type": "table",
+        "id": "28618acb-d42c-42cb-bcec-4eab0f98e8c4",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Investigational Product, Dosage, and Mode of Administration:'. Interpret the rows using the column headers.",
+        "@search.score": 0.021749136969447136
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > NOTE:\n\n✕ · Eligibility for subjects will be determined by the sponsor on a case-by-case basis.\n\n· If laboratory screening tests are out of local laboratory normal ranges and deemed clinically significant, repeat screening tests are permitted once during the screening period to assess eligibility. ✕\n\nPHASE 2",
+        "source_block_ids": [
+          "p10_para_5",
+          "p10_para_6",
+          "p11_para_3"
+        ],
+        "page_numbers": [
+          10,
+          11
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > NOTE:",
+        "chunk_type": "paragraph",
+        "id": "dbf627f8-ce9c-492e-8612-d1818e6a0cab",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.02128623239696026
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Primary Efficacy Endpoint:\n\n· To assess change in GA lesion size measured in mm2 using fundus autofluorescence (FAF)",
+        "source_block_ids": [
+          "p11_para_10"
+        ],
+        "page_numbers": [
+          11
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Primary Efficacy Endpoint:",
+        "chunk_type": "paragraph",
+        "id": "6299862d-c1d2-46ff-a7fb-a29fdd3838d1",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.021193092688918114
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Exclusion Criteria:\n\nMales: Sperm donation or inability to practice strict contraception within the study period (Section 8.4.2)",
+        "source_block_ids": [
+          "p10_para_3"
+        ],
+        "page_numbers": [
+          10
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Exclusion Criteria:",
+        "chunk_type": "paragraph",
+        "id": "f8d65a31-dd5e-4d45-89c5-3c99ac1f9549",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.020973701030015945
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > Inclusion Criteria:\n\n1. Subjects 50 years of age or older.\n\n2. Willing and able to provide written informed consent.\n\n3. BCVA of approximately 21 letters or more using Early Treatment Diabetic Retinopathy Study (ETDRS) chart (20/320 Snellen Equivalent).",
+        "source_block_ids": [
+          "p8_para_10",
+          "p8_para_11",
+          "p8_para_12"
+        ],
+        "page_numbers": [
+          8
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > Inclusion Criteria:",
+        "chunk_type": "paragraph",
+        "id": "1d875d78-79ca-461f-9208-4bdf525dd035",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.020928215235471725
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Investigational Product, Dosage, and Mode of Administration:\n\nThe final DSMB Meeting will be scheduled to review up-to-12-Month safety data for all fifty-one (51) subjects enrolled in Phase 2 part of the study.\n\nDSMB Review Flow\n\nTo clarify further, the DSMB will systematically evaluate each group at these predefined intervals:\n\n· First group (subjects #1-15): Safety reviewed at 1-month, 3-month, 6-month, 9-month and 12-month intervals.\n\n· Second group (subjects #16-30): Safety reviewed at 1-month, 3-month, 6-month, 9-month and 12-month intervals.\n\n· Third group (subjects #31-51): Safety reviewed at 1-month, 3-month, 6-month, 9-month and 12-month intervals.",
+        "source_block_ids": [
+          "p12_para_28",
+          "p12_para_29",
+          "p12_para_30",
+          "p12_para_31",
+          "p12_para_32",
+          "p12_para_33"
+        ],
+        "page_numbers": [
+          12
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Investigational Product, Dosage, and Mode of Administration:",
+        "chunk_type": "paragraph",
+        "id": "f61284d8-e130-4c67-9a16-167ac04c7f8d",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.018790777772665024
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": "Investigational Product, Dosage, and Mode of Administration:",
+        "table_headers": [],
+        "table_rows": "[\"Arms\", \"Dose\"]\n[\"Control Group\", \"No treatment\"]\n[\"Low-dose Group\", \"2.5x 1010 vg/mL in 200 ML\"]\n[\"Medium-dose Group\", \"5x 1010 vg/mL in 200 µL\"]\n[\"High-dose Group\", \"1.5x 1011 vg/mL in 200 ML\"]",
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Investigational Product, Dosage, and Mode of Administration:\nInvestigational Product, Dosage, and Mode of Administration:\nArms | Dose\nControl Group | No treatment\nLow-dose Group | 2.5x 1010 vg/mL in 200 ML\nMedium-dose Group | 5x 1010 vg/mL in 200 µL\nHigh-dose Group | 1.5x 1011 vg/mL in 200 ML",
+        "source_block_ids": [],
+        "page_numbers": [
+          12
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Investigational Product, Dosage, and Mode of Administration:",
+        "chunk_type": "table",
+        "id": "d9eecf04-8e9a-4aa7-b944-611e79208063",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Investigational Product, Dosage, and Mode of Administration:'. Interpret the rows using the column headers.",
+        "@search.score": 0.018783070147037506
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows: > The study for an individual subject will consist of the following periods:\n\n· Screening Period (up to 90 days)\n\n· Treatment Period (Investigational Product (IP) administration on Day 1)\n\n· Treatment Observation Period (up to 1 year after IP administration on Day 1)\n\nThe assessments and measurements will be performed according to the Schedule of Assessments (Table 3).\n\nSubjects are considered to have completed this study if they complete the End of Study (EOS) visit at month 12 after administration of IP. The study duration will be approximately 15 months for each subject (Screening through EOS visit).\n\nSubjects randomized to the control group will be offered the opportunity to receive the study drug following database lock.\n\nAfter the Phase 2 portion of the study has been unblinded and the full complement of safety and efficacy results have been evaluated, subjects in the control group may, at the discretion of the sponsor, enroll in an expansion protocol and receive the OCU410 treatment, provided they still meet all study eligibility criteria.",
+        "source_block_ids": [
+          "p17_para_9",
+          "p17_para_10",
+          "p17_para_11",
+          "p17_para_12",
+          "p17_para_13",
+          "p17_para_14",
+          "p17_para_15"
+        ],
+        "page_numbers": [
+          17
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows: > The study for an individual subject will consist of the following periods:",
+        "chunk_type": "paragraph",
+        "id": "dc685d5c-ffd3-4169-9b8a-b7ed633bca3e",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.017323775216937065
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": "APPENDIX 2. PROTOCOL AMENDMENT HISTORY",
+        "table_headers": [
+          "Applicable section",
+          "Actual",
+          "New (proposed)",
+          "Summary of changes",
+          "Applicable pages in Track Protocol"
+        ],
+        "table_rows": "[\"Section 1. Synopsis Under Phase 1 and Phase 2 sections Section 5.3.4 Exploratory Endpoints\", \"N/A\", \"Exploratory Imaging Endpoint: EZ-RPE Structural Biomarkers High-resolution SD-OCT images will be analyzed using validated deep learning-based algorithms to derive quantitative Ellipsoid Zone (EZ) and Retinal Pigment Epithelium (RPE) parameters as biomarkers of outer retinal integrity. Evaluated parameters include EZ and RPE thickness, loss/preserved areas, and EZ/RPE coupling ratios, which correlate with photoreceptor function, disease progression, and treatment response in GA.\", \"Added exploratory Imaging endpoint\", \"5-6 11-12 19-20\"]\n[\"Figure 3: Cohort Administration Flow\", \"Figure: Expansion cohort 1:1:1 with up to 45 subjects randomized\", \"Figure: expansion cohort updated to reflect protocol study design 1:1:1 randomization of up to 51 subjects in phase 2.\", \"Figure updated to reflect protocol study design 1:1:1 randomization of up to 51 subjects in phase 2.\", \"48\"]\n[\"Figure 2: Study design\", \"\", \"Added M9 to the figure. No impact to the design\", \"N/A\", \"42\"]\n[\"Appendix 1. SAE reporting form\", \"\", \"Added SAE form template\", \"N/A\", \"92-94\"]\n[\"10.1. Exploratory and Efficacy Parameters\", \"\", \"Exploratory Imaging Endpoint: EZ-RPE Structural Biomarkers High-resolution SD-OCT images will be analyzed using validated deep learning-based algorithms to derive quantitative Ellipsoid Zone (EZ) and Retinal Pigment Epithelium (RPE) parameters as biomarkers of outer retinal integrity. Evaluated parameters include EZ and RPE thickness, loss/preserved areas, and EZ/RPE coupling ratios, which correlate with photoreceptor function, disease progression, and treatment response in GA.\", \"N/A\", \"76\"]\n[\"6.6. Visit and Assessment Schedule\", \"\", \"Added visit dated for more clarity\", \"N/A\", \"52-55\"]\n[\"9.6.1. SAE Electronic Data Capture (EDC) 9.6.2. Paper SAE Form (Contingency Reporting)\", \"\", \"SAE Electronic Data Capture (EDC) Paper SAE Form (Contingency Reporting)\", \"\", \"72-74\"]",
+        "text": "APPENDIX 2. PROTOCOL AMENDMENT HISTORY\nAPPENDIX 2. PROTOCOL AMENDMENT HISTORY\nApplicable section | Actual | New (proposed) | Summary of changes | Applicable pages in Track Protocol\n----------------------------------------\nSection 1. Synopsis Under Phase 1 and Phase 2 sections Section 5.3.4 Exploratory Endpoints | N/A | Exploratory Imaging Endpoint: EZ-RPE Structural Biomarkers High-resolution SD-OCT images will be analyzed using validated deep learning-based algorithms to derive quantitative Ellipsoid Zone (EZ) and Retinal Pigment Epithelium (RPE) parameters as biomarkers of outer retinal integrity. Evaluated parameters include EZ and RPE thickness, loss/preserved areas, and EZ/RPE coupling ratios, which correlate with photoreceptor function, disease progression, and treatment response in GA. | Added exploratory Imaging endpoint | 5-6 11-12 19-20\nFigure 3: Cohort Administration Flow | Figure: Expansion cohort 1:1:1 with up to 45 subjects randomized | Figure: expansion cohort updated to reflect protocol study design 1:1:1 randomization of up to 51 subjects in phase 2. | Figure updated to reflect protocol study design 1:1:1 randomization of up to 51 subjects in phase 2. | 48\nFigure 2: Study design |  | Added M9 to the figure. No impact to the design | N/A | 42\nAppendix 1. SAE reporting form |  | Added SAE form template | N/A | 92-94\n10.1. Exploratory and Efficacy Parameters |  | Exploratory Imaging Endpoint: EZ-RPE Structural Biomarkers High-resolution SD-OCT images will be analyzed using validated deep learning-based algorithms to derive quantitative Ellipsoid Zone (EZ) and Retinal Pigment Epithelium (RPE) parameters as biomarkers of outer retinal integrity. Evaluated parameters include EZ and RPE thickness, loss/preserved areas, and EZ/RPE coupling ratios, which correlate with photoreceptor function, disease progression, and treatment response in GA. | N/A | 76\n6.6. Visit and Assessment Schedule |  | Added visit dated for more clarity | N/A | 52-55\n9.6.1. SAE Electronic Data Capture (EDC) 9.6.2. Paper SAE Form (Contingency Reporting) |  | SAE Electronic Data Capture (EDC) Paper SAE Form (Contingency Reporting) |  | 72-74",
+        "source_block_ids": [],
+        "page_numbers": [
+          95
+        ],
+        "heading_path": "APPENDIX 2. PROTOCOL AMENDMENT HISTORY",
+        "chunk_type": "table",
+        "id": "d056895a-fa7b-4028-a5e6-0482837fec85",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'APPENDIX 2. PROTOCOL AMENDMENT HISTORY'. Interpret the rows using the column headers.",
+        "@search.score": 0.01710319146513939
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects:\n\nBCVA and LLVA assessments will be collected bilaterally (Study Eye and Fellow Eye) at Screening, Day 2, Day 15, 1-Month, 3-Month, 6-Month, 9-Month, 12-Month and Early Withdrawal visits.",
+        "source_block_ids": [
+          "p8_para_3"
+        ],
+        "page_numbers": [
+          8
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects:",
+        "chunk_type": "paragraph",
+        "id": "96bafa20-0eda-44a3-b726-3a73a21555ae",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.015384615398943424
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > Investigational Product, Dosage, and Mode of Administration:\n\n· Low Dose (2.5x1010 vg/mL): Subjects will receive a subretinal injection of 200 uL of OCU410 in the low dose concentration.\n\n· Medium Dose (5×1010 vg/mL): Subjects will receive a subretinal injection of 200 uL of OCU410 in the medium dose concentration.\n\nHigh Dose (1.5x1011 vg/mL): Subjects will receive a subretinal injection of 200 uL of OCU410 in the high dose concentration.",
+        "source_block_ids": [
+          "p6_para_5",
+          "p6_para_6",
+          "p6_para_7"
+        ],
+        "page_numbers": [
+          6
+        ],
+        "heading_path": "1. SYNOPSIS > Investigational Product, Dosage, and Mode of Administration:",
+        "chunk_type": "paragraph",
+        "id": "fdf415dc-05ad-4a81-b151-fc0812901c3e",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.01515151560306549
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Inclusion Criteria:\n\n1. Subjects 50 years of age or older.\n\n2. Willing and able to provide written informed consent.\n\n3. BCVA of approximately 21 letters or more using Early Treatment Diabetic Retinopathy Study (ETDRS) chart (20/320 Snellen Equivalent).",
+        "source_block_ids": [
+          "p14_para_11",
+          "p14_para_12",
+          "p14_para_13"
+        ],
+        "page_numbers": [
+          14
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > Inclusion Criteria:",
+        "chunk_type": "paragraph",
+        "id": "9c8fc028-d660-4bee-af07-8c34ec291748",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.013333333656191826
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows: > Change from baseline in ophthalmic safety parameters including:\n\n· BCVA\n\n· LLVA\n\n· Slit lamp Biomicroscopy\n\n· Intraocular pressure (IOP) outside normal range (8-21mmHg).\n\n· Indirect ophthalmoscopy",
+        "source_block_ids": [
+          "p17_para_25",
+          "p18_para_3",
+          "p18_para_4",
+          "p18_para_5",
+          "p18_para_6"
+        ],
+        "page_numbers": [
+          17,
+          18
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows: > Change from baseline in ophthalmic safety parameters including:",
+        "chunk_type": "paragraph",
+        "id": "fb3200b0-8d7d-481a-904c-b2ea26c11231",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.012987012974917889
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > · Exploratory Structural Imaging Endpoint:\n\nHigh-resolution SD-OCT images will be analyzed using validated deep learning-based algorithms to derive quantitative Ellipsoid Zone (EZ) and Retinal Pigment Epithelium (RPE) parameters as biomarkers of outer retinal integrity.\n\nEvaluated parameters include EZ and RPE thickness, loss/preserved areas, and EZ/RPE coupling ratios, which correlate with photoreceptor function, disease progression, and treatment response in GA",
+        "source_block_ids": [
+          "p11_para_16",
+          "p11_para_17"
+        ],
+        "page_numbers": [
+          11
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > · Exploratory Structural Imaging Endpoint:",
+        "chunk_type": "paragraph",
+        "id": "5ffdca58-da79-47c7-8e8c-a341f2efb944",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.012195121496915817
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows: > The secondary safety endpoints include change from baseline in:\n\n✕ · Humoral and cellular immune response (anti-AAV5 antibodies, T-cell response) to OCU410\n\n✕ · Shedding of the viral vector\n\n· Laboratory parameters including serum chemistry and hematology ✕\n\nExploratory Endpoints (Applicable to both Phase 1 and Phase 2)",
+        "source_block_ids": [
+          "p18_para_9",
+          "p18_para_10",
+          "p18_para_11",
+          "p18_para_12"
+        ],
+        "page_numbers": [
+          18
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows: > The secondary safety endpoints include change from baseline in:",
+        "chunk_type": "paragraph",
+        "id": "7d1a1b27-440f-4a48-9284-1033aa9e8a74",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.012048192322254181
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows:\n\na) Total GA area ≥2.0 and ≤ 20.5 mm2 (1 to 8 disk areas [DA], respectively)\n\nb) If GA is multifocal, at least one lesion must be ≥1.25 mm 2(0.5 DA), with the overall aggregate area of GA as specified above in 4.a\n\nc) The entire GA lesion must be completely visualized on the macula-centered image and must be able to be imaged in its entirety, and not contiguous with any areas of peripapillary atrophy.\n\n5. GA lesion within foveal and perifoveal region.\n\n6. Sufficient ocular media clarity, pupillary dilation, and subject cooperation to permit acquisition of good quality retinal imaging.\n\n7. Subjects with liver enzyme level ≤ 1.5 x ULN.\n\n8. Presence of any pattern of hyper-autofluorescence in the junctional zone of GA.\n\n9. Subjects who had prior treatment with an approved drug for AMD, e.g. Izervay® (Avacincaptad pegol) or Syfovre® (Pegcetacoplan injection) can be included, after a washout period of at least 3 months in study eye. Subjects can receive an approved drug for AMD in the fellow eye, if required.\n\n10. Subjects with history of participation in another interventional clinical study, use of any experimental treatment for AMD or any other investigational new drug, can be included after a wash out period of 3 months.",
+        "source_block_ids": [
+          "p14_para_15",
+          "p14_para_16",
+          "p14_para_17",
+          "p14_para_18",
+          "p14_para_19",
+          "p14_para_20",
+          "p14_para_21",
+          "p14_para_22",
+          "p15_para_3"
+        ],
+        "page_numbers": [
+          14,
+          15
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows:",
+        "chunk_type": "paragraph",
+        "id": "a013b668-9df5-4294-8277-76d9b7bcd4af",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.0117647061124444
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows: > Phase 2 Primary Efficacy Endpoint:\n\n· To assess change in GA lesion size measured in mm2 using fundus autofluorescence (FAF)",
+        "source_block_ids": [
+          "p19_para_4"
+        ],
+        "page_numbers": [
+          19
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows: > Phase 2 Primary Efficacy Endpoint:",
+        "chunk_type": "paragraph",
+        "id": "6e81fba1-3773-4f2f-81f0-b26a5fe74328",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.019048456102609634
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows: > Phase 2 Secondary Efficacy Endpoint:\n\n· Changes in visual function as assessed by Low-Luminance Visual Acuity (LLVA) in the study eye when compared to the untreated eye control when using ETDRS chart letter score.",
+        "source_block_ids": [
+          "p19_para_6"
+        ],
+        "page_numbers": [
+          19
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows: > Phase 2 Secondary Efficacy Endpoint:",
+        "chunk_type": "paragraph",
+        "id": "685b0ba6-397f-4db4-a0a8-eef22fb2cf5f",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.018504371866583824
+      },
+      {
+        "doc_id": "OCU410-101_Protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows: > NOTE:\n\n· Eligibility for subjects will be determined by the sponsor on a case-by-case basis.\n\n· If laboratory screening tests are out of local laboratory normal ranges and deemed clinically significant, repeat screening tests are permitted once during the screening period to assess eligibility.",
+        "source_block_ids": [
+          "p16_para_9",
+          "p16_para_10"
+        ],
+        "page_numbers": [
+          16
+        ],
+        "heading_path": "1. SYNOPSIS > 1 of 3 results will occur from the 3 subjects: > 4. Fundus autofluorescence (FAF) imaging shows: > 4. Fundus autofluorescence (FAF) imaging shows: > NOTE:",
+        "chunk_type": "paragraph",
+        "id": "1b34effc-32a4-43e7-9116-abc0cbcac0e1",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.01816239394247532
+      }
+    ]
+  },
+  "ich_guidelines": {
+    "total_sections": 2,
+    "results": {
+      "total_sections": 1,
+      "results": [
+        {
+          "section_path": "2. SYNOPSIS",
+          "source_type": "ich",
+          "guideline_text": "A brief synopsis (usually limited to 3 pages) that summarises the study should be provided (see Annex I of the guideline for an example of a synopsis format used in Europe). The synopsis should include numerical data to illustrate results, not just text or p-values.",
+          "headings": []
+        }
+      ]
+    }
+  }
+}

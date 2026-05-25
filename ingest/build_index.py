@@ -743,7 +743,7 @@ def main():
 
     search_client = SearchClient(
         endpoint=AZURE_SEARCH_SERVICE_ENDPOINT,
-        index_name=AZURE_SEARCH_INDEX_NAME,
+        index_name="module3",
         credential=AzureKeyCredential(AZURE_SEARCH_API_KEY)
     )
 
@@ -757,6 +757,9 @@ def main():
         # Step 1: Download + OCR (STRUCTURED)
         structured_doc = download_and_extract_document(blob_name)
 
+        # with open("sample_layout_structured.json", "r", encoding="utf-8") as f:
+        #     structured_doc = json.load(f)
+
         if not structured_doc or not structured_doc.get("pages"):
             print(f"⚠️ Skipping {doc_id}: No content found.")
             continue
@@ -768,7 +771,14 @@ def main():
             print(f"⚠️ Skipping {doc_id}: No semantic blocks.")
             continue
 
-        output_json = "sample_layout_semantic.json"
+        # Create folder if it doesn't exist
+        output_dir = "OCR output"
+        os.makedirs(output_dir, exist_ok=True)
+
+        # Build output file path using doc_id
+        output_json = os.path.join(output_dir, f"{doc_id}_semantic.json")
+
+        # Save JSON
         with open(output_json, "w", encoding="utf-8") as f:
             json.dump(normalized_doc, f, ensure_ascii=False, indent=2)
 

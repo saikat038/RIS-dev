@@ -1,12 +1,11 @@
 import re
 import uuid
 from typing import Dict, List, Any, Tuple
+from collections import Counter
 
 # ----------------------------
 # CONFIG
 # ----------------------------
-
-SECTION_REGEX = re.compile(r"^\d+(\.\d+)*\s+.+$")
 APPENDIX_REGEX = re.compile(r"^APPENDIX\s+[A-Z0-9]+", re.IGNORECASE)
 FIGURE_REGEX = re.compile(r"^FIGURE\s+\d+", re.IGNORECASE)
 TABLE_TITLE_REGEX = re.compile(r"^(table|figure)\s+\d+", re.IGNORECASE)
@@ -49,34 +48,6 @@ def is_duplicate_table_line(line_bbox, table_bbox, ratio_threshold=0.60) -> bool
     return (inter / la) >= ratio_threshold
 
 
-# ----------------------------
-# 🔑 NEW: PAGE HEADER / FOOTER GUARD
-# ----------------------------
-
-def is_page_header_footer(text: str) -> bool:
-    t = text.strip()
-
-    # Dates like "02 Dec 2025"
-    if re.fullmatch(r"\d{1,2}\s+[A-Za-z]{3}\s+\d{4}", t):
-        return True
-
-    # Protocol identifiers
-    if re.search(r"\bprotocol\b", t, re.IGNORECASE):
-        return True
-
-    # Short document codes like OCU200
-    if re.fullmatch(r"[A-Z]{2,10}\d{0,4}", t):
-        return True
-
-    # Page footer
-    if re.search(r"page\s+\d+", t, re.IGNORECASE):
-        return True
-
-    # Confidential footer
-    if re.search(r"confidential", t, re.IGNORECASE):
-        return True
-
-    return False
 
 
 # =========================================================
@@ -110,11 +81,6 @@ def normalize_ich_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
         "blocks": []
     }
 
-    current_section = {
-        "section_path": None,
-        "section_title": None,
-        "container_id": None,
-    }
 
     paragraph_buffer = []
     buffer_page = None
@@ -127,21 +93,72 @@ def normalize_ich_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
             return
 
         # Join buffer with spaces inside paragraph, but keep paragraphs separate later
-        paragraph_text = " ".join(paragraph_buffer).strip()
+        paragraph_text = "\n".join(paragraph_buffer).strip()
 
         if paragraph_text:
             normalized["blocks"].append({
                 "block_type": "paragraph",
                 "text": paragraph_text,
                 "page_number": buffer_page,
-                "section_path": current_section["section_path"],
-                "section_title": current_section["section_title"],
+                "section_heading": current_heading or "",   # ← THIS is the link
                 "source_block_ids": buffer_ids.copy()
             })
 
         paragraph_buffer.clear()
         buffer_ids.clear()
         buffer_page = None
+
+
+
+    line_frequency = Counter()
+    total_pages = len(layout_json.get("pages", []))
+
+
+
+    # Count paragraph occurrences per page
+    for page in layout_json.get("pages", []):
+        seen_on_page = set()
+        for block in page.get("blocks", []):
+            if block.get("block_type") == "paragraph":
+                text = (block.get("text") or "").strip()
+                if text:
+                    seen_on_page.add(text)
+        for text in seen_on_page:
+            line_frequency[text] += 1
+
+
+
+    # ----------------------------
+    # 🔑 NEW: PAGE HEADER / FOOTER GUARD
+    # ----------------------------
+
+    def is_repeated_header_footer(text: str) -> bool:
+        t = text.strip()
+        if not t:
+            return False
+
+        # Generic page patterns
+        if re.fullmatch(r"\d+\s*/\s*\d+", t):
+            return True
+
+        if re.fullmatch(r"Page\s+\d+(\s+of\s+\d+)?", t, re.IGNORECASE):
+            return True
+
+        # Very short uppercase codes
+        if len(t) <= 20 and re.fullmatch(r"[A-Z0-9\-]+", t):
+            return True
+
+        freq = line_frequency.get(t, 0)
+
+        # Appears in >60% pages and short → header/footer
+        if total_pages > 0 and freq >= total_pages * 0.6 and len(t) < 80:
+            return True
+
+        return False
+
+
+
+    current_heading = None
 
     for page in layout_json.get("pages", []):
         page_number = page.get("page_number")
@@ -157,9 +174,12 @@ def normalize_ich_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
             btype = block.get("block_type")
             text = (block.get("text") or "").strip()
 
+
             if not text:
                 continue
 
+            if is_repeated_header_footer(text):
+                continue
             # Flush previous paragraph on structural change
             if btype != "paragraph":
                 flush_paragraph()
@@ -167,31 +187,57 @@ def normalize_ich_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
             # ────────────────────────────────────────
             # HEADINGS / SECTIONS
             # ────────────────────────────────────────
-            if SECTION_REGEX.match(text):
+            single_level_match = re.match(r"^(\d+)\.\s+(.+)", text)
+            multi_level_match = re.match(r"^\d+(\.\d+)+\.?\s+", text)
+
+            if multi_level_match:
+                is_section = True
+
+            elif single_level_match:
+                title_part = single_level_match.group(2)
+
+                # Single-level heading must be ALL CAPS
+                if title_part.isupper():
+                    is_section = True
+                else:
+                    is_section = False
+            else:
+                is_section = False
+
+
+            if is_section and len(text.split()) <= 15:
+
+                # 1️⃣ FIRST flush previous paragraph
                 flush_paragraph()
-                current_section["section_path"] = text.split(" ", 1)[0]
-                current_section["section_title"] = text.split(" ", 1)[1] if " " in text else text
+
+                # 2️⃣ THEN update current heading
+                current_heading = text
+
+                # 3️⃣ THEN append heading block
+                number_part = text.split()[0].rstrip(".")
+
                 normalized["blocks"].append({
                     "block_type": "heading",
-                    "level": 1,
+                    "level": number_part.count('.') + 1,
                     "text": text,
-                    "page_number": page_number,
-                    "section_path": current_section["section_path"],
-                    "section_title": current_section["section_title"]
+                    "page_number": page_number
                 })
+
                 continue
 
             # Table titles, figures, appendices (similar logic)
-            if TABLE_TITLE_REGEX.match(text) or FIGURE_REGEX.match(text) or APPENDIX_REGEX.match(text):
+            if TABLE_TITLE_REGEX.match(text) or FIGURE_REGEX.match(text):
                 flush_paragraph()
+
+                current_heading = text  # treat as heading
+
                 normalized["blocks"].append({
                     "block_type": "heading",
                     "level": 2,
                     "text": text,
-                    "page_number": page_number,
-                    "section_path": current_section["section_path"],
-                    "section_title": current_section["section_title"]
+                    "page_number": page_number
                 })
+
                 continue
 
             # ────────────────────────────────────────
@@ -208,5 +254,18 @@ def normalize_ich_layout_json(layout_json: Dict[str, Any]) -> Dict[str, Any]:
 
     # Final flush
     flush_paragraph()
+
+    # ---------------- DEBUG OUTPUT ----------------
+    import os, json
+    try:
+        debug_path = os.path.join(f"ICH_layout_semantic.json")
+
+        with open(debug_path, "w", encoding="utf-8") as f:
+            json.dump(normalized, f, indent=2)
+
+        print(f"🛠 Normalization debug saved to: {debug_path}")
+    except Exception as e:
+        print(f"⚠️ Debug save failed: {e}")
+    # ------------------------------------------------
 
     return normalized

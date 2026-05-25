@@ -1,0 +1,689 @@
+{
+  "document_name": "tlf sample.pdf",
+  "model": "prebuilt-layout",
+  "pages": [
+    {
+      "page_number": 1,
+      "blocks": [
+        {
+          "block_id": "p1_para_0",
+          "block_type": "paragraph",
+          "text": "Ocugen, Inc. OCU400-101",
+          "bbox": [
+            0.1852,
+            1.4254,
+            0.9138,
+            1.6281
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_1",
+          "block_type": "paragraph",
+          "text": "Page 1 of 58",
+          "bbox": [
+            7.5705,
+            1.5293,
+            8.3098,
+            1.6393
+          ],
+          "azure_role": "pageNumber",
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_2",
+          "block_type": "paragraph",
+          "text": "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients",
+          "bbox": [
+            3.1513,
+            1.6426,
+            5.1598,
+            1.9784
+          ],
+          "azure_role": "title",
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_7",
+          "block_type": "paragraph",
+          "text": "Serious? [2]/ Severity",
+          "bbox": [
+            4.6313,
+            2.077,
+            5.7427,
+            3.2212
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_8",
+          "block_type": "paragraph",
+          "text": "Outcome [3]/ Action Taken/ Treatment Required/ Caused study discontinuation",
+          "bbox": [
+            5.7427,
+            2.077,
+            7.0128,
+            3.2212
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_9",
+          "block_type": "paragraph",
+          "text": "Related to study drug/ Related to study surgery/ Related to other study procedures",
+          "bbox": [
+            7.0044,
+            2.077,
+            8.1492,
+            3.2212
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_3",
+          "block_type": "paragraph",
+          "text": "Cohort Genetic Subtype Subject",
+          "bbox": [
+            0.119,
+            2.0854,
+            1.2053,
+            3.2296
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_4",
+          "block_type": "paragraph",
+          "text": "System Organ Class / Preferred Term / Reported Term",
+          "bbox": [
+            1.2053,
+            2.0854,
+            2.5339,
+            3.2296
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_5",
+          "block_type": "paragraph",
+          "text": "Specify Site [1]",
+          "bbox": [
+            2.5339,
+            2.0854,
+            3.194,
+            3.2296
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_6",
+          "block_type": "paragraph",
+          "text": "Start Date (Day) / End Date (Day)",
+          "bbox": [
+            3.194,
+            2.0854,
+            4.6313,
+            3.2212
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "table_0",
+          "block_type": "table",
+          "page_number": 1,
+          "bbox": [
+            0.1445,
+            2.1017,
+            8.2964,
+            4.8607
+          ],
+          "headers": [
+            "Cohort Genetic Subtype Subject",
+            "System Organ Class / Preferred Term / Reported Term",
+            "Specify Site [1]",
+            "Start Date (Day) / End Date (Day)",
+            "Serious? [2]/ Severity",
+            "Outcome [3]/ Action Taken/ Treatment Required/ Caused study discontinuation",
+            "Related to study drug/ Related to study surgery/ Related to other study procedures"
+          ],
+          "rows": [
+            [
+              "Cohort 1",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "RHO MUTATION 001-002",
+              "Eye disorders /",
+              "OD*",
+              "2022-03-29 (1) /",
+              "No/",
+              "1 /",
+              "NOT RELATED /"
+            ],
+            [
+              "",
+              "Ocular discomfort / EYE DISCOMFORT",
+              "",
+              "2022-03-29 (10)",
+              "No",
+              "NOT APPLICABLE / CONCOMITANT MEDICATION / No",
+              "RELATED / NOT RELATED"
+            ],
+            [
+              "",
+              "Eye disorders /",
+              "OD*",
+              "2022-03-30 (2) / 2022-03-30 (9)",
+              "No/",
+              "1 / NOT APPLICABLE / NONE / No",
+              "NOT RELATED / RELATED / NOT RELATED"
+            ],
+            [
+              "",
+              "Eyelid ptosis / PTOSIS OD",
+              "",
+              "",
+              "No",
+              "",
+              ""
+            ]
+          ]
+        },
+        {
+          "block_id": "p1_para_10",
+          "block_type": "paragraph",
+          "text": "Cohort 1",
+          "bbox": [
+            0.119,
+            3.2212,
+            1.2053,
+            3.4551
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_12",
+          "block_type": "paragraph",
+          "text": "Eye disorders /",
+          "bbox": [
+            1.2053,
+            3.4467,
+            2.5339,
+            3.6889
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_13",
+          "block_type": "paragraph",
+          "text": "OD*",
+          "bbox": [
+            2.5339,
+            3.4467,
+            3.194,
+            3.6889
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_14",
+          "block_type": "paragraph",
+          "text": "2022-03-29 (1) /",
+          "bbox": [
+            3.194,
+            3.4467,
+            4.6313,
+            3.6889
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_15",
+          "block_type": "paragraph",
+          "text": "No/",
+          "bbox": [
+            4.6313,
+            3.4467,
+            5.7427,
+            3.6889
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_16",
+          "block_type": "paragraph",
+          "text": "1 /",
+          "bbox": [
+            5.7343,
+            3.4467,
+            7.0128,
+            3.6889
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_17",
+          "block_type": "paragraph",
+          "text": "NOT RELATED /",
+          "bbox": [
+            7.0128,
+            3.4467,
+            8.1492,
+            3.6889
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_11",
+          "block_type": "paragraph",
+          "text": "RHO MUTATION 001-002",
+          "bbox": [
+            0.119,
+            3.4551,
+            1.2053,
+            4.2068
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_18",
+          "block_type": "paragraph",
+          "text": "Ocular discomfort / EYE DISCOMFORT",
+          "bbox": [
+            1.2053,
+            3.6889,
+            2.5339,
+            4.2068
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_19",
+          "block_type": "paragraph",
+          "text": "2022-03-29 (10)",
+          "bbox": [
+            3.194,
+            3.6889,
+            4.6313,
+            4.1984
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_20",
+          "block_type": "paragraph",
+          "text": "No",
+          "bbox": [
+            4.6313,
+            3.6889,
+            5.7343,
+            4.1984
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_21",
+          "block_type": "paragraph",
+          "text": "NOT APPLICABLE / CONCOMITANT MEDICATION / No",
+          "bbox": [
+            5.7343,
+            3.6889,
+            7.0128,
+            4.1984
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_22",
+          "block_type": "paragraph",
+          "text": "RELATED / NOT RELATED",
+          "bbox": [
+            7.0128,
+            3.6889,
+            8.1492,
+            4.1984
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_23",
+          "block_type": "paragraph",
+          "text": "Eye disorders /",
+          "bbox": [
+            1.2053,
+            4.1984,
+            2.5339,
+            4.3738
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_24",
+          "block_type": "paragraph",
+          "text": "OD*",
+          "bbox": [
+            2.5339,
+            4.1984,
+            3.194,
+            4.3738
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_25",
+          "block_type": "paragraph",
+          "text": "2022-03-30 (2) / 2022-03-30 (9)",
+          "bbox": [
+            3.194,
+            4.1984,
+            4.6313,
+            4.8332
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_26",
+          "block_type": "paragraph",
+          "text": "No/",
+          "bbox": [
+            4.6313,
+            4.1984,
+            5.7343,
+            4.3738
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_27",
+          "block_type": "paragraph",
+          "text": "1 / NOT APPLICABLE / NONE / No",
+          "bbox": [
+            5.7343,
+            4.1984,
+            7.0128,
+            4.8415
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_28",
+          "block_type": "paragraph",
+          "text": "NOT RELATED / RELATED / NOT RELATED",
+          "bbox": [
+            7.0128,
+            4.1984,
+            8.1492,
+            4.8415
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_29",
+          "block_type": "paragraph",
+          "text": "Eyelid ptosis / PTOSIS OD",
+          "bbox": [
+            1.2053,
+            4.3738,
+            2.5423,
+            4.8332
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_30",
+          "block_type": "paragraph",
+          "text": "No",
+          "bbox": [
+            4.6313,
+            4.3738,
+            5.7343,
+            4.8415
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_31",
+          "block_type": "paragraph",
+          "text": "Treatment-emergent adverse events (TEAEs) are defined as AEs that started after the date/time of study drug administration. AE reported terms were coded using the Medical Dictionary for Regulatory Activities (MedDRA) Version 24.1.",
+          "bbox": [
+            0.1842,
+            4.9624,
+            7.6205,
+            5.1813
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_32",
+          "block_type": "paragraph",
+          "text": "Day - Date - Date of Injection (+ 1 if Date >> Date of Injection). Day is calculated only for complete dates.",
+          "bbox": [
+            0.1903,
+            5.1899,
+            6.7717,
+            5.2967
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_33",
+          "block_type": "paragraph",
+          "text": "[1] OD = Ocular dexter (right) ; OS - Ocular sinister (left) ; OU - Both eyes. * indicates study eye.",
+          "bbox": [
+            0.2059,
+            5.3038,
+            6.1666,
+            5.4102
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_34",
+          "block_type": "paragraph",
+          "text": "[2] Serious ?: 1 = Death; 2 - Life-threatening; 3 - Hospitalization (initial or prolonged) ; 4 - Disability or permanent damage; 5 = Congenital anomaly/birth defect; 6 - Other important medical event",
+          "bbox": [
+            0.1863,
+            5.413,
+            8.066,
+            5.6359
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_35",
+          "block_type": "paragraph",
+          "text": "[3] Outcome: 1 - Recovered or Resolved, 2 - Recovered or Resolved with Sequelae, 3 - Recovering or Resolving, 4 - Not Recovered or Not Resolved, 5 - Fatal, 6 - Unknown.",
+          "bbox": [
+            0.1838,
+            5.64,
+            8.3032,
+            5.8623
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_37",
+          "block_type": "paragraph",
+          "text": "SDTM",
+          "bbox": [
+            6.4367,
+            5.9433,
+            6.9967,
+            6.09
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_38",
+          "block_type": "paragraph",
+          "text": "date:",
+          "bbox": [
+            6.9967,
+            5.9433,
+            7.35,
+            6.09
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_39",
+          "block_type": "paragraph",
+          "text": "20AUG2024",
+          "bbox": [
+            7.35,
+            5.9433,
+            7.9633,
+            6.09
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_40",
+          "block_type": "paragraph",
+          "text": "14:37",
+          "bbox": [
+            7.9633,
+            5.9433,
+            8.3333,
+            6.0867
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "table_1",
+          "block_type": "table",
+          "page_number": 1,
+          "bbox": [
+            6.4631,
+            5.9583,
+            8.3071,
+            6.2198
+          ],
+          "headers": [],
+          "rows": [
+            [
+              "SDTM",
+              "date:",
+              "20AUG2024",
+              "14:37"
+            ],
+            [
+              "Analysis",
+              "date:",
+              "26AUG2024",
+              "16:54"
+            ]
+          ]
+        },
+        {
+          "block_id": "p1_para_43",
+          "block_type": "paragraph",
+          "text": "26AUG2024",
+          "bbox": [
+            7.35,
+            6.0867,
+            7.9633,
+            6.2267
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_44",
+          "block_type": "paragraph",
+          "text": "16:54",
+          "bbox": [
+            7.9633,
+            6.0867,
+            8.3333,
+            6.2267
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_41",
+          "block_type": "paragraph",
+          "text": "Analysis",
+          "bbox": [
+            6.4367,
+            6.09,
+            6.9967,
+            6.2267
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_42",
+          "block_type": "paragraph",
+          "text": "date:",
+          "bbox": [
+            6.9967,
+            6.09,
+            7.35,
+            6.2267
+          ],
+          "azure_role": null,
+          "is_heading": false
+        },
+        {
+          "block_id": "p1_para_36",
+          "block_type": "paragraph",
+          "text": "Program name: 1teae.sas",
+          "bbox": [
+            0.187,
+            6.1034,
+            1.5893,
+            6.203
+          ],
+          "azure_role": null,
+          "is_heading": false
+        }
+      ]
+    }
+  ]
+}

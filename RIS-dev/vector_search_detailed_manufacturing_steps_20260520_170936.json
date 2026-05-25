@@ -1,0 +1,1746 @@
+{
+  "section": "Detailed Manufacturing Steps",
+  "timestamp": "2026-05-20T17:09:36.595122",
+  "source": {
+    "total_chunks": 71,
+    "results": [
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 17: Results recorded for Passage 4",
+        "table_headers": [
+          "Process Details (Units)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"\", \"\", \"97.9,\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"\", \"\", \"98.1,\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"\", \"\", \"97.0\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4 > Table 17: Results recorded for Passage 4\nTable 17: Results recorded for Passage 4\nProcess Details (Units) | GLP Tox | Ph I/II GMP | Ph III ENG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\n |  | 97.9, |  |  |  |  |  |  | \n |  | 98.1, |  |  |  |  |  |  | \n |  | 97.0 |  |  |  |  |  |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          46
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4 > Table 17: Results recorded for Passage 4",
+        "chunk_type": "table",
+        "id": "b17d46b8-1e20-4212-acd9-3ac71651da2a",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 17: Results recorded for Passage 4'. Interpret the rows using the column headers.",
+        "@search.score": 0.03030998818576336
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Figure 3: General Upstream Process Flow",
+        "table_headers": [
+          "ocugen.",
+          "TECHNICAL REPORT"
+        ],
+        "table_rows": "[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 30 of 109\", \"EFFECTIVE DATE: vault_r:effective_date __ v :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.1. Overview of the Upstream Manufacturing Process > Figure 3: General Upstream Process Flow\nFigure 3: General Upstream Process Flow\nocugen. | TECHNICAL REPORT\n----------------------------------------\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 30 of 109 | EFFECTIVE DATE: vault_r:effective_date __ v :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          30
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.1. Overview of the Upstream Manufacturing Process > Figure 3: General Upstream Process Flow",
+        "chunk_type": "table",
+        "id": "4fa890d1-e51e-40d9-8c12-8e0e70bbe348",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Figure 3: General Upstream Process Flow'. Interpret the rows using the column headers.",
+        "@search.score": 0.03009207174181938
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 17: Results recorded for Passage 4",
+        "table_headers": [
+          "Process Details (Units)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"Working volume (mL)\", \"1850\", \"336\", \"1667\", \"1750\", \"1800\", \"1800\", \"1800\", \"1830\", \"1830\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4 > Table 17: Results recorded for Passage 4\nTable 17: Results recorded for Passage 4\nProcess Details (Units) | GLP Tox | Ph I/II GMP | Ph III ENG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nWorking volume (mL) | 1850 | 336 | 1667 | 1750 | 1800 | 1800 | 1800 | 1830 | 1830",
+        "source_block_ids": [],
+        "page_numbers": [
+          44
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4 > Table 17: Results recorded for Passage 4",
+        "chunk_type": "table",
+        "id": "7debd2ed-4f54-4dbe-8100-ee52e06b9313",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 17: Results recorded for Passage 4'. Interpret the rows using the column headers.",
+        "@search.score": 0.029631255194544792
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.10.3. In-Process Testing of Control and Harvest",
+        "table_headers": [
+          "Process Step",
+          "GLP batch",
+          "Phase 1/2 In-Process Tests",
+          "Engg &Phase 3 In- Process Tests",
+          "PPQ In-Process Tests"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 52 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_ V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest\n4.3.10.3. In-Process Testing of Control and Harvest\nProcess Step | GLP batch | Phase 1/2 In-Process Tests | Engg &Phase 3 In- Process Tests | PPQ In-Process Tests\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 52 of 109 | EFFECTIVE DATE: vault_r:effective_date_ V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          52
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest",
+        "chunk_type": "table",
+        "id": "776b5a13-316c-49de-85d8-47015d23009d",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.10.3. In-Process Testing of Control and Harvest'. Interpret the rows using the column headers.",
+        "@search.score": 0.028790388256311417
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.9. GMP Phase 1/2 Process",
+        "table_headers": [
+          "ocugen.",
+          "TECHNICAL REPORT"
+        ],
+        "table_rows": "[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 48 of 109\", \"EFFECTIVE DATE: vault_r:effective_date __ v :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.9. GMP Phase 1/2 Process\n4.3.9. GMP Phase 1/2 Process\nocugen. | TECHNICAL REPORT\n----------------------------------------\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 48 of 109 | EFFECTIVE DATE: vault_r:effective_date __ v :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          48
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.9. GMP Phase 1/2 Process",
+        "chunk_type": "table",
+        "id": "bc1d5d2a-96c8-46f4-b932-0049b7b14df0",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.9. GMP Phase 1/2 Process'. Interpret the rows using the column headers.",
+        "@search.score": 0.026494566351175308
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Figure 3: General Upstream Process Flow",
+        "table_headers": [
+          "ocugen.",
+          "TECHNICAL REPORT"
+        ],
+        "table_rows": "[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 29 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_ V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.1. Overview of the Upstream Manufacturing Process > Figure 3: General Upstream Process Flow\nFigure 3: General Upstream Process Flow\nocugen. | TECHNICAL REPORT\n----------------------------------------\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 29 of 109 | EFFECTIVE DATE: vault_r:effective_date_ V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          29
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.1. Overview of the Upstream Manufacturing Process > Figure 3: General Upstream Process Flow",
+        "chunk_type": "table",
+        "id": "25f123cb-c3c5-4217-a161-ae92679916b8",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Figure 3: General Upstream Process Flow'. Interpret the rows using the column headers.",
+        "@search.score": 0.025652840733528137
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.10.3. In-Process Testing of Control and Harvest",
+        "table_headers": [
+          "Process Steps (Vg/mL)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENGG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 53 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_ V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest\n4.3.10.3. In-Process Testing of Control and Harvest\nProcess Steps (Vg/mL) | GLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENGG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 53 of 109 | EFFECTIVE DATE: vault_r:effective_date_ V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          53
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest",
+        "chunk_type": "table",
+        "id": "53e4cd15-ab38-4b8f-b395-7ca9fcfa02e0",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.10.3. In-Process Testing of Control and Harvest'. Interpret the rows using the column headers.",
+        "@search.score": 0.024501174688339233
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.6. Cell Passage 3",
+        "table_headers": [
+          "ocugen.",
+          "TECHNICAL REPORT"
+        ],
+        "table_rows": "[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 41 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_ V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.6. Cell Passage 3\n4.3.6. Cell Passage 3\nocugen. | TECHNICAL REPORT\n----------------------------------------\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 41 of 109 | EFFECTIVE DATE: vault_r:effective_date_ V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          41
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.6. Cell Passage 3",
+        "chunk_type": "table",
+        "id": "af45516e-3958-4d01-b8b4-cc653e3e1c5e",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.6. Cell Passage 3'. Interpret the rows using the column headers.",
+        "@search.score": 0.024243313819169998
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 9: Cell Thaw results before and after expansion during upstream across different manufacturing campaigns of OCU400",
+        "table_headers": [
+          "Process Details",
+          "Units",
+          "50L GLP Tox",
+          "200L Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 34 of 109\", \"EFFECTIVE DATE: vault_r:effective_date V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.3. Cell Thaw and Recovery > Table 9: Cell Thaw results before and after expansion during upstream across different manufacturing campaigns of OCU400\nTable 9: Cell Thaw results before and after expansion during upstream across different manufacturing campaigns of OCU400\nProcess Details | Units | 50L GLP Tox | 200L Ph I/II GMP | Ph III ENG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 34 of 109 | EFFECTIVE DATE: vault_r:effective_date V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          34
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.3. Cell Thaw and Recovery > Table 9: Cell Thaw results before and after expansion during upstream across different manufacturing campaigns of OCU400",
+        "chunk_type": "table",
+        "id": "e9192302-516c-456a-933a-85cd43ba0964",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 9: Cell Thaw results before and after expansion during upstream across different manufacturing campaigns of OCU400'. Interpret the rows using the column headers.",
+        "@search.score": 0.023752013221383095
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.7. Cell Passage 4",
+        "table_headers": [
+          "ocugen.",
+          "TECHNICAL REPORT"
+        ],
+        "table_rows": "[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 44 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_v :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4\n4.3.7. Cell Passage 4\nocugen. | TECHNICAL REPORT\n----------------------------------------\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 44 of 109 | EFFECTIVE DATE: vault_r:effective_date_v :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          44
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4",
+        "chunk_type": "table",
+        "id": "a788b7b9-20c7-4a41-b7b2-99ac1c560a00",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.7. Cell Passage 4'. Interpret the rows using the column headers.",
+        "@search.score": 0.023138297721743584
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 22: Overall Yield (%) - Starting at Bulk Harvest",
+        "table_headers": [
+          "Process Steps (Vg/mL)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENGG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 56 of 109\", \"EFFECTIVE DATE: vault_r:effective_date V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest > Table 22: Overall Yield (%) - Starting at Bulk Harvest\nTable 22: Overall Yield (%) - Starting at Bulk Harvest\nProcess Steps (Vg/mL) | GLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENGG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 56 of 109 | EFFECTIVE DATE: vault_r:effective_date V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          56
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest > Table 22: Overall Yield (%) - Starting at Bulk Harvest",
+        "chunk_type": "table",
+        "id": "00ef4498-48b8-4c17-8d0f-e68e3bd0671d",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 22: Overall Yield (%) - Starting at Bulk Harvest'. Interpret the rows using the column headers.",
+        "@search.score": 0.023037202656269073
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.10.3. In-Process Testing of Control and Harvest",
+        "table_headers": [
+          "Process Step",
+          "GLP batch",
+          "Phase 1/2 In-Process Tests",
+          "Engg &Phase 3 In- Process Tests",
+          "PPQ In-Process Tests"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 51 of 109\", \"EFFECTIVE DATE: vault_r:effective_date V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest\n4.3.10.3. In-Process Testing of Control and Harvest\nProcess Step | GLP batch | Phase 1/2 In-Process Tests | Engg &Phase 3 In- Process Tests | PPQ In-Process Tests\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 51 of 109 | EFFECTIVE DATE: vault_r:effective_date V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          51
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest",
+        "chunk_type": "table",
+        "id": "ab7bfeda-b60d-4bfe-be55-1ff1732bbacf",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.10.3. In-Process Testing of Control and Harvest'. Interpret the rows using the column headers.",
+        "@search.score": 0.02289789915084839
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 13: Results recorded for Passage 2",
+        "table_headers": [
+          "Process Details (Units)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 40 of 109\", \"EFFECTIVE DATE: vault_r:effective_date V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.5. Cell Passage 2 > Table 13: Results recorded for Passage 2\nTable 13: Results recorded for Passage 2\nProcess Details (Units) | GLP Tox | Ph I/II GMP | Ph III ENG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 40 of 109 | EFFECTIVE DATE: vault_r:effective_date V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          40
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.5. Cell Passage 2 > Table 13: Results recorded for Passage 2",
+        "chunk_type": "table",
+        "id": "1a903122-6dbc-411d-a95d-b8ecde661726",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 13: Results recorded for Passage 2'. Interpret the rows using the column headers.",
+        "@search.score": 0.022291023284196854
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.10.3. In-Process Testing of Control and Harvest",
+        "table_headers": [
+          "Process Step",
+          "GLP batch",
+          "Phase 1/2 In-Process Tests",
+          "Engg &Phase 3 In- Process Tests",
+          "PPQ In-Process Tests"
+        ],
+        "table_rows": "[\"Cell Recovery and Growth\", \"Cell density Cell viability Cell morphology\", \"Cell density Cell viability Cell morphology\", \"Cell density Cell viability\", \"Cell density Cell viability\"]\n[\"Cell Expansion\", \"Cell density Cell viability Cell morphology\", \"Cell density Cell viability Cell morphology\", \"Cell density Cell viability\", \"Cell density Cell viability\"]\n[\"Production Bioreactor\", \"Cell density Cell viability Cell morphology\", \"Cell density Cell viability Cell morphology\", \"Cell density Cell viability\", \"Cell density Cell viability\"]\n[\"AAV Production Plasmid Transfection\", \"Cell density Cell viability Cell morphology\", \"Cell density Cell viability Cell morphology\", \"Cell density Cell viability\", \"Cell density Cell viability\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest\n4.3.10.3. In-Process Testing of Control and Harvest\nProcess Step | GLP batch | Phase 1/2 In-Process Tests | Engg &Phase 3 In- Process Tests | PPQ In-Process Tests\n----------------------------------------\nCell Recovery and Growth | Cell density Cell viability Cell morphology | Cell density Cell viability Cell morphology | Cell density Cell viability | Cell density Cell viability\nCell Expansion | Cell density Cell viability Cell morphology | Cell density Cell viability Cell morphology | Cell density Cell viability | Cell density Cell viability\nProduction Bioreactor | Cell density Cell viability Cell morphology | Cell density Cell viability Cell morphology | Cell density Cell viability | Cell density Cell viability\nAAV Production Plasmid Transfection | Cell density Cell viability Cell morphology | Cell density Cell viability Cell morphology | Cell density Cell viability | Cell density Cell viability",
+        "source_block_ids": [],
+        "page_numbers": [
+          50
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest",
+        "chunk_type": "table",
+        "id": "1c5ea819-0a6a-4517-b9d2-cf3d4e4b7b13",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.10.3. In-Process Testing of Control and Harvest'. Interpret the rows using the column headers.",
+        "@search.score": 0.022126341238617897
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.10.2. Transfection",
+        "table_headers": [
+          "ocugen.",
+          "TECHNICAL REPORT"
+        ],
+        "table_rows": "[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 49 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_ V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.2. Transfection\n4.3.10.2. Transfection\nocugen. | TECHNICAL REPORT\n----------------------------------------\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 49 of 109 | EFFECTIVE DATE: vault_r:effective_date_ V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          49
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.2. Transfection",
+        "chunk_type": "table",
+        "id": "33eda5a1-3c05-411b-a0ca-76eca564e5dc",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.10.2. Transfection'. Interpret the rows using the column headers.",
+        "@search.score": 0.021212121471762657
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 21: Overall Yield (%) - Starting at Cell Lysate",
+        "table_headers": [
+          "Process Steps (Vg/mL)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENGG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 55 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_v :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest > Table 21: Overall Yield (%) - Starting at Cell Lysate\nTable 21: Overall Yield (%) - Starting at Cell Lysate\nProcess Steps (Vg/mL) | GLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENGG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 55 of 109 | EFFECTIVE DATE: vault_r:effective_date_v :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          55
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest > Table 21: Overall Yield (%) - Starting at Cell Lysate",
+        "chunk_type": "table",
+        "id": "0c096dcf-57f9-4e2a-8d0e-8b391087577a",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 21: Overall Yield (%) - Starting at Cell Lysate'. Interpret the rows using the column headers.",
+        "@search.score": 0.021202990785241127
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.5. Cell Passage 2",
+        "table_headers": [
+          "ocugen.",
+          "TECHNICAL REPORT"
+        ],
+        "table_rows": "[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 38 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_ V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.5. Cell Passage 2\n4.3.5. Cell Passage 2\nocugen. | TECHNICAL REPORT\n----------------------------------------\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 38 of 109 | EFFECTIVE DATE: vault_r:effective_date_ V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          38
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.5. Cell Passage 2",
+        "chunk_type": "table",
+        "id": "5e6b147f-9b18-4032-ab75-108ae515cdbb",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.5. Cell Passage 2'. Interpret the rows using the column headers.",
+        "@search.score": 0.020922690629959106
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 14: Operating parameters for Passage 3",
+        "table_headers": [
+          "",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch 1 & 2, ENGG-2",
+          "PPQ 1, 2, 3"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 42 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_v V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.6. Cell Passage 3 > Table 14: Operating parameters for Passage 3\nTable 14: Operating parameters for Passage 3\nGLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch 1 & 2, ENGG-2 | PPQ 1, 2, 3\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 42 of 109 | EFFECTIVE DATE: vault_r:effective_date_v V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          42
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.6. Cell Passage 3 > Table 14: Operating parameters for Passage 3",
+        "chunk_type": "table",
+        "id": "48f70112-6235-4f32-b40e-2fb27cba4a9b",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14: Operating parameters for Passage 3'. Interpret the rows using the column headers.",
+        "@search.score": 0.020725945010781288
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.4. Cell Passage 1",
+        "table_headers": [
+          "ocugen.",
+          "TECHNICAL REPORT"
+        ],
+        "table_rows": "[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 35 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_v :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.4. Cell Passage 1\n4.3.4. Cell Passage 1\nocugen. | TECHNICAL REPORT\n----------------------------------------\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 35 of 109 | EFFECTIVE DATE: vault_r:effective_date_v :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          35
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.4. Cell Passage 1",
+        "chunk_type": "table",
+        "id": "d64c1923-c32c-4aa8-a948-9aa1568c72de",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.4. Cell Passage 1'. Interpret the rows using the column headers.",
+        "@search.score": 0.020679011940956116
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 10: Process parameters for Passage 1",
+        "table_headers": [
+          "",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch 1 & 2, ENGG-2",
+          "PPQ 1, 2, 3"
+        ],
+        "table_rows": "[\"Harvest Viability (%)\", \"≥ 80\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.4. Cell Passage 1 > Table 10: Process parameters for Passage 1\nTable 10: Process parameters for Passage 1\nGLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch 1 & 2, ENGG-2 | PPQ 1, 2, 3\n----------------------------------------\nHarvest Viability (%) | ≥ 80 | -- | ≥ 85 | -- | ≥ 85 | -- | ≥ 85 | -- | ≥ 85 | --",
+        "source_block_ids": [],
+        "page_numbers": [
+          36
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.4. Cell Passage 1 > Table 10: Process parameters for Passage 1",
+        "chunk_type": "table",
+        "id": "c72f6002-bd6d-48b2-950b-6e74985c5fe7",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 10: Process parameters for Passage 1'. Interpret the rows using the column headers.",
+        "@search.score": 0.020235054194927216
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 10: Process parameters for Passage 1",
+        "table_headers": [
+          "",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch 1 & 2, ENGG-2",
+          "PPQ 1, 2, 3"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 36 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_ V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.4. Cell Passage 1 > Table 10: Process parameters for Passage 1\nTable 10: Process parameters for Passage 1\nGLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch 1 & 2, ENGG-2 | PPQ 1, 2, 3\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 36 of 109 | EFFECTIVE DATE: vault_r:effective_date_ V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          36
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.4. Cell Passage 1 > Table 10: Process parameters for Passage 1",
+        "chunk_type": "table",
+        "id": "38ec2d80-3bac-4e87-88b0-18283273dc0a",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 10: Process parameters for Passage 1'. Interpret the rows using the column headers.",
+        "@search.score": 0.02021319419145584
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 15: Results recorded for Passage 3",
+        "table_headers": [
+          "Process Details (Units)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 43 of 109\", \"EFFECTIVE DATE: vault_r:effective_date V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.6. Cell Passage 3 > Table 15: Results recorded for Passage 3\nTable 15: Results recorded for Passage 3\nProcess Details (Units) | GLP Tox | Ph I/II GMP | Ph III ENG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 43 of 109 | EFFECTIVE DATE: vault_r:effective_date V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          43
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.6. Cell Passage 3 > Table 15: Results recorded for Passage 3",
+        "chunk_type": "table",
+        "id": "dc2d160d-7e3a-47b6-8e30-380c0e33caff",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 15: Results recorded for Passage 3'. Interpret the rows using the column headers.",
+        "@search.score": 0.020202020183205605
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.10.2. Transfection",
+        "table_headers": [
+          "ocugen.",
+          "TECHNICAL REPORT"
+        ],
+        "table_rows": "[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 50 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_v :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.2. Transfection\n4.3.10.2. Transfection\nocugen. | TECHNICAL REPORT\n----------------------------------------\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 50 of 109 | EFFECTIVE DATE: vault_r:effective_date_v :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          50
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.2. Transfection",
+        "chunk_type": "table",
+        "id": "c25d0270-96df-4333-bf8a-b7b238d2042e",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.10.2. Transfection'. Interpret the rows using the column headers.",
+        "@search.score": 0.02000800333917141
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 17: Results recorded for Passage 4",
+        "table_headers": [
+          "Process Details (Units)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 47 of 109\", \"EFFECTIVE DATE: vault_r:effective_date __ v :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4 > Table 17: Results recorded for Passage 4\nTable 17: Results recorded for Passage 4\nProcess Details (Units) | GLP Tox | Ph I/II GMP | Ph III ENG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 47 of 109 | EFFECTIVE DATE: vault_r:effective_date __ v :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          47
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4 > Table 17: Results recorded for Passage 4",
+        "chunk_type": "table",
+        "id": "c31aa2d5-d3f3-4893-b31e-33c302520f85",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 17: Results recorded for Passage 4'. Interpret the rows using the column headers.",
+        "@search.score": 0.01996927708387375
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 17: Results recorded for Passage 4",
+        "table_headers": [
+          "Process Details (Units)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 46 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_v :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4 > Table 17: Results recorded for Passage 4\nTable 17: Results recorded for Passage 4\nProcess Details (Units) | GLP Tox | Ph I/II GMP | Ph III ENG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 46 of 109 | EFFECTIVE DATE: vault_r:effective_date_v :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          46
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4 > Table 17: Results recorded for Passage 4",
+        "chunk_type": "table",
+        "id": "ec0b991f-8e22-48e2-95af-b94ec2c2e495",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 17: Results recorded for Passage 4'. Interpret the rows using the column headers.",
+        "@search.score": 0.01963931694626808
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.10.3. In-Process Testing of Control and Harvest",
+        "table_headers": [
+          "Process Step",
+          "GLP batch",
+          "Phase 1/2 In-Process Tests",
+          "Engg &Phase 3 In- Process Tests",
+          "PPQ In-Process Tests"
+        ],
+        "table_rows": "[\"AAV harvest\", \"Vg titer\", \"Cell density Cell viability Sterility Mycoplasma Vg titer\", \"Cell density Cell viability Bioburden IVAA Mycoplasma Vg titer\", \"Cell density Cell viability Bioburden IVAA Mycoplasma Vg titer Haemadsorbing (or Hemagglutinating) viruses\"]\n[\"Clarification\", \"N/A\", \"Vg titer\", \"Vg titer\", \"Vg titer\"]\n[\"Affinity purification\", \"N/A\", \"Vg titer\", \"Vg titer\", \"Vg titer\"]\n[\"Concentration and buffer exchange 1 (TFF1)\", \"N/A\", \"Vg titer\", \"Vg titer\", \"Vg titer\"]\n[\"Density gradient purification\", \"N/A\", \"Vg titer\", \"Vg titer\", \"Vg titer\"]\n[\"Concentration and buffer exchange 2 (TFF2)\", \"N/A\", \"Vg titer\", \"Vg titer\", \"Vg titer\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest\n4.3.10.3. In-Process Testing of Control and Harvest\nProcess Step | GLP batch | Phase 1/2 In-Process Tests | Engg &Phase 3 In- Process Tests | PPQ In-Process Tests\n----------------------------------------\nAAV harvest | Vg titer | Cell density Cell viability Sterility Mycoplasma Vg titer | Cell density Cell viability Bioburden IVAA Mycoplasma Vg titer | Cell density Cell viability Bioburden IVAA Mycoplasma Vg titer Haemadsorbing (or Hemagglutinating) viruses\nClarification | N/A | Vg titer | Vg titer | Vg titer\nAffinity purification | N/A | Vg titer | Vg titer | Vg titer\nConcentration and buffer exchange 1 (TFF1) | N/A | Vg titer | Vg titer | Vg titer\nDensity gradient purification | N/A | Vg titer | Vg titer | Vg titer\nConcentration and buffer exchange 2 (TFF2) | N/A | Vg titer | Vg titer | Vg titer",
+        "source_block_ids": [],
+        "page_numbers": [
+          51
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest",
+        "chunk_type": "table",
+        "id": "f0cadec1-5752-4d20-97e6-1f6ee44ec4b2",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.10.3. In-Process Testing of Control and Harvest'. Interpret the rows using the column headers.",
+        "@search.score": 0.019066285341978073
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 11: Results recorded for Passage 1",
+        "table_headers": [
+          "Process Details (Units)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 37 of 109\", \"EFFECTIVE DATE: vault_r:effective_date V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.4. Cell Passage 1 > Table 11: Results recorded for Passage 1\nTable 11: Results recorded for Passage 1\nProcess Details (Units) | GLP Tox | Ph I/II GMP | Ph III ENG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 37 of 109 | EFFECTIVE DATE: vault_r:effective_date V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          37
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.4. Cell Passage 1 > Table 11: Results recorded for Passage 1",
+        "chunk_type": "table",
+        "id": "5ffc21d9-140a-4f64-b651-4c058def86da",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 11: Results recorded for Passage 1'. Interpret the rows using the column headers.",
+        "@search.score": 0.018906529992818832
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 12: Operating parameters for Passage 2",
+        "table_headers": [
+          "",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch 1 & 2, ENGG-2",
+          "PPQ 1, 2, 3"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 39 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_ V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.5. Cell Passage 2 > Table 12: Operating parameters for Passage 2\nTable 12: Operating parameters for Passage 2\nGLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch 1 & 2, ENGG-2 | PPQ 1, 2, 3\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 39 of 109 | EFFECTIVE DATE: vault_r:effective_date_ V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          39
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.5. Cell Passage 2 > Table 12: Operating parameters for Passage 2",
+        "chunk_type": "table",
+        "id": "d0049e29-8ff6-47e1-87e2-a37d8978c07e",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 12: Operating parameters for Passage 2'. Interpret the rows using the column headers.",
+        "@search.score": 0.018771929666399956
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 17: Results recorded for Passage 4",
+        "table_headers": [
+          "Process Details (Units)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 45 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_v :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4 > Table 17: Results recorded for Passage 4\nTable 17: Results recorded for Passage 4\nProcess Details (Units) | GLP Tox | Ph I/II GMP | Ph III ENG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 45 of 109 | EFFECTIVE DATE: vault_r:effective_date_v :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          45
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4 > Table 17: Results recorded for Passage 4",
+        "chunk_type": "table",
+        "id": "31c02b35-7604-414b-a420-055eb3e0382f",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 17: Results recorded for Passage 4'. Interpret the rows using the column headers.",
+        "@search.score": 0.018294572830200195
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 17: Results recorded for Passage 4",
+        "table_headers": [
+          "Process Details (Units)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"Seeding Density (cells/mL)\", \"5.10E+05\", \"6.20E+05,\", \"6.70E+05,\", \"7.00E+05,\", \"6.29E+05,\", \"7.40E+05,\", \"7.10E+05,\", \"7.20E+05,\", \"7.60E+05,\"]\n[\"\", \"\", \"6.50E+05, 6.20E+05, 6.30E+05,\", \"6.70E+05, 6.60E+05\", \"7.30E+05, 7.50E+05\", \"7.30E+05, 6.50E+05\", \"7.60E+05,\", \"6.60E+05,\", \"7.40E+05,\", \"8.10E+05,\"]\n[\"\", \"\", \"\", \"\", \"\", \"\", \"6.90E+05\", \"7.30E+05\", \"7.50E+05\", \"8.00E+05\"]\n[\"\", \"\", \"7.40E+05, 9.00E+05\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Seeding Viability (%)\", \"99\", \"97.6,\", \"99.7,\", \"98.3,\", \"98.4,\", \"99.7,\", \"97.6,\", \"97.6,\", \"97.1,\"]\n[\"\", \"\", \"95.9,\", \"99.6,\", \"98.0,\", \"98.0,\", \"99.7,\", \"98.2,\", \"97.7,\", \"96.7,\"]\n[\"\", \"\", \"96.9,\", \"100\", \"97.7\", \"98.8\", \"99.3\", \"97.0\", \"98.4\", \"96.7\"]\n[\"\", \"\", \"97.7,\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"\", \"\", \"96.4\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"\", \"\", \"98.4\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Culture temperature (°℃)\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\"]\n[\"CO2 concentration (%)\", \"5\", \"5\", \"5\", \"5\", \"5.1\", \"5.1\", \"5.2\", \"5\", \"5\"]\n[\"shaker shaking speed (rpm)\", \"120\", \"120\", \"125\", \"125\", \"125\", \"125\", \"125\", \"125\", \"125\"]\n[\"Culture Duration (hr.)\", \"95.48\", \"95.35\", \"124\", \"95.166\", \"94.78\", \"98.6\", \"94.5\", \"98.53\", \"98.53\"]\n[\"Harvest density (cells/mL)\", \"3.85E+06,\", \"3.80E+06,\", \"6.98E+06,\", \"4.59E+06,\", \"4.69E+06,\", \"5.32E+06,\", \"5.22E+06,\", \"6.30E+06,\", \"5.61E+06,\"]\n[\"\", \"4.10E+06,\", \"3.85E+06,\", \"6.88E+06,\", \"4.71E+06,\", \"4.85E+06,\", \"5.40E+06,\", \"5.39E+06,\", \"6.28E+06,\", \"5.54E+06,\"]\n[\"\", \"3.99E+06\", \"3.83E+06, 3.94E+06,\", \"6.9E+06\", \"4.82E+06\", \"4.78E+06\", \"4.98E+06\", \"5.44E+06\", \"6.14E+06\", \"5.34E+06\"]\n[\"\", \"\", \"3.90E+06 4.09E+06\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Harvest Viability (%)\", \"97.5,\", \"95.3,\", \"99.2,\", \"97.7,\", \"99.0,\", \"98.3,\", \"97.6,\", \"97.3,\", \"97.7,\"]\n[\"\", \"95.6,\", \"93.1,\", \"98.9,\", \"98.2,\", \"99.0,\", \"98.2,\", \"96.8,\", \"97.2,\", \"98.6,\"]\n[\"\", \"96.4\", \"96.1,\", \"98.6\", \"98.2\", \"99.2\", \"98.6\", \"98.2\", \"97.8\", \"98.9\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4 > Table 17: Results recorded for Passage 4\nTable 17: Results recorded for Passage 4\nProcess Details (Units) | GLP Tox | Ph I/II GMP | Ph III ENG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nSeeding Density (cells/mL) | 5.10E+05 | 6.20E+05, | 6.70E+05, | 7.00E+05, | 6.29E+05, | 7.40E+05, | 7.10E+05, | 7.20E+05, | 7.60E+05,\n |  | 6.50E+05, 6.20E+05, 6.30E+05, | 6.70E+05, 6.60E+05 | 7.30E+05, 7.50E+05 | 7.30E+05, 6.50E+05 | 7.60E+05, | 6.60E+05, | 7.40E+05, | 8.10E+05,\n |  |  |  |  |  | 6.90E+05 | 7.30E+05 | 7.50E+05 | 8.00E+05\n |  | 7.40E+05, 9.00E+05 |  |  |  |  |  |  | \nSeeding Viability (%) | 99 | 97.6, | 99.7, | 98.3, | 98.4, | 99.7, | 97.6, | 97.6, | 97.1,\n |  | 95.9, | 99.6, | 98.0, | 98.0, | 99.7, | 98.2, | 97.7, | 96.7,\n |  | 96.9, | 100 | 97.7 | 98.8 | 99.3 | 97.0 | 98.4 | 96.7\n |  | 97.7, |  |  |  |  |  |  | \n |  | 96.4 |  |  |  |  |  |  | \n |  | 98.4 |  |  |  |  |  |  | \nCulture temperature (°℃) | 37 | 37 | 37 | 37 | 37 | 37 | 37 | 37 | 37\nCO2 concentration (%) | 5 | 5 | 5 | 5 | 5.1 | 5.1 | 5.2 | 5 | 5\nshaker shaking speed (rpm) | 120 | 120 | 125 | 125 | 125 |",
+        "source_block_ids": [],
+        "page_numbers": [
+          45
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4 > Table 17: Results recorded for Passage 4",
+        "chunk_type": "table",
+        "id": "a9f0cf63-6ccd-4744-b507-b1cdfaf04556",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 17: Results recorded for Passage 4'. Interpret the rows using the column headers.",
+        "@search.score": 0.01737520471215248
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 10: Process parameters for Passage 1",
+        "table_headers": [
+          "",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch 1 & 2, ENGG-2",
+          "PPQ 1, 2, 3"
+        ],
+        "table_rows": "[\"Process Details (Units)\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\"]\n[\"Centrifugation speed (g)\", \"110\", \"120\", \"110\", \"120\", \"110\", \"120\", \"110\", \"120\", \"110\", \"130\"]\n[\"Centrifugation time (min)\", \"5\", \"10\", \"5\", \"10\", \"5\", \"10\", \"5\", \"10\", \"\", \"5\"]\n[\"Resuspend pellet volume (mL)\", \"8\", \"10\", \"38\", \"42\", \"30\", \"40\", \"20\", \"40\", \"20\", \"40\"]\n[\"Working volume (mL)\", \"30\", \"40\", \"38\", \"42\", \"30\", \"40\", \"38\", \"42\", \"20\", \"40\"]\n[\"Seeding Density (cells/mL)\", \"≥ 4.0E+05\", \"--\", \"≥ 2.0E+05\", \"--\", \"≥ 2.0E+05\", \"--\", \"≥2.0E+05\", \"--\", \"≥ 2.0E+05\", \"--\"]\n[\"Seeding Viability (%)\", \"80\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥85\", \"--\"]\n[\"Culture temperature (°C)\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\"]\n[\"CO2 concentration (%)\", \"4\", \"8\", \"4\", \"8\", \"4\", \"8\", \"3\", \"7\", \"3\", \"7\"]\n[\"shaker shaking speed (rpm)\", \"110\", \"130\", \"110\", \"130\", \"110\", \"130\", \"110\", \"130\", \"120\", \"130\"]\n[\"Culture Duration (hr.)\", \"92\", \"100\", \"92\", \"124\", \"92\", \"124\", \"92\", \"124\", \"92\", \"124\"]\n[\"Harvest density (cells/mL)\", \"1.50E+06\", \"3.50E+06\", \"1.50E+06\", \"3.50E+06\", \"1.50E+06\", \"3.50E+06\", \"1.50E+06\", \"3.50E+06\", \"1.50E+06\", \"3.50E+06\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.4. Cell Passage 1 > Table 10: Process parameters for Passage 1\nTable 10: Process parameters for Passage 1\nGLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch 1 & 2, ENGG-2 | PPQ 1, 2, 3\n----------------------------------------\nProcess Details (Units) | NOR Low | NOR High | NOR Low | NOR High | NOR Low | NOR High | NOR Low | NOR High | NOR Low | NOR High\nCentrifugation speed (g) | 110 | 120 | 110 | 120 | 110 | 120 | 110 | 120 | 110 | 130\nCentrifugation time (min) | 5 | 10 | 5 | 10 | 5 | 10 | 5 | 10 |  | 5\nResuspend pellet volume (mL) | 8 | 10 | 38 | 42 | 30 | 40 | 20 | 40 | 20 | 40\nWorking volume (mL) | 30 | 40 | 38 | 42 | 30 | 40 | 38 | 42 | 20 | 40\nSeeding Density (cells/mL) | ≥ 4.0E+05 | -- | ≥ 2.0E+05 | -- | ≥ 2.0E+05 | -- | ≥2.0E+05 | -- | ≥ 2.0E+05 | --\nSeeding Viability (%) | 80 | -- | ≥ 85 | -- | ≥ 85 | -- | ≥ 85 | -- | ≥85 | --\nCulture temperature (°C) | 36 | 38 | 36 | 38 | 36 | 38 | 36 | 38 | 36 | 38\nCO2 concentration (%) | 4 | 8 | 4 | 8 | 4 | 8 | 3 | 7 | 3 | 7\nshaker shaking speed (rpm) | 110 | 130 | 110 | 130 | 110 | 130 | 110 | 130 | 120 | 130\nCulture Duration (hr.) | 92 | 100 | 92 | 124 | 92 | 124 | 92 | 124 | 92 | 124\nHarvest density (cells/mL) | 1.50E+06 | 3.50E+06 | 1.50E+06 | 3.50E+06 | 1.50E+06 | 3.50E+06 | 1.50E+06 | 3.50E+06 | 1.50E+06 | 3.50E+06",
+        "source_block_ids": [],
+        "page_numbers": [
+          35
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.4. Cell Passage 1 > Table 10: Process parameters for Passage 1",
+        "chunk_type": "table",
+        "id": "821e6e45-7e7f-4535-a284-7bf10e212a6c",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 10: Process parameters for Passage 1'. Interpret the rows using the column headers.",
+        "@search.score": 0.01715686358511448
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 8: Cell Thaw conditions before and after expansion during upstream across different manufacturing campaigns of OCU400",
+        "table_headers": [
+          "",
+          "",
+          "50L GLP Tox",
+          "200L Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch 1&2, Ph III ENGG-2",
+          "PPQ 1, 2, 3"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 33 of 109\", \"EFFECTIVE DATE: vault_r:effective_date V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.3. Cell Thaw and Recovery > Table 8: Cell Thaw conditions before and after expansion during upstream across different manufacturing campaigns of OCU400\nTable 8: Cell Thaw conditions before and after expansion during upstream across different manufacturing campaigns of OCU400\n50L GLP Tox | 200L Ph I/II GMP | Ph III ENGG-1 | Ph III Batch 1&2, Ph III ENGG-2 | PPQ 1, 2, 3\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 33 of 109 | EFFECTIVE DATE: vault_r:effective_date V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          33
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.3. Cell Thaw and Recovery > Table 8: Cell Thaw conditions before and after expansion during upstream across different manufacturing campaigns of OCU400",
+        "chunk_type": "table",
+        "id": "4b54dcf1-54cc-419f-9ea2-5f48ed8b0154",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 8: Cell Thaw conditions before and after expansion during upstream across different manufacturing campaigns of OCU400'. Interpret the rows using the column headers.",
+        "@search.score": 0.015625
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Process parameters for Cell Passage # 1 and results during upstream across different manufacturing campaigns of OCU400 are shown in Table 10 and Table 11.",
+        "source_block_ids": [
+          "p35_para_0"
+        ],
+        "page_numbers": [
+          35
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.4. Cell Passage 1",
+        "chunk_type": "paragraph",
+        "id": "0f53be1f-74f0-43ce-a126-6a07631279aa",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.014285714365541935
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 8: Cell Thaw conditions before and after expansion during upstream across different manufacturing campaigns of OCU400",
+        "table_headers": [
+          "",
+          "",
+          "50L GLP Tox",
+          "200L Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch 1&2, Ph III ENGG-2",
+          "PPQ 1, 2, 3"
+        ],
+        "table_rows": "[\"Water bath temperature\", \"ºC\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\"]\n[\"Water bath thaw duration\", \"min\", \"2\", \"5\", \"2\", \"5\", \"1\", \"5\", \"2\", \"5\", \"≥ 3\", \"N/A\"]\n[\"Media volume for cell counting\", \"mL\", \"6\", \"10\", \"6\", \"10\", \"6\", \"8\", \"6\", \"8\", \"6\", \"10\"]\n[\"Centrifugation speed\", \"g\", \"110\", \"120\", \"110\", \"120\", \"110\", \"120\", \"110\", \"120\", \"110\", \"130\"]\n[\"Centrifugation time\", \"minutes\", \"5\", \"10\", \"5\", \"10\", \"5\", \"10\", \"5\", \"10\", \"N/A\", \"N/A\"]\n[\"Resuspended pellet volume\", \"mL\", \"6\", \"10\", \"18\", \"20\", \"15\", \"25\", \"15\", \"25\", \"15\", \"25\"]\n[\"Working volume\", \"mL\", \"18\", \"22\", \"18\", \"20\", \"15\", \"25\", \"15\", \"25\", \"15\", \"25\"]\n[\"Seeding density\", \"cells/mL\", \"2.00E+05\", \"4.00E+05\", \"1.50E+05\", \"4.00E+05\", \"1.50E+05\", \"4.00E+05\", \"1.50E+05\", \"4.00E+05 *4.5E+05\", \"1.50E+05\", \"4.00E+05\"]\n[\"Viability\", \"%\", \"80\", \"--\", \"≥85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥85\", \"--\"]\n[\"Culture temperature\", \"ºC\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\"]\n[\"CO2 concentration\", \"%\", \"4\", \"8\", \"4\", \"8\", \"4\", \"8\", \"3\", \"7\", \"3\", \"7\"]\n[\"shaker shaking speed\", \"rpm\", \"110\", \"130\", \"110\", \"130\", \"110\", \"130\", \"110\", \"130\", \"120\", \"130\"]\n[\"Morphology\", \"\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\"]\n[\"Culture Duration\", \"h\", \"92\", \"100\", \"92\", \"100\", \"92\", \"100\", \"92\", \"100\", \"92\", \"100\"]\n[\"Harvest density\", \"cells/mL\", \"≥ 5.0E+05\", \"--\", \"≥ 5.0E+05\", \"--\", \"≥ 5.0E+05\", \"--\", \"≥ 5.0E+05\", \"--\", \"≥ 5.0E+05\", \"--\"]\n[\"Harvest Viability\", \"%\", \"≥ 80\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.3. Cell Thaw and Recovery > Table 8: Cell Thaw conditions before and after expansion during upstream across different manufacturing campaigns of OCU400\nTable 8: Cell Thaw conditions before and after expansion during upstream across different manufacturing campaigns of OCU400\n50L GLP Tox | 200L Ph I/II GMP | Ph III ENGG-1 | Ph III Batch 1&2, Ph III ENGG-2 | PPQ 1, 2, 3\n----------------------------------------\nWater bath temperature | ºC | 36 | 38 | 36 | 38 | 36 | 38 | 36 | 38 | 36 | 38\nWater bath thaw duration | min | 2 | 5 | 2 | 5 | 1 | 5 | 2 | 5 | ≥ 3 | N/A\nMedia volume for cell counting | mL | 6 | 10 | 6 | 10 | 6 | 8 | 6 | 8 | 6 | 10\nCentrifugation speed | g | 110 | 120 | 110 | 120 | 110 | 120 | 110 | 120 | 110 | 130\nCentrifugation time | minutes | 5 | 10 | 5 | 10 | 5 | 10 | 5 | 10 | N/A | N/A\nResuspended pellet volume | mL | 6 | 10 | 18 | 20 | 15 | 25 | 15 | 25 | 15 | 25\nWorking volume | mL | 18 | 22 | 18 | 20 | 15 | 25 | 15 | 25 | 15 | 25\nSeeding density | cells/mL | 2.00E+05 | 4.00E+05 | 1.50E+05 | 4.00E+05 | 1.50E+05 | 4.00E+05 | 1.50E+05 | 4.00E+05 *4.5E+05 | 1.50E+05 | 4.00E+05\nViability | % | 80 | -- | ≥85 | -- | ≥ 85 | -- | ≥ 85 | -- | ≥85 | --\nCulture temperature | ºC | 36 | 38 | 36 | 38 | 36 | 38 | 36 | 38 | 36 | 38\nCO2 concentration | % | 4 | 8 | 4 | 8 | 4 | 8 | 3 | 7 | 3 | 7\nshaker shaking speed | rpm | 110 | 130 | 110 | 130 | 110 | 130 | 110 | 130 | 120 | 130\nMorphology |  | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A\nCulture Duration | h | 92 | 100 | 92 | 100 | 92 | 100 | 92 | 100",
+        "source_block_ids": [],
+        "page_numbers": [
+          32
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.3. Cell Thaw and Recovery > Table 8: Cell Thaw conditions before and after expansion during upstream across different manufacturing campaigns of OCU400",
+        "chunk_type": "table",
+        "id": "e7258d5b-dad0-4c96-80c7-6e764f9d33d5",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 8: Cell Thaw conditions before and after expansion during upstream across different manufacturing campaigns of OCU400'. Interpret the rows using the column headers.",
+        "@search.score": 0.013888888992369175
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "The OCU400 DS is produced in HEK293 suspension cell culture using a production bioreactor-based manufacturing process. HEK293 cells are initially recovered and cultivated in an Erlenmeyer shake flask to initiate the seed train. The cell culture is expanded from the HEK293SF-3F6 working cell bank (WCB) and is performed through sequential scale-up of the culture volume. Following recovery, the cells are expanded through progressively larger shake flask cultures and intermediate seed expansion steps until the required cell biomass is achieved for inoculation of the production bioreactor. The upstream process is designed to support manufacturing across campaigns while maintaining consistent culture conditions and process performance. The upstream process flow for OCU400 production from GLP to PPQ scale is represented in Figure 3.",
+        "source_block_ids": [
+          "p28_para_2"
+        ],
+        "page_numbers": [
+          28
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.1. Overview of the Upstream Manufacturing Process",
+        "chunk_type": "paragraph",
+        "id": "ee0302ed-f70d-401b-b810-219559c78a2b",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.012500000186264515
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.3. Cell Thaw and Recovery",
+        "table_headers": [
+          "ocugen.",
+          "TECHNICAL REPORT"
+        ],
+        "table_rows": "[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 32 of 109\", \"EFFECTIVE DATE: vault_r:effective_date V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.3. Cell Thaw and Recovery\n4.3.3. Cell Thaw and Recovery\nocugen. | TECHNICAL REPORT\n----------------------------------------\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 32 of 109 | EFFECTIVE DATE: vault_r:effective_date V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          32
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.3. Cell Thaw and Recovery",
+        "chunk_type": "table",
+        "id": "98cec984-fbdd-4d43-aa7a-c1b9b63e39c6",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.3. Cell Thaw and Recovery'. Interpret the rows using the column headers.",
+        "@search.score": 0.012345679104328156
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Before transfection, cell culture from the bioreactor is collected as control cells and tested for in-vitro adventitious virus (IVAA) and post transfection bioreactor run, the unprocessed harvest is tested for sterility or bioburden, IVAA and mycoplasma.\n\nThe in-process controls implemented for all the batches of OCU400 DS manufacturing steps are listed in Table 18 and the in-process testing results in Table 19 below.\n\nTable 18: In-Process testing assays at different process steps across different manufacturing campaigns of OCU400 DS & DP batches",
+        "source_block_ids": [
+          "p50_para_1",
+          "p50_para_2",
+          "p50_para_3"
+        ],
+        "page_numbers": [
+          50
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest",
+        "chunk_type": "paragraph",
+        "id": "001148a9-a4c7-46f7-8bc8-974befda2e62",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.011627906933426857
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.10.3. In-Process Testing of Control and Harvest",
+        "table_headers": [
+          "Process Steps (Vg/mL)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENGG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"Bulk harvest\", \"N/A\", \"N/A\", \"1.37E+11\", \"6.80E+10\", \"7.60E+10\", \"1.93E+11\", \"1.30E+11\", \"2.00E+11\", \"1.20E+11\"]\n[\"Cell lysate\", \"1.74E+11\", \"4.75E+11\", \"9.89E+11\", \"4.21E+11\", \"5.98E+11\", \"8.45E+11\", \"1.40E+12\", \"1.10E+12\", \"1.50E+12\"]\n[\"Benzonase / Biolonase treatment\", \"2.72E+11\", \"5.14E+11\", \"8.51E+11\", \"3.16E+11\", \"4.18E+11\", \"8.47E+11\", \"5.50E+11\", \"5.70E+11\", \"5.90E+11\"]\n[\"Conductivity adjustment\", \"2.20E+11\", \"5.41E+11\", \"7.60E+11\", \"3.12E+11\", \"3.45E+11\", \"7.80E+11\", \"N/A\", \"N/A\", \"N/A\"]\n[\"Centrifuge supernatant\", \"1.06E+11\", \"3.99E+11\", \"6.02E+11\", \"2.30E+11\", \"2.92E+11\", \"6.01E+11\", \"4.00E+11\", \"4.50E+11\", \"4.50E+11\"]\n[\"Clarified cell lysate\", \"1.49E+11\", \"1.67E+11\", \"2.56E+11\", \"1.02E+11\", \"1.36E+11\", \"3.41E+11\", \"N/A\", \"N/A\", \"N/A\"]\n[\"AVB loading\", \"1.10E+11\", \"1.90E+11 2.20E+11\", \"2.46E+11\", \"9.66E+10\", \"1.17E+11\", \"3.20E+11\", \"2.60E+11\", \"3.00E+11\", \"2.70E+11\"]\n[\"AVB Eluate\", \"7.04E11\", \"1.21E+12 1.30E+12\", \"2.12E+12\", \"9.85E+11\", \"6.50E+11\", \"1.97E+12\", \"8.70E+11\", \"1.30E+12\", \"6.80E+11\"]\n[\"TFF1 concentrate\", \"6.56E+12\", \"7.91E+12\", \"7.47E+12\", \"9.88E+12\", \"1.51E+13\", \"9.81E+12\", \"1.30E+13\", \"1.50E+13\", \"1.60E+13\"]\n[\"Diluted UC band\", \"1.34E+12\", \"1.25E+12\", \"1.86E+12\", \"2.49E+12\", \"2.48E+12\", \"1.86E+12\", \"2.30E+12\", \"2.40E+12\", \"2.30E+12\"]\n[\"Purified material\", \"2.20E+13\", \"7.54E+12\", \"4.48E+12\", \"6.78E+12\", \"7.54E+12\", \"7.41E+12\", \"7.00E+12\", \"8.40E+12\", \"7.60E+12\"]\n[\"DS\", \"1.76E+13\", \"7.50E+12\", \"4.78E+12\", \"7.3E+12\", \"8.50E+12\", \"7.00E+12\", \"5.10E+12\", \"7.90E+12\", \"6.50E+12\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest\n4.3.10.3. In-Process Testing of Control and Harvest\nProcess Steps (Vg/mL) | GLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENGG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nBulk harvest | N/A | N/A | 1.37E+11 | 6.80E+10 | 7.60E+10 | 1.93E+11 | 1.30E+11 | 2.00E+11 | 1.20E+11\nCell lysate | 1.74E+11 | 4.75E+11 | 9.89E+11 | 4.21E+11 | 5.98E+11 | 8.45E+11 | 1.40E+12 | 1.10E+12 | 1.50E+12\nBenzonase / Biolonase treatment | 2.72E+11 | 5.14E+11 | 8.51E+11 | 3.16E+11 | 4.18E+11 | 8.47E+11 | 5.50E+11 | 5.70E+11 | 5.90E+11\nConductivity adjustment | 2.20E+11 | 5.41E+11 | 7.60E+11 | 3.12E+11 | 3.45E+11 | 7.80E+11 | N/A | N/A | N/A\nCentrifuge supernatant | 1.06E+11 | 3.99E+11 | 6.02E+11 | 2.30E+11 | 2.92E+11 | 6.01E+11 | 4.00E+11 | 4.50E+11 | 4.50E+11\nClarified cell lysate | 1.49E+11 | 1.67E+11 | 2.56E+11 | 1.02E+11 | 1.36E+11 | 3.41E+11 | N/A | N/A | N/A\nAVB loading | 1.10E+11 | 1.90E+11 2.20E+11 | 2.46E+11 | 9.66E+10 | 1.17E+11 | 3.20E+11 | 2.60E+11 | 3.00E+11 | 2.70E+11\nAVB Eluate | 7.04E11 | 1.21E+12 1.30E+12 | 2.12E+12 | 9.85E+11 | 6.50E+11",
+        "source_block_ids": [],
+        "page_numbers": [
+          52
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest",
+        "chunk_type": "table",
+        "id": "40af464c-fe21-406b-aef9-2393098acc34",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.10.3. In-Process Testing of Control and Harvest'. Interpret the rows using the column headers.",
+        "@search.score": 0.011363636702299118
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.3. Cell Thaw and Recovery",
+        "table_headers": [
+          "ocugen.",
+          "TECHNICAL REPORT"
+        ],
+        "table_rows": "[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 31 of 109\", \"EFFECTIVE DATE: vault_r:effective_date __ V :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.3. Cell Thaw and Recovery\n4.3.3. Cell Thaw and Recovery\nocugen. | TECHNICAL REPORT\n----------------------------------------\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 31 of 109 | EFFECTIVE DATE: vault_r:effective_date __ V :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          31
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.3. Cell Thaw and Recovery",
+        "chunk_type": "table",
+        "id": "336137e2-1abb-43af-b76f-87d6feef35a7",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.3. Cell Thaw and Recovery'. Interpret the rows using the column headers.",
+        "@search.score": 0.010989011265337467
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Table 19: In-Process testing results for across different manufacturing campaigns of OCU400 DS & DP batches",
+        "source_block_ids": [
+          "p52_para_0"
+        ],
+        "page_numbers": [
+          52
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest",
+        "chunk_type": "paragraph",
+        "id": "14cdf3ce-855a-4d1a-9706-f01caa0f2475",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.010204081423580647
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 21: Overall Yield (%) - Starting at Cell Lysate",
+        "table_headers": [
+          "Process Steps (Vg/mL)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENGG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"Bulk harvest\", \"N/A\", \"N/A\", \"--\", \"--\", \"--\", \"--\", \"--\", \"--\", \"--\"]\n[\"Cell lysate\", \"100%\", \"100%\", \"100%\", \"100%\", \"100%\", \"100%\", \"100%\", \"100%\", \"100%\"]\n[\"Biolonase treatment\", \"157%\", \"108%\", \"86%\", \"75%\", \"70%\", \"100%\", \"39%\", \"52%\", \"39%\"]\n[\"Conductivity adjustment\", \"141%\", \"127%\", \"87%\", \"84%\", \"65%\", \"104%\", \"N/A\", \"N/A\", \"N/A\"]\n[\"Centrifuge supernatant\", \"65%\", \"87%\", \"66%\", \"61%\", \"52%\", \"77%\", \"31%\", \"44%\", \"32%\"]\n[\"Clarified cell lysate\", \"121%\", \"61%\", \"55%\", \"45%\", \"40%\", \"71%\", \"N/A\", \"N/A\", \"N/A\"]\n[\"AVB loading\", \"89%\", \"69%\", \"52%\", \"43%\", \"35%\", \"67%\", \"27%\", \"46%\", \"32%\"]\n[\"AVB Eluate\", \"72%\", \"40%\", \"38%\", \"24%\", \"15%\", \"35%\", \"12%\", \"21%\", \"10%\"]\n[\"TFF1 concentrate\", \"84%\", \"45%\", \"29%\", \"26%\", \"24%\", \"33%\", \"17%\", \"32%\", \"18%\"]\n[\"Diluted UC band\", \"80%\", \"31%\", \"31%\", \"27%\", \"18%\", \"27%\", \"14%\", \"22%\", \"12%\"]\n[\"Purified material\", \"110%\", \"42%\", \"22%\", \"20%\", \"14%\", \"22%\", \"12%\", \"23%\", \"11%\"]\n[\"DS\", \"86%\", \"41%\", \"23%\", \"22%\", \"17%\", \"22%\", \"8%\", \"22%\", \"10%\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest > Table 21: Overall Yield (%) - Starting at Cell Lysate\nTable 21: Overall Yield (%) - Starting at Cell Lysate\nProcess Steps (Vg/mL) | GLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENGG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nBulk harvest | N/A | N/A | -- | -- | -- | -- | -- | -- | --\nCell lysate | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100%\nBiolonase treatment | 157% | 108% | 86% | 75% | 70% | 100% | 39% | 52% | 39%\nConductivity adjustment | 141% | 127% | 87% | 84% | 65% | 104% | N/A | N/A | N/A\nCentrifuge supernatant | 65% | 87% | 66% | 61% | 52% | 77% | 31% | 44% | 32%\nClarified cell lysate | 121% | 61% | 55% | 45% | 40% | 71% | N/A | N/A | N/A\nAVB loading | 89% | 69% | 52% | 43% | 35% | 67% | 27% | 46% | 32%\nAVB Eluate | 72% | 40% | 38% | 24% | 15% | 35% | 12% | 21% | 10%\nTFF1 concentrate | 84% | 45% | 29% | 26% | 24% | 33% | 17% | 32% | 18%\nDiluted UC band | 80% | 31% | 31% | 27% | 18% | 27% | 14% | 22% | 12%\nPurified material | 110% | 42% | 22% | 20% | 14% | 22% | 12% | 23% | 11%\nDS | 86% | 41% | 23% | 22% | 17% | 22% | 8% | 22% | 10%",
+        "source_block_ids": [],
+        "page_numbers": [
+          54
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest > Table 21: Overall Yield (%) - Starting at Cell Lysate",
+        "chunk_type": "table",
+        "id": "e062362e-d60c-4bec-9810-ff6553a235ef",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 21: Overall Yield (%) - Starting at Cell Lysate'. Interpret the rows using the column headers.",
+        "@search.score": 0.009999999776482582
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 9: Cell Thaw results before and after expansion during upstream across different manufacturing campaigns of OCU400",
+        "table_headers": [
+          "Process Details",
+          "Units",
+          "50L GLP Tox",
+          "200L Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"WCB Passage no.\", \"\", \"P13\", \"P13\", \"P13\", \"P13\", \"P13\", \"P13\", \"P13\", \"P13\", \"P13\"]\n[\"No. of vials thawed\", \"\", \"2\", \"2\", \"2\", \"2\", \"2\", \"2\", \"2\", \"2\", \"2\"]\n[\"Water bath temperature\", \"ºC\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\"]\n[\"Water bath thaw duration\", \"min\", \"4\", \"3\", \"3\", \"2\", \"3\", \"3\", \"3\", \"3\", \"3\"]\n[\"Media volume for cell counting\", \"mL\", \"8\", \"8\", \"8\", \"8\", \"8\", \"8\", \"8\", \"8\", \"8\"]\n[\"Centrifugation speed\", \"g\", \"114\", \"120\", \"120\", \"120\", \"120\", \"120\", \"120\", \"120\", \"120\"]\n[\"Centrifugation time\", \"minutes\", \"5\", \"5\", \"5\", \"5\", \"6\", \"6\", \"5\", \"5\", \"5\"]\n[\"Resuspended pellet volume\", \"mL\", \"8\", \"20\", \"20\", \"20\", \"20\", \"20\", \"20\", \"20\", \"20\"]\n[\"Working volume\", \"mL\", \"20\", \"\", \"20\", \"20\", \"20\", \"20\", \"20\", \"20\", \"20\"]\n[\"Seeding density\", \"cells/mL\", \"2.10E+05\", \"2.70E+05\", \"1.60E+05\", \"2.30E+05\", \"3.70E+05\", \"3.70E+05\", \"3.90E+05\", \"3.60E+05\", \"3.60E+05\"]\n[\"Viability\", \"%\", \"97.6\", \"98.2\", \"100\", \"91.2\", \"98\", \"98.7\", \"94.5\", \"97.4\", \"96.6\"]\n[\"Culture temperature\", \"ºC\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"36.8\", \"37\", \"37\"]\n[\"CO2 concentration\", \"%\", \"5\", \"5\", \"5\", \"5\", \"5\", \"5\", \"5\", \"5\", \"5\"]\n[\"shaker shaking speed\", \"rpm\", \"120\", \"120\", \"125\", \"125\", \"125\", \"125\", \"125\", \"125\", \"125\"]\n[\"Morphology\", \"\", \"Normal\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\"]\n[\"Culture Duration\", \"h\", \"95.4\", \"94.44\", \"96\", \"95.33\", \"95.37\", \"95.1\", \"95.02\", \"94.88\", \"95.5\"]\n[\"Harvest density\", \"cells/mL\", \"8.60E+05\", \"7.20E+05\", \"5.20E+05\", \"1.08E+06\", \"1.89E+06\", \"1.28E+06\", \"1.59E+06\", \"1.56E+06\", \"1.65E+06\"]\n[\"Harvest Viability\", \"%\", \"98.8\", \"95.4\", \"99\", \"92\", \"95.2\", \"98.3\", \"95.8\", \"97.8\", \"96\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.3. Cell Thaw and Recovery > Table 9: Cell Thaw results before and after expansion during upstream across different manufacturing campaigns of OCU400\nTable 9: Cell Thaw results before and after expansion during upstream across different manufacturing campaigns of OCU400\nProcess Details | Units | 50L GLP Tox | 200L Ph I/II GMP | Ph III ENG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nWCB Passage no. |  | P13 | P13 | P13 | P13 | P13 | P13 | P13 | P13 | P13\nNo. of vials thawed |  | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2\nWater bath temperature | ºC | 37 | 37 | 37 | 37 | 37 | 37 | 37 | 37 | 37\nWater bath thaw duration | min | 4 | 3 | 3 | 2 | 3 | 3 | 3 | 3 | 3\nMedia volume for cell counting | mL | 8 | 8 | 8 | 8 | 8 | 8 | 8 | 8 | 8\nCentrifugation speed | g | 114 | 120 | 120 | 120 | 120 | 120 | 120 | 120 | 120\nCentrifugation time | minutes | 5 | 5 | 5 | 5 | 6 | 6 | 5 | 5 | 5\nResuspended pellet volume | mL | 8 | 20 | 20 | 20 | 20 | 20 | 20 | 20 | 20\nWorking volume | mL | 20 |  | 20 | 20 | 20 | 20 | 20 | 20 | 20\nSeeding density | cells/mL | 2.10E+05 | 2.70E+05 | 1.60E+05 | 2.30E+05 | 3.70E+05 | 3.70E+05 | 3.90E+05 | 3.60E+05 | 3.60E+05\nViability | % | 97.6 | 98.2 | 100 | 91.2 | 98 | 98.7 | 94.5 | 97.4 | 96.6\nCulture temperature | ºC | 37 | 37 | 37 | 37 | 37 | 37 | 36.8 | 37 | 37\nCO2 concentration | % | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5\nshaker shaking speed | rpm | 120 | 120 | 125 | 125 | 125 | 125 | 125 | 125 | 125\nMorphology |  | Normal | N/A | N",
+        "source_block_ids": [],
+        "page_numbers": [
+          33
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.3. Cell Thaw and Recovery > Table 9: Cell Thaw results before and after expansion during upstream across different manufacturing campaigns of OCU400",
+        "chunk_type": "table",
+        "id": "a6f7b4b3-b388-4162-a548-6c091b81d7b5",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 9: Cell Thaw results before and after expansion during upstream across different manufacturing campaigns of OCU400'. Interpret the rows using the column headers.",
+        "@search.score": 0.009900989942252636
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 20: Total Vg across all the batches",
+        "table_headers": [
+          "Process Steps (Vg/mL)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENGG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"ocugen.\", \"TECHNICAL REPORT\"]\n[\"DOC NUMBER: vault_r:document_nu mber_v:0\", \"VERSION: 1.0\", \"Page 54 of 109\", \"EFFECTIVE DATE: vault_r:effective_date_v :0\"]\n[\"TITLE\", \"Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3)\", \"\", \"\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest > Table 20: Total Vg across all the batches\nTable 20: Total Vg across all the batches\nProcess Steps (Vg/mL) | GLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENGG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nocugen. | TECHNICAL REPORT\nDOC NUMBER: vault_r:document_nu mber_v:0 | VERSION: 1.0 | Page 54 of 109 | EFFECTIVE DATE: vault_r:effective_date_v :0\nTITLE | Consolidated Process Description and Batch Summary Report for OCU400 (AAV5-hNR2E3) |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          54
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest > Table 20: Total Vg across all the batches",
+        "chunk_type": "table",
+        "id": "060a158a-7f9d-438f-96d7-5d8d671b41ee",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 20: Total Vg across all the batches'. Interpret the rows using the column headers.",
+        "@search.score": 0.009615384973585606
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "The purpose of the seed flask passage steps is to generate sufficient biomass of HEK293 cells for inoculation in the production bioreactor. Seed cultures are passaged at defined intervals under controlled conditions to maintain cell viability and growth characteristics. Subsequent seed flasks are inoculated at an appropriate viable cell density to support consistent expansion. Cells are sequentially expanded through culturing in a series of shake flasks and transferred to a seed bioreactor to generate adequate cell biomass for inoculation of the production bioreactor. The seed train strategy is scalable and designed to ensure consistent cell growth performance across manufacturing scales.",
+        "source_block_ids": [
+          "p30_para_4"
+        ],
+        "page_numbers": [
+          30
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.1. Overview of Seed Flask Preparation and Inoculation",
+        "chunk_type": "paragraph",
+        "id": "0aac5512-aa0f-4cce-985b-e120a14d4ebd",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.009345794096589088
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 20: Total Vg across all the batches",
+        "table_headers": [
+          "Process Steps (Vg/mL)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENGG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"Bulk harvest\", \"N/A\", \"N/A\", \"4.11E+16\", \"2.04E+16\", \"2.28E+16\", \"5.79E+16\", \"3.90E+16\", \"6.01E+16\", \"3.61E+16\"]\n[\"Cell lysate\", \"8.84E+14\", \"9.79E+15\", \"2.91E+16\", \"1.24E+16\", \"1.79E+16\", \"2.48E+16\", \"4.13E+16\", \"3.28E+16\", \"4.49E+16\"]\n[\"Biolonase treatment\", \"1.38E+15\", \"1.06E+16\", \"2.50E+16\", \"9.32E+15\", \"1.25E+16\", \"2.48E+16\", \"1.62E+16\", \"1.70E+16\", \"1.76E+16\"]\n[\"Conductivity adjustment\", \"1.24E+15\", \"1.24E+16\", \"2.54E+16\", \"1.05E+16\", \"1.17E+16\", \"2.58E+16\", \"N/A\", \"N/A\", \"N/A\"]\n[\"Centrifuge supernatant\", \"5.73E+14\", \"8.53E+15\", \"1.93E+16\", \"7.53E+15\", \"9.36E+15\", \"1.91E+16\", \"1.28E+16\", \"1.44E+16\", \"1.44E+16\"]\n[\"Clarified cell lysate\", \"1.07E+15\", \"6.01E+15\", \"1.59E+16\", \"5.62E+15\", \"7.10E+15\", \"1.76E+16\", \"N/A\", \"N/A\", \"N/A\"]\n[\"AVB loading\", \"7.84E+14\", \"6.76E+15\", \"1.52E+16\", \"5.37E+15\", \"6.17E+15\", \"1.66E+16\", \"1.12E+16\", \"1.51E+16\", \"1.43E+16\"]\n[\"AVB Eluate\", \"6.35E+14\", \"3.92E+15\", \"1.10E+16\", \"2.97E+15\", \"2.73E+15\", \"8.69E+15\", \"5.01E+15\", \"6.92E+15\", \"4.60E+15\"]\n[\"TFF1 concentrate\", \"7.45E+14\", \"4.41E+15\", \"8.41E+15\", \"3.20E+15\", \"4.36E+15\", \"8.28E+15\", \"7.12E+15\", \"1.04E+16\", \"8.26E+15\"]\n[\"Diluted UC band\", \"7.03E+14\", \"3.06E+15\", \"8.99E+15\", \"3.35E+15\", \"3.12E+15\", \"6.58E+15\", \"5.65E+15\", \"7.34E+15\", \"5.28E+15\"]\n[\"Purified material\", \"9.68E+14\", \"4.11E+15\", \"6.44E+15\", \"2.50E+15\", \"2.56E+15\", \"5.36E+15\", \"4.96E+15\", \"7.54E+15\", \"5.15E+15\"]\n[\"DS\", \"7.60E+14\", \"4.05E+15\", \"6.81E+15\", \"2.78E+15\", \"3.10E+15\", \"5.37E+15\", \"3.15E+15\", \"7.07E+15\", \"4.42E+15\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest > Table 20: Total Vg across all the batches\nTable 20: Total Vg across all the batches\nProcess Steps (Vg/mL) | GLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENGG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nBulk harvest | N/A | N/A | 4.11E+16 | 2.04E+16 | 2.28E+16 | 5.79E+16 | 3.90E+16 | 6.01E+16 | 3.61E+16\nCell lysate | 8.84E+14 | 9.79E+15 | 2.91E+16 | 1.24E+16 | 1.79E+16 | 2.48E+16 | 4.13E+16 | 3.28E+16 | 4.49E+16\nBiolonase treatment | 1.38E+15 | 1.06E+16 | 2.50E+16 | 9.32E+15 | 1.25E+16 | 2.48E+16 | 1.62E+16 | 1.70E+16 | 1.76E+16\nConductivity adjustment | 1.24E+15 | 1.24E+16 | 2.54E+16 | 1.05E+16 | 1.17E+16 | 2.58E+16 | N/A | N/A | N/A\nCentrifuge supernatant | 5.73E+14 | 8.53E+15 | 1.93E+16 | 7.53E+15 | 9.36E+15 | 1.91E+16 | 1.28E+16 | 1.44E+16 | 1.44E+16\nClarified cell lysate | 1.07E+15 | 6.01E+15 | 1.59E+16 | 5.62E+15 | 7.10E+15 | 1.76E+16 | N/A | N/A | N/A\nAVB loading | 7.84E+14 | 6.76E+15 | 1.52E+16 | 5.37E+15 | 6.17E+15 | 1.66E+16 | 1.12E+16 | 1.51E+16 | 1.43E+16\nAVB Eluate | 6.35E+14 | 3.92E+15 | 1.10E+16 | 2.97E+15 | 2.73E+15 | 8.69E+15 | ",
+        "source_block_ids": [],
+        "page_numbers": [
+          53
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest > Table 20: Total Vg across all the batches",
+        "chunk_type": "table",
+        "id": "09dcce58-59e7-47db-832a-52a70d591129",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 20: Total Vg across all the batches'. Interpret the rows using the column headers.",
+        "@search.score": 0.009259259328246117
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Pooled Fourth cell passage culture\nCell Culture in the Bioreactor\nPooled Fourth cell passage culture\nInoculation and Culture of Bioreactor\nCell culture in 50L Bioreactor\nCell Culture in the Bioreactor\nCell Culture in the Bioreactor\nCell culture in 50L Bioreactor\nCell Culture in the Bioreactor\nCell culture in 50L Bioreactor after feeding\nCell culture in 50L Bioreactor after feeding\nCell Culture in the Bioreactor\nCell culture in 300L Bioreactor\nCell culture in 300L Bioreactor\nCell culture in 300L Bioreactor after feeding\nCell culture in 300L Bioreactor after feeding\nCentrifugation, resuspension and freezing storage\nThis figure illustrates the progressive development of the upstream processing steps for the OCU400 manufacturing across GLP, Phase I/II, Phase III, and PPQ batches.",
+        "source_block_ids": [
+          "p29_para_0",
+          "p29_para_5",
+          "p29_para_4",
+          "p29_para_3",
+          "p29_para_2",
+          "p29_para_1",
+          "p29_para_10",
+          "p29_para_8",
+          "p29_para_11",
+          "p29_para_9",
+          "p29_para_6",
+          "p29_para_7",
+          "p29_para_15",
+          "p29_para_13",
+          "p29_para_14",
+          "p29_para_12",
+          "p29_para_19",
+          "p29_para_16",
+          "p29_para_18",
+          "p29_para_17",
+          "p29_para_21",
+          "p29_para_22",
+          "p29_para_20",
+          "p29_para_26",
+          "p29_para_23",
+          "p29_para_24",
+          "p29_para_25",
+          "p29_para_27",
+          "p29_para_30",
+          "p29_para_28",
+          "p29_para_29",
+          "p29_para_32",
+          "p29_para_33",
+          "p29_para_31",
+          "p29_para_35",
+          "p29_para_36",
+          "p29_para_34",
+          "p29_para_38",
+          "p29_para_39",
+          "p29_para_37",
+          "p29_para_40",
+          "p29_para_42",
+          "p29_para_41",
+          "p29_para_45",
+          "p29_para_43",
+          "p29_para_44",
+          "p29_para_47",
+          "p29_para_48",
+          "p29_para_46",
+          "p29_para_49",
+          "p29_para_51",
+          "p29_para_50",
+          "p29_para_52",
+          "p29_para_54",
+          "p29_para_53",
+          "p29_para_55",
+          "p29_para_56"
+        ],
+        "page_numbers": [
+          29
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.1. Overview of the Upstream Manufacturing Process > Figure 3: General Upstream Process Flow",
+        "chunk_type": "paragraph",
+        "id": "9539b2f8-7668-45d3-8ad4-ab566a9be7a9",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.008474576286971569
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 22: Overall Yield (%) - Starting at Bulk Harvest",
+        "table_headers": [
+          "Process Steps (Vg/mL)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENGG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"Bulk harvest\", \"N/A\", \"N/A\", \"100%\", \"100%\", \"100%\", \"100%\", \"100%\", \"100%\", \"100%\"]\n[\"Cell lysate\", \"100%\", \"100%\", \"71%\", \"61%\", \"78%\", \"43%\", \"106%\", \"55%\", \"124%\"]\n[\"Biolonase treatment\", \"157%\", \"108%\", \"61%\", \"46%\", \"55%\", \"43%\", \"42%\", \"28%\", \"49%\"]\n[\"Conductivity adjustment\", \"141%\", \"127%\", \"62%\", \"51%\", \"51%\", \"45%\", \"N/A\", \"N/A\", \"N/A\"]\n[\"Centrifuge supernatant\", \"65%\", \"87%\", \"47%\", \"37%\", \"41%\", \"33%\", \"33%\", \"24%\", \"40%\"]\n[\"Clarified cell lysate\", \"121%\", \"61%\", \"39%\", \"28%\", \"31%\", \"30%\", \"N/A\", \"N/A\", \"N/A\"]\n[\"AVB loading\", \"89%\", \"69%\", \"37%\", \"26%\", \"27%\", \"29%\", \"29%\", \"25%\", \"39%\"]\n[\"AVB Eluate\", \"72%\", \"40%\", \"27%\", \"15%\", \"12%\", \"15%\", \"13%\", \"12%\", \"13%\"]\n[\"TFF1 concentrate\", \"84%\", \"45%\", \"20%\", \"16%\", \"19%\", \"14%\", \"18%\", \"17%\", \"23%\"]\n[\"Diluted UC band\", \"80%\", \"31%\", \"22%\", \"16%\", \"14%\", \"11%\", \"14%\", \"12%\", \"15%\"]\n[\"Purified material\", \"110%\", \"42%\", \"16%\", \"12%\", \"11%\", \"9%\", \"13%\", \"13%\", \"14%\"]\n[\"DS\", \"86%\", \"41%\", \"17%\", \"14%\", \"14%\", \"9%\", \"8%\", \"12%\", \"12%\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest > Table 22: Overall Yield (%) - Starting at Bulk Harvest\nTable 22: Overall Yield (%) - Starting at Bulk Harvest\nProcess Steps (Vg/mL) | GLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENGG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nBulk harvest | N/A | N/A | 100% | 100% | 100% | 100% | 100% | 100% | 100%\nCell lysate | 100% | 100% | 71% | 61% | 78% | 43% | 106% | 55% | 124%\nBiolonase treatment | 157% | 108% | 61% | 46% | 55% | 43% | 42% | 28% | 49%\nConductivity adjustment | 141% | 127% | 62% | 51% | 51% | 45% | N/A | N/A | N/A\nCentrifuge supernatant | 65% | 87% | 47% | 37% | 41% | 33% | 33% | 24% | 40%\nClarified cell lysate | 121% | 61% | 39% | 28% | 31% | 30% | N/A | N/A | N/A\nAVB loading | 89% | 69% | 37% | 26% | 27% | 29% | 29% | 25% | 39%\nAVB Eluate | 72% | 40% | 27% | 15% | 12% | 15% | 13% | 12% | 13%\nTFF1 concentrate | 84% | 45% | 20% | 16% | 19% | 14% | 18% | 17% | 23%\nDiluted UC band | 80% | 31% | 22% | 16% | 14% | 11% | 14% | 12% | 15%\nPurified material | 110% | 42% | 16% | 12% | 11% | 9% | 13% | 13% | 14%\nDS | 86% | 41% | 17% | 14% | 14% | 9% | 8% | 12% | 12%",
+        "source_block_ids": [],
+        "page_numbers": [
+          55
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest > Table 22: Overall Yield (%) - Starting at Bulk Harvest",
+        "chunk_type": "table",
+        "id": "4d3ec0ec-8f1f-4c4b-a9b5-344371e6de0c",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 22: Overall Yield (%) - Starting at Bulk Harvest'. Interpret the rows using the column headers.",
+        "@search.score": 0.00800000037997961
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 8: Cell Thaw conditions before and after expansion during upstream across different manufacturing campaigns of OCU400",
+        "table_headers": [
+          "",
+          "",
+          "50L GLP Tox",
+          "200L Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch 1&2, Ph III ENGG-2",
+          "PPQ 1, 2, 3"
+        ],
+        "table_rows": "[\"Water bath temperature\", \"ºC\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\"]\n[\"Water bath thaw duration\", \"min\", \"2\", \"5\", \"2\", \"5\", \"1\", \"5\", \"2\", \"5\", \"≥ 3\", \"N/A\"]\n[\"Media volume for cell counting\", \"mL\", \"6\", \"10\", \"6\", \"10\", \"6\", \"8\", \"6\", \"8\", \"6\", \"10\"]\n[\"Centrifugation speed\", \"g\", \"110\", \"120\", \"110\", \"120\", \"110\", \"120\", \"110\", \"120\", \"110\", \"130\"]\n[\"Centrifugation time\", \"minutes\", \"5\", \"10\", \"5\", \"10\", \"5\", \"10\", \"5\", \"10\", \"N/A\", \"N/A\"]\n[\"Resuspended pellet volume\", \"mL\", \"6\", \"10\", \"18\", \"20\", \"15\", \"25\", \"15\", \"25\", \"15\", \"25\"]\n[\"Working volume\", \"mL\", \"18\", \"22\", \"18\", \"20\", \"15\", \"25\", \"15\", \"25\", \"15\", \"25\"]\n[\"Seeding density\", \"cells/mL\", \"2.00E+05\", \"4.00E+05\", \"1.50E+05\", \"4.00E+05\", \"1.50E+05\", \"4.00E+05\", \"1.50E+05\", \"4.00E+05 *4.5E+05\", \"1.50E+05\", \"4.00E+05\"]\n[\"Viability\", \"%\", \"80\", \"--\", \"≥85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥85\", \"--\"]\n[\"Culture temperature\", \"ºC\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\"]\n[\"CO2 concentration\", \"%\", \"4\", \"8\", \"4\", \"8\", \"4\", \"8\", \"3\", \"7\", \"3\", \"7\"]\n[\"shaker shaking speed\", \"rpm\", \"110\", \"130\", \"110\", \"130\", \"110\", \"130\", \"110\", \"130\", \"120\", \"130\"]\n[\"Morphology\", \"\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\"]\n[\"Culture Duration\", \"h\", \"92\", \"100\", \"92\", \"100\", \"92\", \"100\", \"92\", \"100\", \"92\", \"100\"]\n[\"Harvest density\", \"cells/mL\", \"≥ 5.0E+05\", \"--\", \"≥ 5.0E+05\", \"--\", \"≥ 5.0E+05\", \"--\", \"≥ 5.0E+05\", \"--\", \"≥ 5.0E+05\", \"--\"]\n[\"Harvest Viability\", \"%\", \"≥ 80\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\"]",
+        "text": " | 92 | 100\nHarvest density | cells/mL | ≥ 5.0E+05 | -- | ≥ 5.0E+05 | -- | ≥ 5.0E+05 | -- | ≥ 5.0E+05 | -- | ≥ 5.0E+05 | --\nHarvest Viability | % | ≥ 80 | -- | ≥ 85 | -- | ≥ 85 | -- | ≥ 85 | -- | ≥ 85 | --",
+        "source_block_ids": [],
+        "page_numbers": [
+          32
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.3. Cell Thaw and Recovery > Table 8: Cell Thaw conditions before and after expansion during upstream across different manufacturing campaigns of OCU400",
+        "chunk_type": "table",
+        "id": "3c3d97c7-23f4-4559-b43d-9d18c3b18b8f",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 8: Cell Thaw conditions before and after expansion during upstream across different manufacturing campaigns of OCU400'. Interpret the rows using the column headers.",
+        "@search.score": 0.007575757801532745
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 12: Operating parameters for Passage 2",
+        "table_headers": [
+          "",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch 1 & 2, ENGG-2",
+          "PPQ 1, 2, 3"
+        ],
+        "table_rows": "[\"Process Details (Units)\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\"]\n[\"Working volume (mL)\", \"195\", \"205\", \"195\", \"205\", \"150\", \"220\", \"150\", \"220\", \"150\", \"200\"]\n[\"Seeding Density (cells/mL)\", \"≥ 3.0E+05\", \"--\", \"≥ 1.5E+05\", \"--\", \"≥ 1.5E+05\", \"--\", \"≥ 1.5E+05\", \"--\", \"≥ 1.5E+05\", \"--\"]\n[\"Seeding Viability (%)\", \"≥ 80\", \"--\", \"≥85\", \"--\", \"≥85\", \"--\", \"≥ 85\", \"--\", \"≥85\", \"--\"]\n[\"Culture temperature (°℃)\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\"]\n[\"CO2 concentration (%)\", \"6\", \"8\", \"4\", \"8\", \"4\", \"8\", \"3\", \"7\", \"3\", \"7\"]\n[\"shaker shaking speed (rpm)\", \"110\", \"130\", \"110\", \"130\", \"110\", \"130\", \"110\", \"130\", \"120\", \"130\"]\n[\"Culture Duration (hr.)\", \"68\", \"100\", \"68\", \"100\", \"68\", \"100\", \"68\", \"100\", \"68\", \"100\"]\n[\"Harvest density (cells/mL)\", \"1.50E+06\", \"3.50E+06\", \"2.00E+06\", \"4.50E+06\", \"2.00E+06\", \"4.50E+06\", \"2.00E+06\", \"4.50E+06\", \"2.00E+06\", \"4.50E+06\"]\n[\"Harvest Viability (%)\", \"≥ 80\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.5. Cell Passage 2 > Table 12: Operating parameters for Passage 2\nTable 12: Operating parameters for Passage 2\nGLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch 1 & 2, ENGG-2 | PPQ 1, 2, 3\n----------------------------------------\nProcess Details (Units) | NOR Low | NOR High | NOR Low | NOR High | NOR Low | NOR High | NOR Low | NOR High | NOR Low | NOR High\nWorking volume (mL) | 195 | 205 | 195 | 205 | 150 | 220 | 150 | 220 | 150 | 200\nSeeding Density (cells/mL) | ≥ 3.0E+05 | -- | ≥ 1.5E+05 | -- | ≥ 1.5E+05 | -- | ≥ 1.5E+05 | -- | ≥ 1.5E+05 | --\nSeeding Viability (%) | ≥ 80 | -- | ≥85 | -- | ≥85 | -- | ≥ 85 | -- | ≥85 | --\nCulture temperature (°℃) | 36 | 38 | 36 | 38 | 36 | 38 | 36 | 38 | 36 | 38\nCO2 concentration (%) | 6 | 8 | 4 | 8 | 4 | 8 | 3 | 7 | 3 | 7\nshaker shaking speed (rpm) | 110 | 130 | 110 | 130 | 110 | 130 | 110 | 130 | 120 | 130\nCulture Duration (hr.) | 68 | 100 | 68 | 100 | 68 | 100 | 68 | 100 | 68 | 100\nHarvest density (cells/mL) | 1.50E+06 | 3.50E+06 | 2.00E+06 | 4.50E+06 | 2.00E+06 | 4.50E+06 | 2.00E+06 | 4.50E+06 | 2.00E+06 | 4.50E+06\nHarvest Viability (%) | ≥ 80 | -- | ≥ 85 | -- | ≥ 85 | -- | ≥ 85 | -- | ≥ 85 | --",
+        "source_block_ids": [],
+        "page_numbers": [
+          38
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.5. Cell Passage 2 > Table 12: Operating parameters for Passage 2",
+        "chunk_type": "table",
+        "id": "aa7bfc05-564a-4e4f-a2c0-645cd2ce4ac5",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 12: Operating parameters for Passage 2'. Interpret the rows using the column headers.",
+        "@search.score": 0.007518797181546688
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Following cell cultivation from cell passage 3, an in-process sample is withdrawn for determination of cell density and cell viability. If the cell density and viability meet in- process specifications, culture are pooled in one Erlenmeyer flask and redistributed according to defined volume in other Erlenmeyer flasks. The cell culture is mixed with pre- warmed BalanCD HEK293 medium containing 2% L-glutamine . An in-process sample is collected prior to incubation for determination of cell count, viability and morphology. The flask containing the cell suspension were placed in a CO2 incubator for cultivation for a defined cultivation period.",
+        "source_block_ids": [
+          "p43_para_1"
+        ],
+        "page_numbers": [
+          43
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4",
+        "chunk_type": "paragraph",
+        "id": "d00d7200-a84f-4d37-8eb0-74f6d258b8af",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.007042253389954567
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Operating parameters for Passage 4 and results for the all the batches are shown in Table 16 and Table 17.",
+        "source_block_ids": [
+          "p44_para_0"
+        ],
+        "page_numbers": [
+          44
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4",
+        "chunk_type": "paragraph",
+        "id": "16162482-def9-4dae-b62c-7d630b1a2d72",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.00699300691485405
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "OCU400 is produced using the HEK293SF-3F6 Working Cell Bank (WCB), which is derived from a well-characterized HEK293 Master Cell Bank (MCB) established under applicable conditions. The Master and Working Cell Banks have been prepared, qualified, and fully characterized in accordance with regulatory expectations to ensure identity, purity, safety, and suitability for manufacturing use.",
+        "source_block_ids": [
+          "p30_para_6"
+        ],
+        "page_numbers": [
+          30
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.2. Strain description",
+        "chunk_type": "paragraph",
+        "id": "febc12d3-ac57-442c-a1f1-155f44aaa3ba",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.006896551698446274
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 11: Results recorded for Passage 1",
+        "table_headers": [
+          "Process Details (Units)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"Centrifugation speed (g)\", \"114\", \"120\", \"120\", \"120\", \"120\", \"120\", \"120\", \"120\", \"120\"]\n[\"Centrifugation time (min)\", \"5\", \"5\", \"5\", \"5\", \"5\", \"5\", \"5\", \"5\", \"5\"]\n[\"Resuspend pellet volume (mL)\", \"8\", \"40\", \"40\", \"40\", \"40\", \"40\", \"40\", \"40\", \"40\"]\n[\"Working volume (mL)\", \"40\", \"40.8\", \"40\", \"40\", \"40\", \"40\", \"40\", \"40\", \"40\"]\n[\"Seeding Density (cells/mL)\", \"2.70E+05\", \"3.00E+05\", \"2.30E+05\", \"5.50E+05\", \"6.40E+05\", \"5.40E+05\", \"6.00E+05\", \"6.30E+05\", \"5.70E+05\"]\n[\"Seeding Viability (%)\", \"99\", \"96\", \"99\", \"92.4\", \"96.6\", \"97.3\", \"96.8\", \"98.9\", \"95.3\"]\n[\"Culture temperature (℃)\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\"]\n[\"CO2 concentration (%)\", \"5\", \"5\", \"5\", \"5\", \"5.1\", \"5.1\", \"5.2\", \"5.2\", \"5.2\"]\n[\"shaker shaking speed (rpm)\", \"120\", \"120\", \"125\", \"125\", \"125\", \"125\", \"125\", \"125\", \"125\"]\n[\"Culture Duration (hr.)\", \"92\", \"118.55\", \"119.5\", \"96\", \"95.33\", \"95.5\", \"95.37\", \"95.17\", \"95.35\"]\n[\"Harvest density (cells/mL)\", \"1.50E+06\", \"2.82E+06\", \"2.15E+06\", \"3.18E+06\", \"3.19E+06\", \"2.65E+06\", \"3.36E+06\", \"3.38E+06\", \"3.24E+06\"]\n[\"Harvest Viability (%)\", \"95.8\", \"96\", \"98.7\", \"95\", \"95.5\", \"97.4\", \"95.4\", \"97.6\", \"96.9\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.4. Cell Passage 1 > Table 11: Results recorded for Passage 1\nTable 11: Results recorded for Passage 1\nProcess Details (Units) | GLP Tox | Ph I/II GMP | Ph III ENG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nCentrifugation speed (g) | 114 | 120 | 120 | 120 | 120 | 120 | 120 | 120 | 120\nCentrifugation time (min) | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5\nResuspend pellet volume (mL) | 8 | 40 | 40 | 40 | 40 | 40 | 40 | 40 | 40\nWorking volume (mL) | 40 | 40.8 | 40 | 40 | 40 | 40 | 40 | 40 | 40\nSeeding Density (cells/mL) | 2.70E+05 | 3.00E+05 | 2.30E+05 | 5.50E+05 | 6.40E+05 | 5.40E+05 | 6.00E+05 | 6.30E+05 | 5.70E+05\nSeeding Viability (%) | 99 | 96 | 99 | 92.4 | 96.6 | 97.3 | 96.8 | 98.9 | 95.3\nCulture temperature (℃) | 37 | 37 | 37 | 37 | 37 | 37 | 37 | 37 | 37\nCO2 concentration (%) | 5 | 5 | 5 | 5 | 5.1 | 5.1 | 5.2 | 5.2 | 5.2\nshaker shaking speed (rpm) | 120 | 120 | 125 | 125 | 125 | 125 | 125 | 125 | 125\nCulture Duration (hr.) | 92 | 118.55 | 119.5 | 96 | 95.33 | 95.5 | 95.37 | 95.17 | 95.35\nHarvest density (cells/mL) | 1.50E+06 | 2.82E+06 | 2.15E+06 | 3.18E+06 | 3.19E+06 | 2.65E+06 | 3.36E+06 | 3.38E+06 | 3.24E+06\nHarvest Viability (%) | 95.8 | 96 | 98.7 | 95 | 95.5 | 97.4 | 95.4 | 97.6 | 96.9",
+        "source_block_ids": [],
+        "page_numbers": [
+          36
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.4. Cell Passage 1 > Table 11: Results recorded for Passage 1",
+        "chunk_type": "table",
+        "id": "3578c379-da32-43cf-84cd-c588df5b9c86",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 11: Results recorded for Passage 1'. Interpret the rows using the column headers.",
+        "@search.score": 0.006849315017461777
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 14: Operating parameters for Passage 3",
+        "table_headers": [
+          "",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch 1 & 2, ENGG-2",
+          "PPQ 1, 2, 3"
+        ],
+        "table_rows": "[\"Process Details (Units)\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\"]\n[\"Working volume (mL)\", \"N/A\", \"N/A\", \"250\", \"350\", \"250\", \"350\", \"300\", \"350\", \"250\", \"350\"]\n[\"Seeding Density (cells/mL)\", \"≥3.0E+05\", \"--\", \"≥4.0E+05\", \"--\", \"≥4.0E+05\", \"--\", \"≥4.0E+05\", \"--\", \"≥4.0E+05\", \"--\"]\n[\"Seeding Viability (%)\", \"≥ 80\", \"N/A\", \"≥85\", \"N/A\", \"≥85\", \"N/A\", \"≥85\", \"N/A\", \"≥85\", \"--\"]\n[\"Culture temperature (°℃)\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\"]\n[\"CO2 concentration (%)\", \"6\", \"8\", \"4\", \"8\", \"4\", \"8\", \"3\", \"7\", \"3\", \"7\"]\n[\"shaker shaking speed (rpm)\", \"110\", \"130\", \"110\", \"130\", \"110\", \"130\", \"110\", \"130\", \"120\", \"130\"]\n[\"Culture Duration (hr.)\", \"68\", \"100\", \"44\", \"76\", \"68\", \"100\", \"68\", \"100\", \"68\", \"100\"]\n[\"Harvest density (cells/mL)\", \"1.50E+06\", \"3.50E+06\", \"1.00E+06\", \"3.00E+06\", \"2.00E+06\", \"4.50E+06\", \"2.00E+06\", \"4.50E+06\", \"2.00E+06\", \"4.50E+06\"]\n[\"Harvest Viability (%)\", \"≥ 80\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.6. Cell Passage 3 > Table 14: Operating parameters for Passage 3\nTable 14: Operating parameters for Passage 3\nGLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch 1 & 2, ENGG-2 | PPQ 1, 2, 3\n----------------------------------------\nProcess Details (Units) | NOR Low | NOR High | NOR Low | NOR High | NOR Low | NOR High | NOR Low | NOR High | NOR Low | NOR High\nWorking volume (mL) | N/A | N/A | 250 | 350 | 250 | 350 | 300 | 350 | 250 | 350\nSeeding Density (cells/mL) | ≥3.0E+05 | -- | ≥4.0E+05 | -- | ≥4.0E+05 | -- | ≥4.0E+05 | -- | ≥4.0E+05 | --\nSeeding Viability (%) | ≥ 80 | N/A | ≥85 | N/A | ≥85 | N/A | ≥85 | N/A | ≥85 | --\nCulture temperature (°℃) | 36 | 38 | 36 | 38 | 36 | 38 | 36 | 38 | 36 | 38\nCO2 concentration (%) | 6 | 8 | 4 | 8 | 4 | 8 | 3 | 7 | 3 | 7\nshaker shaking speed (rpm) | 110 | 130 | 110 | 130 | 110 | 130 | 110 | 130 | 120 | 130\nCulture Duration (hr.) | 68 | 100 | 44 | 76 | 68 | 100 | 68 | 100 | 68 | 100\nHarvest density (cells/mL) | 1.50E+06 | 3.50E+06 | 1.00E+06 | 3.00E+06 | 2.00E+06 | 4.50E+06 | 2.00E+06 | 4.50E+06 | 2.00E+06 | 4.50E+06\nHarvest Viability (%) | ≥ 80 | -- | ≥ 85 | -- | ≥ 85 | -- | ≥ 85 | -- | ≥ 85 | --",
+        "source_block_ids": [],
+        "page_numbers": [
+          41
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.6. Cell Passage 3 > Table 14: Operating parameters for Passage 3",
+        "chunk_type": "table",
+        "id": "763baab2-f8b1-4c2e-b9e0-e3604873e1fe",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14: Operating parameters for Passage 3'. Interpret the rows using the column headers.",
+        "@search.score": 0.006802720949053764
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 15: Results recorded for Passage 3",
+        "table_headers": [
+          "Process Details (Units)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"Working volume (mL)\", \"320\", \"333.5\", \"336\", \"350\", \"322\", \"320\", \"360\", \"350\", \"350\"]\n[\"Seeding Density (cells/mL)\", \"6.70E+05\", \"7.60E+05, 7.30E+05,\", \"5.10E+05,\", \"6.20E+05, 5.90E+05,\", \"6.50E+05, 7.20E+05,\", \"5.70E+05,\", \"7.90E+05,\", \"9.20E+05, 9.00E+05,\", \"8.60E+05, 9.00E+05,\"]\n[\"\", \"\", \"\", \"5.10E+05,\", \"\", \"\", \"5.50E+05,\", \"8.20E+05,\", \"\", \"\"]\n[\"\", \"\", \"7.30E+05\", \"5.10E+05\", \"6.20E+05\", \"7.60E+05\", \"6.60E+05\", \"7.60E+05\", \"8.90E+05\", \"8.70E+05\"]\n[\"Seeding Viability (%)\", \"98.3\", \"95,\", \"99.5,\", \"97.3,\", \"96,\", \"97.4,\", \"98.2,\", \"97.1,\", \"96.4,\"]\n[\"\", \"\", \"95.6,\", \"99.5,\", \"96.7,\", \"96.6,\", \"97.8,\", \"97.9,\", \"98.1,\", \"96.5,\"]\n[\"\", \"\", \"95.6\", \"99.5\", \"95.3\", \"98.1\", \"97.8\", \"97.4\", \"97.6\", \"96.2\"]\n[\"Culture temperature (℃)\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\"]\n[\"CO2 concentration (%)\", \"5\", \"5\", \"5\", \"5.1\", \"5\", \"5\", \"5.3\", \"5.2\", \"5.2\"]\n[\"shaker shaking speed (rpm)\", \"120\", \"120\", \"125\", \"125\", \"125\", \"125\", \"125\", \"125\", \"125\"]\n[\"Culture Duration (hr.)\", \"91.35\", \"47.48\", \"95.5\", \"92.6666\", \"71.05\", \"95.2\", \"74.93\", \"70.65\", \"71.18\"]\n[\"Harvest density (cells/mL)\", \"2.85E+06\", \"1.78E+06, 1.69E+06,\", \"3.33E+06,\", \"3.54E+06,\", \"3.83E+06,\", \"4.35E+06,\", \"4.29E+06,\", \"4.3E6,\", \"4.38E6, 4.42E6,\"]\n[\"\", \"\", \"\", \"3.33E+06,\", \"3.60E+06,\", \"3.69E+06,\", \"4.23E+06,\", \"4.38E+06,\", \"4.32E6,\", \"\"]\n[\"\", \"\", \"1.62E+06\", \"3.33E+06\", \"3.68E+06\", \"3.92E+06\", \"4.40E+06\", \"4.16E+06\", \"4.28E6\", \"4.35E6\"]\n[\"Harvest Viability (%)\", \"98.1\", \"98.1,\", \"99.1,\", \"97.6,\", \"97.7,\", \"99.1,\", \"97.5,\", \"98.0,\", \"97.8,\"]\n[\"\", \"\", \"98.0,\", \"99.1,\", \"97.3,\", \"97.9,\", \"99.1,\", \"98.0,\", \"98.7,\", \"98.0,\"]\n[\"\", \"\", \"96.6\", \"99.4\", \"97.1\", \"97.8\", \"98.9\", \"98.4\", \"98.4\", \"97.5\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.6. Cell Passage 3 > Table 15: Results recorded for Passage 3\nTable 15: Results recorded for Passage 3\nProcess Details (Units) | GLP Tox | Ph I/II GMP | Ph III ENG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nWorking volume (mL) | 320 | 333.5 | 336 | 350 | 322 | 320 | 360 | 350 | 350\nSeeding Density (cells/mL) | 6.70E+05 | 7.60E+05, 7.30E+05, | 5.10E+05, | 6.20E+05, 5.90E+05, | 6.50E+05, 7.20E+05, | 5.70E+05, | 7.90E+05, | 9.20E+05, 9.00E+05, | 8.60E+05, 9.00E+05,\n |  |  | 5.10E+05, |  |  | 5.50E+05, | 8.20E+05, |  | \n |  | 7.30E+05 | 5.10E+05 | 6.20E+05 | 7.60E+05 | 6.60E+05 | 7.60E+05 | 8.90E+05 | 8.70E+05\nSeeding Viability (%) | 98.3 | 95, | 99.5, | 97.3, | 96, | 97.4, | 98.2, | 97.1, | 96.4,\n |  | 95.6, | 99.5, | 96.7, | 96.6, | 97.8, | 97.9, | 98.1, | 96.5,\n |  | 95.6 | 99.5 | 95.3 | 98.1 | 97.8 | 97.4 | 97.6 | 96.2\nCulture temperature (℃) | 37 | 37 | 37 | 37 | 37 | 37 | 37 | 37 | 37\nCO2 concentration (%) | 5 | 5 | 5 | 5.1 | 5 | 5 | 5.3 | 5.2 | 5.2\nshaker shaking speed (rpm) | 120 | 120 | 125 | 125 | 125 | 125 | 125 | 125 | 125\nCulture Duration (hr.) | 91.35 | 47.48 | 95.5 | 92.6666 | 71.05 | 95.2 | 74.93 | 70.65 | 71.18\nHarvest density (",
+        "source_block_ids": [],
+        "page_numbers": [
+          42
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.6. Cell Passage 3 > Table 15: Results recorded for Passage 3",
+        "chunk_type": "table",
+        "id": "61e8d256-c2fa-4c0d-b718-255ed25f08f2",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 15: Results recorded for Passage 3'. Interpret the rows using the column headers.",
+        "@search.score": 0.006756756920367479
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 13: Results recorded for Passage 2",
+        "table_headers": [
+          "Process Details (Units)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"Working volume (mL)\", \"200\", \"200\", \"200\", \"200\", \"200\", \"200\", \"220\", \"215\", \"216\"]\n[\"Seeding Density (cells/mL)\", \"3.00E+05\", \"4.80E+05\", \"4.20E+05\", \"4.40E+05\", \"5.00E+05\", \"3.60E+05\", \"5.90E+05\", \"6.20E+05\", \"5.40E+05\"]\n[\"Seeding Viability (%)\", \"96.7\", \"97.2\", \"99.5\", \"95.1\", \"97.6\", \"95\", \"94.8\", \"97.2\", \"96.8\"]\n[\"Culture temperature (℃)\", \"37\", \"37\", \"37\", \"37\", \"37.1\", \"37\", \"37\", \"37\", \"37\"]\n[\"CO2 concentration (%)\", \"5\", \"5\", \"5\", \"5\", \"5\", \"5\", \"5.3\", \"5\", \"5.2\"]\n[\"shaker shaking speed (rpm)\", \"120\", \"120\", \"125\", \"125\", \"125\", \"125\", \"125\", \"125\", \"125\"]\n[\"Culture Duration (hr.)\", \"91.35\", \"95.47\", \"95.5\", \"97.016\", \"76.05\", \"95.6\", \"95.7\", \"95.5\", \"95.65\"]\n[\"Harvest density (cells/mL)\", \"2.47E+06\", \"4.01E+06\", \"2.63E+06\", \"3.50E+06\", \"3.24E+06\", \"3.04E+06\", \"4.26E+06\", \"4.40E+06\", \"4.23E+06\"]\n[\"Harvest Viability (%)\", \"98.3\", \"98.8\", \"99.1\", \"97.8\", \"97.1\", \"98.1\", \"98\", \"96.1\", \"95.9\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.5. Cell Passage 2 > Table 13: Results recorded for Passage 2\nTable 13: Results recorded for Passage 2\nProcess Details (Units) | GLP Tox | Ph I/II GMP | Ph III ENG-1 | Ph III Batch-1 | Ph III Batch-2 | Ph III ENG-2 | PPQ1 | PPQ2 | PPQ 3\n----------------------------------------\nWorking volume (mL) | 200 | 200 | 200 | 200 | 200 | 200 | 220 | 215 | 216\nSeeding Density (cells/mL) | 3.00E+05 | 4.80E+05 | 4.20E+05 | 4.40E+05 | 5.00E+05 | 3.60E+05 | 5.90E+05 | 6.20E+05 | 5.40E+05\nSeeding Viability (%) | 96.7 | 97.2 | 99.5 | 95.1 | 97.6 | 95 | 94.8 | 97.2 | 96.8\nCulture temperature (℃) | 37 | 37 | 37 | 37 | 37.1 | 37 | 37 | 37 | 37\nCO2 concentration (%) | 5 | 5 | 5 | 5 | 5 | 5 | 5.3 | 5 | 5.2\nshaker shaking speed (rpm) | 120 | 120 | 125 | 125 | 125 | 125 | 125 | 125 | 125\nCulture Duration (hr.) | 91.35 | 95.47 | 95.5 | 97.016 | 76.05 | 95.6 | 95.7 | 95.5 | 95.65\nHarvest density (cells/mL) | 2.47E+06 | 4.01E+06 | 2.63E+06 | 3.50E+06 | 3.24E+06 | 3.04E+06 | 4.26E+06 | 4.40E+06 | 4.23E+06\nHarvest Viability (%) | 98.3 | 98.8 | 99.1 | 97.8 | 97.1 | 98.1 | 98 | 96.1 | 95.9",
+        "source_block_ids": [],
+        "page_numbers": [
+          39
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.5. Cell Passage 2 > Table 13: Results recorded for Passage 2",
+        "chunk_type": "table",
+        "id": "dc8f8734-b5c7-4cb1-9aab-b27666df2cb7",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 13: Results recorded for Passage 2'. Interpret the rows using the column headers.",
+        "@search.score": 0.00657894741743803
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 9: Cell Thaw results before and after expansion during upstream across different manufacturing campaigns of OCU400",
+        "table_headers": [
+          "Process Details",
+          "Units",
+          "50L GLP Tox",
+          "200L Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"WCB Passage no.\", \"\", \"P13\", \"P13\", \"P13\", \"P13\", \"P13\", \"P13\", \"P13\", \"P13\", \"P13\"]\n[\"No. of vials thawed\", \"\", \"2\", \"2\", \"2\", \"2\", \"2\", \"2\", \"2\", \"2\", \"2\"]\n[\"Water bath temperature\", \"ºC\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\"]\n[\"Water bath thaw duration\", \"min\", \"4\", \"3\", \"3\", \"2\", \"3\", \"3\", \"3\", \"3\", \"3\"]\n[\"Media volume for cell counting\", \"mL\", \"8\", \"8\", \"8\", \"8\", \"8\", \"8\", \"8\", \"8\", \"8\"]\n[\"Centrifugation speed\", \"g\", \"114\", \"120\", \"120\", \"120\", \"120\", \"120\", \"120\", \"120\", \"120\"]\n[\"Centrifugation time\", \"minutes\", \"5\", \"5\", \"5\", \"5\", \"6\", \"6\", \"5\", \"5\", \"5\"]\n[\"Resuspended pellet volume\", \"mL\", \"8\", \"20\", \"20\", \"20\", \"20\", \"20\", \"20\", \"20\", \"20\"]\n[\"Working volume\", \"mL\", \"20\", \"\", \"20\", \"20\", \"20\", \"20\", \"20\", \"20\", \"20\"]\n[\"Seeding density\", \"cells/mL\", \"2.10E+05\", \"2.70E+05\", \"1.60E+05\", \"2.30E+05\", \"3.70E+05\", \"3.70E+05\", \"3.90E+05\", \"3.60E+05\", \"3.60E+05\"]\n[\"Viability\", \"%\", \"97.6\", \"98.2\", \"100\", \"91.2\", \"98\", \"98.7\", \"94.5\", \"97.4\", \"96.6\"]\n[\"Culture temperature\", \"ºC\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"36.8\", \"37\", \"37\"]\n[\"CO2 concentration\", \"%\", \"5\", \"5\", \"5\", \"5\", \"5\", \"5\", \"5\", \"5\", \"5\"]\n[\"shaker shaking speed\", \"rpm\", \"120\", \"120\", \"125\", \"125\", \"125\", \"125\", \"125\", \"125\", \"125\"]\n[\"Morphology\", \"\", \"Normal\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\", \"N/A\"]\n[\"Culture Duration\", \"h\", \"95.4\", \"94.44\", \"96\", \"95.33\", \"95.37\", \"95.1\", \"95.02\", \"94.88\", \"95.5\"]\n[\"Harvest density\", \"cells/mL\", \"8.60E+05\", \"7.20E+05\", \"5.20E+05\", \"1.08E+06\", \"1.89E+06\", \"1.28E+06\", \"1.59E+06\", \"1.56E+06\", \"1.65E+06\"]\n[\"Harvest Viability\", \"%\", \"98.8\", \"95.4\", \"99\", \"92\", \"95.2\", \"98.3\", \"95.8\", \"97.8\", \"96\"]",
+        "text": "/A | N/A | N/A | N/A | N/A | N/A | N/A\nCulture Duration | h | 95.4 | 94.44 | 96 | 95.33 | 95.37 | 95.1 | 95.02 | 94.88 | 95.5\nHarvest density | cells/mL | 8.60E+05 | 7.20E+05 | 5.20E+05 | 1.08E+06 | 1.89E+06 | 1.28E+06 | 1.59E+06 | 1.56E+06 | 1.65E+06\nHarvest Viability | % | 98.8 | 95.4 | 99 | 92 | 95.2 | 98.3 | 95.8 | 97.8 | 96",
+        "source_block_ids": [],
+        "page_numbers": [
+          33
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.3. Cell Thaw and Recovery > Table 9: Cell Thaw results before and after expansion during upstream across different manufacturing campaigns of OCU400",
+        "chunk_type": "table",
+        "id": "fdfaef7d-9d09-496d-a79b-6b1ba0f411e5",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 9: Cell Thaw results before and after expansion during upstream across different manufacturing campaigns of OCU400'. Interpret the rows using the column headers.",
+        "@search.score": 0.006369426846504211
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 16: Operating parameters for Passage 4",
+        "table_headers": [
+          "",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch 1 & 2, ENGG-2",
+          "PPQ 1, 2, 3"
+        ],
+        "table_rows": "[\"Process Details (units)\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\", \"NOR Low\", \"NOR High\"]\n[\"Working volume (mL)\", \"1700\", \"1850\", \"328\", \"338\", \"1500\", \"1800\", \"1500\", \"1800\", \"1200\", \"1500\"]\n[\"Seeding Density (cells/mL)\", \"≥ 3.0E+05\", \"--\", \"≥ 5.0E+05\", \"--\", \"≥ 5.0E+05\", \"--\", \"≥ 5.0E+05\", \"--\", \"≥ 5.0E+05\", \"--\"]\n[\"Seeding Viability (%)\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\"]\n[\"Culture temperature (°℃)\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\", \"36\", \"38\"]\n[\"CO2 concentration (%)\", \"6\", \"8\", \"4\", \"8\", \"4\", \"8\", \"3\", \"7\", \"3\", \"7\"]\n[\"shaker shaking speed (rpm)\", \"110\", \"130\", \"110\", \"130\", \"110\", \"130\", \"110\", \"130\", \"120\", \"130\"]\n[\"Culture Duration (hr.)\", \"70\", \"96\", \"68\", \"100\", \"92\", \"124\", \"92\", \"124\", \"92\", \"124\"]\n[\"Harvest density (cells/mL)\", \"2.50E+06\", \"5.00E+06\", \"2.00E+06\", \"4.50E+06\", \"3.50E+06\", \"7.00E+06\", \"3.50E+06\", \"7.00E+06\", \"3.50E+06\", \"7.00E+06\"]\n[\"Harvest Viability (%)\", \"80\", \"100\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\", \"≥ 85\", \"--\"]",
+        "text": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4 > Table 16: Operating parameters for Passage 4\nTable 16: Operating parameters for Passage 4\nGLP Tox | Ph I/II GMP | Ph III ENGG-1 | Ph III Batch 1 & 2, ENGG-2 | PPQ 1, 2, 3\n----------------------------------------\nProcess Details (units) | NOR Low | NOR High | NOR Low | NOR High | NOR Low | NOR High | NOR Low | NOR High | NOR Low | NOR High\nWorking volume (mL) | 1700 | 1850 | 328 | 338 | 1500 | 1800 | 1500 | 1800 | 1200 | 1500\nSeeding Density (cells/mL) | ≥ 3.0E+05 | -- | ≥ 5.0E+05 | -- | ≥ 5.0E+05 | -- | ≥ 5.0E+05 | -- | ≥ 5.0E+05 | --\nSeeding Viability (%) | ≥ 85 | -- | ≥ 85 | -- | ≥ 85 | -- | ≥ 85 | -- | ≥ 85 | --\nCulture temperature (°℃) | 36 | 38 | 36 | 38 | 36 | 38 | 36 | 38 | 36 | 38\nCO2 concentration (%) | 6 | 8 | 4 | 8 | 4 | 8 | 3 | 7 | 3 | 7\nshaker shaking speed (rpm) | 110 | 130 | 110 | 130 | 110 | 130 | 110 | 130 | 120 | 130\nCulture Duration (hr.) | 70 | 96 | 68 | 100 | 92 | 124 | 92 | 124 | 92 | 124\nHarvest density (cells/mL) | 2.50E+06 | 5.00E+06 | 2.00E+06 | 4.50E+06 | 3.50E+06 | 7.00E+06 | 3.50E+06 | 7.00E+06 | 3.50E+06 | 7.00E+06\nHarvest Viability (%) | 80 | 100 | ≥ 85 | -- | ≥ 85 | -- | ≥ 85 | -- | ≥ 85 | --",
+        "source_block_ids": [],
+        "page_numbers": [
+          44
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4 > Table 16: Operating parameters for Passage 4",
+        "chunk_type": "table",
+        "id": "acdecf0b-dc27-4dd6-aa84-78b354516b94",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 16: Operating parameters for Passage 4'. Interpret the rows using the column headers.",
+        "@search.score": 0.01917431131005287
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Cell Passage 4:The unit operation for Cell thaw & recovery, cell passage 1, cell passage 2, cell passage 3 and cell passage 4 are identical to Phase 1/2 process. For Phase 3 and PPQ batches, while the Cell passage 4 is in progress, 20L BalanCD HEK293 medium is aseptically transferred into the 50L bioreactor. The bioreactor is run for pre-culturing and after 92 to 124 hours of cell cultivation of Cell Passage 4, a sample is collected from each of the 3L flasks to test for cell density and viability.",
+        "source_block_ids": [
+          "p48_para_2"
+        ],
+        "page_numbers": [
+          48
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > a. Pre-culture in 50 L Bioreactor:",
+        "chunk_type": "paragraph",
+        "id": "d86b537b-07e1-4c6c-adb0-d1bb2cb37129",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.008333333767950535
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Process parameters during cell expansion are shown in Table 8 and Table 9.",
+        "source_block_ids": [
+          "p32_para_0"
+        ],
+        "page_numbers": [
+          32
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.3. Cell Thaw and Recovery",
+        "chunk_type": "paragraph",
+        "id": "95df7772-7e2e-45aa-b657-a4e2d316b586",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.007874015718698502
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Operating parameters for Passage 3 and results for all the batches are shown in Table 14 and Table 15.",
+        "source_block_ids": [
+          "p41_para_0"
+        ],
+        "page_numbers": [
+          41
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.6. Cell Passage 3",
+        "chunk_type": "paragraph",
+        "id": "181748a5-ef69-4077-b113-679b2fcac722",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.007633587811142206
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "The production of OCU400 (AAV5-hNR2E3) is based on triple plasmid transfection in HEK293 suspension cells with transgene phNR2E3, pRep2/Cap5, and pHelper plasmids. The phNR2E3 transgene plasmid is designed, synthesized, and characterized for identity and integrity of various regulatory elements (AAV2-ITR, CMV enhancer, CBA promoter, chimeric intron from rabbit globulin gene, and SV40 poly A). The rep gene sequence consists of wild type AAV2 serotype, and the cap gene sequence consists of wild type AAV5 serotype. The pHelper plasmid is used to provide various factors for AAV5 production in HEK293 cells. During research and development, Ampicillin antibiotic cassette was replaced with a kanamycin antibiotic cassette in all the plasmids (phNR2E3, pRep2/Cap5 and pHelper plasmids) and characterized for identity in plasmids produced during cGMP production. The purified plasmids were released against the specification.",
+        "source_block_ids": [
+          "p30_para_1"
+        ],
+        "page_numbers": [
+          30
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.2. Production of Plasmids (Transgene, Helper, and Rep/Cap)",
+        "chunk_type": "paragraph",
+        "id": "6d08e419-8cfe-4f03-b9a5-8459fb566a9a",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.007407407276332378
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Following cell cultivation from the cell passage 2, an in-process sample is withdrawn for determination of cell density and cell viability. If the cell density and viability meet in- process specifications, a specified cell culture volume is transferred into an Erlenmeyer shake flask for further expansion. The cell culture is mixed with pre-warmed BalanCD HEK293 medium containing 2% L-glutamine. An in-process sample is collected prior to incubation for determination of cell count, viability and morphology. The flask containing the cell suspension were placed in a CO2 incubator for cultivation for a defined cultivation period.",
+        "source_block_ids": [
+          "p40_para_1"
+        ],
+        "page_numbers": [
+          40
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.6. Cell Passage 3",
+        "chunk_type": "paragraph",
+        "id": "c5b28729-15c0-4b56-aca8-ad10c273c651",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.007352941203862429
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "After cell passage 4 cultivation for 70 to 96 hours, sample is taken and tested for cell density and cell viability. After achieving the target cell density and cell viability, cultures are pooled and inoculated to the pre-cultured 50L bioreactor containing 20L BalanCD HEK293 medium.",
+        "source_block_ids": [
+          "p47_para_1"
+        ],
+        "page_numbers": [
+          47
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.8. GLP batch (50L) process",
+        "chunk_type": "paragraph",
+        "id": "aee86c56-6d03-4ce1-ba8a-5ea56b1bf4c9",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.007194244768470526
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "4.3.10.3. In-Process Testing of Control and Harvest",
+        "table_headers": [
+          "Process Steps (Vg/mL)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENGG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENGG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"Bulk harvest\", \"N/A\", \"N/A\", \"1.37E+11\", \"6.80E+10\", \"7.60E+10\", \"1.93E+11\", \"1.30E+11\", \"2.00E+11\", \"1.20E+11\"]\n[\"Cell lysate\", \"1.74E+11\", \"4.75E+11\", \"9.89E+11\", \"4.21E+11\", \"5.98E+11\", \"8.45E+11\", \"1.40E+12\", \"1.10E+12\", \"1.50E+12\"]\n[\"Benzonase / Biolonase treatment\", \"2.72E+11\", \"5.14E+11\", \"8.51E+11\", \"3.16E+11\", \"4.18E+11\", \"8.47E+11\", \"5.50E+11\", \"5.70E+11\", \"5.90E+11\"]\n[\"Conductivity adjustment\", \"2.20E+11\", \"5.41E+11\", \"7.60E+11\", \"3.12E+11\", \"3.45E+11\", \"7.80E+11\", \"N/A\", \"N/A\", \"N/A\"]\n[\"Centrifuge supernatant\", \"1.06E+11\", \"3.99E+11\", \"6.02E+11\", \"2.30E+11\", \"2.92E+11\", \"6.01E+11\", \"4.00E+11\", \"4.50E+11\", \"4.50E+11\"]\n[\"Clarified cell lysate\", \"1.49E+11\", \"1.67E+11\", \"2.56E+11\", \"1.02E+11\", \"1.36E+11\", \"3.41E+11\", \"N/A\", \"N/A\", \"N/A\"]\n[\"AVB loading\", \"1.10E+11\", \"1.90E+11 2.20E+11\", \"2.46E+11\", \"9.66E+10\", \"1.17E+11\", \"3.20E+11\", \"2.60E+11\", \"3.00E+11\", \"2.70E+11\"]\n[\"AVB Eluate\", \"7.04E11\", \"1.21E+12 1.30E+12\", \"2.12E+12\", \"9.85E+11\", \"6.50E+11\", \"1.97E+12\", \"8.70E+11\", \"1.30E+12\", \"6.80E+11\"]\n[\"TFF1 concentrate\", \"6.56E+12\", \"7.91E+12\", \"7.47E+12\", \"9.88E+12\", \"1.51E+13\", \"9.81E+12\", \"1.30E+13\", \"1.50E+13\", \"1.60E+13\"]\n[\"Diluted UC band\", \"1.34E+12\", \"1.25E+12\", \"1.86E+12\", \"2.49E+12\", \"2.48E+12\", \"1.86E+12\", \"2.30E+12\", \"2.40E+12\", \"2.30E+12\"]\n[\"Purified material\", \"2.20E+13\", \"7.54E+12\", \"4.48E+12\", \"6.78E+12\", \"7.54E+12\", \"7.41E+12\", \"7.00E+12\", \"8.40E+12\", \"7.60E+12\"]\n[\"DS\", \"1.76E+13\", \"7.50E+12\", \"4.78E+12\", \"7.3E+12\", \"8.50E+12\", \"7.00E+12\", \"5.10E+12\", \"7.90E+12\", \"6.50E+12\"]",
+        "text": " | 1.97E+12 | 8.70E+11 | 1.30E+12 | 6.80E+11\nTFF1 concentrate | 6.56E+12 | 7.91E+12 | 7.47E+12 | 9.88E+12 | 1.51E+13 | 9.81E+12 | 1.30E+13 | 1.50E+13 | 1.60E+13\nDiluted UC band | 1.34E+12 | 1.25E+12 | 1.86E+12 | 2.49E+12 | 2.48E+12 | 1.86E+12 | 2.30E+12 | 2.40E+12 | 2.30E+12\nPurified material | 2.20E+13 | 7.54E+12 | 4.48E+12 | 6.78E+12 | 7.54E+12 | 7.41E+12 | 7.00E+12 | 8.40E+12 | 7.60E+12\nDS | 1.76E+13 | 7.50E+12 | 4.78E+12 | 7.3E+12 | 8.50E+12 | 7.00E+12 | 5.10E+12 | 7.90E+12 | 6.50E+12",
+        "source_block_ids": [],
+        "page_numbers": [
+          52
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.3. In-Process Testing of Control and Harvest",
+        "chunk_type": "table",
+        "id": "da804b40-db4d-4e4c-8552-a5652092e8b9",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to '4.3.10.3. In-Process Testing of Control and Harvest'. Interpret the rows using the column headers.",
+        "@search.score": 0.0071428571827709675
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": "Table 17: Results recorded for Passage 4",
+        "table_headers": [
+          "Process Details (Units)",
+          "GLP Tox",
+          "Ph I/II GMP",
+          "Ph III ENG-1",
+          "Ph III Batch-1",
+          "Ph III Batch-2",
+          "Ph III ENG-2",
+          "PPQ1",
+          "PPQ2",
+          "PPQ 3"
+        ],
+        "table_rows": "[\"Seeding Density (cells/mL)\", \"5.10E+05\", \"6.20E+05,\", \"6.70E+05,\", \"7.00E+05,\", \"6.29E+05,\", \"7.40E+05,\", \"7.10E+05,\", \"7.20E+05,\", \"7.60E+05,\"]\n[\"\", \"\", \"6.50E+05, 6.20E+05, 6.30E+05,\", \"6.70E+05, 6.60E+05\", \"7.30E+05, 7.50E+05\", \"7.30E+05, 6.50E+05\", \"7.60E+05,\", \"6.60E+05,\", \"7.40E+05,\", \"8.10E+05,\"]\n[\"\", \"\", \"\", \"\", \"\", \"\", \"6.90E+05\", \"7.30E+05\", \"7.50E+05\", \"8.00E+05\"]\n[\"\", \"\", \"7.40E+05, 9.00E+05\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Seeding Viability (%)\", \"99\", \"97.6,\", \"99.7,\", \"98.3,\", \"98.4,\", \"99.7,\", \"97.6,\", \"97.6,\", \"97.1,\"]\n[\"\", \"\", \"95.9,\", \"99.6,\", \"98.0,\", \"98.0,\", \"99.7,\", \"98.2,\", \"97.7,\", \"96.7,\"]\n[\"\", \"\", \"96.9,\", \"100\", \"97.7\", \"98.8\", \"99.3\", \"97.0\", \"98.4\", \"96.7\"]\n[\"\", \"\", \"97.7,\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"\", \"\", \"96.4\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"\", \"\", \"98.4\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Culture temperature (°℃)\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\", \"37\"]\n[\"CO2 concentration (%)\", \"5\", \"5\", \"5\", \"5\", \"5.1\", \"5.1\", \"5.2\", \"5\", \"5\"]\n[\"shaker shaking speed (rpm)\", \"120\", \"120\", \"125\", \"125\", \"125\", \"125\", \"125\", \"125\", \"125\"]\n[\"Culture Duration (hr.)\", \"95.48\", \"95.35\", \"124\", \"95.166\", \"94.78\", \"98.6\", \"94.5\", \"98.53\", \"98.53\"]\n[\"Harvest density (cells/mL)\", \"3.85E+06,\", \"3.80E+06,\", \"6.98E+06,\", \"4.59E+06,\", \"4.69E+06,\", \"5.32E+06,\", \"5.22E+06,\", \"6.30E+06,\", \"5.61E+06,\"]\n[\"\", \"4.10E+06,\", \"3.85E+06,\", \"6.88E+06,\", \"4.71E+06,\", \"4.85E+06,\", \"5.40E+06,\", \"5.39E+06,\", \"6.28E+06,\", \"5.54E+06,\"]\n[\"\", \"3.99E+06\", \"3.83E+06, 3.94E+06,\", \"6.9E+06\", \"4.82E+06\", \"4.78E+06\", \"4.98E+06\", \"5.44E+06\", \"6.14E+06\", \"5.34E+06\"]\n[\"\", \"\", \"3.90E+06 4.09E+06\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Harvest Viability (%)\", \"97.5,\", \"95.3,\", \"99.2,\", \"97.7,\", \"99.0,\", \"98.3,\", \"97.6,\", \"97.3,\", \"97.7,\"]\n[\"\", \"95.6,\", \"93.1,\", \"98.9,\", \"98.2,\", \"99.0,\", \"98.2,\", \"96.8,\", \"97.2,\", \"98.6,\"]\n[\"\", \"96.4\", \"96.1,\", \"98.6\", \"98.2\", \"99.2\", \"98.6\", \"98.2\", \"97.8\", \"98.9\"]",
+        "text": " 125 | 125 | 125 | 125\nCulture Duration (hr.) | 95.48 | 95.35 | 124 | 95.166 | 94.78 | 98.6 | 94.5 | 98.53 | 98.53\nHarvest density (cells/mL) | 3.85E+06, | 3.80E+06, | 6.98E+06, | 4.59E+06, | 4.69E+06, | 5.32E+06, | 5.22E+06, | 6.30E+06, | 5.61E+06,\n | 4.10E+06, | 3.85E+06, | 6.88E+06, | 4.71E+06, | 4.85E+06, | 5.40E+06, | 5.39E+06, | 6.28E+06, | 5.54E+06,\n | 3.99E+06 | 3.83E+06, 3.94E+06, | 6.9E+06 | 4.82E+06 | 4.78E+06 | 4.98E+06 | 5.44E+06 | 6.14E+06 | 5.34E+06\n |  | 3.90E+06 4.09E+06 |  |  |  |  |  |  | \nHarvest Viability (%) | 97.5, | 95.3, | 99.2, | 97.7, | 99.0, | 98.3, | 97.6, | 97.3, | 97.7,\n | 95.6, | 93.1, | 98.9, | 98.2, | 99.0, | 98.2, | 96.8, | 97.2, | 98.6,\n | 96.4 | 96.1, | 98.6 | 98.2 | 99.2 | 98.6 | 98.2 | 97.8 | 98.9",
+        "source_block_ids": [],
+        "page_numbers": [
+          45
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.7. Cell Passage 4 > Table 17: Results recorded for Passage 4",
+        "chunk_type": "table",
+        "id": "7b6fc911-dbc6-4ee1-9435-5b53c403aec1",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 17: Results recorded for Passage 4'. Interpret the rows using the column headers.",
+        "@search.score": 0.0069444444961845875
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "One to six hours after the second feed for GLP and Phase 1/2 batches; and after the media feed step for Phase 3 and PPQ batches, 600 mL of cell suspension is collected from the bioreactor as control cells.",
+        "source_block_ids": [
+          "p48_para_9",
+          "p48_para_10",
+          "p48_para_11"
+        ],
+        "page_numbers": [
+          48
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > 4.3.10.2. Transfection > Control cell culture:",
+        "chunk_type": "paragraph",
+        "id": "ee6d9bab-380f-4cff-810a-79ece3921000",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.006896551698446274
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Following cultivation from cell passage 1, an in-process sample is withdrawn for determination of cell density and cell viability. If the cell density and viability meet in- process specifications, a specified cell culture volume is transferred into an Erlenmeyer shake flask for further expansion. The cell culture is mixed with pre-warmed BalanCD HEK293 medium containing 2% L-glutamine. An in-process sample is collected prior to incubation for determination of cell count and viability. The flask is appropriately labeled and placed in a CO2 incubator for cultivation for a defined period.",
+        "source_block_ids": [
+          "p37_para_1"
+        ],
+        "page_numbers": [
+          37
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.5. Cell Passage 2",
+        "chunk_type": "paragraph",
+        "id": "72776feb-684e-4e97-bca4-b66f900acd3c",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.006849315017461777
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Following thecell cultivation, an in-process sample is withdrawn for determination of cell density and cell viability. The cell culture is centrifuged under predefined conditions to pellet the cells. After centrifugation, the supernatant is removed, and the cell pellet is resuspended in pre-warmed BalanCD HEK293 medium containing 2% L-glutamine and added to Erlenmeyer flask. An additional in-process sample is collected prior to incubation to confirm cell density and viability after passage. The culture flask is then placed in a CO2 incubator for a defined incubation period.",
+        "source_block_ids": [
+          "p34_para_1"
+        ],
+        "page_numbers": [
+          34
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.4. Cell Passage 1",
+        "chunk_type": "paragraph",
+        "id": "bdf09e12-aa2e-4be0-b553-186c5c0dcdac",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.006802720949053764
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "After cultivation for 20 to 76 hours, if culture reaches the targeted cell density (2.0-4.0 x 106 cells/mL) and viability (≥85%), cells are fed with 25 L BalanCD HEK293 medium pre- warmed to 37±1℃. After 1 to 6 hours of culture, a sample from the bioreactor is removed for cell density and viability testing.",
+        "source_block_ids": [
+          "p48_para_6"
+        ],
+        "page_numbers": [
+          48
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.10. Phase 3 & PPQ Process: > c. Fresh Media feed:",
+        "chunk_type": "paragraph",
+        "id": "895314ed-3205-41c3-9d6f-32a8e33f6f5c",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.006756756920367479
+      },
+      {
+        "doc_id": "Pro_Sum_Rep.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "Cell Passage 5: After 68 to 100 hours of cell cultivation, samples are collected from each flask and tested for cell density, viability, and morphology. The cell cultures obtained from cell passage 4 are transferred into six 3L Erlenmeyer flasks. Prewarmed BalanCD HEK293 medium containing (2% v/v) L-Glutamine (v/v) is added to each flask to make up final volume of 1728 mL. Prior to cell cultivation, 0.5 mL samples are collected from each 3000 mL Erlenmeyer flask and tested for cell density, viability, and morphology. The six 3000 mL Erlenmeyer flasks containing the cell suspension are placed in a CO2 incubator.\n\na. Pre-culture in 200 L Bioreactor:\n\nWhile the Cell passage 4 is in progress, 50L BalanCD HEK293 medium is aseptically transferred into the 200L bioreactor. The bioreactor is run for pre-culturing and after 68 to 100 hours of cell cultivation of Cell Passage 5, a sample is collected from each of the 3L flasks to test for cell density and viability.\n\nb. Inoculation in 200 L Bioreactor:\n\nA feeding system is welded to the bioreactor bag and the pooled cell seed from passage 4 is inoculated to the bag using the compressed air. After 10-30 minutes of starting the culture, a sample is removed using a 50 mL sterile syringe for measuring cell density and viability.\n\nc. First media addition:\n\nAfter cultivation for 20 to 76 hours, if culture reaches the targeted cell density (1.0-1.6 x 106 cells/mL) and viability (≥85%), cells are fed with 25 L BalanCD HEK293 medium pre- warmed to 37±1℃. After 1 to 6 hours of culture, a sample from the bioreactor is removed for cell density and viability testing.\n\nd. Second media addition:\n\nAfter cultivation for 20 to 76 hours, if culture reaches the targeted cell density (1.6-2.0 x 106 cells/mL) and viability (≥85%), cells are fed with 25 L BalanCD HEK293 medium pre- warmed to 37±1℃. After 1 to 6 hours of culture, a sample from the bioreactor is removed for cell density and viability testing.",
+        "source_block_ids": [
+          "p47_para_3",
+          "p47_para_4",
+          "p47_para_5",
+          "p47_para_6",
+          "p47_para_7",
+          "p47_para_8",
+          "p47_para_9",
+          "p47_para_10",
+          "p47_para_11"
+        ],
+        "page_numbers": [
+          47
+        ],
+        "heading_path": "4. DETAILED DESCRIPTION OF THE UPSTREAM MANUFACTURING PROCESS > 4.3. Seed Flask Preparation and Inoculation > 4.3.9. GMP Phase 1/2 Process",
+        "chunk_type": "paragraph",
+        "id": "13c05f8f-5455-4002-a989-d858b803186b",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.006535947788506746
+      }
+    ]
+  },
+  "ich_guidelines": {
+    "total_sections": 2,
+    "results": {
+      "total_sections": 0,
+      "results": []
+    }
+  }
+}

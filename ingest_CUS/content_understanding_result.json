@@ -1,0 +1,375 @@
+{
+  "id": "600b0214-0fb9-49e7-92fc-af77c16a64ae",
+  "status": "Succeeded",
+  "result": {
+    "analyzerId": "RIS_analyzer",
+    "apiVersion": "2025-11-01",
+    "createdAt": "2026-03-11T12:29:16Z",
+    "stringEncoding": "codePoint",
+    "warnings": [],
+    "contents": [
+      {
+        "path": "input1",
+        "markdown": "<!-- PageHeader: OCU400 -->\n<!-- PageHeader: Protocol OCU400-101 Amendment 17 -->\n<!-- PageHeader: April 2025 -->\n\nThe secondary endpoints include changes from baseline in:\n\n. Humoral and cellular immune response (anti-AAV5 and anti-hNR2E3 antibodies, T-\ncell response) to OCU400\n\n. Laboratory parameters including serum chemistry and hematology\n\n\n# 5.4.4. Exploratory Endpoints\n\nExploratory endpoints for RP include changes from baseline in:\n\n. BCVA, LLVA\n\n. Multi-luminance mobility testing (MLMT)\n\n. FST\n\n• CS\n\n. Photopic Static Visual Fields (Vtot) with standard protocol\n\n. Photopic Static Visual Fields (Vtot) blue-on-yellow protocol\n\n. Two-color dark-adapted perimetry\n\n. Changes in ellipsoid zone width/length on SD-OCT at 20°\n\n• wf-FAF\n\n• ff-ERG\n\n. MRDQ (Adult subjects only)\n\n. NEI-VFQ25 (Adult subjects only)\n\nExploratory endpoints for LCA include changes from baseline in:\n\n• BCVA\n\n. Multi-Luminance Mobility Test (MLMT),\n\n• FST\n\n. Changes in ellipsoid zone area, outer segment length and macular thickness on SD-\nOCT at 20°\n\n• wf-FAF\n\n• NEI-VFQ25\n\n<!-- PageFooter: OCUGEN Inc. - CONFIDENTIAL -->\n<!-- PageNumber: Page 31 of 124 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: OCU400 -->\n<!-- PageHeader: Protocol OCU400-101 Amendment 17 -->\n<!-- PageHeader: April 2025 -->\n\n\n## 6. INVESTIGATIONAL PLAN\n\n\n### 6.1. Overall Study Design\n\nAn overview of the study design is presented in Figure 4 and the flow of the OCU400\nadministration by cohorts is presented in Figure 5.\n\n\nFigure 4:\nBasic Study Design\n\n![Qualification of patients and study baseline assessments Administration OCU400 per cohort schedule Ocular, general and immunogenicity assessments Ocular, general and immunogenicity assessments Long Term Safety Follow-up Screening Baseline Treatment Immediate Follow Up Monthly Follow Up EOS Yearly Follow Up D -90 to D -1 D0 D1 to D14 M 1,3,6,12 Y2-Y3](figures/2.1)\n\n\nFigure 5:\nCohort Administration Flow\n\n![Phase 1 Phase 2 Open Enrollment Cohort 1 Low Dose Sentinel Subject Cohort 2 Medium Dose Sentinel Subject Cohort 3 High Dose Sentinel Subject MTD: High Dose Adult RP N=9 DSMB Review 2 Weeks Data DSMB Review 2 Weeks Data DSMB Review 2 Weeks Data DSMB Review 2 Weeks Data Cohort 1 Low Dose Subsequent Subjects 2 & 3 Cohort 2 Medium Dose Subsequent Subjects 2 & 3 Cohort 3 High Dose Subsequent Subjects 2 & 3 MTD: Médium dose LCA N<3 MTD: Medium dose Pediatric N≥1 DSMB Review 2 Weeks Data DSMB Review 2 Weeks Data DSMB Review 2 Weeks Data Exactlv 1 DLT Exactiv 1 DLT Exacth 1 DLT Cohort 1 Low Dose Subjects 4 through 6 Cohort 2 Medium Dose Subjects 4 through 6 Cohort 3 High Dose Subjects 4 through 6 DSMB Review 2 Weeks Data for all subjects N<24 DSMB Review 2 Weeks Data DSMB Review 2 Weeks Data DSMB Review 2 Weeks Data](figures/2.2)\n\n\n<!-- PageFooter: OCUGEN Inc. - CONFIDENTIAL -->\n<!-- PageNumber: Page 32 of 124 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: OCU400 -->\n<!-- PageHeader: Protocol OCU400-101 Amendment 17 -->\n<!-- PageHeader: April 2025 -->\n\nThis is a multicenter, open-label, dose ranging study in two subgroups of subjects with three\nconsecutive cohorts.\n\nUp to 24 subjects with at least 9 subjects from each of the following subgroups will be selected:\n\n1\\. Biallelic autosomal recessive NR2E3 mutations or autosomal dominant NR2E3 mutation\n\n2\\. Autosomal dominant RHO mutations\n\nFor the Phase 1 portion of the study, the 3+3 design for sequential dose escalating cohorts will\nbe used with scheduled 3 dosing levels between 9 and 18 adult subjects will be used to follow\nthe design. The following algorithm will be followed:\n\nCohort 1 Low Dose: 3+3 subjects will receive subretinal injection of up to 300 uL OCU400\nlow dose concentration (1.66 x 1010 vg/mL). The sentinel subject will receive subretinal\ninjection of up to 200 uL in low dose. Based on safety outcome in the first subject, dose\nvolume will further be increased up to 300 uL (5.0x 109 vg/eye) in the subsequent subjects.\n\n1 of 3 results will occur from the first 3 subjects:\n\n1\\. If none of the first 3 subjects on low dose concentration (1.66 x 1010 vg/mL) are\ndetermined by the DSMB to have dose-limiting toxicity, then the dose will be\nescalated for the next cohort.\n\n2\\. If 2 or more of the first 3 subjects on low dose concentration (1.66 x 1010 vg/mL) are\ndetermined by the DSMB to have dose-limiting toxicity, then the dose will be de-\nescalated for the next cohort.\n\n3\\. If exactly 1 of the first 3 subjects on low dose concentration (1.66 x 1010 vg/mL) is\ndetermined by the DSMB to have dose-limiting toxicity, then 3 additional patients\nwill be enrolled on low dose concentration (1.66 x 1010 vg/mL) at up to 300 uL dose\nvolume.\n\na. If none of the 3 additional patients are determined by the DSMB to have dose-\nlimiting toxicity, then the dose will be escalated for the next cohort.\n\nb. If 1 or more of the 3 additional patients are determined by the DSMB to have\ndose-limiting toxicity, then the dose will be de-escalated for the next cohort.\n\nCohort 2 Medium Dose: 3+3 subjects will receive subretinal injection of up to 300μl\nOCU400 medium dose concentration (3.33 x 1010 vg/mL) following the same algorithm as\nCohort 1.\n\nCohort 3 High Dose: 3+3 subjects who will receive subretinal injection of up to 300μl\nOCU400 high dose concentration (1.66 x 1011 vg/mL) following the same algorithm as\nCohort 1.\n\nThus, under this design there will be 9 adult subjects enrolled if there are no dose-limiting\ntoxicities and up to 18 under the condition that exactly 1 of the first 3 of every cohort is\ndetermined to have a dose-limiting toxicity.\n\nFollowing the Phase 1 portion of the study, if less than 18 adult subjects were used to follow the\n3+3 design and no dose limited toxicities occurred, then the remaining maximum of 9 adult\n\n<!-- PageFooter: OCUGEN Inc. - CONFIDENTIAL -->\n<!-- PageNumber: Page 33 of 124 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: OCU400 -->\n<!-- PageHeader: Protocol OCU400-101 Amendment 17 -->\n<!-- PageHeader: April 2025 -->\n\nsubjects will be enrolled in the last safe dosing level to provide additional sample for exploring\nefficacy of the Phase 2 portion of the study.\n\nThe study for an individual subject will consist of the following periods:\n\n. Screening Period up to 3 months (90 days)\n\n. Baseline Period up to 2 weeks (14 days)\n\n. Treatment Observation Period up top 1 year during which Study Drug will be\nadministered once to the treated eye on Day 0\n\n. A Long-Term Safety Follow-up Period for 2 years duration from the end of\nstudy visit.\n\nThe assessments and measurements will be performed according to the Schedule of\nAssessments(Table 3 ). The first subject (sentinel subject) in Cohorts 1 and 2 will receive\ntreatment, complete assessments through 2 weeks (2W) post-dose, and safety data will be\nreviewed by DSMB before progressing to administration in subsequent subjects. Following\nadministration of OCU400 to all subjects within a cohort (for cohorts 1 and 2), the DSMB will\nreview safety data collected through 2 weeks (2W) post-dose for subjects 2 and 3 of the cohort\nand through 4 weeks (4W) for the sentinel subject. The DSMB will provide recommendations\non proceeding to the next cohort at the targeted dose, or proceeding at an adjusted dose, or\nincreasing the cohort size, or adding a cohort, or stopping further cohort administration if\nstopping criteria/criterion have been met.\n\nFollowing the dosing of the first subject (sentinel subject) in Cohort 3, 200 μL (1.66 x 1011\nvg/mL), the DSMB will review the safety data for treatment and complete assessments before\nprogressing to administration in subsequent subjects, Cohort 3 will be opened for subjects 2 and\n3 along with the enrollment for Phase 2 adult subjects (up to 9 adult RP subjects and up to 3\nadult LCA subjects, open enrollment). The safety data will be assessed concurrently for\nsubjects 2 and 3 of Cohort 3 along with Phase 2 adult subjects. After subjects 2 and 3 of Cohort\n3 are dosed, a separate DSMB meeting will be held per the DSMB charter which will review\nthe data from these patients and any Phase 2 patients (RP or LCA) who may have been enrolled\nin parallel (Table 4).\n\nAt least 1 pediatric LCA subject will also be enrolled in the Phase 2 portion of the study. The\ntotal number of subjects included in the Phase 2 study design is up to the discretion of the\nSponsor. (Figure 5).\n\nPediatric subjects will receive the medium dose concentration of 3.33 x 1010 vg/mL. The\nDSMB will continue to monitor any Study Drug-related adverse events (SDAE), treatment-\nemergent adverse events (TEAEs) and serious adverse events (SAEs) events on ad hoc basis.\n\nThis protocol allows for adjustment of targeted doses and cohort size based upon emergent data\nfrom ongoing DSMB safety reviews.\n\n<!-- PageFooter: OCUGEN Inc. - CONFIDENTIAL -->\n<!-- PageNumber: Page 34 of 124 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: OCU400 -->\n<!-- PageHeader: Protocol OCU400-101 Amendment 17 -->\n<!-- PageHeader: April 2025 -->\n\nFollowing 12 months post-OCU400 dosing, subjects will be followed in Long Term Safety\nFollow Up (LTSFU) for an additional 2 years (end of Year 2, end of Year 3).\n\nParticipants from the Phase 1/2 study who previously received the investigational product\n(OCU400) in one eye may be eligible to receive OCU400 in the untreated fellow eye, provided\nthey meet the inclusion/exclusion criteria and have completed week 48 follow up visit. After\nreconsenting, eligible participants will be dosed in the untreated fellow eye with the therapeutic\ndose used in phase 3 study (1.0 x 1011vg/mL in 250 ul ) and will be followed for an additional 48\nweeks. Schedule of assessments will be conducted as outlined in the Schedule of assessments\nTable 5.\n\n\n### 6.2. Number of Subjects\n\nUp to 24 with at least 9 adult subjects from each RP mutation subgroup (NR2E3 autosomal\nrecessive or NR2E3 autosomal dominate and RHO autosomal dominant) and up to 3 adult\nsubjects with LCA due to CEP290, at least 1 additional pediatric with LCA due to CEP290\nmutation.\n\n\n### 6.3. Treatment Assignment\n\nThis is an open-label study, and all subjects will receive OCU400 at the target or adjusted dose\nlevel assigned to their respective Cohort and Phase.\n\n\n### 6.4. Dose Adjustment Criteria\n\n\n#### 6.4.1. Safety Criteria for Adjustment or Stopping Doses\n\nThis protocol allows for adjustment of targeted doses based upon emergent data from ongoing\nDSMB safety reviews.\n\nCommon expected AE and SAE are known complications of surgery, anesthesia, and\ncorticosteroids. Details of AE and SAE are described in IB Section 7.\n\nThe expected AEs include conjunctival hyperemia, cataract, increased intraocular pressure,\ndellen (thinning of the corneal stroma), retinal tear, eye inflammation, macular hole, retinal\ndeposit, eye irritation, eye pain, and maculopathy; as well as SAE including endophthalmitis,\nfoveal thinning and loss of foveal function, fovea dehiscence (separation of the retinal layers in\nthe center of the macula), retinal hemorrhage. These AE and SAE are frequently related to\nvitrectomy and subretinal injection.\n\nOther systemic AE including hematuria, vomiting, nausea, pyrexia, and headache; systemic\nSAE include anal fistula, paresthesia, convulsion, hyper- or hypoglycemia, leukocytosis and\nadverse drug reactions are related to anesthesia and use of corticosteroids.\n\nDose-limiting side effects are defined as OCU400-related AEs that are considered severe in\nnature, intolerable, or that, in the opinion of the Investigator, Sponsor, or DSMB would place\nsubjects at medical risk if a higher dose of OCU400 were to be administered. These AEs would\nbe consistent with Grade 3 and higher severity according to the Common Terminology Criteria\n\n<!-- PageFooter: OCUGEN Inc. - CONFIDENTIAL -->\n<!-- PageNumber: Page 35 of 124 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: OCU400 -->\n<!-- PageHeader: Protocol OCU400-101 Amendment 17 -->\n<!-- PageHeader: April 2025 -->\n\nfor Adverse Events (CTCAE) latest version.70 The dose-limiting side effects of this study are as\nfollows:\n\n. Persistent or new onset of intraocular inflammation beyond the post-operative Week\n12, including: anterior uveitis with more than 3+ (i.e. 4+) cells in anterior chamber,\nintermediate vitreous cells more than 3+ (i.e. 4+), or pan-uveitis, despite adequate\ntreatment. The grading is based on Standardization of Uveitis Nomenclature (SUN),\nwhere 3+ denotes 26-50 cells and 4+ denotes >50 cells per high-power field (1x1\nmm slit beam).\n\n. Rare systemic AAV5-related coagulopathy with deep vein thrombosis, pulmonary\nembolism or disseminated intravascular coagulation (DIC), when no other possible\ncauses can be discovered.\n\n. A decrease of 20 letters or more in BCVA from baseline at any time during the\nstudy, not directly related to the surgical procedure.\n\nIf dose-limiting side effects occur in a sentinel subject, the next two subjects in that Cohort will\nnot receive the dose administered to the sentinel subject. The DSMB may make the\nrecommendation to proceed in the next two subjects within the cohort at a lower dose or to\nterminate that cohort and will clearly document their recommendations and the rationale for the\nrecommendations according to procedures detailed in the DSMB charter.\n\nLikewise, if dose-limiting side effects occur within a cohort, the DSMB may make the\nrecommendation to proceed at a lower dose in the next cohort, increase the size of the cohort, or\nthey may recommend that no further dose escalation occur.\n\nDose administration at the current level or dose escalation will be terminated if either of the\nfollowing are observed:\n\n. There are two similar SAEs or clinically significant AEs related to OCU400 within\nthe same cohort.\n\n. There are 3 or more similar AEs related to OCU400 in this study that are deemed a\nmedically unacceptable risk by the Investigator, the DSMB and the Sponsor.\n\n\n### 6.5. Criteria for Study Termination\n\nThe study may be terminated by the Sponsor at any time and for any reason after informing the\nInvestigators. The DSMB may also recommend study termination. Study termination means the\npermanent stopping of administration of OCU400 to additional subjects, inclusive of subjects\nscreened, and subjects enrolled to whom OCU400 has not yet been administered. Termination\ndoes not mean suspension of scheduled safety monitoring procedures in the Treatment\nObservation period of the study.\n\nIf the study is terminated, the following instructions should be followed, unless the DSMB\nand/or the Study Medical Monitor advise otherwise:\n\n1\\. Participants who have already received OCU400, irrespective of dose, will continue to\nmaintain the protocol schedule of activities.\n\n<!-- PageFooter: OCUGEN Inc. - CONFIDENTIAL -->\n<!-- PageNumber: Page 36 of 124 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: OCU400 -->\n<!-- PageHeader: Protocol OCU400-101 Amendment 17 -->\n<!-- PageHeader: April 2025 -->\n\n2\\. Participants who have already enrolled into the study but have not received OCU400\nwill wait for DSMB recommendation. The scheduled date for injection may be\npostponed or cancelled.\n\nThe Investigator may be informed of additional procedures to be followed to ensure that\nadequate consideration is given to the protection of the subject's safety, interest, and rights.\n\nThe occurrence of any of the following events will result in suspension of further enrollment\nwhile the events are under investigation:\n\n. Any investigational drug-related death during the study\n\n. Any participant develops drug-related or possibly investigational drug-related Grade\nIII-IV toxicity\n\nIn addition to halting enrollment, such an event will be handled as a serious adverse event\n(SAE). The DSMB will review data relevant to the event and will receive input from Ocugen\nand/or Investigator before providing appropriate recommendations. The event and the DSMB's\nrecommendation will be discussed with the U.S. Food and Drug Administration (FDA) and\nother regulatory authorities prior to re-initiation of enrollment. All participants who were\ninjected with the investigational product will continue to comply with the follow-up schedule\naccording to the protocol.\n\nA study site is considered closed when all required documents and study supplies have been\ncollected and a study-site closure visit has been performed.\n\n\n### 6.6. Long Term Safety Follow Up\n\nTo assess long term safety of OCU400, all enrolled subjects will be followed once per year\nfor an additional 2 years (End of Year 2 and End of Year 3) post End of Study visit. All\nefforts should be made to regain contact with the subject. Before a participant is deemed\nlost to follow up, the investigator or designee must make every effort to regain contact with\nthe participant (where possible, 3 telephone calls and, if necessary, a certified letter to the\nparticipant's last known mailing address or local equivalent methods). These contact\nattempts (e.g., dates of telephone calls and registered letters) should be documented in the\nparticipant's medical record. A participant should not be considered lost to follow-up until\nthese efforts have been made. Please refer to section 7.6.\n\n\n### 6.7. Visit and Assessment Schedule\n\nThe visit schedule with associated assessments for the Screening period through the first-year\npost-dose is provided in Table 3, and Table 4 for RP and LCA subjects, retrospectively.\nThe visit schedule with associated assessment on screening period through year 1 post second\neye dosing is provided in Table 5.\n\n<!-- PageFooter: OCUGEN Inc. - CONFIDENTIAL -->\n<!-- PageNumber: Page 37 of 124 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: OCU400-101 -->\n<!-- PageHeader: Protocol OCU400-101 Amendment 17 -->\n<!-- PageHeader: April 2025 -->\n\n\n<table>\n<caption>Table 3: Schedule of Assessments for RP patients - Screening Through Year 1 Post-First Eye Dosing</caption>\n<tr>\n<th></th>\n<th>Screen1 D-90 to D-2 V1</th>\n<th>Baseline (D-1) 1, 2 V2</th>\n<th>Treatment (D0) V3</th>\n<th>D1 V4</th>\n<th>D3 V5</th>\n<th>D14 V6</th>\n<th>1 M V 7</th>\n<th>2 M V8</th>\n<th>3M V9</th>\n<th>6M V10</th>\n<th>9M V11</th>\n<th>12M1 V12 (End of Study)</th>\n<th>Long Term Safety Follow Up (End of Year 2&amp; Year 3)</th>\n<th>Early Withdraw 1,3</th>\n</tr>\n<tr>\n<th>Window</th>\n<th>-90D</th>\n<th>-14D</th>\n<th>± 0D</th>\n<th>± 0D</th>\n<th>± 0D</th>\n<th>± 2D/ ± 7D9</th>\n<th>± 3D</th>\n<th>± 7D</th>\n<th>± 7D</th>\n<th>± 7D</th>\n<th>± 7D</th>\n<th>± 7D</th>\n<th>+ 3 Months</th>\n<th>NA</th>\n</tr>\n<tr>\n<th>Week</th>\n<th>-</th>\n<th>-</th>\n<th>-</th>\n<th>-</th>\n<th>1</th>\n<th>2</th>\n<th>4</th>\n<th>8</th>\n<th>12</th>\n<th>24</th>\n<th>36</th>\n<th>48</th>\n<th>104-156</th>\n<th></th>\n</tr>\n<tr>\n<th>Molecular Confirmation of Diagnosis4</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n<tr>\n<th>βHCG blood test</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n<tr>\n<th>Informed Consent</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n<tr>\n<th>Demography</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n<tr>\n<th>Medical History</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n</tr>\n<tr>\n<th>Physical Examination</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n</tr>\n<tr>\n<th>Concomitant Medications</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>Vital Signs</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n</tr>\n<tr>\n<th>Hematology</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>Chemistry</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>AAV5 Antibodies</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>hNR2E3 Antibodies</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>PBMC Assay</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n<tr>\n<th>OCU400 Administration</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n<tr>\n<th>Vector Shedding (plasma/tears)</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n<tr>\n<th>Ophthalmic examination5</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n</tr>\n<tr>\n<th>BCVA</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n</tr>\n<tr>\n<th>LLVA</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n</tr>\n<tr>\n<th>20° SD-OCT</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th></th>\n<th>Screen1 D-90 to D-2 V1</th>\n<th>Baseline (D-1) 1, 2 V2</th>\n<th>Treatment (D0) V3</th>\n<th>D1 V4</th>\n<th>D3 V5</th>\n<th>D14 V6</th>\n<th>1 M V 7</th>\n<th>2 M V8</th>\n<th>3M V9</th>\n<th>6M V10</th>\n<th>9M V11</th>\n<th>12M1 V12 (End of Study)</th>\n<th>Long Term Safety Follow Up (End of Year 2&amp; Year 3)</th>\n<th>Early Withdraw 1,3</th>\n</tr>\n<tr>\n<th>55° wf-FAF</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>ff-ERG6</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>FST</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>Contrast Sensitivity</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>Static Visual Fields (standard and blue- on- yellow protocols)7</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>Two-color Dark- adapted Perimetry7</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>MLMT10</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n</tr>\n<tr>\n<th>MRDQ8</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>NEI-VFQ258</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>Adverse Events</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n</tr>\n</table>\n\n1\nOphthalmic examinations and ophthalmology assessments (BCVA, wide-field SD-OCT, wf-FAF, ff-ERG, FST, Contrast Sensitivity, Static Visual Fields, Two- color\nDark-adapted Perimetry and MLMT) will be conducted in both study eye and contralateral eye. Ophthalmology assessments only need to be performed at Baseline\nvisit for subjects who are being treated for cystoid macular edema.\n\n2\nUnscheduled visits may be completed at the investigator's discretion between Day 0 and Month 12 for follow up AE.\n\n3\nAssessments to be completed if the subject is withdrawn from the study within the first year.\n\n4\nReview and confirm genetic testing results are from a CLIA, or equivalent, certified laboratory.\n\n5\nOphthalmic examinations to include visual acuity, external examination, slit lamp examination, IOP and indirect ophthalmoscopy\n\n6\nff-ERG is optional for both NR2E3 subgroups for visit 10 and visit 12\n\n7 Two-color Dark-adapted Perimetry and Blue-on-Yellow Protocol for Static Visual field are optional tests for RHO and autosomal dominant NR2E3 participants\n\n8 Adult subjects only\n\n9 For phase 2 portion of the study (open enrollment), Day 14 visit (V6) can be scheduled ±7 days\n\n10 Optional LDNA will be performed for patients who completed the Long Term Safety Follow up (End of Year 2 and Year 3)\n\n*MLMT needs to be performed and assessed for treated and untreated eye as recommended by the manual of procedure.\n\n\n<!-- PageFooter: OCUGEN Inc. - CONFIDENTIAL -->\n<!-- PageNumber: Page 39 of 124 -->\n<!-- PageBreak -->\n\n<!-- PageHeader: OCU400-101 -->\n<!-- PageHeader: Protocol OCU400-101 Amendment 17 -->\n<!-- PageHeader: April 2025 -->\n\n\n<table>\n<caption>Table 4: Schedule of Assessments for LCA Patients-Screening Through Year 1 Post-First Eye Dosing</caption>\n<tr>\n<th></th>\n<th>Screen1 D-90 to D-2 V1</th>\n<th>Baseline (D-1) 1, 2 V2</th>\n<th>Treatment (D0) V3</th>\n<th>D1 V4</th>\n<th>D3 V5</th>\n<th>D14 V6</th>\n<th>1M V7</th>\n<th>2M V8</th>\n<th>3M V9</th>\n<th>6M V10</th>\n<th>9M V11</th>\n<th>12M1 V12 (End of Study)</th>\n<th>Long Term Safety Follow Up (End of Year 2 &amp; Year 3)</th>\n<th>Early Withdraw1,3</th>\n</tr>\n<tr>\n<th>Window</th>\n<th>-90D</th>\n<th>-14D</th>\n<th>+ 0D</th>\n<th>±<br>0D</th>\n<th>± 0D</th>\n<th>±<br>2D</th>\n<th>±<br>3D</th>\n<th>±<br>7D</th>\n<th>±<br>7D</th>\n<th>±<br>7D</th>\n<th>± 7D</th>\n<th>± 7D</th>\n<th>+ 3 Months</th>\n<th>NA</th>\n</tr>\n<tr>\n<th>Week</th>\n<th>-</th>\n<th>-</th>\n<th>-</th>\n<th>-</th>\n<th>1</th>\n<th>2</th>\n<th>4</th>\n<th>8</th>\n<th>12</th>\n<th>24</th>\n<th>36</th>\n<th>48</th>\n<th>104, 156</th>\n<th></th>\n</tr>\n<tr>\n<th>Molecular Confirmation of Diagnosis4</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n<tr>\n<th>BHCG blood test</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n<tr>\n<th>Informed Consent</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n<tr>\n<th>Demography</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n<tr>\n<th>Medical History</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n</tr>\n<tr>\n<th>Physical Examination</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n</tr>\n<tr>\n<th>Concomitant Medications</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>Vital Signs</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n</tr>\n<tr>\n<th>Hematology</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>Chemistry</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>AAV5 Antibodies</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>hNR2E3 Antibodies</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>PBMC Assay</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>OCU400 Administration</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n<tr>\n<th>Vector Shedding (plasma/tears)</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n<tr>\n<th>Ophthalmic examination5</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n</tr>\n<tr>\n<th>BCVA</th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n<th>✗</th>\n</tr>\n<tr>\n<th>20° SD-OCT</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n<tr>\n<th>55° wf-FAF</th>\n<th>✗</th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n<th></th>\n<th>✗</th>\n</tr>\n</table>\n\n\n<!-- PageFooter: OCUGEN Inc. - CONFIDENTIAL -->\n<!-- PageNumber: Page 40 of 124 -->\n",
+        "fields": {
+          "StudyTitle": {
+            "type": "string",
+            "valueString": "Protocol OCU400-101 Amendment 17",
+            "spans": [
+              {
+                "offset": 1210,
+                "length": 32
+              }
+            ],
+            "confidence": 0.716,
+            "source": "D(2,2.9445,0.3076,5.5408,0.3053,5.5410,0.4814,2.9447,0.4837)"
+          },
+          "StudyPhase": {
+            "type": "string",
+            "valueString": "Phase 1/2",
+            "spans": [
+              {
+                "offset": 9114,
+                "length": 9
+              }
+            ],
+            "confidence": 0.818,
+            "source": "D(5,2.2322,1.5300,2.8752,1.5309,2.8749,1.7254,2.2319,1.7245)"
+          },
+          "StudyDesign": {
+            "type": "string",
+            "valueString": "This is a multicenter, open-label, dose ranging study in two subgroups of subjects with three consecutive cohorts.",
+            "spans": [
+              {
+                "offset": 2974,
+                "length": 93
+              },
+              {
+                "offset": 3068,
+                "length": 20
+              }
+            ],
+            "confidence": 0.467,
+            "source": "D(3,0.9909,0.9775,7.1014,0.9805,7.1013,1.1742,0.9908,1.1712);D(3,0.9868,1.1831,2.3595,1.1805,2.3598,1.3488,0.9871,1.3514)"
+          },
+          "SubjectCount": {
+            "type": "integer",
+            "valueInteger": 290,
+            "spans": [
+              {
+                "offset": 9696,
+                "length": 87
+              },
+              {
+                "offset": 9784,
+                "length": 83
+              },
+              {
+                "offset": 9868,
+                "length": 87
+              },
+              {
+                "offset": 9956,
+                "length": 9
+              }
+            ],
+            "confidence": 0.735,
+            "source": "D(5,0.9836,3.5585,7.0681,3.5585,7.0681,3.7582,0.9836,3.7582);D(5,0.9836,3.7569,6.9977,3.7604,6.9976,3.9480,0.9835,3.9445);D(5,0.9868,3.9511,7.0847,3.9411,7.0850,4.1418,0.9871,4.1518);D(5,0.9838,4.1544,1.6190,4.1683,1.6153,4.3375,0.9801,4.3236)"
+          },
+          "AdultSubjectCount": {
+            "type": "integer",
+            "valueInteger": 290,
+            "spans": [
+              {
+                "offset": 9710,
+                "length": 73
+              },
+              {
+                "offset": 9784,
+                "length": 83
+              },
+              {
+                "offset": 9868,
+                "length": 31
+              }
+            ],
+            "confidence": 0.295,
+            "source": "D(5,1.9757,3.5585,7.0681,3.5585,7.0681,3.7582,1.9757,3.7582);D(5,0.9836,3.7569,6.9977,3.7604,6.9976,3.9480,0.9835,3.9445);D(5,0.9868,3.9491,3.2938,3.9534,3.2934,4.1484,0.9864,4.1442)"
+          },
+          "PediatricSubjectCount": {
+            "type": "integer",
+            "valueInteger": 290,
+            "spans": [
+              {
+                "offset": 9901,
+                "length": 54
+              },
+              {
+                "offset": 9956,
+                "length": 8
+              }
+            ],
+            "confidence": 0.879,
+            "source": "D(5,3.3792,3.9530,7.0847,3.9411,7.0853,4.1380,3.3798,4.1500);D(5,0.9836,4.1636,1.5761,4.1674,1.5761,4.3280,0.9847,4.3237)"
+          },
+          "DoseLimitingToxicityCriteria": {
+            "type": "string",
+            "valueString": "Dose-limiting side effects are defined as OCU400-related AEs that are considered severe in nature, intolerable, or that, in the opinion of the Investigator, Sponsor, or DSMB would place subjects at medical risk if a higher dose of OCU400 were to be administered. These AEs would be consistent with Grade 3 and higher severity according to the Common Terminology Criteria for Adverse Events (CTCAE) latest version.70 The dose-limiting side effects of this study are as follows:\n\n. Persistent or new onset of intraocular inflammation beyond the post-operative Week 12, including: anterior uveitis with more than 3+ (i.e. 4+) cells in anterior chamber, intermediate vitreous cells more than 3+ (i.e. 4+), or pan-uveitis, despite adequate treatment. The grading is based on Standardization of Uveitis Nomenclature (SUN), where 3+ denotes 26-50 cells and 4+ denotes >50 cells per high-power field (1x1 mm slit beam).\n\n. Rare systemic AAV5-related coagulopathy with deep vein thrombosis, pulmonary embolism or disseminated intravascular coagulation (DIC), when no other possible causes can be discovered.\n\n. A decrease of 20 letters or more in BCVA from baseline at any time during the study, not directly related to the surgical procedure.",
+            "spans": [
+              {
+                "offset": 11279,
+                "length": 90
+              },
+              {
+                "offset": 11370,
+                "length": 94
+              },
+              {
+                "offset": 11465,
+                "length": 92
+              },
+              {
+                "offset": 11558,
+                "length": 91
+              },
+              {
+                "offset": 11870,
+                "length": 96
+              },
+              {
+                "offset": 11967,
+                "length": 8
+              },
+              {
+                "offset": 11977,
+                "length": 84
+              },
+              {
+                "offset": 12062,
+                "length": 86
+              },
+              {
+                "offset": 12149,
+                "length": 84
+              },
+              {
+                "offset": 12234,
+                "length": 81
+              },
+              {
+                "offset": 12316,
+                "length": 79
+              },
+              {
+                "offset": 12396,
+                "length": 14
+              },
+              {
+                "offset": 12412,
+                "length": 78
+              },
+              {
+                "offset": 12491,
+                "length": 80
+              },
+              {
+                "offset": 12572,
+                "length": 25
+              },
+              {
+                "offset": 12599,
+                "length": 79
+              }
+            ],
+            "confidence": 0.717,
+            "source": "D(5,0.9836,9.1360,7.1594,9.1298,7.1596,9.3139,0.9838,9.3201);D(5,0.9852,9.3318,7.2217,9.3318,7.2217,9.5202,0.9852,9.5202);D(5,0.9883,9.5213,7.3130,9.5165,7.3131,9.7027,0.9884,9.7076);D(5,0.9816,9.7104,7.3213,9.7104,7.3213,9.9050,0.9816,9.9050);D(6,0.9888,0.9696,7.3299,0.9787,7.3296,1.1718,0.9885,1.1626);D(6,0.9873,1.1785,1.5362,1.1804,1.5356,1.3436,0.9867,1.3417);D(6,1.5004,1.4572,7.3379,1.4575,7.3379,1.6415,1.5004,1.6412);D(6,1.7463,1.6497,7.3047,1.6497,7.3047,1.8391,1.7463,1.8391);D(6,1.7338,1.8370,7.2137,1.8455,7.2134,2.0404,1.7335,2.0319);D(6,1.7318,2.0398,7.3171,2.0381,7.3172,2.2287,1.7319,2.2303);D(6,1.7318,2.2260,7.1596,2.2324,7.1594,2.4237,1.7316,2.4173);D(6,1.7318,2.4329,2.7559,2.4329,2.7559,2.6119,1.7318,2.6119);D(6,1.5004,2.7077,7.2719,2.7195,7.2715,2.9099,1.5000,2.8981);D(6,1.7337,2.9052,7.2756,2.9032,7.2757,3.1010,1.7338,3.1030);D(6,1.7349,3.1071,3.4573,3.1028,3.4577,3.2747,1.7353,3.2790);D(6,1.5004,3.3817,7.0060,3.3858,7.0059,3.5736,1.5003,3.5695)"
+          },
+          "SafetyReviewProcess": {
+            "type": "string",
+            "valueString": "The assessments and measurements will be performed according to the Schedule of Assessments(Table 3 ). The first subject (sentinel subject) in Cohorts 1 and 2 will receive treatment, complete assessments through 2 weeks (2W) post-dose, and safety data will be reviewed by DSMB before progressing to administration in subsequent subjects. Following administration of OCU400 to all subjects within a cohort (for cohorts 1 and 2), the DSMB will review safety data collected through 2 weeks (2W) post-dose for subjects 2 and 3 of the cohort and through 4 weeks (4W) for the sentinel subject. The DSMB will provide recommendations on proceeding to the next cohort at the targeted dose, or proceeding at an adjusted dose, or increasing the cohort size, or adding a cohort, or stopping further cohort administration if stopping criteria/criterion have been met.\n\nFollowing the dosing of the first subject (sentinel subject) in Cohort 3, 200 μL (1.66 x 1011 vg/mL), the DSMB will review the safety data for treatment and complete assessments before progressing to administration in subsequent subjects, Cohort 3 will be opened for subjects 2 and 3 along with the enrollment for Phase 2 adult subjects (up to 9 adult RP subjects and up to 3 adult LCA subjects, open enrollment). The safety data will be assessed concurrently for subjects 2 and 3 of Cohort 3 along with Phase 2 adult subjects. After subjects 2 and 3 of Cohort 3 are dosed, a separate DSMB meeting will be held per the DSMB charter which will review the data from these patients and any Phase 2 patients (RP or LCA) who may have been enrolled in parallel (Table 4).\n\nThe DSMB will continue to monitor any Study Drug-related adverse events (SDAE), treatment-emergent adverse events (TEAEs) and serious adverse events (SAEs) events on ad hoc basis.",
+            "spans": [
+              {
+                "offset": 6480,
+                "length": 79
+              },
+              {
+                "offset": 6560,
+                "length": 91
+              },
+              {
+                "offset": 6652,
+                "length": 87
+              },
+              {
+                "offset": 6740,
+                "length": 87
+              },
+              {
+                "offset": 6828,
+                "length": 93
+              },
+              {
+                "offset": 6922,
+                "length": 94
+              },
+              {
+                "offset": 7017,
+                "length": 88
+              },
+              {
+                "offset": 7106,
+                "length": 92
+              },
+              {
+                "offset": 7199,
+                "length": 92
+              },
+              {
+                "offset": 7292,
+                "length": 42
+              },
+              {
+                "offset": 7336,
+                "length": 93
+              },
+              {
+                "offset": 7430,
+                "length": 90
+              },
+              {
+                "offset": 7521,
+                "length": 96
+              },
+              {
+                "offset": 7618,
+                "length": 93
+              },
+              {
+                "offset": 7712,
+                "length": 87
+              },
+              {
+                "offset": 7800,
+                "length": 96
+              },
+              {
+                "offset": 7897,
+                "length": 88
+              },
+              {
+                "offset": 7986,
+                "length": 92
+              },
+              {
+                "offset": 8079,
+                "length": 22
+              }
+            ],
+            "confidence": 0.436,
+            "source": "D(4,0.9883,3.5305,6.5618,3.5305,6.5618,3.7267,0.9883,3.7267);D(4,0.9852,3.7259,6.9644,3.7198,6.9646,3.9183,0.9854,3.9244);D(4,0.9852,3.9220,6.9768,3.9178,6.9769,4.1123,0.9853,4.1165);D(4,0.9800,4.1060,7.1595,4.1085,7.1594,4.3056,0.9799,4.3031);D(4,0.9852,4.2944,7.3171,4.2944,7.3171,4.4906,0.9852,4.4906);D(4,0.9800,4.4964,7.2964,4.4867,7.2967,4.6873,0.9803,4.6970);D(4,0.9868,4.6885,7.2673,4.6778,7.2676,4.8782,0.9871,4.8890);D(4,0.9868,4.8886,7.0349,4.8865,7.0350,5.0792,0.9869,5.0813);D(4,0.9868,5.0778,6.9727,5.0705,6.9729,5.2698,0.9870,5.2771);D(4,0.9852,5.2767,3.7374,5.2649,3.7382,5.4578,0.9860,5.4696);D(4,0.9836,5.5480,7.0640,5.5325,7.0645,5.7432,0.9841,5.7587);D(4,0.9852,5.7439,7.3047,5.7439,7.3047,5.9418,0.9852,5.9418);D(4,0.9836,5.9442,7.3545,5.9343,7.3548,6.1304,0.9839,6.1403);D(4,0.9883,6.1338,7.1345,6.1323,7.1345,6.3262,0.9883,6.3277);D(4,0.9868,6.3244,6.8523,6.3229,6.8523,6.5166,0.9868,6.5181);D(4,0.9868,6.5200,7.3503,6.5140,7.3505,6.7093,0.9870,6.7153);D(4,0.9907,6.7149,7.1968,6.7085,7.1970,6.9025,0.9909,6.9089);D(4,0.9852,6.9068,7.3628,6.9037,7.3629,7.1081,0.9853,7.1112);D(4,0.9852,7.1061,2.3678,7.1007,2.3685,7.2946,0.9859,7.3000)"
+          },
+          "IsOpenLabel": {
+            "type": "boolean",
+            "valueBoolean": true,
+            "spans": [
+              {
+                "offset": 18597,
+                "length": 1
+              }
+            ],
+            "confidence": 0.808,
+            "source": "D(8,2.3257,2.9841,2.4197,2.9841,2.4197,3.0754,2.3257,3.0754)"
+          },
+          "HasLongTermFollowUp": {
+            "type": "boolean",
+            "valueBoolean": true,
+            "spans": [
+              {
+                "offset": 19824,
+                "length": 1
+              }
+            ],
+            "confidence": 0.74,
+            "source": "D(8,9.8184,4.5488,9.9097,4.5447,9.9097,4.6401,9.8184,4.6443)"
+          }
+        },
+        "kind": "document",
+        "startPageNumber": 1,
+        "endPageNumber": 10,
+        "unit": "inch",
+        "pages": [
+          {
+            "pageNumber": 1,
+            "angle": 0,
+            "width": 8.5,
+            "height": 11
+          },
+          {
+            "pageNumber": 2,
+            "angle": 0,
+            "width": 8.5,
+            "height": 11
+          },
+          {
+            "pageNumber": 3,
+            "angle": 0,
+            "width": 8.5,
+            "height": 11
+          },
+          {
+            "pageNumber": 4,
+            "angle": -0.0229,
+            "width": 8.5,
+            "height": 11
+          },
+          {
+            "pageNumber": 5,
+            "angle": 0,
+            "width": 8.5,
+            "height": 11
+          },
+          {
+            "pageNumber": 6,
+            "angle": 0,
+            "width": 8.5,
+            "height": 11
+          },
+          {
+            "pageNumber": 7,
+            "angle": -0.0077,
+            "width": 8.5,
+            "height": 11
+          },
+          {
+            "pageNumber": 8,
+            "angle": 0,
+            "width": 11,
+            "height": 8.5
+          },
+          {
+            "pageNumber": 9,
+            "angle": 0,
+            "width": 11,
+            "height": 8.5
+          },
+          {
+            "pageNumber": 10,
+            "angle": 0,
+            "width": 11,
+            "height": 8.5
+          }
+        ],
+        "analyzerId": "RIS_analyzer",
+        "mimeType": "application/pdf"
+      }
+    ]
+  },
+  "usage": {
+    "documentPagesStandard": 10,
+    "contextualizationTokens": 10000,
+    "tokens": {
+      "gpt-4.1-input": 23543,
+      "gpt-4.1-output": 2022
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "section": "Inclusion criteria",
+  "timestamp": "2026-04-10T14:04:27.643393",
+  "source": {
+    "total_chunks": 4,
+    "results": [
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. Males or females 6 - 17 years of age (inclusive) at the time of parental permission and/or assent, whichever is applicable.\n\n2. Confirmed genetic diagnosis of biallelic autosomal recessive NR2E3 mutations or autosomal dominant NR2E3 mutation for Subgroup 1 or autosomal dominant RHO mutations for Subgroup 2.\n\n3. BCVA 20/32 or visual field less than 20° in any meridian, as measured by a III4e isopter or equivalent in study eye.\n\n4. Able to perform a Multi-Luminance Mobility Testing (MLMT) using study eye, but unable to pass the MLMT at 1 lux, the lowest luminance level tested.\n\n· Subject eligibility for NR2E3 and RHO subgroups who pass the MLMT at 1 lux may be assessed on a case-by-case basis by Ocugen following review of results of screening assessments.",
+        "source_block_ids": [
+          "p44_para_14",
+          "p44_para_15",
+          "p44_para_16",
+          "p44_para_17",
+          "p44_para_18"
+        ],
+        "page_numbers": [
+          44
+        ],
+        "heading_path": "7. SELECTION AND WITHDRAWAL OF SUBJECTS > 7.1. Subject Inclusion Criteria for RP Patients > 7.1.2. Subject Inclusion Criteria for Pediatric RP Patients:",
+        "chunk_type": "paragraph",
+        "id": "c670932f-0d8f-4c41-8103-73feeba69b4a",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.03100961446762085
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. Males or females ≥18 years of age at the time of informed consent.\n\n2. Confirmed genetic diagnosis of biallelic autosomal recessive NR2E3 mutations or autosomal dominant NR2E3 mutation for Subgroup 1 or autosomal dominant RHO mutations for Subgroup 2.\n\n3. For the sentinel subject of Cohort 1-3, BCVA ≤ 20/160 in study eye or visual field less than 20° in any meridian, as measured by a III4e isopter or equivalent in study eye.\n\n4. For non-sentinel subject, BCVA ≤ 20/50 or visual field less than 20° in any meridian, as measured by a III4e isopter or equivalent in study eye.\n\n5. Able to perform a Multi-Luminance Mobility Testing (MLMT) using study eye, but unable to pass the MLMT at 1 lux, the lowest luminance level tested.\n\n· Subject eligibility for NR2E3 and RHO subgroups who pass the MLMT at 1 lux may be assessed on a case-by-case basis by Ocugen following review of results of screening assessments.",
+        "source_block_ids": [
+          "p44_para_7",
+          "p44_para_8",
+          "p44_para_9",
+          "p44_para_10",
+          "p44_para_11",
+          "p44_para_12"
+        ],
+        "page_numbers": [
+          44
+        ],
+        "heading_path": "7. SELECTION AND WITHDRAWAL OF SUBJECTS > 7.1. Subject Inclusion Criteria for RP Patients > 7.1.1. Subject Inclusion Criteria for Adult RP Patients:",
+        "chunk_type": "paragraph",
+        "id": "d425c8d0-9300-4e02-8058-1c91df7fc300",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.029286926612257957
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. Males or females ≥18 years of age at the time of informed consent.\n\n2. Clinical diagnosis of LCA and confirmed genetic diagnosis of CEP290 mutation.\n\n3. Best corrected visual acuity (BCVA) equal to or worse than LogMAR +0.7 but equal to or better than LogMAR 3.8 (light perception) in the study\n\n4. Detectable outer nuclear layer in the macular region as determined by spectral- domain optical coherence tomography (SD-OCT).",
+        "source_block_ids": [
+          "p45_para_5",
+          "p45_para_6",
+          "p45_para_7",
+          "p45_para_8"
+        ],
+        "page_numbers": [
+          45
+        ],
+        "heading_path": "7. SELECTION AND WITHDRAWAL OF SUBJECTS > 7.2. Subject Inclusion Criteria for LCA Patients > 7.2.1. Subject Inclusion Criteria for Adult LCA Patients:",
+        "chunk_type": "paragraph",
+        "id": "a26e8eb9-ab15-401e-87b8-cfd45fc2d265",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.029009878635406494
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. Males or females 6 - 17 years of age (inclusive) at the time of parental permission and/or assent, whichever is applicable.\n\n2. Clinical diagnosis of LCA and confirmed genetic diagnosis of CEP290 mutation.\n\n3. Best corrected visual acuity (BCVA) equal to or worse than LogMAR +0.7 but equal to or better than LogMAR 3.8 (light perception) in the study\n\n4. Detectable outer nuclear layer in the macular region as determined by spectral- domain optical coherence tomography (SD-OCT).",
+        "source_block_ids": [
+          "p45_para_10",
+          "p45_para_11",
+          "p45_para_12",
+          "p45_para_13"
+        ],
+        "page_numbers": [
+          45
+        ],
+        "heading_path": "7. SELECTION AND WITHDRAWAL OF SUBJECTS > 7.2. Subject Inclusion Criteria for LCA Patients > 7.2.2. Subject Inclusion Criteria for Pediatric LCA Patients:",
+        "chunk_type": "paragraph",
+        "id": "2df62953-e8c9-451b-8e53-322d7ddbcbea",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.026511315256357193
+      }
+    ]
+  },
+  "ich_guidelines": {
+    "total_sections": 2,
+    "results": {
+      "total_sections": 1,
+      "results": [
+        {
+          "section_path": "9.3.1 Inclusion Criteria",
+          "source_type": "ich",
+          "guideline_text": "The patient population and the selection criteria used to enter the patients into the study should be described, and the suitability of the population for the purposes of the study discussed. Specific diagnostic criteria used, as well as specific disease requirements (e.g., disease of a particular severity or duration, results of a particular test or rating scale(s) or physical examination, particular features of clinical history, such as failure or success on prior therapy, or other potential prognostic factors and any age, sex or ethnic factors) should be presented.\nScreening criteria and any additional criteria for randomisation or entry into the test drug/investigational product treatment part of the trial should be described. If there is reason to believe that there were additional entry criteria, not defined in the protocol, the implications of these should be discussed. For example, some investigators may have excluded, or entered into other studies, patients who were particularly ill or who had particular baseline characteristics.",
+          "headings": []
+        }
+      ]
+    }
+  }
+}

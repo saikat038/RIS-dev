@@ -1,0 +1,95 @@
+{
+  "section": "Title page",
+  "timestamp": "2026-04-09T11:38:37.283110",
+  "source": {
+    "total_chunks": 3,
+    "results": [
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "1. SYNOPSIS > Title of Study:\n\nA Phase 1/2 Study to Assess the Safety and Efficacy of OCU400 for Retinitis Pigmentosa associated with NR2E3 and RHO mutations and Leber Congenital Amaurosis with mutation(s) in CEP290 gene.",
+        "source_block_ids": [
+          "p5_para_17",
+          "p5_para_18"
+        ],
+        "page_numbers": [
+          5
+        ],
+        "heading_path": "1. SYNOPSIS > Title of Study:",
+        "chunk_type": "paragraph",
+        "id": "a40e04cf-95c3-4b8a-a253-3e196685093e",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.02816092036664486
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "OCU400-101: A Phase 1/2 Study to Assess the Safety and Efficacy of OCU400 for Retinitis Pigmentosa (RP) associated with NR2E3 and RHO mutations and Leber Congenital Amaurosis (LCA) with mutation(s) in CEP290 gene.\nI confirm that I have read and that I understand this protocol, the Investigator's Brochure and any other drug or procedural information provided by the sponsor. I agree to conduct this study in accordance with the requirements of this protocol and protect the rights, safety, privacy, and well- being of study participants in accordance with the following:\n· The ethical principles that have their origin in the Declaration of Helsinki.\n· International Council for Harmonization E6 Good Clinical Practice: Consolidated Guideline.\n· All applicable laws and regulations, including, without limitation, data privacy laws and regulations.\n· Regulatory requirements for reporting serious adverse events defined in Section 9.3.1 of this protocol.\nInformation taken from the study protocol may not be disseminated or discussed with a third party without the written consent of the sponsor.\n\nPROCEDURES IN CASE OF EMERGENCY",
+        "source_block_ids": [
+          "p3_para_3",
+          "p3_para_4",
+          "p3_para_5",
+          "p3_para_6",
+          "p3_para_7",
+          "p3_para_8",
+          "p3_para_9",
+          "p3_para_10",
+          "p3_para_11",
+          "p3_para_12",
+          "p3_para_13",
+          "p4_para_3"
+        ],
+        "page_numbers": [
+          3,
+          4
+        ],
+        "heading_path": "",
+        "chunk_type": "paragraph",
+        "id": "a0104564-203f-41d7-b3dd-c097aa74c995",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.01075268816202879
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "A PHASE 1/2 STUDY TO ASSESS THE SAFETY AND EFFICACY OF OCU400 FOR RETINITIS PIGMENTOSA ASSOCIATED WITH NR2E3 AND RHO MUTATIONS AND LEBER CONGENITAL AMAUROSIS WITH MUTATION(S) IN CEP290 GENE",
+        "source_block_ids": [
+          "p1_para_3",
+          "p1_para_4",
+          "p1_para_5"
+        ],
+        "page_numbers": [
+          1
+        ],
+        "heading_path": "",
+        "chunk_type": "paragraph",
+        "id": "9832c7bd-41d8-408c-b53f-222a2c0a700b",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.03306011110544205
+      }
+    ]
+  },
+  "ich_guidelines": {
+    "total_sections": 2,
+    "results": {
+      "total_sections": 1,
+      "results": [
+        {
+          "section_path": "1. TITLE PAGE",
+          "source_type": "ich",
+          "guideline_text": "The title page should contain the following information:\n- study title\n- name of test drug/ investigational product\n- indication studied\n- if not apparent from the title, a brief (1 to 2 sentences) description giving design (parallel, cross-over, blinding, randomised) comparison (placebo, active, dose/response), duration, dose, and patient population\n- name of the sponsor\n- protocol identification (code or number)\n- development phase of study\n- study initiation date (first patient enrolled, or any other verifiable definition)\n- date of early study termination, if any\n- study completion date (last patient completed)\n- name and affiliation of principal or coordinating investigator(s) or sponsor's responsible medical officer\n- name of company/sponsor signatory (the person responsible for the study report within the company/sponsor. The name, telephone number and fax number of the company/sponsor contact persons for questions arising during review of the study report should be indicated on this page or in the letter of application.)\n- statement indicating whether the study was performed in compliance with Good Clinical Practices (GCP), including the archiving of essential documents\n- date of the report (identify any earlier reports from the same study by title and date).",
+          "headings": []
+        }
+      ]
+    }
+  }
+}

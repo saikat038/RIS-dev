@@ -1,0 +1,2988 @@
+{
+  "doc_id": "OCU401_CSR_Final_Tables.pdf",
+  "blocks": [
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
+      "page_number": 1,
+      "container_id": null,
+      "container_type": "table_title",
+      "container_path": []
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
+      "table_context_path": [
+        "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Characteristic Statistic/Category",
+        "Cohort 1 (N=4)",
+        "Cohort 2 (N=3)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=18)"
+      ],
+      "rows": [
+        [
+          "Age (years)"
+        ],
+        [
+          "n",
+          "4",
+          "3",
+          "3",
+          "8",
+          "11",
+          "18"
+        ],
+        [
+          "Mean",
+          "67.8",
+          "==44.7==",
+          "==60.0==",
+          "==42.9==",
+          "47.5",
+          "51.6"
+        ],
+        [
+          "Standard deviation",
+          "6.80",
+          "23.86",
+          "20.88",
+          "13.15",
+          "16.50",
+          "17.77"
+        ],
+        [
+          "Median",
+          "66.5",
+          "52.0",
+          "70.0",
+          "44.0",
+          "45.0",
+          "51.5"
+        ],
+        [
+          "Minimum",
+          "61",
+          "18",
+          "36",
+          "22",
+          "22",
+          "18"
+        ],
+        [
+          "Maximum",
+          "==77==",
+          "64",
+          "==74==",
+          "==66==",
+          "74",
+          "77"
+        ],
+        [
+          "Age group, n (%)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Adult",
+          "4 (100.0)",
+          "3 (100.0)",
+          "3 (100.0)",
+          "8 (100.0)",
+          "11 (100.0)",
+          "18 (100.0)"
+        ],
+        [
+          "Pediatric",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Sex, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Male",
+          "==2== ( 50.0)",
+          "==1== ( 33.3)",
+          "==1== ( 33.3)",
+          "==7== ( 87.5)",
+          "8 ( 72.7)",
+          "==11== ( 61.1)"
+        ],
+        [
+          "Female",
+          "==2== ( 50.0)",
+          "==2== ( 66.7)",
+          "==2== ( 66.7)",
+          "==1== ( 12.5)",
+          "3 ( 27.3)",
+          "==7== ( 38.9)"
+        ],
+        [
+          "Childbearing Potential [1], n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 50.0)",
+          "1 (100.0)",
+          "2 ( 66.7)",
+          "2 ( 28.6)"
+        ],
+        [
+          "No",
+          "2 (100.0)",
+          "2 (100.0)",
+          "1 ( 50.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "5 ( 71.4)"
+        ],
+        [
+          "Race, n (%)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "White",
+          "==4== (100.0)",
+          "==2== ( 66.7)",
+          "==3== (100.0)",
+          "==5== ( 62.5)",
+          "==8== ( 72.7)",
+          "==14== ( 77.8)"
+        ],
+        [
+          "Asian",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "==2== ( 25.0)",
+          "2 ( 18.2)",
+          "==2== (11.1)"
+        ],
+        [
+          "Black or African American",
+          "0 ( 0.0)",
+          "==1== ( 33.3)",
+          "0 ( 0.0)",
+          "==1== ( 12.5)",
+          "1 ( 9.1)",
+          "==2== (11.1)"
+        ],
+        [
+          "American Indian or Alaska Native",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Native Hawaiian or Other Pacific Islander",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Multiple",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Other",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Not Reported",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Ethnicity, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hispanic or Latino",
+          "1 ( 25.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "3 ( 37.5)",
+          "3 ( 27.3)",
+          "4 ( 22.2)"
+        ],
+        [
+          "Not Hispanic or Latino",
+          "3 ( 75.0)",
+          "3 (100.0)",
+          "3 (100.0)",
+          "5 ( 62.5)",
+          "8 ( 72.7)",
+          "14 ( 77.8)"
+        ]
+      ],
+      "page_number": 1,
+      "container_id": "bac26923-4e42-4c2f-9262-444fd32cd4f5",
+      "container_type": "table_group",
+      "container_path": [],
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Note: $\\frac { c } { 0 } = 1 0 0 \\times n / N$ . MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
+      "page_number": 1,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "p_2",
+        "p_3",
+        "p_4"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
+      "page_number": 2,
+      "container_id": null,
+      "container_type": "table_title",
+      "container_path": []
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
+      "table_context_path": [
+        "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Characteristic Statistic/Category",
+        "Cohort 1 (N=4)",
+        "Cohort 2 (N=3)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=18)"
+      ],
+      "rows": [
+        [
+          "Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3"
+        ],
+        [
+          "Age (years)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "n",
+          "0",
+          "2",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        [
+          "Mean",
+          "",
+          "58.0",
+          "70.0",
+          "39.5",
+          "49.7",
+          "53.0"
+        ],
+        [
+          "Standard deviation",
+          "",
+          "8.49",
+          "",
+          "10.61",
+          "19.14",
+          "14.90"
+        ],
+        [
+          "Median",
+          "",
+          "58.0",
+          "70.0",
+          "39.5",
+          "47.0",
+          "52.0"
+        ],
+        [
+          "Minimum",
+          "",
+          "52",
+          "70",
+          "32",
+          "32",
+          "32"
+        ],
+        [
+          "Maximum",
+          "",
+          "64",
+          "70",
+          "47",
+          "70",
+          "70"
+        ],
+        [
+          "Age group, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Adult",
+          "0 ( 0.0)",
+          "2 ( 66.7)",
+          "1 ( 33.3)",
+          "2 ( 25.0)",
+          "3 ( 27.3)",
+          "5 ( 27.8)"
+        ],
+        [
+          "Pediatric",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Sex, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Male",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "2 ( 25.0)",
+          "3 ( 27.3)",
+          "3 ( 16.7)"
+        ],
+        [
+          "Female",
+          "0 ( 0.0)",
+          "2 ( 66.7)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "2 (11.1)"
+        ],
+        [
+          "Childbearing Potential [1], n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "No",
+          "0 ( 0.0)",
+          "2 (100.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "2 ( 28.6)"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "page_number": 2,
+      "container_id": "a2d8b11a-c5cb-4a9e-b50d-49aba6c9f2e9",
+      "container_type": "table_group",
+      "container_path": [],
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Note: $\\div 1 0 0 \\times n / N$ . MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
+      "page_number": 2,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "p_10",
+        "p_11",
+        "p_12"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
+      "page_number": 3,
+      "container_id": null,
+      "container_type": "table_title",
+      "container_path": []
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
+      "table_context_path": [
+        "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Characteristic Statistic/Category",
+        "Cohort 1 (N=4)",
+        "Cohort 2 (N=3)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=18)"
+      ],
+      "rows": [
+        [
+          "Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3"
+        ],
+        [
+          "Race, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "White",
+          "0",
+          "( 0.0)",
+          "2 ( 66.7)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "1 ( 9.1)",
+          "3 ( 16.7)"
+        ],
+        [
+          "Asian",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "2 ( 25.0)",
+          "2 ( 18.2 )",
+          "2 (11.1)"
+        ],
+        [
+          "American Indian or Alaska Native",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Black or African American",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Native Hawaiian or Other Pacific Islander",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Multiple",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Other",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Not Reported",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Ethnicity, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hispanic or Latino",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Not Hispanic or Latino",
+          "0",
+          "( 0.0)",
+          "2 ( 66.7)",
+          "1 ( 33.3)",
+          "2 ( 25.0)",
+          "3 ( 27.3)",
+          "5 ( 27.8)"
+        ]
+      ],
+      "page_number": 3,
+      "container_id": "2d82610d-bd08-4db2-a67a-e7e2f1b4b836",
+      "container_type": "table_group",
+      "container_path": [],
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
+      "page_number": 3,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "p_18",
+        "p_19",
+        "p_20"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
+      "page_number": 4,
+      "container_id": null,
+      "container_type": "table_title",
+      "container_path": []
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
+      "table_context_path": [
+        "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Characteristic Statistic/Category",
+        "Cohort 1 (N=4) Cohort 2 (N=3)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=18)"
+      ],
+      "rows": [
+        [
+          "Subgroup: Mutation Subtype - Autosomal dominant NR2E3",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Age (years)",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "n",
+          "0 0",
+          "1",
+          "2",
+          "3",
+          "3"
+        ],
+        [
+          "Mean",
+          "",
+          "36.0",
+          "44.0",
+          "41.3",
+          "41.3"
+        ],
+        [
+          "Standard deviation",
+          "",
+          "",
+          "1.41",
+          "4.73",
+          "4.73"
+        ],
+        [
+          "Median",
+          "",
+          "36.0",
+          "44.0",
+          "43.0",
+          "43.0"
+        ],
+        [
+          "Minimum",
+          "",
+          "36",
+          "43",
+          "36",
+          "36"
+        ],
+        [
+          "Maximum",
+          "",
+          "36",
+          "45",
+          "45",
+          "45"
+        ],
+        [
+          "Age group, n (%)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Adult",
+          "0 ( 0.0) 0 ( 0.0)",
+          "1 ( 33.3)",
+          "2 ( 25.0)",
+          "3 ( 27.3)",
+          "3 ( 16.7)"
+        ],
+        [
+          "Pediatric",
+          "0 ( 0.0) 0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Sex, n (%)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Male",
+          "0 ( 0.0) 0 ( 0.0)",
+          "0 ( 0.0)",
+          "2 ( 25.0)",
+          "2 ( 18.2)",
+          "2 (11.1)"
+        ],
+        [
+          "Female",
+          "0 ( 0.0) 0 ( 0.0)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "1 ( 9.1)",
+          "1 ( 5.6)"
+        ],
+        [
+          "Childbearing Potential [1], n (%)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "0 ( 0.0) 0 ( 0.0)",
+          "1 ( 50.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "1 ( 14.3)"
+        ],
+        [
+          "No",
+          "0 ( 0.0) 0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "page_number": 4,
+      "container_id": "6d9dab4a-a650-428c-9954-8953eaa3925b",
+      "container_type": "table_group",
+      "container_path": [],
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Note: $\\div 1 0 0 \\times n / N$ . MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
+      "page_number": 4,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "p_26",
+        "p_27",
+        "p_28"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
+      "page_number": 5,
+      "container_id": null,
+      "container_type": "table_title",
+      "container_path": []
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
+      "table_context_path": [
+        "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Characteristic Statistic/Category",
+        "Cohort 1 (N=4)",
+        "Cohort 2 (N=3)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=18)"
+      ],
+      "rows": [
+        [
+          "Subgroup: Mutation Subtype - Autosomal dominant NR2E3",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Race, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "White",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "2 ( 25.0)",
+          "3 ( 27.3)",
+          "3 ( 16.7)"
+        ],
+        [
+          "American Indian or Alaska Native",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Asian",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Black or African American",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Native Hawaiian or Other Pacific Islander",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Multiple",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Other",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Not Reported",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Ethnicity, n (%) Hispanic or Latino",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 12.5)",
+          "1 ( 9.1)",
+          "1 ( 5.6)"
+        ],
+        [
+          "Not Hispanic or Latino",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "1 ( 12.5)",
+          "2 ( 18.2)",
+          "2 (11.1)"
+        ]
+      ],
+      "page_number": 5,
+      "container_id": "3e4d3582-6c8f-4997-9ced-4d573c13d083",
+      "container_type": "table_group",
+      "container_path": [],
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
+      "page_number": 5,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "p_34",
+        "p_35",
+        "p_36"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
+      "page_number": 6,
+      "container_id": null,
+      "container_type": "table_title",
+      "container_path": []
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
+      "table_context_path": [
+        "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Characteristic Statistic/Category",
+        "Cohort 1 (N=4)",
+        "Cohort 2 (N=3)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=18)"
+      ],
+      "rows": [
+        [
+          "Subgroup: Mutation Subtype - Autosomal dominant RHO",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Age (years)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "n",
+          "4",
+          "1",
+          "1",
+          "4",
+          "5",
+          "10"
+        ],
+        [
+          "Mean",
+          "67.8",
+          "18.0",
+          "74.0",
+          "44.0",
+          "50.0",
+          "53.9"
+        ],
+        [
+          "Standard deviation",
+          "6.80",
+          "",
+          "",
+          "18.85",
+          "21.13",
+          "21.23"
+        ],
+        [
+          "Median",
+          "66.5",
+          "18.0",
+          "74.0",
+          "44.0",
+          "51.0",
+          "63.0"
+        ],
+        [
+          "Minimum",
+          "61",
+          "18",
+          "74",
+          "22",
+          "22",
+          "18"
+        ],
+        [
+          "Maximum",
+          "77",
+          "18",
+          "74",
+          "66",
+          "74",
+          "77"
+        ],
+        [
+          "Age group, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Adult",
+          "4 (100.0)",
+          "1 ( 33.3)",
+          "1 ( 33.3)",
+          "4 ( 50.0)",
+          "5 ( 45.5)",
+          "10 ( 55.6)"
+        ],
+        [
+          "Pediatric",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Sex, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Male",
+          "2 ( 50.0)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "3 ( 37.5)",
+          "3 ( 27.3)",
+          "6 ( 33.3)"
+        ],
+        [
+          "Female",
+          "2 ( 50.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "1 ( 12.5)",
+          "2 ( 18.2 )",
+          "4 ( 22.2)"
+        ],
+        [
+          "Childbearing Potential [1], n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 (100.0)",
+          "1 ( 33.3)",
+          "1 ( 14.3)"
+        ],
+        [
+          "No",
+          "2 (100.0)",
+          "0 ( 0.0)",
+          "1 ( 50.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "3 ( 42.9)"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "page_number": 6,
+      "container_id": "40e65db1-7870-4c3d-86a2-436feefb5866",
+      "container_type": "table_group",
+      "container_path": [],
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Note: $\\div 1 0 0 \\times n / N$ . MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
+      "page_number": 6,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "p_42",
+        "p_43",
+        "p_44"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
+      "page_number": 7,
+      "container_id": null,
+      "container_type": "table_title",
+      "container_path": []
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
+      "table_context_path": [
+        "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Characteristic Statistic/Category",
+        "Cohort 1 (N=4)",
+        "Cohort 2 (N=3)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=18)"
+      ],
+      "rows": [
+        [
+          "Subgroup: Mutation Subtype - Autosomal dominant RHO",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Race, n (%)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "White",
+          "4 (100.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "3 ( 37.5)",
+          "4 ( 36.4)",
+          "8 ( 44.4)"
+        ],
+        [
+          "Black or African American",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "1 ( 12.5)",
+          "1 ( 9.1)",
+          "2 (11.1)"
+        ],
+        [
+          "American Indian or Alaska Native",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Asian",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Native Hawaiian or Other Pacific Islander",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Multiple",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Other",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Not Reported",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Ethnicity, n (%) Hispanic or Latino",
+          "1 ( 25.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "2 ( 25.0)",
+          "2 ( 18.2)",
+          "3 ( 16.7)"
+        ],
+        [
+          "Not Hispanic or Latino",
+          "3 ( 75.0)",
+          "1 ( 33.3)",
+          "1 ( 33.3)",
+          "2 ( 25.0)",
+          "3 ( 27.3)",
+          "7 ( 38.9)"
+        ]
+      ],
+      "page_number": 7,
+      "container_id": "3ecf66d3-2b0a-4ed5-9026-4646dbf0813e",
+      "container_type": "table_group",
+      "container_path": [],
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
+      "page_number": 7,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "p_50",
+        "p_51",
+        "p_52"
+      ]
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Table 14.1.3.1.2 ==Summary of Subject Demographics== Per Protocol Population - RP Patients",
+      "page_number": 8,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "h_56"
+      ]
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.1.3.1.2 ==Summary of Subject Demographics== Per Protocol Population - RP Patients",
+      "table_context_path": [
+        "Table 14.1.3.1.2 ==Summary of Subject Demographics== Per Protocol Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.2 ==Summary of Subject Demographics== Per Protocol Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Characteristic Statistic/Category",
+        "Cohort 1 (N=4)",
+        "Cohort 2 (N=2)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=17)"
+      ],
+      "rows": [
+        [
+          "Age (years)"
+        ],
+        [
+          "n",
+          "4",
+          "2",
+          "3",
+          "8",
+          "11",
+          "17"
+        ],
+        [
+          "Mean",
+          "67.8",
+          "35.0",
+          "60.0",
+          "42.9",
+          "47.5",
+          "50.8"
+        ],
+        [
+          "Standard deviation",
+          "6.80",
+          "24.04",
+          "20.88",
+          "13.15",
+          "16.50",
+          "18.04"
+        ],
+        [
+          "Median",
+          "66.5",
+          "35.0",
+          "70.0",
+          "44.0",
+          "45.0",
+          "51.0"
+        ],
+        [
+          "Minimum",
+          "61",
+          "18",
+          "36",
+          "22",
+          "22",
+          "18"
+        ],
+        [
+          "Maximum",
+          "77",
+          "52",
+          "74",
+          "66",
+          "74",
+          "77"
+        ],
+        [
+          "Age group, n (%)",
+          ""
+        ],
+        [
+          "Adult",
+          "4 (100.0)",
+          "2 (100.0)",
+          "3 (100.0)",
+          "8 (100.0)",
+          "11 (100.0)",
+          "17 (100.0)"
+        ],
+        [
+          "Pediatric",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Sex, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "==Male==",
+          "2 ( 50.0)",
+          "1 ( 50.0)",
+          "1 ( 33.3)",
+          "7 ( 87.5)",
+          "8 ( 72.7)",
+          "==11== ( 64.7)"
+        ],
+        [
+          "Female",
+          "2 ( 50.0)",
+          "1 ( 50.0)",
+          "2 ( 66.7)",
+          "1 ( 12.5)",
+          "3 ( 27.3)",
+          "==6== ( 35.3)"
+        ],
+        [
+          "Childbearing Potential [1], n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 50.0)",
+          "1 (100.0)",
+          "2 ( 66.7)",
+          "2 ( 33.3)"
+        ],
+        [
+          "No",
+          "2 (100.0)",
+          "1 (100.0)",
+          "1 ( 50.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "4 ( 66.7)"
+        ],
+        [
+          "Race, n (%)"
+        ],
+        [
+          "White",
+          "4 (100.0)",
+          "1 ( 50.0)",
+          "3 (100.0)",
+          "5 ( 62.5)",
+          "8 ( 72.7)",
+          "13 ( 76.5)"
+        ],
+        [
+          "==Asian==",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "2 ( 25.0)",
+          "2 ( 18.2)",
+          "==2== (11.8)"
+        ],
+        [
+          "==Black or African American==",
+          "0 ( 0.0)",
+          "1 ( 50.0)",
+          "0 ( 0.0)",
+          "1 ( 12.5)",
+          "1 ( 9.1)",
+          "==2== (11.8)"
+        ],
+        [
+          "American Indian or Alaska Native",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Native Hawaiian or Other Pacific Islander",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Multiple",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Other",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Not Reported",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Ethnicity, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hispanic or Latino",
+          "1 ( 25.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "3 ( 37.5)",
+          "3 ( 27.3)",
+          "4 ( 23.5)"
+        ],
+        [
+          "Not Hispanic or Latino",
+          "3 ( 75.0)",
+          "2 (100.0)",
+          "3 (100.0)",
+          "5 ( 62.5)",
+          "8 ( 72.7)",
+          "13 ( 76.5)"
+        ]
+      ],
+      "page_number": 8,
+      "container_id": "455d39dc-04d7-4147-af94-1ad278dfd1e0",
+      "container_type": "table_group",
+      "container_path": [],
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Note: $\\frac { e } { 0 } = 1 0 0 \\times n / N$ . MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
+      "page_number": 8,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "p_58",
+        "p_59",
+        "p_60"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
+      "page_number": 9,
+      "container_id": null,
+      "container_type": "table_title",
+      "container_path": []
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
+      "table_context_path": [
+        "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Characteristic Statistic/Category",
+        "Cohort 1 (N=4)",
+        "Cohort 2 (N=2)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=17)"
+      ],
+      "rows": [
+        [
+          "==Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3=="
+        ],
+        [
+          "Age (years)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "n",
+          "0",
+          "1",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        [
+          "Mean",
+          "",
+          "52.0",
+          "70.0",
+          "39.5",
+          "49.7",
+          "50.3"
+        ],
+        [
+          "Standard deviation",
+          "",
+          "",
+          "",
+          "10.61",
+          "19.14",
+          "15.67"
+        ],
+        [
+          "Median",
+          "",
+          "52.0",
+          "70.0",
+          "39.5",
+          "47.0",
+          "49.5"
+        ],
+        [
+          "Minimum",
+          "",
+          "52",
+          "70",
+          "32",
+          "32",
+          "32"
+        ],
+        [
+          "Maximum",
+          "",
+          "52",
+          "70",
+          "47",
+          "70",
+          "70"
+        ],
+        [
+          "Age group, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Adult",
+          "0 ( 0.0)",
+          "1 ( 50.0)",
+          "1 ( 33.3)",
+          "2 ( 25.0)",
+          "3 ( 27.3)",
+          "4 ( 23.5)"
+        ],
+        [
+          "Pediatric",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Sex, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Male",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "2 ( 25.0)",
+          "3 ( 27.3)",
+          "3 ( 17.6)"
+        ],
+        [
+          "Female",
+          "0 ( 0.0)",
+          "1 ( 50.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 5.9)"
+        ],
+        [
+          "Childbearing Potential [1], n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "No",
+          "0 ( 0.0)",
+          "1 (100.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 16.7)"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "page_number": 9,
+      "container_id": "5ded1090-4f65-46f1-b9dd-97308efd0d1e",
+      "container_type": "table_group",
+      "container_path": [],
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Note: $\\div 1 0 0 \\times n / N$ . MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
+      "page_number": 9,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "p_66",
+        "p_67",
+        "p_68"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
+      "page_number": 10,
+      "container_id": null,
+      "container_type": "table_title",
+      "container_path": []
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
+      "table_context_path": [
+        "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Characteristic Statistic/Category",
+        "Cohort 1 (N=4)",
+        "Cohort 2 (N=2)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=17)"
+      ],
+      "rows": [
+        [
+          "==Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3=="
+        ],
+        [
+          "Race, n (%)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Asian",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "2 ( 25.0)",
+          "2 ( 18.2 )",
+          "2 ( 11.8 )"
+        ],
+        [
+          "White",
+          "0",
+          "( 0.0)",
+          "1 ( 50.0)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "1 ( 9.1)",
+          "2 ( 11.8 )"
+        ],
+        [
+          "American Indian or Alaska Native",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Black or African American",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Native Hawaiian or Other Pacific Islander",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Multiple",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Other",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Not Reported",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Ethnicity, n (%) Hispanic or Latino",
+          "0",
+          "( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Not Hispanic or Latino",
+          "0",
+          "( 0.0)",
+          "1 ( 50.0)",
+          "1 ( 33.3)",
+          "2 ( 25.0)",
+          "3 ( 27.3)",
+          "4 ( 23.5)"
+        ]
+      ],
+      "page_number": 10,
+      "container_id": "dffdf169-6a0d-480d-83b9-1cb6a03a4527",
+      "container_type": "table_group",
+      "container_path": [],
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
+      "page_number": 10,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "p_74",
+        "p_75",
+        "p_76"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
+      "page_number": 11,
+      "container_id": null,
+      "container_type": "table_title",
+      "container_path": []
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
+      "table_context_path": [
+        "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Characteristic Statistic/Category",
+        "Cohort 1 (N=4) Cohort 2 (N=2)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=17)"
+      ],
+      "rows": [
+        [
+          "==Subgroup: Mutation Subtype - Autosomal dominant NR2E3==",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Age (years)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "n",
+          "0 0",
+          "1",
+          "2",
+          "3",
+          "3"
+        ],
+        [
+          "Mean",
+          "",
+          "36.0",
+          "44.0",
+          "41.3",
+          "41.3"
+        ],
+        [
+          "Standard deviation",
+          "",
+          "",
+          "1.41",
+          "4.73",
+          "4.73"
+        ],
+        [
+          "Median",
+          "",
+          "36.0",
+          "44.0",
+          "43.0",
+          "43.0"
+        ],
+        [
+          "Minimum",
+          "",
+          "36",
+          "43",
+          "36",
+          "36"
+        ],
+        [
+          "Maximum",
+          "",
+          "36",
+          "45",
+          "45",
+          "45"
+        ],
+        [
+          "Age group, n (%)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Adult",
+          "0 ( 0.0) 0 ( 0.0)",
+          "1 ( 33.3)",
+          "2 ( 25.0)",
+          "3 ( 27.3)",
+          "3 ( 17.6)"
+        ],
+        [
+          "Pediatric",
+          "0 ( 0.0) 0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Sex, n (%)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Male",
+          "0 ( 0.0) 0 ( 0.0)",
+          "0 ( 0.0)",
+          "2 ( 25.0)",
+          "2 ( 18.2)",
+          "2 ( 11.8 )"
+        ],
+        [
+          "Female",
+          "0 ( 0.0) 0 ( 0.0)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "1 ( 9.1)",
+          "1 ( 5.9)"
+        ],
+        [
+          "Childbearing Potential [1], n (%)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "0 ( 0.0) 0 ( 0.0)",
+          "1 ( 50.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "1 ( 16.7)"
+        ],
+        [
+          "No",
+          "0 ( 0.0) 0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "page_number": 11,
+      "container_id": "e61ee57e-8b5d-46af-b85b-aae116641e14",
+      "container_type": "table_group",
+      "container_path": [],
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Note: $\\div 1 0 0 \\times n / N$ . MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
+      "page_number": 11,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "p_82",
+        "p_83",
+        "p_84"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
+      "page_number": 12,
+      "container_id": null,
+      "container_type": "table_title",
+      "container_path": []
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
+      "table_context_path": [
+        "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Characteristic Statistic/Category",
+        "Cohort 1 (N=4)",
+        "Cohort 2 (N=2)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=17)"
+      ],
+      "rows": [
+        [
+          "==Subgroup: Mutation Subtype - Autosomal dominant NR2E3==",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Race, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "White",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "2 ( 25.0)",
+          "3 ( 27.3 )",
+          "3 ( 17.6)"
+        ],
+        [
+          "American Indian or Alaska Native",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Asian",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Black or African American",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Native Hawaiian or Other Pacific Islander",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Multiple",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Other",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Not Reported",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Ethnicity, n (%) Hispanic or Latino",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 12.5)",
+          "1 ( 9.1)",
+          "1 ( 5.9)"
+        ],
+        [
+          "Not Hispanic or Latino",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "1 ( 12.5)",
+          "2 ( 18.2)",
+          "2 ( 11.8 )"
+        ]
+      ],
+      "page_number": 12,
+      "container_id": "8a3a7120-a744-499f-8301-71eb05dc91c4",
+      "container_type": "table_group",
+      "container_path": [],
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
+      "page_number": 12,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "p_90",
+        "p_91",
+        "p_92"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
+      "page_number": 13,
+      "container_id": null,
+      "container_type": "table_title",
+      "container_path": []
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
+      "table_context_path": [
+        "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Characteristic Statistic/Category",
+        "Cohort 1 (N=4)",
+        "Cohort 2 (N=2)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=17)"
+      ],
+      "rows": [
+        [
+          "==Subgroup: Mutation Subtype - Autosomal dominant RHO==",
+          ""
+        ],
+        [
+          "Age (years)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "n",
+          "4",
+          "1",
+          "1",
+          "4",
+          "5",
+          "10"
+        ],
+        [
+          "Mean",
+          "67.8",
+          "18.0",
+          "74.0",
+          "44.0",
+          "50.0",
+          "53.9"
+        ],
+        [
+          "Standard deviation",
+          "6.80",
+          "",
+          "",
+          "18.85",
+          "21.13",
+          "21.23"
+        ],
+        [
+          "Median",
+          "66.5",
+          "18.0",
+          "74.0",
+          "44.0",
+          "51.0",
+          "63.0"
+        ],
+        [
+          "Minimum",
+          "61",
+          "18",
+          "74",
+          "22",
+          "22",
+          "18"
+        ],
+        [
+          "Maximum",
+          "77",
+          "18",
+          "74",
+          "66",
+          "74",
+          "77"
+        ],
+        [
+          "Age group, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Adult",
+          "4 (100.0)",
+          "1 ( 50.0)",
+          "1 ( 33.3)",
+          "4 ( 50.0)",
+          "5 ( 45.5)",
+          "10 ( 58.8)"
+        ],
+        [
+          "Pediatric",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Sex, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Male",
+          "2 ( 50.0)",
+          "1 ( 50.0)",
+          "0 ( 0.0)",
+          "3 ( 37.5)",
+          "3 ( 27.3)",
+          "6 ( 35.3)"
+        ],
+        [
+          "Female",
+          "2 ( 50.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "1 ( 12.5)",
+          "2 ( 18.2 )",
+          "4 ( 23.5)"
+        ],
+        [
+          "Childbearing Potential [1], n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 (100.0)",
+          "1 ( 33.3)",
+          "1 ( 16.7)"
+        ],
+        [
+          "No",
+          "2 (100.0)",
+          "0 ( 0.0)",
+          "1 ( 50.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "3 ( 50.0)"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "page_number": 13,
+      "container_id": "7bcae3ef-3d76-4bbf-82ef-6a9f2129044e",
+      "container_type": "table_group",
+      "container_path": [],
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Note: $\\div 1 0 0 \\times n / N$ . MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
+      "page_number": 13,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "p_98",
+        "p_99",
+        "p_100"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
+      "page_number": 14,
+      "container_id": null,
+      "container_type": "table_title",
+      "container_path": []
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
+      "table_context_path": [
+        "Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Characteristic Statistic/Category",
+        "Cohort 1 (N=4)",
+        "Cohort 2 (N=2)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=17)"
+      ],
+      "rows": [
+        [
+          "==Subgroup: Mutation Subtype - Autosomal dominant RHO==",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Race, n (%)",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "White",
+          "4 (100.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "3 ( 37.5)",
+          "4 ( 36.4)",
+          "8 ( 47.1)"
+        ],
+        [
+          "Black or African American",
+          "0 ( 0.0)",
+          "1 ( 50.0)",
+          "0 ( 0.0)",
+          "1 ( 12.5)",
+          "1 ( 9.1)",
+          "2 ( 11.8 )"
+        ],
+        [
+          "American Indian or Alaska Native",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Asian",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Native Hawaiian or Other Pacific Islander",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Multiple",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Other",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Not Reported",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Ethnicity, n (%) Hispanic or Latino",
+          "1 ( 25.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "2 ( 25.0)",
+          "2 ( 18.2)",
+          "3 ( 17.6)"
+        ],
+        [
+          "Not Hispanic or Latino",
+          "3 ( 75.0)",
+          "1 ( 50.0)",
+          "1 ( 33.3)",
+          "2 ( 25.0)",
+          "3 ( 27.3)",
+          "7 ( 41.2)"
+        ]
+      ],
+      "page_number": 14,
+      "container_id": "7a9f8812-36fb-4de5-b4f5-7998abea8fc3",
+      "container_type": "table_group",
+      "container_path": [],
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
+      "page_number": 14,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "p_106",
+        "p_107",
+        "p_108"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Table 14.1.3.2 Summary of Baseline and Clinical Characteristics Safety Population - RP Patients",
+      "page_number": 15,
+      "container_id": null,
+      "container_type": "table_title",
+      "container_path": []
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.1.3.2 Summary of Baseline and Clinical Characteristics Safety Population - RP Patients",
+      "table_context_path": [
+        "Table 14.1.3.2 Summary of Baseline and Clinical Characteristics Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.2 Summary of Baseline and Clinical Characteristics Safety Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Characteristic Statistic/Category",
+        "Cohort 1 (N=4)",
+        "Cohort 2 (N=3)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=18)"
+      ],
+      "rows": [
+        [
+          "Genetic Diagnosis, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "NR2E3 Mutation",
+          "0 ( 0.0)",
+          "2 ( 66.7)",
+          "2 ( 66.7)",
+          "4 ( 50.0)",
+          "6 ( 54.5)",
+          "8 ( 44.4)"
+        ],
+        [
+          "RHO Mutation",
+          "4 (100.0)",
+          "1 ( 33.3)",
+          "1 ( 33.3)",
+          "4 ( 50.0)",
+          "5 ( 45.5)",
+          "10 ( 55.6)"
+        ],
+        [
+          "Subgroup - Mutation Subtype, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Subgroup 1 - Biallelic autosomal",
+          "0 ( 0.0)",
+          "2 ( 66.7)",
+          "1 ( 33.3)",
+          "2 ( 25.0)",
+          "3 ( 27.3)",
+          "5 ( 27.8)"
+        ],
+        [
+          "recessive NR2E3 mutations",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Subgroup 2 - Autosomal dominant",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "2 ( 25.0)",
+          "3 ( 27.3)",
+          "3 ( 16.7)"
+        ],
+        [
+          "NR2E3 mutations",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Subgroup 3 - Autosomal dominant",
+          "4 (100.0)",
+          "1 ( 33.3)",
+          "1 ( 33.3)",
+          "4 ( 50.0)",
+          "5 ( 45.5)",
+          "10 ( 55.6)"
+        ],
+        [
+          "RHO mutations",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Height (cm)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "n",
+          "4",
+          "3",
+          "3",
+          "7",
+          "10",
+          "17"
+        ],
+        [
+          "Mean",
+          "167.5",
+          "164.7",
+          "173.7",
+          "174.6",
+          "174.3",
+          "171.0"
+        ],
+        [
+          "Standard deviation",
+          "9.18",
+          "7.51",
+          "17.01",
+          "7.09",
+          "9.90",
+          "9.77"
+        ],
+        [
+          "Median",
+          "166.0",
+          "165.0",
+          "173.0",
+          "173.0",
+          "173.0",
+          "171.0"
+        ],
+        [
+          "Minimum",
+          "158",
+          "157",
+          "157",
+          "167",
+          "157",
+          "157"
+        ],
+        [
+          "Maximum",
+          "180",
+          "172",
+          "191",
+          "186",
+          "191",
+          "191"
+        ],
+        [
+          "Weight (kg)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "n",
+          "4",
+          "3",
+          "3",
+          "7",
+          "10",
+          "17"
+        ],
+        [
+          "Mean",
+          "77.35",
+          "72.77",
+          "67.63",
+          "76.47",
+          "73.82",
+          "74.46"
+        ],
+        [
+          "Standard deviation",
+          "15.411",
+          "13.866",
+          "11.907",
+          "16.433",
+          "15.158",
+          "14.166"
+        ],
+        [
+          "Median",
+          "79.45",
+          "70.30",
+          "62.10",
+          "72.70",
+          "72.60",
+          "72.50"
+        ],
+        [
+          "Minimum",
+          "58.9",
+          "60.3",
+          "59.5",
+          "54.0",
+          "54.0",
+          "54.0"
+        ],
+        [
+          "Maximum",
+          "91.6",
+          "87.7",
+          "81.3",
+          "107.0",
+          "107.0",
+          "107.0"
+        ]
+      ],
+      "page_number": 15,
+      "container_id": "f30a5f16-e3ea-450c-992e-12ae08d9093e",
+      "container_type": "table_group",
+      "container_path": [],
+      "source_block_ids": []
+    },
+    {
+      "block_type": "paragraph",
+      "text": "Note: % = 100 x n/N; MTD = Maximum Tolerated Dose. BMI = body mass index. NR2E3 = Nuclear Receptor subfamily 2 group E member 3. RHO =\n\nRhodopsin.\n\nBaseline is defined as the last measurement before injection.",
+      "page_number": 15,
+      "container_id": null,
+      "container_type": null,
+      "container_path": [],
+      "source_block_ids": [
+        "p_114",
+        "p_115",
+        "p_116"
+      ]
+    }
+  ]
+}

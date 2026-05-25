@@ -1,0 +1,480 @@
+{
+  "section": "Introduction",
+  "timestamp": "2026-04-08T15:11:17.896754",
+  "source": {
+    "total_chunks": 18,
+    "results": [
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.2. OCU400 > 4.2.5. Phase 1 Dosing:\n\nTo reduce possible unexpected risks for the initial exposure in humans, the following staggering strategies are employed in this study based on the recommendation from The Guidance for Industry: Consideration for the Design of Early-Phase Clinical Trials of Cellular and Gene Therapy Products:\n\n1. The sentinel participant in Cohort will be administered the dose of OCU400.\n\n2. Following evaluation of safety in the sentinel subject at two weeks post-dosing, administration to the remaining subjects in the same cohort will proceed.\n\n3. At least 2 weeks of safety data from all subjects in each Cohort will undergo review by DSMB prior to dosing in the next dose Cohort.\n\nA schematic of study design is presented as Figure 4 in Section 6.1.",
+        "source_block_ids": [
+          "p27_para_5",
+          "p27_para_6",
+          "p27_para_7",
+          "p27_para_8",
+          "p27_para_9"
+        ],
+        "page_numbers": [
+          27
+        ],
+        "heading_path": "4. INTRODUCTION > 4.2. OCU400 > 4.2.5. Phase 1 Dosing:",
+        "chunk_type": "paragraph",
+        "id": "dd8956cb-cb08-4ee9-a648-f67baa742e0a",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.028985507786273956
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.2. OCU400 > 4.2.1. Previous Study Findings > 4.2.1.1. Nonclinical\n\nDetailed data are described in the IB (Section 1 and 2). In summary, our pre-clinical studies demonstrated a crucial role for the nuclear receptor NR2E3 regulating multiple transcriptional networks, which modulate cellular homeostasis in the retina. Delivery of NR2E3 in multiple mouse models of retinal degeneration and LCA10 attenuates disease progression and rescues the phenotype.",
+        "source_block_ids": [
+          "p25_para_17"
+        ],
+        "page_numbers": [
+          25
+        ],
+        "heading_path": "4. INTRODUCTION > 4.2. OCU400 > 4.2.1. Previous Study Findings > 4.2.1.1. Nonclinical",
+        "chunk_type": "paragraph",
+        "id": "4e7b2a55-b2d4-450c-97da-edaf766aae10",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.02878725901246071
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.2. OCU400\n\nOcugen, Inc., has developed a proprietary gene therapy product, OCU400, as the first agent in a novel class of nuclear hormone receptor-based gene modifier therapy for patients with RP. The proposed indication for OCU400 (AAV5-hNR2E3) is for the treatment of retinitis pigmentosa associated with NR2E3, RHO and LCA associated with CEP290 mutations (LCA10).\n\nThe drug product is a sterile ophthalmic suspension for subretinal injection.\n\nOCU400 drug substance is an adeno-associated virus serotype 5-based vector containing the human NR2E3 gene expression cassette containing a) AAV2 ITR; b) the cytomegalovirus (CMV) enhancer; c) the chicken beta actin (CBA) promoter; d) chimeric intron; e) the cloned\n\ncDNA coding for human NR2E3 protein (44692 Dalton); and f) the SV40 polyadenylation (Poly A) region (Figure 3).",
+        "source_block_ids": [
+          "p24_para_48",
+          "p24_para_49",
+          "p24_para_50",
+          "p25_para_3"
+        ],
+        "page_numbers": [
+          24,
+          25
+        ],
+        "heading_path": "4. INTRODUCTION > 4.2. OCU400",
+        "chunk_type": "paragraph",
+        "id": "1d27c6ef-ec65-4f95-ba8d-b0cae65992e2",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.02628205344080925
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.2. OCU400 > 4.2.1. Previous Study Findings > 4.2.1.2. Clinical\n\nOCU400 has not been previously administered to human subjects and clinical data are not available. The Phase 1 trial described herein represents the first-in-human (FIH) administration of OCU400. Investigators must use the safety data obtained in the nonclinical evaluation of OCU400 as the basis for informing the risk/benefit balance when selecting patients for study participation. The Investigator Brochure (IB) should be read and understood in its entirety, inclusive of the Guidance for the Investigator section of the IB.",
+        "source_block_ids": [
+          "p25_para_19"
+        ],
+        "page_numbers": [
+          25
+        ],
+        "heading_path": "4. INTRODUCTION > 4.2. OCU400 > 4.2.1. Previous Study Findings > 4.2.1.2. Clinical",
+        "chunk_type": "paragraph",
+        "id": "d3b0331d-e7f6-49d9-9350-5d3f1983fdf6",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.025678060948848724
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.2. OCU400 > Figure 3: hNR2E3 Transgene Cassette Linear Map\n\nChimeric\n\nITR CMV\n\nCBA\n\nITR AAV2\n\nhNR2E3\n\nSV40 PolyA\n\nAAV2 Enhancer Promoter Intron\n\nThe sequence of the DNA corresponding to hNR2E3 the transgene corresponds to the known normal human NR2E3 sequence (NCBI: NM_014249.3).\n\nhttps://www.ncbi.nlm.nih.gov/nuccore/NM_014249.3\n\nPlease refer to the Investigator Brochure (IB) for further details on the drug substance and drug product.",
+        "source_block_ids": [
+          "p25_para_7",
+          "p25_para_5",
+          "p25_para_6",
+          "p25_para_10",
+          "p25_para_8",
+          "p25_para_9",
+          "p25_para_11",
+          "p25_para_12",
+          "p25_para_13",
+          "p25_para_14"
+        ],
+        "page_numbers": [
+          25
+        ],
+        "heading_path": "4. INTRODUCTION > 4.2. OCU400 > Figure 3: hNR2E3 Transgene Cassette Linear Map",
+        "chunk_type": "paragraph",
+        "id": "a574de49-a7f5-4491-b1da-838624b185ce",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.025652701035141945
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.2. OCU400 > 4.2.2. Clinical Rationale > 4.2.2.1. Rationale for Study Design\n\nThe study is designed to evaluate the safety of ascending dose levels of OCU400 in a stepwise, sequential manner in a small number of subjects. Ongoing evaluation of emergent safety data will be conducted by DSMB. The design includes discrete study periods that allow subjects' screening, enrollment, treatment, and measurements of outcomes. To detect and assess possible therapy-related delayed adverse events participants will be enrolled in an extension study for\n\nlong-term safety follow-up until 5 years after the last dose of the Study Drug (SD). Multiple factors are incorporated into the study design to safeguard and monitor the rights and safety of subjects and are described herein.\n\nTo maximize participant protection, the study will be conducted by Investigators at clinical sites with expertise in inherited retinal diseases (IRDs) and advanced therapies such as gene therapy. All sites will be carefully evaluated and pre-qualified prior to study participation. Sites will have experience in first-in-human studies with gene therapy and appropriate training and equipment on site for emergency management, if required. All sites will be trained on the protocol and all study procedures, including surgical procedure for dose administration to ensure compliance and the protection of subject safety and rights. All investigative sites have experience in subretinal injections for administration of gene therapy and the procedure will be standardized across centers.\n\nThe number of participants included in the trial minimizes the number of participants exposures while providing a sufficient dataset to allow a preliminary clinical assessment regarding OCU400's safety profile within this dosage range evaluated. OCU400 will be administered in one eye (study eye) of each subject. Administration of escalating doses of OCU400 is completed via discrete cohorts with a sentinel subject in each cohort. A minimum of 6 weeks will elapse between dosing of cohorts to allow for peak expression of the transgene, immune response and for review of the emergent safety data.\n\nThe DSMB will conduct ongoing review of emergent safety data from the study and make recommendations on study progression. Criteria are established for dose adjustments and for cohort and study stopping. Adjustments to target doses and the number of subjects per cohort may be recommended based on review of the data.\n\nThe inclusion and exclusion criteria are selected for a participant population with a diagnosis confirmed at the molecular level by genetic testing. To minimize the possibility of false positives for molecular confirmation, only genetic testing from specified Clinical Laboratory Improvement Amendments (CLIA), or equivalent, certified laboratories will be used. The subject selection criteria minimize potentially confounding safety factors such as co- morbidities.\n\nThe assessments and measurements in the trial assess both general systemic safety and ocular safety. Baseline is established for subjects and intensive monitoring of subject safety in the days and weeks following dose administration is incorporated. Intermediate and long-term monitoring is incorporated in the first-year post-dose Treatment Observation Period and in an extension study up to 5 years post-dose to detect therapy-related delayed adverse events.",
+        "source_block_ids": [
+          "p25_para_22",
+          "p26_para_3",
+          "p26_para_4",
+          "p26_para_5",
+          "p26_para_6",
+          "p26_para_7",
+          "p26_para_8"
+        ],
+        "page_numbers": [
+          25,
+          26
+        ],
+        "heading_path": "4. INTRODUCTION > 4.2. OCU400 > 4.2.2. Clinical Rationale > 4.2.2.1. Rationale for Study Design",
+        "chunk_type": "paragraph",
+        "id": "5cc4cdff-6801-4916-9803-a8674b5ca191",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.022510822862386703
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.1. Disease Background > 4.1.1. Clinical Needs\n\nCurrently, the only FDA approved treatment for IRDs is Luxturna® (Spark Therapeutics), which is indicated for the treatment of biallelic RPE65 mutation-associated retinal dystrophy, for which the Phase 1/2 clinical trial evaluated safety in subjects 8 years and older (NCT00516477). One report states that 2% of RP cases are associated with mutations in RPE65.29 Therefore, there is no effective FDA approved treatment for the vast majority of adult and pediatric patients with RP.\n\nAbout 3-16% of LCA cases are associated with RPE65 mutations 30 and there is no effective FDA approved treatment for adult and pediatric LCA patients with other mutations.",
+        "source_block_ids": [
+          "p21_para_9",
+          "p21_para_10"
+        ],
+        "page_numbers": [
+          21
+        ],
+        "heading_path": "4. INTRODUCTION > 4.1. Disease Background > 4.1.1. Clinical Needs",
+        "chunk_type": "paragraph",
+        "id": "ecf8b91a-8455-45a4-b952-d9d8a8e37bef",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.01587301678955555
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.1. Disease Background > 4.1.2. Therapeutic Rationale > 4.1.2.2. Leber Congenital Amaurosis\n\nDespite severe visual impairment, recent studies suggested that patients with CEP290-related LCA (LCA10) may be candidates for gene therapy as cone nuclei in the foveal region were structurally detectable 57-59. However, the large size of CEP290 gene impedes the use of adeno- associated virus (AAV) vector for delivery of the genetic material and warrants alternative approaches.\n\nOcugen's preclinical data in a well-accepted animal model of LCA has shown improvement of photoreceptor survival, preservation of retinal structures, and significant increase in cone and rod opsin gene expression after treatment with OCU400 60. Importantly, treatment improved visual function in mice as evaluated by ERG.\n\nSubretinal AAV delivery of NR2E3 in the rd16 mice (CEP290 mutations-associated LCA model) rescued retinal degeneration after disease onset. The rd16 mice were injected at P21 and evaluated at 2-3 months post-treatment using fundus imaging, histology, and immunostaining of retinal layers (Figure 2)\n\nImprovements were observed in the fundus images of rd16 mice treated with NR2E3 (Figure 2A). Hematoxylin/eosin (H/E) staining revealed that subretinal delivery of NR2E3 at P21 rescued photoreceptor cells and maintained retinal integrity at 2-3 months post-injection in rd16 mice (Figure 2B). The rd16 mice showed an increase of 3 to 6 layers of ONL in NR2E3-treated retinas compared to 0 to 1 layer in the untreated eyes (Figure 2C). The ONL thickness and extent of retina rescued was approximately 30% in all treated retinas. Furthermore, eyes from treated and untreated animals were collected at 2-3 months post-injection and labeled with green and blue cone opsin and rod rhodopsin antibodies for immunohistochemical analysis. Untreated eyes showed no opsin- or rhodopsin-positive photoreceptor cells, whereas NR2E3-treated retinas showed restoration of green and blue opsins and rhodopsin proteins (Figure 2D).",
+        "source_block_ids": [
+          "p23_para_5",
+          "p23_para_6",
+          "p23_para_7",
+          "p23_para_8"
+        ],
+        "page_numbers": [
+          23
+        ],
+        "heading_path": "4. INTRODUCTION > 4.1. Disease Background > 4.1.2. Therapeutic Rationale > 4.1.2.2. Leber Congenital Amaurosis",
+        "chunk_type": "paragraph",
+        "id": "4e1a6a98-32a9-48ae-b4bb-0321745439cd",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.015625
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.2. OCU400 > 4.2.3. Rationale for Dose, and Duration of Treatment\n\nOCU400 has been evaluated in a nonclinical program to demonstrate proof of concept (POC), safety and immunogenicity in multiple mouse models of RP and LCA. The results support the further evaluation of OCU400 in humans.",
+        "source_block_ids": [
+          "p26_para_10"
+        ],
+        "page_numbers": [
+          26
+        ],
+        "heading_path": "4. INTRODUCTION > 4.2. OCU400 > 4.2.3. Rationale for Dose, and Duration of Treatment",
+        "chunk_type": "paragraph",
+        "id": "4403c0b8-0b57-4d5c-a8c1-765cdc86faa4",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.015384615398943424
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.2. OCU400 > 4.2.7. Duration of Treatment:\n\nOCU400 is a gene therapy and will be administered to each participant in the unilateral study eye then will be followed in Short Term Safety Follow up to the final EOS visit Week 48 (12 months following the SD dose). The study duration will be approximately 58 weeks for each participant. To assess the long-term safety of OCU400, subjects will be followed in Long Term Safety Follow Up (LTSFU) study for additional 2 years (end of year 2, end of year 3) post OCU400 dosing visit.",
+        "source_block_ids": [
+          "p28_para_4"
+        ],
+        "page_numbers": [
+          28
+        ],
+        "heading_path": "4. INTRODUCTION > 4.2. OCU400 > 4.2.7. Duration of Treatment:",
+        "chunk_type": "paragraph",
+        "id": "028e4541-e9c5-49c4-8ac0-ccad1531463e",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.01515151560306549
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.2. OCU400 > 4.2.6. Selection of top dose:\n\nThe top dose will be selected based on maximally effective dose (EDmax) from the preclinical efficacy studies and toxicology studies once data become available.\n\nFollowing DSMB review of the sentinel subject from Cohort 3, enrollment will be opened to the final 2 patients in Cohort 3 and an additional 9 adult RP patients and up to 3 adult LCA subjects in Phase 2. Following DSMB confirmation, pediatric and LCA patients will receive a medium dose of 3.33 × 1010 vg/mL in upto 300 µL (Section 6.1).",
+        "source_block_ids": [
+          "p27_para_11",
+          "p27_para_12"
+        ],
+        "page_numbers": [
+          27
+        ],
+        "heading_path": "4. INTRODUCTION > 4.2. OCU400 > 4.2.6. Selection of top dose:",
+        "chunk_type": "paragraph",
+        "id": "1f17b38e-041a-4774-a1ae-b073c33ccc90",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.014705882407724857
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.1. Disease Background\n\nRetinitis Pigmentosa (RP) is a group of heterogenous inherited diseases (RP OMIM 268000)1 that result in severe loss of night, peripheral, and central vision with progression to blindness.1 The first sign of RP is usually a loss of night vision, which can become apparent in childhood. The prevalence of RP is 1:4000 individuals and is estimated to affect up to 100,000 people in the US and 1.5 million individuals worldwide.2\n\nDespite advances in identification of primary disease-causing mutations, the genetic cause of approximately 50 % of RP remains unknown.3 RP has multiple modes of inheritance including autosomal dominant, autosomal recessive and X-linked and can arise in both syndromic and non-syndromic forms.3-9 Over 200 mutations in over 150 unique genes are associated with RP accounting for only approximately 50% of all RP cases. 10-19\n\nLeber Congenital Amaurosis (LCA) is a group of inherited early-onset retinal dystrophies that result in severe visual impairment or blindness and affects approximately 1 in 50,000 individuals in Europe and North America 20. It accounts for around 5% of all inherited retinopathies and approximately 20% of children attending schools for the blind around the world 21. LCA is the most common genetic cause of congenital visual impairment in infants and young children 22. Mutations in at least 25 genes are associated with LCA 23 and account for 80- 90% of all cases 24. CEP290 (OMIM 610142) is the most frequently mutated gene (153 causal mutations) accounting for up to 30% of LCA cases (LCA10) 25,26. This gene encodes a centrosomal protein of 290 kDa 27 which is expressed in the connecting cilium of cone and rod photoreceptors 20 and has a crucial role in regulating protein transportation between outer and inner segments of photoreceptors 20,28",
+        "source_block_ids": [
+          "p21_para_5",
+          "p21_para_6",
+          "p21_para_7"
+        ],
+        "page_numbers": [
+          21
+        ],
+        "heading_path": "4. INTRODUCTION > 4.1. Disease Background",
+        "chunk_type": "paragraph",
+        "id": "4cceca18-57d9-4450-950e-375e437ff141",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.014285714365541935
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.2. OCU400 > 4.2.4. Selection of the starting dose:\n\nThe dose of OCU400 is defined based on both the vector genome (vg) and the subretinal injection volume (microliter, uL). Three dose-levels will be sequentially tested. The starting dose of vector genome (vg) is selected based on preclinical animal experiments, including\n\npreclinical efficacy studies in mice and toxicology studies in large animals. Injection volume is selected up to 300 uL. Current subretinal injection protocols use a volume ranging from 100 µL (e.g., XIRIUS Study61), 200 µL (e.g., TIGER Study62), to 300 uL (Luxturna Study63,64). Currently, with the FDA approval of Luxturna, 300 uL is the most commonly used volume. Under the vitrectomy setting and well-controlled injection speed, these volume ranges are proven to be safe. The choice of volume is dependent on the target treatment regions of retina. The XIRIUS study and TIGER Study both aim to treat the central retina with an injection volume range from 100-200 uL while Luxturna aims to treat pericentral retina. It was trialed and later approved to be used with a 300 uL injection volume. Based on the natural history studies for NR2E3 mutation patients, conducted in collaboration between Ocugen, Inc., and the University of Pennsylvania, the data show that the pericentral area in NR2E3-related RP is highly vulnerable to disease progression that leads to significant functional loss in multiple clinical examinations; therefore, pericentral retina is the region of choice for treatment.65 This is the same target region as Luxturna; therefore, 300 uL volume was chosen for OCU400 subretinal injection. As in the surgical settings, the injection volume may vary at the surgeon's discretion, considering safety and beneficiary treatment coverage. The surgeon must take priority for the protection of the fovea and the aimed treatment area according to pre-operative imaging studies; therefore, the locations and numbers of retinotomy, and the total volume may vary. However, a minimum volume of 200 uL per eye is required. Multiple injection sites are allowed to deliver the desired volume. Since only single dose of OCU400 will be administered during the study, no treatment discontinuation is expected.",
+        "source_block_ids": [
+          "p26_para_12",
+          "p27_para_3"
+        ],
+        "page_numbers": [
+          26,
+          27
+        ],
+        "heading_path": "4. INTRODUCTION > 4.2. OCU400 > 4.2.4. Selection of the starting dose:",
+        "chunk_type": "paragraph",
+        "id": "7e2d22da-554c-4dbc-ba05-6dbd2a88b0b3",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.014084506779909134
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.3. Risks and Benefits OCU400 Risks\n\npads, etc.) mild skin irritations and redness may occur on skin exposed to these adhesives. Hypersensitivity reactions may occur to eye drops or anesthetic and antimicrobial drops used in surgical and other ophthalmic procedures. Fatigue may be experienced when multiple ophthalmic assessments are completed during a study visit.\n\nCOVID Risks\n\nAgainst the background of the COVID-19 pandemic, the potential risk of a subject developing COVID-19 has been considered in terms of the risk/benefit evaluation. The mode of action of OCU400 has been considered alongside available nonclinical data and OCU400 does not have immunomodulatory effects that would confer an increased risk to subjects enrolled in the study either contracting or experiencing a more serious disease if infected with 2 SARS-CoV-2. The following COVID-19 Risk Mitigation measures will be implemented:\n\n· The Sponsor will work with clinical sites to document site-level procedures regarding COVID-related precautions for subjects and staff. These precautions may include use of personal protective equipment such as face coverings, masks, and shields, and procedures such as temperature screening and social distancing and will be consistent with the policies of the institution and compliant with government guidelines.\n\n· The site visit schedule has been carefully reviewed to minimize unnecessary visits and minimize subject exposure. The schedule is not expected to increase subject risk beyond that encountered in the routine delivery of healthcare for subjects with chronic eye disease.\n\n· The Sponsor will continue to assess risk during the clinical study. This risk assessment will include overall study risk as well as regional risks to allow for adaptations that may be required at a local level depending on COVID-19 infection rates across US regions and cities. Risk mitigation measures, where applicable, will be amended based on emerging government guidelines.\n\nBenefits\n\nThis study is designed to evaluate the safety of ascending doses of OCU400 in subjects with retinitis pigmentosa associated with NR2E3 and RHO mutations and in patients with Leber Congenital Amaurosis associated with CEP290 mutations. Exploratory endpoints may provide preliminary information on the efficacy of treatment with OCU400; however, subjects may receive no benefit from participation in this study. Subjects may experience improvements in dim light vision and may experience improvements in their visual acuity. Any such improvement may be transitory. Subjects may experience an altruistic sense of satisfaction by participating in this study knowing that information learned from this study may benefit others and aid in the advancement of therapeutic options for future subjects.",
+        "source_block_ids": [
+          "p29_para_3",
+          "p29_para_4",
+          "p29_para_5",
+          "p29_para_6",
+          "p29_para_7",
+          "p29_para_8",
+          "p29_para_9",
+          "p29_para_10"
+        ],
+        "page_numbers": [
+          29
+        ],
+        "heading_path": "4. INTRODUCTION > 4.3. Risks and Benefits OCU400 Risks",
+        "chunk_type": "paragraph",
+        "id": "a4557450-33f5-456d-9ad8-83d99478b516",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.013888888992369175
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.1. Disease Background > 4.1.2. Therapeutic Rationale > 4.1.2.2. Leber Congenital Amaurosis > Figure 2: AAV8-Nr2e3 Rescues Retinal Degeneration in rd16 Mice After Disease Onset\n\nrd16\n\nrd16\n\nD.\n\nA.\n\nUntreated\n\nUntreated/ Green opsin\n\nONL\n\nAAV8-Nr2e3 Treated\n\nAAV8-Nr2e3 Treated/ Green opsin\n\nONL\n\nB.\n\nGCL INL ONL\n\nUntreated\n\nUntreated/ Blue opsin\n\nGCL\n\nONL\n\nINL\n\nAAV8-Nr2e3 Treated\n\nONL\n\nAAV8-Nr2e3 Treated/ Blue opsin\n\nc.\n\nONL\n\nUntreated Treated with AAV8-Nr2e3\n\nUntreated/ Rhodopsin\n\nONL Cell Layer Number\n\nONL\n\nE\n\nE\n\nAAV8-Nr2e3 Treated/ Rhodopsin\n\nT\n\nONL\n\nT\n\nD\n\n50 cm\n\nrd16\n\nAnimals were injected with AAV8-Nr2e3 at P21 and evaluated at 2-3 months post-injection. A Fundus of untreated and AAV-Nr2e3-treated rd16 mice. B Hematoxylin/eosin staining of treated and untreated retinal layers. C Cell layer numbers of the outer nuclear layer were compared between treated and untreated rd16 mice. Results are mean ± SEM. N = 3. D Immunohistochemistry of green opsin, blue opsin, and rhodopsin of treated and untreated rd16 animals. N=3-5.\n\nFor more detailed information about animal studies, please refer to Investigator's Brochure (IB).",
+        "source_block_ids": [
+          "p24_para_6",
+          "p24_para_4",
+          "p24_para_5",
+          "p24_para_7",
+          "p24_para_8",
+          "p24_para_9",
+          "p24_para_10",
+          "p24_para_11",
+          "p24_para_12",
+          "p24_para_14",
+          "p24_para_13",
+          "p24_para_15",
+          "p24_para_16",
+          "p24_para_17",
+          "p24_para_19",
+          "p24_para_20",
+          "p24_para_22",
+          "p24_para_21",
+          "p24_para_23",
+          "p24_para_24",
+          "p24_para_25",
+          "p24_para_26",
+          "p24_para_30",
+          "p24_para_31",
+          "p24_para_28",
+          "p24_para_33",
+          "p24_para_34",
+          "p24_para_35",
+          "p24_para_37",
+          "p24_para_36",
+          "p24_para_39",
+          "p24_para_41",
+          "p24_para_42",
+          "p24_para_44",
+          "p24_para_43",
+          "p24_para_45",
+          "p24_para_46"
+        ],
+        "page_numbers": [
+          24
+        ],
+        "heading_path": "4. INTRODUCTION > 4.1. Disease Background > 4.1.2. Therapeutic Rationale > 4.1.2.2. Leber Congenital Amaurosis > Figure 2: AAV8-Nr2e3 Rescues Retinal Degeneration in rd16 Mice After Disease Onset",
+        "chunk_type": "paragraph",
+        "id": "c66bec6e-3ad7-4600-9f80-75916aa4264e",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.013698630034923553
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.3. Risks and Benefits OCU400 Risks\n\nThe results of toxicology studies and efficacy in multiple relevant animal models strongly support OCU400 as a potential treatment option for RP in humans. The study described herein is designed to evaluate the safety and tolerability of OCU400 at multiple target doses.\n\nSince OCU400 has not been previously administered to humans, unidentified risk may not be known at this time. More detailed information about known and expected risks and reasonably expected adverse events of procedures may be found in the Investigator Brochure (IB), which is the single reference safety documents for this study. It is important the Investigator thoroughly read and understand the IB for OCU400 and use the data presented in the IB as the basis for risk assessment in subjects. If additional safety information becomes available during the trial, it will be provided to Investigators and subjects.\n\nSubretinal Injection Risks\n\nRisks associated with subretinal injection include pain, cataract formation, endophthalmitis, corneal changes, intraocular hemorrhage (subretinal, vitreoretinal and suprachoroidal), increased IOP, intraocular inflammation, retinal breaks, retinal detachments, hypotony, scleritis, uveitis or sympathetic uveitis and decrease or loss of vision. 66,67\n\nRisks associated with nerve block (sub-tenon, retrobulbar or peribulbar) may include globe perforation, retrobulbar hemorrhage, optic nerve damage, subconjunctival edema, venous and arterial hemorrhage, decreased visual acuity, and myotoxicity.68 Systemic risks may include subarachnoid injection causing respiratory arrest; seizures, loss of consciousness and respiratory depression or cardiac arrest associated with systemic toxicity; pulmonary edema, reaction to epinephrine; oculocardiac reflex and vasovagal reaction; and allergic reactions. 68\n\nRisks associated with general anesthesia may include nausea, vomiting, chills, short-term confusion, and sore throat from breathing tube insertion.69 Rare and serious risks may include postoperative cognitive dysfunction with long-term memory and learning problems; malignant hyperthermia; and breathing problems during and after surgery.69\n\nOther Procedural Risks\n\nVenipuncture to obtain blood samples may result in bruising, inflammation, and pain. New hypersensitivity or allergic reactions (not previously observed in the subject) may occur to ocular agents used during ocular examinations. If medical adhesives are used (bandages, ECG",
+        "source_block_ids": [
+          "p28_para_6",
+          "p28_para_7",
+          "p28_para_8",
+          "p28_para_9",
+          "p28_para_10",
+          "p28_para_11",
+          "p28_para_12",
+          "p28_para_13"
+        ],
+        "page_numbers": [
+          28
+        ],
+        "heading_path": "4. INTRODUCTION > 4.3. Risks and Benefits OCU400 Risks",
+        "chunk_type": "paragraph",
+        "id": "9ecab1b6-5f32-49dd-9816-88d9d1b6950a",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.013513513840734959
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.1. Disease Background > 4.1.2. Therapeutic Rationale > 4.1.2.1. Retinitis Pigmentosa\n\nDeveloping a custom gene therapy for each of the >200 known genetic defects would not only be expensive but also not always be possible due to size, class, or localization that will impact\n\ndelivery of the gene. Not all genes and disease expressions are amenable to gene therapy, and for the 50% of patients whose genetic mutations remain unknown, there are no therapeutic options. Currently, all gene therapy clinical trials for RP are Gene Replacement Therapy, none of which will treat the major subject population with unknown and unidentifiable molecular etiology.\n\nOcugen, Inc., has developed the Gene Modifier Therapy with OCU400 to ameliorate multiple forms of RP without requiring knowledge of the mutated gene. The nuclear receptor NR2E3 has demonstrated a crucial role in regulating multiple transcriptional networks that modulate retinal cell homeostasis such as survival, metabolism, inflammation, and phototransduction that impact RP disease.31-34 These data indicate that NR2E3 functions as a modifier gene with therapeutic potential for RP with a wide range of genetic etiology.\n\nIn pre-clinical studies, Nr2e3-associated retinal disease shows variation in phenotypes that are likely modulated by modifier genes.18,33-41 Mouse studies demonstrate that the retinal degenerative phenotype associated with mutations in RP genes Nr2e3, rhodopsin, and Rp1 are significantly altered with genetic background. 18,38,39,42-50 N Mutations in the mouse NR2E3 (the retinal degeneration 7, rd7) represent these various clinical phenotypes.38 These observed phenotypic variations have shown that NR2E3 is a master regulator of photoreceptor cell development, maintenance, and function and modulates RP associated genes and networks,31,51- 54 and NR2E3 can modulate RP disease due to various mutations.52,55,56\n\nIn fact, AAV- NR2E3 rescues retinal degeneration in multiple mouse models of RP (Figure 1). Retinas injected at P0 and evaluated at 3 months demonstrating sustained rescue. Rescue is evaluated by changes in the fundus, morphology, and expression of opsin genes. We observed 30-80% rescue (increase in photoreceptor nuclei of outer nuclear layer (ONL) that includes rod and cone, or cone only, rescue largely dependent on how well NR2E3 was distributed in the retina with apparent treated and untreated regions (Figure 1).",
+        "source_block_ids": [
+          "p21_para_13",
+          "p22_para_3",
+          "p22_para_4",
+          "p22_para_5",
+          "p22_para_6"
+        ],
+        "page_numbers": [
+          21,
+          22
+        ],
+        "heading_path": "4. INTRODUCTION > 4.1. Disease Background > 4.1.2. Therapeutic Rationale > 4.1.2.1. Retinitis Pigmentosa",
+        "chunk_type": "paragraph",
+        "id": "ad7af546-cbc1-42cd-99df-5f095232fc7a",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.013333333656191826
+      },
+      {
+        "doc_id": "ocu400-101-protocol.pdf",
+        "table_context_heading": null,
+        "table_headers": [],
+        "table_rows": null,
+        "text": "4. INTRODUCTION > 4.1. Disease Background > 4.1.2. Therapeutic Rationale > 4.1.2.1. Retinitis Pigmentosa > Figure 1: : AAV-NR2E3 Rescues Early State RP Disease\n\nRho+/-\n\nRhoP23H+\n\nrd10/-\n\nrd1+/-\n\nrd7++-\n\nCep290\n\nB6\n\nUntreated\n\nAAV-Nr2e3 Treated\n\nA\n\nRhoP23H-/-\n\nRho+/-\n\nCep290\n\nC57B16/J\n\nrd10-/-\n\nrd7-/-\n\nrd1+-\n\nGCL\n\nINL ONL\n\nUntreated\n\nGCL\n\nAAV-Nr2e3 Treated\n\nINL\n\nONL\n\nB\n\nA. fundus of rd7, RhoP23H, and Cep290; B. histology, hematoxylin/eosin staining shows preservation of 30-50% of photoreceptor cells in RP models after disease onset. Animals were injected at postnatal (P)0 and evaluated at 3 months. N > 5. Eyes were fixed with either 4% parafolmadehyde in phoshate buffered solution (PBS) or 3:1 methanol:acetic acid and embedded in paraffin. Retinas were sectioned at 5u and stained as described42,58-60 Sections were visualized using the Leica DMI6000 microscope\n\ngenomic load on gene networks is modulated and balanced by transcription factors including nuclear hormone receptors (NHRs) for optimal cellular homeostasis. As each disease model has a unique transcriptome signature, the modulation will correlate uniquely. Furthermore, NR2E3 treatment does not have a detrimental effect on the retina. Preliminary studies on toxicity of NR2E3 via administration in P0 wildtype C57BL6/J retinas mice that received subretinal injection of AAV- NR2E3 do not show a detrimental effect on the retina function, and mice behave normally without health issues.",
+        "source_block_ids": [
+          "p22_para_12",
+          "p22_para_13",
+          "p22_para_11",
+          "p22_para_10",
+          "p22_para_14",
+          "p22_para_9",
+          "p22_para_8",
+          "p22_para_15",
+          "p22_para_16",
+          "p22_para_17",
+          "p22_para_23",
+          "p22_para_22",
+          "p22_para_19",
+          "p22_para_18",
+          "p22_para_21",
+          "p22_para_24",
+          "p22_para_20",
+          "p22_para_25",
+          "p22_para_27",
+          "p22_para_26",
+          "p22_para_29",
+          "p22_para_28",
+          "p22_para_30",
+          "p22_para_31",
+          "p22_para_32",
+          "p22_para_33",
+          "p23_para_3"
+        ],
+        "page_numbers": [
+          22,
+          23
+        ],
+        "heading_path": "4. INTRODUCTION > 4.1. Disease Background > 4.1.2. Therapeutic Rationale > 4.1.2.1. Retinitis Pigmentosa > Figure 1: : AAV-NR2E3 Rescues Early State RP Disease",
+        "chunk_type": "paragraph",
+        "id": "bf9b786c-a8b0-498a-9b72-42a8b405f1af",
+        "table_context_text": null,
+        "table_semantic_hint": null,
+        "@search.score": 0.01315789483487606
+      }
+    ]
+  },
+  "ich_guidelines": {
+    "total_sections": 2,
+    "results": {
+      "total_sections": 1,
+      "results": [
+        {
+          "section_path": "7. INTRODUCTION",
+          "source_type": "ich",
+          "guideline_text": "The introduction should contain a brief statement (maximum: 1 page) placing the study in the context of the development of the test drug/investigational product, relating the critical features of the study (e.g., rationale and aims, target population, treatment, duration, primary endpoints) to that development. Any guidelines that were followed in the development of the protocol or any other agreements/meetings between the sponsor/company and regulatory authorities that are relevant to the particular study, should be identified or described.",
+          "headings": []
+        }
+      ]
+    }
+  }
+}

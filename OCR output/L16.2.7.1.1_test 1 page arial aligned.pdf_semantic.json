@@ -1,0 +1,192 @@
+{
+  "doc_id": "L16.2.7.1.1_test 1 page arial aligned.pdf",
+  "blocks": [
+    {
+      "block_type": "heading",
+      "level": 1,
+      "text": "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients",
+      "page_number": 1,
+      "container_id": "6c7ed0e5-2a4c-4f45-a852-1b201c9f2b3a",
+      "container_type": "table_title",
+      "container_path": [
+        "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients"
+      ]
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients",
+      "table_context_path": [
+        "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Cohort Genetic Subtype Subject",
+        "System Organ Class / Preferred Term / Reported Term",
+        "Specify Site [1]",
+        "Start Date (Day)/ End Date (Day)",
+        "Serious? [2]/ Severity",
+        "Outcome [3]/ Action Taken/ Treatment Required/ Caused study discontinuation",
+        "Related to study drug/ Related to study surgery/ Related to other study procedures"
+      ],
+      "rows": [
+        [
+          "Cohort 1",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "RHO MUTATION 001-002",
+          "Eye disorders /",
+          "OD*",
+          "2022-03-29 (1)/",
+          "No/",
+          "1 /",
+          "NOT RELATED /"
+        ],
+        [
+          "",
+          "Ocular discomfort /",
+          "",
+          "2022-03-29 (10)",
+          "No",
+          "NOT APPLICABLE /",
+          "RELATED /"
+        ],
+        [
+          "",
+          "EYE DISCOMFORT",
+          "",
+          "",
+          "",
+          "CONCOMITANT MEDICATION / No",
+          "NOT RELATED"
+        ],
+        [
+          "",
+          "Eye disorders /",
+          "OD*",
+          "2022-03-30 (2)/",
+          "No/",
+          "1 /",
+          "NOT RELATED /"
+        ],
+        [
+          "",
+          "Eyelid ptosis / PTOSIS OD",
+          "",
+          "2022-03-30 (9)",
+          "No",
+          "NOT APPLICABLE / NONE / No",
+          "RELATED / NOT RELATED"
+        ]
+      ],
+      "table_markdown": "| Cohort Genetic Subtype Subject | System Organ Class / Preferred Term / Reported Term | Specify Site [1] | Start Date (Day)/ End Date (Day) | Serious? [2]/ Severity | Outcome [3]/ Action Taken/ Treatment Required/ Caused study discontinuation | Related to study drug/ Related to study surgery/ Related to other study procedures |\n|---|---|---|---|---|---|---|\n| Cohort 1 |  |  |  |  |  |  |\n| RHO MUTATION 001-002 | Eye disorders / | OD* | 2022-03-29 (1)/ | No/ | 1 / | NOT RELATED / |\n|  | Ocular discomfort / |  | 2022-03-29 (10) | No | NOT APPLICABLE / | RELATED / |\n|  | EYE DISCOMFORT |  |  |  | CONCOMITANT MEDICATION / No | NOT RELATED |\n|  | Eye disorders / | OD* | 2022-03-30 (2)/ | No/ | 1 / | NOT RELATED / |\n|  | Eyelid ptosis / PTOSIS OD |  | 2022-03-30 (9) | No | NOT APPLICABLE / NONE / No | RELATED / NOT RELATED |",
+      "page_number": 1,
+      "container_id": "8493d38a-ed2b-49d3-8e47-dda76852b882",
+      "container_type": "table_group",
+      "source_block_ids": []
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Treatment-emergent adverse events (TEAEs) are defined as AEs that started after the date/time of study drug administration. AE reported terms were coded using the Medical Dictionary for Regulatory Activities (MedDRA) Version 24.1.\n\nDay = Date - Date of Injection (+ 1 if Date >= Date of Injection). Day is calculated only for complete dates.\n\n[1] OD = Ocular dexter (right); OS = Ocular sinister (left); OU = Both eyes. * indicates study eye.\n\n[2] Serious ?:",
+      "page_number": 1,
+      "container_id": "0e02967b-2e95-44a7-b85a-50a7843296ff",
+      "container_type": "section",
+      "container_path": [
+        "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients",
+        "Treatment-emergent adverse events (TEAEs) are defined as AEs that started after the date/time of study drug administration. AE reported terms were coded using the Medical Dictionary for Regulatory Activities (MedDRA) Version 24.1.\n\nDay = Date - Date of Injection (+ 1 if Date >= Date of Injection). Day is calculated only for complete dates.\n\n[1] OD = Ocular dexter (right); OS = Ocular sinister (left); OU = Both eyes. * indicates study eye.\n\n[2] Serious ?:"
+      ]
+    },
+    {
+      "block_type": "paragraph",
+      "text": "1 = Death; 2 = Life-threatening; 3 = Hospitalization (initial or prolonged); 4 = Disability or permanent damage; 5 = Congenital anomaly/birth defect; 6 = Other important medical event\n\n[3] Outcome: 1 = Recovered or Resolved, 2 = Recovered or Resolved with Sequelae, 3 = Recovering or Resolving, 4 = Not Recovered or Not Resolved, 5 = Fatal, 6 = Unknown.",
+      "page_number": 1,
+      "container_id": "0e02967b-2e95-44a7-b85a-50a7843296ff",
+      "container_type": "section",
+      "container_path": [
+        "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients",
+        "Treatment-emergent adverse events (TEAEs) are defined as AEs that started after the date/time of study drug administration. AE reported terms were coded using the Medical Dictionary for Regulatory Activities (MedDRA) Version 24.1.\n\nDay = Date - Date of Injection (+ 1 if Date >= Date of Injection). Day is calculated only for complete dates.\n\n[1] OD = Ocular dexter (right); OS = Ocular sinister (left); OU = Both eyes. * indicates study eye.\n\n[2] Serious ?:"
+      ],
+      "source_block_ids": [
+        "p1_para_37",
+        "p1_para_38",
+        "p1_para_39",
+        "p1_para_40",
+        "p1_para_41",
+        "p1_para_43",
+        "p1_para_42"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "SDTM date:",
+      "page_number": 1,
+      "container_id": "5ed5c857-0295-4a54-9002-c5fa02d4f8bd",
+      "container_type": "section",
+      "container_path": [
+        "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients",
+        "SDTM date:"
+      ]
+    },
+    {
+      "block_type": "paragraph",
+      "text": "20AUG2024 14:37 Analysis date: 26AUG2024 16:54",
+      "page_number": 1,
+      "container_id": "5ed5c857-0295-4a54-9002-c5fa02d4f8bd",
+      "container_type": "section",
+      "container_path": [
+        "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients",
+        "SDTM date:"
+      ],
+      "source_block_ids": [
+        "p1_para_37",
+        "p1_para_38",
+        "p1_para_39",
+        "p1_para_40",
+        "p1_para_41",
+        "p1_para_43",
+        "p1_para_42"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Program name:",
+      "page_number": 1,
+      "container_id": "cca88945-2155-4cbe-bb0b-311e533b8a51",
+      "container_type": "section",
+      "container_path": [
+        "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients",
+        "Program name:"
+      ]
+    },
+    {
+      "block_type": "paragraph",
+      "text": "lteae.sas",
+      "page_number": 1,
+      "container_id": "cca88945-2155-4cbe-bb0b-311e533b8a51",
+      "container_type": "section",
+      "container_path": [
+        "Listing 16.2.7.1.1 Treatment-Emergent Adverse Events Safety Population - RP Patients",
+        "Program name:"
+      ],
+      "source_block_ids": [
+        "p1_para_37",
+        "p1_para_38",
+        "p1_para_39",
+        "p1_para_40",
+        "p1_para_41",
+        "p1_para_43",
+        "p1_para_42"
+      ]
+    }
+  ]
+}

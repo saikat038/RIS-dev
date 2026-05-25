@@ -1,121 +1,390 @@
 {
-  "doc_id": "Test_OCU401_CSR_Final_Tables.PDF.pdf",
+  "doc_id": "T14.2.2.5.2_test.pdf",
   "blocks": [
     {
-      "block_type": "paragraph",
-      "text": "Ocugen, Inc. OCU400-\n\nAnalysis date: 27AUG2024 15:14\n\nProgram name: sv. sas\n\nPage 1 of 7\n\n101",
+      "block_type": "heading",
+      "level": 1,
+      "text": "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
       "page_number": 1,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
+      "container_id": "7ea81a8e-1155-4cf5-8597-35fdfa4033d0",
+      "container_type": "table_title",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients"
+      ]
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+      "table_context_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Parameter",
+        "Cohort 1 (N=4)",
+        "Cohort 2 (N=3)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=18)"
+      ],
+      "rows": [
+        [
+          "Visit",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Category",
+          "n (%)",
+          "n (%)",
+          "n (%)",
+          "n (%)",
+          "n (%)",
+          "n (%)"
+        ],
+        [
+          "Vitreous",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Baseline, since previous assessment [1]",
+          "N'=0",
+          "N'=0",
+          "N'=0",
+          "N'=4",
+          "N'=4",
+          "N'=4"
+        ],
+        [
+          "No change",
+          "",
+          "",
+          "",
+          "4 (100.0)",
+          "4 (100.0)",
+          "4 (100.0)"
+        ],
+        [
+          "Change - worsening",
+          "",
+          "",
+          "",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Change - improvement",
+          "",
+          "",
+          "",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Day 1, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "1 (33.3)",
+          "3 (100.0)",
+          "5 ( 62.5)",
+          "8 (72.7)",
+          "13 (72.2)"
+        ],
+        [
+          "Change - worsening",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "3 ( 37.5)",
+          "3 ( 27.3)",
+          "4 ( 22.2)"
+        ],
+        [
+          "Change - improvement",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 5.6)"
+        ],
+        [
+          "Day 3, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "2 ( 66.7)",
+          "3 (100.0)",
+          "7 (87.5)",
+          "10 ( 90.9)",
+          "16 (88.9)"
+        ],
+        [
+          "Change - worsening",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Change - improvement",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "1 ( 12.5)",
+          "1 ( 9.1)",
+          "2 ( 11.1)"
+        ],
+        [
+          "2 Week, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "2 (66.7)",
+          "3 (100.0)",
+          "7 (87.5)",
+          "10 (90.9)",
+          "16 ( 88.9)"
+        ],
+        [
+          "Change - worsening",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 12.5)",
+          "1 ( 9.1)",
+          "1 ( 5.6)"
+        ],
+        [
+          "Change - improvement",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 5.6)"
+        ],
+        [
+          "1 Month, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "2 ( 66.7)",
+          "3 (100.0)",
+          "8 (100.0)",
+          "11 (100.0)",
+          "17 ( 94.4)"
+        ],
+        [
+          "Change - worsening",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Change - improvement",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 5.6)"
+        ]
+      ],
+      "table_markdown": "| Parameter | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18) |\n|---|---|---|---|---|---|---|\n| Visit |  |  |  |  |  |  |\n| Category | n (%) | n (%) | n (%) | n (%) | n (%) | n (%) |\n| Vitreous |  |  |  |  |  |  |\n| Baseline, since previous assessment [1] | N'=0 | N'=0 | N'=0 | N'=4 | N'=4 | N'=4 |\n| No change |  |  |  | 4 (100.0) | 4 (100.0) | 4 (100.0) |\n| Change - worsening |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Day 1, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 1 (33.3) | 3 (100.0) | 5 ( 62.5) | 8 (72.7) | 13 (72.2) |\n| Change - worsening | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 3 ( 37.5) | 3 ( 27.3) | 4 ( 22.2) |\n| Change - improvement | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 5.6) |\n| Day 3, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 2 ( 66.7) | 3 (100.0) | 7 (87.5) | 10 ( 90.9) | 16 (88.9) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 1 ( 12.5) | 1 ( 9.1) | 2 ( 11.1) |\n| 2 Week, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 2 (66.7) | 3 (100.0) | 7 (87.5) | 10 (90.9) | 16 ( 88.9) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 12.5) | 1 ( 9.1) | 1 ( 5.6) |\n| Change - improvement | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 5.6) |\n| 1 Month, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 2 ( 66.7) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 17 ( 94.4) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 5.6) |",
+      "page_number": 1,
+      "container_id": "ff1554dc-f0e6-4e7b-af72-e756a821d4e8",
+      "container_type": "table_group",
+      "source_block_ids": []
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Note:",
+      "page_number": 1,
+      "container_id": "0a1b2b3b-8666-4a42-bd14-5896f9a54a55",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Note:"
+      ]
+    },
+    {
+      "block_type": "paragraph",
+      "text": "MTD= Maximum Tolerated Dose.\n\n% = 100 x n/N'. N' = number of subjects with a measurement at the visit.\n\n[1] Baseline is defined as the last measurement before injection.",
+      "page_number": 1,
+      "container_id": "0a1b2b3b-8666-4a42-bd14-5896f9a54a55",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Note:"
+      ],
       "source_block_ids": [
-        "p1_para_0",
-        "p1_para_2",
-        "p1_para_1",
-        "p1_para_4",
-        "p1_para_3"
+        "p1_para_150",
+        "p1_para_151",
+        "p1_para_152",
+        "p1_para_154",
+        "p1_para_153"
       ]
     },
     {
       "block_type": "heading",
       "level": 2,
-      "text": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
+      "text": "SDTM date:",
       "page_number": 1,
-      "container_id": null,
+      "container_id": "28f8db48-0e24-4d8c-b4c2-37e01813cd93",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "SDTM date:"
+      ]
+    },
+    {
+      "block_type": "paragraph",
+      "text": "20AUG2024 14:37 Analysis date: 26AUG2024 11:55",
+      "page_number": 1,
+      "container_id": "28f8db48-0e24-4d8c-b4c2-37e01813cd93",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "SDTM date:"
+      ],
+      "source_block_ids": [
+        "p1_para_150",
+        "p1_para_151",
+        "p1_para_152",
+        "p1_para_154",
+        "p1_para_153"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Program name:",
+      "page_number": 1,
+      "container_id": "c7f28a7f-b2b6-4c09-a9ae-63aaaeab1b1f",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Program name:"
+      ]
+    },
+    {
+      "block_type": "paragraph",
+      "text": "effsum1.sas",
+      "page_number": 1,
+      "container_id": "c7f28a7f-b2b6-4c09-a9ae-63aaaeab1b1f",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Program name:"
+      ],
+      "source_block_ids": [
+        "p1_para_150",
+        "p1_para_151",
+        "p1_para_152",
+        "p1_para_154",
+        "p1_para_153"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 1,
+      "text": "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+      "page_number": 2,
+      "container_id": "1c4ec1f6-a744-416f-bf6f-d955ff9de959",
       "container_type": "table_title",
-      "container_path": []
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients"
+      ]
     },
     {
       "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
-      "table_context_path": [],
-      "table_context_text": "Ocugen, Inc. OCU400-\n\nAnalysis date: 27AUG2024 15:14\n\nProgram name: sv. sas\n\nPage 1 of 7\n\n101",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients'. Interpret the rows using the column headers.",
+      "table_context_heading": "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+      "table_context_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients'. Interpret the rows using the column headers.",
       "caption": null,
       "headers": [
-        "Characteristic",
+        "Parameter",
         "Cohort 1",
         "Cohort 2 (N=3)",
-        "Cohort 3",
-        "Phase 2",
-        "MTD",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
         "Total (N=18)"
       ],
       "rows": [
         [
-          "Statistic/Category",
+          "Visit",
           "(N=4)",
           "",
-          "(N=3)",
-          "(N=8)",
-          "(N=11)",
-          ""
-        ],
-        [
-          "Age (years)",
-          "",
-          "",
           "",
           "",
           "",
           ""
         ],
         [
-          "n",
-          "4",
-          "3",
-          "3",
-          "8",
-          "11",
-          "18"
+          "Category",
+          "n (%)",
+          "n (%)",
+          "n (%)",
+          "n (%)",
+          "n (%)",
+          "n (%)"
         ],
         [
-          "Mean",
-          "67.8",
-          "44.7",
-          "60.0",
-          "42.9",
-          "47.5",
-          "51.6"
-        ],
-        [
-          "Standard deviation",
-          "6.80",
-          "23.86",
-          "20.88",
-          "13.15",
-          "16.50",
-          "17.77"
-        ],
-        [
-          "Median",
-          "66.5",
-          "52.0",
-          "70.0",
-          "44.0",
-          "45.0",
-          "51.5"
-        ],
-        [
-          "Minimum",
-          "61",
-          "18",
-          "36",
-          "22",
-          "22",
-          "18"
-        ],
-        [
-          "Maximum",
-          "77",
-          "64",
-          "74",
-          "66",
-          "74",
-          "77"
-        ],
-        [
-          "Age group, n (%)",
+          "Vitreous",
           "",
           "",
           "",
@@ -124,7 +393,88 @@
           ""
         ],
         [
-          "Adult",
+          "2 Month, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "2 ( 66.7)",
+          "3 (100.0)",
+          "7 (87.5)",
+          "10 ( 90.9)",
+          "16 (88.9)"
+        ],
+        [
+          "Change - worsening",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Change - improvement",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "1 ( 12.5)",
+          "1 ( 9.1)",
+          "2 ( 11.1)"
+        ],
+        [
+          "3 Month, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "2 ( 66.7)",
+          "3 (100.0)",
+          "7 ( 87.5)",
+          "10 (90.9)",
+          "16 ( 88.9)"
+        ],
+        [
+          "Change - worsening",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Change - improvement",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "1 ( 12.5)",
+          "1 ( 9.1)",
+          "2 (11.1)"
+        ],
+        [
+          "6 Month, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
           "4 (100.0)",
           "3 (100.0)",
           "3 (100.0)",
@@ -133,7 +483,7 @@
           "18 (100.0)"
         ],
         [
-          "Pediatric",
+          "Change - worsening",
           "0 ( 0.0)",
           "0 ( 0.0)",
           "0 ( 0.0)",
@@ -142,1688 +492,34 @@
           "0 ( 0.0)"
         ],
         [
-          "Sex, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Male",
-          "2 ( 50.0)",
-          "1 ( 33.3)",
-          "1 ( 33.3)",
-          "7 ( 87.5)",
-          "8 ( 72.7)",
-          "11 ( 61.1)"
-        ],
-        [
-          "Female",
-          "2 ( 50.0)",
-          "2 ( 66.7)",
-          "2 ( 66.7)",
-          "1 ( 12.5)",
-          "3 ( 27.3)",
-          "7 ( 38.9)"
-        ],
-        [
-          "Childbearing Potential [1], n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Yes",
+          "Change - improvement",
           "0 ( 0.0)",
           "0 ( 0.0)",
-          "1 ( 50.0)",
-          "1 (100.0)",
-          "2 ( 66.7)",
-          "2 ( 28.6)"
-        ],
-        [
-          "No",
-          "2 (100.0)",
-          "2 (100.0)",
-          "1 ( 50.0)",
           "0 ( 0.0)",
-          "1 ( 33.3)",
-          "5 ( 71.4)"
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
         ],
         [
-          "Race, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "9 Month, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
         ],
         [
-          "White",
+          "No change",
           "4 (100.0)",
-          "2 ( 66.7)",
           "3 (100.0)",
-          "5 ( 62.5)",
-          "8 ( 72.7)",
-          "14 ( 77.8)"
-        ],
-        [
-          "Asian",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "2 ( 25.0)",
-          "2 ( 18.2)",
-          "2 ( 11.1)"
-        ],
-        [
-          "Black or African American",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "0 ( 0.0)",
-          "1 ( 12.5)",
-          "1 ( 9.1)",
-          "2 ( 11.1)"
-        ],
-        [
-          "American Indian or Alaska Native",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Native Hawaiian or Other Pacific Islander",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Multiple",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Other",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Not Reported",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Ethnicity, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Hispanic or Latino",
-          "1 ( 25.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "3 ( 37.5)",
-          "3 ( 27.3)",
-          "4 ( 22.2)"
-        ],
-        [
-          "Not Hispanic or Latino",
-          "3 ( 75.0)",
-          "3 (100.0)",
-          "3 (100.0)",
-          "5 ( 62.5)",
-          "8 ( 72.7)",
-          "14 ( 77.8)"
-        ]
-      ],
-      "page_number": 1,
-      "container_id": "2092eaf1-b262-4e75-aa2e-d95bdf527741",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose. Adult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
-      "page_number": 1,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p1_para_178",
-        "p1_para_179"
-      ]
-    },
-    {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
-      "table_context_path": [],
-      "table_context_text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose. Adult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [],
-      "rows": [
-        [
-          "SDTM date:",
-          "20AUG2024",
-          "14:37"
-        ],
-        [
-          "Analysis date:",
-          "27AUG2024",
-          "15:08"
-        ]
-      ],
-      "page_number": 1,
-      "container_id": "875cc28b-89de-4403-8f5e-2da882bde592",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Program name: dm. sas\n\n1/14",
-      "page_number": 1,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p1_para_180",
-        "p1_para_187"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Ocugen, Inc. OCU400- 101\n\nPage 2 of 7",
-      "page_number": 2,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p2_para_0",
-        "p2_para_1"
-      ]
-    },
-    {
-      "block_type": "heading",
-      "level": 2,
-      "text": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
-      "page_number": 2,
-      "container_id": null,
-      "container_type": "table_title",
-      "container_path": []
-    },
-    {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
-      "table_context_path": [],
-      "table_context_text": "Ocugen, Inc. OCU400- 101\n\nPage 2 of 7",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [
-        "Characteristic",
-        "Cohort 1",
-        "Cohort 2 (N=3)",
-        "Cohort 3",
-        "Phase 2",
-        "MTD",
-        "Total (N=18)"
-      ],
-      "rows": [
-        [
-          "Characteristic Statistic/Category",
-          "Cohort 1 (N=4)",
-          "Cohort 2 (N=3)",
-          "Cohort 3 (N=3)",
-          "Phase 2 (N=8)",
-          "MTD (N=11)",
-          "Total (N=18)"
-        ],
-        [
-          "Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Age (years)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "n",
-          "0",
-          "2",
-          "1",
-          "2",
-          "3",
-          "5"
-        ],
-        [
-          "Mean",
-          "",
-          "58.0",
-          "70.0",
-          "39.5",
-          "49.7",
-          "53.0"
-        ],
-        [
-          "Standard deviation",
-          "",
-          "8.49",
-          "",
-          "10.61",
-          "19.14",
-          "14.90"
-        ],
-        [
-          "Median",
-          "",
-          "58.0",
-          "70.0",
-          "39.5",
-          "47.0",
-          "52.0"
-        ],
-        [
-          "Minimum",
-          "",
-          "52",
-          "70",
-          "32",
-          "32",
-          "32"
-        ],
-        [
-          "Maximum",
-          "",
-          "64",
-          "70",
-          "47",
-          "70",
-          "70"
-        ],
-        [
-          "Age group, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Adult",
-          "0 ( 0.0)",
-          "2 ( 66.7)",
-          "1 ( 33.3)",
-          "2 ( 25.0)",
-          "3 ( 27.3)",
-          "5 ( 27.8)"
-        ],
-        [
-          "Pediatric",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Sex, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Male",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "2 ( 25.0)",
-          "3 ( 27.3)",
-          "3 ( 16.7)"
-        ],
-        [
-          "Female",
-          "0 ( 0.0)",
-          "2 ( 66.7)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "2 ( 11.1)"
-        ],
-        [
-          "Childbearing Potential [1], n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Yes",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "No",
-          "0 ( 0.0)",
-          "2 (100.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "2 ( 28.6)"
-        ]
-      ],
-      "page_number": 2,
-      "container_id": "f45cd6e2-0271-4bbf-92ff-43e2843bc5aa",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose. Adult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.\n\nSDTM date: 20AUG2024 14:37\n\n2/14",
-      "page_number": 2,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p2_para_93",
-        "p2_para_94",
-        "p2_para_95",
-        "p2_para_96"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Ocugen, Inc. OCU400- Program name: dm. sas 101\n\n7\n\nAnalysis date: 27AUG2024 15:08\n\nPage 3 of",
-      "page_number": 3,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p3_para_1",
-        "p3_para_0",
-        "p3_para_2",
-        "p3_para_3"
-      ]
-    },
-    {
-      "block_type": "heading",
-      "level": 2,
-      "text": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
-      "page_number": 3,
-      "container_id": null,
-      "container_type": "table_title",
-      "container_path": []
-    },
-    {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
-      "table_context_path": [],
-      "table_context_text": "Ocugen, Inc. OCU400- Program name: dm. sas 101\n\n7\n\nAnalysis date: 27AUG2024 15:08\n\nPage 3 of",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [
-        "Characteristic",
-        "Cohort 1",
-        "Cohort 2 (N=3)",
-        "Cohort 3",
-        "Phase 2",
-        "MTD",
-        "Total (N=18)"
-      ],
-      "rows": [
-        [
-          "Characteristic Statistic/Category",
-          "Cohort 1 (N=4)",
-          "Cohort 2 (N=3)",
-          "Cohort 3 (N=3)",
-          "Phase 2 (N=8)",
-          "MTD (N=11)",
-          "Total (N=18)"
-        ],
-        [
-          "Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Race, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "White",
-          "0 ( 0.0)\n:unselected:",
-          "2 ( 66.7)\n:unselected:",
-          "1 ( 33.3)\n:unselected:",
-          "0 0.0)",
-          "1 ( 9.1)",
-          "3 ( 16.7)"
-        ],
-        [
-          "Asian",
-          "0 ( 0.0)",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "2 ( 25.0)",
-          "2 ( 18.2)",
-          "2 ( 11.1)"
-        ],
-        [
-          "American Indian or Alaska Native",
-          "0 ( 0.0)",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Black or African American",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Native Hawaiian or Other Pacific Islander",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Multiple",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Other",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Not Reported",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Ethnicity, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Hispanic or Latino",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Not Hispanic or Latino",
-          "0 ( 0.0)",
-          "2 ( 66.7)",
-          "1 ( 33.3)",
-          "2 ( 25.0)",
-          "3 ( 27.3)",
-          "5 ( 27.8)"
-        ]
-      ],
-      "page_number": 3,
-      "container_id": "7ef26d75-e7b8-41aa-b18d-9890eb98489d",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose. Adult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
-      "page_number": 3,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p3_para_85",
-        "p3_para_86"
-      ]
-    },
-    {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
-      "table_context_path": [],
-      "table_context_text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose. Adult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [],
-      "rows": [
-        [
-          "SDTM",
-          "",
-          "date: 20AUG2024",
-          "14:37",
-          ""
-        ],
-        [
-          "Analysis",
-          "",
-          "date: 27AUG2024",
-          "",
-          "15:08"
-        ],
-        [
-          "",
-          "",
-          "Page 4 of",
-          "",
-          ""
-        ]
-      ],
-      "page_number": 3,
-      "container_id": "39154a1e-ce25-4f61-8d6a-af944c9730ba",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Program name: dm. sas 101\n\n3/14",
-      "page_number": 3,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p3_para_87",
-        "p3_para_95"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Ocugen, Inc. OCU400-\n\n7",
-      "page_number": 4,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p4_para_1",
-        "p4_para_0"
-      ]
-    },
-    {
-      "block_type": "heading",
-      "level": 2,
-      "text": "Table 14.1.3.1.1",
-      "page_number": 4,
-      "container_id": null,
-      "container_type": "table_title",
-      "container_path": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Summary of Subject Demographics Safety Population - RP Patients",
-      "page_number": 4,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p4_para_3"
-      ]
-    },
-    {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.1",
-      "table_context_path": [],
-      "table_context_text": "Summary of Subject Demographics Safety Population - RP Patients",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [
-        "Characteristic",
-        "Cohort 1",
-        "Cohort 2 (N=3)",
-        "Cohort 3",
-        "Phase 2",
-        "MTD",
-        "Total (N=18)"
-      ],
-      "rows": [
-        [
-          "Characteristic Statistic/Category",
-          "Cohort 1 (N=4)",
-          "Cohort 2 (N=3)",
-          "Cohort 3 (N=3)",
-          "Phase 2 (N=8)",
-          "MTD (N=11)",
-          "Total (N=18)"
-        ],
-        [
-          "Subgroup: Mutation Subtype - Autosomal dominant NR2E3",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Age (years)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "n",
-          "0",
-          "0",
-          "1",
-          "2",
-          "3",
-          "3"
-        ],
-        [
-          "Mean",
-          "",
-          "",
-          "36.0",
-          "44.0",
-          "41.3",
-          "41.3"
-        ],
-        [
-          "Standard deviation",
-          "",
-          "",
-          "",
-          "1.41",
-          "4.73",
-          "4.73"
-        ],
-        [
-          "Median",
-          "",
-          "",
-          "36.0",
-          "44.0",
-          "43.0",
-          "43.0"
-        ],
-        [
-          "Minimum",
-          "",
-          "",
-          "36",
-          "43",
-          "36",
-          "36"
-        ],
-        [
-          "Maximum",
-          "",
-          "",
-          "36",
-          "45",
-          "45",
-          "45"
-        ],
-        [
-          "Age group, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Adult",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "2 ( 25.0)",
-          "3 ( 27.3)",
-          "3 ( 16.7)"
-        ],
-        [
-          "Pediatric",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Sex, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Male",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "2 ( 25.0)",
-          "2 ( 18.2)",
-          "2 ( 11.1)"
-        ],
-        [
-          "Female",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "0 ( 0.0)",
-          "1 ( 9.1)",
-          "1 ( 5.6)"
-        ],
-        [
-          "Childbearing Potential [1], n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Yes",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "1 ( 50.0)",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "1 ( 14.3)"
-        ],
-        [
-          "No",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ]
-      ],
-      "page_number": 4,
-      "container_id": "fd7fd7d9-3503-42a2-a14a-d9a7022800d9",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.\n\nSDTM date: 20AUG2024 14:37\n\n4/14",
-      "page_number": 4,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p4_para_89",
-        "p4_para_90",
-        "p4_para_91",
-        "p4_para_92",
-        "p4_para_93"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Ocugen, Inc. OCU400- Program name: dm. sas\n\n7\n\nAnalysis date: 27AUG2024 15:08",
-      "page_number": 5,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p5_para_1",
-        "p5_para_0",
-        "p5_para_2"
-      ]
-    },
-    {
-      "block_type": "heading",
-      "level": 2,
-      "text": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
-      "page_number": 5,
-      "container_id": null,
-      "container_type": "table_title",
-      "container_path": []
-    },
-    {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
-      "table_context_path": [],
-      "table_context_text": "Ocugen, Inc. OCU400- Program name: dm. sas\n\n7\n\nAnalysis date: 27AUG2024 15:08",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [
-        "Characteristic",
-        "Cohort 1",
-        "Cohort 2 (N=3)",
-        "Cohort 3",
-        "Phase 2",
-        "MTD",
-        "Total (N=18)"
-      ],
-      "rows": [
-        [
-          "Characteristic Statistic/Category",
-          "Cohort 1 (N=4)",
-          "Cohort 2 (N=3)",
-          "Cohort 3 (N=3)",
-          "Phase 2 (N=8)",
-          "MTD (N=11)",
-          "Total (N=18)"
-        ],
-        [
-          "Subgroup: Mutation Subtype - Autosomal dominant NR2E3",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Race, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "White",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)\n:unselected:",
-          "1 ( 33.3)\n:unselected:",
-          "2 ( 25.0)",
-          "3 ( 27.3)",
-          "3 ( 16.7)"
-        ],
-        [
-          "American Indian or Alaska Native",
-          "0 ( 0.0)",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Asian",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Black or African American",
-          "0 ( 0.0)",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Native Hawaiian or Other Pacific Islander",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Multiple",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Other",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Not Reported",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Ethnicity, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Hispanic or Latino",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "1 ( 12.5)",
-          "1 ( 9.1)",
-          "1 ( 5.6)"
-        ],
-        [
-          "Not Hispanic or Latino",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "1 ( 12.5)",
-          "2 ( 18.2)",
-          "2 ( 11.1)"
-        ]
-      ],
-      "page_number": 5,
-      "container_id": "cb93df55-b180-4809-ba73-a635d42c6a91",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.\n\nSDTM date: 20AUG2024 14:37\n\n5/14",
-      "page_number": 5,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p5_para_84",
-        "p5_para_85",
-        "p5_para_86",
-        "p5_para_87",
-        "p5_para_88"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Ocugen, Inc. OCU400-\n\nAnalysis date: 27AUG2024 15:08\n\nProgram name: dm. sas 101 Table 14.1.3.1.1\n\nPage 6 of 7\n\nSummary of Subject Demographics Safety Population - RP Patients",
-      "page_number": 6,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p6_para_0",
-        "p6_para_2",
-        "p6_para_1",
-        "p6_para_3",
-        "p6_para_4"
-      ]
-    },
-    {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
-      "table_context_path": [],
-      "table_context_text": "Ocugen, Inc. OCU400-\n\nAnalysis date: 27AUG2024 15:08\n\nProgram name: dm. sas 101 Table 14.1.3.1.1\n\nPage 6 of 7\n\nSummary of Subject Demographics Safety Population - RP Patients",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [
-        "Characteristic",
-        "Cohort 1",
-        "Cohort 2 (N=3)",
-        "Cohort 3",
-        "Phase 2",
-        "MTD",
-        "Total (N=18)"
-      ],
-      "rows": [
-        [
-          "Characteristic Statistic/Category",
-          "Cohort 1 (N=4)",
-          "Cohort 2 (N=3)",
-          "Cohort 3 (N=3)",
-          "Phase 2 (N=8)",
-          "MTD (N=11)",
-          "Total (N=18)"
-        ],
-        [
-          "Subgroup: Mutation Subtype - Autosomal dominant RHO",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Age (years)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "n",
-          "4",
-          "1",
-          "1",
-          "4",
-          "5",
-          "10"
-        ],
-        [
-          "Mean",
-          "67.8",
-          "18.0",
-          "74.0",
-          "44.0",
-          "50.0",
-          "53.9"
-        ],
-        [
-          "Standard deviation",
-          "6.80",
-          "",
-          "",
-          "18.85",
-          "21.13",
-          "21.23"
-        ],
-        [
-          "Median",
-          "66.5",
-          "18.0",
-          "74.0",
-          "44.0",
-          "51.0",
-          "63.0"
-        ],
-        [
-          "Minimum",
-          "61",
-          "18",
-          "74",
-          "22",
-          "22",
-          "18"
-        ],
-        [
-          "Maximum",
-          "77",
-          "18",
-          "74",
-          "66",
-          "74",
-          "77"
-        ],
-        [
-          "Age group, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Adult",
-          "4 (100.0)",
-          "1 ( 33.3)",
-          "1 ( 33.3)",
-          "4 ( 50.0)",
-          "5 ( 45.5)",
-          "10 ( 55.6)"
-        ],
-        [
-          "Pediatric",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Sex, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Male",
-          "2 ( 50.0)",
-          "1 ( 33.3)",
-          "0 ( 0.0)",
-          "3 ( 37.5)",
-          "3 ( 27.3)",
-          "6 ( 33.3)"
-        ],
-        [
-          "Female",
-          "2 ( 50.0)",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "1 ( 12.5)",
-          "2 ( 18.2)",
-          "4 ( 22.2)"
-        ],
-        [
-          "Childbearing Potential [1], n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Yes",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "1 (100.0)",
-          "1 ( 33.3)",
-          "1 ( 14.3)"
-        ],
-        [
-          "No",
-          "2 (100.0)",
-          "0 ( 0.0)",
-          "1 ( 50.0)",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "3 ( 42.9)"
-        ]
-      ],
-      "page_number": 6,
-      "container_id": "e25e28d6-7fbf-478f-ba57-6c9bf85dd5b7",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
-      "page_number": 6,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p6_para_99",
-        "p6_para_100",
-        "p6_para_101"
-      ]
-    },
-    {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients",
-      "table_context_path": [],
-      "table_context_text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1 Summary of Subject Demographics Safety Population - RP Patients'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [],
-      "rows": [
-        [
-          "SDTM",
-          "date: 20AUG2024",
-          "14:37",
-          ""
-        ],
-        [
-          "Analysis",
-          "date: 27AUG2024",
-          "",
-          "15:08"
-        ],
-        [
-          "",
-          "Page 7 of",
-          "",
-          ""
-        ]
-      ],
-      "page_number": 6,
-      "container_id": "2518ea3c-7362-4abe-b9ca-686f9a9b00ab",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Program name: dm. sas 101\n\n6/14",
-      "page_number": 6,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p6_para_102",
-        "p6_para_110"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Ocugen, Inc. OCU400-\n\n7",
-      "page_number": 7,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p7_para_1",
-        "p7_para_0"
-      ]
-    },
-    {
-      "block_type": "heading",
-      "level": 2,
-      "text": "Table 14.1.3.1.1",
-      "page_number": 7,
-      "container_id": null,
-      "container_type": "table_title",
-      "container_path": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Summary of Subject Demographics Safety Population - RP Patients",
-      "page_number": 7,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p7_para_3"
-      ]
-    },
-    {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.1",
-      "table_context_path": [],
-      "table_context_text": "Summary of Subject Demographics Safety Population - RP Patients",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [
-        "Characteristic",
-        "Cohort 1",
-        "Cohort 2 (N=3)",
-        "Cohort 3",
-        "Phase 2",
-        "MTD",
-        "Total (N=18)"
-      ],
-      "rows": [
-        [
-          "Characteristic Statistic/Category",
-          "Cohort 1 (N=4)",
-          "Cohort 2 (N=3)",
-          "Cohort 3 (N=3)",
-          "Phase 2 (N=8)",
-          "MTD (N=11)",
-          "Total (N=18)"
-        ],
-        [
-          "Subgroup: Mutation Subtype - Autosomal dominant RHO",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Race, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "White",
-          "4 (100.0)",
-          "0 ( 0.0)\n:unselected:",
-          "1 ( 33.3)",
-          "3 ( 37.5)",
-          "4 ( 36.4)",
-          "8 ( 44.4)"
-        ],
-        [
-          "Black or African American",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "0 ( 0.0)",
-          "1 ( 12.5)",
-          "1 ( 9.1)",
-          "2 ( 11.1)"
-        ],
-        [
-          "American Indian or Alaska Native",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Asian",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Native Hawaiian or Other Pacific Islander",
-          "0 ( 0.0)",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Multiple",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Other",
-          "0 ( 0.0)",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Not Reported",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Ethnicity, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Hispanic or Latino",
-          "1 ( 25.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "2 ( 25.0)",
-          "2 ( 18.2)",
-          "3 ( 16.7)"
-        ],
-        [
-          "Not Hispanic or Latino",
-          "3 ( 75.0)",
-          "1 ( 33.3)",
-          "1 ( 33.3)",
-          "2 ( 25.0)",
-          "3 ( 27.3)",
-          "7 ( 38.9)"
-        ]
-      ],
-      "page_number": 7,
-      "container_id": "08c158ca-8e31-4762-af42-1ee045b35677",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.\n\nSDTM date: 20AUG2024 14:37\n\n7/14",
-      "page_number": 7,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p7_para_84",
-        "p7_para_85",
-        "p7_para_86",
-        "p7_para_87",
-        "p7_para_88"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Ocugen, Inc. OCU400- Program name: dm. sas 101\n\nAnalysis date: 27AUG2024 15:08\n\nPage 1 of 7\n\nTable 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
-      "page_number": 8,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p8_para_0",
-        "p8_para_1",
-        "p8_para_2",
-        "p8_para_3"
-      ]
-    },
-    {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.1",
-      "table_context_path": [],
-      "table_context_text": "Ocugen, Inc. OCU400- Program name: dm. sas 101\n\nAnalysis date: 27AUG2024 15:08\n\nPage 1 of 7\n\nTable 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.1'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [
-        "Characteristic",
-        "Cohort 1",
-        "Cohort 2 (N=3)",
-        "Cohort 3",
-        "Phase 2",
-        "MTD",
-        "Total (N=18)"
-      ],
-      "rows": [
-        [
-          "Characteristic",
-          "Cohort 1",
-          "Cohort 2 (N=2)",
-          "Cohort 3 (N=3)",
-          "Phase 2 (N=8)",
-          "MTD (N=11)",
-          "Total (N=17)"
-        ],
-        [
-          "Statistic/Category",
-          "(N=4)",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Age (years)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "n",
-          "4",
-          "2",
-          "3",
-          "8",
-          "11",
-          "17"
-        ],
-        [
-          "Mean",
-          "67.8",
-          "35.0",
-          "60.0",
-          "42.9",
-          "47.5",
-          "50.8"
-        ],
-        [
-          "Standard deviation",
-          "6.80",
-          "24.04",
-          "20.88",
-          "13.15",
-          "16.50",
-          "18.04"
-        ],
-        [
-          "Median",
-          "66.5",
-          "35.0",
-          "70.0",
-          "44.0",
-          "45.0",
-          "51.0"
-        ],
-        [
-          "Minimum",
-          "61",
-          "18",
-          "36",
-          "22",
-          "22",
-          "18"
-        ],
-        [
-          "Maximum",
-          "77",
-          "52",
-          "74",
-          "66",
-          "74",
-          "77"
-        ],
-        [
-          "Age group, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Adult",
-          "4 (100.0)",
-          "2 (100.0)",
           "3 (100.0)",
           "8 (100.0)",
           "11 (100.0)",
-          "17 (100.0)"
+          "18 (100.0)"
         ],
         [
-          "Pediatric",
+          "Change - worsening",
           "0 ( 0.0)",
           "0 ( 0.0)",
           "0 ( 0.0)",
@@ -1832,7 +528,179 @@
           "0 ( 0.0)"
         ],
         [
-          "Sex, n (%)",
+          "Change - improvement",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "12 Month, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "3 (100.0)",
+          "3 (100.0)",
+          "8 (100.0)",
+          "11 (100.0)",
+          "18 (100.0)"
+        ],
+        [
+          "Change - worsening",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Change - improvement",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ]
+      ],
+      "table_markdown": "| Parameter | Cohort 1 | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18) |\n|---|---|---|---|---|---|---|\n| Visit | (N=4) |  |  |  |  |  |\n| Category | n (%) | n (%) | n (%) | n (%) | n (%) | n (%) |\n| Vitreous |  |  |  |  |  |  |\n| 2 Month, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 2 ( 66.7) | 3 (100.0) | 7 (87.5) | 10 ( 90.9) | 16 (88.9) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 1 ( 12.5) | 1 ( 9.1) | 2 ( 11.1) |\n| 3 Month, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 2 ( 66.7) | 3 (100.0) | 7 ( 87.5) | 10 (90.9) | 16 ( 88.9) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 1 ( 12.5) | 1 ( 9.1) | 2 (11.1) |\n| 6 Month, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 3 (100.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 18 (100.0) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| 9 Month, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 3 (100.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 18 (100.0) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| 12 Month, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 3 (100.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 18 (100.0) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |",
+      "page_number": 2,
+      "container_id": "eae692af-280f-44e4-9231-84ad747bfdba",
+      "container_type": "table_group",
+      "source_block_ids": []
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Note:",
+      "page_number": 2,
+      "container_id": "0c3878ea-f9f5-4ddf-a67b-cec3fcab8644",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Note:"
+      ]
+    },
+    {
+      "block_type": "paragraph",
+      "text": "MTD= Maximum Tolerated Dose.\n\n% = 100 x n/N'. N' = number of subjects with a measurement at the visit.\n\n[1] Baseline is defined as the last measurement before injection.",
+      "page_number": 2,
+      "container_id": "0c3878ea-f9f5-4ddf-a67b-cec3fcab8644",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Note:"
+      ],
+      "source_block_ids": [
+        "p2_para_160",
+        "p2_para_161",
+        "p2_para_162",
+        "p2_para_164",
+        "p2_para_163"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "SDTM date:",
+      "page_number": 2,
+      "container_id": "3febc3ea-867a-4ccf-8ed1-52dd163282b0",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "SDTM date:"
+      ]
+    },
+    {
+      "block_type": "paragraph",
+      "text": "20AUG2024 14:37 Analysis date: 26AUG2024 11:55",
+      "page_number": 2,
+      "container_id": "3febc3ea-867a-4ccf-8ed1-52dd163282b0",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "SDTM date:"
+      ],
+      "source_block_ids": [
+        "p2_para_160",
+        "p2_para_161",
+        "p2_para_162",
+        "p2_para_164",
+        "p2_para_163"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Program name:",
+      "page_number": 2,
+      "container_id": "44d5dc55-2825-44db-a31b-d749e8d74def",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Program name:"
+      ]
+    },
+    {
+      "block_type": "paragraph",
+      "text": "effsum1.sas",
+      "page_number": 2,
+      "container_id": "44d5dc55-2825-44db-a31b-d749e8d74def",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Program name:"
+      ],
+      "source_block_ids": [
+        "p2_para_160",
+        "p2_para_161",
+        "p2_para_162",
+        "p2_para_164",
+        "p2_para_163"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 1,
+      "text": "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+      "page_number": 3,
+      "container_id": "57fc36ac-349a-4d82-b1dc-7107b20bba5e",
+      "container_type": "table_title",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients"
+      ]
+    },
+    {
+      "block_type": "table",
+      "table_context_heading": "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+      "table_context_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients'. Interpret the rows using the column headers.",
+      "caption": null,
+      "headers": [
+        "Parameter",
+        "Cohort 1 (N=4)",
+        "Cohort 2 (N=3)",
+        "Cohort 3 (N=3)",
+        "Phase 2 (N=8)",
+        "MTD (N=11)",
+        "Total (N=18)"
+      ],
+      "rows": [
+        [
+          "Visit",
           "",
           "",
           "",
@@ -1841,1138 +709,350 @@
           ""
         ],
         [
-          "Male",
-          "2 ( 50.0)",
-          "1 ( 50.0)",
-          "1 ( 33.3)",
+          "Category",
+          "n (%)",
+          "n (%)",
+          "n (%)",
+          "n (%)",
+          "n (%)",
+          "n (%)"
+        ],
+        [
+          "Macula",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Baseline, since previous assessment [1]",
+          "N'=0",
+          "N'=0",
+          "N'=0",
+          "N'=4",
+          "N'=4",
+          "N'=4"
+        ],
+        [
+          "No change",
+          "",
+          "",
+          "",
+          "4 (100.0)",
+          "4 (100.0)",
+          "4 (100.0)"
+        ],
+        [
+          "Change - worsening",
+          "",
+          "",
+          "",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Change - improvement",
+          "",
+          "",
+          "",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Day 1, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "1 (33.3)",
+          "3 (100.0)",
           "7 ( 87.5)",
-          "8 ( 72.7)",
-          "11 ( 64.7)"
+          "10 (90.9)",
+          "15 (83.3)"
         ],
         [
-          "Female",
-          "2 ( 50.0)",
-          "1 ( 50.0)",
-          "2 ( 66.7)",
+          "Change - worsening",
+          "0 ( 0.0)",
+          "2 (66.7)",
+          "0 ( 0.0)",
           "1 ( 12.5)",
-          "3 ( 27.3)",
-          "6 ( 35.3)"
+          "1 ( 9.1)",
+          "3 ( 16.7)"
         ],
         [
-          "Childbearing Potential [1], n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Yes",
+          "Change - improvement",
           "0 ( 0.0)",
           "0 ( 0.0)",
-          "1 ( 50.0)",
-          "1 (100.0)",
-          "2 ( 66.7)",
-          "2 ( 33.3)"
-        ],
-        [
-          "No",
-          "2 (100.0)",
-          "1 (100.0)",
-          "1 ( 50.0)",
           "0 ( 0.0)",
-          "1 ( 33.3)",
-          "4 ( 66.7)"
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
         ],
         [
-          "Race, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Day 3, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
         ],
         [
-          "White",
+          "No change",
           "4 (100.0)",
-          "1 ( 50.0)",
+          "2 ( 66.7)",
           "3 (100.0)",
-          "5 ( 62.5)",
-          "8 ( 72.7)",
-          "13 ( 76.5)"
+          "6 ( 75.0)",
+          "9 (81.8)",
+          "15 (83.3)"
         ],
         [
-          "Asian",
+          "Change - worsening",
           "0 ( 0.0)",
           "0 ( 0.0)",
           "0 ( 0.0)",
-          "2 ( 25.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Change - improvement",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "2 (25.0)",
           "2 ( 18.2)",
-          "2 ( 11.8)"
+          "3 ( 16.7)"
         ],
         [
-          "Black or African American",
+          "2 Week, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "2 (66.7)",
+          "3 (100.0)",
+          "8 (100.0)",
+          "11 (100.0)",
+          "17 ( 94.4)"
+        ],
+        [
+          "Change - worsening",
           "0 ( 0.0)",
-          "1 ( 50.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Change - improvement",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 5.6)"
+        ],
+        [
+          "1 Month, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "3 (100.0)",
+          "2 ( 66.7)",
+          "7 ( 87.5)",
+          "9 (81.8)",
+          "16 ( 88.9)"
+        ],
+        [
+          "Change - worsening",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "1 ( 33.3)",
+          "0 ( 0.0)",
+          "1 ( 9.1)",
+          "1 ( 5.6)"
+        ],
+        [
+          "Change - improvement",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
           "0 ( 0.0)",
           "1 ( 12.5)",
           "1 ( 9.1)",
-          "2 ( 11.8)"
-        ],
-        [
-          "American Indian or Alaska Native",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Native Hawaiian or Other Pacific Islander",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Multiple",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Other",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Not Reported",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Ethnicity, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Hispanic or Latino",
-          "1 ( 25.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "3 ( 37.5)",
-          "3 ( 27.3)",
-          "4 ( 23.5)"
-        ],
-        [
-          "Not Hispanic or Latino",
-          "3 ( 75.0)",
-          "2 (100.0)",
-          "3 (100.0)",
-          "5 ( 62.5)",
-          "8 ( 72.7)",
-          "13 ( 76.5)"
+          "1 ( 5.6)"
         ]
       ],
-      "page_number": 8,
-      "container_id": "0360e92c-05e6-42ec-ae4d-307ddc926fca",
+      "table_markdown": "| Parameter | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18) |\n|---|---|---|---|---|---|---|\n| Visit |  |  |  |  |  |  |\n| Category | n (%) | n (%) | n (%) | n (%) | n (%) | n (%) |\n| Macula |  |  |  |  |  |  |\n| Baseline, since previous assessment [1] | N'=0 | N'=0 | N'=0 | N'=4 | N'=4 | N'=4 |\n| No change |  |  |  | 4 (100.0) | 4 (100.0) | 4 (100.0) |\n| Change - worsening |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Day 1, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 1 (33.3) | 3 (100.0) | 7 ( 87.5) | 10 (90.9) | 15 (83.3) |\n| Change - worsening | 0 ( 0.0) | 2 (66.7) | 0 ( 0.0) | 1 ( 12.5) | 1 ( 9.1) | 3 ( 16.7) |\n| Change - improvement | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Day 3, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 2 ( 66.7) | 3 (100.0) | 6 ( 75.0) | 9 (81.8) | 15 (83.3) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 2 (25.0) | 2 ( 18.2) | 3 ( 16.7) |\n| 2 Week, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 2 (66.7) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 17 ( 94.4) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 5.6) |\n| 1 Month, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 3 (100.0) | 2 ( 66.7) | 7 ( 87.5) | 9 (81.8) | 16 ( 88.9) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 1 ( 9.1) | 1 ( 5.6) |\n| Change - improvement | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 12.5) | 1 ( 9.1) | 1 ( 5.6) |",
+      "page_number": 3,
+      "container_id": "c9e312cd-a0db-4758-9c50-ddbfbda71db6",
       "container_type": "table_group",
-      "container_path": [],
       "source_block_ids": []
     },
     {
-      "block_type": "paragraph",
-      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose. Adult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.\n\nSDTM date: 20AUG2024 14:37\n\n8/14",
-      "page_number": 8,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p8_para_173",
-        "p8_para_174",
-        "p8_para_175",
-        "p8_para_176"
+      "block_type": "heading",
+      "level": 2,
+      "text": "Note:",
+      "page_number": 3,
+      "container_id": "03ad0066-83c9-4aa1-a3bc-34695c19f25a",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Note:"
       ]
     },
     {
       "block_type": "paragraph",
-      "text": "Ocugen, Inc. OCU400- Program name: dm. sas\n\n7\n\nAnalysis date: 27AUG2024 15:08",
-      "page_number": 9,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
+      "text": "MTD= Maximum Tolerated Dose.\n\n% = 100 x n/N'. N' = number of subjects with a measurement at the visit.\n\n[1] Baseline is defined as the last measurement before injection.",
+      "page_number": 3,
+      "container_id": "03ad0066-83c9-4aa1-a3bc-34695c19f25a",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Note:"
+      ],
       "source_block_ids": [
-        "p9_para_1",
-        "p9_para_0",
-        "p9_para_2"
+        "p3_para_150",
+        "p3_para_151",
+        "p3_para_152",
+        "p3_para_154",
+        "p3_para_153"
       ]
     },
     {
       "block_type": "heading",
       "level": 2,
-      "text": "Table 14.1.3.1.2 Summary of Subject Demographics",
-      "page_number": 9,
-      "container_id": null,
-      "container_type": "table_title",
-      "container_path": []
-    },
-    {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.2 Summary of Subject Demographics",
-      "table_context_path": [],
-      "table_context_text": "Ocugen, Inc. OCU400- Program name: dm. sas\n\n7\n\nAnalysis date: 27AUG2024 15:08",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.2 Summary of Subject Demographics'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [
-        "Characteristic",
-        "Cohort 1",
-        "Cohort 2 (N=3)",
-        "Cohort 3",
-        "Phase 2",
-        "MTD",
-        "Total (N=18)"
-      ],
-      "rows": [
-        [
-          "Per Protocol Population - RP Patients",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Characteristic",
-          "Cohort 1 (N=4)",
-          "Cohort 2 (N=2)",
-          "Cohort 3 (N=3)",
-          "Phase 2 (N=8)",
-          "MTD (N=11)",
-          "Total (N=17)"
-        ],
-        [
-          "Statistic/Category",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Age (years)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "n",
-          "0",
-          "1",
-          "1",
-          "2",
-          "3",
-          "4"
-        ],
-        [
-          "Mean",
-          "",
-          "52.0",
-          "70.0",
-          "39.5",
-          "49.7",
-          "50.3"
-        ],
-        [
-          "Standard deviation",
-          "",
-          "",
-          "",
-          "10.61",
-          "19.14",
-          "15.67"
-        ],
-        [
-          "Median",
-          "",
-          "52.0",
-          "70.0",
-          "39.5",
-          "47.0",
-          "49.5"
-        ],
-        [
-          "Minimum",
-          "",
-          "52",
-          "70",
-          "32",
-          "32",
-          "32"
-        ],
-        [
-          "Maximum",
-          "",
-          "52",
-          "70",
-          "47",
-          "70",
-          "70"
-        ],
-        [
-          "Age group, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Adult",
-          "0 ( 0.0)",
-          "1 ( 50.0)",
-          "1 ( 33.3)",
-          "2 ( 25.0)",
-          "3 ( 27.3)",
-          "4 ( 23.5)"
-        ],
-        [
-          "Pediatric",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Sex, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Male",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "2 ( 25.0)",
-          "3 ( 27.3)",
-          "3 ( 17.6)"
-        ],
-        [
-          "Female",
-          "0 ( 0.0)",
-          "1 ( 50.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "1 ( 5.9)"
-        ],
-        [
-          "Childbearing Potential [1], n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Yes",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "No",
-          "0 ( 0.0)",
-          "1 (100.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "1 ( 16.7)"
-        ]
-      ],
-      "page_number": 9,
-      "container_id": "4c7341ad-f430-4fc6-89c8-1b4429ff6355",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose. Adult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.\n\n9/14",
-      "page_number": 9,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p9_para_95",
-        "p9_para_96",
-        "p9_para_97"
+      "text": "SDTM date:",
+      "page_number": 3,
+      "container_id": "d3aa9b04-3b6b-41ad-907e-2c34d74da23f",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "SDTM date:"
       ]
     },
     {
       "block_type": "paragraph",
-      "text": "Ocugen, Inc. OCU400- 101\n\nPage 2 of 7",
-      "page_number": 10,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p10_para_0",
-        "p10_para_1"
-      ]
-    },
-    {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.2 Summary of Subject Demographics",
-      "table_context_path": [],
-      "table_context_text": "Ocugen, Inc. OCU400- 101\n\nPage 2 of 7",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.2 Summary of Subject Demographics'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [
-        "Characteristic",
-        "Cohort 1",
-        "Cohort 2 (N=3)",
-        "Cohort 3",
-        "Phase 2",
-        "MTD",
-        "Total (N=18)"
+      "text": "20AUG2024 14:37 Analysis date: 26AUG2024 11:55",
+      "page_number": 3,
+      "container_id": "d3aa9b04-3b6b-41ad-907e-2c34d74da23f",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "SDTM date:"
       ],
-      "rows": [
-        [
-          "SDTM date: 20AUG2024",
-          "14:37"
-        ],
-        [
-          "Analysis date: 27AUG2024",
-          "15:08"
-        ],
-        [
-          "Page 3 of",
-          ""
-        ]
-      ],
-      "page_number": 10,
-      "container_id": "2a0e1ea6-9d9c-436b-b45d-f186ef3bc0d5",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Program name: dm. sas 101\n\nTable 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
-      "page_number": 10,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
       "source_block_ids": [
-        "p10_para_7",
-        "p10_para_8"
-      ]
-    },
-    {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.2 Summary of Subject Demographics",
-      "table_context_path": [],
-      "table_context_text": "Program name: dm. sas 101\n\nTable 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.2 Summary of Subject Demographics'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [
-        "Characteristic Statistic/Category",
-        "Cohort 1 (N=4)",
-        "Cohort 2 (N=2)",
-        "Cohort 3 (N=3)",
-        "",
-        "Phase 2 (N=8)",
-        "MTD (N=11)",
-        "Total (N=17)"
-      ],
-      "rows": [
-        [
-          "Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Race, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Asian",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "",
-          "2 ( 25.0)",
-          "2 ( 18.2)",
-          "2 ( 11.8)"
-        ],
-        [
-          "White",
-          "0 ( 0.0)",
-          "1 ( 50.0)",
-          "1 ( 33.3)",
-          "",
-          "0 ( 0.0)",
-          "1 ( 9.1)",
-          "2 ( 11.8)"
-        ],
-        [
-          "American Indian or Alaska Native",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Black or African American",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Native Hawaiian or Other Pacific Islander",
-          "0 ( 0.0)",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Multiple",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Other",
-          "0 ( 0.0)",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Not Reported",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Ethnicity, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Hispanic or Latino",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Not Hispanic or Latino",
-          "0 ( 0.0)",
-          "1 ( 50.0)",
-          "1 ( 33.3)",
-          "",
-          "2 ( 25.0)",
-          "3 ( 27.3)",
-          "4 ( 23.5)"
-        ]
-      ],
-      "page_number": 10,
-      "container_id": "5c2e2d46-9626-4e09-8008-837f522ae0f3",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose. Adult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.\n\nSDTM date: 20AUG2024 14:37\n\n10/14",
-      "page_number": 10,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p10_para_89",
-        "p10_para_90",
-        "p10_para_91",
-        "p10_para_92"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Ocugen, Inc. OCU400-\n\n7\n\nAnalysis date: 27AUG2024 15:08\n\nProgram name: dm. sas\n\n101\n\nPage 4 of\n\nTable 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
-      "page_number": 11,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p11_para_1",
-        "p11_para_0",
-        "p11_para_3",
-        "p11_para_2",
-        "p11_para_4",
-        "p11_para_5",
-        "p11_para_6"
-      ]
-    },
-    {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.2 Summary of Subject Demographics",
-      "table_context_path": [],
-      "table_context_text": "Ocugen, Inc. OCU400-\n\n7\n\nAnalysis date: 27AUG2024 15:08\n\nProgram name: dm. sas\n\n101\n\nPage 4 of\n\nTable 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.2 Summary of Subject Demographics'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [
-        "Characteristic Statistic/Category",
-        "Cohort 1 (N=4)",
-        "Cohort 2 (N=2)",
-        "Cohort 3 (N=3)",
-        "",
-        "Phase 2 (N=8)",
-        "MTD (N=11)",
-        "Total (N=17)"
-      ],
-      "rows": [
-        [
-          "Characteristic Statistic/Category",
-          "Cohort 1 (N=4)",
-          "Cohort 2 (N=2)",
-          "Cohort 3 (N=3)",
-          "Phase 2 (N=8)",
-          "MTD (N=11)",
-          "Total (N=17)"
-        ],
-        [
-          "Subgroup: Mutation Subtype - Autosomal dominant NR2E3",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Age (years)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "n",
-          "0",
-          "0",
-          "1",
-          "2",
-          "3",
-          "3"
-        ],
-        [
-          "Mean",
-          "",
-          "",
-          "36.0",
-          "44.0",
-          "41.3",
-          "41.3"
-        ],
-        [
-          "Standard deviation",
-          "",
-          "",
-          "",
-          "1.41",
-          "4.73",
-          "4.73"
-        ],
-        [
-          "Median",
-          "",
-          "",
-          "36.0",
-          "44.0",
-          "43.0",
-          "43.0"
-        ],
-        [
-          "Minimum",
-          "",
-          "",
-          "36",
-          "43",
-          "36",
-          "36"
-        ],
-        [
-          "Maximum",
-          "",
-          "",
-          "36",
-          "45",
-          "45",
-          "45"
-        ],
-        [
-          "Age group, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Adult",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "2 ( 25.0)",
-          "3 ( 27.3)",
-          "3 ( 17.6)"
-        ],
-        [
-          "Pediatric",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Sex, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Male",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "2 ( 25.0)",
-          "2 ( 18.2)",
-          "2 ( 11.8)"
-        ],
-        [
-          "Female",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "0 ( 0.0)",
-          "1 ( 9.1)",
-          "1 ( 5.9)"
-        ],
-        [
-          "Childbearing Potential [1], n (%) Yes",
-          "",
-          "0 ( 0.0)",
-          "1 ( 50.0)",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "1 ( 16.7)"
-        ],
-        [
-          "",
-          "0 ( 0.0)",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "No",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ]
-      ],
-      "page_number": 11,
-      "container_id": "f5fdfa26-343c-4626-9d44-924525541161",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose. Adult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.\n\nSDTM date: 20AUG2024 14:37\n\n11/14",
-      "page_number": 11,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p11_para_91",
-        "p11_para_92",
-        "p11_para_93",
-        "p11_para_94"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Ocugen, Inc. OCU400- Program name: dm. sas\n\n7\n\nAnalysis date: 27AUG2024 15:08\n\nPage 5 of 7\n\n101\n\nTable 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
-      "page_number": 12,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p12_para_1",
-        "p12_para_0",
-        "p12_para_2",
-        "p12_para_4",
-        "p12_para_3",
-        "p12_para_5"
-      ]
-    },
-    {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.2 Summary of Subject Demographics",
-      "table_context_path": [],
-      "table_context_text": "Ocugen, Inc. OCU400- Program name: dm. sas\n\n7\n\nAnalysis date: 27AUG2024 15:08\n\nPage 5 of 7\n\n101\n\nTable 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.2 Summary of Subject Demographics'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [
-        "Characteristic Statistic/Category",
-        "Cohort 1 (N=4)",
-        "Cohort 2 (N=2)",
-        "Cohort 3 (N=3)",
-        "",
-        "Phase 2 (N=8)",
-        "MTD (N=11)",
-        "Total (N=17)"
-      ],
-      "rows": [
-        [
-          "Characteristic Statistic/Category",
-          "Cohort 1 (N=4)",
-          "Cohort 2 (N=2)",
-          "Cohort 3 (N=3)",
-          "Phase 2 (N=8)",
-          "MTD (N=11)",
-          "Total (N=17)"
-        ],
-        [
-          "Subgroup: Mutation Subtype - Autosomal dominant NR2E3",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Race, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "White",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)\n:unselected:",
-          "1 ( 33.3)",
-          "2 ( 25.0)",
-          "3 ( 27.3)",
-          "3 ( 17.6)"
-        ],
-        [
-          "American Indian or Alaska Native",
-          "0 ( 0.0)",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Asian",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Black or African American",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Native Hawaiian or Other Pacific Islander",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Multiple",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Other",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Not Reported",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Ethnicity, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Hispanic or Latino",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "1 ( 12.5)",
-          "1 ( 9.1)",
-          "1 ( 5.9)"
-        ],
-        [
-          "Not Hispanic or Latino",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "1 ( 12.5)",
-          "2 ( 18.2)",
-          "2 ( 11.8)"
-        ]
-      ],
-      "page_number": 12,
-      "container_id": "751fbcf4-fada-49a8-828b-f07973fd7d05",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose.\n\nAdult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.\n\nSDTM date: 20AUG2024 14:37\n\n12/14",
-      "page_number": 12,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p12_para_86",
-        "p12_para_87",
-        "p12_para_88",
-        "p12_para_89",
-        "p12_para_90"
-      ]
-    },
-    {
-      "block_type": "paragraph",
-      "text": "Ocugen, Inc. OCU400-\n\n50\n\nAnalysis date: 27AUG2024 15:08 Page 6 of\n\nProgram name: dm. sas 101",
-      "page_number": 13,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p13_para_0",
-        "p13_para_1",
-        "p13_para_4",
-        "p13_para_2"
+        "p3_para_150",
+        "p3_para_151",
+        "p3_para_152",
+        "p3_para_154",
+        "p3_para_153"
       ]
     },
     {
       "block_type": "heading",
       "level": 2,
-      "text": "Table 14.1.3.1.2",
-      "page_number": 13,
-      "container_id": null,
-      "container_type": "table_title",
-      "container_path": []
+      "text": "Program name:",
+      "page_number": 3,
+      "container_id": "c6725c6d-7b0b-4953-9a7c-9b7ff218d81e",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Program name:"
+      ]
     },
     {
       "block_type": "paragraph",
-      "text": "Summary\n\nof Subject Demographics",
-      "page_number": 13,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
+      "text": "effsum1.sas",
+      "page_number": 3,
+      "container_id": "c6725c6d-7b0b-4953-9a7c-9b7ff218d81e",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Program name:"
+      ],
       "source_block_ids": [
-        "p13_para_5",
-        "p13_para_6"
+        "p3_para_150",
+        "p3_para_151",
+        "p3_para_152",
+        "p3_para_154",
+        "p3_para_153"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 1,
+      "text": "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+      "page_number": 4,
+      "container_id": "f04ae184-0f0f-4102-8b94-93f3a96c8a25",
+      "container_type": "table_title",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients"
       ]
     },
     {
       "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.2",
-      "table_context_path": [],
-      "table_context_text": "Summary\n\nof Subject Demographics",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.2'. Interpret the rows using the column headers.",
+      "table_context_heading": "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+      "table_context_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients'. Interpret the rows using the column headers.",
       "caption": null,
       "headers": [
-        "Characteristic Statistic/Category",
-        "Cohort 1 (N=4)",
-        "Cohort 2 (N=2)",
+        "Parameter",
+        "Cohort 1",
+        "Cohort 2 (N=3)",
         "Cohort 3 (N=3)",
-        "",
         "Phase 2 (N=8)",
         "MTD (N=11)",
-        "Total (N=17)"
+        "Total (N=18)"
       ],
       "rows": [
         [
-          "",
-          "Summary",
-          "of Subject Demographics",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "Per Protocol",
-          "Population - RP Patients",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "Characteristic",
-          "Cohort 1",
-          "Cohort 2",
-          "Cohort 3",
-          "Phase 2",
-          "MTD",
-          "Total"
-        ],
-        [
-          "Statistic/Category",
+          "Visit",
           "(N=4)",
-          "(N=2)",
-          "(N=3)",
-          "(N=8)",
-          "(N=11)",
-          "(N=17)"
+          "",
+          "",
+          "",
+          "",
+          ""
         ],
         [
-          "Subgroup: Mutation Subtype - Autosomal dominant RHO",
+          "Category",
+          "n (%)",
+          "n (%)",
+          "n (%)",
+          "n (%)",
+          "n (%)",
+          "n (%)"
+        ],
+        [
+          "Macula",
           "",
           "",
           "",
@@ -2981,215 +1061,314 @@
           ""
         ],
         [
-          "Age (years)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "2 Month, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
         ],
         [
-          "n",
-          "4",
-          "1",
-          "1",
-          "4",
-          "5",
-          "10"
-        ],
-        [
-          "Mean",
-          "67.8",
-          "18.0",
-          "74.0",
-          "44.0",
-          "50.0",
-          "53.9"
-        ],
-        [
-          "Standard deviation",
-          "6.80",
-          "",
-          "",
-          "18.85",
-          "21.13",
-          "21.23"
-        ],
-        [
-          "Median",
-          "66.5",
-          "18.0",
-          "74.0",
-          "44.0",
-          "51.0",
-          "63.0"
-        ],
-        [
-          "Minimum",
-          "61",
-          "18",
-          "74",
-          "22",
-          "22",
-          "18"
-        ],
-        [
-          "Maximum",
-          "77",
-          "18",
-          "74",
-          "66",
-          "74",
-          "77"
-        ],
-        [
-          "Age group, n (%)",
-          "",
-          "",
-          "",
-          "4 ( 50.0)",
-          "5 ( 45.5)",
-          ""
-        ],
-        [
-          "Adult",
+          "No change",
           "4 (100.0)",
-          "1 ( 50.0)",
-          "1 ( 33.3)",
-          "",
-          "",
-          "10 ( 58.8)"
+          "3 (100.0)",
+          "3 (100.0)",
+          "8 (100.0)",
+          "11 (100.0)",
+          "18 (100.0)"
         ],
         [
-          "Pediatric",
+          "Change - worsening",
           "0 ( 0.0)",
           "0 ( 0.0)",
           "0 ( 0.0)",
-          "0 ( 0.0)\n:unselected:",
+          "0 ( 0.0)",
           "0 ( 0.0)",
           "0 ( 0.0)"
         ],
         [
-          "Sex, n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Change - improvement",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
         ],
         [
-          "Male",
-          "2 ( 50.0)",
-          "1 ( 50.0)",
-          "0 ( 0.0)",
-          "3 ( 37.5)",
-          "3 ( 27.3)",
-          "6 ( 35.3)"
+          "3 Month, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
         ],
         [
-          "Female",
-          "2 ( 50.0)",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "1 ( 12.5)",
-          "2 ( 18.2)",
-          "4 ( 23.5)"
+          "No change",
+          "4 (100.0)",
+          "3 (100.0)",
+          "3 (100.0)",
+          "8 (100.0)",
+          "11 (100.0)",
+          "18 (100.0)"
         ],
         [
-          "Childbearing Potential [1], n (%)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Change - worsening",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
         ],
         [
-          "Yes",
+          "Change - improvement",
           "0 ( 0.0)",
           "0 ( 0.0)",
           "0 ( 0.0)",
-          "1 (100.0)",
-          "1 ( 33.3)",
-          "1 ( 16.7)"
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
         ],
         [
-          "No",
-          "2 (100.0)",
+          "6 Month, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "3 (100.0)",
+          "3 (100.0)",
+          "8 (100.0)",
+          "11 (100.0)",
+          "18 (100.0)"
+        ],
+        [
+          "Change - worsening",
           "0 ( 0.0)",
-          "1 ( 50.0)",
           "0 ( 0.0)",
-          "1 ( 33.3)",
-          "3 ( 50.0)"
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Change - improvement",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "9 Month, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "3 (100.0)",
+          "3 (100.0)",
+          "8 (100.0)",
+          "11 (100.0)",
+          "18 (100.0)"
+        ],
+        [
+          "Change - worsening",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Change - improvement",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "12 Month, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "3 (100.0)",
+          "3 (100.0)",
+          "8 (100.0)",
+          "11 (100.0)",
+          "18 (100.0)"
+        ],
+        [
+          "Change - worsening",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Change - improvement",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
         ]
       ],
-      "page_number": 13,
-      "container_id": "ef30ea97-d38f-4bb1-850a-1e69f1826f4f",
+      "table_markdown": "| Parameter | Cohort 1 | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18) |\n|---|---|---|---|---|---|---|\n| Visit | (N=4) |  |  |  |  |  |\n| Category | n (%) | n (%) | n (%) | n (%) | n (%) | n (%) |\n| Macula |  |  |  |  |  |  |\n| 2 Month, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 3 (100.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 18 (100.0) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| 3 Month, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 3 (100.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 18 (100.0) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| 6 Month, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 3 (100.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 18 (100.0) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| 9 Month, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 3 (100.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 18 (100.0) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| 12 Month, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 3 (100.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 18 (100.0) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |",
+      "page_number": 4,
+      "container_id": "e0241ee5-8d95-43bb-b040-1c6d5fce8671",
       "container_type": "table_group",
-      "container_path": [],
       "source_block_ids": []
     },
     {
-      "block_type": "paragraph",
-      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose. Adult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.\n\nSDTM date: 20AUG2024 14:37\n\n13/14",
-      "page_number": 13,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p13_para_110",
-        "p13_para_111",
-        "p13_para_112",
-        "p13_para_113"
+      "block_type": "heading",
+      "level": 2,
+      "text": "Note:",
+      "page_number": 4,
+      "container_id": "8e0b93dd-b7f9-41f0-bfb0-2c2726ef3763",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Note:"
       ]
     },
     {
       "block_type": "paragraph",
-      "text": "Ocugen, Inc. OCU400- Program name: dm. sas\n\n50\n\nAnalysis date: 27AUG2024 15:08\n\nPage 7 of 7\n\n101\n\nTable 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
-      "page_number": 14,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
+      "text": "MTD= Maximum Tolerated Dose.\n\n% = 100 x n/N'. N' = number of subjects with a measurement at the visit.\n\n[1] Baseline is defined as the last measurement before injection.",
+      "page_number": 4,
+      "container_id": "8e0b93dd-b7f9-41f0-bfb0-2c2726ef3763",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Note:"
+      ],
       "source_block_ids": [
-        "p14_para_1",
-        "p14_para_0",
-        "p14_para_3",
-        "p14_para_4",
-        "p14_para_2",
-        "p14_para_5"
+        "p4_para_160",
+        "p4_para_161",
+        "p4_para_162",
+        "p4_para_164",
+        "p4_para_163"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "SDTM date:",
+      "page_number": 4,
+      "container_id": "b127fda1-7448-4228-8310-21608469a54f",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "SDTM date:"
+      ]
+    },
+    {
+      "block_type": "paragraph",
+      "text": "20AUG2024 14:37 Analysis date: 26AUG2024 11:55",
+      "page_number": 4,
+      "container_id": "b127fda1-7448-4228-8310-21608469a54f",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "SDTM date:"
+      ],
+      "source_block_ids": [
+        "p4_para_160",
+        "p4_para_161",
+        "p4_para_162",
+        "p4_para_164",
+        "p4_para_163"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Program name:",
+      "page_number": 4,
+      "container_id": "18270552-1bfe-458f-b5ce-76d460674770",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Program name:"
+      ]
+    },
+    {
+      "block_type": "paragraph",
+      "text": "effsum1.sas",
+      "page_number": 4,
+      "container_id": "18270552-1bfe-458f-b5ce-76d460674770",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Program name:"
+      ],
+      "source_block_ids": [
+        "p4_para_160",
+        "p4_para_161",
+        "p4_para_162",
+        "p4_para_164",
+        "p4_para_163"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 1,
+      "text": "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+      "page_number": 5,
+      "container_id": "fa59d76b-c720-4b7d-8f48-8466da2f9c1c",
+      "container_type": "table_title",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients"
       ]
     },
     {
       "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.2",
-      "table_context_path": [],
-      "table_context_text": "Ocugen, Inc. OCU400- Program name: dm. sas\n\n50\n\nAnalysis date: 27AUG2024 15:08\n\nPage 7 of 7\n\n101\n\nTable 14.1.3.1.2 Summary of Subject Demographics Per Protocol Population - RP Patients",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.2'. Interpret the rows using the column headers.",
+      "table_context_heading": "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+      "table_context_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients"
+      ],
+      "table_context_text": "",
+      "table_semantic_hint": "This table contains structured data related to 'Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients'. Interpret the rows using the column headers.",
       "caption": null,
       "headers": [
-        "Characteristic Statistic/Category",
+        "Parameter",
         "Cohort 1 (N=4)",
-        "Cohort 2 (N=2)",
+        "Cohort 2 (N=3)",
         "Cohort 3 (N=3)",
-        "",
         "Phase 2 (N=8)",
         "MTD (N=11)",
-        "Total (N=17)"
+        "Total (N=18)"
       ],
       "rows": [
         [
-          "Characteristic Statistic/Category",
-          "Cohort 1 (N=4)",
-          "Cohort 2 (N=2)",
-          "Cohort 3 (N=3)",
-          "Phase 2 (N=8)",
-          "MTD (N=11)",
-          "Total (N=17)"
-        ],
-        [
-          "Subgroup: Mutation Subtype - Autosomal dominant RHO",
+          "Visit",
           "",
           "",
           "",
@@ -3198,7 +1377,16 @@
           ""
         ],
         [
-          "Race, n (%)",
+          "Category",
+          "n (%)",
+          "n (%)",
+          "n (%)",
+          "n (%)",
+          "n (%)",
+          "n (%)"
+        ],
+        [
+          "Choroid",
           "",
           "",
           "",
@@ -3207,25 +1395,61 @@
           ""
         ],
         [
-          "White",
+          "Baseline, since previous assessment [1]",
+          "N'=0",
+          "N'=0",
+          "N'=0",
+          "N'=4",
+          "N'=4",
+          "N'=4"
+        ],
+        [
+          "No change",
+          "",
+          "",
+          "",
           "4 (100.0)",
-          "0 ( 0.0)",
-          "1 ( 33.3)",
-          "3 ( 37.5)",
-          "4 ( 36.4)",
-          "8 ( 47.1)"
+          "4 (100.0)",
+          "4 (100.0)"
         ],
         [
-          "Black or African American",
+          "Change - worsening",
+          "",
+          "",
+          "",
           "0 ( 0.0)",
-          "1 ( 50.0)",
           "0 ( 0.0)",
-          "1 ( 12.5)",
-          "1 ( 9.1)",
-          "2 ( 11.8)"
+          "0 ( 0.0)"
         ],
         [
-          "American Indian or Alaska Native",
+          "Change - improvement",
+          "",
+          "",
+          "",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Day 1, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "3 (100.0)",
+          "3 (100.0)",
+          "8 (100.0)",
+          "11 (100.0)",
+          "18 (100.0)"
+        ],
+        [
+          "Change - worsening",
           "0 ( 0.0)",
           "0 ( 0.0)",
           "0 ( 0.0)",
@@ -3234,34 +1458,7 @@
           "0 ( 0.0)"
         ],
         [
-          "Asian",
-          "0 ( 0.0)",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Native Hawaiian or Other Pacific Islander",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Multiple",
-          "0 ( 0.0)",
-          "0 ( 0.0)\n:unselected:",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)",
-          "0 ( 0.0)"
-        ],
-        [
-          "Other",
+          "Change - improvement",
           "0 ( 0.0)",
           "0 ( 0.0)",
           "0 ( 0.0)",
@@ -3270,7 +1467,25 @@
           "0 ( 0.0)"
         ],
         [
-          "Not Reported",
+          "Day 3, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "3 (100.0)",
+          "3 (100.0)",
+          "8 (100.0)",
+          "11 (100.0)",
+          "18 (100.0)"
+        ],
+        [
+          "Change - worsening",
           "0 ( 0.0)",
           "0 ( 0.0)",
           "0 ( 0.0)",
@@ -3279,87 +1494,181 @@
           "0 ( 0.0)"
         ],
         [
-          "Ethnicity, n (%) Hispanic or Latino",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "1 ( 25.0)",
+          "Change - improvement",
           "0 ( 0.0)",
           "0 ( 0.0)",
-          "2 ( 25.0)",
-          "2 ( 18.2)",
-          "3 ( 17.6)"
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
         ],
         [
-          "Not Hispanic or Latino",
-          "3 ( 75.0)",
-          "1 ( 50.0)",
-          "1 ( 33.3)",
-          "2 ( 25.0)",
-          "3 ( 27.3)",
-          "7 ( 41.2)"
+          "2 Week, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "3 (100.0)",
+          "3 (100.0)",
+          "8 (100.0)",
+          "11 (100.0)",
+          "18 (100.0)"
+        ],
+        [
+          "Change - worsening",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Change - improvement",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "1 Month, since previous assessment",
+          "N'=4",
+          "N'=3",
+          "N'=3",
+          "N'=8",
+          "N'=11",
+          "N'=18"
+        ],
+        [
+          "No change",
+          "4 (100.0)",
+          "3 (100.0)",
+          "3 (100.0)",
+          "8 (100.0)",
+          "11 (100.0)",
+          "18 (100.0)"
+        ],
+        [
+          "Change - worsening",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
+        ],
+        [
+          "Change - improvement",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)",
+          "0 ( 0.0)"
         ]
       ],
-      "page_number": 14,
-      "container_id": "80f9a8fe-e597-4b31-9e3a-4d1b5bdf2b6b",
+      "table_markdown": "| Parameter | Cohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18) |\n|---|---|---|---|---|---|---|\n| Visit |  |  |  |  |  |  |\n| Category | n (%) | n (%) | n (%) | n (%) | n (%) | n (%) |\n| Choroid |  |  |  |  |  |  |\n| Baseline, since previous assessment [1] | N'=0 | N'=0 | N'=0 | N'=4 | N'=4 | N'=4 |\n| No change |  |  |  | 4 (100.0) | 4 (100.0) | 4 (100.0) |\n| Change - worsening |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement |  |  |  | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Day 1, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 3 (100.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 18 (100.0) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Day 3, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 3 (100.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 18 (100.0) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| 2 Week, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 3 (100.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 18 (100.0) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| 1 Month, since previous assessment | N'=4 | N'=3 | N'=3 | N'=8 | N'=11 | N'=18 |\n| No change | 4 (100.0) | 3 (100.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 18 (100.0) |\n| Change - worsening | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |\n| Change - improvement | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) |",
+      "page_number": 5,
+      "container_id": "b991833b-e9f8-4e42-b0c0-7860c3a5019a",
       "container_type": "table_group",
-      "container_path": [],
       "source_block_ids": []
     },
     {
-      "block_type": "paragraph",
-      "text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose. Adult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
-      "page_number": 14,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
-      "source_block_ids": [
-        "p14_para_85",
-        "p14_para_86"
+      "block_type": "heading",
+      "level": 2,
+      "text": "Note:",
+      "page_number": 5,
+      "container_id": "857b3827-ca40-4724-a3e4-a88af9bbc3b2",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Note:"
       ]
     },
     {
-      "block_type": "table",
-      "table_context_heading": "Table 14.1.3.1.2",
-      "table_context_path": [],
-      "table_context_text": "Note: % = 100 x n/N. MTD = Maximum Tolerated Dose. Adult age group is >=18 years, and pediatric age group is 6-17 years.\n\n[1] Denominator for percentage is the number of female subjects.",
-      "table_semantic_hint": "This table contains structured data related to 'Table 14.1.3.1.2'. Interpret the rows using the column headers.",
-      "caption": null,
-      "headers": [],
-      "rows": [
-        [
-          "SDTM date: 20AUG2024",
-          "14:37"
-        ],
-        [
-          "Analysis date: 27AUG2024",
-          "15:08"
-        ]
+      "block_type": "paragraph",
+      "text": "MTD= Maximum Tolerated Dose.\n\n% = 100 x n/N'. N' = number of subjects with a measurement at the visit.\n\n[1] Baseline is defined as the last measurement before injection.",
+      "page_number": 5,
+      "container_id": "857b3827-ca40-4724-a3e4-a88af9bbc3b2",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Note:"
       ],
-      "page_number": 14,
-      "container_id": "9406c2d0-eafa-4ca2-bef7-4c649d6e0a8a",
-      "container_type": "table_group",
-      "container_path": [],
-      "source_block_ids": []
+      "source_block_ids": [
+        "p5_para_150",
+        "p5_para_151",
+        "p5_para_152",
+        "p5_para_154",
+        "p5_para_153"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "SDTM date:",
+      "page_number": 5,
+      "container_id": "3fa507cd-f345-4e91-848b-448ef09540d6",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "SDTM date:"
+      ]
     },
     {
       "block_type": "paragraph",
-      "text": "Program name: dm. sas\n\nAnalysis date: 28AUG2024 16:05\n\nProgram name: lb.sas\n\n14/14",
-      "page_number": 14,
-      "container_id": null,
-      "container_type": null,
-      "container_path": [],
+      "text": "20AUG2024 14:37 Analysis date: 26AUG2024 11:55",
+      "page_number": 5,
+      "container_id": "3fa507cd-f345-4e91-848b-448ef09540d6",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "SDTM date:"
+      ],
       "source_block_ids": [
-        "p14_para_87",
-        "p14_para_93",
-        "p14_para_92",
-        "p14_para_94"
+        "p5_para_150",
+        "p5_para_151",
+        "p5_para_152",
+        "p5_para_154",
+        "p5_para_153"
+      ]
+    },
+    {
+      "block_type": "heading",
+      "level": 2,
+      "text": "Program name:",
+      "page_number": 5,
+      "container_id": "48a36837-8c6e-495b-9374-c81519365d3a",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Program name:"
+      ]
+    },
+    {
+      "block_type": "paragraph",
+      "text": "effsum1.sas",
+      "page_number": 5,
+      "container_id": "48a36837-8c6e-495b-9374-c81519365d3a",
+      "container_type": "section",
+      "container_path": [
+        "Table 14.2.2.5.2 Summary of Indirect Ophthalmoscopy by Visit Change Since Previous Visit in Treated Eye Safety Population - RP Patients",
+        "Program name:"
+      ],
+      "source_block_ids": [
+        "p5_para_150",
+        "p5_para_151",
+        "p5_para_152",
+        "p5_para_154",
+        "p5_para_153"
       ]
     }
   ]

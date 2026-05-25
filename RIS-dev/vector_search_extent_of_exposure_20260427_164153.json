@@ -1,0 +1,416 @@
+{
+  "section": "Extent of exposure",
+  "timestamp": "2026-04-27T16:41:53.653158",
+  "source": {
+    "total_chunks": 16,
+    "results": [
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Treated Eye, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"OD\", \"0 ( 0.0)\", \"2 ( 66.7)\", \"0 ( 0.0)\", \"1 ( 12.5)\", \"1 ( 9.1)\", \"3 ( 16.7)\"]\n[\"OS\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"1 ( 12.5)\", \"2 ( 18.2)\", \"2 ( 11.1)\"]\n[\"Dose Administered (vg/eye)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Low Dose\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Medium Dose\", \"0 ( 0.0)\", \"2 ( 66.7)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"2 11.1)\"]\n[\"High Dose\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"2 ( 25.0)\", \"3 ( 27.3)\", \"3 ( 16.7)\"]\n[\"Other\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Actual Dose Volume Administered (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"2\", \"1\", \"2\", \"3\", \"5\"]\n[\"Mean\", \"\", \"230.0\", \"300.0\", \"300.0\", \"300.0\", \"272.0\"]\n[\"Standard deviation\", \"\", \"42.43\", \"\", \"0.00\", \"0.00\", \"43.82\"]\n[\"Median\", \"\", \"230.0\", \"300.0\", \"300.0\", \"300.0\", \"300.0\"]\n[\"Minimum\", \"\", \"200\", \"300\", \"300\", \"300\", \"200\"]\n[\"Maximum\", \"\", \"260\", \"300\", \"300\", \"300\", \"300\"]\n[\"Length of Time of Vitrectomy (minutes)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"2\", \"1\", \"2\", \"3\", \"5\"]\n[\"Mean\", \"\", \"28.0\", \"39.0\", \"28.5\", \"32.0\", \"30.4\"]\n[\"Standard deviation\", \"\", \"12.73\", \"\", \"21.92\", \"16.64\", \"13.56\"]\n[\"Median\", \"\", \"28.0\", \"39.0\", \"28.5\", \"39.0\", \"37.0\"]\n[\"Minimum\", \"\", \"19\", \"39\", \"13\", \"13\", \"13\"]\n[\"Maximum\", \"\", \"37\", \"39\", \"44\", \"44\", \"44\"]\n[\"MI-OCT Completed with Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"1 ( 12.5)\", \"2 ( 18.2)\", \"3 ( 16.7)\"]\n[\"No\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"1 ( 12.5)\", \"1 ( 9.1)\", \"2 ( 11.1)\"]\n[\"\", \"\", \"\", \"\", \"\", \"\", \"\"]",
+        "text": "Table 14.1.6 Treatment Summary Safety Population - RP Patients\nCohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)\n----------------------------------------\nSubgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  | \nTreated Eye, n (%) |  |  |  |  |  | \nOD | 0 ( 0.0) | 2 ( 66.7) | 0 ( 0.0) | 1 ( 12.5) | 1 ( 9.1) | 3 ( 16.7)\nOS | 0 ( 0.0) | 0 ( 0.0) | 1 ( 33.3) | 1 ( 12.5) | 2 ( 18.2) | 2 ( 11.1)\nDose Administered (vg/eye) |  |  |  |  |  | \nLow Dose | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nMedium Dose | 0 ( 0.0) | 2 ( 66.7) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 2 11.1)\nHigh Dose | 0 ( 0.0) | 0 ( 0.0) | 1 ( 33.3) | 2 ( 25.0) | 3 ( 27.3) | 3 ( 16.7)\nOther | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nActual Dose Volume Administered (microliters) |  |  |  |  |  | \nn | 0 | 2 | 1 | 2 | 3 | 5\nMean |  | 230.0 | 300.0 | 300.0 | 300.0 | 272.0\nStandard deviation |  | 42.43 |  | 0.00 | 0.00 | 43.82\nMedian |  | 230.0 | 300.0 | 300.0 | 300.0 | 300.0\nMinimum |  | 200 | 300 | 300 | 300 | 200\nMaximum |  | 260 | 300 | 300 | 300 | 300\nLength of Time of Vitrectomy (minutes) |  |  |  |  |  | \nn | 0 | 2 | 1 | 2 | 3 | 5\nMean |  | 28.0 | 39.0",
+        "source_block_ids": [],
+        "page_numbers": [
+          39
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "3a586afb-b98b-49de-b6fb-da9ca4765b27",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.01666666753590107
+      },
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Subgroup: Mutation Subtype - Autosomal dominant RHO\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Treated Eye, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"OD\", \"2 ( 50.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"3 37.5)\", \"4 36.4)\", \"6 ( 33.3)\"]\n[\"OS\", \"2 ( 50.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"1 ( 12.5)\", \"1 ( 9.1)\", \"4 ( 22.2)\"]\n[\"Dose Administered (vg/eye)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Low Dose\", \"4 (100.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"4 ( 22.2)\"]\n[\"Medium Dose\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 5.6)\"]\n[\"High Dose\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"4 ( 50.0)\", \"5 ( 45.5)\", \"5 ( 27.8)\"]\n[\"Other\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Actual Dose Volume Administered (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"4\", \"1\", \"1\", \"4\", \"5\", \"10\"]\n[\"Mean\", \"247.5\", \"300.0\", \"300.0\", \"250.0\", \"260.0\", \"259.0\"]\n[\"Standard deviation\", \"67.02\", \"\", \"\", \"100.00\", \"89.44\", \"72.79\"]\n[\"Median\", \"250.0\", \"300.0\", \"300.0\", \"300.0\", \"300.0\", \"300.0\"]\n[\"Minimum\", \"180\", \"300\", \"300\", \"100\", \"100\", \"100\"]\n[\"Maximum\", \"310\", \"300\", \"300\", \"300\", \"300\", \"310\"]\n[\"Length of Time of Vitrectomy (minutes)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"4\", \"1\", \"1\", \"4\", \"5\", \"10\"]\n[\"Mean\", \"52.3\", \"49.0\", \"74.0\", \"55.3\", \"59.0\", \"55.3\"]\n[\"Standard deviation\", \"15.28\", \"\", \"\", \"19.22\", \"18.64\", \"15.76\"]\n[\"Median\", \"50.5\", \"49.0\", \"74.0\", \"56.5\", \"67.0\", \"52.0\"]\n[\"Minimum\", \"36\", \"49\", \"74\", \"33\", \"33\", \"33\"]\n[\"Maximum\", \"72\", \"49\", \"74\", \"75\", \"75\", \"75\"]\n[\"MI-OCT Completed with Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"3 ( 75.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"3 ( 37.5)\", \"4 ( 36.4)\", \"8 ( 44.4)\"]\n[\"No\", \"1 ( 25.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 12.5)\", \"1 ( 9.1)\", \"2 ( 11.1)\"]",
+        "text": "Table 14.1.6 Treatment Summary Safety Population - RP Patients\nCohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)\n----------------------------------------\nSubgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  | \nTreated Eye, n (%) |  |  |  |  |  | \nOD | 2 ( 50.0) | 0 ( 0.0) | 1 ( 33.3) | 3 37.5) | 4 36.4) | 6 ( 33.3)\nOS | 2 ( 50.0) | 1 ( 33.3) | 0 ( 0.0) | 1 ( 12.5) | 1 ( 9.1) | 4 ( 22.2)\nDose Administered (vg/eye) |  |  |  |  |  | \nLow Dose | 4 (100.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 4 ( 22.2)\nMedium Dose | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 5.6)\nHigh Dose | 0 ( 0.0) | 0 ( 0.0) | 1 ( 33.3) | 4 ( 50.0) | 5 ( 45.5) | 5 ( 27.8)\nOther | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nActual Dose Volume Administered (microliters) |  |  |  |  |  | \nn | 4 | 1 | 1 | 4 | 5 | 10\nMean | 247.5 | 300.0 | 300.0 | 250.0 | 260.0 | 259.0\nStandard deviation | 67.02 |  |  | 100.00 | 89.44 | 72.79\nMedian | 250.0 | 300.0 | 300.0 | 300.0 | 300.0 | 300.0\nMinimum | 180 | 300 | 300 | 100 | 100 | 100\nMaximum | 310 | 300 | 300 | 300 | 300 | 310\nLength of Time of Vitrectomy (minutes) |  |  |  |  |  | \nn | 4 | 1 | 1 | 4 | 5 | 10\nMean | 52.3 | 49.0 | 74",
+        "source_block_ids": [],
+        "page_numbers": [
+          43
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "56769ca4-6f59-4b5c-b602-e61f7f2ba10f",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.016393441706895828
+      },
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Complications During the Vitrectomy, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"0 ( 0.0)\", \"2 ( 66.7)\", \"1 ( 33.3)\", \"2 ( 25.0)\", \"3 ( 27.3)\", \"5 ( 27.8)\"]\n[\"Complications from Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"0 ( 0.0)\", \"2 ( 66.7)\", \"1 ( 33.3)\", \"2 ( 25.0)\", \"3 ( 27.3)\", \"5 ( 27.8)\"]\n[\"Foveal Detached?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"1 ( 12.5)\", \"2 18.2)\", \"3 ( 16.7)\"]\n[\"No\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"1 ( 12.5)\", \"1 ( 9.1)\", \"2 ( 11.1)\"]\n[\"If Foveal Detached, was it Reattached? [1], n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"1 (100.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 16.7)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 50.0)\", \"1 (100.0)\", \"2 ( 66.7)\", \"2 ( 33.3)\"]\n[\"Pre-bleb used?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"1 ( 12.5)\", \"2 18.2)\", \"3 ( 16.7)\"]\n[\"No\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"1 ( 12.5)\", \"1 ( 9.1)\", \"2 ( 11.1)\"]\n[\"Pre-bleb Volume (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"1\", \"1\", \"1\", \"2\", \"3\"]\n[\"Mean\", \"\", \"260.0\", \"300.0\", \"5.0\", \"152.5\", \"188.3\"]\n[\"Standard deviation\", \"\", \"\", \"\", \"\", \"208.60\", \"160.03\"]\n[\"Median\", \"\", \"260.0\", \"300.0\", \"5.0\", \"152.5\", \"260.0\"]\n[\"Minimum\", \"\", \"260\", \"300\", \"5\", \"5\", \"5\"]\n[\"Maximum\", \"\", \"260\", \"300\", \"5\", \"300\", \"300\"]\n[\"\", \"\", \"\", \"\", \"\", \"\", \"\"]",
+        "text": "Table 14.1.6 Treatment Summary Safety Population - RP Patients\nCohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)\n----------------------------------------\nSubgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3 |  |  |  |  |  | \nComplications During the Vitrectomy, n (%) |  |  |  |  |  | \nYes | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nNo | 0 ( 0.0) | 2 ( 66.7) | 1 ( 33.3) | 2 ( 25.0) | 3 ( 27.3) | 5 ( 27.8)\nComplications from Subretinal Injection, n (%) |  |  |  |  |  | \nYes | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nNo | 0 ( 0.0) | 2 ( 66.7) | 1 ( 33.3) | 2 ( 25.0) | 3 ( 27.3) | 5 ( 27.8)\nFoveal Detached?, n (%) |  |  |  |  |  | \nYes | 0 ( 0.0) | 1 ( 33.3) | 1 ( 33.3) | 1 ( 12.5) | 2 18.2) | 3 ( 16.7)\nNo | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 1 ( 12.5) | 1 ( 9.1) | 2 ( 11.1)\nIf Foveal Detached, was it Reattached? [1], n (%) |  |  |  |  |  | \nYes | 0 ( 0.0) | 1 (100.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 16.7)\nNo | 0 ( 0.0) | 0 ( 0.0) | 1 ( 50.0) | 1 (100.0) | 2 ( 66.7) | 2 ( 33.3)\nPre-bleb used?, n (%) |  |  |  |  |  | \nYes | 0 ( 0.0) | 1 ( 33.3) | 1 ( 33.3) | 1 ( 12.5) | 2 18.2) | 3",
+        "source_block_ids": [],
+        "page_numbers": [
+          40
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "7bc72c62-33ee-48d5-97a3-b81c1896077e",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.016129031777381897
+      },
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Subgroup: Mutation Subtype - Autosomal dominant NR2E3\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Treated Eye, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"OD\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"1 ( 12.5)\", \"2 ( 18.2)\", \"2 11.1)\"]\n[\"OS\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 12.5)\", \"1 ( 9.1)\", \"1 ( 5.6)\"]\n[\"Dose Administered (vg/eye)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Low Dose\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Medium Dose\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"High Dose\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"2 ( 25.0)\", \"3 ( 27.3)\", \"3 ( 16.7)\"]\n[\"Other\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Actual Dose Volume Administered (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"0\", \"1\", \"2\", \"3\", \"3\"]\n[\"Mean\", \"\", \"\", \"200.0\", \"300.0\", \"266.7\", \"266.7\"]\n[\"Standard deviation\", \"\", \"\", \"\", \"0.00\", \"57.74\", \"57.74\"]\n[\"Median\", \"\", \"\", \"200.0\", \"300.0\", \"300.0\", \"300.0\"]\n[\"Minimum\", \"\", \"\", \"200\", \"300\", \"200\", \"200\"]\n[\"Maximum\", \"\", \"\", \"200\", \"300\", \"300\", \"300\"]\n[\"Length of Time of Vitrectomy (minutes)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"0\", \"1\", \"2\", \"3\", \"3\"]\n[\"Mean\", \"\", \"\", \"48.0\", \"64.5\", \"59.0\", \"59.0\"]\n[\"Standard deviation\", \"\", \"\", \"\", \"20.51\", \"17.35\", \"17.35\"]\n[\"Median\", \"\", \"\", \"48.0\", \"64.5\", \"50.0\", \"50.0\"]\n[\"Minimum\", \"\", \"\", \"48\", \"50\", \"48\", \"48\"]\n[\"Maximum\", \"\", \"\", \"48\", \"79\", \"79\", \"79\"]\n[\"MI-OCT Completed with Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"1 ( 9.1)\", \"1 ( 5.6)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"2 ( 25.0)\", \"2 ( 18.2)\", \"2 ( 11.1)\"]\n[\"\", \"\", \"\", \"\", \"\", \"\", \"\"]",
+        "text": "Table 14.1.6 Treatment Summary Safety Population - RP Patients\nCohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)\n----------------------------------------\nSubgroup: Mutation Subtype - Autosomal dominant NR2E3 |  |  |  |  |  | \nTreated Eye, n (%) |  |  |  |  |  | \nOD | 0 ( 0.0) | 0 ( 0.0) | 1 ( 33.3) | 1 ( 12.5) | 2 ( 18.2) | 2 11.1)\nOS | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 12.5) | 1 ( 9.1) | 1 ( 5.6)\nDose Administered (vg/eye) |  |  |  |  |  | \nLow Dose | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nMedium Dose | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nHigh Dose | 0 ( 0.0) | 0 ( 0.0) | 1 ( 33.3) | 2 ( 25.0) | 3 ( 27.3) | 3 ( 16.7)\nOther | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nActual Dose Volume Administered (microliters) |  |  |  |  |  | \nn | 0 | 0 | 1 | 2 | 3 | 3\nMean |  |  | 200.0 | 300.0 | 266.7 | 266.7\nStandard deviation |  |  |  | 0.00 | 57.74 | 57.74\nMedian |  |  | 200.0 | 300.0 | 300.0 | 300.0\nMinimum |  |  | 200 | 300 | 200 | 200\nMaximum |  |  | 200 | 300 | 300 | 300\nLength of Time of Vitrectomy (minutes) |  |  |  |  |  | \nn | 0 | 0 | 1 | 2 | 3 | 3\nMean |  |  | 48.0 | 64.5 | 59.0 | 59.0\nStandard deviation |",
+        "source_block_ids": [],
+        "page_numbers": [
+          41
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "7725afc7-da84-48ea-bc76-e026c99b37e3",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.01587301678955555
+      },
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Complications During the Vitrectomy,\", \"n (%)\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"4 (100.0)\", \"3 (100.0)\", \"3 (100.0)\", \"8 (100.0)\", \"11 (100.0)\", \"18 (100.0)\"]\n[\"Complications from Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"1 ( 25.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 5.6)\"]\n[\"No\", \"3 ( 75.0)\", \"3 (100.0)\", \"3 (100.0)\", \"8 (100.0)\", \"11 (100.0)\", \"17 ( 94.4)\"]\n[\"Foveal Detached?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"2 ( 50.0)\", \"1 ( 33.3)\", \"2 ( 66.7)\", \"1 ( 12.5)\", \"3 ( 27.3)\", \"6 ( 33.3)\"]\n[\"No\", \"2 ( 50.0)\", \"2 ( 66.7)\", \"1 ( 33.3)\", \"7 ( 87.5)\", \"8 ( 72.7)\", \"12 ( 66.7)\"]\n[\"If Foveal Detached, was it Reattached? [1], n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"2 (100.0)\", \"1 (100.0)\", \"1 ( 50.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"4 ( 66.7)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 50.0)\", \"1 (100.0)\", \"2 ( 66.7)\", \"2 ( 33.3)\"]\n[\"Pre-bleb used?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"1 ( 12.5)\", \"2 ( 18.2)\", \"3 ( 16.7)\"]\n[\"No\", \"4 (100.0)\", \"2 ( 66.7)\", \"2 ( 66.7)\", \"7 ( 87.5)\", \"9 ( 81.8)\", \"15 ( 83.3)\"]\n[\"Pre-bleb Volume (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"1\", \"1\", \"1\", \"2\", \"3\"]\n[\"Mean\", \"\", \"260.0\", \"300.0\", \"5.0\", \"152.5\", \"188.3\"]\n[\"Standard deviation\", \"\", \"\", \"\", \"\", \"208.60\", \"160.03\"]\n[\"Median\", \"\", \"260.0\", \"300.0\", \"5.0\", \"152.5\", \"260.0\"]\n[\"Minimum\", \"\", \"260\", \"300\", \"5\", \"5\", \"5\"]\n[\"Maximum\", \"\", \"260\", \"300\", \"5\", \"300\", \"300\"]\n[\"\", \"\", \"\", \"\", \"\", \"\", \"\"]",
+        "text": "Table 14.1.6 Treatment Summary Safety Population - RP Patients\nCohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)\n----------------------------------------\nComplications During the Vitrectomy, | n (%) |  |  |  |  | \nYes | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nNo | 4 (100.0) | 3 (100.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 18 (100.0)\nComplications from Subretinal Injection, n (%) |  |  |  |  |  | \nYes | 1 ( 25.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 5.6)\nNo | 3 ( 75.0) | 3 (100.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 17 ( 94.4)\nFoveal Detached?, n (%) |  |  |  |  |  | \nYes | 2 ( 50.0) | 1 ( 33.3) | 2 ( 66.7) | 1 ( 12.5) | 3 ( 27.3) | 6 ( 33.3)\nNo | 2 ( 50.0) | 2 ( 66.7) | 1 ( 33.3) | 7 ( 87.5) | 8 ( 72.7) | 12 ( 66.7)\nIf Foveal Detached, was it Reattached? [1], n (%) |  |  |  |  |  | \nYes | 2 (100.0) | 1 (100.0) | 1 ( 50.0) | 0 ( 0.0) | 1 ( 33.3) | 4 ( 66.7)\nNo | 0 ( 0.0) | 0 ( 0.0) | 1 ( 50.0) | 1 (100.0) | 2 ( 66.7) | 2 ( 33.3)\nPre-bleb used?, n (%) |  |  |  |  |  | \nYes | 0 ( 0.0) | 1 ( 33.3) | 1 ( 33.3) | 1 ( 12.5) | 2 ( 18.2) | 3 ( 16.7)\nNo | 4 (100.0) | 2 ( 66.7) | 2 ( 66.7) | 7 ( 87.5",
+        "source_block_ids": [],
+        "page_numbers": [
+          38
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "a9e3a1a8-352f-4894-b8a1-6bc267097228",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.015625
+      },
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Subgroup: Mutation Subtype - Autosomal dominant NR2E3\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Complications During the Vitrectomy, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"2 ( 25.0)\", \"3 ( 27.3)\", \"3 ( 16.7)\"]\n[\"Complications from Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"2 ( 25.0)\", \"3 ( 27.3)\", \"3 ( 16.7)\"]\n[\"Foveal Detached?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"1 ( 9.1)\", \"1 ( 5.6)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"2 ( 25.0)\", \"2 18.2)\", \"2 ( 11.1)\"]\n[\"If Foveal Detached, was it Reattached? [1], n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 50.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"1 ( 16.7)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Pre-bleb used?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"2 ( 25.0)\", \"3 ( 27.3)\", \"3 ( 16.7)\"]\n[\"Pre-bleb Volume (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\"]\n[\"Mean\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Standard deviation\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Median\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Minimum\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Maximum\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"\", \"\", \"\", \"\", \"\", \"\", \"\"]",
+        "text": "Table 14.1.6 Treatment Summary Safety Population - RP Patients\nCohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)\n----------------------------------------\nSubgroup: Mutation Subtype - Autosomal dominant NR2E3 |  |  |  |  |  | \nComplications During the Vitrectomy, n (%) |  |  |  |  |  | \nYes | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nNo | 0 ( 0.0) | 0 ( 0.0) | 1 ( 33.3) | 2 ( 25.0) | 3 ( 27.3) | 3 ( 16.7)\nComplications from Subretinal Injection, n (%) |  |  |  |  |  | \nYes | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nNo | 0 ( 0.0) | 0 ( 0.0) | 1 ( 33.3) | 2 ( 25.0) | 3 ( 27.3) | 3 ( 16.7)\nFoveal Detached?, n (%) |  |  |  |  |  | \nYes | 0 ( 0.0) | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 1 ( 9.1) | 1 ( 5.6)\nNo | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 2 ( 25.0) | 2 18.2) | 2 ( 11.1)\nIf Foveal Detached, was it Reattached? [1], n (%) |  |  |  |  |  | \nYes | 0 ( 0.0) | 0 ( 0.0) | 1 ( 50.0) | 0 ( 0.0) | 1 ( 33.3) | 1 ( 16.7)\nNo | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nPre-bleb used?, n (%) |  |  |  |  |  | \nYes | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( ",
+        "source_block_ids": [],
+        "page_numbers": [
+          42
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "f6108706-9476-4b89-a798-35c11c204196",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.015384615398943424
+      },
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Treated Eye, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"OD\", \"2 ( 50.0)\", \"2 ( 66.7)\", \"2 ( 66.7)\", \"5 ( 62.5)\", \"7 ( 63.6)\", \"11 ( 61.1)\"]\n[\"OS\", \"2 ( 50.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"3 ( 37.5)\", \"4 ( 36.4)\", \"7 ( 38.9)\"]\n[\"Dose Administered (vg/eye)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Low Dose\", \"4 (100.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"4 ( 22.2)\"]\n[\"Medium Dose\", \"0 ( 0.0)\", \"3 (100.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"3 ( 16.7)\"]\n[\"High Dose\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"3 (100.0)\", \"8 (100.0)\", \"11 (100.0)\", \"11 ( 61.1)\"]\n[\"Other\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Actual Dose Volume Administered (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"4\", \"3\", \"3\", \"8\", \"11\", \"18\"]\n[\"Mean\", \"247.5\", \"253.3\", \"266.7\", \"275.0\", \"272.7\", \"263.9\"]\n[\"Standard deviation\", \"67.02\", \"50.33\", \"57.74\", \"70.71\", \"64.67\", \"60.70\"]\n[\"Median\", \"250.0\", \"260.0\", \"300.0\", \"300.0\", \"300.0\", \"300.0\"]\n[\"Minimum\", \"180\", \"200\", \"200\", \"100\", \"100\", \"100\"]\n[\"Maximum\", \"310\", \"300\", \"300\", \"300\", \"300\", \"310\"]\n[\"Length of Time of Vitrectomy (minutes)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"4\", \"3\", \"3\", \"8\", \"11\", \"18\"]\n[\"Mean\", \"52.3\", \"35.0\", \"53.7\", \"50.9\", \"51.6\", \"49.0\"]\n[\"Standard deviation\", \"15.28\", \"15.10\", \"18.18\", \"22.23\", \"20.34\", \"18.79\"]\n[\"Median\", \"50.5\", \"37.0\", \"48.0\", \"48.0\", \"48.0\", \"47.0\"]\n[\"Minimum\", \"36\", \"19\", \"39\", \"13\", \"13\", \"13\"]\n[\"Maximum\", \"72\", \"49\", \"74\", \"79\", \"79\", \"79\"]\n[\"MI-OCT Completed with Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"3 ( 75.0)\", \"2 ( 66.7)\", \"3 (100.0)\", \"4 ( 50.0)\", \"7 ( 63.6)\", \"12 ( 66.7)\"]\n[\"No\", \"1 ( 25.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"4 ( 50.0)\", \"4 ( 36.4)\", \"6 ( 33.3)\"]",
+        "text": "Table 14.1.6 Treatment Summary Safety Population - RP Patients\nCohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)\n----------------------------------------\nTreated Eye, n (%) |  |  |  |  |  | \nOD | 2 ( 50.0) | 2 ( 66.7) | 2 ( 66.7) | 5 ( 62.5) | 7 ( 63.6) | 11 ( 61.1)\nOS | 2 ( 50.0) | 1 ( 33.3) | 1 ( 33.3) | 3 ( 37.5) | 4 ( 36.4) | 7 ( 38.9)\nDose Administered (vg/eye) |  |  |  |  |  | \nLow Dose | 4 (100.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 4 ( 22.2)\nMedium Dose | 0 ( 0.0) | 3 (100.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 3 ( 16.7)\nHigh Dose | 0 ( 0.0) | 0 ( 0.0) | 3 (100.0) | 8 (100.0) | 11 (100.0) | 11 ( 61.1)\nOther | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nActual Dose Volume Administered (microliters) |  |  |  |  |  | \nn | 4 | 3 | 3 | 8 | 11 | 18\nMean | 247.5 | 253.3 | 266.7 | 275.0 | 272.7 | 263.9\nStandard deviation | 67.02 | 50.33 | 57.74 | 70.71 | 64.67 | 60.70\nMedian | 250.0 | 260.0 | 300.0 | 300.0 | 300.0 | 300.0\nMinimum | 180 | 200 | 200 | 100 | 100 | 100\nMaximum | 310 | 300 | 300 | 300 | 300 | 310\nLength of Time of Vitrectomy (minutes) |  |  |  |  |  | \nn | 4 | 3 | 3 | 8 | 11 | 18\nMean | 52.3 | 35.0 | 53.7 | 50.9 | 51.6 | 49.0\nStandard deviation",
+        "source_block_ids": [],
+        "page_numbers": [
+          37
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "d3ec1b36-2cb6-4ac0-910e-66c74114cbb7",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.01515151560306549
+      },
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Subgroup: Mutation Subtype - Autosomal dominant RHO\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Complications During the Vitrectomy, n\", \"(%)\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"4 (100.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"4 ( 50.0)\", \"5 ( 45.5)\", \"10 ( 55.6)\"]\n[\"Complications from Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"1 ( 25.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 5.6)\"]\n[\"No\", \"3 ( 75.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"4 ( 50.0)\", \"5 ( 45.5)\", \"9 ( 50.0)\"]\n[\"Foveal Detached?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"2 ( 50.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"2 ( 11.1)\"]\n[\"No\", \"2 ( 50.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"4 ( 50.0)\", \"5 ( 45.5)\", \"8 ( 44.4)\"]\n[\"If Foveal Detached, was it Reattached? [1], n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"2 (100.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"2 33.3)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Pre-bleb used?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"4 (100.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"4 ( 50.0)\", \"5 ( 45.5)\", \"10 ( 55.6)\"]\n[\"Pre-bleb Volume (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\"]\n[\"Mean\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Standard deviation\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Median\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Minimum\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Maximum\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"\", \"\", \"\", \"\", \"\", \"\", \"\"]",
+        "text": "Table 14.1.6 Treatment Summary Safety Population - RP Patients\nCohort 1 (N=4) | Cohort 2 (N=3) | Cohort 3 (N=3) | Phase 2 (N=8) | MTD (N=11) | Total (N=18)\n----------------------------------------\nSubgroup: Mutation Subtype - Autosomal dominant RHO |  |  |  |  |  | \nComplications During the Vitrectomy, n | (%) |  |  |  |  | \nYes | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nNo | 4 (100.0) | 1 ( 33.3) | 1 ( 33.3) | 4 ( 50.0) | 5 ( 45.5) | 10 ( 55.6)\nComplications from Subretinal Injection, n (%) |  |  |  |  |  | \nYes | 1 ( 25.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 5.6)\nNo | 3 ( 75.0) | 1 ( 33.3) | 1 ( 33.3) | 4 ( 50.0) | 5 ( 45.5) | 9 ( 50.0)\nFoveal Detached?, n (%) |  |  |  |  |  | \nYes | 2 ( 50.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 2 ( 11.1)\nNo | 2 ( 50.0) | 1 ( 33.3) | 1 ( 33.3) | 4 ( 50.0) | 5 ( 45.5) | 8 ( 44.4)\nIf Foveal Detached, was it Reattached? [1], n (%) |  |  |  |  |  | \nYes | 2 (100.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 2 33.3)\nNo | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nPre-bleb used?, n (%) |  |  |  |  |  | \nYes | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0)\nNo",
+        "source_block_ids": [],
+        "page_numbers": [
+          44
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "f08aa731-52d8-4ae0-8327-609f4f123e61",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.014925372786819935
+      },
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Treated Eye, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"OD\", \"0 ( 0.0)\", \"2 ( 66.7)\", \"0 ( 0.0)\", \"1 ( 12.5)\", \"1 ( 9.1)\", \"3 ( 16.7)\"]\n[\"OS\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"1 ( 12.5)\", \"2 ( 18.2)\", \"2 ( 11.1)\"]\n[\"Dose Administered (vg/eye)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Low Dose\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Medium Dose\", \"0 ( 0.0)\", \"2 ( 66.7)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"2 11.1)\"]\n[\"High Dose\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"2 ( 25.0)\", \"3 ( 27.3)\", \"3 ( 16.7)\"]\n[\"Other\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Actual Dose Volume Administered (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"2\", \"1\", \"2\", \"3\", \"5\"]\n[\"Mean\", \"\", \"230.0\", \"300.0\", \"300.0\", \"300.0\", \"272.0\"]\n[\"Standard deviation\", \"\", \"42.43\", \"\", \"0.00\", \"0.00\", \"43.82\"]\n[\"Median\", \"\", \"230.0\", \"300.0\", \"300.0\", \"300.0\", \"300.0\"]\n[\"Minimum\", \"\", \"200\", \"300\", \"300\", \"300\", \"200\"]\n[\"Maximum\", \"\", \"260\", \"300\", \"300\", \"300\", \"300\"]\n[\"Length of Time of Vitrectomy (minutes)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"2\", \"1\", \"2\", \"3\", \"5\"]\n[\"Mean\", \"\", \"28.0\", \"39.0\", \"28.5\", \"32.0\", \"30.4\"]\n[\"Standard deviation\", \"\", \"12.73\", \"\", \"21.92\", \"16.64\", \"13.56\"]\n[\"Median\", \"\", \"28.0\", \"39.0\", \"28.5\", \"39.0\", \"37.0\"]\n[\"Minimum\", \"\", \"19\", \"39\", \"13\", \"13\", \"13\"]\n[\"Maximum\", \"\", \"37\", \"39\", \"44\", \"44\", \"44\"]\n[\"MI-OCT Completed with Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"1 ( 12.5)\", \"2 ( 18.2)\", \"3 ( 16.7)\"]\n[\"No\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"1 ( 12.5)\", \"1 ( 9.1)\", \"2 ( 11.1)\"]\n[\"\", \"\", \"\", \"\", \"\", \"\", \"\"]",
+        "text": " | 28.5 | 32.0 | 30.4\nStandard deviation |  | 12.73 |  | 21.92 | 16.64 | 13.56\nMedian |  | 28.0 | 39.0 | 28.5 | 39.0 | 37.0\nMinimum |  | 19 | 39 | 13 | 13 | 13\nMaximum |  | 37 | 39 | 44 | 44 | 44\nMI-OCT Completed with Subretinal Injection, n (%) |  |  |  |  |  | \nYes | 0 ( 0.0) | 1 ( 33.3) | 1 ( 33.3) | 1 ( 12.5) | 2 ( 18.2) | 3 ( 16.7)\nNo | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 1 ( 12.5) | 1 ( 9.1) | 2 ( 11.1)\n |  |  |  |  |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          39
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "b3ad9e6c-2b4e-49d7-b1cd-ae9454a425a3",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.014705882407724857
+      },
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Complications During the Vitrectomy,\", \"n (%)\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"4 (100.0)\", \"3 (100.0)\", \"3 (100.0)\", \"8 (100.0)\", \"11 (100.0)\", \"18 (100.0)\"]\n[\"Complications from Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"1 ( 25.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 5.6)\"]\n[\"No\", \"3 ( 75.0)\", \"3 (100.0)\", \"3 (100.0)\", \"8 (100.0)\", \"11 (100.0)\", \"17 ( 94.4)\"]\n[\"Foveal Detached?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"2 ( 50.0)\", \"1 ( 33.3)\", \"2 ( 66.7)\", \"1 ( 12.5)\", \"3 ( 27.3)\", \"6 ( 33.3)\"]\n[\"No\", \"2 ( 50.0)\", \"2 ( 66.7)\", \"1 ( 33.3)\", \"7 ( 87.5)\", \"8 ( 72.7)\", \"12 ( 66.7)\"]\n[\"If Foveal Detached, was it Reattached? [1], n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"2 (100.0)\", \"1 (100.0)\", \"1 ( 50.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"4 ( 66.7)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 50.0)\", \"1 (100.0)\", \"2 ( 66.7)\", \"2 ( 33.3)\"]\n[\"Pre-bleb used?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"1 ( 12.5)\", \"2 ( 18.2)\", \"3 ( 16.7)\"]\n[\"No\", \"4 (100.0)\", \"2 ( 66.7)\", \"2 ( 66.7)\", \"7 ( 87.5)\", \"9 ( 81.8)\", \"15 ( 83.3)\"]\n[\"Pre-bleb Volume (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"1\", \"1\", \"1\", \"2\", \"3\"]\n[\"Mean\", \"\", \"260.0\", \"300.0\", \"5.0\", \"152.5\", \"188.3\"]\n[\"Standard deviation\", \"\", \"\", \"\", \"\", \"208.60\", \"160.03\"]\n[\"Median\", \"\", \"260.0\", \"300.0\", \"5.0\", \"152.5\", \"260.0\"]\n[\"Minimum\", \"\", \"260\", \"300\", \"5\", \"5\", \"5\"]\n[\"Maximum\", \"\", \"260\", \"300\", \"5\", \"300\", \"300\"]\n[\"\", \"\", \"\", \"\", \"\", \"\", \"\"]",
+        "text": ") | 9 ( 81.8) | 15 ( 83.3)\nPre-bleb Volume (microliters) |  |  |  |  |  | \nn | 0 | 1 | 1 | 1 | 2 | 3\nMean |  | 260.0 | 300.0 | 5.0 | 152.5 | 188.3\nStandard deviation |  |  |  |  | 208.60 | 160.03\nMedian |  | 260.0 | 300.0 | 5.0 | 152.5 | 260.0\nMinimum |  | 260 | 300 | 5 | 5 | 5\nMaximum |  | 260 | 300 | 5 | 300 | 300\n |  |  |  |  |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          38
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "46a2cd23-dfc4-4224-96e5-240192a357e6",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.014492753893136978
+      },
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Subgroup: Mutation Subtype - Autosomal dominant NR2E3\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Complications During the Vitrectomy, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"2 ( 25.0)\", \"3 ( 27.3)\", \"3 ( 16.7)\"]\n[\"Complications from Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"2 ( 25.0)\", \"3 ( 27.3)\", \"3 ( 16.7)\"]\n[\"Foveal Detached?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"1 ( 9.1)\", \"1 ( 5.6)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"2 ( 25.0)\", \"2 18.2)\", \"2 ( 11.1)\"]\n[\"If Foveal Detached, was it Reattached? [1], n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 50.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"1 ( 16.7)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Pre-bleb used?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"2 ( 25.0)\", \"3 ( 27.3)\", \"3 ( 16.7)\"]\n[\"Pre-bleb Volume (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\"]\n[\"Mean\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Standard deviation\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Median\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Minimum\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Maximum\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"\", \"\", \"\", \"\", \"\", \"\", \"\"]",
+        "text": "0.0)\nNo | 0 ( 0.0) | 0 ( 0.0) | 1 ( 33.3) | 2 ( 25.0) | 3 ( 27.3) | 3 ( 16.7)\nPre-bleb Volume (microliters) |  |  |  |  |  | \nn | 0 | 0 | 0 | 0 | 0 | 0\nMean |  |  |  |  |  | \nStandard deviation |  |  |  |  |  | \nMedian |  |  |  |  |  | \nMinimum |  |  |  |  |  | \nMaximum |  |  |  |  |  | \n |  |  |  |  |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          42
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "4bef32d4-b5de-4127-aac7-855d097bcaf8",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.014285714365541935
+      },
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Subgroup: Mutation Subtype - Biallelic autosomal recessive NR2E3\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Complications During the Vitrectomy, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"0 ( 0.0)\", \"2 ( 66.7)\", \"1 ( 33.3)\", \"2 ( 25.0)\", \"3 ( 27.3)\", \"5 ( 27.8)\"]\n[\"Complications from Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"0 ( 0.0)\", \"2 ( 66.7)\", \"1 ( 33.3)\", \"2 ( 25.0)\", \"3 ( 27.3)\", \"5 ( 27.8)\"]\n[\"Foveal Detached?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"1 ( 12.5)\", \"2 18.2)\", \"3 ( 16.7)\"]\n[\"No\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"1 ( 12.5)\", \"1 ( 9.1)\", \"2 ( 11.1)\"]\n[\"If Foveal Detached, was it Reattached? [1], n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"1 (100.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 16.7)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 50.0)\", \"1 (100.0)\", \"2 ( 66.7)\", \"2 ( 33.3)\"]\n[\"Pre-bleb used?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"1 ( 12.5)\", \"2 18.2)\", \"3 ( 16.7)\"]\n[\"No\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"1 ( 12.5)\", \"1 ( 9.1)\", \"2 ( 11.1)\"]\n[\"Pre-bleb Volume (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"1\", \"1\", \"1\", \"2\", \"3\"]\n[\"Mean\", \"\", \"260.0\", \"300.0\", \"5.0\", \"152.5\", \"188.3\"]\n[\"Standard deviation\", \"\", \"\", \"\", \"\", \"208.60\", \"160.03\"]\n[\"Median\", \"\", \"260.0\", \"300.0\", \"5.0\", \"152.5\", \"260.0\"]\n[\"Minimum\", \"\", \"260\", \"300\", \"5\", \"5\", \"5\"]\n[\"Maximum\", \"\", \"260\", \"300\", \"5\", \"300\", \"300\"]\n[\"\", \"\", \"\", \"\", \"\", \"\", \"\"]",
+        "text": " ( 16.7)\nNo | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 1 ( 12.5) | 1 ( 9.1) | 2 ( 11.1)\nPre-bleb Volume (microliters) |  |  |  |  |  | \nn | 0 | 1 | 1 | 1 | 2 | 3\nMean |  | 260.0 | 300.0 | 5.0 | 152.5 | 188.3\nStandard deviation |  |  |  |  | 208.60 | 160.03\nMedian |  | 260.0 | 300.0 | 5.0 | 152.5 | 260.0\nMinimum |  | 260 | 300 | 5 | 5 | 5\nMaximum |  | 260 | 300 | 5 | 300 | 300\n |  |  |  |  |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          40
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "a1699ad4-4ba7-400a-9733-3a194183b4d2",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.014084506779909134
+      },
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Subgroup: Mutation Subtype - Autosomal dominant NR2E3\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Treated Eye, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"OD\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"1 ( 12.5)\", \"2 ( 18.2)\", \"2 11.1)\"]\n[\"OS\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 12.5)\", \"1 ( 9.1)\", \"1 ( 5.6)\"]\n[\"Dose Administered (vg/eye)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Low Dose\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Medium Dose\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"High Dose\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"2 ( 25.0)\", \"3 ( 27.3)\", \"3 ( 16.7)\"]\n[\"Other\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Actual Dose Volume Administered (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"0\", \"1\", \"2\", \"3\", \"3\"]\n[\"Mean\", \"\", \"\", \"200.0\", \"300.0\", \"266.7\", \"266.7\"]\n[\"Standard deviation\", \"\", \"\", \"\", \"0.00\", \"57.74\", \"57.74\"]\n[\"Median\", \"\", \"\", \"200.0\", \"300.0\", \"300.0\", \"300.0\"]\n[\"Minimum\", \"\", \"\", \"200\", \"300\", \"200\", \"200\"]\n[\"Maximum\", \"\", \"\", \"200\", \"300\", \"300\", \"300\"]\n[\"Length of Time of Vitrectomy (minutes)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"0\", \"1\", \"2\", \"3\", \"3\"]\n[\"Mean\", \"\", \"\", \"48.0\", \"64.5\", \"59.0\", \"59.0\"]\n[\"Standard deviation\", \"\", \"\", \"\", \"20.51\", \"17.35\", \"17.35\"]\n[\"Median\", \"\", \"\", \"48.0\", \"64.5\", \"50.0\", \"50.0\"]\n[\"Minimum\", \"\", \"\", \"48\", \"50\", \"48\", \"48\"]\n[\"Maximum\", \"\", \"\", \"48\", \"79\", \"79\", \"79\"]\n[\"MI-OCT Completed with Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"1 ( 9.1)\", \"1 ( 5.6)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"2 ( 25.0)\", \"2 ( 18.2)\", \"2 ( 11.1)\"]\n[\"\", \"\", \"\", \"\", \"\", \"\", \"\"]",
+        "text": "  |  |  | 20.51 | 17.35 | 17.35\nMedian |  |  | 48.0 | 64.5 | 50.0 | 50.0\nMinimum |  |  | 48 | 50 | 48 | 48\nMaximum |  |  | 48 | 79 | 79 | 79\nMI-OCT Completed with Subretinal Injection, n (%) |  |  |  |  |  | \nYes | 0 ( 0.0) | 0 ( 0.0) | 1 ( 33.3) | 0 ( 0.0) | 1 ( 9.1) | 1 ( 5.6)\nNo | 0 ( 0.0) | 0 ( 0.0) | 0 ( 0.0) | 2 ( 25.0) | 2 ( 18.2) | 2 ( 11.1)\n |  |  |  |  |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          41
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "4a2737a3-6145-4eff-ba81-de7ed38811bc",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.013888888992369175
+      },
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Treated Eye, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"OD\", \"2 ( 50.0)\", \"2 ( 66.7)\", \"2 ( 66.7)\", \"5 ( 62.5)\", \"7 ( 63.6)\", \"11 ( 61.1)\"]\n[\"OS\", \"2 ( 50.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"3 ( 37.5)\", \"4 ( 36.4)\", \"7 ( 38.9)\"]\n[\"Dose Administered (vg/eye)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Low Dose\", \"4 (100.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"4 ( 22.2)\"]\n[\"Medium Dose\", \"0 ( 0.0)\", \"3 (100.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"3 ( 16.7)\"]\n[\"High Dose\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"3 (100.0)\", \"8 (100.0)\", \"11 (100.0)\", \"11 ( 61.1)\"]\n[\"Other\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Actual Dose Volume Administered (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"4\", \"3\", \"3\", \"8\", \"11\", \"18\"]\n[\"Mean\", \"247.5\", \"253.3\", \"266.7\", \"275.0\", \"272.7\", \"263.9\"]\n[\"Standard deviation\", \"67.02\", \"50.33\", \"57.74\", \"70.71\", \"64.67\", \"60.70\"]\n[\"Median\", \"250.0\", \"260.0\", \"300.0\", \"300.0\", \"300.0\", \"300.0\"]\n[\"Minimum\", \"180\", \"200\", \"200\", \"100\", \"100\", \"100\"]\n[\"Maximum\", \"310\", \"300\", \"300\", \"300\", \"300\", \"310\"]\n[\"Length of Time of Vitrectomy (minutes)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"4\", \"3\", \"3\", \"8\", \"11\", \"18\"]\n[\"Mean\", \"52.3\", \"35.0\", \"53.7\", \"50.9\", \"51.6\", \"49.0\"]\n[\"Standard deviation\", \"15.28\", \"15.10\", \"18.18\", \"22.23\", \"20.34\", \"18.79\"]\n[\"Median\", \"50.5\", \"37.0\", \"48.0\", \"48.0\", \"48.0\", \"47.0\"]\n[\"Minimum\", \"36\", \"19\", \"39\", \"13\", \"13\", \"13\"]\n[\"Maximum\", \"72\", \"49\", \"74\", \"79\", \"79\", \"79\"]\n[\"MI-OCT Completed with Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"3 ( 75.0)\", \"2 ( 66.7)\", \"3 (100.0)\", \"4 ( 50.0)\", \"7 ( 63.6)\", \"12 ( 66.7)\"]\n[\"No\", \"1 ( 25.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"4 ( 50.0)\", \"4 ( 36.4)\", \"6 ( 33.3)\"]",
+        "text": " | 15.28 | 15.10 | 18.18 | 22.23 | 20.34 | 18.79\nMedian | 50.5 | 37.0 | 48.0 | 48.0 | 48.0 | 47.0\nMinimum | 36 | 19 | 39 | 13 | 13 | 13\nMaximum | 72 | 49 | 74 | 79 | 79 | 79\nMI-OCT Completed with Subretinal Injection, n (%) |  |  |  |  |  | \nYes | 3 ( 75.0) | 2 ( 66.7) | 3 (100.0) | 4 ( 50.0) | 7 ( 63.6) | 12 ( 66.7)\nNo | 1 ( 25.0) | 1 ( 33.3) | 0 ( 0.0) | 4 ( 50.0) | 4 ( 36.4) | 6 ( 33.3)",
+        "source_block_ids": [],
+        "page_numbers": [
+          37
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "29b0550e-2a5e-43d6-8b59-2c913b924b8d",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.013698630034923553
+      },
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Subgroup: Mutation Subtype - Autosomal dominant RHO\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Complications During the Vitrectomy, n\", \"(%)\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"4 (100.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"4 ( 50.0)\", \"5 ( 45.5)\", \"10 ( 55.6)\"]\n[\"Complications from Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"1 ( 25.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 5.6)\"]\n[\"No\", \"3 ( 75.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"4 ( 50.0)\", \"5 ( 45.5)\", \"9 ( 50.0)\"]\n[\"Foveal Detached?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"2 ( 50.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"2 ( 11.1)\"]\n[\"No\", \"2 ( 50.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"4 ( 50.0)\", \"5 ( 45.5)\", \"8 ( 44.4)\"]\n[\"If Foveal Detached, was it Reattached? [1], n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"2 (100.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"2 33.3)\"]\n[\"No\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Pre-bleb used?, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"No\", \"4 (100.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"4 ( 50.0)\", \"5 ( 45.5)\", \"10 ( 55.6)\"]\n[\"Pre-bleb Volume (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\"]\n[\"Mean\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Standard deviation\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Median\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Minimum\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Maximum\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"\", \"\", \"\", \"\", \"\", \"\", \"\"]",
+        "text": " | 4 (100.0) | 1 ( 33.3) | 1 ( 33.3) | 4 ( 50.0) | 5 ( 45.5) | 10 ( 55.6)\nPre-bleb Volume (microliters) |  |  |  |  |  | \nn | 0 | 0 | 0 | 0 | 0 | 0\nMean |  |  |  |  |  | \nStandard deviation |  |  |  |  |  | \nMedian |  |  |  |  |  | \nMinimum |  |  |  |  |  | \nMaximum |  |  |  |  |  | \n |  |  |  |  |  |",
+        "source_block_ids": [],
+        "page_numbers": [
+          44
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "669647e5-4d1d-4c34-9c4a-e79c3e0086ff",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.013513513840734959
+      },
+      {
+        "doc_id": "OCU401_CSR_Final_Tables.pdf",
+        "table_context_heading": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "table_headers": [
+          "",
+          "Cohort 1 (N=4)",
+          "Cohort 2 (N=3)",
+          "Cohort 3 (N=3)",
+          "Phase 2 (N=8)",
+          "MTD (N=11)",
+          "Total (N=18)"
+        ],
+        "table_rows": "[\"Subgroup: Mutation Subtype - Autosomal dominant RHO\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Treated Eye, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"OD\", \"2 ( 50.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"3 37.5)\", \"4 36.4)\", \"6 ( 33.3)\"]\n[\"OS\", \"2 ( 50.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"1 ( 12.5)\", \"1 ( 9.1)\", \"4 ( 22.2)\"]\n[\"Dose Administered (vg/eye)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Low Dose\", \"4 (100.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"4 ( 22.2)\"]\n[\"Medium Dose\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 5.6)\"]\n[\"High Dose\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 33.3)\", \"4 ( 50.0)\", \"5 ( 45.5)\", \"5 ( 27.8)\"]\n[\"Other\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\"]\n[\"Actual Dose Volume Administered (microliters)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"4\", \"1\", \"1\", \"4\", \"5\", \"10\"]\n[\"Mean\", \"247.5\", \"300.0\", \"300.0\", \"250.0\", \"260.0\", \"259.0\"]\n[\"Standard deviation\", \"67.02\", \"\", \"\", \"100.00\", \"89.44\", \"72.79\"]\n[\"Median\", \"250.0\", \"300.0\", \"300.0\", \"300.0\", \"300.0\", \"300.0\"]\n[\"Minimum\", \"180\", \"300\", \"300\", \"100\", \"100\", \"100\"]\n[\"Maximum\", \"310\", \"300\", \"300\", \"300\", \"300\", \"310\"]\n[\"Length of Time of Vitrectomy (minutes)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"n\", \"4\", \"1\", \"1\", \"4\", \"5\", \"10\"]\n[\"Mean\", \"52.3\", \"49.0\", \"74.0\", \"55.3\", \"59.0\", \"55.3\"]\n[\"Standard deviation\", \"15.28\", \"\", \"\", \"19.22\", \"18.64\", \"15.76\"]\n[\"Median\", \"50.5\", \"49.0\", \"74.0\", \"56.5\", \"67.0\", \"52.0\"]\n[\"Minimum\", \"36\", \"49\", \"74\", \"33\", \"33\", \"33\"]\n[\"Maximum\", \"72\", \"49\", \"74\", \"75\", \"75\", \"75\"]\n[\"MI-OCT Completed with Subretinal Injection, n (%)\", \"\", \"\", \"\", \"\", \"\", \"\"]\n[\"Yes\", \"3 ( 75.0)\", \"1 ( 33.3)\", \"1 ( 33.3)\", \"3 ( 37.5)\", \"4 ( 36.4)\", \"8 ( 44.4)\"]\n[\"No\", \"1 ( 25.0)\", \"0 ( 0.0)\", \"0 ( 0.0)\", \"1 ( 12.5)\", \"1 ( 9.1)\", \"2 ( 11.1)\"]",
+        "text": ".0 | 55.3 | 59.0 | 55.3\nStandard deviation | 15.28 |  |  | 19.22 | 18.64 | 15.76\nMedian | 50.5 | 49.0 | 74.0 | 56.5 | 67.0 | 52.0\nMinimum | 36 | 49 | 74 | 33 | 33 | 33\nMaximum | 72 | 49 | 74 | 75 | 75 | 75\nMI-OCT Completed with Subretinal Injection, n (%) |  |  |  |  |  | \nYes | 3 ( 75.0) | 1 ( 33.3) | 1 ( 33.3) | 3 ( 37.5) | 4 ( 36.4) | 8 ( 44.4)\nNo | 1 ( 25.0) | 0 ( 0.0) | 0 ( 0.0) | 1 ( 12.5) | 1 ( 9.1) | 2 ( 11.1)",
+        "source_block_ids": [],
+        "page_numbers": [
+          43
+        ],
+        "heading_path": "Table 14.1.6 Treatment Summary Safety Population - RP Patients",
+        "chunk_type": "table",
+        "id": "9a0d4cc5-30ef-455c-a143-a2ccd578331e",
+        "table_context_text": "",
+        "table_semantic_hint": "This table contains structured data related to 'Table 14.1.6 Treatment Summary Safety Population - RP Patients'. Interpret the rows using the column headers.",
+        "@search.score": 0.01315789483487606
+      }
+    ]
+  },
+  "ich_guidelines": {
+    "total_sections": 2,
+    "results": {
+      "total_sections": 0,
+      "results": []
+    }
+  }
+}
