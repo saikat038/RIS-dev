@@ -134,7 +134,7 @@ def load_schema():
 def save_schema(data):
     blob_client = get_blob_client()
     blob_client.upload_blob(
-        json.dumps(data, indent=2),
+        json.dumps(data, indent=2, ensure_ascii=False),
         overwrite=True
     )
 
@@ -311,7 +311,11 @@ elif operation == "Update":
             # 🔥 minimal fix: remove tabs
             def clean_tabs(obj):
                 if isinstance(obj, str):
-                    return obj.replace("\t", " ")
+                    return (
+                        obj.replace("\t", " ")
+                        .replace("–", "-")   # en dash
+                        .replace("—", "-")   # em dash
+                    )
                 if isinstance(obj, list):
                     return [clean_tabs(i) for i in obj]
                 if isinstance(obj, dict):
