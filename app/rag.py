@@ -1213,7 +1213,7 @@ def load_source_search_client() -> SearchClient:
     print("  endpoint:", AZURE_SEARCH_SERVICE_ENDPOINT)
     return SearchClient(
         endpoint=AZURE_SEARCH_SERVICE_ENDPOINT,
-        index_name="module3",
+        index_name="410-ga-study_index",
         credential=AzureKeyCredential(AZURE_SEARCH_API_KEY),
     )
 
