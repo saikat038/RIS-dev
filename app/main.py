@@ -44,13 +44,13 @@ if not is_dev:
         opacity: 0.4;
     }
 
-    /* Ensure Train Model looks active */
-    a.train-link {
-        pointer-events: auto !important;
-        opacity: 1 !important;
-        color: black !important;
-        cursor: pointer !important;
-    }
+    # /* Ensure Train Model looks active */
+    # a.train-link {
+    #     pointer-events: auto !important;
+    #     opacity: 1 !important;
+    #     color: black !important;
+    #     cursor: pointer !important;
+    # }
 
     /* Fix spacing */
     .block-container {
