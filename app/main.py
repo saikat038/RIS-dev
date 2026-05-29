@@ -94,29 +94,29 @@ else:
 
 st.write("")
 
-st.markdown("""
-<div style="
-    text-align:right;
-    margin-top:-230px;   /* 🔥 move upward */
-    margin-bottom:10px;
-">
-    <a href="https://ris-dev-metainsertion.streamlit.app/" target="_blank"
-       class="train-link"
-       style="
-           text-decoration:none;
-           color:black;
-           font-weight:600;
-           font-size:14px;
-           display:inline-flex;
-           align-items:center;
-           gap:6px;
-       "
-    >
-        <span style="color:#4A90E2;">🧠</span>
-        Train Model
-    </a>
-</div>
-""", unsafe_allow_html=True)
+# st.markdown("""
+# <div style="
+#     text-align:right;
+#     margin-top:-230px;   /* 🔥 move upward */
+#     margin-bottom:10px;
+# ">
+#     <a href="https://ris-dev-metainsertion.streamlit.app/" target="_blank"
+#        class="train-link"
+#        style="
+#            text-decoration:none;
+#            color:black;
+#            font-weight:600;
+#            font-size:14px;
+#            display:inline-flex;
+#            align-items:center;
+#            gap:6px;
+#        "
+#     >
+#         <span style="color:#4A90E2;">🧠</span>
+#         Train Model
+#     </a>
+# </div>
+# """, unsafe_allow_html=True)
 
 # ========================
 # SESSION STATE
